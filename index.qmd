@@ -11,12 +11,12 @@ Intro to data science and statistical thinking. Learn to explore, visualize, and
 
 | Meeting | Location                       | Time                        |
 |---------|--------------------------------|-----------------------------|
-| Lecture | French Science 2231            | Tue & Thur 10:15 - 11:30 am |
-| Lab 01  | Perkins Link 087 (Classroom 3) | Mon 10:15 - 11:30 am        |
-| Lab 02  | Perkins Link 087 (Classroom 3) | Mon 1:45 - 3:00 pm          |
-| Lab 03  | Perkins Link 087 (Classroom 3) | Mon 3:30 - 4:45 pm          |
-| Lab 04  | Perkins Link 087 (Classroom 3) | Mon 5:15 - 6:30 pm          |
-| Lab 05  | Perkins Link 087 (Classroom 3) | Mon 12:00 - 1:15 pm         |
+| Lecture | French Science 2231            | Mon & Wed 10:15 - 11:30 am |
+| Lab 06  | Perkins Link 087 (Classroom 3) | Thur 10:15 - 11:30 am        |
+| Lab 07  | Perkins Link 087 (Classroom 3) | Thur 12:00 - 1:15 pm          |
+| Lab 08  | Perkins Link 087 (Classroom 3) | Thur 1:45 - 3:00 pm          |
+| Lab 09  | Perkins Link 087 (Classroom 3) | Thur 3:30 - 4:45 pm          |
+| Lab 10  | Perkins Link 087 (Classroom 3) | Thur 5:15 - 6:30 pm         |
 
 ## Teaching team
 
