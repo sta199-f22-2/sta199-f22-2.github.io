@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Data Science"
-subtitle: "Section 1 - Dr. Mine Çetinkaya-Rundel"
+subtitle: "Section 2 - Prof. Elijah Meyer"
 ---
 
 ## Course overview
@@ -28,7 +28,7 @@ Not open to students who have taken a 100-level Statistical Science course, Stat
 
 | Name                                | Role                  | Lab section         | Office hours                         |
 |-----------------|-----------------|-----------------|-----------------------|
-| Dr. Mine Çetinkaya-Rundel (she/her) | Instructor            |                     | Tue 2 pm - 4 pm, Old Chem 213 / Zoom |
+| Dr. Elijah Meyer (she/her) | Instructor            |                     | Tue 2 pm - 4 pm, Old Chem 213 / Zoom |
 | Bora Jin                            | TA / Course organizer | M 10:15AM - 11:30AM |                                      |
 | Jordan Bryan                        | Head TA               | M 1:45PM - 3:00PM   |                                      |
 | Richard Fremgen                     | TA                    | M 3:30PM - 4:45PM   |                                      |
