@@ -1,15 +1,50 @@
 [
   {
-    "objectID": "hw/w2-hw01.html",
-    "href": "hw/w2-hw01.html",
-    "title": "HW 01: Pet Names",
+    "objectID": "labs/w3-lab02.html",
+    "href": "labs/w3-lab02.html",
+    "title": "Lab 02: Data visualization with ggplot2!",
     "section": "",
     "text": "Add instructions for assignment."
+  },
+  {
+    "objectID": "labs/w2-lab01.html",
+    "href": "labs/w2-lab01.html",
+    "title": "Lab 01: Hello R!",
+    "section": "",
+    "text": "Add instructions for assignment."
+  },
+  {
+    "objectID": "weeks/week-02.html",
+    "href": "weeks/week-02.html",
+    "title": "Week 02",
+    "section": "",
+    "text": "Assignments\n\n\n\n\n\n\nAssignment\n\n\nTitle\n\n\nDue\n\n\n\n\n\n\nHomework\n\n\nHW 01: Pet Names\n\n\nWed, Sep 14\n\n\n\n\nLab\n\n\nLab 01: Hello R!\n\n\nFri, Sep 16\n\n\n\n\n\n\nNo matching items\n\n\n\n\nReadings\n\nR for Data Science: Chapter 3 - Data Visualization\nIntroduction for Modern Statistics: Chapter 4 - Exploring Categorical Data\nIntroduction to Modern Statistics: Chapter 5- Exploring Numerical Data"
+  },
+  {
+    "objectID": "weeks/week-03.html",
+    "href": "weeks/week-03.html",
+    "title": "Week 03",
+    "section": "",
+    "text": "Assignments\n\n\n\n\n\n\nAssignment\n\n\nTitle\n\n\nDue\n\n\n\n\n\n\nHomework\n\n\nHW 02: Data visualization\n\n\nWed, Sep 21\n\n\n\n\nLab\n\n\nLab 02: Data visualization with ggplot2!\n\n\nFri, Sep 23\n\n\n\n\n\n\nNo matching items\n\n\n\n\nReadings"
+  },
+  {
+    "objectID": "weeks/week-01.html",
+    "href": "weeks/week-01.html",
+    "title": "Week 01",
+    "section": "",
+    "text": "Assignments\nThere are no assignments scheduled this week.\n\n\nReadings\n\n\n\n\n\n\nCourse Syllabus\n\n\nR for Data Science: Chapter 2 - Introduction\n\n\nIntro to Modern Data Science: Chapter 1 - Hello data"
   },
   {
     "objectID": "hw/w3-hw02.html",
     "href": "hw/w3-hw02.html",
     "title": "HW 02: Data visualization",
+    "section": "",
+    "text": "Add instructions for assignment."
+  },
+  {
+    "objectID": "hw/w2-hw01.html",
+    "href": "hw/w2-hw01.html",
+    "title": "HW 01: Pet Names",
     "section": "",
     "text": "Add instructions for assignment."
   },
@@ -33,34 +68,6 @@
     "title": "Introduction to Data Science",
     "section": "Teaching team",
     "text": "Teaching team\n\n\n\nName\nRole\nLab section\nOffice hours\n\n\n\n\nDr. Elijah Meyer\nInstructor\n\nTue 10:00 AM - 12:00 PM, Old Chemistry Building 208 / Zoom / Password: 5MYp7A\n\n\nKonnie Huang\nIn Class TA\n\nThur 5:00PM - 6:00PM / Zoom\n\n\nEli Gnesin\nLab Leader\nThur 10:15AM - 11:30AM\nThur 9:00AM - 10:00PM & 12:00 pm - 1:00 pm / Zoom\n\n\nYibin Zhang\nLab Helper\nThur 10:15AM - 11:30AM\n\n\n\nCaitrin Murphy\nLab Leader\nThur 12:00PM - 1:15PM\nWed 12:00PM - 2:00 PM / Zoom\n\n\nZheyuan Liu\nLab Helper\nThur 12:00PM - 1:15PM\nThur 1:00PM - 3:00 PM / Zoom\n\n\nChristine (Yueming) Shen\nLab Leader / Head TA\nThur 1:45PM - 3:00PM\nThur 3:00PM - 5:00 PM / Zoom\n\n\nYouran Wu\nLab Leader\nThur 3:30PM - 4:45PM\n\n\n\nMounika Adepu\nLab Helper\nThur 3:30PM - 4:45PM\nMon 10:30 AM - 12:30 pm / Zoom\n\n\nKateryna (Kat) Husar\nLab Leader\nThur 5:15PM - 6:30PM\nTue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / Zoom\n\n\nIsabella Swigart\nLab Helper\nThur 5:15PM - 6:30PM\nTue 4:00 PM - 5:30 PM / Zoom"
-  },
-  {
-    "objectID": "labs/w2-lab01.html",
-    "href": "labs/w2-lab01.html",
-    "title": "Lab 01: Hello R!",
-    "section": "",
-    "text": "Add instructions for assignment."
-  },
-  {
-    "objectID": "labs/w3-lab02.html",
-    "href": "labs/w3-lab02.html",
-    "title": "Lab 02: Data visualization with ggplot2!",
-    "section": "",
-    "text": "Add instructions for assignment."
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 01\n\n\nAug 29 - Sep 02\n\n\nWelcome to Intro Data Science\n\n\n\n\nWeek 02\n\n\nSep 05 - 09\n\n\nVisualizing Data\n\n\n\n\nWeek 03\n\n\nSep 12 - 16\n\n\nWrangling Data\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "schedule.html#assignments",
-    "href": "schedule.html#assignments",
-    "title": "Schedule",
-    "section": "Assignments",
-    "text": "Assignments\nBelow are assignment due dates for the semester. You can find details and assignment instructions in the relevant week on the schedule.\n\nHomework\nHomework will be due on Wednesdays at 11:59pm. You will have one week to complete each homework assignment.\n\n\nLabs\nLabs will be due on Fridays at 11:59pm. You will start the lab during your scheduled lab section.\n\n\nExams\nThere will be two exams on the dates:\n\nOctober 12, 9am - October 14, 11:59pm\nNovember 16, 9am - November 16: 11:59pm"
   },
   {
     "objectID": "slides/week-01/01-example.html#bullet-point-list",
@@ -245,24 +252,17 @@
     "text": "Important dates\n\nAug 29: Classes begin\nSep 9: Drop/add ends\nOct 10-11: Fall break\nNov 11: Last day to withdraw with W\nNov 23-25: Thanksgiving recess\nDec 9: Classes end\nDec 10-13: Reading period\nDec 14-19: Final exams\n\nFor more important dates, see the full Duke Academic Calendar."
   },
   {
-    "objectID": "weeks/week-01.html",
-    "href": "weeks/week-01.html",
-    "title": "Week 01",
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
     "section": "",
-    "text": "Assignments\nThere are no assignments scheduled this week.\n\n\nReadings\n\n\n\n\n\n\nCourse Syllabus\n\n\nR for Data Science: Chapter 2 - Introduction\n\n\nIntro to Modern Data Science: Chapter 1 - Hello data"
+    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\nWeek 01\n\n\nAug 29 - Sep 02\n\n\nWelcome to Intro Data Science\n\n\n\n\nWeek 02\n\n\nSep 05 - 09\n\n\nVisualizing Data\n\n\n\n\nWeek 03\n\n\nSep 12 - 16\n\n\nWrangling Data\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "weeks/week-02.html",
-    "href": "weeks/week-02.html",
-    "title": "Week 02",
-    "section": "",
-    "text": "Assignments\n\n\n\n\n\n\nAssignment\n\n\nTitle\n\n\nDue\n\n\n\n\n\n\nHomework\n\n\nHW 01: Pet Names\n\n\nWed, Sep 14\n\n\n\n\nLab\n\n\nLab 01: Hello R!\n\n\nFri, Sep 16\n\n\n\n\n\n\nNo matching items\n\n\n\n\nReadings\n\nR for Data Science: Chapter 3 - Data Visualization\nIntroduction for Modern Statistics: Chapter 4 - Exploring Categorical Data\nIntroduction to Modern Statistics: Chapter 5- Exploring Numerical Data"
-  },
-  {
-    "objectID": "weeks/week-03.html",
-    "href": "weeks/week-03.html",
-    "title": "Week 03",
-    "section": "",
-    "text": "Assignments\n\n\n\n\n\n\nAssignment\n\n\nTitle\n\n\nDue\n\n\n\n\n\n\nHomework\n\n\nHW 02: Data visualization\n\n\nWed, Sep 21\n\n\n\n\nLab\n\n\nLab 02: Data visualization with ggplot2!\n\n\nFri, Sep 23\n\n\n\n\n\n\nNo matching items\n\n\n\n\nReadings"
+    "objectID": "schedule.html#assignments",
+    "href": "schedule.html#assignments",
+    "title": "Schedule",
+    "section": "Assignments",
+    "text": "Assignments\nBelow are assignment due dates for the semester. You can find details and assignment instructions in the relevant week on the schedule.\n\nHomework\nHomework will be due on Wednesdays at 11:59pm. You will have one week to complete each homework assignment.\n\n\nLabs\nLabs will be due on Fridays at 11:59pm. You will start the lab during your scheduled lab section.\n\n\nExams\nThere will be two exams on the dates:\n\nOctober 12, 9am - October 14, 11:59pm\nNovember 16, 9am - November 16: 11:59pm"
   }
 ]
