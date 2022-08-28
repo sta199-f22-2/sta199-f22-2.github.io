@@ -1,2 +1,2 @@
-# sta199-f22-2.github.io
-Website for STA 199
+# STA 199 - Fall 2022 - Prof. Elijah Meyer
+
