@@ -6,178 +6,26 @@ $link-color: #1F7349;
 
 /*-- scss:rules --*/
 
-.application-exercise {
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1pt solid #a8a8a8;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/application-exercise.png");
-}
-
-.application-exercise:before {
-  content: "Application exercise: ";
-  clear: right;
-  display: block;
-  font-weight: bold;
-  color: #80D4E6;
-}
-
-
-.slides {
-  padding: 0em 1em 0em 2em;
-  position: relative;
-  font-size: 0.9em;
-}
-.slides:before {
-  content: "\f108";
-  font-family: FontAwesome;
-  color: #444B54;
-  left: 5px;
-  position: absolute;
-}
-
-
-.reading {
-  padding: 1em 1em 1em 4em;
+.render-commit-push {
+  padding: 0.5em 0.5em 0em 3em;
+  margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 5px;
-  border: 1pt solid #d8d8d8;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/book.png");
-}
-.reading:before {
-  content: "Reading: ";
-  clear: right;
-  display: block;
-  font-weight: bold;
-  color: #1E5C65;
-}
-.reading ul li {
-  list-style-type: square;
+  background: #f8f8f8 5px center/3em no-repeat;
+  border-top: 1px solid #5B888C;
+  border-bottom: 1px solid #5B888C;
+  background-image: url("images/render-commit-push.png");
+  background-size: 2em;
+  background-position: 0.5em 0.5em;
 }
 
-.slide-deck {
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1pt solid #80D4E6;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/slide-deck.png");
-}
-
-.source {
-  padding: 0em 1em 0em 2em;
-  position: relative;
-  font-size: 0.9em;
-}
-.source:before {
-  content: "\f1c9";
-  font-family: FontAwesome;
-  color: #a8a8a8;
-  left: 5px;
-  position: absolute;
-}
-
-.guest-lecture {
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1pt dotted #a8a8a8;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/microphone.png");
-}
-
-.video {
-  padding: 0em 1em 0em 2em;
-  position: relative;
-  font-size: 0.9em;
-}
-.video:before {
-  content: "\f16a";
-  font-family: FontAwesome;
-  color: #c4302b;
-  left: 5px;
-  position: absolute;
-}
-
-
-.lab{
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1pt solid #FFD748;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/lab.png");
-}
-
-.homework{
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1pt solid #F26BAA;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/hw.png");
-}
-
-.instructions {
-  padding: 0em 1em 0em 2em;
-  position: relative;
-  font-size: 0.9em;
-}
-.instructions:before {
-  content: "\f15c";
-  font-family: FontAwesome;
-  color: #444B54;
-  left: 5px;
-  position: absolute;
-}
-
-.starter {
-  padding: 0em 1em 0em 2em;
-  position: relative;
-  font-size: 0.9em;
-}
-.starter:before {
-  content: "\f09b";
-  font-family: FontAwesome;
-  color: #444B54;
-  left: 5px;
-  position: absolute;
-}
-
-
-.tutorial{
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1pt solid #d8d8d8;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/tutorial.png");
-}
-
-
-.exam{
-  padding: 1em 1em 1em 4em;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  border: 1pt solid #d8d8d8;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/exam.png");
-}
-
-
-.rstudio-cloud {
-  padding: 1em 1em 1em 4em;
+.pull {
+  padding: 0.5em 0.5em 0em 3em;
+  margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 5px;
-  background: #ffffff 5px center/3em no-repeat;
-  background-image: url("style/icons/cloud.png");
-}
-.rstudio-cloud:before {
-  content: "RStudio Cloud: ";
-  clear: right;
-  display: block;
-  font-weight: bold;
-  color: #A7D5E8;
+  background: #f8f8f8 5px center/3em no-repeat;
+  border-top: 1px solid #E0A890;
+  border-bottom: 1px solid #E0A890;
+  background-image: url("images/pull.png");
+  background-size: 1em;
+  background-position: 1em 0.5em;
 }
