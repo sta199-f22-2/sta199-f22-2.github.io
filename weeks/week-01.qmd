@@ -46,7 +46,11 @@ There are no assignments scheduled this week.
 # Readings
 
 |                                                                                                           |
-|-----------------------------------------------------------------------------------------------------------|
+|------------------------------------------------------------------------|
 | Course Syllabus                                                                                           |
 | [R for Data Science: Chapter 2 - Introduction](https://r4ds.had.co.nz/explore-intro.html)                 |
 | [Intro to Modern Data Science: Chapter 1 - Hello data](https://openintro-ims.netlify.app/data-hello.html) |
+
+# Videos
+               
+| Before Wednesday (8-28) - [Meet the Tool Kit](https://www.youtube.com/watch?v=Q2QN1RpvLq8) 
