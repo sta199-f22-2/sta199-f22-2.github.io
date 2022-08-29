@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resouces:
+    - sta199-f22-2-syllabus.pdf
 
 website:
   title: "STA 199"
@@ -37,3 +39,6 @@ format:
     include-in-header: "style/fontawesome.html"
 
 editor: visual
+
+execute:
+  freeze: auto  # re-render only when source changes
