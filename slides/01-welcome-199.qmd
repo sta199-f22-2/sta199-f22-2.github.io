@@ -23,11 +23,11 @@ https://sta199-f22-2.github.io/syllabus.html
 ## Who Am I?
 
 ::: {layout="[[100], [50,-10,50]]"}
-![](images/Bozeman.png){width="650" height="400" fig-align="center"}
+![](images/01-welcome-199/Bozeman.png){width="650" height="400" fig-align="center"}
 
-![](images/RosePark.png)
+![](images/01-welcome-199/RosePark.png)
 
-![](images/PD.png)
+![](images/01-welcome-199/PD.png)
 :::
 
 ```{r setup, include=FALSE}
@@ -48,15 +48,11 @@ library(rvest)
 
 Please share with your neighbors:
 
--- Major
-
--- Year
-
--- Why you taking the course
-
--- What other courses are you taking
-
--- Anything else
+-   Major
+-   Year
+-   Why you taking the course
+-   What other courses are you taking
+-   Anything else
 
 ## Our Classroom
 
@@ -80,17 +76,17 @@ Please share with your neighbors:
 
 ## Jobs
 
-![](images/Netflix.png){fig-align="center"}
+![](images/01-welcome-199/Netflix.png){fig-align="center"}
 
 ## Jobs
 
-![](images/NetflixHighlighted2.png){fig-align="center"}
+![](images/01-welcome-199/NetflixHighlighted2.png){fig-align="center"}
 
 # About the course
 
 ## Data literacy
 
-![](images/DataLiteracy.png){fig-align="center"}
+![](images/01-welcome-199/DataLiteracy.png){fig-align="center"}
 
 ## Course objectives
 
@@ -101,8 +97,6 @@ Please share with your neighbors:
 -   Work on problems and case studies inspired by and based on *real-world questions* and data
 
 -   Learn to *effectively communicate* results through written assignments and final project presentation
-
-------------------------------------------------------------------------
 
 ## Some of what you will learn
 
@@ -132,27 +126,27 @@ text-align: left;
 :::
 :::
 
-## 
+## R - figures
 
 ::: {#fig-R layout-ncol="2"}
-![](images/figure1.png){width="750" height="700"}
+![](images/01-welcome-199/figure1.png){width="750" height="700"}
 
-![](images/figure2.png){width="750" height="700"}
+![](images/01-welcome-199/figure2.png){width="750" height="700"}
 
 Example R Figures
 :::
 
-## 
+## R - apps
 
-![](images/NHLapp_demo.gif){fig-align="center"}
+![](images/01-welcome-199/NHLapp_demo.gif){fig-align="center"}
 
-## 
+## R
 
 ::: callout-note
 <font size="120"> **This is a new language** </font>
 :::
 
-## 
+## Workflow
 
 ### Before Class
 
@@ -168,38 +162,37 @@ Example R Figures
 
 ## Activities and assessments {.smaller}
 
--- **Homework:** Individual assignments combining conceptual and computational skills.
+-   **Homework:** Individual assignments combining conceptual and computational skills.
 
--- **Labs:** Individual or team assignments focusing on computational skills.
+-   **Labs:** Individual or team assignments focusing on computational skills.
 
--- **Exams:** Two take-home exams.
+-   **Exams:** Two take-home exams.
 
--- **Final Project:** Team project presented during the final exam period.
+-   **Final Project:** Team project presented during the final exam period.
 
--- **Application Exercises:** Exercises worked on during the live lecture session.
+-   **Application Exercises:** Exercises worked on during the live lecture session.
 
--- **Statistics Experiences:** Engage with statistics outside of the classroom and reflect on your experience.
+-   **Statistics Experiences:** Engage with statistics outside of the classroom and reflect on your experience.
 
 ## Lab
 
--- Focus on computing using R tidyverse syntax
+-   Focus on computing using R tidyverse syntax
 
--- Apply concepts from lecture to case study scenarios
+-   Apply concepts from lecture to case study scenarios
 
--- Work on labs individually or in teams of 3 - 4
+-   Work on labs individually or in teams of 3 - 4
 
 ## Textbooks and readings
 
--- R for Data Science by Grolemund & Wickham (2nd ed. O'Reilly) 
+-   R for Data Science by Grolemund & Wickham (2nd ed. O'Reilly)
 
--- Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)
-
+-   Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)
 
 ## Where to find help in the course
 
--- Attend Office hours to meet with a member of the teaching team
+-   Attend Office hours to meet with a member of the teaching team
 
--- Email me to set up a time: esm70\@duke.edu
+-   Email me to set up a time: esm70\@duke.edu
 
 ## Academic Resource Center {.smaller}
 
@@ -207,13 +200,16 @@ The Academic Resource Center (ARC) offers free services to all students during t
 
 Services include:
 
--- Learning Consultations -- Peer Tutoring and Study Groups -- ADHD/LD Coaching, Outreach Workshops and more.
+-   Learning Consultations
+-   Peer Tutoring and Study Groups
+-   ADHD/LD Coaching, Outreach Workshops and more
 
 Contact the ARC at ARC\@duke.edu or call 919-684-5917 to schedule an appointment.
 
 ## Create a GitHub account (Why?)
 
-GitHub, Inc., is an Internet hosting service for software development and **version control**. ![](images/pnas.png){fig-align="center"}
+GitHub, Inc., is an Internet hosting service for software development and **version control**.
+![](images/01-welcome-199/pnas.png){fig-align="center"}
 
 ## Create a GitHub account {.smaller}
 
@@ -223,15 +219,11 @@ Go to https://github.com/, and create an account (unless you already have one).
 
 Some tips from Happy Git with R.
 
--- Incorporate your actual name!
-
--- Reuse your username from other contexts if you can, e. g., Twitter or Slack.
-
--- Pick a username you will be comfortable revealing to your future boss.
-
--- Be as unique as possible in as few characters as possible. Shorter is better than longer.
-
--- Avoid words with special meaning in programming (e.g. NA).
+-   Incorporate your actual name!
+-   Reuse your username from other contexts if you can, e. g., Twitter or Slack.
+-   Pick a username you will be comfortable revealing to your future boss.
+-   Be as unique as possible in as few characters as possible. Shorter is better than longer.
+-   Avoid words with special meaning in programming (e.g. NA).
 
 ## Slack
 
@@ -239,21 +231,20 @@ Please click the Slack link located [here](https://join.slack.com/t/sta199-f22-2
 
 ## R-Studio
 
--- Reserve a STA198-1991 RStudio container
-
-    --- Go to https://vm-manage.oit.duke.edu/containers
-    --- Click Reserve Container for the STA198-199 container
+-   Reserve a STA198-1991 RStudio container
+    -   Go to https://vm-manage.oit.duke.edu/containers
+    -   Click Reserve Container for the STA198-199 container
 
 ## Our Turn
 
--- **Clone** a repo so you have access to the qmd
+**Clone** a repo so you have access to the qmd
 
 ## For Wednesday
 
--- We'll start talking about the computing toolkit
+-   We'll start talking about the computing toolkit
 
--- Watch videos for Wednesday
+-   Watch videos for Wednesday
 
--- Complete *Getting to Know You* Survey
+-   Complete *Getting to Know You* Survey
 
 Please bring laptop to class if able for next time!

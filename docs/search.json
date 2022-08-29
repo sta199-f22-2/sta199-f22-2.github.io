@@ -133,160 +133,6 @@
     "text": "Teaching assistants\n\n\n\nName\nRole\nLab section\nOffice hours\n\n\n\n\nKonnie Huang\nIn Class TA\n\nThur 5:00PM - 6:00PM / Zoom\n\n\nEli Gnesin\nLab Leader\nThur 10:15AM - 11:30AM\nThur 9:00AM - 10:00PM & 12:00 pm - 1:00 pm / Zoom\n\n\nYibin Zhang\nLab Helper\nThur 10:15AM - 11:30AM\n\n\n\nCaitrin Murphy\nLab Leader\nThur 12:00PM - 1:15PM\nWed 12:00PM - 2:00 PM / Zoom\n\n\nZheyuan Liu\nLab Helper\nThur 12:00PM - 1:15PM\nThur 1:00PM - 3:00 PM / Zoom\n\n\nChristine (Yueming) Shen\nLab Leader / Head TA\nThur 1:45PM - 3:00PM\nThur 3:00PM - 5:00 PM / Zoom\n\n\nYouran Wu\nLab Leader\nThur 3:30PM - 4:45PM\n\n\n\nMounika Adepu\nLab Helper\nThur 3:30PM - 4:45PM\nMon 10:30 AM - 12:30 pm / Zoom\n\n\nKateryna (Kat) Husar\nLab Leader\nThur 5:15PM - 6:30PM\nTue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / Zoom\n\n\nIsabella Swigart\nLab Helper\nThur 5:15PM - 6:30PM\nTue 4:00 PM - 5:30 PM / Zoom"
   },
   {
-    "objectID": "slides/week-01/DukeSlides.html#goals-for-day-1",
-    "href": "slides/week-01/DukeSlides.html#goals-for-day-1",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Goals for Day 1",
-    "text": "Goals for Day 1\n\nGet to know the professor & ta\nGet to know each other\nCourse overview\nRegister with GitHub & Slack\nIntroduce R + start thinking about data"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#who-am-i",
-    "href": "slides/week-01/DukeSlides.html#who-am-i",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Who Am I?",
-    "text": "Who Am I?"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#who-are-you",
-    "href": "slides/week-01/DukeSlides.html#who-are-you",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Who Are You?",
-    "text": "Who Are You?\nPlease share with your neighbors:\n– Major\n– Year\n– Why you taking the course\n– What other courses are you taking\n– Anything else"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#our-classroom",
-    "href": "slides/week-01/DukeSlides.html#our-classroom",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Our Classroom",
-    "text": "Our Classroom\n\nCommunity\nCommunication\nRespect"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#what-is-data-science",
-    "href": "slides/week-01/DukeSlides.html#what-is-data-science",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "What is data science?",
-    "text": "What is data science?\n“Data science is a concept to unify statistics, data analysis, machine learning and their related methods in order to understand and analyze actual phenomena with data. It employs techniques and theories drawn from many fields within the context of mathematics, statistics, information science, and computer science.”\n-Wikipedia"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#examples-of-data-science",
-    "href": "slides/week-01/DukeSlides.html#examples-of-data-science",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Examples of data science",
-    "text": "Examples of data science\n\nIdentification and prediction of disease\nTargeted advertising\nSupply chain optimization\nSports recruitment + strategist\nThe list goes on and on….."
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#course-objectives",
-    "href": "slides/week-01/DukeSlides.html#course-objectives",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Course objectives",
-    "text": "Course objectives\n\nLearn to explore, visualize, and analyze data in a reproducible and shareable manner\nGain experience in data wrangling, exploratory data analysis, predictive modeling, and data visualization\nWork on problems and case studies inspired by and based on real-world questions and data\nLearn to effectively communicate results through written assignments and final project presentation"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#some-of-what-you-will-learn",
-    "href": "slides/week-01/DukeSlides.html#some-of-what-you-will-learn",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Some of what you will learn",
-    "text": "Some of what you will learn\n\n\n\n\n\n– Fundamentals of R\n– Data visualization\n– Web scraping\n– Version control with GitHub\n\n– Reproducible reports with Quarto\n– Regression and classification\n– Statistical inference"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#section-1",
-    "href": "slides/week-01/DukeSlides.html#section-1",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "",
-    "text": "Figure 1: Example R Figures"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#section-3",
-    "href": "slides/week-01/DukeSlides.html#section-3",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "",
-    "text": "Note\n\n\n This is a new language"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#section-4",
-    "href": "slides/week-01/DukeSlides.html#section-4",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "",
-    "text": "Before Class\n\nWatch lecture content videos\n\nDuring Class\n\nWarm up question\nMix of lecture and interaction"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#activities-and-assessments",
-    "href": "slides/week-01/DukeSlides.html#activities-and-assessments",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Activities and assessments",
-    "text": "Activities and assessments\n– Homework: Individual assignments combining conceptual and computational skills.\n– Labs: Individual or team assignments focusing on computational skills.\n– Exams: Two take-home exams.\n– Final Project: Team project presented during the final exam period.\n– Application Exercises: Exercises worked on during the live lecture session.\n– Statistics Experiences: Engage with statistics outside of the classroom and reflect on your experience."
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#lab",
-    "href": "slides/week-01/DukeSlides.html#lab",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Lab",
-    "text": "Lab\n– Focus on computing using R tidyverse syntax\n– Apply concepts from lecture to case study scenarios\n– Work on labs individually or in teams of 3 - 4"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#textbooks-and-readings",
-    "href": "slides/week-01/DukeSlides.html#textbooks-and-readings",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Textbooks and readings",
-    "text": "Textbooks and readings\n– R for Data Science by Grolemund & Wickham (2nd ed. O’Reilly)\n– Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#where-to-find-help-in-the-course",
-    "href": "slides/week-01/DukeSlides.html#where-to-find-help-in-the-course",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Where to find help in the course",
-    "text": "Where to find help in the course\n– Attend Office hours to meet with a member of the teaching team\n– Email me to set up a time: esm70@duke.edu"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#academic-resource-center",
-    "href": "slides/week-01/DukeSlides.html#academic-resource-center",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Academic Resource Center",
-    "text": "Academic Resource Center\nThe Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.\nServices include:\n– Learning Consultations – Peer Tutoring and Study Groups – ADHD/LD Coaching, Outreach Workshops and more.\nContact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment."
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#create-a-github-account-why",
-    "href": "slides/week-01/DukeSlides.html#create-a-github-account-why",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Create a GitHub account (Why?)",
-    "text": "Create a GitHub account (Why?)\nGitHub, Inc., is an Internet hosting service for software development and version control."
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#create-a-github-account",
-    "href": "slides/week-01/DukeSlides.html#create-a-github-account",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Create a GitHub account",
-    "text": "Create a GitHub account\nPlease do this before the Getting to know you survey\nGo to https://github.com/, and create an account (unless you already have one).\nSome tips from Happy Git with R.\n– Incorporate your actual name!\n– Reuse your username from other contexts if you can, e. g., Twitter or Slack.\n– Pick a username you will be comfortable revealing to your future boss.\n– Be as unique as possible in as few characters as possible. Shorter is better than longer.\n– Avoid words with special meaning in programming (e.g. NA)."
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#slack",
-    "href": "slides/week-01/DukeSlides.html#slack",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Slack",
-    "text": "Slack\nPlease click the Slack link located here or in Sakai announcements to be a part of the discussions!"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#r-studio",
-    "href": "slides/week-01/DukeSlides.html#r-studio",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "R-Studio",
-    "text": "R-Studio\n– Reserve a STA198-1991 RStudio container\n--- Go to https://vm-manage.oit.duke.edu/containers\n--- Click Reserve Container for the STA198-199 container"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#our-turn",
-    "href": "slides/week-01/DukeSlides.html#our-turn",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "Our Turn",
-    "text": "Our Turn\n– Clone a repo so you have access to the qmd"
-  },
-  {
-    "objectID": "slides/week-01/DukeSlides.html#for-wednesday",
-    "href": "slides/week-01/DukeSlides.html#for-wednesday",
-    "title": "Day 1: Welcome to STA 199",
-    "section": "For Wednesday",
-    "text": "For Wednesday\n– We’ll start talking about the computing toolkit\n– Watch videos for Wednesday\n– Complete Getting to Know You Survey\nPlease bring laptop to class if able for next time!\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/01-welcome-199.html#syllabus",
     "href": "slides/01-welcome-199.html#syllabus",
     "title": "Welcome to STA 199",
@@ -312,7 +158,7 @@
     "href": "slides/01-welcome-199.html#who-are-you",
     "title": "Welcome to STA 199",
     "section": "Who Are You?",
-    "text": "Who Are You?\nPlease share with your neighbors:\n– Major\n– Year\n– Why you taking the course\n– What other courses are you taking\n– Anything else"
+    "text": "Who Are You?\nPlease share with your neighbors:\n\nMajor\nYear\nWhy you taking the course\nWhat other courses are you taking\nAnything else"
   },
   {
     "objectID": "slides/01-welcome-199.html#our-classroom",
@@ -371,25 +217,32 @@
     "text": "Some of what you will learn\n\n\n\n\n\n– Fundamentals of R\n– Data visualization\n– Web scraping\n– Version control with GitHub\n\n– Reproducible reports with Quarto\n– Regression and classification\n– Statistical inference"
   },
   {
-    "objectID": "slides/01-welcome-199.html#section",
-    "href": "slides/01-welcome-199.html#section",
+    "objectID": "slides/01-welcome-199.html#r---figures",
+    "href": "slides/01-welcome-199.html#r---figures",
     "title": "Welcome to STA 199",
-    "section": "",
-    "text": "Figure 1: Example R Figures"
+    "section": "R - figures",
+    "text": "R - figures\n\n\n\n\n\n\n\n\n\n\nFigure 1: Example R Figures"
   },
   {
-    "objectID": "slides/01-welcome-199.html#section-2",
-    "href": "slides/01-welcome-199.html#section-2",
+    "objectID": "slides/01-welcome-199.html#r---apps",
+    "href": "slides/01-welcome-199.html#r---apps",
     "title": "Welcome to STA 199",
-    "section": "",
-    "text": "Note\n\n\n This is a new language"
+    "section": "R - apps",
+    "text": "R - apps"
   },
   {
-    "objectID": "slides/01-welcome-199.html#section-3",
-    "href": "slides/01-welcome-199.html#section-3",
+    "objectID": "slides/01-welcome-199.html#r",
+    "href": "slides/01-welcome-199.html#r",
     "title": "Welcome to STA 199",
-    "section": "",
-    "text": "Before Class\n\nWatch lecture content videos\n\nDuring Class\n\nWarm up question\nMix of lecture and interaction"
+    "section": "R",
+    "text": "R\n\n\n\n\n\n\nNote\n\n\n This is a new language"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#workflow",
+    "href": "slides/01-welcome-199.html#workflow",
+    "title": "Welcome to STA 199",
+    "section": "Workflow",
+    "text": "Workflow\nBefore Class\n\nWatch lecture content videos\n\nDuring Class\n\nWarm up question\nMix of lecture and interaction"
   },
   {
     "objectID": "slides/01-welcome-199.html#please-bring-your-laptops-if-able",
@@ -403,35 +256,35 @@
     "href": "slides/01-welcome-199.html#activities-and-assessments",
     "title": "Welcome to STA 199",
     "section": "Activities and assessments",
-    "text": "Activities and assessments\n– Homework: Individual assignments combining conceptual and computational skills.\n– Labs: Individual or team assignments focusing on computational skills.\n– Exams: Two take-home exams.\n– Final Project: Team project presented during the final exam period.\n– Application Exercises: Exercises worked on during the live lecture session.\n– Statistics Experiences: Engage with statistics outside of the classroom and reflect on your experience."
+    "text": "Activities and assessments\n\nHomework: Individual assignments combining conceptual and computational skills.\nLabs: Individual or team assignments focusing on computational skills.\nExams: Two take-home exams.\nFinal Project: Team project presented during the final exam period.\nApplication Exercises: Exercises worked on during the live lecture session.\nStatistics Experiences: Engage with statistics outside of the classroom and reflect on your experience."
   },
   {
     "objectID": "slides/01-welcome-199.html#lab",
     "href": "slides/01-welcome-199.html#lab",
     "title": "Welcome to STA 199",
     "section": "Lab",
-    "text": "Lab\n– Focus on computing using R tidyverse syntax\n– Apply concepts from lecture to case study scenarios\n– Work on labs individually or in teams of 3 - 4"
+    "text": "Lab\n\nFocus on computing using R tidyverse syntax\nApply concepts from lecture to case study scenarios\nWork on labs individually or in teams of 3 - 4"
   },
   {
     "objectID": "slides/01-welcome-199.html#textbooks-and-readings",
     "href": "slides/01-welcome-199.html#textbooks-and-readings",
     "title": "Welcome to STA 199",
     "section": "Textbooks and readings",
-    "text": "Textbooks and readings\n– R for Data Science by Grolemund & Wickham (2nd ed. O’Reilly)\n– Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)"
+    "text": "Textbooks and readings\n\nR for Data Science by Grolemund & Wickham (2nd ed. O’Reilly)\nIntroduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)"
   },
   {
     "objectID": "slides/01-welcome-199.html#where-to-find-help-in-the-course",
     "href": "slides/01-welcome-199.html#where-to-find-help-in-the-course",
     "title": "Welcome to STA 199",
     "section": "Where to find help in the course",
-    "text": "Where to find help in the course\n– Attend Office hours to meet with a member of the teaching team\n– Email me to set up a time: esm70@duke.edu"
+    "text": "Where to find help in the course\n\nAttend Office hours to meet with a member of the teaching team\nEmail me to set up a time: esm70@duke.edu"
   },
   {
     "objectID": "slides/01-welcome-199.html#academic-resource-center",
     "href": "slides/01-welcome-199.html#academic-resource-center",
     "title": "Welcome to STA 199",
     "section": "Academic Resource Center",
-    "text": "Academic Resource Center\nThe Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.\nServices include:\n– Learning Consultations – Peer Tutoring and Study Groups – ADHD/LD Coaching, Outreach Workshops and more.\nContact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment."
+    "text": "Academic Resource Center\nThe Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.\nServices include:\n\nLearning Consultations\nPeer Tutoring and Study Groups\nADHD/LD Coaching, Outreach Workshops and more\n\nContact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment."
   },
   {
     "objectID": "slides/01-welcome-199.html#create-a-github-account-why",
@@ -445,7 +298,7 @@
     "href": "slides/01-welcome-199.html#create-a-github-account",
     "title": "Welcome to STA 199",
     "section": "Create a GitHub account",
-    "text": "Create a GitHub account\nPlease do this before the Getting to know you survey\nGo to https://github.com/, and create an account (unless you already have one).\nSome tips from Happy Git with R.\n– Incorporate your actual name!\n– Reuse your username from other contexts if you can, e. g., Twitter or Slack.\n– Pick a username you will be comfortable revealing to your future boss.\n– Be as unique as possible in as few characters as possible. Shorter is better than longer.\n– Avoid words with special meaning in programming (e.g. NA)."
+    "text": "Create a GitHub account\nPlease do this before the Getting to know you survey\nGo to https://github.com/, and create an account (unless you already have one).\nSome tips from Happy Git with R.\n\nIncorporate your actual name!\nReuse your username from other contexts if you can, e. g., Twitter or Slack.\nPick a username you will be comfortable revealing to your future boss.\nBe as unique as possible in as few characters as possible. Shorter is better than longer.\nAvoid words with special meaning in programming (e.g. NA)."
   },
   {
     "objectID": "slides/01-welcome-199.html#slack",
@@ -459,21 +312,21 @@
     "href": "slides/01-welcome-199.html#r-studio",
     "title": "Welcome to STA 199",
     "section": "R-Studio",
-    "text": "R-Studio\n– Reserve a STA198-1991 RStudio container\n--- Go to https://vm-manage.oit.duke.edu/containers\n--- Click Reserve Container for the STA198-199 container"
+    "text": "R-Studio\n\nReserve a STA198-1991 RStudio container\n\nGo to https://vm-manage.oit.duke.edu/containers\nClick Reserve Container for the STA198-199 container"
   },
   {
     "objectID": "slides/01-welcome-199.html#our-turn",
     "href": "slides/01-welcome-199.html#our-turn",
     "title": "Welcome to STA 199",
     "section": "Our Turn",
-    "text": "Our Turn\n– Clone a repo so you have access to the qmd"
+    "text": "Our Turn\nClone a repo so you have access to the qmd"
   },
   {
     "objectID": "slides/01-welcome-199.html#for-wednesday",
     "href": "slides/01-welcome-199.html#for-wednesday",
     "title": "Welcome to STA 199",
     "section": "For Wednesday",
-    "text": "For Wednesday\n– We’ll start talking about the computing toolkit\n– Watch videos for Wednesday\n– Complete Getting to Know You Survey\nPlease bring laptop to class if able for next time!\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "For Wednesday\n\nWe’ll start talking about the computing toolkit\nWatch videos for Wednesday\nComplete Getting to Know You Survey\n\nPlease bring laptop to class if able for next time!\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
     "objectID": "course-faq.html",
