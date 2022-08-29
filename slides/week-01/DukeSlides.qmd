@@ -197,8 +197,6 @@ Example R Figures
 
 -- Attend Office hours to meet with a member of the teaching team
 
--- Office hours tbd based on poll responses. Please vote!
-
 -- Email me to set up a time: esm70\@duke.edu
 
 ## Academic Resource Center {.smaller}
