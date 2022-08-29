@@ -6,11 +6,11 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
-  <meta name="dcterms.date" content="2022-08-29">
-  <title>STA 199 - Welcome to Intro Data Science</title>
+  <meta name="author" content="Elijah Meyer &amp; Konnie Huang">
+  <title>STA 199 - Day 1: Welcome to STA 199</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -23,77 +23,11 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -380,152 +314,263 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Welcome to Intro Data Science</h1>
-  <p class="subtitle">Example presentation</p>
-  <p class="date">August 29, 2022</p>
+  <h1 class="title">Day 1: Welcome to STA 199</h1>
+  <p class="author">Elijah Meyer &amp; Konnie Huang</p>
 </section>
 
 <section>
 <section id="welcome" class="title-slide slide level1 center">
-<h1>Welcome!</h1>
+<h1>Welcome</h1>
+<p>https://sta199-f22-2.github.io/syllabus.html</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/STA199.png" width="400" height="400"></p>
+</figure>
+</div>
+</section>
+<section id="goals-for-day-1" class="slide level2">
+<h2>Goals for Day 1</h2>
+<ul>
+<li class="fragment">Get to know the professor &amp; ta</li>
+<li class="fragment">Get to know each other</li>
+<li class="fragment">Course overview</li>
+<li class="fragment">Register with <strong>GitHub</strong> &amp; <strong>Slack</strong></li>
+<li class="fragment">Introduce <strong>R</strong> + start thinking about data</li>
+</ul>
+</section>
+<section id="who-am-i" class="slide level2">
+<h2>Who Am I?</h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Bozeman.png" width="650"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: center;">
+<p><img data-src="images/RosePark.png"></p>
+</div>
+<div class="quarto-figure-spacer quarto-layout-cell" style="flex-basis: 9.1%;justify-content: center;">
+<p>&nbsp;</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 45.5%;justify-content: center;">
+<p><img data-src="images/PD.png"></p>
+</div>
+</div>
+</div>
 <div class="cell">
 
 </div>
 </section>
-<section id="bullet-point-list" class="slide level2 center">
-<h2>Bullet point list</h2>
-<p><strong>Unordered</strong></p>
+<section id="who-are-you" class="slide level2">
+<h2>Who Are You?</h2>
+<p>Please share with your neighbors:</p>
+<p>– Major</p>
+<p>– Year</p>
+<p>– Why you taking the course</p>
+<p>– What other courses are you taking</p>
+<p>– Anything else</p>
+</section>
+<section id="our-classroom" class="slide level2">
+<h2>Our Classroom</h2>
 <ul>
-<li>Item A</li>
-<li>Item B</li>
-<li>Item C</li>
+<li class="fragment">Community</li>
+<li class="fragment">Communication</li>
+<li class="fragment">Respect</li>
 </ul>
-<p><strong>Ordered</strong></p>
-<ol type="1">
-<li>Item 1</li>
-<li>Item 2</li>
-<li>Item 3</li>
-</ol>
 </section>
-<section id="incremental-list" class="slide level2 center">
-<h2>Incremental list</h2>
-<div>
+<section id="what-is-data-science" class="slide level2">
+<h2>What is data science?</h2>
+<p><em>“Data science is a concept to unify statistics, data analysis, machine learning and their related methods in order to understand and analyze actual phenomena with data. It employs techniques and theories drawn from many fields within the context of mathematics, statistics, information science, and computer science.”</em></p>
+<p><a href="https://en.wikipedia.org/wiki/Data_science">-Wikipedia</a></p>
+</section>
+<section id="examples-of-data-science" class="slide level2">
+<h2>Examples of data science</h2>
 <ul>
-<li class="fragment">Item 1</li>
-<li class="fragment">Item 2</li>
-<li class="fragment">Item 3</li>
+<li class="fragment">Identification and prediction of disease</li>
+<li class="fragment">Targeted advertising</li>
+<li class="fragment">Supply chain optimization</li>
+<li class="fragment">Sports recruitment + strategist</li>
+<li class="fragment">The list goes on and on…..</li>
 </ul>
-</div>
-</section>
-<section id="equations" class="slide level2 center">
-<h2>Equations</h2>
-<p>Write mathematical symbols and equations using Latex.</p>
-<p>Use the formulas below to calculate <span class="math inline">\(\hat{\beta}_1\)</span>, the estimated slope, and <span class="math inline">\(\hat{\beta}_0\)</span>, the estimated intercept.</p>
-<p><span class="math display">\[
-\begin{aligned}
-&amp;\hat{\beta}_1 = r \frac{s_y}{s_x} \\
-&amp;\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}
-\end{aligned}
-\]</span></p>
-</section>
-<section id="code" class="slide level2 center">
-<h2>Code</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Use code chunk option fig-align: center to center the plot. </span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, </span>
-<span id="cb1-3"><a href="#cb1-3"></a>                            <span class="at">color =</span> species)) <span class="sc">+</span> </span>
-<span id="cb1-4"><a href="#cb1-4"></a>         <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb1-5"><a href="#cb1-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flipper Length (in mm)"</span>,<span class="at">y =</span> <span class="st">"Body Mass (in g)"</span>,</span>
-<span id="cb1-6"><a href="#cb1-6"></a>       <span class="at">title =</span> <span class="st">"Flipper length vs. body mass"</span>,</span>
-<span id="cb1-7"><a href="#cb1-7"></a>       <span class="at">subtitle =</span> <span class="st">"Penguins at Palmer Station, Antartica"</span>) <span class="sc">+</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>  <span class="fu">scale_color_viridis_d</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section id="jobs" class="title-slide slide level1 center">
+<h1>Jobs</h1>
 
-</div>
-<img data-src="01-example_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch quarto-figure-center"></section>
-<section id="images" class="slide level2 center">
-<h2>Images</h2>
+<img data-src="images/Netflix.png" class="r-stretch quarto-figure-center"></section>
 
-<img data-src="images/penguins.png" alt="Three penguins labeled Chinstrap, Gentoo, and Adelie." class="r-stretch quarto-figure-center"><p class="caption">Artwork by <a href="https://www.allisonhorst.com/">@allison_horst</a></p></section>
-<section id="columns" class="slide level2 center">
-<h2>Columns</h2>
+<section>
+<section id="jobs-1" class="title-slide slide level1 center">
+<h1>Jobs</h1>
+
+<img data-src="images/NetflixHighlighted2.png" class="r-stretch quarto-figure-center"></section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="images/DataLiteracy.png" class="r-stretch quarto-figure-center"></section>
+<section id="course-objectives" class="slide level2">
+<h2>Course objectives</h2>
+<ul>
+<li class="fragment"><p>Learn to explore, visualize, and analyze data in a <em>reproducible</em> and <em>shareable</em> manner</p></li>
+<li class="fragment"><p>Gain experience in data wrangling, exploratory data analysis, predictive modeling, and data visualization</p></li>
+<li class="fragment"><p>Work on problems and case studies inspired by and based on <em>real-world questions</em> and data</p></li>
+<li class="fragment"><p>Learn to <em>effectively communicate</em> results through written assignments and final project presentation</p></li>
+</ul>
+</section>
+<section id="some-of-what-you-will-learn" class="slide level2">
+<h2>Some of what you will learn</h2>
+<div class="cell">
+<style type="text/css">
+.column {
+text-align: left;
+}
+</style>
+</div>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p>Calculate the proportion of penguins from each species.</p>
-</div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">count</span>(species) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3"></a>  <span class="fu">mutate</span>(<span class="at">prop  =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 3
-  species       n  prop
-  &lt;fct&gt;     &lt;int&gt; &lt;dbl&gt;
-1 Adelie      152 0.442
-2 Chinstrap    68 0.198
-3 Gentoo      124 0.360</code></pre>
+<div class="column" style="width:40%;">
+<p>– Fundamentals of <code>R</code></p>
+<p>– Data visualization</p>
+<p>– Web scraping</p>
+<p>– Version control with <code>GitHub</code></p>
+</div><div class="column" style="width:60%;">
+<p>– Reproducible reports with <code>Quarto</code></p>
+<p>– Regression and classification</p>
+<p>– Statistical inference</p>
 </div>
+</div>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div id="fig-R" class="quarto-layout-panel">
+<figure>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/figure1.png" width="750"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="images/figure2.png" width="750"></p>
+</div>
+</div>
+<p></p><figcaption>Figure 1: Example R Figures</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="images/NHLapp_demo.gif" class="r-stretch quarto-figure-center"></section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+<div class="callout callout-note callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p><font size="120"> <strong>This is a new language</strong> </font></p>
 </div>
 </div>
 </div>
 </section>
-<section id="panels" class="slide level2 center">
-<h2>Panels</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li><li><a href="#tabset-1-2">Code</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Adelie"</span>, <span class="sc">!</span><span class="fu">is.na</span>(sex)) <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> sex)) <span class="sc">+</span> </span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flipper Length (in mm)"</span>,<span class="at">y =</span> <span class="st">"Body Mass (in g)"</span>,</span>
-<span id="cb4-6"><a href="#cb4-6"></a>       <span class="at">title =</span> <span class="st">"Flipper length vs. body mass"</span>,</span>
-<span id="cb4-7"><a href="#cb4-7"></a>       <span class="at">subtitle =</span> <span class="st">"Adelie Penguins at Palmer Station, Antartica"</span>) <span class="sc">+</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a>  <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span> </span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="01-example_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">filter</span>(species <span class="sc">==</span> <span class="st">"Adelie"</span>, <span class="sc">!</span><span class="fu">is.na</span>(sex)) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm, <span class="at">y =</span> body_mass_g, <span class="at">color =</span> sex)) <span class="sc">+</span> </span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Flipper Length (in mm)"</span>,<span class="at">y =</span> <span class="st">"Body Mass (in g)"</span>,</span>
-<span id="cb5-6"><a href="#cb5-6"></a>       <span class="at">title =</span> <span class="st">"Flipper length vs. body mass"</span>,</span>
-<span id="cb5-7"><a href="#cb5-7"></a>       <span class="at">subtitle =</span> <span class="st">"Adelie Penguins at Palmer Station, Antartica"</span>) <span class="sc">+</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>  <span class="fu">scale_color_viridis_d</span>() <span class="sc">+</span> </span>
-<span id="cb5-9"><a href="#cb5-9"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>island)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="themes" class="slide level2 center">
-<h2>Themes</h2>
-<p>Customize the appearance of the slides using</p>
+<section id="section-4" class="slide level2">
+<h2></h2>
+<h3 id="before-class"><strong>Before Class</strong></h3>
 <ul>
-<li><p>Built-in <a href="https://quarto.org/docs/presentations/revealjs/themes.html#using-themes">Reveal theme</a></p></li>
-<li><p>Modify built-in theme using <a href="https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes">Sass</a></p>
-<ul>
-<li>Variant of CSS that supports variables and other features</li>
-</ul></li>
-<li><p>Create custom thing using Sass</p></li>
+<li class="fragment">Watch lecture content videos</li>
 </ul>
-<p>Specify the theme and/or Sass file (.scss) in the YAML</p>
+<h3 id="during-class"><strong>During Class</strong></h3>
+<ul>
+<li class="fragment"><p>Warm up question</p></li>
+<li class="fragment"><p>Mix of lecture and interaction</p></li>
+</ul>
+</section></section>
+<section>
+<section id="please-bring-your-laptops-if-able" class="title-slide slide level1 center">
+<h1><strong>Please bring your laptops if able</strong></h1>
 
+</section>
+<section id="lab" class="slide level2">
+<h2>Lab</h2>
+<p>– Focus on computing using R tidyverse syntax</p>
+<p>– Apply concepts from lecture to case study scenarios</p>
+<p>– Work on labs individually or in teams of 3 - 4</p>
+</section>
+<section id="textbooks-and-readings" class="slide level2">
+<h2>Textbooks and readings</h2>
+<p>– R for Data Science by Grolemund &amp; Wickham (2nd ed.&nbsp;O’Reilly) – Introduction to Modern Statistics by Cetinkaya-Rundel &amp; Hardin (1st ed.&nbsp;OpenIntro)</p>
+</section>
+<section id="activities-and-assessments" class="slide level2 smaller">
+<h2>Activities and assessments</h2>
+<p>– <strong>Homework:</strong> Individual assignments combining conceptual and computational skills.</p>
+<p>– <strong>Labs:</strong> Individual or team assignments focusing on computational skills.</p>
+<p>– <strong>Exams:</strong> Two take-home exams.</p>
+<p>– <strong>Final Project:</strong> Team project presented during the final exam period.</p>
+<p>– <strong>Application Exercises:</strong> Exercises worked on during the live lecture session.</p>
+<p>– <strong>Statistics Experiences:</strong> Engage with statistics outside of the classroom and reflect on your experience.</p>
+</section>
+<section id="where-to-find-help-in-the-course" class="slide level2">
+<h2>Where to find help in the course</h2>
+<p>– Attend Office hours to meet with a member of the teaching team</p>
+<p>– Office hours tbd based on poll responses. Please vote!</p>
+<p>– Email me to set up a time: esm70@duke.edu</p>
+</section>
+<section id="academic-resource-center" class="slide level2 smaller">
+<h2>Academic Resource Center</h2>
+<p>The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.</p>
+<p>Services include:</p>
+<p>– Learning Consultations – Peer Tutoring and Study Groups – ADHD/LD Coaching, Outreach Workshops and more.</p>
+<p>Contact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment.</p>
+</section>
+<section id="create-a-github-account-why" class="slide level2">
+<h2>Create a GitHub account (Why?)</h2>
+<p>GitHub, Inc., is an Internet hosting service for software development and <strong>version control</strong>. <img data-src="images/pnas.png" data-fig-align="center"></p>
+</section>
+<section id="create-a-github-account" class="slide level2 smaller">
+<h2>Create a GitHub account</h2>
+<p>Please do this before the <em>Getting to know you</em> survey</p>
+<p>Go to https://github.com/, and create an account (unless you already have one).</p>
+<p>Some tips from Happy Git with R.</p>
+<p>– Incorporate your actual name!</p>
+<p>– Reuse your username from other contexts if you can, e. g., Twitter or Slack.</p>
+<p>– Pick a username you will be comfortable revealing to your future boss.</p>
+<p>– Be as unique as possible in as few characters as possible. Shorter is better than longer.</p>
+<p>– Avoid words with special meaning in programming (e.g.&nbsp;NA).</p>
+</section>
+<section id="slack" class="slide level2">
+<h2>Slack</h2>
+<p>Please click the Slack link located <a href="https://join.slack.com/t/sta199-f22-2/shared_invite/zt-1esd6fig2-opHVHPgKV35RJE5gxaAl8A">here</a> or in Sakai announcements to be a part of the discussions!</p>
+</section>
+<section id="r-studio" class="slide level2">
+<h2>R-Studio</h2>
+<p>– Reserve a STA198-1991 RStudio container</p>
+<pre><code>--- Go to https://vm-manage.oit.duke.edu/containers
+--- Click Reserve Container for the STA198-199 container</code></pre>
+</section>
+<section id="our-turn" class="slide level2">
+<h2>Our Turn</h2>
+<p>– <strong>Clone</strong> a repo so you have access to the qmd</p>
+</section>
+<section id="for-wednesday" class="slide level2">
+<h2>For Wednesday</h2>
+<p>– We’ll start talking about the computing toolkit</p>
+<p>– Watch videos for <em>Prepare: Week 01</em></p>
+<p>– Complete <em>Getting to Know You</em> Survey</p>
+<p>Please bring laptop to class if able for next time!</p>
 
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://rstudio-conf-2022.github.io/teach-ds-course-website">🔗 rstudio-conf-2022.github.io/teach-ds-course-website</a></p>
+<div class="footer footer-default">
+
 </div>
 </section></section>
     </div>
@@ -538,7 +583,6 @@
   <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -560,8 +604,7 @@
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -582,7 +625,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: 'c/t',
+        slideNumber: false,
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -611,7 +654,7 @@
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -687,7 +730,7 @@
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'fade',
+        transition: 'none',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
@@ -732,7 +775,7 @@
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,

@@ -11,24 +11,24 @@ format:
 
 https://sta199-f22-2.github.io/syllabus.html
 
-![](STA199.png){width="400" height="400" fig-align="center"}
+![](images/STA199.png){width="400" height="400" fig-align="center"}
 
-## Goals for Day 1 
+## Goals for Day 1
 
-- Get to know the professor \& ta
-- Get to know each other 
-- Course overview 
-- Register with **GitHub** \& **Slack**
-- Introduce **R** + start thinking about data
+-   Get to know the professor & ta
+-   Get to know each other
+-   Course overview
+-   Register with **GitHub** & **Slack**
+-   Introduce **R** + start thinking about data
 
 ## Who Am I?
 
 ::: {layout="[[100], [50,-10,50]]"}
-![](Bozeman.png){width="650" height="400" fig-align="center"}
+![](images/Bozeman.png){width="650" height="400" fig-align="center"}
 
-![](RosePark.png)
+![](images/RosePark.png)
 
-![](PD.png)
+![](images/PD.png)
 :::
 
 ```{r setup, include=FALSE}
@@ -45,9 +45,9 @@ library(tidyverse)
 library(rvest)
 ```
 
-## Who Are You? 
+## Who Are You?
 
-Please share with your neighbors: 
+Please share with your neighbors:
 
 -- Major
 
@@ -81,15 +81,15 @@ Please share with your neighbors:
 
 # Jobs
 
-![](Netflix.png){fig-align="center"}
+![](images/Netflix.png){fig-align="center"}
 
 # Jobs
 
-![](NetflixHighlighted2.png){fig-align="center"}
+![](images/NetflixHighlighted2.png){fig-align="center"}
 
 ## 
 
-![](DataLiteracy.png){fig-align="center"}
+![](images/DataLiteracy.png){fig-align="center"}
 
 ## Course objectives
 
@@ -131,21 +131,19 @@ text-align: left;
 :::
 :::
 
-##
+## 
 
-::: {#fig-R layout-ncol=2}
+::: {#fig-R layout-ncol="2"}
+![](images/figure1.png){width="750" height="700"}
 
-![](figure1.png){width="750" height="700"}
-
-![](figure2.png){width="750" height="700"}
+![](images/figure2.png){width="750" height="700"}
 
 Example R Figures
 :::
 
-
 ## 
 
-![](NHLapp_demo.gif){fig-align="center"}
+![](images/NHLapp_demo.gif){fig-align="center"}
 
 ## 
 
@@ -157,7 +155,7 @@ Example R Figures
 
 ### **Before Class**
 
--   Watch lecture content videos 
+-   Watch lecture content videos
 
 ### **During Class**
 
@@ -177,8 +175,7 @@ Example R Figures
 
 ## Textbooks and readings
 
--- R for Data Science by Grolemund & Wickham (1st ed. O’Reilly)
--- Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)
+-- R for Data Science by Grolemund & Wickham (2nd ed. O'Reilly) -- Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)
 
 ## Activities and assessments {.smaller}
 
@@ -200,7 +197,7 @@ Example R Figures
 
 -- Office hours tbd based on poll responses. Please vote!
 
--- Email me to set up a time: esm70@duke.edu 
+-- Email me to set up a time: esm70\@duke.edu
 
 ## Academic Resource Center {.smaller}
 
@@ -212,11 +209,9 @@ Services include:
 
 Contact the ARC at ARC\@duke.edu or call 919-684-5917 to schedule an appointment.
 
-
 ## Create a GitHub account (Why?)
 
-GitHub, Inc., is an Internet hosting service for software development and **version control**.
-![](pnas.png){fig-align="center"}
+GitHub, Inc., is an Internet hosting service for software development and **version control**. ![](images/pnas.png){fig-align="center"}
 
 ## Create a GitHub account {.smaller}
 
@@ -243,30 +238,20 @@ Please click the Slack link located [here](https://join.slack.com/t/sta199-f22-2
 ## R-Studio
 
 -- Reserve a STA198-1991 RStudio container
-    
+
     --- Go to https://vm-manage.oit.duke.edu/containers
     --- Click Reserve Container for the STA198-199 container
 
-## Our Turn 
+## Our Turn
 
 -- **Clone** a repo so you have access to the qmd
 
-## For Wednesday 
+## For Wednesday
 
--- We'll start talking about the computing toolkit 
+-- We'll start talking about the computing toolkit
 
 -- Watch videos for *Prepare: Week 01*
 
--- Complete *Getting to Know You* Survey 
+-- Complete *Getting to Know You* Survey
 
 Please bring laptop to class if able for next time!
-
-
-
-
-
-
-
-
-
-
