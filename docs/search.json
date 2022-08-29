@@ -63,116 +63,158 @@
     "text": "Assignments\nBelow are assignment due dates for the semester. You can find details and assignment instructions in the relevant week on the schedule.\n\nHomework\nHomework will be due on Wednesdays at 11:59pm. You will have one week to complete each homework assignment.\n\n\nLabs\nLabs will be due on Fridays at 11:59pm. You will start the lab during your scheduled lab section.\n\n\nExams\nThere will be two exams on the dates:\n\nOctober 12, 9am - October 14, 11:59pm\nNovember 16, 9am - November 16: 11:59pm"
   },
   {
-    "objectID": "slides/week-01/01-example.html#bullet-point-list",
-    "href": "slides/week-01/01-example.html#bullet-point-list",
-    "title": "Welcome to Intro Data Science",
-    "section": "Bullet point list",
-    "text": "Bullet point list\nUnordered\n\nItem A\nItem B\nItem C\n\nOrdered\n\nItem 1\nItem 2\nItem 3"
+    "objectID": "slides/week-01/DukeSlides.html#goals-for-day-1",
+    "href": "slides/week-01/DukeSlides.html#goals-for-day-1",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Goals for Day 1",
+    "text": "Goals for Day 1\n\nGet to know the professor & ta\nGet to know each other\nCourse overview\nRegister with GitHub & Slack\nIntroduce R + start thinking about data"
   },
   {
-    "objectID": "slides/week-01/01-example.html#incremental-list",
-    "href": "slides/week-01/01-example.html#incremental-list",
-    "title": "Welcome to Intro Data Science",
-    "section": "Incremental list",
-    "text": "Incremental list\n\n\nItem 1\nItem 2\nItem 3"
+    "objectID": "slides/week-01/DukeSlides.html#who-am-i",
+    "href": "slides/week-01/DukeSlides.html#who-am-i",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Who Am I?",
+    "text": "Who Am I?"
   },
   {
-    "objectID": "slides/week-01/01-example.html#equations",
-    "href": "slides/week-01/01-example.html#equations",
-    "title": "Welcome to Intro Data Science",
-    "section": "Equations",
-    "text": "Equations\nWrite mathematical symbols and equations using Latex.\nUse the formulas below to calculate \\(\\hat{\\beta}_1\\), the estimated slope, and \\(\\hat{\\beta}_0\\), the estimated intercept.\n\\[\n\\begin{aligned}\n&\\hat{\\beta}_1 = r \\frac{s_y}{s_x} \\\\\n&\\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}\n\\end{aligned}\n\\]"
+    "objectID": "slides/week-01/DukeSlides.html#who-are-you",
+    "href": "slides/week-01/DukeSlides.html#who-are-you",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Who Are You?",
+    "text": "Who Are You?\nPlease share with your neighbors:\n– Major\n– Year\n– Why you taking the course\n– What other courses are you taking\n– Anything else"
   },
   {
-    "objectID": "slides/week-01/01-example.html#code",
-    "href": "slides/week-01/01-example.html#code",
-    "title": "Welcome to Intro Data Science",
-    "section": "Code",
-    "text": "Code\n\n# Use code chunk option fig-align: center to center the plot. \nggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, \n                            color = species)) + \n         geom_point() + \n  labs(x = \"Flipper Length (in mm)\",y = \"Body Mass (in g)\",\n       title = \"Flipper length vs. body mass\",\n       subtitle = \"Penguins at Palmer Station, Antartica\") +\n  scale_color_viridis_d()"
+    "objectID": "slides/week-01/DukeSlides.html#our-classroom",
+    "href": "slides/week-01/DukeSlides.html#our-classroom",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Our Classroom",
+    "text": "Our Classroom\n\nCommunity\nCommunication\nRespect"
   },
   {
-    "objectID": "slides/week-01/01-example.html#images",
-    "href": "slides/week-01/01-example.html#images",
-    "title": "Welcome to Intro Data Science",
-    "section": "Images",
-    "text": "Images\n\nArtwork by @allison_horst"
+    "objectID": "slides/week-01/DukeSlides.html#what-is-data-science",
+    "href": "slides/week-01/DukeSlides.html#what-is-data-science",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "What is data science?",
+    "text": "What is data science?\n“Data science is a concept to unify statistics, data analysis, machine learning and their related methods in order to understand and analyze actual phenomena with data. It employs techniques and theories drawn from many fields within the context of mathematics, statistics, information science, and computer science.”\n-Wikipedia"
   },
   {
-    "objectID": "slides/week-01/01-example.html#columns",
-    "href": "slides/week-01/01-example.html#columns",
-    "title": "Welcome to Intro Data Science",
-    "section": "Columns",
-    "text": "Columns\n\n\nCalculate the proportion of penguins from each species.\n\n\npenguins |>\n  count(species) |>\n  mutate(prop  = n / sum(n))\n\n# A tibble: 3 × 3\n  species       n  prop\n  <fct>     <int> <dbl>\n1 Adelie      152 0.442\n2 Chinstrap    68 0.198\n3 Gentoo      124 0.360"
+    "objectID": "slides/week-01/DukeSlides.html#examples-of-data-science",
+    "href": "slides/week-01/DukeSlides.html#examples-of-data-science",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Examples of data science",
+    "text": "Examples of data science\n\nIdentification and prediction of disease\nTargeted advertising\nSupply chain optimization\nSports recruitment + strategist\nThe list goes on and on….."
   },
   {
-    "objectID": "slides/week-01/01-example.html#panels",
-    "href": "slides/week-01/01-example.html#panels",
-    "title": "Welcome to Intro Data Science",
-    "section": "Panels",
-    "text": "Panels\n\nPlotCode\n\n\n\npenguins |>\n  filter(species == \"Adelie\", !is.na(sex)) |>\n  ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = sex)) + \n  geom_point() +\n  labs(x = \"Flipper Length (in mm)\",y = \"Body Mass (in g)\",\n       title = \"Flipper length vs. body mass\",\n       subtitle = \"Adelie Penguins at Palmer Station, Antartica\") +\n  scale_color_viridis_d() + \n  facet_wrap(~island)\n\n\n\n\n\n\n\npenguins |>\n  filter(species == \"Adelie\", !is.na(sex)) |>\n  ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = sex)) + \n  geom_point() +\n  labs(x = \"Flipper Length (in mm)\",y = \"Body Mass (in g)\",\n       title = \"Flipper length vs. body mass\",\n       subtitle = \"Adelie Penguins at Palmer Station, Antartica\") +\n  scale_color_viridis_d() + \n  facet_wrap(~island)"
+    "objectID": "slides/week-01/DukeSlides.html#course-objectives",
+    "href": "slides/week-01/DukeSlides.html#course-objectives",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Course objectives",
+    "text": "Course objectives\n\nLearn to explore, visualize, and analyze data in a reproducible and shareable manner\nGain experience in data wrangling, exploratory data analysis, predictive modeling, and data visualization\nWork on problems and case studies inspired by and based on real-world questions and data\nLearn to effectively communicate results through written assignments and final project presentation"
   },
   {
-    "objectID": "slides/week-01/01-example.html#themes",
-    "href": "slides/week-01/01-example.html#themes",
-    "title": "Welcome to Intro Data Science",
-    "section": "Themes",
-    "text": "Themes\nCustomize the appearance of the slides using\n\nBuilt-in Reveal theme\nModify built-in theme using Sass\n\nVariant of CSS that supports variables and other features\n\nCreate custom thing using Sass\n\nSpecify the theme and/or Sass file (.scss) in the YAML\n\n\n\n🔗 rstudio-conf-2022.github.io/teach-ds-course-website"
+    "objectID": "slides/week-01/DukeSlides.html#some-of-what-you-will-learn",
+    "href": "slides/week-01/DukeSlides.html#some-of-what-you-will-learn",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Some of what you will learn",
+    "text": "Some of what you will learn\n\n\n\n\n\n– Fundamentals of R\n– Data visualization\n– Web scraping\n– Version control with GitHub\n\n– Reproducible reports with Quarto\n– Regression and classification\n– Statistical inference"
   },
   {
-    "objectID": "slides/week-01/02-demo.html#bullet-point-list",
-    "href": "slides/week-01/02-demo.html#bullet-point-list",
-    "title": "Meet the Toolkit",
-    "section": "Bullet point list",
-    "text": "Bullet point list"
+    "objectID": "slides/week-01/DukeSlides.html#section-1",
+    "href": "slides/week-01/DukeSlides.html#section-1",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "",
+    "text": "Figure 1: Example R Figures"
   },
   {
-    "objectID": "slides/week-01/02-demo.html#incremental-list",
-    "href": "slides/week-01/02-demo.html#incremental-list",
-    "title": "Meet the Toolkit",
-    "section": "Incremental list",
-    "text": "Incremental list"
+    "objectID": "slides/week-01/DukeSlides.html#section-3",
+    "href": "slides/week-01/DukeSlides.html#section-3",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "",
+    "text": "Note\n\n\n This is a new language"
   },
   {
-    "objectID": "slides/week-01/02-demo.html#equations",
-    "href": "slides/week-01/02-demo.html#equations",
-    "title": "Meet the Toolkit",
-    "section": "Equations",
-    "text": "Equations"
+    "objectID": "slides/week-01/DukeSlides.html#section-4",
+    "href": "slides/week-01/DukeSlides.html#section-4",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "",
+    "text": "Before Class\n\nWatch lecture content videos\n\nDuring Class\n\nWarm up question\nMix of lecture and interaction"
   },
   {
-    "objectID": "slides/week-01/02-demo.html#code",
-    "href": "slides/week-01/02-demo.html#code",
-    "title": "Meet the Toolkit",
-    "section": "Code",
-    "text": "Code"
+    "objectID": "slides/week-01/DukeSlides.html#lab",
+    "href": "slides/week-01/DukeSlides.html#lab",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Lab",
+    "text": "Lab\n– Focus on computing using R tidyverse syntax\n– Apply concepts from lecture to case study scenarios\n– Work on labs individually or in teams of 3 - 4"
   },
   {
-    "objectID": "slides/week-01/02-demo.html#images",
-    "href": "slides/week-01/02-demo.html#images",
-    "title": "Meet the Toolkit",
-    "section": "Images",
-    "text": "Images"
+    "objectID": "slides/week-01/DukeSlides.html#textbooks-and-readings",
+    "href": "slides/week-01/DukeSlides.html#textbooks-and-readings",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Textbooks and readings",
+    "text": "Textbooks and readings\n– R for Data Science by Grolemund & Wickham (1st ed. O’Reilly) – Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)"
   },
   {
-    "objectID": "slides/week-01/02-demo.html#columns",
-    "href": "slides/week-01/02-demo.html#columns",
-    "title": "Meet the Toolkit",
-    "section": "Columns",
-    "text": "Columns"
+    "objectID": "slides/week-01/DukeSlides.html#activities-and-assessments",
+    "href": "slides/week-01/DukeSlides.html#activities-and-assessments",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Activities and assessments",
+    "text": "Activities and assessments\n– Homework: Individual assignments combining conceptual and computational skills.\n– Labs: Individual or team assignments focusing on computational skills.\n– Exams: Two take-home exams.\n– Final Project: Team project presented during the final exam period.\n– Application Exercises: Exercises worked on during the live lecture session.\n– Statistics Experiences: Engage with statistics outside of the classroom and reflect on your experience."
   },
   {
-    "objectID": "slides/week-01/02-demo.html#panels",
-    "href": "slides/week-01/02-demo.html#panels",
-    "title": "Meet the Toolkit",
-    "section": "Panels",
-    "text": "Panels"
+    "objectID": "slides/week-01/DukeSlides.html#where-to-find-help-in-the-course",
+    "href": "slides/week-01/DukeSlides.html#where-to-find-help-in-the-course",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Where to find help in the course",
+    "text": "Where to find help in the course\n– Attend Office hours to meet with a member of the teaching team\n– Office hours tbd based on poll responses. Please vote!\n– Email me to set up a time: esm70@duke.edu"
   },
   {
-    "objectID": "slides/week-01/02-demo.html#themes",
-    "href": "slides/week-01/02-demo.html#themes",
-    "title": "Meet the Toolkit",
-    "section": "Themes",
-    "text": "Themes\nCustomize the appearance of the slides using\n\nBuilt-in Reveal theme\nModify built-in theme using Sass\n\nVariant of CSS that supports variables and other features\n\n\nSpecify the theme and/or Sass file (.scss) in the YAML\n\n\n\n🔗 rstudio-conf-2022.github.io/teach-ds-course-website"
+    "objectID": "slides/week-01/DukeSlides.html#academic-resource-center",
+    "href": "slides/week-01/DukeSlides.html#academic-resource-center",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Academic Resource Center",
+    "text": "Academic Resource Center\nThe Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.\nServices include:\n– Learning Consultations – Peer Tutoring and Study Groups – ADHD/LD Coaching, Outreach Workshops and more.\nContact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment."
+  },
+  {
+    "objectID": "slides/week-01/DukeSlides.html#create-a-github-account-why",
+    "href": "slides/week-01/DukeSlides.html#create-a-github-account-why",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Create a GitHub account (Why?)",
+    "text": "Create a GitHub account (Why?)\nGitHub, Inc., is an Internet hosting service for software development and version control."
+  },
+  {
+    "objectID": "slides/week-01/DukeSlides.html#create-a-github-account",
+    "href": "slides/week-01/DukeSlides.html#create-a-github-account",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Create a GitHub account",
+    "text": "Create a GitHub account\nPlease do this before the Getting to know you survey\nGo to https://github.com/, and create an account (unless you already have one).\nSome tips from Happy Git with R.\n– Incorporate your actual name!\n– Reuse your username from other contexts if you can, e. g., Twitter or Slack.\n– Pick a username you will be comfortable revealing to your future boss.\n– Be as unique as possible in as few characters as possible. Shorter is better than longer.\n– Avoid words with special meaning in programming (e.g. NA)."
+  },
+  {
+    "objectID": "slides/week-01/DukeSlides.html#slack",
+    "href": "slides/week-01/DukeSlides.html#slack",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Slack",
+    "text": "Slack\nPlease click the Slack link located here or in Sakai announcements to be a part of the discussions!"
+  },
+  {
+    "objectID": "slides/week-01/DukeSlides.html#r-studio",
+    "href": "slides/week-01/DukeSlides.html#r-studio",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "R-Studio",
+    "text": "R-Studio\n– Reserve a STA198-1991 RStudio container\n--- Go to https://vm-manage.oit.duke.edu/containers\n--- Click Reserve Container for the STA198-199 container"
+  },
+  {
+    "objectID": "slides/week-01/DukeSlides.html#our-turn",
+    "href": "slides/week-01/DukeSlides.html#our-turn",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "Our Turn",
+    "text": "Our Turn\n– Clone a repo so you have access to the qmd"
+  },
+  {
+    "objectID": "slides/week-01/DukeSlides.html#for-wednesday",
+    "href": "slides/week-01/DukeSlides.html#for-wednesday",
+    "title": "Day 1: Welcome to STA 199",
+    "section": "For Wednesday",
+    "text": "For Wednesday\n– We’ll start talking about the computing toolkit\n– Watch videos for Prepare: Week 01\n– Complete Getting to Know You Survey\nPlease bring laptop to class if able for next time!"
   },
   {
     "objectID": "syllabus.html",
