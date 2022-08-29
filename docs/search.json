@@ -2,9 +2,58 @@
   {
     "objectID": "labs/01-lab.html",
     "href": "labs/01-lab.html",
-    "title": "HW 01 - Add title",
+    "title": "Lab 01 - Hello R!",
     "section": "",
-    "text": "Add instructions for assignment."
+    "text": "This lab will go through much of the same workflow we’ve demonstrated in class. The main goal is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\nAn additional goal is to reinforce Git and GitHub, the collaboration and version control system that we will be using throughout the course.\nAs the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.\nTo make versioning simpler, this and the next lab are solo labs. In the future, you’ll learn about collaborating on GitHub and producing a single lab report for your lab team, but for now, concentrate on getting the basics down.\nYour lab TA will lead you through the Getting Started, Packages, and Warm up sections."
+  },
+  {
+    "objectID": "labs/01-lab.html#clone-the-repo-start-new-rstudio-project",
+    "href": "labs/01-lab.html#clone-the-repo-start-new-rstudio-project",
+    "title": "Lab 01 - Hello R!",
+    "section": "Clone the repo & start new RStudio project",
+    "text": "Clone the repo & start new RStudio project\n\nGo to the course organization on GitHub (http://www.github.com/sta199-f22-2). Click on the repo with the prefix lab-01-hello-r-. It contains the starter documents you need to complete the lab.\n\n\n\n\n\n\nClick on the green Clone or download button, select Use HTTPS (this might already be selected by default, and if it is, you’ll see the text Clone with HTTPS as in the image below). Click on the clipboard icon to copy the repo URL.\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick to log into the container labelled STA198-199. You should now see the RStudio environment.\n\n\n\n\n\n\n\nWarning\n\n\n\nIf you haven’t yet done so, you’ll first need to reserve this container, then log into it.\n\n\n\nGo to File ➡️ New Project ➡️ Version Control ➡️ Git.\n\n\n\n\n\n\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. You can leave Project Directory Name empty. Click tab, and it will default to the name of the GitHub repo.\nClick Create Project, and the files from your GitHub repo will be displayed the Files pane in RStudio."
+  },
+  {
+    "objectID": "labs/01-lab.html#configure-git",
+    "href": "labs/01-lab.html#configure-git",
+    "title": "Lab 01 - Hello R!",
+    "section": "Configure Git",
+    "text": "Configure Git\nThere is one more piece of housekeeping we need to take care of before we get started. Specifically, we need to configure your Git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\nType the following lines of code in the console in RStudio filling in your name and email address.\n\n\n\n\n\n\nImportant\n\n\n\nThe email address is the one tied to your GitHub account.\n\n\n\nlibrary(usethis)\nuse_git_config(user.name = \"GitHub username\", user.email = \"your email\")\n\nFor example, mine would be as follows:\n\nlibrary(usethis)\nuse_git_config(user.name = \"ElijahMeyer3\", user.email = \"ADD EMAIL\")\n\nIf you get the error message\n\nError in library(usethis) : there is no package called ‘usethis’\n\nthen you need to install the usethis package. Run the following code in the console to install the package. Then, rerun the use_git_config() function with your GitHub username and email address associated with your GitHub account.\n\ninstall.packages(\"usethis\")\n\nOnce you run the configuration code, your values for user.name and user.email will display in the console. If your user.name and user.email are correct, you’re good to go! Otherwise, run the code again with the necessary changes."
+  },
+  {
+    "objectID": "labs/01-lab.html#rstudio-quarto",
+    "href": "labs/01-lab.html#rstudio-quarto",
+    "title": "Lab 01 - Hello R!",
+    "section": "RStudio & Quarto",
+    "text": "RStudio & Quarto\nBelow is the default layout of the RStudio IDE (short for RStudio integrated development environment – it’s “integrated” since you can see your code and your output in one place).\nTO DO: UPDATE TO SCREENSHOT WITH QUARTO DOCUMENT!\n\n\n\n\nBelow are the general components of a Quarto file.\nTO DO: UPDATE TO ANNOTATED QUARTO SCREENSHOT!"
+  },
+  {
+    "objectID": "labs/01-lab.html#yaml",
+    "href": "labs/01-lab.html#yaml",
+    "title": "Lab 01 - Hello R!",
+    "section": "YAML",
+    "text": "YAML\nThe top portion of your Quarto file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\nOpen the Quarto (qmd) file in your project, change the author name to your name, and render the document."
+  },
+  {
+    "objectID": "labs/01-lab.html#commiting-changes",
+    "href": "labs/01-lab.html#commiting-changes",
+    "title": "Lab 01 - Hello R!",
+    "section": "Commiting changes",
+    "text": "Commiting changes\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your qmd file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state that includes your changes. You should see deletions in red and additions in green. As well, you can see exactly which lines were changed.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “Updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nTO DO: Add screenshot at this step!\nOf course, you don’t have to commit after every change, as this would get quite cumbersome. You should consider committing states that are meaningful to you for inspection, comparison, or restoration. In the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions."
+  },
+  {
+    "objectID": "labs/01-lab.html#pushing-changes",
+    "href": "labs/01-lab.html#pushing-changes",
+    "title": "Lab 01 - Hello R!",
+    "section": "Pushing changes",
+    "text": "Pushing changes\nNow that you have made an update and committed this change, it’s time to push these changes to the web! Or more specifically, to your repo on GitHub so that others can see your changes. By others, we mean the course teaching team (your repos) in this course are private to you and us, only).\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push. This will prompt a dialogue box where you first need to enter your user name, and then your password. Don’t worry, we will soon teach you how to save your password so you don’t have to enter it every time, but for now assignment you’ll have to manually enter each time you push in order to gain some experience with the process."
+  },
+  {
+    "objectID": "labs/01-lab.html#resize-your-figures",
+    "href": "labs/01-lab.html#resize-your-figures",
+    "title": "Lab 01 - Hello R!",
+    "section": "Resize your figures",
+    "text": "Resize your figures\nWe can customize the output from a particular R chunk by including options in the header that will override any global settings.\n\nIn the R chunks you wrote for Exercises 2-5, customize the settings by modifying the options in the R chunks used to create those figures.\n\nFor Exercises 2, 3, and 4, we want square figures. We can use fig.height and fig.width in the options to adjust the height and width of figures. Modify the chunks in Exercises 2-4 to be as follows:\n\n```{r}\n#| label: ex2-chunk-label\n#| fig-height: 5\n#| fig-width: 5\n\n# Your code that created the figure\n```\n\nFor Exercise 5, modify your figure to have fig-height of 10 and fig-width of 6.\nNow, save and render.\nOnce you’ve created this PDF file, you’re done!\n\nCommit all remaining changes, use the commit message “Done with Lab 1!” and push."
   },
   {
     "objectID": "course-links.html",
@@ -116,7 +165,7 @@
     "href": "index.html",
     "title": "STA 199: Introduction to Data Science",
     "section": "",
-    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      lab\n      exam\n      project\n      notes\n    \n  \n  \n    1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n    \nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n    \nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\nRelease: Lab 1\n    2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\nDue: Lab 1\n    \nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\nRelease: HW 1\n    \nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\nRelease: Lab 2\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\nDue: Lab 2\n    \nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\nDue: HW 1 / Release: HW 2\n    \nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\nRelease: Lab 3\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\nDue: Lab 3\n    \nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\nDue HW 2\n    \nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\nRelease: Lab 4\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\nDue: Lab 4\n    \nW\n28 September\nLec 10\nTips for effective data visualization\nTroubleshooting + debugging\n\n\n\n\n\n\n\n\n    \nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    6\nM\n3 October\nLec 11\nWeb scraping\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n    \nW\n5 October\nLec 12\nFunctions + iteration\n\n\n\n\n\n\n\nRelease: HW 3\n    \nTh\n6 October\nLab\nBonus lab\n\n\n\n\n\n\n\nRelease: Lab\n    7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n    \nW\n12 October\nLec 13\nData science ethics\n\n\n\n\n\n\n\nDue: HW 3\n    \nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n    8\nM\n17 October\nLec 14\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n    \nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n    \nTh\n20 October\nLab 5\nExploratory data analysis\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\nDue: Lab 5\n    \nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\nRelease: HW 4\n    \nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\nRelease: Lab 6\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    10\nM\n31 October\nLec 18\nLogistic regression\n\n\n\n\n\n\n\nDue: Lab 6\n    \nW\n2 November\nLec 19\nPrediction and overfitting\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n    \nTh\n3 November\nLab 7\nPredicting a categorical outcome\n\n\n\n\n\n\n\nRelease: Lab 7\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\nDue: Lab 7\n    \nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\nDue: HW 5\n    \nTh\n10 November\nLab 8\nBootstrapping\n\n\n\n\n\n\n\nRelease: Lab 8\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\nDue: Lab 8\n    \nW\n16 November\nLec 23\nSimulation based inference overview\n\n\n\n\n\n\n\n\n    \nTh\n17 November\nLab\nNo Lab - Work on Exam\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n    \nF\n\n\n\n\n\n\n\n\n\n\n\n    13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n    \nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n    \nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\nDue: Project draft due\n    14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n    \nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n    \nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n    15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n    \nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n    \nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\nDue: Project everything\n    \nF\n9 December\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
+    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      lab\n      exam\n      project\n      notes\n    \n\n\n1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\nRelease: Lab 1\n\n\n2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\nDue: Lab 1\n\n\n\nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\nRelease: HW 1\n\n\n\nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\nRelease: Lab 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\nDue: Lab 2\n\n\n\nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\nDue: HW 1 / Release: HW 2\n\n\n\nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\nRelease: Lab 3\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\nDue: Lab 3\n\n\n\nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\nDue HW 2\n\n\n\nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\nRelease: Lab 4\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\nDue: Lab 4\n\n\n\nW\n28 September\nLec 10\nTips for effective data visualization\nTroubleshooting + debugging\n\n\n\n\n\n\n\n\n\n\n\nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\nM\n3 October\nLec 11\nWeb scraping\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n\n\n\nW\n5 October\nLec 12\nFunctions + iteration\n\n\n\n\n\n\n\nRelease: HW 3\n\n\n\nTh\n6 October\nLab\nBonus lab\n\n\n\n\n\n\n\nRelease: Lab\n\n\n7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n\n\n\nW\n12 October\nLec 13\nData science ethics\n\n\n\n\n\n\n\nDue: HW 3\n\n\n\nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n8\nM\n17 October\nLec 14\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\n\n\nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\nTh\n20 October\nLab 5\nExploratory data analysis\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\nDue: Lab 5\n\n\n\nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\nRelease: HW 4\n\n\n\nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\nRelease: Lab 6\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\nM\n31 October\nLec 18\nLogistic regression\n\n\n\n\n\n\n\nDue: Lab 6\n\n\n\nW\n2 November\nLec 19\nPrediction and overfitting\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n\n\n\nTh\n3 November\nLab 7\nPredicting a categorical outcome\n\n\n\n\n\n\n\nRelease: Lab 7\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\nDue: Lab 7\n\n\n\nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\nDue: HW 5\n\n\n\nTh\n10 November\nLab 8\nBootstrapping\n\n\n\n\n\n\n\nRelease: Lab 8\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\nDue: Lab 8\n\n\n\nW\n16 November\nLec 23\nSimulation based inference overview\n\n\n\n\n\n\n\n\n\n\n\nTh\n17 November\nLab\nNo Lab - Work on Exam\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n\n\n\nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\nDue: Project draft due\n\n\n14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n\n\n15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n\n\n\nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\nDue: Project everything\n\n\n\nF\n9 December\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
   },
   {
     "objectID": "course-team.html",
@@ -488,5 +537,124 @@
     "title": "Computing troubleshooting",
     "section": "",
     "text": "If the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course forum to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\nEither way you can also fill out the form INSERT LINK, which will notify our undergraduate coordinator, who can help diagnose the issue."
+  },
+  {
+    "objectID": "labs/lab-01.html",
+    "href": "labs/lab-01.html",
+    "title": "Lab 01 - Hello R!",
+    "section": "",
+    "text": "This lab will go through much of the same workflow we’ve demonstrated in class. The main goal is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\nAn additional goal is to reinforce Git and GitHub, the collaboration and version control system that we will be using throughout the course.\nAs the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.\nTo make versioning simpler, this and the next lab are solo labs. In the future, you’ll learn about collaborating on GitHub and producing a single lab report for your lab team, but for now, concentrate on getting the basics down.\nYour lab TA will lead you through the Getting Started, Packages, and Warm up sections."
+  },
+  {
+    "objectID": "labs/lab-01.html#clone-the-repo-start-new-rstudio-project",
+    "href": "labs/lab-01.html#clone-the-repo-start-new-rstudio-project",
+    "title": "Lab 01 - Hello R!",
+    "section": "Clone the repo & start new RStudio project",
+    "text": "Clone the repo & start new RStudio project\n\nGo to the course organization on GitHub (http://www.github.com/sta199-f22-2). Click on the repo with the prefix lab-01-hello-r-. It contains the starter documents you need to complete the lab.\n\n\n\n\n\n\nClick on the green Clone or download button, select Use HTTPS (this might already be selected by default, and if it is, you’ll see the text Clone with HTTPS as in the image below). Click on the clipboard icon to copy the repo URL.\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick to log into the container labelled STA198-199. You should now see the RStudio environment.\n\n\n\n\n\n\n\nWarning\n\n\n\nIf you haven’t yet done so, you’ll first need to reserve this container, then log into it.\n\n\n\nGo to File ➡️ New Project ➡️ Version Control ➡️ Git.\n\n\n\n\n\n\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. You can leave Project Directory Name empty. Click tab, and it will default to the name of the GitHub repo.\nClick Create Project, and the files from your GitHub repo will be displayed the Files pane in RStudio."
+  },
+  {
+    "objectID": "labs/lab-01.html#configure-git",
+    "href": "labs/lab-01.html#configure-git",
+    "title": "Lab 01 - Hello R!",
+    "section": "Configure Git",
+    "text": "Configure Git\nThere is one more piece of housekeeping we need to take care of before we get started. Specifically, we need to configure your Git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\nType the following lines of code in the console in RStudio filling in your name and email address.\n\n\n\n\n\n\nImportant\n\n\n\nThe email address is the one tied to your GitHub account.\n\n\n\nlibrary(usethis)\nuse_git_config(user.name = \"GitHub username\", user.email = \"your email\")\n\nFor example, mine would be as follows:\n\nlibrary(usethis)\nuse_git_config(user.name = \"ElijahMeyer3\", user.email = \"ADD EMAIL\")\n\nIf you get the error message\n\nError in library(usethis) : there is no package called ‘usethis’\n\nthen you need to install the usethis package. Run the following code in the console to install the package. Then, rerun the use_git_config() function with your GitHub username and email address associated with your GitHub account.\n\ninstall.packages(\"usethis\")\n\nOnce you run the configuration code, your values for user.name and user.email will display in the console. If your user.name and user.email are correct, you’re good to go! Otherwise, run the code again with the necessary changes."
+  },
+  {
+    "objectID": "labs/lab-01.html#rstudio-quarto",
+    "href": "labs/lab-01.html#rstudio-quarto",
+    "title": "Lab 01 - Hello R!",
+    "section": "RStudio & Quarto",
+    "text": "RStudio & Quarto\nBelow is the default layout of the RStudio IDE (short for RStudio integrated development environment – it’s “integrated” since you can see your code and your output in one place).\nTO DO: UPDATE TO SCREENSHOT WITH QUARTO DOCUMENT!\n\n\n\n\nBelow are the general components of a Quarto file.\nTO DO: UPDATE TO ANNOTATED QUARTO SCREENSHOT!"
+  },
+  {
+    "objectID": "labs/lab-01.html#yaml",
+    "href": "labs/lab-01.html#yaml",
+    "title": "Lab 01 - Hello R!",
+    "section": "YAML",
+    "text": "YAML\nThe top portion of your Quarto file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\nOpen the Quarto (qmd) file in your project, change the author name to your name, and render the document."
+  },
+  {
+    "objectID": "labs/lab-01.html#commiting-changes",
+    "href": "labs/lab-01.html#commiting-changes",
+    "title": "Lab 01 - Hello R!",
+    "section": "Commiting changes",
+    "text": "Commiting changes\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your qmd file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state that includes your changes. You should see deletions in red and additions in green. As well, you can see exactly which lines were changed.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “Updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nTO DO: Add screenshot at this step!\nOf course, you don’t have to commit after every change, as this would get quite cumbersome. You should consider committing states that are meaningful to you for inspection, comparison, or restoration. In the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions."
+  },
+  {
+    "objectID": "labs/lab-01.html#pushing-changes",
+    "href": "labs/lab-01.html#pushing-changes",
+    "title": "Lab 01 - Hello R!",
+    "section": "Pushing changes",
+    "text": "Pushing changes\nNow that you have made an update and committed this change, it’s time to push these changes to the web! Or more specifically, to your repo on GitHub so that others can see your changes. By others, we mean the course teaching team (your repos) in this course are private to you and us, only).\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push. This will prompt a dialogue box where you first need to enter your user name, and then your password. Don’t worry, we will soon teach you how to save your password so you don’t have to enter it every time, but for now assignment you’ll have to manually enter each time you push in order to gain some experience with the process."
+  },
+  {
+    "objectID": "labs/lab-01.html#resize-your-figures",
+    "href": "labs/lab-01.html#resize-your-figures",
+    "title": "Lab 01 - Hello R!",
+    "section": "Resize your figures",
+    "text": "Resize your figures\nWe can customize the output from a particular R chunk by including options in the header that will override any global settings.\n\nIn the R chunks you wrote for Exercises 2-5, customize the settings by modifying the options in the R chunks used to create those figures.\n\nFor Exercises 2, 3, and 4, we want square figures. We can use fig.height and fig.width in the options to adjust the height and width of figures. Modify the chunks in Exercises 2-4 to be as follows:\n\n```{r}\n#| label: ex2-chunk-label\n#| fig-height: 5\n#| fig-width: 5\n\n# Your code that created the figure\n```\n\nFor Exercise 5, modify your figure to have fig-height of 10 and fig-width of 6.\nNow, save and render.\nOnce you’ve created this PDF file, you’re done!\n\nCommit all remaining changes, use the commit message “Done with Lab 1!” and push."
+  },
+  {
+    "objectID": "hw/hw-06.html",
+    "href": "hw/hw-06.html",
+    "title": "HW 01: Add name",
+    "section": "",
+    "text": "The world of statistics and data science is vast and continually growing! The goal of the statistics experience assignments is to help you engage with the statistics and data science communities outside of the classroom.\nYou may submit the statistics experience assignment anytime between now and the deadline.\nEach experience has two parts:\n1️⃣ Have a statistics experience\n2️⃣ Make a slide summarizing on your experience\nYou must complete both parts to receive credit."
+  },
+  {
+    "objectID": "hw/hw-06.html#part-1-experience-statistics-outside-of-the-classroom",
+    "href": "hw/hw-06.html#part-1-experience-statistics-outside-of-the-classroom",
+    "title": "HW 01: Add name",
+    "section": "Part 1: Experience statistics outside of the classroom",
+    "text": "Part 1: Experience statistics outside of the classroom\nComplete an activity in one of the categories below. Under each category are suggested activities. You do not have to do one these suggested activities. You are welcome to find other activities as long as they are related to statistics/data science and they fit in one of the six categories. If there is an activity you’d like to do but you’re not sure if it qualifies for the statistics experience, just ask!\n\nCategory 1: Attend a talk or conference\nAttend an talk, panel, or conference related to statistics or data science. If you are attending a single talk or panel, it must be at least 30 minutes to count towards the statistics experience. The event can be in-person or online.\n\n\nCategory 2: Talk with a statistician/ data scientist\nTalk with someone who uses statistics in their daily work. This could include a professor, professional in industry, graduate student, etc.\n\n\nCategory 3: Listen to a podcast / watch video\nListen to a podcast or watch a video about statistics and data science. The podcast or video must be at least 30 minutes to count towards the statistics experience. A few suggestions are below:\n\nStats + Stories Podcast\nCausal Inference Podcast\nFiveThirtyEight Model Talk\nrstudio::global 2022 talks\nrstudio::global 2021 talks\nrstudio::conf 2020 talks\n\nThis list is not exhaustive. You may listen to other podcasts or watch other statistics/data science videos not included on this list. Ask your professor if you are unsure whether a particular podcast or video will count towards the statistics experience.\n\n\nCategory 4: Participate in a data science competition or challenge\nParticipate in a statistics or data science competition. You can participate individually or with a team.\n\n\nCategory 5: Read a book on statistics/data science\nThere are a lot of books about statistics, data science, and related topics. A few suggestions are below. If you decide to read a book that isn’t on this list, ask your professor to make sure it counts toward the experience. Many of these books are available through Duke library.\n\nWeapons of Math Destruction by Cathy O’Neil\nHow Charts Lie: Getting Smarter about Visual Information by Alberto Cairo\nThe Theory that Would Not Die by Sharon Bertsch McGrayne\nThe Art of Statistics: How to learn from data by David Spiegelhalter\nThe Signal and the Noise: Why so many predictions fail - but some don’t by Nate Silver\nHow Charts Lie by Alberto Cairo\nList of books about data science ethics\n\n\n\nCategory 6: TidyTuesday\nYou may also participate in a TidyTuesday challenge. New data sets are announced on Monday afternoons.You can find more information about TidyTuesday and see the data in the TidyTuesday GitHub repo.\nA few guidelines:\n✅ Create a GitHub repo for your TidyTuesday submission. Your repo should include\n\nThe R Markdown file with all the code needed to reproduce your visualization.\nA README that includes an image of your final visualization and a short summary (~ 1 paragraph) about your visualization.\n\n✅ The visualization should include features or customization that are beyond what we’ve done in class.\n✅ Include the link to your GitHub repo in the slide summarizing your experience.\n\n\nCategory 7: Coding out loud\nWatch an episode of Coding out loud (either live or pre-recorded) and work through the project.\nA few guidelines:c\n✅ Create a GitHub repo for your Coding out loud submission. Your repo should include\n\nThe Quarto file with all the code needed to reproduce your visualization.\nA README that includes an image of your final visualization and a short summary (~ 1 paragraph) about your visualization.\n\n✅ The final product (visualuzation, table, etc.) should include features or customization that are beyond what was achieved in the Coding out loud episode.\n✅ Include the link to your GitHub repo in the slide summarizing your experience."
+  },
+  {
+    "objectID": "hw/hw-06.html#part-2-summarize-your-experience",
+    "href": "hw/hw-06.html#part-2-summarize-your-experience",
+    "title": "HW 01: Add name",
+    "section": "Part 2: Summarize your experience",
+    "text": "Part 2: Summarize your experience\nMake one slide summarizing your experience. Submit the slide as a PDF on Gradescope.\nInclude the following on your slide:\n\nName and brief description of the event/podcast/competition/etc.\nSomething you found new, interesting, or unexpected\nHow the event/podcast/competition/etc. connects to something we’ve done in class.\nCitation or link to web page for event/competition/etc.\n\nClick here to see a template to help you get started on your slide. Your slide does not have to follow this exact format; it just needs to include the information mentioned above and be easily readable (i.e. use a reasonable font size!). Creativity is encouraged!"
+  },
+  {
+    "objectID": "hw/hw-06.html#submission",
+    "href": "hw/hw-06.html#submission",
+    "title": "HW 01: Add name",
+    "section": "Submission",
+    "text": "Submission\nSubmit the reflection as a PDF under the HW 6 - Statistics Experience assignment on Gradescope by Fri, Dec 9 at 11:59 pm ET. It must be submitted by the deadline on Gradescope to be considered for grading."
+  },
+  {
+    "objectID": "hw/hw-05.html",
+    "href": "hw/hw-05.html",
+    "title": "HW 01: Add name",
+    "section": "",
+    "text": "Add instructions for assignment."
+  },
+  {
+    "objectID": "hw/hw-04.html",
+    "href": "hw/hw-04.html",
+    "title": "HW 01: Add name",
+    "section": "",
+    "text": "Add instructions for assignment."
+  },
+  {
+    "objectID": "hw/hw-01.html",
+    "href": "hw/hw-01.html",
+    "title": "HW 01 - Add title",
+    "section": "",
+    "text": "Add instructions for assignment."
+  },
+  {
+    "objectID": "hw/hw-03.html",
+    "href": "hw/hw-03.html",
+    "title": "HW 01: Add name",
+    "section": "",
+    "text": "Add instructions for assignment."
+  },
+  {
+    "objectID": "hw/hw-02.html",
+    "href": "hw/hw-02.html",
+    "title": "HW 01: Add name",
+    "section": "",
+    "text": "Add instructions for assignment."
   }
 ]
