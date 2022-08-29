@@ -9,20 +9,20 @@ title: "Teaching team"
 **Dr. Elijah Meyer** (he/him) is ...
 
 | Office hours            | Location                                                                       |
-|-------------------|-----------------------------------------------------|
+|--------------------|----------------------------------------------------|
 | Tue 10:00 AM - 12:00 PM | Old Chemistry Building 208 / [Zoom](https://bit.ly/3QZ8JAL) (Password: 5MYp7A) |
 
 ## Teaching assistants
 
-| Name                     | Role                 | Lab section            | Office hours                                                                                            |
-|------------------|------------------|------------------|--------------------|
-| Konnie Huang             | In Class TA          |                        | Thur 5:00PM - 6:00PM / [Zoom](link)                                                                     |
-| Eli Gnesin               | Lab Leader           | Thur 10:15AM - 11:30AM | Thur 9:00AM - 10:00PM & 12:00 pm - 1:00 pm / [Zoom](link)                                               |
-| Yibin Zhang              | Lab Helper           | Thur 10:15AM - 11:30AM |                                                                                                         |
-| Caitrin Murphy           | Lab Leader           | Thur 12:00PM - 1:15PM  | Wed 12:00PM - 2:00 PM / [Zoom](link)                                                                    |
-| Zheyuan Liu              | Lab Helper           | Thur 12:00PM - 1:15PM  | Thur 1:00PM - 3:00 PM / [Zoom](link)                                                                    |
-| Christine (Yueming) Shen | Lab Leader / Head TA | Thur 1:45PM - 3:00PM   | Thur 3:00PM - 5:00 PM / [Zoom](link)                                                                    |
-| Youran Wu                | Lab Leader           | Thur 3:30PM - 4:45PM   |                                                                                                         |
-| Mounika Adepu            | Lab Helper           | Thur 3:30PM - 4:45PM   | Mon 10:30 AM - 12:30 pm / [Zoom](link)                                                                  |
-| Kateryna (Kat) Husar     | Lab Leader           | Thur 5:15PM - 6:30PM   | Tue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / [Zoom](link)                                               |
-| Isabella Swigart         | Lab Helper           | Thur 5:15PM - 6:30PM   | Tue 4:00 PM - 5:30 PM / [Zoom](link)                                                                    |
+| Name                     | Role                 | Lab section            | Office hours                                              |
+|------------------|------------------|------------------|-------------------|
+| Konnie Huang             | In Class TA          |                        | Thur 5:00PM - 6:00PM / [Zoom](link)                       |
+| Eli Gnesin               | Lab Leader           | Thur 10:15AM - 11:30AM | Thur 9:00AM - 10:00PM & 12:00 pm - 1:00 pm / [Zoom](link) |
+| Yibin Zhang              | Lab Helper           | Thur 10:15AM - 11:30AM |                                                           |
+| Caitrin Murphy           | Lab Leader           | Thur 12:00PM - 1:15PM  | Wed 12:00PM - 2:00 PM / [Zoom](link)                      |
+| Zheyuan Liu              | Lab Helper           | Thur 12:00PM - 1:15PM  | Thur 1:00PM - 3:00 PM / [Zoom](link)                      |
+| Christine (Yueming) Shen | Lab Leader / Head TA | Thur 1:45PM - 3:00PM   | Thur 3:00PM - 5:00 PM / [Zoom](link)                      |
+| Youran Wu                | Lab Leader           | Thur 3:30PM - 4:45PM   |                                                           |
+| Mounika Adepu            | Lab Helper           | Thur 3:30PM - 4:45PM   | Mon 10:30 AM - 12:30 pm / [Zoom](link)                    |
+| Kateryna (Kat) Husar     | Lab Leader           | Thur 5:15PM - 6:30PM   | Tue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / [Zoom](link) |
+| Isabella Swigart         | Lab Helper           | Thur 5:15PM - 6:30PM   | Tue 4:00 PM - 5:30 PM / [Zoom](link)                      |
