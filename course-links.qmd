@@ -1,0 +1,11 @@
+---
+title: "Useful links"
+---
+
+|                            |                                                                                                                                                        |
+|------------------|------------------------------------------------------|
+| RStudio containers         | 🔗 on [Duke Container Manager](https://cmgr.oit.duke.edu/containers)                                                                                   |
+| Course GitHub organization | 🔗 on [GitHub](https://github.com/sta199-f22-2)                                                                                                        |
+| Gradescope                 | 🔗 on Sakai \<\-- update link                                                                                                                          |
+| Gradebook                  | 🔗 on Sakai \<\-- update link                                                                                                                          |
+| Office hours               | 🔗 on [Google docs](https://docs.google.com/spreadsheets/d/1Jgujcf6xor-63a_qfltwfMkHQtaBJHtUetd-rEpXljw/edit?usp=drive_web&ouid=113269240218009175773) |
