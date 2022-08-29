@@ -208,8 +208,7 @@ Contact the ARC at ARC\@duke.edu or call 919-684-5917 to schedule an appointment
 
 ## Create a GitHub account (Why?)
 
-GitHub, Inc., is an Internet hosting service for software development and **version control**.
-![](images/01-welcome-199/pnas.png){fig-align="center"}
+GitHub, Inc., is an Internet hosting service for software development and **version control**. ![](images/01-welcome-199/pnas.png){fig-align="center"}
 
 ## Create a GitHub account {.smaller}
 

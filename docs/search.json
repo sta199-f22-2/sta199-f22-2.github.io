@@ -60,7 +60,7 @@
     "href": "course-links.html",
     "title": "Useful links",
     "section": "",
-    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradescope\n🔗 on Sakai <-- update link\n\n\nGradebook\n🔗 on Sakai <-- update link\n\n\nOffice hours\n🔗 on Google docs"
+    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradescope\n🔗 on Sakai\n\n\nGradebook\n🔗 on Sakai\n\n\nOffice hours\n🔗 on Google docs"
   },
   {
     "objectID": "hw/hw-06.html",
@@ -158,7 +158,7 @@
     "href": "course-overview.html#class-meetings",
     "title": "Course overview",
     "section": "Class meetings",
-    "text": "Class meetings\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nFrench Science 2231\nMon & Wed 10:15 - 11:30 am\n\n\nLab 06\nPerkins Link 087 (Classroom 3)\nThur 10:15 - 11:30 am\n\n\nLab 07\nPerkins Link 087 (Classroom 3)\nThur 12:00 - 1:15 pm\n\n\nLab 08\nPerkins Link 087 (Classroom 3)\nThur 1:45 - 3:00 pm\n\n\nLab 09\nPerkins Link 087 (Classroom 3)\nThur 3:30 - 4:45 pm\n\n\nLab 10\nPerkins Link 087 (Classroom 3)\nThur 5:15 - 6:30 pm"
+    "text": "Class meetings\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nFrench Science 2231\nMon & Wed 3:30 - 4:45 pm\n\n\nLab 06\nPerkins Link 087 (Classroom 3)\nThur 10:15 - 11:30 am\n\n\nLab 07\nPerkins Link 087 (Classroom 3)\nThur 12:00 - 1:15 pm\n\n\nLab 08\nPerkins Link 087 (Classroom 3)\nThur 1:45 - 3:00 pm\n\n\nLab 09\nPerkins Link 087 (Classroom 3)\nThur 3:30 - 4:45 pm\n\n\nLab 10\nPerkins Link 087 (Classroom 3)\nThur 5:15 - 6:30 pm"
   },
   {
     "objectID": "index.html",
@@ -172,7 +172,7 @@
     "href": "course-team.html",
     "title": "Teaching team",
     "section": "",
-    "text": "Dr. Elijah Meyer (he/him) is …\n\n\n\nOffice hours\nLocation\n\n\n\n\nTue 10:00 AM - 12:00 PM\nOld Chemistry Building 208 / Zoom (Password: 5MYp7A)"
+    "text": "Dr. Elijah Meyer (he/him) - Hello! I’m very excited to work with you all this semester. I’ve earned a Master’s degree in statistics and a Ph.D. in statistics with a focus in education from Montana State University. My early research is in sports statistics, with an emphasis on spatial data visualizations to enhance sports strategy. My Ph.D. work is in how to best support graduate student instructors and early career teachers to use active learning in their classrooms.\nPrior to my time at Duke, I’ve taught multiple sections of Introductory and Intermediate Statistics at Montana State, developed their Intermediate Statistics online course, and helped integrate R into the Introductory Statistics curricula. I prioritize community, communication, and respect in my classroom. I want to provide a space where we can freely talk about the material, embrace mistakes, and learn together throughout the semester.\nWhen I’m not in the books, I enjoy playing disc golf, tennis, basketball, and anything else that gets me outside and active. I’m looking forward to meeting you all and having a great semester!\n\n\n\nOffice hours\nLocation\n\n\n\n\nTue 10:00 AM - 12:00 PM\nOld Chemistry Building 208 / Zoom (Password: 5MYp7A)"
   },
   {
     "objectID": "course-team.html#teaching-assistants",
@@ -515,7 +515,7 @@
     "href": "course-syllabus.html#grading",
     "title": "Syllabus",
     "section": "Grading",
-    "text": "Grading\nThe final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n30% (5% x 6)\n\n\nLabs\n16% (2% x 8)\n\n\nProject\n15%\n\n\nExam 01\n17%\n\n\nExam 02\n17%\n\n\nApplication Exercises\n2.5%\n\n\nTeamwork\n2.5%\n\n\n\nThe final letter grade will be determined based on the following thresholds:\n\n\n\nLetter Grade\nFinal Course Grade\n\n\n\n\nA\n>= 93\n\n\nA-\n90 - 92.99\n\n\nB+\n87 - 89.99\n\n\nB\n83 - 86.99\n\n\nB-\n80 - 82.99\n\n\nC+\n77 - 79.99\n\n\nC\n73 - 76.99\n\n\nC-\n70 - 72.99\n\n\nD+\n67 - 69.99\n\n\nD\n63 - 66.99\n\n\nD-\n60 - 62.99\n\n\nF\n< 60"
+    "text": "Grading\nThe final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n30% (5% x 6)\n\n\nLabs\n14% (2% x 7)\n\n\nProject\n15%\n\n\nExam 01\n18%\n\n\nExam 02\n18%\n\n\nApplication Exercises\n2.5%\n\n\nTeamwork\n2.5%\n\n\n\nThe final letter grade will be determined based on the following thresholds:\n\n\n\nLetter Grade\nFinal Course Grade\n\n\n\n\nA\n>= 93\n\n\nA-\n90 - 92.99\n\n\nB+\n87 - 89.99\n\n\nB\n83 - 86.99\n\n\nB-\n80 - 82.99\n\n\nC+\n77 - 79.99\n\n\nC\n73 - 76.99\n\n\nC-\n70 - 72.99\n\n\nD+\n67 - 69.99\n\n\nD\n63 - 66.99\n\n\nD-\n60 - 62.99\n\n\nF\n< 60"
   },
   {
     "objectID": "course-syllabus.html#course-policies",
@@ -536,6 +536,20 @@
     "href": "computing-troubleshooting.html",
     "title": "Computing troubleshooting",
     "section": "",
-    "text": "If the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course forum to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).\nEither way you can also fill out the form INSERT LINK, which will notify our undergraduate coordinator, who can help diagnose the issue."
+    "text": "If the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course forum to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots)."
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Week\n\n\nDates\n\n\nTopic\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "schedule.html#assignments",
+    "href": "schedule.html#assignments",
+    "title": "Schedule",
+    "section": "Assignments",
+    "text": "Assignments\nBelow are assignment due dates for the semester. You can find details and assignment instructions in the relevant week on the schedule.\n\nHomework\nHomework will be due on Wednesdays at 11:59pm. You will have one week to complete each homework assignment. Homework will be turned in on Gradescope.\n\n\nLabs\nLabs will be due on Fridays at 11:59pm. You will start the lab during your scheduled lab section. Labs will be turned in on Gradescope.\n\n\nExams\nThere will be two exams on the dates:\n\nSeptember 29, 12PM - October 3, 2:00PM\nNovember 17, 12PM - November 21: 2:00PM"
   }
 ]
