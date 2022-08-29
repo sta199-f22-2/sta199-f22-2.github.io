@@ -200,9 +200,9 @@ The Academic Resource Center (ARC) offers free services to all students during t
 
 Services include:
 
--   Learning Consultations
--   Peer Tutoring and Study Groups
--   ADHD/LD Coaching, Outreach Workshops and more
+--   Learning Consultations
+--   Peer Tutoring and Study Groups
+--   ADHD/LD Coaching, Outreach Workshops and more
 
 Contact the ARC at ARC\@duke.edu or call 919-684-5917 to schedule an appointment.
 
@@ -240,10 +240,10 @@ Please click the Slack link located [here](https://join.slack.com/t/sta199-f22-2
 
 ## For Wednesday
 
--   We'll start talking about the computing toolkit
+--   We'll start talking about the computing toolkit
 
--   Watch videos for Wednesday
+--   Watch videos for Wednesday
 
--   Complete *Getting to Know You* Survey
+--   Complete *Getting to Know You* Survey
 
 Please bring laptop to class if able for next time!
