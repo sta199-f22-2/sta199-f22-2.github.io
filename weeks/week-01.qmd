@@ -2,7 +2,7 @@
 title: "Week 01"
 subtitle: "Welcome to Intro Data Science"
 description: "Aug 29 - Sep 02"
-author: ""
+author: "Meyer"
 date: ""
 listing:
   - id: slides
@@ -52,5 +52,5 @@ There are no assignments scheduled this week.
 | [Intro to Modern Data Science: Chapter 1 - Hello data](https://openintro-ims.netlify.app/data-hello.html) |
 
 # Videos
-               
-| Before Wednesday (8-28) - [Meet the Tool Kit](https://www.youtube.com/watch?v=Q2QN1RpvLq8) 
+
+| Before Wednesday (8-28) - [Meet the Tool Kit](https://www.youtube.com/watch?v=Q2QN1RpvLq8)
