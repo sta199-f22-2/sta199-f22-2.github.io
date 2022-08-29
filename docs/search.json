@@ -494,7 +494,7 @@
     "href": "slides/01-welcome-199.html#academic-resource-center",
     "title": "Welcome to STA 199",
     "section": "Academic Resource Center",
-    "text": "Academic Resource Center\nThe Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.\nServices include:\n– Learning Consultations – Peer Tutoring and Study Groups – ADHD/LD Coaching, Outreach Workshops and more\nContact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment."
+    "text": "Academic Resource Center\nThe Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.\nServices include:\n– Learning Consultations\n– Peer Tutoring and Study Groups\n– ADHD/LD Coaching, Outreach Workshops and more\nContact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment."
   },
   {
     "objectID": "slides/01-welcome-199.html#create-a-github-account-why",
@@ -508,7 +508,7 @@
     "href": "slides/01-welcome-199.html#create-a-github-account",
     "title": "Welcome to STA 199",
     "section": "Create a GitHub account",
-    "text": "Create a GitHub account\nPlease do this before the Getting to know you survey\nGo to https://github.com/, and create an account (unless you already have one).\nSome tips from Happy Git with R.\n\nIncorporate your actual name!\nReuse your username from other contexts if you can, e. g., Twitter or Slack.\nPick a username you will be comfortable revealing to your future boss.\nBe as unique as possible in as few characters as possible. Shorter is better than longer.\nAvoid words with special meaning in programming (e.g. NA)."
+    "text": "Create a GitHub account\nPlease do this before the Getting to know you survey\nGo to https://github.com/, and create an account (unless you already have one).\nSome tips from Happy Git with R.\n– Incorporate your actual name! – Reuse your username from other contexts if you can, e. g., Twitter or Slack. – Pick a username you will be comfortable revealing to your future boss. – Be as unique as possible in as few characters as possible. Shorter is better than longer. – Avoid words with special meaning in programming (e.g. NA)."
   },
   {
     "objectID": "slides/01-welcome-199.html#slack",
@@ -522,7 +522,7 @@
     "href": "slides/01-welcome-199.html#r-studio",
     "title": "Welcome to STA 199",
     "section": "R-Studio",
-    "text": "R-Studio\n\nReserve a STA198-1991 RStudio container\n\nGo to https://vm-manage.oit.duke.edu/containers\nClick Reserve Container for the STA198-199 container"
+    "text": "R-Studio\n– Reserve a STA198-1991 RStudio container – Go to https://vm-manage.oit.duke.edu/containers – Click Reserve Container for the STA198-199 container"
   },
   {
     "objectID": "slides/01-welcome-199.html#our-turn",
