@@ -1,36 +1,87 @@
 ---
-title: "Introduction to Data Science"
-subtitle: "Section 2 - Prof. Elijah Meyer"
+title: "STA 199: Introduction to Data Science"
+subtitle: "Section 2 - Dr. Elijah Meyer"
+execute:
+  freeze: false
 ---
 
-## Course overview
+This page contains an outline of the topics, content, and assignments for the semester.
+Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.
 
-Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above.
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+library(googlesheets4)
+library(gt)
+library(tidyverse)
+gs4_deauth()
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1GCwNNWDK0yJPBraWtfZ-tmtXJsgvkLhYTCVtk6c_6js/edit?usp=sharing", sheet = "sec2-elijah")
+```
 
-## Class meetings
-
-| Meeting | Location                       | Time                        |
-|---------|--------------------------------|-----------------------------|
-| Lecture | French Science 2231            | Mon & Wed 10:15 - 11:30 am |
-| Lab 06  | Perkins Link 087 (Classroom 3) | Thur 10:15 - 11:30 am        |
-| Lab 07  | Perkins Link 087 (Classroom 3) | Thur 12:00 - 1:15 pm          |
-| Lab 08  | Perkins Link 087 (Classroom 3) | Thur 1:45 - 3:00 pm          |
-| Lab 09  | Perkins Link 087 (Classroom 3) | Thur 3:30 - 4:45 pm          |
-| Lab 10  | Perkins Link 087 (Classroom 3) | Thur 5:15 - 6:30 pm         |
-
-## Teaching team
-
-| Name                       | Role                  | Lab section         | Office hours                         |
-|-----------------|-----------------|-----------------|---------------------|
-| Dr. Elijah Meyer  | Instructor            |                     | Tue 10:00 AM - 12:00 PM, Old Chemistry Building 208 / [Zoom](https://bit.ly/3QZ8JAL) / Password: 5MYp7A
-| Konnie Huang                 | In Class TA     |                        | Thur 5:00PM - 6:00PM / [Zoom](link)                                                          |
-| Eli Gnesin                   | Lab Leader      | Thur 10:15AM - 11:30AM | Thur 9:00AM - 10:00PM \& 12:00 pm - 1:00 pm / [Zoom](link)                                     |
-| Yibin Zhang               | Lab Helper              | Thur 10:15AM - 11:30AM   |                                      |
-| Caitrin Murphy            | Lab Leader                    | Thur 12:00PM - 1:15PM   | Wed 12:00PM - 2:00 PM / [Zoom](link)                                     |
-| Zheyuan Liu               | Lab Helper                    | Thur 12:00PM - 1:15PM   | Thur 1:00PM - 3:00 PM / [Zoom](link)                                      |
-| Christine (Yueming) Shen            | Lab Leader / Head TA   | Thur 1:45PM - 3:00PM  | Thur 3:00PM - 5:00 PM / [Zoom](link)                                      |
-| Youran Wu                  | Lab Leader                    |   Thur 3:30PM - 4:45PM                  |                                      |
-| Mounika Adepu | Lab Helper                    |     Thur 3:30PM - 4:45PM                | Mon 10:30 AM - 12:30 pm / [Zoom](link)                                     |
-| Kateryna (Kat) Husar               | Lab Leader        |   Thur 5:15PM - 6:30PM                   |     Tue 12:00PM - 1:00PM \& Wed 5:00PM - 6:00PM / [Zoom](link)                                  |
-| Isabella Swigart              | Lab Helper                    |     Thur 5:15PM - 6:30PM      | Tue 4:00 PM - 5:30 PM / [Zoom](link)                                      
-
+::: column-screen-right
+```{r, echo = FALSE}
+d %>%
+  mutate(
+    date = as.Date(date),
+    week = ifelse(is.na(week), "", week)
+  ) %>%
+  gt() %>%
+  text_transform(cells_body(columns = c(prepare)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("book", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('book')}</a>")
+      )
+    }
+  ) %>%
+  text_transform(cells_body(columns = c(slides)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("laptop", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('laptop')}</a>")
+      )
+    }
+  ) %>%
+  text_transform(cells_body(columns = c(ae)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
+      )
+    }
+  ) %>%
+  text_transform(cells_body(columns = c(hw)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("keyboard", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('keyboard')}</a>")
+      )
+    }
+  ) %>%
+  text_transform(cells_body(columns = c(lab)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("users-rectangle", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('users-rectangle')}</a>")
+      )
+    }
+  ) %>%
+  text_transform(cells_body(columns = c(exam)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("file-circle-check", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('file-circle-check')}</a>")
+      )
+    }
+  ) %>%
+  text_transform(cells_body(columns = c(project)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
+      )
+    }
+  ) %>%
+  fmt_date(date, date_style = 9) %>%
+  sub_missing(columns = c(date, what, topic, notes), missing_text = "") %>%
+  cols_align(
+    align = "center", 
+    columns = c(week, dow, prepare, slides, ae, hw, lab, exam, project)
+    ) %>%
+  cols_align(
+    align = "left", 
+    columns = c(date, what, topic, notes)
+    )  
+```
+:::
