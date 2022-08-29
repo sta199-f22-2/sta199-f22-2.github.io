@@ -175,7 +175,9 @@ Example R Figures
 
 ## Textbooks and readings
 
--- R for Data Science by Grolemund & Wickham (2nd ed. O'Reilly) -- Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)
+-- R for Data Science by Grolemund & Wickham (2nd ed. O'Reilly) 
+
+-- Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)
 
 ## Activities and assessments {.smaller}
 
