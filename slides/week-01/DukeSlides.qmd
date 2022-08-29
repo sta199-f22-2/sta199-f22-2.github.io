@@ -165,6 +165,20 @@ Example R Figures
 
 # **Please bring your laptops if able**
 
+## Activities and assessments {.smaller}
+
+-- **Homework:** Individual assignments combining conceptual and computational skills.
+
+-- **Labs:** Individual or team assignments focusing on computational skills.
+
+-- **Exams:** Two take-home exams.
+
+-- **Final Project:** Team project presented during the final exam period.
+
+-- **Application Exercises:** Exercises worked on during the live lecture session.
+
+-- **Statistics Experiences:** Engage with statistics outside of the classroom and reflect on your experience.
+
 ## Lab
 
 -- Focus on computing using R tidyverse syntax
@@ -179,19 +193,6 @@ Example R Figures
 
 -- Introduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)
 
-## Activities and assessments {.smaller}
-
--- **Homework:** Individual assignments combining conceptual and computational skills.
-
--- **Labs:** Individual or team assignments focusing on computational skills.
-
--- **Exams:** Two take-home exams.
-
--- **Final Project:** Team project presented during the final exam period.
-
--- **Application Exercises:** Exercises worked on during the live lecture session.
-
--- **Statistics Experiences:** Engage with statistics outside of the classroom and reflect on your experience.
 
 ## Where to find help in the course
 
