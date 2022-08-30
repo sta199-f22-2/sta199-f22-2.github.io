@@ -10,7 +10,7 @@ date: "August 31, 2022"
 
 -- Are you on Slack? (If not, this is okay. We will figure this out)
 
--- Have you reserved a Duke container?
+-- Have you reserved a Duke container? 
 
 -- Have you filled out the Getting to know you survey? (If not, why not now?!)
 
