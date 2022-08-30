@@ -72,6 +72,19 @@ Train your brain. It is week one. We have not started diving deep into what exac
 
 ![](images/02-Meeting-the-toolkit/version.png){width="500" height="300" fig-align="left"}
 
+## GitHub Commands: Pull Commit Push (Thursday Prep)
+
+
+![](images/02-Meeting-the-toolkit/pull.png){width="400" height="300" fig-align="left"}
+
+## GitHub Commands: Pull Commit Push (Thursday Prep)
+
+![](images/02-Meeting-the-toolkit/commit.png){width="400" height="300" fig-align="left"}
+
+## GitHub Commands: Pull Commit Push (Thursday Prep)
+
+![](images/02-Meeting-the-toolkit/push2.png){width="400" height="300" fig-align="left"}
+
 # General GitHub Tips
 
 -- Stay away from the terminal. If you google for help, skip any methods for using git through the command line.
@@ -99,7 +112,6 @@ Train your brain. It is week one. We have not started diving deep into what exac
 # Try It
 
 Click on the ae-01 qmd file and render it
-
 
 # Self-Check
 
