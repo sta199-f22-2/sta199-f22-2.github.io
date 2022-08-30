@@ -4,9 +4,9 @@ subtitle: "Lecture 2"
 date: "August 31, 2022"
 ---
 
-# Checklist 
+# Checklist
 
--- Have you made a GitHub account? 
+-- Have you made a GitHub account?
 
 -- Are you on Slack? (If not, this is okay. We will figure this out)
 
@@ -14,10 +14,38 @@ date: "August 31, 2022"
 
 -- Have you filled out the Getting to know you survey? (If not, why not now?!)
 
-# Warm Up Question 
+# Warm Up Question
 
-Please think through / write down what each line of code would produce. 
+Please think through / write down what each line of code would produce.
 
 Tip (and good practice): *if you have questions about a function, use ?function.name to pull up the help page!*
 
 ![](images/02-Meeting-the-toolkit/Day2warmup1.png){width="700" height="300" fig-align="center"}
+
+# Goals for today
+
+-   R and RStudio
+-   Quarto Documents
+-   More Practice
+
+# What is R and RStudio?
+
+-- R is a statistical programming language
+
+-- RStudio is a convenient interface for R
+
+![](images/02-Meeting-the-toolkit/car.png){width="500" height="200" fig-align="right"}
+
+# Some R essentials 
+
+-- **Functions** are (normally) verbs, followed by what they will be applied to in parentheses: 
+
+![](images/02-Meeting-the-toolkit/function.png){width="900" height="100" fig-align="right"}
+
+# tidyverse 
+
+![](images/02-Meeting-the-toolkit/tidyverse.png){width="400" height="300" fig-align="left"}
+
+-- The **tidyverse** is a collection of R packages designed for data science. 
+
+-- All packages share an underlying philosophy and a common grammar. 
