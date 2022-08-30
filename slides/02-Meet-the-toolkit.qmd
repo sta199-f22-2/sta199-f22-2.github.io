@@ -67,6 +67,10 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 
 -- As we get more familiar with R, the more code you will construct on your own 
 
+# Try It 
+
+Click on the ae-01 qmd file and render it
+
 # GitHub
 
 -- We have set up an account and cloned repos 
@@ -95,6 +99,9 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 
 -- What is Quarto? 
 
+# In-Class 
+
+Please go to the course website and click on the ae for today. Clone the repo to get started!
 
 
 
