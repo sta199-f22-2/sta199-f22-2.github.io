@@ -18,7 +18,7 @@ website:
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
     left: "&copy; Copyright 2022, Elijah Meyer"
-    background: "#1F7349"
+    background: "#1F7349" # Pantone Amazon - Fall 2022
 
   sidebar:
     background: "#1F7349" # Pantone Amazon - Fall 2022
@@ -76,8 +76,9 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, style/dsbox.scss]
-      dark: [cosmo, style/dsbox.scss, style/dark.scss]
+      light: [cosmo, style/sta199.scss]
+      dark: [cosmo, style/sta199.scss, style/dark.scss]
+    linkcolor: "#1F7349" # Pantone Amazon - Fall 2022
     toc: true
     code-copy: true
     code-overflow: wrap
