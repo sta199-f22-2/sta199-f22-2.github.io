@@ -10,7 +10,7 @@ date: "August 31, 2022"
 
 -- Are you on Slack? (If not, this is okay. We will figure this out)
 
--- Have you reserved a Duke container? 
+-- Have you reserved a Duke container?
 
 -- Have you filled out the Getting to know you survey? (If not, why not now?!)
 
@@ -18,7 +18,7 @@ date: "August 31, 2022"
 
 Please think through / write down what each line of code would produce.
 
-Tip (and good practice): *if you have questions about a function, use ?function.name to pull up the help page!*
+Tip (and good practice): *if you have questions about a function, use ?function.name to pull up the help page!* If the help page is not helpful, look at their examples section and click *Run Examples*.
 
 ![](images/02-Meeting-the-toolkit/Day2warmup1.png){width="700" height="300" fig-align="center"}
 
@@ -36,22 +36,21 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 
 ![](images/02-Meeting-the-toolkit/car.png){width="500" height="200" fig-align="right"}
 
-# Some R essentials 
+# Some R essentials
 
--- **Functions** are (normally) verbs, followed by what they will be applied to in parentheses: 
+-- **Functions** are (normally) verbs, followed by what they will be applied to in parentheses:
 
 ![](images/02-Meeting-the-toolkit/function.png){width="900" height="100" fig-align="right"}
 
-# tidyverse 
+# tidyverse
 
 ![](images/02-Meeting-the-toolkit/tidyverse.png){width="400" height="300" fig-align="left"}
 
--- The **tidyverse** is a collection of R packages designed for data science. 
+-- The **tidyverse** is a collection of R packages designed for data science.
 
--- All packages share an underlying philosophy and a common grammar. 
+-- All packages share an underlying philosophy and a common grammar.
 
-
-# Quarto 
+# Quarto
 
 -- an open-source scientific and technical publishing system
 
@@ -61,19 +60,19 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 
 # How will we use Quarto?
 
--- Every assignment / lab / project will be given to you and turned in as a Quarto document 
+-- Every assignment / lab / project will be given to you and turned in as a Quarto document
 
--- You will always have a Quarto template document to start with 
+-- You will always have a Quarto template document to start with
 
--- As we get more familiar with R, the more code you will construct on your own 
+-- As we get more familiar with R, the more code you will construct on your own
 
-# Try It 
+# Try It
 
 Click on the ae-01 qmd file and render it
 
 # GitHub
 
--- We have set up an account and cloned repos 
+-- We have set up an account and cloned repos
 
 -- As said on day 1, GitHub is set up for version control (more coming on Thursday)
 
@@ -81,33 +80,22 @@ Click on the ae-01 qmd file and render it
 
 ![](images/02-Meeting-the-toolkit/version.png){width="500" height="300" fig-align="left"}
 
+# General GitHub Tips
 
-
-# General GitHub Tips 
-
--- Stay away from the terminal. If you google for help, skip any methods for using git through the command line. 
+-- Stay away from the terminal. If you google for help, skip any methods for using git through the command line.
 
 -- There is a great resource for working with git and R: [happygitwithr.com](happygitwithr.com)
 
 --- Some of the content in there is beyond the scope of this course, but it's a good place to look for help.
 
-# Self-Check 
+# Self-Check
 
--- What is version control? Why is it important? 
+-- What is version control? Why is it important?
 
--- What is R vs RStudio? 
+-- What is R vs RStudio?
 
--- What is Quarto? 
+-- What is Quarto?
 
-# In-Class 
+# In-Class
 
 Please go to the course website and click on the ae for today. Clone the repo to get started!
-
-
-
-
-
-
-
-
-
