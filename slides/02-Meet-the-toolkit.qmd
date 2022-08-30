@@ -14,7 +14,7 @@ date: "August 31, 2022"
 
 -- Have you filled out the Getting to know you survey? (If not, why not now?!)
 
-# Warm Up Question
+# Warm Up Question {.smaller}
 
 Please think through / write down what each line of code would produce.
 
@@ -42,6 +42,14 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 
 ![](images/02-Meeting-the-toolkit/function.png){width="900" height="100" fig-align="right"}
 
+# Some R essentials
+
+-- **Columns** (variables) in data frames are accessed with \$ ![](images/02-Meeting-the-toolkit/column.png){width="900" height="100" fig-align="center"}
+
+-- **Packages** are installed with the install.packages function and loaded with the **library** function, once per session:
+
+![](images/02-Meeting-the-toolkit/packages.png){width="900" height="100" fig-align="center"}
+
 # tidyverse
 
 ![](images/02-Meeting-the-toolkit/tidyverse.png){width="400" height="300" fig-align="left"}
@@ -49,6 +57,26 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 -- The **tidyverse** is a collection of R packages designed for data science.
 
 -- All packages share an underlying philosophy and a common grammar.
+
+# GitHub
+
+-- We have set up an account and cloned repos
+
+-- Let's clone ae-01
+
+-- As said on day 1, GitHub is set up for version control (more coming on Thursday)
+
+## 
+
+![](images/02-Meeting-the-toolkit/version.png){width="500" height="300" fig-align="left"}
+
+# General GitHub Tips
+
+-- Stay away from the terminal. If you google for help, skip any methods for using git through the command line.
+
+-- There is a great resource for working with git and R: [happygitwithr.com](happygitwithr.com)
+
+--- Some of the content in there is beyond the scope of this course, but it's a good place to look for help.
 
 # Quarto
 
@@ -70,23 +98,6 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 
 Click on the ae-01 qmd file and render it
 
-# GitHub
-
--- We have set up an account and cloned repos
-
--- As said on day 1, GitHub is set up for version control (more coming on Thursday)
-
-## 
-
-![](images/02-Meeting-the-toolkit/version.png){width="500" height="300" fig-align="left"}
-
-# General GitHub Tips
-
--- Stay away from the terminal. If you google for help, skip any methods for using git through the command line.
-
--- There is a great resource for working with git and R: [happygitwithr.com](happygitwithr.com)
-
---- Some of the content in there is beyond the scope of this course, but it's a good place to look for help.
 
 # Self-Check
 
@@ -98,4 +109,4 @@ Click on the ae-01 qmd file and render it
 
 # In-Class
 
-Please go to the course website and click on the ae for today. Clone the repo to get started!
+Let's get into ae-01
