@@ -3,3 +3,21 @@ title: "Welcome to STA 199"
 subtitle: "Lecture 2"
 date: "August 31, 2022"
 ---
+
+# Checklist 
+
+-- Have you made a GitHub account? 
+
+-- Are you on Slack? (If not, this is okay. We will figure this out)
+
+-- Have you reserved a Duke container?
+
+-- Have you filled out the Getting to know you survey? (If not, why not now?!)
+
+# Warm Up Question 
+
+Please think through / write down what each line of code would produce. 
+
+Tip (and good practice): *if you have questions about a function, use ?function.name to pull up the help page!*
+
+![](images/02-Meeting-the-toolkit/Day2warmup1.png){width="700" height="300" fig-align="center"}
