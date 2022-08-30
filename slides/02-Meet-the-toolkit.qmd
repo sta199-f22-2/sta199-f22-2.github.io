@@ -28,6 +28,8 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 -   Quarto Documents
 -   More Practice
 
+Train your brain. It is week one. We have not started diving deep into what exactly functions do nor are you expected to know at this point. We are getting more comfortable with R and code for now. We will start diving deep into expanding our knowledge of what functions do next week.
+
 # What is R and RStudio?
 
 -- R is a statistical programming language
