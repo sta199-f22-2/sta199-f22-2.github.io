@@ -8,7 +8,7 @@ date: "August 31, 2022"
 
 -- Have you made a GitHub account?
 
--- Are you on Slack? (If not, this is okay. We will figure this out)
+-- Are you on Slack? (If not, this is okay. We will figure this out. Try the new link on the Sakai announcement)
 
 -- Have you reserved a Duke container?
 
