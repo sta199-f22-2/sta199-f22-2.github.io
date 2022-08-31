@@ -82,7 +82,7 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 
 ## 
 
-![](images/02-Meeting-the-toolkit/version.png){fig-align="center"}
+![](images/02-Meeting-the-toolkit/version.png)
 
 ## GitHub Commands: Pull Commit Push (Thursday Prep)
 
