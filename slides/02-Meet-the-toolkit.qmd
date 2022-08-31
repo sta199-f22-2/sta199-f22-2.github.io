@@ -4,7 +4,7 @@ subtitle: "Lecture 2"
 date: "August 31, 2022"
 ---
 
-# Checklist
+# Checklist {.smaller}
 
 -- Have you made a GitHub account?
 
@@ -12,7 +12,11 @@ date: "August 31, 2022"
 
 -- Have you reserved a Duke container?
 
--- Have you filled out the Getting to know you survey? (If not, why not now?!)
+-- Have you filled out the Getting to know you survey? (If not, please do this now) 
+
+--- When putting in your **github user name**, please only put your name and no other text (e.g., My username is ...). If you did this, please go back and re-answer this question. 
+
+--- If you have filled out the survey, you will see an invite to my repo (in email and on github.com). you NEED to accept this invite so I can create your lab-0 assignment. 
 
 # Warm Up Question {.smaller}
 
