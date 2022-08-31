@@ -27,8 +27,9 @@ Tip (and good practice): *if you have questions about a function, use ?function.
 -   R and RStudio
 -   Quarto Documents
 -   More Practice
+-   Train your brain. 
 
-Train your brain. It is week one. We have not started diving deep into what exactly functions do nor are you expected to know at this point. We are getting more comfortable with R and code for now. We will start diving deep into expanding our knowledge of what functions do next week.
+
 
 # What is R and RStudio?
 
@@ -36,7 +37,7 @@ Train your brain. It is week one. We have not started diving deep into what exac
 
 -- RStudio is a convenient interface for R
 
-![](images/02-Meeting-the-toolkit/car.png){width="500" height="200" fig-align="right"}
+![](images/02-Meeting-the-toolkit/car.png){width="500" height="200" fig-align="center"}
 
 # Some R essentials
 
@@ -50,15 +51,26 @@ Train your brain. It is week one. We have not started diving deep into what exac
 
 -- **Packages** are installed with the install.packages function and loaded with the **library** function, once per session:
 
-![](images/02-Meeting-the-toolkit/packages.png){width="900" height="100" fig-align="center"}
+![](images/02-Meeting-the-toolkit/packages.png){width="900" height="100" fig-align="left"}
 
-# tidyverse
+# tidyverse 
+
+:::: {.columns}
+
+::: {.column width="40%"}
 
 ![](images/02-Meeting-the-toolkit/tidyverse.png){width="400" height="300" fig-align="left"}
+::: 
 
+::: {.column width="60%"}
 -- The **tidyverse** is a collection of R packages designed for data science.
 
 -- All packages share an underlying philosophy and a common grammar.
+
+:::
+
+
+::::
 
 # GitHub
 
@@ -70,20 +82,20 @@ Train your brain. It is week one. We have not started diving deep into what exac
 
 ## 
 
-![](images/02-Meeting-the-toolkit/version.png){width="500" height="300" fig-align="left"}
+![](images/02-Meeting-the-toolkit/version.png){fig-align="center"}
 
 ## GitHub Commands: Pull Commit Push (Thursday Prep)
 
 
-![](images/02-Meeting-the-toolkit/pull.png){width="400" height="300" fig-align="left"}
+![](images/02-Meeting-the-toolkit/pull.png){fig-align="center"}
 
 ## GitHub Commands: Pull Commit Push (Thursday Prep)
 
-![](images/02-Meeting-the-toolkit/commit.png){width="400" height="300" fig-align="left"}
+![](images/02-Meeting-the-toolkit/commit.png){fig-align="center"}
 
 ## GitHub Commands: Pull Commit Push (Thursday Prep)
 
-![](images/02-Meeting-the-toolkit/push2.png){width="400" height="300" fig-align="left"}
+![](images/02-Meeting-the-toolkit/push2.png){fig-align="center"}
 
 # General GitHub Tips
 
