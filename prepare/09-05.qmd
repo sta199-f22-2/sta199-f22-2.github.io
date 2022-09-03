@@ -1,6 +1,6 @@
 ---
 title: "Prepare"
-subtitle: "Due: September 4th"
+subtitle: "Due: September 5th"
 categories: "prepare"
 ---
 
