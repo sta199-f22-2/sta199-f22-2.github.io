@@ -350,6 +350,13 @@
     "text": "Watch: Meet the toolkit\nRead:\n\nR for Data Science: Chapter 1 - Introduction\nIntro to Modern Data Science: Chapter 1 - Hello data\n\nIf you haven’t yet done so:\n\nJoin the course Slack using the invitation link in your email.\nComplete the Getting to know you survey.\nReserve a STA 198-199 container at https://cmgr.oit.duke.edu/containers."
   },
   {
+    "objectID": "prepare/09-05.html",
+    "href": "prepare/09-05.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.1 and 2.4\n\nIf you haven’t yet done so:\n\nEdit the GitHub username document (on Sakai) to ensure your name is correct\nRead the syllabus!\nComplete the Getting to know you survey\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nJoin the course Slack using the invitation link in your email.\nReserve a STA 198-199 container at https://cmgr.oit.duke.edu/containers."
+  },
+  {
     "objectID": "project-description.html",
     "href": "project-description.html",
     "title": "Project description",
@@ -579,12 +586,5 @@
     "title": "Welcome to STA 199",
     "section": "GitHub Commands: Pull Commit Push (Thursday Prep)",
     "text": "GitHub Commands: Pull Commit Push (Thursday Prep)"
-  },
-  {
-    "objectID": "prepare/09-05.html",
-    "href": "prepare/09-05.html",
-    "title": "Prepare",
-    "section": "",
-    "text": "Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.1 and 2.4\n\nIf you haven’t yet done so:\n\nEdit the GitHub username document (on Sakai) to ensure your name is correct\nRead the syllabus!\nComplete the Getting to know you survey\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nJoin the course Slack using the invitation link in your email.\nReserve a STA 198-199 container at https://cmgr.oit.duke.edu/containers."
   }
 ]
