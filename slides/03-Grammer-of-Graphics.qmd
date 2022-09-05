@@ -116,7 +116,7 @@ countdown(minutes = 4, left = 0, color_text = "#325b74")
 
 ::: {.column width="40%"}
 
--- geom_hist
+-- geom_histogram
 
 -- geom_point
 

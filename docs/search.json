@@ -648,7 +648,7 @@
     "href": "slides/03-Grammer-of-Graphics.html#match-the-variables-to-plots",
     "title": "Grammer of Graphics",
     "section": "Match the variables to plots",
-    "text": "Match the variables to plots\n\n\n– 1 categorical variable, 1 quantitative variable (often ordinal)\n– 2 quantitative variables\n– 1 quantitative variable\n\n\n\n−+\n04:00\n\n\n\n\n– geom_hist\n– geom_point\n– geom_bar"
+    "text": "Match the variables to plots\n\n\n– 1 categorical variable, 1 quantitative variable (often ordinal)\n– 2 quantitative variables\n– 1 quantitative variable\n\n\n\n−+\n04:00\n\n\n\n\n– geom_histogram\n– geom_point\n– geom_bar"
   },
   {
     "objectID": "slides/03-Grammer-of-Graphics.html#recap-of-ae",
