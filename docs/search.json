@@ -656,5 +656,26 @@
     "title": "Grammer of Graphics",
     "section": "Recap of AE",
     "text": "Recap of AE\n– Construct plots with ggplot().\n– Layers of ggplots are separated by +s.\n– The formula is (almost) always as follows:\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n– Aesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user.\n– Use facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 1 - Data visualization",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due Friday, Sep 9 at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-1.html#packages",
+    "href": "labs/lab-1.html#packages",
+    "title": "Lab 1 - Data visualization",
+    "section": "Packages",
+    "text": "Packages\nWe will use the tidyverse package to create and customize plots in R.\n\nlibrary(tidyverse)\nlibrary(viridis)"
+  },
+  {
+    "objectID": "labs/lab-1.html#data-lets-take-a-trip-to-the-midwest",
+    "href": "labs/lab-1.html#data-lets-take-a-trip-to-the-midwest",
+    "title": "Lab 1 - Data visualization",
+    "section": "Data: Let’s take a trip to the Midwest",
+    "text": "Data: Let’s take a trip to the Midwest\nThe data in this lab is in the midwest data frame. It is part of the ggplot2 R package, so the midwest data set is automatically loaded when you load the tidyverse package.\nThe data contains demographic characteristics of counties in the Midwest region of the United States.\nBecause the data set is part of the ggplot2 package, you can read documentation for the data set, including variable definitions by typing ?midwest in the console."
   }
 ]
