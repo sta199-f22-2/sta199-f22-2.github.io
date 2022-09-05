@@ -586,5 +586,40 @@
     "title": "Welcome to STA 199",
     "section": "GitHub Commands: Pull Commit Push (Thursday Prep)",
     "text": "GitHub Commands: Pull Commit Push (Thursday Prep)"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#examining-data-visualization",
+    "href": "slides/03-Grammer-of-Graphics.html#examining-data-visualization",
+    "title": "Grammer of Graphics",
+    "section": "Examining data visualization",
+    "text": "Examining data visualization\n\n\n\n\n\nDiscuss the following for the visualization.\n– What is the visualization trying to show?\n– What is effective, i.e. what is done well?\n– What is ineffective, i.e. what could be improved?\n– What are you curious about after looking at the visualization?\n\n\n\n−+\n04:00\n\n\n\n\n\n\n\nSource: Twitter"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#prepare-reading-questions",
+    "href": "slides/03-Grammer-of-Graphics.html#prepare-reading-questions",
+    "title": "Grammer of Graphics",
+    "section": "Prepare Reading Questions",
+    "text": "Prepare Reading Questions\nhttps://app.sli.do/event/g6fnKCDuZ1sw8NKiZTu3Rb"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#ae-02-starwars",
+    "href": "slides/03-Grammer-of-Graphics.html#ae-02-starwars",
+    "title": "Grammer of Graphics",
+    "section": "ae-02-starwars",
+    "text": "ae-02-starwars\n\nGo to the course GitHub org and find your ae-02-starwars (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today (Thursday by 11:59p ET."
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#match-the-variables-to-plots",
+    "href": "slides/03-Grammer-of-Graphics.html#match-the-variables-to-plots",
+    "title": "Grammer of Graphics",
+    "section": "Match the variables to plots",
+    "text": "Match the variables to plots\n\n\n– 1 categorical variable, 1 quantitative variable (often ordinal)\n– 2 quantitative variables\n– 1 quantitative variable\n\n\n\n−+\n04:00\n\n\n\n\n– geom_hist\n– geom_point\n– geom_bar"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#recap-of-ae",
+    "href": "slides/03-Grammer-of-Graphics.html#recap-of-ae",
+    "title": "Grammer of Graphics",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n– Construct plots with ggplot(). – Layers of ggplots are separated by +s. – The formula is (almost) always as follows:\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n– Aesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user.\n– Use facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
