@@ -5,12 +5,13 @@ categories: "prepare"
 ---
 
 -   Read:
+
     -   R4DS: [Chp 2 - Data visualization - Sections 2.1 and 2.4](https://r4ds.hadley.nz/data-visualize.html)
-    
+
 -   If you haven't yet done so:
-    
+
     -   Edit the GitHub username document (on Sakai) to ensure your name is correct
-    
+
     -   Read the [syllabus](/course-syllabus.html)!
 
     -   Complete the [Getting to know you survey](https://sakai.duke.edu/samigo-app/servlet/Login?id=6fa7ebf3-01af-42a6-91ba-3e813d3901221661888762619)
