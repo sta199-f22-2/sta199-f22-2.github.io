@@ -1,0 +1,64 @@
+---
+title: "Visualizing various types of data"
+subtitle: "Lecture 4"
+date: "September 8, 2022"
+format: revealjs
+---
+
+
+## Checklist 
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+-- Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-03-penguins` (repo name will be suffixed with your GitHub name).
+
+--   Clone the repo in your container, open the Quarto document in the repo
+
+-- Reach out if you have questions
+
+## Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data
+
+https://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T
+
+## Warm up: Exercises 2.3.1
+
+![](images/03-Grammer-of-Graphics/what'swrong.png){fig-align="center"}
+
+## How to turn AE's via Github
+
+-- render, commit, and push
+
+1.  If you made any changes since the last render, render again to get the final version of the AE.
+
+2.  Check the box next to each document in the Git tab (this is called "staging" the changes). Commit the changes you made using an simple and informative message.
+
+3.  Use the **green arrow** to push your changes to your repo on GitHub.
+
+4.  Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
+
+
+## **The way data are displayed matters**
+
+::: question
+What do these three plots show?
+:::
+
+![Source: [#barbarplots](https://cogtales.wordpress.com/2016/06/06/congratulations-barbarplots/)](images/04-Visualizing-various-types-of-data/barplots.png){fig-alt="Three representations of the same data: Bar plot of means, box plots, histograms." fig-align="center"}
+
+# Application exercise
+
+## ae-03
+-   Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-03` (repo name will be suffixed with your GitHub name).
+-   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
+-   Render, commit, and push your edits by the AE deadline -- 3 days from today.
+
+## Recap of AE {.smaller}
+
+-   Pick geoms based on data types.
+-   Set appropriate binwidths for histograms.
+-   Turn off legends when they provide redundant information with `show.legend = FALSE`.
+-   Crea
