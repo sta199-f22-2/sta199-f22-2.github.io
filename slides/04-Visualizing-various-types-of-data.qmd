@@ -56,6 +56,12 @@ What do these three plots show?
 -   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
 -   Render, commit, and push your edits by the AE deadline -- 3 days from today.
 
+# geom reference 
+
+https://ggplot2.tidyverse.org/reference/
+
+**A geom is the geometrical object that a plot uses to represent data. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms, line charts use line geoms, boxplots use boxplot geoms, and so on. Scatterplots break the trend; they use the point geom. As we see above, you can use different geoms to plot the same data. ** - 
+
 ## Recap of AE {.smaller}
 
 -   Pick geoms based on data types.

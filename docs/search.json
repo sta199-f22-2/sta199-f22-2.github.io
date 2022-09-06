@@ -385,6 +385,13 @@
     "text": "Read:\n\nIMS: Chp 4 - Exploring categorical data\nIMS: Chp 5 - Exploring numerical data\n\nWatch:\n\nVisualizing numerical data\nVisualizing categorical data"
   },
   {
+    "objectID": "prepare/09-08.html",
+    "href": "prepare/09-08.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.5 - 2.10\n\nWatch:\n\nData and visualization\nVisualising data with ggplot2"
+  },
+  {
     "objectID": "project-description.html",
     "href": "project-description.html",
     "title": "Project description",
@@ -707,34 +714,6 @@
     "text": "How to turn AE’s via Github\n– render, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using an simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
   },
   {
-    "objectID": "slides/04-Visualizing-various-types-of-data.html#render-commit-and-push",
-    "href": "slides/04-Visualizing-various-types-of-data.html#render-commit-and-push",
-    "title": "Visualizing various types of data",
-    "section": "render, commit, and push",
-    "text": "render, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using an simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
-  },
-  {
-    "objectID": "slides/04-Visualizing-various-types-of-data.html#the-way-data-is-displayed-matters",
-    "href": "slides/04-Visualizing-various-types-of-data.html#the-way-data-is-displayed-matters",
-    "title": "Visualizing various types of data",
-    "section": "The way data is displayed matters",
-    "text": "The way data is displayed matters\n\nWhat do these three plots show?\n\n\nSource: #barbarplots"
-  },
-  {
-    "objectID": "slides/04-Visualizing-various-types-of-data.html#ae-02",
-    "href": "slides/04-Visualizing-various-types-of-data.html#ae-02",
-    "title": "Visualizing various types of data",
-    "section": "ae-02",
-    "text": "ae-02\n\n\nGo to the course GitHub org and find your ae-02 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
-  },
-  {
-    "objectID": "slides/04-Visualizing-various-types-of-data.html#recap-of-ae",
-    "href": "slides/04-Visualizing-various-types-of-data.html#recap-of-ae",
-    "title": "Visualizing various types of data",
-    "section": "Recap of AE",
-    "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nCrea\n\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/04-Visualizing-various-types-of-data.html#the-way-data-are-displayed-matters",
     "href": "slides/04-Visualizing-various-types-of-data.html#the-way-data-are-displayed-matters",
     "title": "Visualizing various types of data",
@@ -747,5 +726,12 @@
     "title": "Visualizing various types of data",
     "section": "ae-03",
     "text": "ae-03\n\nGo to the course GitHub org and find your ae-03 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#recap-of-ae",
+    "href": "slides/04-Visualizing-various-types-of-data.html#recap-of-ae",
+    "title": "Visualizing various types of data",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nCrea\n\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
