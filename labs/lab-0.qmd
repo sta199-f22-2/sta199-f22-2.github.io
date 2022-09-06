@@ -229,6 +229,8 @@ Second, the assignment operator: `<-`, assigns the name `dino_data` to the filte
 Next, we need to visualize these data. We will use the `ggplot` function for this. Its first argument is the data you're visualizing. Next we define the `aes`thetic mappings. In other words, the columns of the data that get mapped to certain aesthetic features of the plot, e.g. the `x` axis will represent the variable called `x` and the `y` axis will represent the variable called `y`. Then, we add another layer to this plot where we define which `geom`etric shapes we want to use to represent each observation in the data. In this case we want these to be points, hence `geom_point`.
 
 ```{r}
+#| fig-height: 5
+#| fig-width: 1
 ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
