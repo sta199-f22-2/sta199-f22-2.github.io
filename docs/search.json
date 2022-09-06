@@ -693,18 +693,18 @@
     "text": "Checklist\n\n\n\n– Go to the course GitHub org and find your ae-03-penguins (repo name will be suffixed with your GitHub name).\n– Clone the repo in your container, open the Quarto document in the repo\n– Reach out if you have questions"
   },
   {
-    "objectID": "slides/04-Visualizing-various-types-of-data.html#questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data",
-    "href": "slides/04-Visualizing-various-types-of-data.html#questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data",
-    "title": "Visualizing various types of data",
-    "section": "Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data",
-    "text": "Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data\nhttps://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T"
-  },
-  {
     "objectID": "slides/04-Visualizing-various-types-of-data.html#warm-up-exercises-2.3.1",
     "href": "slides/04-Visualizing-various-types-of-data.html#warm-up-exercises-2.3.1",
     "title": "Visualizing various types of data",
     "section": "Warm up: Exercises 2.3.1",
     "text": "Warm up: Exercises 2.3.1"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data",
+    "href": "slides/04-Visualizing-various-types-of-data.html#questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data",
+    "title": "Visualizing various types of data",
+    "section": "Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data",
+    "text": "Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data\nhttps://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T"
   },
   {
     "objectID": "slides/04-Visualizing-various-types-of-data.html#how-to-turn-aes-via-github",
@@ -714,11 +714,18 @@
     "text": "How to turn AE’s via Github\n– render, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using an simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
   },
   {
-    "objectID": "slides/04-Visualizing-various-types-of-data.html#the-way-data-are-displayed-matters",
-    "href": "slides/04-Visualizing-various-types-of-data.html#the-way-data-are-displayed-matters",
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot",
+    "href": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot",
     "title": "Visualizing various types of data",
-    "section": "The way data are displayed matters",
-    "text": "The way data are displayed matters\n\nWhat do these three plots show?\n\n\nSource: #barbarplots"
+    "section": "The variables dictate the plot",
+    "text": "The variables dictate the plot\n– Assess the relationship between height and weight\n– Investigate the distribution of scores on exam 1\n– Explore 2022 temperatures between Montana and North Carolina\n– Examine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended)"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot-1",
+    "href": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot-1",
+    "title": "Visualizing various types of data",
+    "section": "The variables dictate the plot",
+    "text": "The variables dictate the plot\n\nAssess the relationship between height and weight - geom_point()\nInvestigate the distribution of scores on exam 1 - geom_histogram() / geom_boxplot\nExplore 2022 temperatures between Montana and North Carolina - geom_histogram / geom_boxplot (with changes in the aes!)\nExamine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended) - geom_bar (with changes in the aes!)"
   },
   {
     "objectID": "slides/04-Visualizing-various-types-of-data.html#ae-03",
@@ -732,6 +739,6 @@
     "href": "slides/04-Visualizing-various-types-of-data.html#recap-of-ae",
     "title": "Visualizing various types of data",
     "section": "Recap of AE",
-    "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nCrea\n\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nTake control of your labels\nUse color to your advantage. https://ggplot2.tidyverse.org/reference/ggtheme.html & https://ggplot2.tidyverse.org/reference/scale_viridis.html\n\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

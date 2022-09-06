@@ -336,14 +336,14 @@
 <p>– Clone the repo in your container, open the Quarto document in the repo</p>
 <p>– Reach out if you have questions</p>
 </section>
-<section id="questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data" class="slide level2">
-<h2>Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data</h2>
-<p>https://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T</p>
-</section>
 <section id="warm-up-exercises-2.3.1" class="slide level2">
 <h2>Warm up: Exercises 2.3.1</h2>
 
 <img data-src="images/03-Grammer-of-Graphics/what'swrong.png" class="r-stretch quarto-figure-center"></section>
+<section id="questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data" class="slide level2">
+<h2>Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data</h2>
+<p>https://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T</p>
+</section>
 <section id="how-to-turn-aes-via-github" class="slide level2">
 <h2>How to turn AE’s via Github</h2>
 <p>– render, commit, and push</p>
@@ -354,13 +354,28 @@
 <li class="fragment"><p>Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!</p></li>
 </ol>
 </section>
-<section id="the-way-data-are-displayed-matters" class="slide level2">
-<h2><strong>The way data are displayed matters</strong></h2>
-<div class="question">
-<p>What do these three plots show?</p>
-</div>
+<section id="the-variables-dictate-the-plot" class="slide level2">
+<h2>The variables dictate the plot</h2>
+<p>– Assess the relationship between height and weight</p>
+<p>– Investigate the distribution of scores on exam 1</p>
+<p>– Explore 2022 temperatures between Montana and North Carolina</p>
+<p>– Examine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended)</p>
+</section>
+<section id="the-variables-dictate-the-plot-1" class="slide level2">
+<h2>The variables dictate the plot</h2>
+<ul>
+<li class="fragment"><p>Assess the relationship between height and weight - <span style="color:#cc0000">geom_point()</span></p></li>
+<li class="fragment"><p>Investigate the distribution of scores on exam 1 - <span style="color:#cc0000">geom_histogram() / geom_boxplot</span></p></li>
+<li class="fragment"><p>Explore 2022 temperatures between Montana and North Carolina - <span style="color:#cc0000">geom_histogram / geom_boxplot (with changes in the aes!)</span></p></li>
+<li class="fragment"><p>Examine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended) - <span style="color:#cc0000">geom_bar (with changes in the aes!)</span></p></li>
+</ul>
+</section>
+<section id="geom-reference" class="title-slide slide level1 center">
+<h1>geom reference</h1>
+<p>https://ggplot2.tidyverse.org/reference/</p>
+<p><strong>A geom is the geometrical object that a plot uses to represent data. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms, line charts use line geoms, boxplots use boxplot geoms, and so on. Scatterplots break the trend; they use the point geom. As we see above, you can use different geoms to plot the same data. </strong></p>
+</section>
 
-<img data-src="images/04-Visualizing-various-types-of-data/barplots.png" alt="Three representations of the same data: Bar plot of means, box plots, histograms." class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://cogtales.wordpress.com/2016/06/06/congratulations-barbarplots/">#barbarplots</a></p></section>
 <section>
 <section id="application-exercise" class="title-slide slide level1 center">
 <h1>Application exercise</h1>
@@ -369,24 +384,19 @@
 <section id="ae-03" class="slide level2">
 <h2>ae-03</h2>
 <ul>
-<li class="fragment">Go to the course <a href="https://github.com/sta199-f22-2">GitHub org</a> and find your <code>ae-03</code> (repo name will be suffixed with your GitHub name).</li>
-<li class="fragment">Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.</li>
-<li class="fragment">Render, commit, and push your edits by the AE deadline – 3 days from today.</li>
+<li class="fragment"><p>Go to the course <a href="https://github.com/sta199-f22-2">GitHub org</a> and find your <code>ae-03</code> (repo name will be suffixed with your GitHub name).</p></li>
+<li class="fragment"><p>Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.</p></li>
+<li class="fragment"><p>Render, commit, and push your edits by the AE deadline – 3 days from today.</p></li>
 </ul>
-</section></section>
-<section>
-<section id="geom-reference" class="title-slide slide level1 center">
-<h1>geom reference</h1>
-<p>https://ggplot2.tidyverse.org/reference/</p>
-<p><strong>A geom is the geometrical object that a plot uses to represent data. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms, line charts use line geoms, boxplots use boxplot geoms, and so on. Scatterplots break the trend; they use the point geom. As we see above, you can use different geoms to plot the same data. </strong> -</p>
 </section>
 <section id="recap-of-ae" class="slide level2 smaller">
 <h2>Recap of AE</h2>
 <ul>
-<li class="fragment">Pick geoms based on data types.</li>
-<li class="fragment">Set appropriate binwidths for histograms.</li>
-<li class="fragment">Turn off legends when they provide redundant information with <code>show.legend = FALSE</code>.</li>
-<li class="fragment">Crea</li>
+<li class="fragment"><p>Pick geoms based on data types.</p></li>
+<li class="fragment"><p>Set appropriate binwidths for histograms.</p></li>
+<li class="fragment"><p>Turn off legends when they provide redundant information with <code>show.legend = FALSE</code>.</p></li>
+<li class="fragment"><p>Take control of your labels</p></li>
+<li class="fragment"><p>Use color to your advantage. https://ggplot2.tidyverse.org/reference/ggtheme.html &amp; https://ggplot2.tidyverse.org/reference/scale_viridis.html</p></li>
 </ul>
 
 

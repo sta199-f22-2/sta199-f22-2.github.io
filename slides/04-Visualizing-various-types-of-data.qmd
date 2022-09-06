@@ -20,13 +20,15 @@ library(countdown)
 
 -- Reach out if you have questions
 
+## Warm up: Exercises 2.3.1
+
+![](images/03-Grammer-of-Graphics/what'swrong.png){fig-align="center"}
+
 ## Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data
 
 https://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T
 
-## Warm up: Exercises 2.3.1
 
-![](images/03-Grammer-of-Graphics/what'swrong.png){fig-align="center"}
 
 ## How to turn AE's via Github
 
@@ -41,30 +43,49 @@ https://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T
 4.  Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
 
 
-## **The way data are displayed matters**
+## The variables dictate the plot
 
-::: question
-What do these three plots show?
-:::
+-- Assess the relationship between height and weight 
 
-![Source: [#barbarplots](https://cogtales.wordpress.com/2016/06/06/congratulations-barbarplots/)](images/04-Visualizing-various-types-of-data/barplots.png){fig-alt="Three representations of the same data: Bar plot of means, box plots, histograms." fig-align="center"}
+-- Investigate the distribution of scores on exam 1
 
-# Application exercise
+-- Explore 2022 temperatures between Montana and North Carolina
 
-## ae-03
--   Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-03` (repo name will be suffixed with your GitHub name).
--   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
--   Render, commit, and push your edits by the AE deadline -- 3 days from today.
+-- Examine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended)
+
+## The variables dictate the plot
+
+- Assess the relationship between height and weight - [geom_point()]{style="color:#cc0000"}
+
+- Investigate the distribution of scores on exam 1 - [geom_histogram() / geom_boxplot]{style="color:#cc0000"}
+
+- Explore 2022 temperatures between Montana and North Carolina - [geom_histogram / geom_boxplot (with changes in the aes!)]{style="color:#cc0000"} 
+
+- Examine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended) - [geom_bar (with changes in the aes!)]{style="color:#cc0000"}
 
 # geom reference 
 
 https://ggplot2.tidyverse.org/reference/
 
-**A geom is the geometrical object that a plot uses to represent data. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms, line charts use line geoms, boxplots use boxplot geoms, and so on. Scatterplots break the trend; they use the point geom. As we see above, you can use different geoms to plot the same data. ** - 
+**A geom is the geometrical object that a plot uses to represent data. People often describe plots by the type of geom that the plot uses. For example, bar charts use bar geoms, line charts use line geoms, boxplots use boxplot geoms, and so on. Scatterplots break the trend; they use the point geom. As we see above, you can use different geoms to plot the same data. ** 
+
+# Application exercise
+
+## ae-03
+-   Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-03` (repo name will be suffixed with your GitHub name).
+
+-   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
+
+-   Render, commit, and push your edits by the AE deadline -- 3 days from today.
 
 ## Recap of AE {.smaller}
 
 -   Pick geoms based on data types.
+
 -   Set appropriate binwidths for histograms.
+
 -   Turn off legends when they provide redundant information with `show.legend = FALSE`.
--   Crea
+
+-   Take control of your labels
+
+-   Use color to your advantage. https://ggplot2.tidyverse.org/reference/ggtheme.html \& \n https://ggplot2.tidyverse.org/reference/scale_viridis.html
