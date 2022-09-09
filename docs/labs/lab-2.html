@@ -245,19 +245,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
 <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning goals</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
   <li>
-<a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a>
+<a href="#getting-started-1" id="toc-getting-started-1" class="nav-link" data-scroll-target="#getting-started-1">Getting started</a>
   <ul class="collapse">
-<li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li>
-<a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a>
-  <ul class="collapse">
-<li><a href="#the-greatest-crossover-event-in-the-history-of-sta199-labs" id="toc-the-greatest-crossover-event-in-the-history-of-sta199-labs" class="nav-link" data-scroll-target="#the-greatest-crossover-event-in-the-history-of-sta199-labs">The Greatest Crossover Event in the History of STA199 Labs</a></li>
+<li><a href="#warm-up" id="toc-warm-up" class="nav-link" data-scroll-target="#warm-up">Warm up</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   </ul>
 </li>
-  </ul>
-</li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   <li><a href="#grading-50-pts" id="toc-grading-50-pts" class="nav-link" data-scroll-target="#grading-50-pts">Grading (50 pts)</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/labs/lab-2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -295,77 +291,83 @@ Important
 <section id="learning-goals" class="level1"><h1>Learning goals</h1>
 <p>In this lab, you will…</p>
 <ul>
-<li><pre><code>Use data wrangling to extract meaning from data</code></pre></li>
-<li><pre><code>continue developing a workflow for reproducible data analysis.</code></pre></li>
+<li>Data wrangling and visualization</li>
 </ul></section><section id="getting-started" class="level1"><h1>Getting started</h1>
 <ul>
 <li><p>Go to the sta199-fa22-02 organization on GitHub. Click on the repo with the prefix lab-02. It contains the starter documents you need to complete the lab.</p></li>
 <li><p>Clone the repo and start a new project in RStudio. See the <a href="https://sta199-f22-2.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project">Lab 0 instructions</a> for details on cloning a repo and starting a new R project.</p></li>
+</ul></section><section id="getting-started-1" class="level1"><h1>Getting started</h1>
+<ul>
+<li>Go to the course GitHub organization and locate your lab repo, which should be named <code>lab-03-nobel-laureates-YOUR_GITHUB_USERNAME</code>.</li>
+<li>Grab the URL of the repo, and clone it in RStudio.</li>
+<li>First, open the Quarto document <code>lab-03.qmd</code> and Render it.</li>
+<li>Make sure it compiles without errors.</li>
 </ul>
-<section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<p>We will use the <strong>tidyverse</strong> package to create and customize plots in R.</p>
+<section id="warm-up" class="level2"><h2 class="anchored" data-anchor-id="warm-up">Warm up</h2>
+<p>Before we introduce the data, let’s warm up with some simple exercises.</p>
+<ul>
+<li>Update the YAML, changing the author name to your name, and <strong>render</strong> the document.</li>
+<li>Commit your changes with a meaningful commit message.</li>
+<li>Push your changes to GitHub.</li>
+<li>Go to your repo on GitHub and confirm that your changes are visible in your Qmd <strong>and</strong> pdf files. If anything is missing, commit and push again.</li>
+</ul></section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>We’ll use the <strong>tidyverse</strong> package for much of the data wrangling. This package is already installed for you. You can load them by running the following in your Console:</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
-<section id="the-greatest-crossover-event-in-the-history-of-sta199-labs" class="level3"><h3 class="anchored" data-anchor-id="the-greatest-crossover-event-in-the-history-of-sta199-labs">The Greatest Crossover Event in the History of STA199 Labs</h3>
-<p>This data was originally collected for a <a href="https://fivethirtyeight.com/features/avengers-death-comics-age-of-ultron/">FiveThirtyEight article</a>. The version of the avengers data we will work with here can be uploaded from the avengers.csv file.</p>
-<p>This dataset includes information about characters across the entire Marvel Cinematic Universe (MCU), so some of the names will be familiar if you are a fan of the films or comics. Don’t worry if you aren’t a Marvel fan; no background knowledge is needed to successfully complete this lab!</p>
-<p>We will focus on the following variables in this lab:</p>
+<p>The dataset for this assignment can be found as a CSv (comma separated values) file in the <code>data</code> folder of your repository. You can read it in using the following.</p>
 <div class="cell">
-
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nobel</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/nobel.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>See FiveThirtyEight’s <a href="https://github.com/fivethirtyeight/data/tree/master/avengers">GitHub repo</a> for the full codebook.</p>
-</section></section></section><section id="exercises" class="level1"><h1>Exercises</h1>
-<p>As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.</p>
-<p>In addition, the code should not exceed the 80 character limit, so that all the code can be read when you render to PDF. To help with this, you can add a vertical line at 80 characters by clicking “Tools” <span class="math inline">\(\rightarrow\)</span> “Global Options” <span class="math inline">\(\rightarrow\)</span> “Code” <span class="math inline">\(\rightarrow\)</span> “Display”, then set “Margin Column” to 80, and click “Apply”.</p>
-<p>Remember that continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to <strong>render, commit, and push</strong> your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.</p>
-<ol type="1">
-<li>You are interested in creating a data frame with the most “classic” Avengers. Use filter to make a new data frame that only includes Avengers that were 1) created in 1970 or earlier and 2) were not given probationary status. Assign the new data frame as classic_avengers. Confirm that once you have filtered, you are left with a data frame with 27 observations.</li>
-</ol>
-<div class="render-commit-push">
-<p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding.</p>
-<p><br></p>
-</div>
-<ol start="2" type="1">
-<li>
-<p><em>Who are the newest classic Avengers?</em> Using a single pipeline: Create a new variable called years_served that represents the number of years served as of 2021.. (Hint: you can use either the year variable or years_since_joining variables to do this.) Then, arrange the dataset in ascending order of years_served. Lastly, select the name and years_served and display the first three rows.</p>
+<p>The variable descriptions are as follows:</p>
 <ul>
-<li>Report the names of the three newest classic Avengers and how long they have served in your narrative.</li>
-</ul>
-</li>
-<li><p><em>Has the percentage of female Avengers changed over time?</em> To explore this question, find the percentage of female Avengers in the classic_avengers dataset and compare it to the percentage of females among all Avengers. What do you conclude based on these results?</p></li>
-</ol>
-<div class="render-commit-push">
-<p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
-<p><br></p>
-</div>
-<ol start="4" type="1">
 <li>
-<p>Sort the full avengers dataset in descending order of appearances and display only the columns name, appearances, death1, and return1 for the top five observations.</p>
-<ul>
-<li>What do you observe about these Avengers in terms of deaths and returns?</li>
-</ul>
-</li>
+<code>id</code>: ID number</li>
 <li>
-<p>Use the full avengers dataset to examine the mean and median number of appearances for Avengers who have died at least once compared to those who have not died at least once.</p>
-<ul>
-<li><p>What do you learn about Marvel movies from your results?</p></li>
-<li><p>What do the mean and median tell you about the distribution of apparances for these two groups?</p></li>
-</ul>
-</li>
+<code>firstname</code>: First name of laureate</li>
 <li>
-<p><em>Who’s more popular - the new or classic Avengers?</em> Calculate the mean number of appearances for each introduction year (year). Then create a scatterplot of the mean appearances by introduction year. Do not include observations with the introduction year 1900, as “1900” indicates the value of full_reserve is missing.</p>
-<ul>
-<li>What are 2 - 3 observations you have about the mean appearances based on introduction year?</li>
+<code>surname</code>: Surname</li>
+<li>
+<code>year</code>: Year prize won</li>
+<li>
+<code>category</code>: Category of prize</li>
+<li>
+<code>affiliation</code>: Affiliation of laureate</li>
+<li>
+<code>city</code>: City of laureate in prize year</li>
+<li>
+<code>country</code>: Country of laureate in prize year</li>
+<li>
+<code>born_date</code>: Birth date of laureate</li>
+<li>
+<code>died_date</code>: Death date of laureate</li>
+<li>
+<code>gender</code>: Gender of laureate</li>
+<li>
+<code>born_city</code>: City where laureate was born</li>
+<li>
+<code>born_country</code>: Country where laureate was born</li>
+<li>
+<code>born_country_code</code>: Code of country where laureate was born</li>
+<li>
+<code>died_city</code>: City where laureate died</li>
+<li>
+<code>died_country</code>: Country where laureate died</li>
+<li>
+<code>died_country_code</code>: Code of country where laureate died</li>
+<li>
+<code>overall_motivation</code>: Overall motivation for recognition</li>
+<li>
+<code>share</code>: Number of other winners award is shared with</li>
+<li>
+<code>motivation</code>: Motivation for recognition</li>
 </ul>
-</li>
-</ol>
 <div class="render-commit-push">
 <p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
 <p><br></p>
 </div>
-</section><section id="submission" class="level1"><h1>Submission</h1>
+</section></section><section id="submission" class="level1"><h1>Submission</h1>
 <p>Once you are finished with the lab, you will your final PDF document to Gradescope.</p>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
