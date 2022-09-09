@@ -350,6 +350,7 @@
     "text": "Important\n\n\n\nThis lab is due Monday, Sep 12 at 11:59pm."
   },
   {
+<<<<<<< HEAD
     "objectID": "labs/lab-1.html#packages",
     "href": "labs/lab-1.html#packages",
     "title": "Lab 1 - Data visualization",
@@ -369,6 +370,104 @@
     "title": "Prepare",
     "section": "",
     "text": "Watch: Meet the toolkit\nRead:\n\nR for Data Science: Chapter 1 - Introduction\nIntro to Modern Data Science: Chapter 1 - Hello data\n\nIf you haven’t yet done so:\n\nJoin the course Slack using the invitation link in your email.\nComplete the Getting to know you survey.\nReserve a STA 198-199 container at https://cmgr.oit.duke.edu/containers."
+=======
+    "objectID": "hw/hw-1.html",
+    "href": "hw/hw-1.html",
+    "title": "HW 1 - Data visualization",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due Thursday, Sep 15 at 11:59pm."
+  },
+  {
+    "objectID": "hw/hw-1.html#packages",
+    "href": "hw/hw-1.html#packages",
+    "title": "HW 1 - Data visualization",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)\nlibrary(openintro)"
+  },
+  {
+    "objectID": "hw/hw-1.html#guidelines-tips",
+    "href": "hw/hw-1.html#guidelines-tips",
+    "title": "HW 1 - Data visualization",
+    "section": "Guidelines + tips",
+    "text": "Guidelines + tips\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete this homework and other assignments in this course. There will be periodic reminders in this assignment to remind you to knit, commit, and push your changes to GithHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\nNote\n\n\n\nNote: Do not let R output answer the question for you unless the question specifically asks for just a plot. For example, if the question asks for the number of columns in the data set, please type out the number of columns. You are subject to lose points if you do not."
+  },
+  {
+    "objectID": "hw/hw-1.html#workflow-formatting",
+    "href": "hw/hw-1.html#workflow-formatting",
+    "title": "HW 1 - Data visualization",
+    "section": "Workflow + formatting",
+    "text": "Workflow + formatting\nMake sure to\n\nUpdate author name on your document.\nLabel all code chunks informatively and concisely.\nFollow the Tidyverse code style guidelines.\nMake at least 3 commits.\nResize figures where needed, avoid tiny or huge plots.\nTurn in an organized, well formatted document."
+  },
+  {
+    "objectID": "hw/hw-1.html#data-1-duke-forest-houses",
+    "href": "hw/hw-1.html#data-1-duke-forest-houses",
+    "title": "HW 1 - Data visualization",
+    "section": "Data 1: Duke Forest houses",
+    "text": "Data 1: Duke Forest houses\n\n\n\n\n\n\nNote\n\n\n\nUse this dataset for Exercises 1 and 2.\n\n\nFor the following two exercises you will work with data on houses that were sold in the Duke Forest neighborhood of Durham, NC in November 2020. The duke_forest dataset comes from the openintro package. You can see a list of the variables on the package website or by running ?duke_forest in your console."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-1",
+    "href": "hw/hw-1.html#exercise-1",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nSuppose you’re helping some family friends who are looking to buy a house in Duke Forest. As they browse Zillow listings, they realize some houses have garages and others don’t, and they wonder: Does having a garage make a difference?\nLuckily, you can help them answer this question with data visualization!\n\nMake histograms of the prices of houses in Duke Forest based on whether they have a garage.\n\nIn order to do this, you will first need to create a new variable called garage (with levels \"Garage\" and \"No garage\").\nBelow is the code for creating this new variable. Here, we mutate() the duke_forest data frame to add a new variable called garage which takes the value \"Garage\" if the text string \"Garage\" is detected in the parking variable and takes the test string \"No garage\" if not.\n\n\n\n\nduke_forest |>\n  mutate(garage = if_else(str_detect(parking, \"Garage\"),   \"Garage\", \"No garage\"))\n\n\nThen, facet by garage and use different colors for the two facets.\nChoose an appropriate binwidth and decide whether a legend is needed, and turn it off if not.\nInclude informative title and axis labels.\nFinally, include a brief (2-3 sentence) narrative comparing the distributions of prices of Duke Forest houses that do and don’t have garages. Your narrative should touch on whether having a garage “makes a difference” in terms of the price of the house.\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-2",
+    "href": "hw/hw-1.html#exercise-2",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nIt’s expected that within any given marker larger houses will be priced higher. It’s also expected that the age of the house will have an effect on the price. However in some markets new houses might be more expensive while in others new construction might mean “no character” and hence be less expensive. So your family friends ask: “In Duke Forest, do houses that are bigger and more expensive tend to be newer ones than those that are smaller and cheaper?”\nOnce again, data visualization skills to the rescue!\n\nCreate a scatter plot to exploring the relationship between price and area, conditioning for year_built.\nUse geom_smooth() with the argument se = FALSE to add a smooth curve fit to the data and color the points by year_built.\nInclude informative title, axis, and legend labels.\nDiscuss each of the following claims (1-2 sentences per claim). Your discussion should touch on specific things you observe in your plot as evidence for or against the claims.\n\nClaim 1: Larger houses are priced higher.\nClaim 2: Newer houses are priced higher.\nClaim 3: Bigger and more expensive houses tend to be newer ones than smaller and cheaper ones.\n\n\n\n\nNow is a good time to render, commit, and push.\nMake sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-1.html#data-2-brfss",
+    "href": "hw/hw-1.html#data-2-brfss",
+    "title": "HW 1 - Data visualization",
+    "section": "Data 2: BRFSS",
+    "text": "Data 2: BRFSS\n\n\n\n\n\n\nNote\n\n\n\nUse this dataset for Exercises 3 to 5.\n\n\n\nThe Behavioral Risk Factor Surveillance System (BRFSS) is the nation’s premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. Established in 1984 with 15 states, BRFSS now collects data in all 50 states as well as the District of Columbia and three U.S. territories. BRFSS completes more than 400,000 adult interviews each year, making it the largest continuously conducted health survey system in the world.\nSource: cdc.gov/brfss\n\nIn the following exercises we will work with data from the 2020 BRFSS survey. The originally come from here, though we will work with a random sample of responses and a small number of variables from the data provided. These have already been sampled for you and the dataset you’ll use can be found in the data folder of your repo. It’s called brfss.csv.\n\nbrfss <- read_csv(\"data/brfss.csv\")"
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-3",
+    "href": "hw/hw-1.html#exercise-3",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 3",
+    "text": "Exercise 3\n\nHow many rows are in the brfss dataset? What does each row represent?\nHow many columns are in the brfss dataset? Indicate the type of each variable.\nInclude the code and resulting output used to support your answer.\n\n\n Now is a good time to render, commit, and push."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-4",
+    "href": "hw/hw-1.html#exercise-4",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nDo people who smoke more tend to have worse health conditions?\n\nUse a segmented bar chart to visualize the relationship between smoking (smoke_freq) and general health (general_health). Decide on which variable to represent with bars and which variable to fill the color of the bars by.\nPay attention to the order of the bars and, if need be, use the fct_relevel function to reorder the levels of the variables.\n\nBelow is sample code for releveling general_health. Here we first convert general_health to a factor (how R stores categorical data) and then order the levels from Excellent to Poor.\n\n\n\n\nbrfss |>\n  mutate(\n    general_health = as.factor(general_health),\n    general_health = fct_relevel(general_health, \"Excellent\", \"Very good\", \"Good\", \"Fair\", \"Poor\")\n  )\n\n\nInclude informative title, axis, and legend labels.\nComment on the motivating question based on evidence from the visualization: Do people who smoke more tend to have worse health conditions?\n\n\n Now is a good time to render, commit, and push."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-5",
+    "href": "hw/hw-1.html#exercise-5",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nHow are sleep and general health associated?\n\nCreate a visualization displaying the relationship between sleep and general_health.\nInclude informative title and axis labels.\nModify your plot to use a different theme than the default.\nComment on the motivating question based on evidence from the visualization: How are sleep and general health associated?\n\n\n Now is a good time to render, commit, and push."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-6",
+    "href": "hw/hw-1.html#exercise-6",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 6",
+    "text": "Exercise 6\n\nFill in the blanks:\n\nThe gg in the name of the package ggplot2 stands for ___.\nIf you map the same continuous variable to both x and y aesthetics in a scatterplot, you get a straight ___ line. (Choose between “vertical”, “horizontal”, or “diagonal”.)\n\n\nCode style: Fix up the code style by spaces and line breaks where needed. Briefly describe your fixes. (Hint: You can refer to the Tidyverse style guide.)\n\n\nggplot(data=mpg,mapping=aes(x=drv,fill=class))+geom_bar() +scale_fill_viridis_d()\n\n\nRead ?facet_wrap. What does nrow do? What does ncol do? What other options control the layout of the individual panels? Why doesn’t facet_grid() have nrow and ncol arguments?\n\n\n Render, commit, and push one last time.\nMake sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-1.html#submission",
+    "href": "hw/hw-1.html#submission",
+    "title": "HW 1 - Data visualization",
+    "section": "Submission",
+    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials Duke Net ID and log in using your Net ID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”). If you do not do this, you will be subject to lose points on the assignment.\nSelect the first page of your PDF submission to be associated with the “Workflow & formatting” question."
+  },
+  {
+    "objectID": "hw/hw-1.html#grading",
+    "href": "hw/hw-1.html#grading",
+    "title": "HW 1 - Data visualization",
+    "section": "Grading",
+    "text": "Grading\n\nExercise 1: 7 points\nExercise 2: 9 points\nExercise 3: 5 points\nExercise 4: 9 points\nExercise 5: 7 points\nExercise 6: 8 points\nWorkflow + formatting: 5 points\nTotal: 50 points"
+>>>>>>> 08b1d6c94ee73201ebe32e907467e14283191d05
   },
   {
     "objectID": "prepare/09-05.html",
@@ -406,6 +505,51 @@
     "text": "To be posted."
   },
   {
+<<<<<<< HEAD
+=======
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "If this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course."
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above."
+  },
+  {
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Course overview",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nFrench Science 2231\nMon & Wed 3:30 - 4:45 pm\n\n\nLab 06\nPerkins Link 087 (Classroom 3)\nThur 10:15 - 11:30 am\n\n\nLab 07\nPerkins Link 087 (Classroom 3)\nThur 12:00 - 1:15 pm\n\n\nLab 08\nPerkins Link 087 (Classroom 3)\nThur 1:45 - 3:00 pm\n\n\nLab 09\nPerkins Link 087 (Classroom 3)\nThur 3:30 - 4:45 pm\n\n\nLab 10\nPerkins Link 087 (Classroom 3)\nThur 5:15 - 6:30 pm"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science",
+    "section": "",
+    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      lab\n      exam\n      project\n      notes\n    \n\n\n1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\nRelease Lab 0\n\n\n\nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\n\n\n\n2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\nRelease: Lab 1 / Release: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\nDue: Lab 1\n\n\n\nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\nRelease: HW 2\n\n\n\nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\nRelease: Lab 2 / Due: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\nDue: Lab 2\n\n\n\nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\nDue HW 2\n\n\n\nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\nRelease: Lab 3\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\nDue: Lab 3\n\n\n\nW\n28 September\nLec 10\nTips for effective data visualization\nTroubleshooting + debugging\n\n\n\n\n\n\n\n\n\n\n\nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\nM\n3 October\nLec 11\nWeb scraping\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n\n\n\nW\n5 October\nLec 12\nFunctions + iteration\n\n\n\n\n\n\n\nRelease: HW 3\n\n\n\nTh\n6 October\nLab\nBonus lab\n\n\n\n\n\n\n\nRelease: Lab\n\n\n7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n\n\n\nW\n12 October\nLec 13\nData science ethics\n\n\n\n\n\n\n\nDue: HW 3\n\n\n\nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n8\nM\n17 October\nLec 14\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\n\n\nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\nTh\n20 October\nLab 5\nExploratory data analysis\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\nDue: Lab 5\n\n\n\nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\nRelease: HW 4\n\n\n\nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\nRelease: Lab 6\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\nM\n31 October\nLec 18\nLogistic regression\n\n\n\n\n\n\n\nDue: Lab 6\n\n\n\nW\n2 November\nLec 19\nPrediction and overfitting\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n\n\n\nTh\n3 November\nLab 7\nPredicting a categorical outcome\n\n\n\n\n\n\n\nRelease: Lab 7\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\nDue: Lab 7\n\n\n\nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\nDue: HW 5\n\n\n\nTh\n10 November\nLab 8\nBootstrapping\n\n\n\n\n\n\n\nRelease: Lab 8\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\nDue: Lab 8\n\n\n\nW\n16 November\nLec 23\nSimulation based inference overview\n\n\n\n\n\n\n\n\n\n\n\nTh\n17 November\nLab\nNo Lab - Work on Exam\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n\n\n\nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\nDue: Project draft due\n\n\n14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n\n\n15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n\n\n\nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\nDue: Project everything\n\n\n\nF\n9 December\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Dr. Elijah Meyer (he/him) - Hello! I’m very excited to work with you all this semester. I’ve earned a Master’s degree in statistics and a Ph.D. in statistics with a focus in education from Montana State University. My early research is in sports statistics, with an emphasis on spatial data visualizations to enhance sports strategy. My Ph.D. work is in how to best support graduate student instructors and early career teachers to use active learning in their classrooms.\nPrior to my time at Duke, I’ve taught multiple sections of Introductory and Intermediate Statistics at Montana State, developed their Intermediate Statistics online course, and helped integrate R into the Introductory Statistics curricula. I prioritize community, communication, and respect in my classroom. I want to provide a space where we can freely talk about the material, embrace mistakes, and learn together throughout the semester.\nWhen I’m not in the books, I enjoy playing disc golf, tennis, basketball, and anything else that gets me outside and active. I’m looking forward to meeting you all and having a great semester!\n\n\n\nOffice hours\nLocation\n\n\n\n\nTue 10:00 AM - 12:00 PM\nOld Chemistry Building 208 / Zoom (Password: 5MYp7A)"
+  },
+  {
+    "objectID": "course-team.html#teaching-assistants",
+    "href": "course-team.html#teaching-assistants",
+    "title": "Teaching team",
+    "section": "Teaching assistants",
+    "text": "Teaching assistants\n\n\n\nName\nRole\nLab section\nOffice hours\n\n\n\n\nKonnie Huang (konnie.huang@duke.edu)\nIn Class TA\n\nWed 12:00PM - 1:00PM & Thur 5:00PM - 6:00PM / Zoom\n\n\nEli Gnesin\nLab Leader\nThur 10:15AM - 11:30AM\nThur 9:00AM - 10:00PM (in-person only) & 12:00 pm - 1:00 pm in Old Chem 203B / Zoom\n\n\nYibin Zhang\nLab Helper\nThur 10:15AM - 11:30AM\nWed 6:00PM - 8:00PM / Zoom\n\n\nCaitrin Murphy\nLab Leader\nThur 12:00PM - 1:15PM\nWed 2:00PM - 3:00PM in Old Chem 203B & Thur 7:00PM - 8:00PM / Zoom\n\n\nZheyuan Liu\nLab Helper\nThur 12:00PM - 1:15PM\nThur 1:00PM - 3:00 PM / Zoom\n\n\nChristine (Yueming) Shen\nLab Leader / Head TA\nThur 1:45PM - 3:00PM\nTue 1-2pm & Thur 2-3pm in Old Chem 203B & Zoom\n\n\nAlonso Guerrero Castañeda\nLab Helper\nThur 1:45PM - 3:00PM\nMon 6:00PM - 7:00PM in Old Chem 203B & Thur 6:00PM - 7:00PM / Zoom\n\n\nYouran Wu\nLab Leader\nThur 3:30PM - 4:45PM\nFri 5:00PM - 7:00PM Zoom\n\n\nMounika Adepu\nLab Helper\nThur 3:30PM - 4:45PM\nMon 10:30 AM - 12:30 pm / Zoom\n\n\nKateryna (Kat) Husar\nLab Leader\nThur 5:15PM - 6:30PM\nTue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / in Old Chem 203B & Zoom\n\n\nIsabella Swigart\nLab Helper\nThur 5:15PM - 6:30PM\nTue 4:00 PM - 5:30 PM & Tue 1:00PM - 1:30PM / Zoom"
+  },
+  {
+>>>>>>> 08b1d6c94ee73201ebe32e907467e14283191d05
     "objectID": "slides/01-welcome-199.html#syllabus",
     "href": "slides/01-welcome-199.html#syllabus",
     "title": "Welcome to STA 199",
