@@ -252,6 +252,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#warm-up" id="toc-warm-up" class="nav-link" data-scroll-target="#warm-up">Warm up</a></li>
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#get-to-know-your-data" id="toc-get-to-know-your-data" class="nav-link" data-scroll-target="#get-to-know-your-data">Get to know your data</a></li>
+  <li><a href="#most-living-nobel-laureates-were-based-in-the-us-when-they-won-their-prizes" id="toc-most-living-nobel-laureates-were-based-in-the-us-when-they-won-their-prizes" class="nav-link" data-scroll-target="#most-living-nobel-laureates-were-based-in-the-us-when-they-won-their-prizes">Most living Nobel laureates were based in the US when they won their prizes</a></li>
+  <li><a href="#but-of-those-us-based-nobel-laureates-many-were-born-in-other-countries" id="toc-but-of-those-us-based-nobel-laureates-many-were-born-in-other-countries" class="nav-link" data-scroll-target="#but-of-those-us-based-nobel-laureates-many-were-born-in-other-countries">But of those US-based Nobel laureates, many were born in other countries</a></li>
   </ul>
 </li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
@@ -318,7 +321,7 @@ Important
 </section><section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The dataset for this assignment can be found as a CSv (comma separated values) file in the <code>data</code> folder of your repository. You can read it in using the following.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nobel</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/nobel.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">nobel</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"labs/data/nobel.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The variable descriptions are as follows:</p>
 <ul>
@@ -363,6 +366,87 @@ Important
 <li>
 <code>motivation</code>: Motivation for recognition</li>
 </ul>
+<p>In a few cases the name of the city/country changed after laureate was given (e.g.&nbsp;in 1975 Bosnia and Herzegovina was called the Socialist Federative Republic of Yugoslavia). In these cases the variables below reflect a different name than their counterparts without the suffix `_original`.</p>
+<ul>
+<li>
+<code>born_country_original</code>: Original country where laureate was born</li>
+<li>
+<code>born_city_original</code>: Original city where laureate was born</li>
+<li>
+<code>died_country_original</code>: Original country where laureate died</li>
+<li>
+<code>died_city_original</code>: Original city where laureate died</li>
+<li>
+<code>city_original</code>: Original city where laureate lived at the time of winning the award</li>
+<li>
+<code>country_original</code>: Original country where laureate lived at the time of winning the award</li>
+</ul></section><section id="get-to-know-your-data" class="level2"><h2 class="anchored" data-anchor-id="get-to-know-your-data">Get to know your data</h2>
+<ol type="1">
+<li>How many observations and how many variables are in the dataset? Use inline code to answer this question. What does each row represent?</li>
+</ol>
+<p>There are some observations in this dataset that we will exclude from our analysis to match the Buzzfeed results.</p>
+<ol start="2" type="1">
+<li>Create a new data frame called <code>nobel_living</code> that filters for</li>
+</ol>
+<ul>
+<li>laureates for whom <code>country</code> is available</li>
+<li>laureates who are people as opposed to organizations (organizations are denoted with <code>"org"</code> as their <code>gender</code>)</li>
+<li>laureates who are still alive (their <code>died_date</code> is <code>NA</code>)</li>
+</ul>
+<div class="cell">
+
+</div>
+<p>Confirm that once you have filtered for these characteristics you are left with a data frame with <em>r nrow(nobel_living)</em>` observations, once again using inline code.</p>
+</section><section id="most-living-nobel-laureates-were-based-in-the-us-when-they-won-their-prizes" class="level2"><h2 class="anchored" data-anchor-id="most-living-nobel-laureates-were-based-in-the-us-when-they-won-their-prizes">Most living Nobel laureates were based in the US when they won their prizes</h2>
+<p>… says the Buzzfeed article. Let’s see if that’s true.</p>
+<p>First, we’ll create a new variable to identify whether the laureate was in the US when they won their prize. We’ll use the <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function for this. The following pipeline mutates the <code>nobel_living</code> data frame by adding a new variable called <code>country_us</code>. We use an if statement to create this variable. The first argument in the <code><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else()</a></code> function we’re using to write this if statement is the condition we’re testing for. If <code>country</code> is equal to <code>"USA"</code>, we set <code>country_us</code> to <code>"USA"</code>. If not, we set the <code>country_us</code> to <code>"Other"</code>.</p>
+<div class="cell">
+<pre class="marginfigure cell-code"><code>Note that we can achieve the same result using the `fct_other()` function we've seen before (i.e. with `country_us = fct_other(country, "USA")`). We decided to use the `if_else()` here to show you one example of an if statement in R.</code></pre>
+</div>
+<div class="cell">
+
+</div>
+<p>Next, we will limit our analysis to only the following categories: Physics, Medicine, Chemistry, and Economics.</p>
+<div class="cell">
+
+</div>
+<p>For the next exercise work with the <code>nobel_living_science</code> data frame you created above. This means you’ll need to define this data frame in your R Markdown document, even though the next exercise doesn’t explicitly ask you to do so.</p>
+<ol start="3" type="1">
+<li>
+<p>Create a faceted bar plot visualizing the relationship between the category of prize and whether the laureate was in the US when they won the nobel prize. Interpret your visualization, and say a few words about whether the Buzzfeed headline is supported by the data.</p>
+<ul>
+<li>Your visualization should be faceted by category.</li>
+<li>For each facet you should have two bars, one for winners in the US and one for Other.</li>
+<li>Flip the coordinates so the bars are horizontal, not vertical.</li>
+</ul>
+</li>
+</ol>
+<div class="render-commit-push">
+<p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
+<p><br></p>
+</div>
+</section><section id="but-of-those-us-based-nobel-laureates-many-were-born-in-other-countries" class="level2"><h2 class="anchored" data-anchor-id="but-of-those-us-based-nobel-laureates-many-were-born-in-other-countries">But of those US-based Nobel laureates, many were born in other countries</h2>
+<div class="cell">
+<pre class="marginfigure cell-code"><code>**Hint:** You should be able to ~~cheat~~ borrow from code you used earlier to create the `country_us` variable.</code></pre>
+</div>
+<ol start="4" type="1">
+<li><p>Create a new variable called <code>born_country_us</code> that has the value <code>"USA"</code> if the laureate is born in the US, and <code>"Other"</code> otherwise. How many of the winners are born in the US?</p></li>
+<li>
+<p>Add a second variable to your visualization from Exercise 3 based on whether the laureate was born in the US or not. Based on your visualization, do the data appear to support Buzzfeed’s claim? Explain your reasoning in 1-2 sentences.</p>
+<ul>
+<li>Your final visualization should contain a facet for each category.</li>
+<li>Within each facet, there should be a bar for whether the laureate won the award in the US or not.</li>
+<li>Each bar should have segments for whether the laureate was born in the US or not.</li>
+</ul>
+</li>
+</ol>
+<div class="render-commit-push">
+<p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
+<p><br></p>
+</div>
+<ol start="6" type="1">
+<li>In a single pipeline, filter for laureates who won their prize in the US, but were born outside of the US, and then create a frequency table (with the <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> function) for their birth country (<code>born_country</code>) and arrange the resulting data frame in descending order of number of observations for each country. Which country is the most common?</li>
+</ol>
 <div class="render-commit-push">
 <p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
 <p><br></p>

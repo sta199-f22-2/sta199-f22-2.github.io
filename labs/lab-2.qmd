@@ -13,7 +13,9 @@ This lab is due Monday, Sep 19 at 11:59pm.
 
 In this lab, you will...
 
--   Data wrangling and visualization
+-   use data wrangling to extract meaning from data
+-   continue developing a workflow for reproducible data analysis
+-   continue working with data visualization tools
 
 # Getting started 
 
@@ -53,7 +55,7 @@ The dataset for this assignment can be found as a CSv (comma separated values) f
 You can read it in using the following.
 
 ```{r load-data, message = FALSE}
-nobel <- read_csv("data/nobel.csv")
+nobel <- read_csv("labs/data/nobel.csv")
 ```
 
 The variable descriptions are as follows:
@@ -102,7 +104,8 @@ There are some observations in this dataset that we will exclude from our analys
 -   laureates who are people as opposed to organizations (organizations are denoted with `"org"` as their `gender`)
 -   laureates who are still alive (their `died_date` is `NA`)
 
-```{r echo=FALSE}
+```{r}
+#| echo: false
 nobel_living <- nobel %>%
   filter(
     !is.na(country),
@@ -111,7 +114,7 @@ nobel_living <- nobel %>%
   )
 ```
 
-Confirm that once you have filtered for these characteristics you are left with a data frame with `r nrow(nobel_living)` observations, once again using inline code.
+Confirm that once you have filtered for these characteristics you are left with a data frame with *r nrow(nobel_living)*` observations, once again using inline code.
 
 ## Most living Nobel laureates were based in the US when they won their prizes
 
@@ -127,10 +130,11 @@ If `country` is equal to `"USA"`, we set `country_us` to `"USA"`.
 If not, we set the `country_us` to `"Other"`.
 
 ```{marginfigure}
-Note that we can achieve the same result using the `fct_other()` function we've seen before (i.e. with `country_us = fct_other(country, "USA")`). We decided to use the `if_else()` here to show you one example of an if statement in R.
+Note that we can achieve the same result using the `fct_other()` function we have seen before (i.e. with `country_us = fct_other(country, "USA")`). We decided to use the `if_else()` here to show you one example of an if statement in R.
 ```
 
 ```{r}
+#| echo: false
 nobel_living <- nobel_living %>%
   mutate(
     country_us = if_else(country == "USA", "USA", "Other")
@@ -140,6 +144,7 @@ nobel_living <- nobel_living %>%
 Next, we will limit our analysis to only the following categories: Physics, Medicine, Chemistry, and Economics.
 
 ```{r}
+#| echo: false
 nobel_living_science <- nobel_living %>%
   filter(category %in% c("Physics", "Medicine", "Chemistry", "Economics"))
 ```
