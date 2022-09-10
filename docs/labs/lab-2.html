@@ -294,7 +294,9 @@ Important
 <section id="learning-goals" class="level1"><h1>Learning goals</h1>
 <p>In this lab, you will…</p>
 <ul>
-<li>Data wrangling and visualization</li>
+<li>use data wrangling to extract meaning from data</li>
+<li>continue developing a workflow for reproducible data analysis</li>
+<li>continue working with data visualization tools</li>
 </ul></section><section id="getting-started" class="level1"><h1>Getting started</h1>
 <ul>
 <li><p>Go to the sta199-fa22-02 organization on GitHub. Click on the repo with the prefix lab-02. It contains the starter documents you need to complete the lab.</p></li>
@@ -401,7 +403,7 @@ Important
 <p>… says the Buzzfeed article. Let’s see if that’s true.</p>
 <p>First, we’ll create a new variable to identify whether the laureate was in the US when they won their prize. We’ll use the <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> function for this. The following pipeline mutates the <code>nobel_living</code> data frame by adding a new variable called <code>country_us</code>. We use an if statement to create this variable. The first argument in the <code><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else()</a></code> function we’re using to write this if statement is the condition we’re testing for. If <code>country</code> is equal to <code>"USA"</code>, we set <code>country_us</code> to <code>"USA"</code>. If not, we set the <code>country_us</code> to <code>"Other"</code>.</p>
 <div class="cell">
-<pre class="marginfigure cell-code"><code>Note that we can achieve the same result using the `fct_other()` function we've seen before (i.e. with `country_us = fct_other(country, "USA")`). We decided to use the `if_else()` here to show you one example of an if statement in R.</code></pre>
+<pre class="marginfigure cell-code"><code>Note that we can achieve the same result using the `fct_other()` function we have seen before (i.e. with `country_us = fct_other(country, "USA")`). We decided to use the `if_else()` here to show you one example of an if statement in R.</code></pre>
 </div>
 <div class="cell">
 
@@ -485,31 +487,31 @@ Warning
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Ex 1</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">6</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 2</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ex 3</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">8</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 4</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ex 5</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">7</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 6</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">8</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Workflow &amp; formatting</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">8</td>
 </tr>
 </tbody>
 </table>

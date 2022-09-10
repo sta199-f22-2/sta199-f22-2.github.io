@@ -225,13 +225,13 @@ To submit your assignment:
 
 | Component             | Points |
 |:----------------------|:-------|
-| Ex 1                  |       |
-| Ex 2                  |       |
-| Ex 3                  |       |
-| Ex 4                  |       |
-| Ex 5                  |       |
-| Ex 6                  |       |
-| Workflow & formatting |       |
+| Ex 1                  |   6    |
+| Ex 2                  |   6    |
+| Ex 3                  |   8    |
+| Ex 4                  |   6    |
+| Ex 5                  |   7    |
+| Ex 6                  |   8    |
+| Workflow & formatting |   8    |
 
 ::: callout-note
 The "Workflow & formatting" grade is to assess the reproducible workflow. This includes having at least 3 informative commit messages, labeling the code chunks, and having readable code that does not exceed 80 characters, i.e., we can read all your code in the rendered PDF.
