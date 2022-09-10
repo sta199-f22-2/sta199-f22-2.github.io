@@ -229,7 +229,7 @@ To submit your assignment:
 | Ex 2                  |   6    |
 | Ex 3                  |   8    |
 | Ex 4                  |   6    |
-| Ex 5                  |   7    |
+| Ex 5                  |   8    |
 | Ex 6                  |   8    |
 | Workflow & formatting |   8    |
 

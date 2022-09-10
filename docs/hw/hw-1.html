@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>STA 199 - HW 1 - Data visualization</title>
 <style>
 code{white-space: pre-wrap;}
@@ -80,7 +77,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -97,8 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -117,37 +112,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Submit"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
       <h1 class="quarto-secondary-nav-title">HW 1 - Data visualization</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../" class="sidebar-logo-link">
-      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io" title="GitHub organization" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio Containers" class="sidebar-tool px-1"><i class="bi bi-code-square"></i></a>
     <a href="" title="Sakai" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-person-fill"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-        <li>
+<li>
           <a class="dropdown-item sidebar-tools-main-item" href="https://sakai.duke.edu/portal/site/ee49d7b2-019a-4aa6-9a8d-1b62e842b4ec/page/d5c088c6-0694-4f85-b56e-9f5baf4521dd?sakai.state.reset=true">
           Gradescope
           </a>
@@ -158,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </a>
         </li>
     </ul>
-  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+<a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -168,15 +153,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">Course information</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../course-overview.html" class="sidebar-item-text sidebar-link">Overview</a>
   </div>
@@ -212,7 +197,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">Computing</a>
@@ -220,8 +205,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing-access.html" class="sidebar-item-text sidebar-link">Access</a>
   </div>
@@ -232,7 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Project</a>
@@ -240,8 +225,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-description.html" class="sidebar-item-text sidebar-link">Description</a>
   </div>
@@ -252,25 +237,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
-    <h2 id="toc-title">On this page</h2>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting Started</a>
+<li>
+<a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting Started</a>
   <ul class="collapse">
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+<li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#guidelines-tips" id="toc-guidelines-tips" class="nav-link" data-scroll-target="#guidelines-tips">Guidelines + tips</a></li>
   <li><a href="#workflow-formatting" id="toc-workflow-formatting" class="nav-link" data-scroll-target="#workflow-formatting">Workflow + formatting</a></li>
-  </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
+  </ul>
+</li>
+  <li>
+<a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
   <ul class="collapse">
-  <li><a href="#data-1-duke-forest-houses" id="toc-data-1-duke-forest-houses" class="nav-link" data-scroll-target="#data-1-duke-forest-houses">Data 1: Duke Forest houses</a></li>
+<li><a href="#data-1-duke-forest-houses" id="toc-data-1-duke-forest-houses" class="nav-link" data-scroll-target="#data-1-duke-forest-houses">Data 1: Duke Forest houses</a></li>
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
   <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
   <li><a href="#data-2-brfss" id="toc-data-2-brfss" class="nav-link" data-scroll-target="#data-2-brfss">Data 2: BRFSS</a></li>
@@ -278,20 +263,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
   <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
   <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6</a></li>
-  </ul></li>
-  <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap up</a>
-  <ul class="collapse">
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/hw/hw-1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+</li>
+  <li>
+<a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap up</a>
+  <ul class="collapse">
+<li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  </ul>
+</li>
+  </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/hw/hw-1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title d-none d-lg-block">HW 1 - Data visualization</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Homework</div>
@@ -307,9 +291,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </div>
   
 
-</header>
-
-<div class="callout-important callout callout-style-default callout-captioned">
+</header><div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -322,21 +304,17 @@ Important
 <p>This homework is due Thursday, Sep 15 at 11:59pm.</p>
 </div>
 </div>
-<section id="getting-started" class="level1">
-<h1>Getting Started</h1>
+<section id="getting-started" class="level1"><h1>Getting Started</h1>
 <ul>
 <li><p>Go to the <a href="https://github.com/sta199-f22-2">sta199-f22-2</a> organization on GitHub. Click on the repo with the prefix <code>hw-01</code>. It contains the starter documents you need to complete the homework assignment.</p></li>
 <li><p>Clone the repo and start a new project in RStudio. See the <a href="https://sta199-f22-1.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project">Lab 0 instructions</a> for details on cloning a repo and starting a new R project.</p></li>
 </ul>
-<section id="packages" class="level2">
-<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openintro)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://openintrostat.github.io/openintro/">openintro</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="guidelines-tips" class="level2">
-<h2 class="anchored" data-anchor-id="guidelines-tips">Guidelines + tips</h2>
+</section><section id="guidelines-tips" class="level2"><h2 class="anchored" data-anchor-id="guidelines-tips">Guidelines + tips</h2>
 <p>As we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.</p>
 <p>Remember that continuing to develop a sound workflow for reproducible data analysis is important as you complete this homework and other assignments in this course. There will be periodic reminders in this assignment to remind you to knit, commit, and push your changes to GithHub. You should have <strong>at least 3 commits with meaningful commit messages</strong> by the end of the assignment.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
@@ -352,9 +330,7 @@ Note
 <p>Note: Do not let R output answer the question for you unless the question specifically asks for just a plot. For example, if the question asks for the number of columns in the data set, please type out the number of columns. You are subject to lose points if you do not.</p>
 </div>
 </div>
-</section>
-<section id="workflow-formatting" class="level2">
-<h2 class="anchored" data-anchor-id="workflow-formatting">Workflow + formatting</h2>
+</section><section id="workflow-formatting" class="level2"><h2 class="anchored" data-anchor-id="workflow-formatting">Workflow + formatting</h2>
 <p>Make sure to</p>
 <ul>
 <li>Update author name on your document.</li>
@@ -363,13 +339,8 @@ Note
 <li>Make at least 3 commits.</li>
 <li>Resize figures where needed, avoid tiny or huge plots.</li>
 <li>Turn in an organized, well formatted document.</li>
-</ul>
-</section>
-</section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
-<section id="data-1-duke-forest-houses" class="level2">
-<h2 class="anchored" data-anchor-id="data-1-duke-forest-houses">Data 1: Duke Forest houses</h2>
+</ul></section></section><section id="exercises" class="level1"><h1>Exercises</h1>
+<section id="data-1-duke-forest-houses" class="level2"><h2 class="anchored" data-anchor-id="data-1-duke-forest-houses">Data 1: Duke Forest houses</h2>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -383,22 +354,21 @@ Note
 <p>Use this dataset for Exercises 1 and 2.</p>
 </div>
 </div>
-<p>For the following two exercises you will work with data on houses that were sold in the Duke Forest neighborhood of Durham, NC in November 2020. The <code>duke_forest</code> dataset comes from the <strong>openintro</strong> package. You can see a list of the variables on the <a href="https://openintrostat.github.io/openintro/reference/duke_forest.html">package website</a> or by running <code>?duke_forest</code> in your console.</p>
-</section>
-<section id="exercise-1" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
+<p>For the following two exercises you will work with data on houses that were sold in the Duke Forest neighborhood of Durham, NC in November 2020. The <code>duke_forest</code> dataset comes from the <strong>openintro</strong> package. You can see a list of the variables on the <a href="https://openintrostat.github.io/openintro/reference/duke_forest.html">package website</a> or by running <code><a href="https://openintrostat.github.io/openintro/reference/duke_forest.html">?duke_forest</a></code> in your console.</p>
+</section><section id="exercise-1" class="level2"><h2 class="anchored" data-anchor-id="exercise-1">Exercise 1</h2>
 <p>Suppose you’re helping some family friends who are looking to buy a house in Duke Forest. As they browse Zillow listings, they realize some houses have garages and others don’t, and they wonder: <strong>Does having a garage make a difference?</strong></p>
 <p>Luckily, you can help them answer this question with data visualization!</p>
 <ul>
 <li>Make histograms of the prices of houses in Duke Forest based on whether they have a garage.
 <ul>
 <li>In order to do this, you will first need to create a new variable called <code>garage</code> (with levels <code>"Garage"</code> and <code>"No garage"</code>).</li>
-<li>Below is the code for creating this new variable. Here, we <code>mutate()</code> the <code>duke_forest</code> data frame to add a new variable called <code>garage</code> which takes the value <code>"Garage"</code> if the text string <code>"Garage"</code> is detected in the <code>parking</code> variable and takes the test string <code>"No garage"</code> if not.</li>
-</ul></li>
+<li>Below is the code for creating this new variable. Here, we <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> the <code>duke_forest</code> data frame to add a new variable called <code>garage</code> which takes the value <code>"Garage"</code> if the text string <code>"Garage"</code> is detected in the <code>parking</code> variable and takes the test string <code>"No garage"</code> if not.</li>
+</ul>
+</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>duke_forest <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">garage =</span> <span class="fu">if_else</span>(<span class="fu">str_detect</span>(parking, <span class="st">"Garage"</span>),   <span class="st">"Garage"</span>, <span class="st">"No garage"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">duke_forest</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>garage <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">parking</span>, <span class="st">"Garage"</span><span class="op">)</span>,   <span class="st">"Garage"</span>, <span class="st">"No garage"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Then, facet by <code>garage</code> and use different colors for the two facets.</li>
@@ -409,29 +379,26 @@ Note
 <div class="render-commit-push">
 <p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding. <br></p>
 </div>
-</section>
-<section id="exercise-2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+</section><section id="exercise-2" class="level2"><h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
 <p>It’s expected that within any given marker larger houses will be priced higher. It’s also expected that the age of the house will have an effect on the price. However in some markets new houses might be more expensive while in others new construction might mean “no character” and hence be less expensive. So your family friends ask: “In Duke Forest, do houses that are bigger and more expensive tend to be newer ones than those that are smaller and cheaper?”</p>
 <p>Once again, data visualization skills to the rescue!</p>
 <ul>
 <li>Create a scatter plot to exploring the relationship between <code>price</code> and <code>area</code>, conditioning for <code>year_built</code>.</li>
-<li>Use <code>geom_smooth()</code> with the argument <code>se = FALSE</code> to add a smooth curve fit to the data and color the points by <code>year_built</code>.</li>
+<li>Use <code><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth()</a></code> with the argument <code>se = FALSE</code> to add a smooth curve fit to the data and color the points by <code>year_built</code>.</li>
 <li>Include informative title, axis, and legend labels.</li>
 <li>Discuss each of the following claims (1-2 sentences per claim). Your discussion should touch on specific things you observe in your plot as evidence for or against the claims.
 <ul>
 <li>Claim 1: Larger houses are priced higher.</li>
 <li>Claim 2: Newer houses are priced higher.</li>
 <li>Claim 3: Bigger and more expensive houses tend to be newer ones than smaller and cheaper ones.</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <div class="render-commit-push">
 <p>Now is a good time to render, commit, and push.</p>
 <p>Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding. <br></p>
 </div>
-</section>
-<section id="data-2-brfss" class="level2">
-<h2 class="anchored" data-anchor-id="data-2-brfss">Data 2: BRFSS</h2>
+</section><section id="data-2-brfss" class="level2"><h2 class="anchored" data-anchor-id="data-2-brfss">Data 2: BRFSS</h2>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -451,11 +418,9 @@ Note
 </blockquote>
 <p>In the following exercises we will work with data from the 2020 BRFSS survey. The originally come from <a href="https://michaelminn.net/tutorials/r-brfss/">here</a>, though we will work with a random sample of responses and a small number of variables from the data provided. These have already been sampled for you and the dataset you’ll use can be found in the <code>data</code> folder of your repo. It’s called <code>brfss.csv</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>brfss <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/brfss.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">brfss</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/brfss.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="exercise-3" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+</section><section id="exercise-3" class="level2"><h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
 <ul>
 <li>How many rows are in the <code>brfss</code> dataset? What does each row represent?</li>
 <li>How many columns are in the <code>brfss</code> dataset? Indicate the type of each variable.</li>
@@ -464,23 +429,22 @@ Note
 <div class="render-commit-push">
 <p><br> Now is a good time to render, commit, and push. <br><br></p>
 </div>
-</section>
-<section id="exercise-4" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
+</section><section id="exercise-4" class="level2"><h2 class="anchored" data-anchor-id="exercise-4">Exercise 4</h2>
 <p><strong>Do people who smoke more tend to have worse health conditions?</strong></p>
 <ul>
 <li>Use a segmented bar chart to visualize the relationship between smoking (<code>smoke_freq</code>) and general health (<code>general_health</code>). Decide on which variable to represent with bars and which variable to fill the color of the bars by.</li>
 <li>Pay attention to the order of the bars and, if need be, use the <code>fct_relevel</code> function to reorder the levels of the variables.
 <ul>
 <li>Below is sample code for releveling <code>general_health</code>. Here we first convert <code>general_health</code> to a factor (how R stores categorical data) and then order the levels from Excellent to Poor.</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>brfss <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">general_health =</span> <span class="fu">as.factor</span>(general_health),</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">general_health =</span> <span class="fu">fct_relevel</span>(general_health, <span class="st">"Excellent"</span>, <span class="st">"Very good"</span>, <span class="st">"Good"</span>, <span class="st">"Fair"</span>, <span class="st">"Poor"</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">brfss</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    general_health <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">general_health</span><span class="op">)</span>,</span>
+<span>    general_health <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_relevel.html">fct_relevel</a></span><span class="op">(</span><span class="va">general_health</span>, <span class="st">"Excellent"</span>, <span class="st">"Very good"</span>, <span class="st">"Good"</span>, <span class="st">"Fair"</span>, <span class="st">"Poor"</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Include informative title, axis, and legend labels.</li>
@@ -489,9 +453,7 @@ Note
 <div class="render-commit-push">
 <p><br> Now is a good time to render, commit, and push. <br><br></p>
 </div>
-</section>
-<section id="exercise-5" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
+</section><section id="exercise-5" class="level2"><h2 class="anchored" data-anchor-id="exercise-5">Exercise 5</h2>
 <p><strong>How are sleep and general health associated?</strong></p>
 <ul>
 <li>Create a visualization displaying the relationship between <code>sleep</code> and <code>general_health</code>.</li>
@@ -502,33 +464,28 @@ Note
 <div class="render-commit-push">
 <p><br> Now is a good time to render, commit, and push. <br><br></p>
 </div>
-</section>
-<section id="exercise-6" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-6">Exercise 6</h2>
+</section><section id="exercise-6" class="level2"><h2 class="anchored" data-anchor-id="exercise-6">Exercise 6</h2>
 <ol type="a">
 <li>Fill in the blanks:
 <ul>
 <li>The gg in the name of the package ggplot2 stands for ___.</li>
 <li>If you map the same continuous variable to both <code>x</code> and <code>y</code> aesthetics in a scatterplot, you get a straight ___ line. (Choose between “vertical”, “horizontal”, or “diagonal”.)</li>
-</ul></li>
+</ul>
+</li>
 <li>Code style: Fix up the code style by spaces and line breaks where needed. Briefly describe your fixes. (Hint: You can refer to the <a href="https://style.tidyverse.org/">Tidyverse style guide</a>.)</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data=</span>mpg,<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>drv,<span class="at">fill=</span>class))<span class="sc">+</span><span class="fu">geom_bar</span>() <span class="sc">+</span><span class="fu">scale_fill_viridis_d</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">mpg</span>,mapping<span class="op">=</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">drv</span>,fill<span class="op">=</span><span class="va">class</span><span class="op">)</span><span class="op">)</span><span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_viridis.html">scale_fill_viridis_d</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="3" type="a">
-<li>Read <code>?facet_wrap</code>. What does <code>nrow</code> do? What does <code>ncol</code> do? What other options control the layout of the individual panels? Why doesn’t <code>facet_grid()</code> have <code>nrow</code> and <code>ncol</code> arguments?</li>
+<li>Read <code><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">?facet_wrap</a></code>. What does <code>nrow</code> do? What does <code>ncol</code> do? What other options control the layout of the individual panels? Why doesn’t <code><a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">facet_grid()</a></code> have <code>nrow</code> and <code>ncol</code> arguments?</li>
 </ol>
 <div class="render-commit-push">
 <p><br> Render, commit, and push one last time.</p>
 <p>Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding. <br></p>
 </div>
-</section>
-</section>
-<section id="wrap-up" class="level1">
-<h1>Wrap up</h1>
-<section id="submission" class="level2">
-<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+</section></section><section id="wrap-up" class="level1"><h1>Wrap up</h1>
+<section id="submission" class="level2"><h2 class="anchored" data-anchor-id="submission">Submission</h2>
 <ul>
 <li>Go to http://www.gradescope.com and click Log in in the top right corner.</li>
 <li>Click School Credentials Duke Net ID and log in using your Net ID credentials.</li>
@@ -536,10 +493,7 @@ Note
 <li>Click on the assignment, and you’ll be prompted to submit it.</li>
 <li>Mark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”). If you do not do this, you will be subject to lose points on the assignment.</li>
 <li>Select the first page of your PDF submission to be associated with the “Workflow &amp; formatting” question.</li>
-</ul>
-</section>
-<section id="grading" class="level2">
-<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+</ul></section><section id="grading" class="level2"><h2 class="anchored" data-anchor-id="grading">Grading</h2>
 <ul>
 <li>Exercise 1: 7 points</li>
 <li>Exercise 2: 9 points</li>
@@ -552,11 +506,7 @@ Note
 </ul>
 
 
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -757,13 +707,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">© Copyright 2022, Elijah Meyer</div>   
     <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
   </div>
 </footer>
-
 
 
 </body></html>
