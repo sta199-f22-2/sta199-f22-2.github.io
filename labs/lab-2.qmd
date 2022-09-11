@@ -6,7 +6,7 @@ execute:
 ---
 
 ::: callout-important
-This lab is due Monday, Sep 19 at 11:59pm.
+This lab is due Friday, Sep 19 at 11:59pm.
 :::
 
 # Learning goals
@@ -19,9 +19,9 @@ In this lab, you will...
 
 # Getting started 
 
--   Go to the sta199-fa22-01 organization on GitHub. Click on the repo with the prefix lab-02. It contains the starter documents you need to complete the lab.
+-   Go to the sta199-fa22-02 organization on GitHub. Click on the repo with the prefix lab-02. It contains the starter documents you need to complete the lab.
 
--   Clone the repo and start a new project in RStudio. See the [Lab 0 instructions](https://sta199-f22-1.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project) for details on cloning a repo and starting a new R project.
+-   Clone the repo and start a new project in RStudio. See the [Lab 0 instructions](https://sta199-f22-2.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project) for details on cloning a repo and starting a new R project.
 
 # Getting started
 
