@@ -1,0 +1,13 @@
+---
+title: "Prepare"
+subtitle: "Due: September 12, 2022"
+categories: "prepare"
+---
+
+-   📖 Read:
+    -   IMS: [R4DS: Chp 4 - Data transformation](https://r4ds.hadley.nz/data-transform.html)
+
+-   ⌨️ Watch:
+    -   [Grammar of data wrangling](https://www.youtube.com/watch?v=ZCaYBES_VEk)
+    -   [Working with a single data frame](https://www.youtube.com/watch?v=0229Uq2hkJo)
+

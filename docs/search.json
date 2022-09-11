@@ -824,5 +824,12 @@
     "title": "Visualizing various types of data",
     "section": "Recap of AE",
     "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nTake control of your labels\nUse color to your advantage. https://ggplot2.tidyverse.org/reference/ggtheme.html & https://ggplot2.tidyverse.org/reference/scale_viridis.html\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "prepare/9-12.html",
+    "href": "prepare/9-12.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nIMS: R4DS: Chp 4 - Data transformation\n\n⌨️ Watch:\n\nGrammar of data wrangling\nWorking with a single data frame"
   }
 ]
