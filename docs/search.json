@@ -830,6 +830,6 @@
     "href": "prepare/9-12.html",
     "title": "Prepare",
     "section": "",
-    "text": "📖 Read:\n\nIMS: R4DS: Chp 4 - Data transformation\n\n⌨️ Watch:\n\nGrammar of data wrangling\nWorking with a single data frame"
+    "text": "Note\n\n\n\nVideos use the “old school” pipe (%>%) but we’ll be using the newer (|>) pipe operator in class."
   }
 ]
