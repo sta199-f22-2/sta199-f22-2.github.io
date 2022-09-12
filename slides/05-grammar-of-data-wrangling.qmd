@@ -9,8 +9,28 @@ format: revealjs
 
 ## Checklist 
 
--   Clone your `ae-03` repo.
--   Turn in Lab 1 via Gradescope 
+--   Clone your `ae-03` repo.
+--   Turn in Lab 1 via Gradescope 
+--   Reach out (OH should all be updated)
+--   Reminder: AEs due Thursday and Saturday 11:59; Labs due Monday; HWs due in 1 week from assigned
+
+## Goals 
+
+-   Understand *why* we need to manipulate data
+-   Calculate summary measures of data set 
+-   Manipulate the format of data 
+-   Practice with tidyverse functions
+
+
+
+## Can't Commit? 
+
+![](images/05-data-wrangling/projectpush.png){fig-align="center"}
+
+## R4DS: Chp 4 - Data transformation
+
+https://wall.sli.do/event/56i17rXu3VTsLVtwRZCX9w?section=98f8a405-2365-4313-9a45-a84f43a58b9c
+
 
 ## Warm up
 
@@ -23,14 +43,6 @@ library(countdown)
 What is the difference between long and wide data? 
 
 ![](images/05-data-wrangling/widelong.png){fig-align="center"}
-
-## Can't Commit? 
-
-![](images/05-data-wrangling/projectpush.png){fig-align="center"}
-
-## R4DS: Chp 4 - Data transformation
-
-https://wall.sli.do/event/56i17rXu3VTsLVtwRZCX9w?section=98f8a405-2365-4313-9a45-a84f43a58b9c
 
 
 # Application exercise
@@ -45,6 +57,6 @@ https://wall.sli.do/event/56i17rXu3VTsLVtwRZCX9w?section=98f8a405-2365-4313-9a45
 
 ## Recap of AE {.smaller}
 
--   Something about pipe...
--   Something about building pipelines
--   ...
+-   We can transform data to learn more about what's going on
+-   Pipe operator allows us to step through the process and combine multiple functions together 
+-   Data are messy. This are valuable tools to tell the story you want

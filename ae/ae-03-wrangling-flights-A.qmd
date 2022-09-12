@@ -1,5 +1,5 @@
 ---
-title: "AE 03: Wrangling flights"
+title: "AE 04: Wrangling flights"
 subtitle: "Suggested answers"
 categories: 
   - Application exercise
@@ -164,8 +164,6 @@ flights |>
 flights |>
   slice((n()-1):n())
 
-flights |>
-  slice(n)
 
 ```
 
