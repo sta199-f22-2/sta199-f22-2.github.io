@@ -9,16 +9,22 @@ format: revealjs
 
 ## Checklist 
 
---   Clone your `ae-03` repo.
+--   Clone your `ae-04` repo.
+
 --   Turn in Lab 1 via Gradescope 
+
 --   Reach out (OH should all be updated)
+
 --   Reminder: AEs due Thursday and Saturday 11:59; Labs due Monday; HWs due in 1 week from assigned
 
 ## Goals 
 
 -   Understand *why* we need to manipulate data
--   Calculate summary measures of data set 
+
+-   Calculate summary measures for data sets 
+
 -   Manipulate the format of data 
+
 -   Practice with tidyverse functions
 
 
@@ -27,10 +33,24 @@ format: revealjs
 
 ![](images/05-data-wrangling/projectpush.png){fig-align="center"}
 
+## Margins 
+
+In addition, the code should not exceed the 80 character limit, so that all the code can be read when you render to PDF. To help with this, you can add a vertical line at 80 characters by clicking “Tools”  “Global Options”  “Code”  “Display”, then set “Margin Column” to 80, and click “Apply”.
+
+![](images/05-data-wrangling/marginline.png){fig-align="center"}
+
+## Code Chunk Labels 
+
+-- Informative names can help when navigating code. 
+
+-- Informative names do not show up in Rendered documents (and that's okay!)
+
+![](images/05-data-wrangling/codechunklabel.png){fig-align="center"}
+
+
 ## R4DS: Chp 4 - Data transformation
 
-https://wall.sli.do/event/56i17rXu3VTsLVtwRZCX9w?section=98f8a405-2365-4313-9a45-a84f43a58b9c
-
+https://app.sli.do/event/56i17rXu3VTsLVtwRZCX9w
 
 ## Warm up
 
@@ -45,18 +65,23 @@ What is the difference between long and wide data?
 ![](images/05-data-wrangling/widelong.png){fig-align="center"}
 
 
+
 # Application exercise
 
-## `ae-03`
+## `ae-04`
 
-::: appex
--   Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae-02` (repo name will be suffixed with your GitHub name).
+
+-   Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae-04` (repo name will be suffixed with your GitHub name).
+
 -   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
+
 -   Render, commit, and push your edits by the AE deadline -- 3 days from today.
-:::
+
 
 ## Recap of AE {.smaller}
 
 -   We can transform data to learn more about what's going on
+
 -   Pipe operator allows us to step through the process and combine multiple functions together 
+
 -   Data are messy. This are valuable tools to tell the story you want

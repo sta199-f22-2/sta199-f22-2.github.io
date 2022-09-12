@@ -1047,14 +1047,14 @@
     "href": "slides/05-grammar-of-data-wrangling.html#checklist",
     "title": "Grammar of data wrangling",
     "section": "Checklist",
-    "text": "Checklist\n– Clone your ae-03 repo. – Turn in Lab 1 via Gradescope – Reach out (OH should all be updated) – Reminder: AEs due Thursday and Saturday 11:59; Labs due Monday; HWs due in 1 week from assigned"
+    "text": "Checklist\n– Clone your ae-04 repo.\n– Turn in Lab 1 via Gradescope\n– Reach out (OH should all be updated)\n– Reminder: AEs due Thursday and Saturday 11:59; Labs due Monday; HWs due in 1 week from assigned"
   },
   {
     "objectID": "slides/05-grammar-of-data-wrangling.html#goals",
     "href": "slides/05-grammar-of-data-wrangling.html#goals",
     "title": "Grammar of data wrangling",
     "section": "Goals",
-    "text": "Goals\n\nUnderstand why we need to manipulate data\nCalculate summary measures of data set\nManipulate the format of data\nPractice with tidyverse functions"
+    "text": "Goals\n\nUnderstand why we need to manipulate data\nCalculate summary measures for data sets\nManipulate the format of data\nPractice with tidyverse functions"
   },
   {
     "objectID": "slides/05-grammar-of-data-wrangling.html#cant-commit",
@@ -1068,7 +1068,7 @@
     "href": "slides/05-grammar-of-data-wrangling.html#r4ds-chp-4---data-transformation",
     "title": "Grammar of data wrangling",
     "section": "R4DS: Chp 4 - Data transformation",
-    "text": "R4DS: Chp 4 - Data transformation\nhttps://wall.sli.do/event/56i17rXu3VTsLVtwRZCX9w?section=98f8a405-2365-4313-9a45-a84f43a58b9c"
+    "text": "R4DS: Chp 4 - Data transformation\nhttps://app.sli.do/event/56i17rXu3VTsLVtwRZCX9w"
   },
   {
     "objectID": "slides/05-grammar-of-data-wrangling.html#warm-up",
@@ -1082,7 +1082,7 @@
     "href": "slides/05-grammar-of-data-wrangling.html#ae-03",
     "title": "Grammar of data wrangling",
     "section": "ae-03",
-    "text": "ae-03\n\n\nGo to the course GitHub org and find your ae-02 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+    "text": "ae-03\n\nGo to the course GitHub org and find your ae-02 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
     "objectID": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
@@ -1090,5 +1090,26 @@
     "title": "Grammar of data wrangling",
     "section": "Recap of AE",
     "text": "Recap of AE\n\nWe can transform data to learn more about what’s going on\nPipe operator allows us to step through the process and combine multiple functions together\nData are messy. This are valuable tools to tell the story you want\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#ae-04",
+    "href": "slides/05-grammar-of-data-wrangling.html#ae-04",
+    "title": "Grammar of data wrangling",
+    "section": "ae-04",
+    "text": "ae-04\n\nGo to the course GitHub org and find your ae-04 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#code-chunk-labels",
+    "href": "slides/05-grammar-of-data-wrangling.html#code-chunk-labels",
+    "title": "Grammar of data wrangling",
+    "section": "Code Chunk Labels",
+    "text": "Code Chunk Labels\n– Informative names can help when navigating code.\n– Informative names do not show up in Rendered documents (and that’s okay!)"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#margins",
+    "href": "slides/05-grammar-of-data-wrangling.html#margins",
+    "title": "Grammar of data wrangling",
+    "section": "Margins",
+    "text": "Margins\nIn addition, the code should not exceed the 80 character limit, so that all the code can be read when you render to PDF. To help with this, you can add a vertical line at 80 characters by clicking “Tools” “Global Options” “Code” “Display”, then set “Margin Column” to 80, and click “Apply”."
   }
 ]
