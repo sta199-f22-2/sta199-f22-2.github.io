@@ -189,7 +189,7 @@ flights |>
   arrange(desc(dep_delay))
 ```
 
--   **Your turn (5 minutes):** Create a data frame that only includes the plane tail number (`tailnum`), carrier (`carrier`), and departure delay for the flight with the longest departure delay. What is the plane tail number (`tailnum`) for this flight? 
+-   **Your turn (5 minutes):** Create a data frame that only includes the plane tail number (`tailnum`), carrier (`carrier`), and departure delay for the flight with the longest departure delay. What is the plane tail number (`tailnum`) for this flight?
 
 ```{r}
 #| label: longest-delay
@@ -240,7 +240,7 @@ We can do more complex tasks using logical operators:
 
 The final operator only makes sense if `x` is logical (TRUE / FALSE).
 
--   **Your turn (4 minutes):** Describe what the code is doing in words. 
+-   **Your turn (4 minutes):** Describe what the code is doing in words.
 
 ```{r}
 #| label: nc-early
@@ -273,7 +273,7 @@ flights |>
   filter(n == min(n))
 ```
 
--   **Your turn (5 minutes):** On which date (month + day) was there the largest number of flights? How many flights were there on that day? 
+-   **Your turn (5 minutes):** On which date (month + day) was there the largest number of flights? How many flights were there on that day?
 
 ```{r}
 #| label: count-date
@@ -351,7 +351,7 @@ flights |>
     )
 ```
 
--   **Your turn (4 minutes):** What is the median departure delay for each airports around NYC (`origin`)? 
+-   **Your turn (4 minutes):** What is the median departure delay for each airports around NYC (`origin`)?
 
 ```{r}
 #| label: dep-origin
@@ -363,7 +363,7 @@ flights |>
     )
 ```
 
-# Additional Practice | Optional
+# Additional Practice \| Optional
 
 1.  Create a new dataset that only contains flights that do not have a missing departure time. Include the columns `year`, `month`, `day`, `dep_time`, `dep_delay`, and `dep_delay_hours` (the departure delay in hours). *Hint: Note you may need to use `mutate()` to make one or more of these variables.*
 

@@ -389,7 +389,7 @@
     "href": "course-team.html#teaching-assistants",
     "title": "Teaching team",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n\nName\nRole\nLab section\nOffice hours\n\n\n\n\nKonnie Huang (konnie.huang@duke.edu)\nIn Class TA\n\nWed 12:00PM - 1:00PM & Thur 5:00PM - 6:00PM / Zoom\n\n\nEli Gnesin (eli.gnesin@duke.edu)\nLab Leader\nThur 10:15AM - 11:30AM\nThur 9:00AM - 10:00PM (in-person only) & 12:00 pm - 1:00 pm in Old Chem 203B / Zoom\n\n\nYibin Zhang (yibin.zhang@duke.edu)\nLab Helper\nThur 10:15AM - 11:30AM\nWed 6:00PM - 8:00PM / Zoom\n\n\nCaitrin Murphy (caitrin.murphy@duke.edu)\nLab Leader\nThur 12:00PM - 1:15PM\nWed 2:00PM - 3:00PM in Old Chem 203B & Thur 7:00PM - 8:00PM / Zoom\n\n\nZheyuan Liu (zheyuan.liu@duke.edu)\nLab Helper\nThur 12:00PM - 1:15PM\nThur 1:00PM - 3:00 PM / Zoom\n\n\nChristine (Yueming) Shen (yueming.shen@duke.edu)\nLab Leader / Head TA\nThur 1:45PM - 3:00PM\nTue 1-2pm & Thur 2-3pm in Old Chem 203B\n\n\nAlonso Guerrero Castañeda (alonso.guerrero@duke.edu)\nLab Helper\nThur 1:45PM - 3:00PM\nMon 6:00PM - 7:00PM in Old Chem 203B & Thur 6:00PM - 7:00PM / Zoom\n\n\nYouran Wu (youran.wu@duke.edu)\nLab Leader\nThur 3:30PM - 4:45PM\nFri 5:00PM - 7:00PM Zoom\n\n\nMounika Adepu (mounika.adepu@duke.edu)\nLab Helper\nThur 3:30PM - 4:45PM\nMon 10:30 AM - 12:30 pm / Zoom\n\n\nKateryna (Kat) Husar (kat.husar@duke.edu)\nLab Leader\nThur 5:15PM - 6:30PM\nTue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / in Old Chem 203B & Zoom\n\n\nIsabella Swigart (isabella.swigart@duke.edu)\nLab Helper\nThur 5:15PM - 6:30PM\nTue 4:00 PM - 5:30 PM & Tue 1:00PM - 1:30PM / Zoom"
+    "text": "Teaching assistants\n\n\n\nName\nRole\nLab section\nOffice hours\n\n\n\n\nKonnie Huang (konnie.huang@duke.edu)\nIn Class TA\n\nWed 12:00PM - 1:00PM & Thur 5:00PM - 6:00PM / Zoom\n\n\nEli Gnesin (eli.gnesin@duke.edu)\nLab Leader\nThur 10:15AM - 11:30AM\nThur 9:00AM - 10:00PM (in-person only) & 12:00 pm - 1:00 pm in Old Chem 203B / Zoom\n\n\nYibin Zhang (yibin.zhang@duke.edu)\nLab Helper\nThur 10:15AM - 11:30AM\nWed 6:00PM - 8:00PM / Zoom\n\n\nCaitrin Murphy (caitrin.murphy@duke.edu)\nLab Leader\nThur 12:00PM - 1:15PM\nWed 2:00PM - 3:00PM in Old Chem 203B & Thur 7:00PM - 8:00PM / Zoom\n\n\nZheyuan Liu (zheyuan.liu@duke.edu)\nLab Helper\nThe 1:00PM - 2:00PM\nThur 2:00PM - 3:00 PM / Zoom\n\n\nChristine (Yueming) Shen (yueming.shen@duke.edu)\nLab Leader / Head TA\nThur 1:45PM - 3:00PM\nThur 3-5pm in Old Chem 203B\n\n\nAlonso Guerrero Castañeda (alonso.guerrero@duke.edu)\nLab Helper\nThur 1:45PM - 3:00PM\nMon 6:00PM - 7:00PM in Old Chem 203B & Thur 6:00PM - 7:00PM / Zoom\n\n\nYouran Wu (youran.wu@duke.edu)\nLab Leader\nThur 3:30PM - 4:45PM\nFri 5:00PM - 7:00PM Zoom\n\n\nMounika Adepu (mounika.adepu@duke.edu)\nLab Helper\nThur 3:30PM - 4:45PM\nMon 10:30 AM - 12:30 pm / Zoom\n\n\nKateryna (Kat) Husar (kat.husar@duke.edu)\nLab Leader\nThur 5:15PM - 6:30PM\nTue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / in Old Chem 203B & Zoom\n\n\nIsabella Swigart (isabella.swigart@duke.edu)\nLab Helper\nThur 5:15PM - 6:30PM\nTue 4:00 PM - 5:30 PM & Tue 1:00PM - 1:30PM / Zoom"
   },
   {
     "objectID": "hw/hw-1.html",
@@ -1064,6 +1064,20 @@
     "text": "Can’t Commit?"
   },
   {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#margins",
+    "href": "slides/05-grammar-of-data-wrangling.html#margins",
+    "title": "Grammar of data wrangling",
+    "section": "Margins",
+    "text": "Margins\nIn addition, the code should not exceed the 80 character limit, so that all the code can be read when you render to PDF. To help with this, you can add a vertical line at 80 characters by clicking “Tools” “Global Options” “Code” “Display”, then set “Margin Column” to 80, and click “Apply”."
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#code-chunk-labels",
+    "href": "slides/05-grammar-of-data-wrangling.html#code-chunk-labels",
+    "title": "Grammar of data wrangling",
+    "section": "Code Chunk Labels",
+    "text": "Code Chunk Labels\n– Informative names can help when navigating code.\n– Informative names do not show up in Rendered documents (and that’s okay!)"
+  },
+  {
     "objectID": "slides/05-grammar-of-data-wrangling.html#r4ds-chp-4---data-transformation",
     "href": "slides/05-grammar-of-data-wrangling.html#r4ds-chp-4---data-transformation",
     "title": "Grammar of data wrangling",
@@ -1078,20 +1092,6 @@
     "text": "Warm up\n\n\n\nWhat is the difference between long and wide data?"
   },
   {
-    "objectID": "slides/05-grammar-of-data-wrangling.html#ae-03",
-    "href": "slides/05-grammar-of-data-wrangling.html#ae-03",
-    "title": "Grammar of data wrangling",
-    "section": "ae-03",
-    "text": "ae-03\n\nGo to the course GitHub org and find your ae-02 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
-  },
-  {
-    "objectID": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
-    "href": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
-    "title": "Grammar of data wrangling",
-    "section": "Recap of AE",
-    "text": "Recap of AE\n\nWe can transform data to learn more about what’s going on\nPipe operator allows us to step through the process and combine multiple functions together\nData are messy. This are valuable tools to tell the story you want\n\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/05-grammar-of-data-wrangling.html#ae-04",
     "href": "slides/05-grammar-of-data-wrangling.html#ae-04",
     "title": "Grammar of data wrangling",
@@ -1099,17 +1099,10 @@
     "text": "ae-04\n\nGo to the course GitHub org and find your ae-04 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
-    "objectID": "slides/05-grammar-of-data-wrangling.html#code-chunk-labels",
-    "href": "slides/05-grammar-of-data-wrangling.html#code-chunk-labels",
+    "objectID": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
+    "href": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
     "title": "Grammar of data wrangling",
-    "section": "Code Chunk Labels",
-    "text": "Code Chunk Labels\n– Informative names can help when navigating code.\n– Informative names do not show up in Rendered documents (and that’s okay!)"
-  },
-  {
-    "objectID": "slides/05-grammar-of-data-wrangling.html#margins",
-    "href": "slides/05-grammar-of-data-wrangling.html#margins",
-    "title": "Grammar of data wrangling",
-    "section": "Margins",
-    "text": "Margins\nIn addition, the code should not exceed the 80 character limit, so that all the code can be read when you render to PDF. To help with this, you can add a vertical line at 80 characters by clicking “Tools” “Global Options” “Code” “Display”, then set “Margin Column” to 80, and click “Apply”."
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nWe can transform data to learn more about what’s going on\nPipe operator allows us to step through the process and combine multiple functions together\nData are messy. This are valuable tools to tell the story you want\n\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
