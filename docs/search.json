@@ -1,0 +1,1059 @@
+[
+  {
+    "objectID": "ae/ae-01-A.html",
+    "href": "ae/ae-01-A.html",
+    "title": "MTCars",
+    "section": "",
+    "text": "To learn more about the data, see here: https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars\n\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.3.6     ✔ purrr   0.3.4\n✔ tibble  3.1.8     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.1\n✔ readr   2.1.2     ✔ forcats 0.5.2\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\ndata(\"mtcars\")\n\n\nCreate a code chunk and run the summary command on the variable mpg.\n\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90 \n\n\n\nFill in the following code (replace the … below) to create a histogram of mpg from question 1.\n\n\nggplot(mtcars, aes(x= mpg)) + geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\nDid it work? If not, you may need to library the ggplot2 package. do that in the code above!\n\nThat histogram is really boring…. fill in your same x and give it an informative title by filling the ” ” below.\n\n\nggplot(mtcars, aes(x= mpg)) + geom_histogram() + labs(title=\"Histogram of mpg\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\nLet’s explore if cars with or without a transmission get better mpg. Put am in the space for color and fill and run the code. Continue to put your variable in x = and write out a title.\n\n\nmtcars$am <- as.factor(mtcars$am) #This makes sure am is a factor\n\nggplot(mtcars, aes(x= mpg, color = am , fill = am )) + geom_histogram(binwidth = 1) + labs(title=\"Histogram of mpg by transmission\")\n\n\n\n\n\nLet’s add a density curve. Run the following code below. Play around with alpha and see how the graph changes.\n\n\nggplot(mtcars, aes(x= mpg , color = am , fill = am )) + geom_histogram(aes(y=..density..), position=\"identity\") + labs(title=\"MPG\") +\ngeom_density(alpha=0.6)\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\nLet’s rip the histogram apart and seperate by the variable am. Fill in your quantitative variable in x = and put your transmission variable in the … after facet_grid.\n\n\nggplot(mtcars, aes(x= mpg))+\n  geom_histogram(color=\"black\", fill=\"white\")+\n  facet_grid(~am)\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\nFor additional practice with the MT data set, please click here"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html",
+    "href": "ae/ae-02-viz-data-types-A.html",
+    "title": "ae-02 Data visualization",
+    "section": "",
+    "text": "We will be using functions from the tidyverse package. Please library the package before we begin. If R can’t find the package, you need to install the package using install.packages(“tidyverse)\n\nlibrary(tidyverse)\n\n\nstarwars <- read_csv(\"data/starwars.csv\")\n\nFor this analysis, we will data on the characters in the Stars Wars movie franchise."
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#getting-started",
+    "href": "ae/ae-02-viz-data-types-A.html#getting-started",
+    "title": "ae-02 Data visualization",
+    "section": "Getting started",
+    "text": "Getting started\nGet to know the data\nWe can use the glimpse function to get an overview (or “glimpse”) of the data.\n\nglimpse(starwars)\n\nRows: 87\nColumns: 14\n$ name       <chr> \"Luke Skywalker\", \"C-3PO\", \"R2-D2\", \"Darth Vader\", \"Leia Or…\n$ height     <dbl> 172, 167, 96, 202, 150, 178, 165, 97, 183, 182, 188, 180, 2…\n$ mass       <dbl> 77.0, 75.0, 32.0, 136.0, 49.0, 120.0, 75.0, 32.0, 84.0, 77.…\n$ hair_color <chr> \"other\", \"other\", \"other\", \"none\", \"brown/auburn\", \"brown/a…\n$ skin_color <chr> \"fair\", \"gold\", \"white, blue\", \"white\", \"light\", \"light\", \"…\n$ eye_color  <chr> \"blue\", \"yellow\", \"other\", \"yellow\", \"brown\", \"blue\", \"blue…\n$ birth_year <dbl> 19.0, 112.0, 33.0, 41.9, 19.0, 52.0, 47.0, NA, 24.0, 57.0, …\n$ sex        <chr> \"male\", \"none\", \"none\", \"male\", \"female\", \"male\", \"female\",…\n$ gender     <chr> \"masculine\", \"masculine\", \"masculine\", \"masculine\", \"femini…\n$ homeworld  <chr> \"Tatooine\", \"Tatooine\", \"Naboo\", \"Tatooine\", \"Alderaan\", \"T…\n$ species    <chr> \"Human\", \"Droid\", \"Droid\", \"Human\", \"Human\", \"Human\", \"Huma…\n$ films      <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ vehicles   <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n$ starships  <lgl> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…\n\n\n\nHow many observations (rows) are in the data set? 87 rows\nHow many variables (columns) are in the data set? 14\nWhat does each row represent? Each column?\nGetting started with ggplot2\n\n\n\nggplot creates the initial base coordinate system, and we will add layers to that base. We first specify the data set we will use with data = starwars.\n\n\nggplot(data = starwars)\n\n\n\n\n\nThe mapping argument is paired with an aesthetic (aes), which tells us how the variables in our data set should be mapped to the visual properties of the graph. In ggplot2 , aesthetic means “something you can see”. Each aesthetic is a mapping between a visual cue and a variable. Let’s set the stage to explore the relationship between the height and mass of each Star Wars character.\n\n\nggplot(data = starwars, \n       mapping = aes(x = height , y = mass)) \n\n\n\n\n\nWhat type of variable is height?\nWhat type of variable is mass?\nWhat plot is most appropriate to explore the relationship between height and mass?\nThe geom_xx function specifies the type of plot we want to use to represent the data. In the code below, we use geom_point which creates a plot where each observation is represented by a point.\n\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass)) +\n  geom_point() \n\nWarning: Removed 28 rows containing missing values (geom_point)."
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-1",
+    "href": "ae/ae-02-viz-data-types-A.html#step-1",
+    "title": "ae-02 Data visualization",
+    "section": "Step 1",
+    "text": "Step 1\nModify the following plot to change the color of all points to \"pink\". Note: pink needs to be in quotes because it is not a variable mapped to from our data to our plot. Because it is not a variable being mapped to our plot, it does not go in aesthetic.\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass)) +\n  geom_point(color = \"pink\" ) \n\nWarning: Removed 28 rows containing missing values (geom_point).\n\n\n\n\n\n\nDo you notice anything interesting about these data?"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-1b",
+    "href": "ae/ae-02-viz-data-types-A.html#step-1b",
+    "title": "ae-02 Data visualization",
+    "section": "Step 1B",
+    "text": "Step 1B\nFor the sake of this activity, we are going to remove the extreme character.\n\n## Remove outlier \nstarwars <- subset(starwars, mass < 1000)"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-2",
+    "href": "ae/ae-02-viz-data-types-A.html#step-2",
+    "title": "ae-02 Data visualization",
+    "section": "Step 2",
+    "text": "Step 2\nAdd labels for the title and x and y axes. Change the _____ to informative labels. This is good practice. Often, you do not want to use the column headers as labels.\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass)) +\n  geom_point(color = \"pink\") + \n  labs(x = \"Height (in inches)\", \n       y = \"Mass\", \n       title = \"Height \\nvs Mass\")"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-3",
+    "href": "ae/ae-02-viz-data-types-A.html#step-3",
+    "title": "ae-02 Data visualization",
+    "section": "Step 3",
+    "text": "Step 3\nAn aesthetic is a visual property of one of the objects in your plot. Aesthetic options are:\n\nshape\ncolor\nsize\nfill\n\nModify the plot below, so the color of the points is based on hair_color. Note: When you add aesthetic options, they need to be seperated by a , . What happens if you put hair_color in geom_point?\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass, color = hair_color )) +\n  geom_point()\n\n\n\n\n\nDoes the relationship of characters’ height and mass change based on their hair color?"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-4",
+    "href": "ae/ae-02-viz-data-types-A.html#step-4",
+    "title": "ae-02 Data visualization",
+    "section": "Step 4",
+    "text": "Step 4\nModify the plot below, so the color of the points is based on hair_color and the size is based on birth_year.\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass, color = hair_color, size = birth_year)) +\n  geom_point(alpha = 1)\n\nWarning: Removed 23 rows containing missing values (geom_point)."
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-5",
+    "href": "ae/ae-02-viz-data-types-A.html#step-5",
+    "title": "ae-02 Data visualization",
+    "section": "Step 5",
+    "text": "Step 5\nUse facet_wrap to display the association between mass and height for different values of eye_color. Note: Eye color needs to be in quotes because it is not directly mapped from our data set in aesthetic.\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass)) +\n  geom_point() +\n  facet_wrap(\"eye_color\")"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-6",
+    "href": "ae/ae-02-viz-data-types-A.html#step-6",
+    "title": "ae-02 Data visualization",
+    "section": "Step 6",
+    "text": "Step 6\nUse facet_grid to display the association between mass and height for different combinations of eye_color and hair_color.\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass)) +\n  geom_point() +\n  facet_grid(c(\"eye_color\", \"hair_color\"))"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#step-7",
+    "href": "ae/ae-02-viz-data-types-A.html#step-7",
+    "title": "ae-02 Data visualization",
+    "section": "Step 7",
+    "text": "Step 7\nUse facet_grid to display the association between mass and height for different combinations of eye_color and hair_color with the color based on hair_color. Add labels for the title, x and y axes, and the color.\n\nggplot(data = starwars, \n       mapping = aes(x = height, y = mass, color = hair_color))+\n  geom_point() +\n  facet_grid(c(\"eye_color\", \"hair_color\")) +\n    labs(x = \"Height (in inches)\", \n       y = \"Mass\", \n       title = \"Height \\nvs Mass\",\n       color = \"Hair Color\"\n       )"
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#optional-try-it-on-your-own",
+    "href": "ae/ae-02-viz-data-types-A.html#optional-try-it-on-your-own",
+    "title": "ae-02 Data visualization",
+    "section": "Optional (Try it on your own)",
+    "text": "Optional (Try it on your own)\nSuppose now that you want to make a boxplot for the heights of all characters. What changes from the code above? Hint: Think about how many variables we are working with | Think about the type of plot we are making.\n\nggplot(starwars, \n       aes(x = height)) + \n       geom_boxplot()\n\n\n\n\nCopy your code from the previous code chunk and add appropriate labels.\n\nggplot(starwars, \n       aes(x = height)) + \n       geom_boxplot() + \n       labs(title = \"Height of all Characters\")\n\n\n\n\nDoes height change based on the sex of the character? Create side-by-side boxplots to answer the question. Hint: Use group and fill in the aesthetic options.\n\nggplot(data = starwars, \n       mapping = aes(x = height , group = sex, fill = sex )) +\n  geom_boxplot(show.legend = T) \n\n\n\n\nYes. It looks like the relationship between height differs based on the character’s sex. Character’s with no sex seem to be much shorter than the others, while also having the most variability."
+  },
+  {
+    "objectID": "ae/ae-02-viz-data-types-A.html#render-commit-and-push",
+    "href": "ae/ae-02-viz-data-types-A.html#render-commit-and-push",
+    "title": "ae-02 Data visualization",
+    "section": "render, commit, and push",
+    "text": "render, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using an simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html",
+    "href": "ae/ae-03-wrangling-flights-A.html",
+    "title": "AE 04: Wrangling flights",
+    "section": "",
+    "text": "Important\n\n\n\nGo to the course GitHub organization and locate the repo titled ae-03-YOUR_GITHUB_USERNAME to get started.\nThis AE is due Friday, Sep 16 at 11:59pm.\nTo demonstrate data wrangling we will use flights, a tibble in the nycflights13 R package. It includes characteristics of all flights departing from New York City (JFK, LGA, EWR) in 2013.\nThe data frame has over 336,000 observations (rows), 336776 observations to be exact, so we will not view the entire data frame. Instead we’ll use the commands below to help us explore the data.\nThe head() function returns “A tibble: 6 x 19” and then the first six rows of the flights data."
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#select",
+    "href": "ae/ae-03-wrangling-flights-A.html#select",
+    "title": "AE 04: Wrangling flights",
+    "section": "select()",
+    "text": "select()\n\nDemo: Make a data frame that only contains the variables dep_delay and arr_delay.\n\n\nflights |>\n  select(dep_delay, arr_delay)\n\n# A tibble: 336,776 × 2\n   dep_delay arr_delay\n       <dbl>     <dbl>\n 1         2        11\n 2         4        20\n 3         2        33\n 4        -1       -18\n 5        -6       -25\n 6        -4        12\n 7        -5        19\n 8        -3       -14\n 9        -3        -8\n10        -2         8\n# … with 336,766 more rows\n\n\n\nDemo: Make a data frame that keeps every variable except dep_delay.\n\n\nflights |>\n  select(-dep_delay)\n\n# A tibble: 336,776 × 18\n    year month   day dep_time sched_dep…¹ arr_t…² sched…³ arr_d…⁴ carrier flight\n   <int> <int> <int>    <int>       <int>   <int>   <int>   <dbl> <chr>    <int>\n 1  2013     1     1      517         515     830     819      11 UA        1545\n 2  2013     1     1      533         529     850     830      20 UA        1714\n 3  2013     1     1      542         540     923     850      33 AA        1141\n 4  2013     1     1      544         545    1004    1022     -18 B6         725\n 5  2013     1     1      554         600     812     837     -25 DL         461\n 6  2013     1     1      554         558     740     728      12 UA        1696\n 7  2013     1     1      555         600     913     854      19 B6         507\n 8  2013     1     1      557         600     709     723     -14 EV        5708\n 9  2013     1     1      557         600     838     846      -8 B6          79\n10  2013     1     1      558         600     753     745       8 AA         301\n# … with 336,766 more rows, 8 more variables: tailnum <chr>, origin <chr>,\n#   dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>, minute <dbl>,\n#   time_hour <dttm>, and abbreviated variable names ¹​sched_dep_time,\n#   ²​arr_time, ³​sched_arr_time, ⁴​arr_delay\n\n\n\nDemo: Make a data frame that includes all variables between year through dep_delay (inclusive). These are all variables that provide information about the departure of each flight.\n\n\nflights |>\n  select(year:dep_delay)\n\n# A tibble: 336,776 × 6\n    year month   day dep_time sched_dep_time dep_delay\n   <int> <int> <int>    <int>          <int>     <dbl>\n 1  2013     1     1      517            515         2\n 2  2013     1     1      533            529         4\n 3  2013     1     1      542            540         2\n 4  2013     1     1      544            545        -1\n 5  2013     1     1      554            600        -6\n 6  2013     1     1      554            558        -4\n 7  2013     1     1      555            600        -5\n 8  2013     1     1      557            600        -3\n 9  2013     1     1      557            600        -3\n10  2013     1     1      558            600        -2\n# … with 336,766 more rows\n\n\n\nDemo: Use the select helper contains() to make a data frame that includes the variables associated with the arrival, i.e., contains the string \"arr\\_\" in the name.\n\n\nflights |>\n  select(contains(\"arr_\"))\n\n# A tibble: 336,776 × 3\n   arr_time sched_arr_time arr_delay\n      <int>          <int>     <dbl>\n 1      830            819        11\n 2      850            830        20\n 3      923            850        33\n 4     1004           1022       -18\n 5      812            837       -25\n 6      740            728        12\n 7      913            854        19\n 8      709            723       -14\n 9      838            846        -8\n10      753            745         8\n# … with 336,766 more rows"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#the-pipe",
+    "href": "ae/ae-03-wrangling-flights-A.html#the-pipe",
+    "title": "AE 04: Wrangling flights",
+    "section": "The pipe",
+    "text": "The pipe\nBefore working with more data wrangling functions, let’s formally introduce the pipe. The pipe, |>, is an operator (a tool) for passing information from one process to another. We will use |> mainly in data pipelines to pass the output of the previous line of code as the first input of the next line of code.\nWhen reading code “in English”, say “and then” whenever you see a pipe.\n\n\nYour turn (4 minutes): Run the following chunk and observe its output. Then, come up with a different way of obtaining the same output.\n\n\nflights |>\n  select(dep_delay, arr_delay) |>\n  head()\n\n# A tibble: 6 × 2\n  dep_delay arr_delay\n      <dbl>     <dbl>\n1         2        11\n2         4        20\n3         2        33\n4        -1       -18\n5        -6       -25\n6        -4        12"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#slice",
+    "href": "ae/ae-03-wrangling-flights-A.html#slice",
+    "title": "AE 04: Wrangling flights",
+    "section": "slice()",
+    "text": "slice()\n\nDemo: Display the first five rows of the flights data frame.\n\n\nflights |>\n  slice(1:5)\n\n# A tibble: 5 × 19\n   year month   day dep_time sched_dep…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier\n  <int> <int> <int>    <int>       <int>   <dbl>   <int>   <int>   <dbl> <chr>  \n1  2013     1     1      517         515       2     830     819      11 UA     \n2  2013     1     1      533         529       4     850     830      20 UA     \n3  2013     1     1      542         540       2     923     850      33 AA     \n4  2013     1     1      544         545      -1    1004    1022     -18 B6     \n5  2013     1     1      554         600      -6     812     837     -25 DL     \n# … with 9 more variables: flight <int>, tailnum <chr>, origin <chr>,\n#   dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>, minute <dbl>,\n#   time_hour <dttm>, and abbreviated variable names ¹​sched_dep_time,\n#   ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay\n\n\n\nDemo: Display the last two rows of the flights data frame.\n\n\nflights |>\n  slice((n()-1):n())\n\n# A tibble: 2 × 19\n   year month   day dep_time sched_dep…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier\n  <int> <int> <int>    <int>       <int>   <dbl>   <int>   <int>   <dbl> <chr>  \n1  2013     9    30       NA        1159      NA      NA    1344      NA MQ     \n2  2013     9    30       NA         840      NA      NA    1020      NA MQ     \n# … with 9 more variables: flight <int>, tailnum <chr>, origin <chr>,\n#   dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>, minute <dbl>,\n#   time_hour <dttm>, and abbreviated variable names ¹​sched_dep_time,\n#   ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#arrange",
+    "href": "ae/ae-03-wrangling-flights-A.html#arrange",
+    "title": "AE 04: Wrangling flights",
+    "section": "arrange()",
+    "text": "arrange()\n\nDemo: Let’s arrange the data by departure delay, so the flights with the shortest departure delays will be at the top of the data frame.\n\nQuestion: What does it mean for the dep_delay to have a negative value?\n\nflights |>\n  arrange(dep_delay)\n\n# A tibble: 336,776 × 19\n    year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier\n   <int> <int> <int>    <int>      <int>   <dbl>   <int>   <int>   <dbl> <chr>  \n 1  2013    12     7     2040       2123     -43      40    2352      48 B6     \n 2  2013     2     3     2022       2055     -33    2240    2338     -58 DL     \n 3  2013    11    10     1408       1440     -32    1549    1559     -10 EV     \n 4  2013     1    11     1900       1930     -30    2233    2243     -10 DL     \n 5  2013     1    29     1703       1730     -27    1947    1957     -10 F9     \n 6  2013     8     9      729        755     -26    1002     955       7 MQ     \n 7  2013    10    23     1907       1932     -25    2143    2143       0 EV     \n 8  2013     3    30     2030       2055     -25    2213    2250     -37 MQ     \n 9  2013     3     2     1431       1455     -24    1601    1631     -30 9E     \n10  2013     5     5      934        958     -24    1225    1309     -44 B6     \n# … with 336,766 more rows, 9 more variables: flight <int>, tailnum <chr>,\n#   origin <chr>, dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>,\n#   minute <dbl>, time_hour <dttm>, and abbreviated variable names\n#   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay\n\n\n\nDemo: Now let’s arrange the data by descending departure delay, so the flights with the longest departure delays will be at the top.\n\n\nflights |>\n  arrange(desc(dep_delay))\n\n# A tibble: 336,776 × 19\n    year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier\n   <int> <int> <int>    <int>      <int>   <dbl>   <int>   <int>   <dbl> <chr>  \n 1  2013     1     9      641        900    1301    1242    1530    1272 HA     \n 2  2013     6    15     1432       1935    1137    1607    2120    1127 MQ     \n 3  2013     1    10     1121       1635    1126    1239    1810    1109 MQ     \n 4  2013     9    20     1139       1845    1014    1457    2210    1007 AA     \n 5  2013     7    22      845       1600    1005    1044    1815     989 MQ     \n 6  2013     4    10     1100       1900     960    1342    2211     931 DL     \n 7  2013     3    17     2321        810     911     135    1020     915 DL     \n 8  2013     6    27      959       1900     899    1236    2226     850 DL     \n 9  2013     7    22     2257        759     898     121    1026     895 DL     \n10  2013    12     5      756       1700     896    1058    2020     878 AA     \n# … with 336,766 more rows, 9 more variables: flight <int>, tailnum <chr>,\n#   origin <chr>, dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>,\n#   minute <dbl>, time_hour <dttm>, and abbreviated variable names\n#   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay\n\n\n\n\nYour turn (5 minutes): Create a data frame that only includes the plane tail number (tailnum), carrier (carrier), and departure delay for the flight with the longest departure delay. What is the plane tail number (tailnum) for this flight?\n\n\nflights |>\n  select(tailnum, carrier, dep_delay) %>%\n  arrange(dep_delay) |>\n  slice(1)\n\n# A tibble: 1 × 3\n  tailnum carrier dep_delay\n  <chr>   <chr>       <dbl>\n1 N592JB  B6            -43"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#filter",
+    "href": "ae/ae-03-wrangling-flights-A.html#filter",
+    "title": "AE 04: Wrangling flights",
+    "section": "filter()",
+    "text": "filter()\n\nDemo: Filter the data frame by selecting the rows where the destination airport is RDU.\n\n\nflights |>\n  filter(dest == \"RDU\")\n\n# A tibble: 8,163 × 19\n    year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier\n   <int> <int> <int>    <int>      <int>   <dbl>   <int>   <int>   <dbl> <chr>  \n 1  2013     1     1      800        810     -10     949     955      -6 MQ     \n 2  2013     1     1      832        840      -8    1006    1030     -24 MQ     \n 3  2013     1     1      851        851       0    1032    1036      -4 EV     \n 4  2013     1     1      917        920      -3    1052    1108     -16 B6     \n 5  2013     1     1     1024       1030      -6    1204    1215     -11 MQ     \n 6  2013     1     1     1127       1129      -2    1303    1309      -6 EV     \n 7  2013     1     1     1157       1205      -8    1342    1345      -3 MQ     \n 8  2013     1     1     1240       1235       5    1415    1415       0 MQ     \n 9  2013     1     1     1317       1325      -8    1454    1505     -11 MQ     \n10  2013     1     1     1449       1450      -1    1651    1640      11 MQ     \n# … with 8,153 more rows, 9 more variables: flight <int>, tailnum <chr>,\n#   origin <chr>, dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>,\n#   minute <dbl>, time_hour <dttm>, and abbreviated variable names\n#   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay\n\n\n\nDemo: We can also filter using more than one condition. Here we select all rows where the destination airport is RDU and the arrival delay is less than 0.\n\n\nflights |>\n  filter(dest == \"RDU\", arr_delay < 0)\n\n# A tibble: 4,232 × 19\n    year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier\n   <int> <int> <int>    <int>      <int>   <dbl>   <int>   <int>   <dbl> <chr>  \n 1  2013     1     1      800        810     -10     949     955      -6 MQ     \n 2  2013     1     1      832        840      -8    1006    1030     -24 MQ     \n 3  2013     1     1      851        851       0    1032    1036      -4 EV     \n 4  2013     1     1      917        920      -3    1052    1108     -16 B6     \n 5  2013     1     1     1024       1030      -6    1204    1215     -11 MQ     \n 6  2013     1     1     1127       1129      -2    1303    1309      -6 EV     \n 7  2013     1     1     1157       1205      -8    1342    1345      -3 MQ     \n 8  2013     1     1     1317       1325      -8    1454    1505     -11 MQ     \n 9  2013     1     1     1505       1510      -5    1654    1655      -1 MQ     \n10  2013     1     1     1800       1800       0    1945    1951      -6 B6     \n# … with 4,222 more rows, 9 more variables: flight <int>, tailnum <chr>,\n#   origin <chr>, dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>,\n#   minute <dbl>, time_hour <dttm>, and abbreviated variable names\n#   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay\n\n\nWe can do more complex tasks using logical operators:\n\n\noperator\ndefinition\n\n\n\n<\nis less than?\n\n\n<=\nis less than or equal to?\n\n\n>\nis greater than?\n\n\n>=\nis greater than or equal to?\n\n\n==\nis exactly equal to?\n\n\n!=\nis not equal to?\n\n\nx & y\nis x AND y?\n\n\nx \\| y\nis x OR y?\n\n\nis.na(x)\nis x NA?\n\n\n!is.na(x)\nis x not NA?\n\n\nx %in% y\nis x in y?\n\n\n!(x %in% y)\nis x not in y?\n\n\n!x\nis not x?\n\n\n\nThe final operator only makes sense if x is logical (TRUE / FALSE).\n\n\nYour turn (4 minutes): Describe what the code is doing in words.\n\n\nflights |>\n  filter(\n    dest %in% c(\"RDU\", \"GSO\"),\n    arr_delay < 0 | dep_delay < 0\n    )\n\n# A tibble: 6,203 × 19\n    year month   day dep_time sched_de…¹ dep_d…² arr_t…³ sched…⁴ arr_d…⁵ carrier\n   <int> <int> <int>    <int>      <int>   <dbl>   <int>   <int>   <dbl> <chr>  \n 1  2013     1     1      800        810     -10     949     955      -6 MQ     \n 2  2013     1     1      832        840      -8    1006    1030     -24 MQ     \n 3  2013     1     1      851        851       0    1032    1036      -4 EV     \n 4  2013     1     1      917        920      -3    1052    1108     -16 B6     \n 5  2013     1     1     1024       1030      -6    1204    1215     -11 MQ     \n 6  2013     1     1     1127       1129      -2    1303    1309      -6 EV     \n 7  2013     1     1     1157       1205      -8    1342    1345      -3 MQ     \n 8  2013     1     1     1317       1325      -8    1454    1505     -11 MQ     \n 9  2013     1     1     1449       1450      -1    1651    1640      11 MQ     \n10  2013     1     1     1505       1510      -5    1654    1655      -1 MQ     \n# … with 6,193 more rows, 9 more variables: flight <int>, tailnum <chr>,\n#   origin <chr>, dest <chr>, air_time <dbl>, distance <dbl>, hour <dbl>,\n#   minute <dbl>, time_hour <dttm>, and abbreviated variable names\n#   ¹​sched_dep_time, ²​dep_delay, ³​arr_time, ⁴​sched_arr_time, ⁵​arr_delay"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#count",
+    "href": "ae/ae-03-wrangling-flights-A.html#count",
+    "title": "AE 04: Wrangling flights",
+    "section": "count()",
+    "text": "count()\n\nDemo: Create a frequency table of the destination locations for flights from New York.\n\n\nflights |>\n  count(dest)\n\n# A tibble: 105 × 2\n   dest      n\n   <chr> <int>\n 1 ABQ     254\n 2 ACK     265\n 3 ALB     439\n 4 ANC       8\n 5 ATL   17215\n 6 AUS    2439\n 7 AVL     275\n 8 BDL     443\n 9 BGR     375\n10 BHM     297\n# … with 95 more rows\n\n\n\nDemo: In which month was there the fewest number of flights? How many flights were there in that month?\n\n\nflights |>\n  count(month) |>\n  filter(n == min(n))\n\n# A tibble: 1 × 2\n  month     n\n  <int> <int>\n1     2 24951\n\n\n\n\nYour turn (5 minutes): On which date (month + day) was there the largest number of flights? How many flights were there on that day?\n\n\nflights |>\n  count(month, day) |>\n  filter(n == max(n))\n\n# A tibble: 1 × 3\n  month   day     n\n  <int> <int> <int>\n1    11    27  1014"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#mutate",
+    "href": "ae/ae-03-wrangling-flights-A.html#mutate",
+    "title": "AE 04: Wrangling flights",
+    "section": "mutate()",
+    "text": "mutate()\nUse mutate() to create a new variable.\n\nDemo: In the code chunk below, air_time (minutes in the air) is converted to hours, and then new variable mph is created, corresponding to the miles per hour of the flight.\n\n\nflights |>\n  mutate(\n    hours = air_time / 60,\n    mph = distance / hours\n    ) |>\n  select(air_time, distance, hours, mph)\n\n# A tibble: 336,776 × 4\n   air_time distance hours   mph\n      <dbl>    <dbl> <dbl> <dbl>\n 1      227     1400 3.78   370.\n 2      227     1416 3.78   374.\n 3      160     1089 2.67   408.\n 4      183     1576 3.05   517.\n 5      116      762 1.93   394.\n 6      150      719 2.5    288.\n 7      158     1065 2.63   404.\n 8       53      229 0.883  259.\n 9      140      944 2.33   405.\n10      138      733 2.3    319.\n# … with 336,766 more rows\n\n\n\n\nYour turn (4 minutes): Create a new variable to calculate the percentage of flights in each month. What percentage of flights take place in July?\n\n\nflights |>\n  count(month) |>\n  mutate(perc = n / sum(n) * 100) \n\n# A tibble: 12 × 3\n   month     n  perc\n   <int> <int> <dbl>\n 1     1 27004  8.02\n 2     2 24951  7.41\n 3     3 28834  8.56\n 4     4 28330  8.41\n 5     5 28796  8.55\n 6     6 28243  8.39\n 7     7 29425  8.74\n 8     8 29327  8.71\n 9     9 27574  8.19\n10    10 28889  8.58\n11    11 27268  8.10\n12    12 28135  8.35"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#summarize",
+    "href": "ae/ae-03-wrangling-flights-A.html#summarize",
+    "title": "AE 04: Wrangling flights",
+    "section": "summarize()",
+    "text": "summarize()\nsummarize() collapses the rows into summary statistics and removes columns irrelevant to the calculation.\nBe sure to name your columns!\n\nflights |>\n  summarize(mean_dep_delay = mean(dep_delay))\n\n# A tibble: 1 × 1\n  mean_dep_delay\n           <dbl>\n1             NA\n\n\nQuestion: Why did this code return NA?\nLet’s fix it!\n\nflights |>\n  summarize(mean_dep_delay = mean(dep_delay, na.rm = TRUE))\n\n# A tibble: 1 × 1\n  mean_dep_delay\n           <dbl>\n1           12.6"
+  },
+  {
+    "objectID": "ae/ae-03-wrangling-flights-A.html#group_by",
+    "href": "ae/ae-03-wrangling-flights-A.html#group_by",
+    "title": "AE 04: Wrangling flights",
+    "section": "group_by()",
+    "text": "group_by()\ngroup_by() is used for grouped operations. It’s very powerful when paired with summarise() to calculate summary statistics by group.\nHere we find the mean and standard deviation of departure delay for each month.\n\nflights |>\n  group_by(month) |>\n  summarize(\n    mean_dep_delay = mean(dep_delay, na.rm = TRUE), \n    sd_dep_delay = sd(dep_delay, na.rm = TRUE)\n    )\n\n# A tibble: 12 × 3\n   month mean_dep_delay sd_dep_delay\n   <int>          <dbl>        <dbl>\n 1     1          10.0          36.4\n 2     2          10.8          36.3\n 3     3          13.2          40.1\n 4     4          13.9          43.0\n 5     5          13.0          39.4\n 6     6          20.8          51.5\n 7     7          21.7          51.6\n 8     8          12.6          37.7\n 9     9           6.72         35.6\n10    10           6.24         29.7\n11    11           5.44         27.6\n12    12          16.6          41.9\n\n\n\n\nYour turn (4 minutes): What is the median departure delay for each airports around NYC (origin)?\n\n\nflights |>\n  group_by(origin) |>\n  summarize(\n    med_dep_delay = median(dep_delay, na.rm = TRUE)\n    )\n\n# A tibble: 3 × 2\n  origin med_dep_delay\n  <chr>          <dbl>\n1 EWR               -1\n2 JFK               -1\n3 LGA               -3"
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "If this is your first time accessing the containers, click on reserve STA198-199 on the Reservations available menu on the right. You only need to do this once, and when you do, you’ll see this container moved to the My reservations menu on the left.\nNext, click on STA198-199 under My reservations to access the RStudio instance you’ll use for the course."
+  },
+  {
+    "objectID": "computing-troubleshooting.html",
+    "href": "computing-troubleshooting.html",
+    "title": "Computing troubleshooting",
+    "section": "",
+    "text": "If the status shows something other than Operational, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course forum to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!\nIf the status shows Operational, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots)."
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder)."
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-the-rstudio-containers",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using the RStudio containers?",
+    "text": "Can I use a local install of R and RStudio instead of using the RStudio containers?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific versions of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer. These are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in the containers we have provided for you. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.2.1: https://cran.r-project.org/\nDownload and install the preview build of RStudio: https://www.rstudio.com/products/rstudio/download/preview/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "RStudio containers\n🔗 on Duke Container Manager\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradescope\n🔗 on Sakai\n\n\nGradebook\n🔗 on Sakai\n\n\nOffice hours\n🔗 on Google docs"
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Intro to data science and statistical thinking. Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language. No statistical or computing background is necessary. Not open to students who have taken a 100-level Statistical Science course, Statistical Science 210, or a Statistical Science course numbered 300 or above."
+  },
+  {
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Course overview",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nFrench Science 2231\nMon & Wed 3:30 - 4:45 pm\n\n\nLab 06\nPerkins Link 087 (Classroom 3)\nThur 10:15 - 11:30 am\n\n\nLab 07\nPerkins Link 087 (Classroom 3)\nThur 12:00 - 1:15 pm\n\n\nLab 08\nPerkins Link 087 (Classroom 3)\nThur 1:45 - 3:00 pm\n\n\nLab 09\nPerkins Link 087 (Classroom 3)\nThur 3:30 - 4:45 pm\n\n\nLab 10\nPerkins Link 087 (Classroom 3)\nThur 5:15 - 6:30 pm"
+  },
+  {
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help."
+  },
+  {
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone."
+  },
+  {
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource! Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here."
+  },
+  {
+    "objectID": "course-support.html#slack",
+    "href": "course-support.html#slack",
+    "title": "Course support",
+    "section": "Slack",
+    "text": "Slack\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The course Slack is the best venue for these! There is a chance another student has already asked a similar question, so please check the other posts on Slack before asking a new question. If you know the answer to a question that is posted, I encourage you to respond!"
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go to Slack), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Elijah Meyer at elijah.meyer@duke.edu.\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 199” in the subject line. Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+  },
+  {
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nThere are times may need help with the class that is beyond what can be provided by the teaching team. In those instances, I encourage you to visit the Academic Resource Center. The Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke. Services include Learning Consultations, Peer Tutoring and Study Groups, ADHD/LD Coaching, Outreach Workshops, and more. Because learning is a process unique to every individual, they work with each student to discover and develop their own academic strategy for success at Duke. Contact the ARC to schedule an appointment. Undergraduates in any year, studying any discipline can benefit! Contact ARC@duke.edu, 919-684-5917."
+  },
+  {
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times.  Duke encourages all students to access these resources.\n\nCAPS: Duke Counseling & Pyschological Services (CAPS) helps Duke Students enhance strengths and develop abilities to successfully live, grow and learn in their personal and academic lives. CAPS recognizes that we are living in unprecedented times and that the changes, challenges and stressors brought on by the COVID-19 pandemic have impacted everyone, often in ways that are tax our well-being. CAPS offers many services to Duke undergraduate students, including brief individual and group counseling, couples counseling and more. CAPS staff also provides outreach to student groups, particularly programs supportive of at-risk populations, on a wide range of issues impacting them in various aspects of campus life. CAPS provides services to students via Telehealth. To initiate services, you can contact their front desk at 919-660-1000.\nDuWell: (919) 681-8421, provides Moments of Mindfulness (stress management and resilience building) and meditation programming to assist students in developing a daily emotional well-being practice. To see schedules for programs please see https://studentaffairs.duke.edu/duwell. All are welcome and no experience necessary.\nDukeReach: Provides comprehensive outreach services to identify and support students in managing all aspects of well-being. If you have concerns about a student’s behavior or health visit the website for resources and assistance: http://studentaffairs.duke.edu/dukereach.\nTimelyCare: (formerly known as Blue Devils Care) An online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling: https://bluedevilscare.duke.edu.\nTwo-Click Support: Duke Student Government and DukeReach partnership that connects students to help in just two clicks: https://bit.ly/TwoClickSupport."
+  },
+  {
+    "objectID": "course-support.html#course-costs",
+    "href": "course-support.html#course-costs",
+    "title": "Course support",
+    "section": "Course costs",
+    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with costs associated with this course, here are some resources:\n\nContact the financial aid office (whether or not you are on aid). They have loans and resources for connecting students with programs on campus that might be able to help alleviate these costs.\nDukeLIFE offers course materials assistance for eligible students. Please note that students who are eligible for DukeLIFE benefits are notified prior to the start of the semester; program resources are limited."
+  },
+  {
+    "objectID": "course-support.html#assistance-with-zoom-or-sakai",
+    "href": "course-support.html#assistance-with-zoom-or-sakai",
+    "title": "Course support",
+    "section": "Assistance with Zoom or Sakai",
+    "text": "Assistance with Zoom or Sakai\nFor technical help with Sakai or Zoom, contact the Duke OIT Service Desk at oit.duke.edu/help. You can also access the self-service help documentation for Zoom here and for Sakai here.\nNote that we will be making minimal use of Sakai in this course (primarily for announcements and grade book). All assignment submission will take place on GitHub and conversation on Slack.\nZoom will be used for online office hours as well as as a backup option should we need to hold the course online instead of in person."
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Click here to download a PDF copy of the syllabus."
+  },
+  {
+    "objectID": "course-syllabus.html#office-hours",
+    "href": "course-syllabus.html#office-hours",
+    "title": "Syllabus",
+    "section": "Office hours",
+    "text": "Office hours\nClick here for the instructor and TA office hours locations and Zoom links. You are welcomed to attend the office hours for any STA 199 TA, regardless of section."
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\nAll books are freely available online.\n\n\n\nR for Data Science, 2e\nGrolemund, Wickham\nO’Reilly, 2nd edition, 2022\nHard copy only available of 1st edition\n\n\nIntroduction to Modern Statistics\nÇetinkaya-Rundel, Hardin\nOpenIntro Inc., 1st Edition, 2021\nHard copy available on Amazon"
+  },
+  {
+    "objectID": "course-syllabus.html#course-learning-objectives",
+    "href": "course-syllabus.html#course-learning-objectives",
+    "title": "Syllabus",
+    "section": "Course learning objectives",
+    "text": "Course learning objectives\nBy the end of the semester, you will…\n\nlearn to explore, visualize, and analyze data in a reproducible and shareable manner\ngain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization\nwork on problems and case studies inspired by and based on real-world questions and data\nlearn to effectively communicate results through written assignments and project presentation"
+  },
+  {
+    "objectID": "course-syllabus.html#course-community",
+    "href": "course-syllabus.html#course-community",
+    "title": "Syllabus",
+    "section": "Course community",
+    "text": "Course community\n\nDuke Community Standard\nAs a student in this course, you have agreed to uphold the Duke Community Standard as well as the practices specific to this course.\n\n\n\n\nInclusive community\nIt is my intent that students from all diverse backgrounds and perspectives be well-served by this course, that students’ learning needs be addressed both in and out of class, and that the diversity that the students bring to this class be viewed as a resource, strength, and benefit. It is my intent to present materials and activities that are respectful of diversity and in alignment with Duke’s Commitment to Diversity and Inclusion. Your suggestions are encouraged and appreciated. Please let me know ways to improve the effectiveness of the course for you personally, or for other students or student groups.\nFurthermore, I would like to create a learning environment for my students that supports a diversity of thoughts, perspectives and experiences, and honors your identities. To help accomplish this:\n\nIf you feel like your performance in the class is being impacted by your experiences outside of class, please don’t hesitate to come and talk with me. If you prefer to speak with someone outside of the course, your academic dean is an excellent resource.\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please let me or a member of the teaching team know.\n\n\n\nPronouns\nPronouns are meaningful tools to communicate identities and experiences, and using pronouns supports a campus environment where all community members can thrive. Please update your gender pronouns in Duke Hub. You can learn more at the Center for Sexual and Gender Diversity’s website.\n\n\nAccessibility\nIf there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments. Students should be in touch with the Student Disability Access Office to request or update accommodations under these circumstances.\n\n\nCommunication\nAll lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website, UPDATE LINK.\nAnnouncements will be emailed through Sakai Announcements periodically. Please check your email regularly to ensure you have the latest announcements for the course.\n\n\nWhere to get help\n\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!\nOutside of class and office hours, any general questions about course content or assignments should be posted on Ed Discussion. There is a chance another student has already asked a similar question, so please check the other posts in Ed Discussion before adding a new question. If you know the answer to a question posted in the discussion forum, I encourage you to respond!\n\nCheck out the Help tab for more resources.\n\n\nEmail\nIf there is a question that’s not appropriate for the public forum, you are welcome to email me directly. If you email me, please include “STA 199” in the subject line. Barring extenuating circumstances, I will respond to STA 199 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+  },
+  {
+    "objectID": "course-syllabus.html#activities-assessment",
+    "href": "course-syllabus.html#activities-assessment",
+    "title": "Syllabus",
+    "section": "Activities & Assessment",
+    "text": "Activities & Assessment\nThe activities and assessments in this course are designed to help you successfully achieve the course learning objectives. They are designed to follow the Prepare, Practice, Perform format.\n\nPrepare: Includes short videos, reading assignments, and lectures to introduce new concepts and ensure a basic comprehension of the material. The goal is to help you prepare for the in-class activities during lecture.\nPractice: Includes in-class application exercises where you will begin to the concepts and methods introduced in the prepare assignment. the activities will graded for completion, as they are designed for you to gain experience with the statistical and computing techniques before working on graded assignments.\nPerform: Includes labs, homework, exams, and the project. These assignments build upon the prepare and practice assignments and are the opportunity for you to demonstrate your understanding of the course material and how it is applied to analyze real-world data.\n\n\nLectures (Prepare)\nPart of the class time will be lectures that introduce new concepts or review topics from the preparation videos. Lectures will not repeat everything in the videos, they will instead highlight important and known to be complex concepts and will be supplemented with live coding activities. You are expected to attend every lecture. Lectures will be recorded and made available to students with an excused absence upon request.\n\n\nApplication exercises (Practice)\nA majority of the in-class lectures will be dedicated to working on Application Exercises (AEs). These exercises which give you an opportunity to practice apply the statistical concepts and code introduced in the prepare assignment. These AEs are due within three days of the corresponding lecture period. Specifically, AEs from Monday lectures are due Thursday by 11:59p ET, and AEs from Wednesday lectures are due Saturday by 11:59p ET.\nBecause these AEs are for practice, they will be graded based on completion, i.e., a good-faith effort has been made in attempting all parts. Successful on-time completion of at least 80% of AEs will result in full credit for AEs in the final course grade.\nIn addition to AEs will be periodic activities help build a learning community. These will be short, fun activities that will help everyone in the class connect throughout the semester.\n\n\nLabs (Perform)\nIn labs, you will apply the concepts discussed in lecture to various data analysis scenarios, with a focus on the computation. Most lab assignments will be completed in teams, and all team members are expected to contribute equally to the completion of each assignment. You are expected to use the team’s Git repository on the course’s GitHub page as the central platform for collaboration. Commits to this repository will be used as a metric of each team member’s relative contribution for each lab, and there will be periodic peer evaluation on the team collaboration. Lab assignments will be completed using Quarto, correspond to an appropriate GitHub repository, and submitted for grading in Gradescope.\nThe lowest lab grade will be dropped at the end of the semester.\n\n\nHomework (Perform)\nIn homework, you will apply what you’ve learned during lecture and lab to complete data analysis tasks. You may discuss homework assignments with other students; however, homework should be completed and submitted individually. Similar to lab assignments, homework must be typed up using Quarto and GitHub and submitted as a PDF in Gradescope.\nOne homework assignment will be dedicated to a statistics experience. The statistics experience is an opportunity to engage with statistics and data science outside of the classroom through podcasts, books, seminars, data analysis competitions, and other activities. As you complete these experiences, the goal is to consider how the material you’re learning in the course connects with society more broadly.\nThe lowest homework grade will be dropped at the end of the semester.\n\n\nExams (Perform)\nThere will be two, take-home, open-note exams. Through these exams you have the opportunity to demonstrate what you’ve learned in the course thus far. Each exam will include small analysis and computational tasks related to the content in the prepare, practice, and perform assignments. More details about the content and structure of the exams will be discussed during the semester.\n\n\nProject (Perform)\nThe purpose of the project is to apply what you’ve learned throughout the semester to analyze an interesting data-driven research question. The project will be completed with your lab teams, and each team will present their work in video and in writing during the final exam period. More information about the project will be provided during the semester."
+  },
+  {
+    "objectID": "course-syllabus.html#grading",
+    "href": "course-syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\nThe final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n30% (5% x 6)\n\n\nLabs\n14% (2% x 7)\n\n\nProject\n15%\n\n\nExam 01\n18%\n\n\nExam 02\n18%\n\n\nApplication Exercises\n2.5%\n\n\nTeamwork\n2.5%\n\n\n\nThe final letter grade will be determined based on the following thresholds:\n\n\n\nLetter Grade\nFinal Course Grade\n\n\n\n\nA\n>= 93\n\n\nA-\n90 - 92.99\n\n\nB+\n87 - 89.99\n\n\nB\n83 - 86.99\n\n\nB-\n80 - 82.99\n\n\nC+\n77 - 79.99\n\n\nC\n73 - 76.99\n\n\nC-\n70 - 72.99\n\n\nD+\n67 - 69.99\n\n\nD\n63 - 66.99\n\n\nD-\n60 - 62.99\n\n\nF\n< 60"
+  },
+  {
+    "objectID": "course-syllabus.html#course-policies",
+    "href": "course-syllabus.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course policies",
+    "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework and lab assignments with other students; however, you may not directly share (or copy) code or write up with other students. For team assignments, you may collaborate freely within your team. You may discuss the assignment with other teams; however, you may not directly share (or copy) code or write up with another team. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nYou may not discuss or otherwise work with others on the exams. Unauthorized collaboration or using unauthorized materials will be considered a violation for all students involved. More details will be given closer to the exam date.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically result in a 0 for the assignment and will be reported to the Office of Student Conduct for further action.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline. Note that the lowest homework and lab assignment will be dropped to accommodate such circumstances.\n\n\nLate work\n\nHomework and labs may be submitted up to 3 days late. There will be a 5% deduction for each 24-hour period the assignment is late.\nThere is no late work accepted for application exercises, since these are designed to help you prepare for labs and homework.\nThe late work policy for exams will be provided with the exam instructions.\nThe late work policy for the project will be provided with the project instructions.\n\n\n\nWaiver for extenuating circumstances\nIf there are circumstances that prevent you from completing a lab or homework assignment by the stated due date, you may email the head TA before the deadline to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide explanation. This waiver may only be used for once in the semester, so only use it for a truly extenuating circumstance.\nIf there are circumstances that are having a longer-term impact on your academic performance, please let your academic dean know, as they can be a resource. Please let Dr. Çetinkaya-Rundel know if you need help contacting your academic dean.\n\n\nRegrade requests\nRegrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.\nNo grades will be changed after the project presentations.\n\n\nClass recording requests\nLectures will be recorded on Panopto and will be made available to students with an excused absence upon request. Videos shared with such students will be available for a week. To request a particular lecture’s video, please fill out the form at INSERT LINK. Please also make sure that any official documentation, such as STINFs, Dean’s excuses, NOVAPs, and quarantine/removal from class notices from student health are also uploaded to the form.\n\n\nAttendance policy\n\nCOVID Symptoms, Exposure, or Infection: Student health, safety, and well-being are the university’s top priorities. To help ensure your well-being and the well-being of those around you, please do not come to class if you have tested positive for COVID-19 or have possible symptoms and have not yet been tested. If any of these situations apply to you, you must follow university guidance related to the ongoing COVID-19 pandemic and current health and safety protocols. If you are experiencing any COVID-19 symptoms, contact student health (dshcheckin@duke.edu, 919-681-9355). Learn more about current university policy related to COVID-19 at https://coronavirus.duke.edu. To keep the university community’s safe and healthy as possible, you will be expected to follow these guidelines. Please reach out to me and your academic dean as soon as possible if you need to quarantine or isolate so that we can discuss arrangements for your continued participation in class.\nInclement weather: In the event of inclement weather or other connectivity-related events that prohibit class attendance, I will notify you how we will make up missed course content and work.  Asynchronous catch-up methods may apply.\nReligious accommodations: Students are permitted by university policy to be absent from class to observe a religious holiday. Accordingly, Trinity College of Arts & Sciences and the Pratt School of Engineering have established procedures to be followed by students for notifying their instructors of an absence necessitated by the observance of a religious holiday. Please submit requests for religious accommodations at the beginning of the semester so that we can work to make suitable arrangements well ahead of time. You can find the policy and relevant notification form here: https://trinity.duke.edu/undergraduate/academic-policies/religious-holidays."
+  },
+  {
+    "objectID": "course-syllabus.html#important-dates",
+    "href": "course-syllabus.html#important-dates",
+    "title": "Syllabus",
+    "section": "Important dates",
+    "text": "Important dates\n\nAug 29: Classes begin\nSep 9: Drop/add ends\nOct 10-11: Fall break\nNov 11: Last day to withdraw with W\nNov 23-25: Thanksgiving recess\nDec 9: Classes end\nDec 10-13: Reading period\nDec 14-19: Final exams\n\nFor more important dates, see the full Duke Academic Calendar."
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Dr. Elijah Meyer (he/him) - Hello! I’m very excited to work with you all this semester. I’ve earned a Master’s degree in statistics and a Ph.D. in statistics with a focus in education from Montana State University. My early research is in sports statistics, with an emphasis on spatial data visualizations to enhance sports strategy. My Ph.D. work is in how to best support graduate student instructors and early career teachers to use active learning in their classrooms.\nPrior to my time at Duke, I’ve taught multiple sections of Introductory and Intermediate Statistics at Montana State, developed their Intermediate Statistics online course, and helped integrate R into the Introductory Statistics curricula. I prioritize community, communication, and respect in my classroom. I want to provide a space where we can freely talk about the material, embrace mistakes, and learn together throughout the semester.\nWhen I’m not in the books, I enjoy playing disc golf, tennis, basketball, and anything else that gets me outside and active. I’m looking forward to meeting you all and having a great semester!\n\n\n\nOffice hours\nLocation\n\n\n\n\nTue 10:00 AM - 12:00 PM\nOld Chemistry Building 208 / Zoom (Password: 5MYp7A)"
+  },
+  {
+    "objectID": "course-team.html#teaching-assistants",
+    "href": "course-team.html#teaching-assistants",
+    "title": "Teaching team",
+    "section": "Teaching assistants",
+    "text": "Teaching assistants\n\n\n\nName\nRole\nLab section\nOffice hours\n\n\n\n\nKonnie Huang (konnie.huang@duke.edu)\nIn Class TA\n\nWed 12:00PM - 1:00PM & Thur 5:00PM - 6:00PM / Zoom\n\n\nEli Gnesin (eli.gnesin@duke.edu)\nLab Leader\nThur 10:15AM - 11:30AM\nThur 9:00AM - 10:00PM (in-person only) & 12:00 pm - 1:00 pm in Old Chem 203B / Zoom\n\n\nYibin Zhang (yibin.zhang@duke.edu)\nLab Helper\nThur 10:15AM - 11:30AM\nWed 6:00PM - 8:00PM / Zoom\n\n\nCaitrin Murphy (caitrin.murphy@duke.edu)\nLab Leader\nThur 12:00PM - 1:15PM\nWed 2:00PM - 3:00PM in Old Chem 203B & Thur 7:00PM - 8:00PM / Zoom\n\n\nZheyuan Liu (zheyuan.liu@duke.edu)\nLab Helper\nThur 12:00PM - 1:15PM\nThur 1:00PM - 3:00 PM / Zoom\n\n\nChristine (Yueming) Shen (yueming.shen@duke.edu)\nLab Leader / Head TA\nThur 1:45PM - 3:00PM\nTue 1-2pm & Thur 2-3pm in Old Chem 203B\n\n\nAlonso Guerrero Castañeda (alonso.guerrero@duke.edu)\nLab Helper\nThur 1:45PM - 3:00PM\nMon 6:00PM - 7:00PM in Old Chem 203B & Thur 6:00PM - 7:00PM / Zoom\n\n\nYouran Wu (youran.wu@duke.edu)\nLab Leader\nThur 3:30PM - 4:45PM\nFri 5:00PM - 7:00PM Zoom\n\n\nMounika Adepu (mounika.adepu@duke.edu)\nLab Helper\nThur 3:30PM - 4:45PM\nMon 10:30 AM - 12:30 pm / Zoom\n\n\nKateryna (Kat) Husar (kat.husar@duke.edu)\nLab Leader\nThur 5:15PM - 6:30PM\nTue 12:00PM - 1:00PM & Wed 5:00PM - 6:00PM / in Old Chem 203B & Zoom\n\n\nIsabella Swigart (isabella.swigart@duke.edu)\nLab Helper\nThur 5:15PM - 6:30PM\nTue 4:00 PM - 5:30 PM & Tue 1:00PM - 1:30PM / Zoom"
+  },
+  {
+    "objectID": "hw/hw-1.html",
+    "href": "hw/hw-1.html",
+    "title": "HW 1 - Data visualization",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due Thursday, Sep 15 at 11:59pm."
+  },
+  {
+    "objectID": "hw/hw-1.html#packages",
+    "href": "hw/hw-1.html#packages",
+    "title": "HW 1 - Data visualization",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)\nlibrary(openintro)"
+  },
+  {
+    "objectID": "hw/hw-1.html#guidelines-tips",
+    "href": "hw/hw-1.html#guidelines-tips",
+    "title": "HW 1 - Data visualization",
+    "section": "Guidelines + tips",
+    "text": "Guidelines + tips\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete this homework and other assignments in this course. There will be periodic reminders in this assignment to remind you to knit, commit, and push your changes to GithHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\nNote\n\n\n\nNote: Do not let R output answer the question for you unless the question specifically asks for just a plot. For example, if the question asks for the number of columns in the data set, please type out the number of columns. You are subject to lose points if you do not."
+  },
+  {
+    "objectID": "hw/hw-1.html#workflow-formatting",
+    "href": "hw/hw-1.html#workflow-formatting",
+    "title": "HW 1 - Data visualization",
+    "section": "Workflow + formatting",
+    "text": "Workflow + formatting\nMake sure to\n\nUpdate author name on your document.\nLabel all code chunks informatively and concisely.\nFollow the Tidyverse code style guidelines.\nMake at least 3 commits.\nResize figures where needed, avoid tiny or huge plots.\nTurn in an organized, well formatted document."
+  },
+  {
+    "objectID": "hw/hw-1.html#data-1-duke-forest-houses",
+    "href": "hw/hw-1.html#data-1-duke-forest-houses",
+    "title": "HW 1 - Data visualization",
+    "section": "Data 1: Duke Forest houses",
+    "text": "Data 1: Duke Forest houses\n\n\n\n\n\n\nNote\n\n\n\nUse this dataset for Exercises 1 and 2.\n\n\nFor the following two exercises you will work with data on houses that were sold in the Duke Forest neighborhood of Durham, NC in November 2020. The duke_forest dataset comes from the openintro package. You can see a list of the variables on the package website or by running ?duke_forest in your console."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-1",
+    "href": "hw/hw-1.html#exercise-1",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nSuppose you’re helping some family friends who are looking to buy a house in Duke Forest. As they browse Zillow listings, they realize some houses have garages and others don’t, and they wonder: Does having a garage make a difference?\nLuckily, you can help them answer this question with data visualization!\n\nMake histograms of the prices of houses in Duke Forest based on whether they have a garage.\n\nIn order to do this, you will first need to create a new variable called garage (with levels \"Garage\" and \"No garage\").\nBelow is the code for creating this new variable. Here, we mutate() the duke_forest data frame to add a new variable called garage which takes the value \"Garage\" if the text string \"Garage\" is detected in the parking variable and takes the test string \"No garage\" if not.\n\n\n\n\nduke_forest |>\n  mutate(garage = if_else(str_detect(parking, \"Garage\"),   \"Garage\", \"No garage\"))\n\n\nThen, facet by garage and use different colors for the two facets.\nChoose an appropriate binwidth and decide whether a legend is needed, and turn it off if not.\nInclude informative title and axis labels.\nFinally, include a brief (2-3 sentence) narrative comparing the distributions of prices of Duke Forest houses that do and don’t have garages. Your narrative should touch on whether having a garage “makes a difference” in terms of the price of the house.\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-2",
+    "href": "hw/hw-1.html#exercise-2",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nIt’s expected that within any given marker larger houses will be priced higher. It’s also expected that the age of the house will have an effect on the price. However in some markets new houses might be more expensive while in others new construction might mean “no character” and hence be less expensive. So your family friends ask: “In Duke Forest, do houses that are bigger and more expensive tend to be newer ones than those that are smaller and cheaper?”\nOnce again, data visualization skills to the rescue!\n\nCreate a scatter plot to exploring the relationship between price and area, conditioning for year_built.\nUse geom_smooth() with the argument se = FALSE to add a smooth curve fit to the data and color the points by year_built.\nInclude informative title, axis, and legend labels.\nDiscuss each of the following claims (1-2 sentences per claim). Your discussion should touch on specific things you observe in your plot as evidence for or against the claims.\n\nClaim 1: Larger houses are priced higher.\nClaim 2: Newer houses are priced higher.\nClaim 3: Bigger and more expensive houses tend to be newer ones than smaller and cheaper ones.\n\n\n\n\nNow is a good time to render, commit, and push.\nMake sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-1.html#data-2-brfss",
+    "href": "hw/hw-1.html#data-2-brfss",
+    "title": "HW 1 - Data visualization",
+    "section": "Data 2: BRFSS",
+    "text": "Data 2: BRFSS\n\n\n\n\n\n\nNote\n\n\n\nUse this dataset for Exercises 3 to 5.\n\n\n\nThe Behavioral Risk Factor Surveillance System (BRFSS) is the nation’s premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. Established in 1984 with 15 states, BRFSS now collects data in all 50 states as well as the District of Columbia and three U.S. territories. BRFSS completes more than 400,000 adult interviews each year, making it the largest continuously conducted health survey system in the world.\nSource: cdc.gov/brfss\n\nIn the following exercises we will work with data from the 2020 BRFSS survey. The originally come from here, though we will work with a random sample of responses and a small number of variables from the data provided. These have already been sampled for you and the dataset you’ll use can be found in the data folder of your repo. It’s called brfss.csv.\n\nbrfss <- read_csv(\"data/brfss.csv\")"
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-3",
+    "href": "hw/hw-1.html#exercise-3",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 3",
+    "text": "Exercise 3\n\nHow many rows are in the brfss dataset? What does each row represent?\nHow many columns are in the brfss dataset? Indicate the type of each variable.\nInclude the code and resulting output used to support your answer.\n\n\n Now is a good time to render, commit, and push."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-4",
+    "href": "hw/hw-1.html#exercise-4",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nDo people who smoke more tend to have worse health conditions?\n\nUse a segmented bar chart to visualize the relationship between smoking (smoke_freq) and general health (general_health). Decide on which variable to represent with bars and which variable to fill the color of the bars by.\nPay attention to the order of the bars and, if need be, use the fct_relevel function to reorder the levels of the variables.\n\nBelow is sample code for releveling general_health. Here we first convert general_health to a factor (how R stores categorical data) and then order the levels from Excellent to Poor.\n\n\n\n\nbrfss |>\n  mutate(\n    general_health = as.factor(general_health),\n    general_health = fct_relevel(general_health, \"Excellent\", \"Very good\", \"Good\", \"Fair\", \"Poor\")\n  )\n\n\nInclude informative title, axis, and legend labels.\nComment on the motivating question based on evidence from the visualization: Do people who smoke more tend to have worse health conditions?\n\n\n Now is a good time to render, commit, and push."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-5",
+    "href": "hw/hw-1.html#exercise-5",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nHow are sleep and general health associated?\n\nCreate a visualization displaying the relationship between sleep and general_health.\nInclude informative title and axis labels.\nModify your plot to use a different theme than the default.\nComment on the motivating question based on evidence from the visualization: How are sleep and general health associated?\n\n\n Now is a good time to render, commit, and push."
+  },
+  {
+    "objectID": "hw/hw-1.html#exercise-6",
+    "href": "hw/hw-1.html#exercise-6",
+    "title": "HW 1 - Data visualization",
+    "section": "Exercise 6",
+    "text": "Exercise 6\n\nFill in the blanks:\n\nThe gg in the name of the package ggplot2 stands for ___.\nIf you map the same continuous variable to both x and y aesthetics in a scatterplot, you get a straight ___ line. (Choose between “vertical”, “horizontal”, or “diagonal”.)\n\n\nCode style: Fix up the code style by spaces and line breaks where needed. Briefly describe your fixes. (Hint: You can refer to the Tidyverse style guide.)\n\n\nggplot(data=mpg,mapping=aes(x=drv,fill=class))+geom_bar() +scale_fill_viridis_d()\n\n\nRead ?facet_wrap. What does nrow do? What does ncol do? What other options control the layout of the individual panels? Why doesn’t facet_grid() have nrow and ncol arguments?\n\n\n Render, commit, and push one last time.\nMake sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-1.html#submission",
+    "href": "hw/hw-1.html#submission",
+    "title": "HW 1 - Data visualization",
+    "section": "Submission",
+    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials Duke Net ID and log in using your Net ID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”). If you do not do this, you will be subject to lose points on the assignment.\nSelect the first page of your PDF submission to be associated with the “Workflow & formatting” question."
+  },
+  {
+    "objectID": "hw/hw-1.html#grading",
+    "href": "hw/hw-1.html#grading",
+    "title": "HW 1 - Data visualization",
+    "section": "Grading",
+    "text": "Grading\n\nExercise 1: 7 points\nExercise 2: 9 points\nExercise 3: 5 points\nExercise 4: 9 points\nExercise 5: 7 points\nExercise 6: 8 points\nWorkflow + formatting: 5 points\nTotal: 50 points"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199: Introduction to Data Science",
+    "section": "",
+    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      lab\n      exam\n      project\n      notes\n    \n\n\n1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\nRelease Lab 0\n\n\n\nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\n\n\n\n2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\nRelease: Lab 1 / Release: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\nDue: Lab 1\n\n\n\nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\nRelease: HW 2\n\n\n\nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\nRelease: Lab 2 / Due: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\nDue: Lab 2\n\n\n\nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\nDue HW 2\n\n\n\nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\nRelease: Lab 3\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\nDue: Lab 3\n\n\n\nW\n28 September\nLec 10\nTips for effective data visualization\nTroubleshooting + debugging\n\n\n\n\n\n\n\n\n\n\n\nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\nM\n3 October\nLec 11\nWeb scraping\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n\n\n\nW\n5 October\nLec 12\nFunctions + iteration\n\n\n\n\n\n\n\nRelease: HW 3\n\n\n\nTh\n6 October\nLab\nBonus lab\n\n\n\n\n\n\n\nRelease: Lab\n\n\n7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n\n\n\nW\n12 October\nLec 13\nData science ethics\n\n\n\n\n\n\n\nDue: HW 3\n\n\n\nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n8\nM\n17 October\nLec 14\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\n\n\nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\nTh\n20 October\nLab 5\nExploratory data analysis\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\nDue: Lab 5\n\n\n\nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\nRelease: HW 4\n\n\n\nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\nRelease: Lab 6\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\nM\n31 October\nLec 18\nLogistic regression\n\n\n\n\n\n\n\nDue: Lab 6\n\n\n\nW\n2 November\nLec 19\nPrediction and overfitting\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n\n\n\nTh\n3 November\nLab 7\nPredicting a categorical outcome\n\n\n\n\n\n\n\nRelease: Lab 7\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\nDue: Lab 7\n\n\n\nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\nDue: HW 5\n\n\n\nTh\n10 November\nLab 8\nBootstrapping\n\n\n\n\n\n\n\nRelease: Lab 8\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\nDue: Lab 8\n\n\n\nW\n16 November\nLec 23\nSimulation based inference overview\n\n\n\n\n\n\n\n\n\n\n\nTh\n17 November\nLab\nNo Lab - Work on Exam\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n\n\n\nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\nDue: Project draft due\n\n\n14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n\n\n15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n\n\n\nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\nDue: Project everything\n\n\n\nF\n9 December\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
+  },
+  {
+    "objectID": "labs/lab-0.html",
+    "href": "labs/lab-0.html",
+    "title": "Lab 0 - Hello R!",
+    "section": "",
+    "text": "This lab will introduce you to the course computing workflow. The main goal is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\nAn additional goal is to reinforce Git and GitHub, the collaboration and version control system that we will be using throughout the course.\nAs the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.\nTo make versioning simpler, this and the next lab are solo labs. In the future, you’ll learn about collaborating on GitHub and producing a single lab report for your lab team, but for now, concentrate on getting the basics down.\nBy the end of the lab, you will…"
+  },
+  {
+    "objectID": "labs/lab-0.html#log-in-to-rstudio",
+    "href": "labs/lab-0.html#log-in-to-rstudio",
+    "title": "Lab 0 - Hello R!",
+    "section": "Log in to RStudio",
+    "text": "Log in to RStudio\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\n\n\n\n\n\n\nWarning\n\n\n\nIf you haven’t yet done so, you will need to reserve a container for STA198-199 first."
+  },
+  {
+    "objectID": "labs/lab-0.html#set-up-your-ssh-key",
+    "href": "labs/lab-0.html#set-up-your-ssh-key",
+    "title": "Lab 0 - Hello R!",
+    "section": "Set up your SSH key",
+    "text": "Set up your SSH key\nYou will authenticate GitHub using SSH. Below are an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nType credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. It will begin with “ssh-rsa….” R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested."
+  },
+  {
+    "objectID": "labs/lab-0.html#configure-git",
+    "href": "labs/lab-0.html#configure-git",
+    "title": "Lab 0 - Hello R!",
+    "section": "Configure Git",
+    "text": "Configure Git\nThere is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\nType the following lines of code in the console in RStudio filling in your name and the email address associated with your GitHub account.\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"ElijahMeyer3\", \n  user.email = \"esm70@duke.edu\"\n  )\n\nYou are now ready interact with GitHub via RStudio!"
+  },
+  {
+    "objectID": "labs/lab-0.html#clone-the-repo-start-new-rstudio-project",
+    "href": "labs/lab-0.html#clone-the-repo-start-new-rstudio-project",
+    "title": "Lab 0 - Hello R!",
+    "section": "Clone the repo & start new RStudio project",
+    "text": "Clone the repo & start new RStudio project\n\nGo to the course organization at github.com/sta199-f22-2 organization on GitHub. Click on the repo with the prefix lab-0. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-0-datasaurus.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab."
+  },
+  {
+    "objectID": "labs/lab-0.html#r-and-r-studio",
+    "href": "labs/lab-0.html#r-and-r-studio",
+    "title": "Lab 0 - Hello R!",
+    "section": "R and R Studio",
+    "text": "R and R Studio\nBelow are the components of the RStudio IDE.\n\nBelow are the components of a Quarto (.qmd) file."
+  },
+  {
+    "objectID": "labs/lab-0.html#yaml",
+    "href": "labs/lab-0.html#yaml",
+    "title": "Lab 0 - Hello R!",
+    "section": "YAML",
+    "text": "YAML\nThe top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\n\n\n\n\n\n\nImportant\n\n\n\nOpen the Quarto (.qmd) file in your project, change the author name to your name, and render the document. Examine the rendered document."
+  },
+  {
+    "objectID": "labs/lab-0.html#committing-changes",
+    "href": "labs/lab-0.html#committing-changes",
+    "title": "Lab 0 - Hello R!",
+    "section": "Committing changes",
+    "text": "Committing changes\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your Rmd file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nYou don’t have to commit after every change, as this would get quite tedious. You should commit states that are meaningful to you for inspection, comparison, or restoration.\nIn the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions.\nNow let’s make sure all the changes went to GitHub. Go to your GitHub repo and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub and you’re good to go!"
+  },
+  {
+    "objectID": "labs/lab-0.html#push-changes",
+    "href": "labs/lab-0.html#push-changes",
+    "title": "Lab 0 - Hello R!",
+    "section": "Push changes",
+    "text": "Push changes\nNow that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. click on Push."
+  },
+  {
+    "objectID": "labs/lab-0.html#data-visualization-and-summary",
+    "href": "labs/lab-0.html#data-visualization-and-summary",
+    "title": "Lab 0 - Hello R!",
+    "section": "Data visualization and summary",
+    "text": "Data visualization and summary\n\nPlot y vs. x for the dino dataset. Then, calculate the correlation coefficient between x and y for this dataset.\n\nBelow is the code you will need to complete this exercise. Basically, the answer is already given, but you need to include relevant bits in your Rmd document and successfully render it and view the results.\nStart with the datasaurus_dozen and pipe it into the filter function to filter for observations where dataset == \"dino\". Store the resulting filtered data frame as a new data frame called dino_data.\n\ndino_data <- datasaurus_dozen |>\n  filter(dataset == \"dino\")\n\nThere is a lot going on here, so let’s slow down and unpack it a bit.\nFirst, the pipe operator: |>, takes what comes before it and sends it as the first argument to what comes after it. So here, we’re saying filter the datasaurus_dozen data frame for observations where dataset == \"dino\".\nSecond, the assignment operator: <-, assigns the name dino_data to the filtered data frame.\nNext, we need to visualize these data. We will use the ggplot function for this. Its first argument is the data you’re visualizing. Next we define the aesthetic mappings. In other words, the columns of the data that get mapped to certain aesthetic features of the plot, e.g. the x axis will represent the variable called x and the y axis will represent the variable called y. Then, we add another layer to this plot where we define which geometric shapes we want to use to represent each observation in the data. In this case we want these to be points, hence geom_point.\n\nggplot(data = dino_data, mapping = aes(x = x, y = y)) +\n  geom_point()\n\nFor the second part of this exercise, we need to calculate a summary statistic: the correlation coefficient. Correlation coefficient, often referred to as \\(r\\) in statistics, measures the linear association between two variables. You will see that some of the pairs of variables we plot do not have a linear relationship between them. This is exactly why we want to visualize first: visualize to assess the form of the relationship, and calculate \\(r\\) only if relevant. In this case, calculating a correlation coefficient really doesn’t make sense since the relationship between x and y is definitely not linear (it’s dinosaurial)!\nFor illustrative purposes only, let’s calculate the correlation coefficient between x and y.\n\n\n\n\n\n\nNote\n\n\n\nStart with `dino_data` and calculate a summary statistic that we will call `r` as the `cor`relation between `x` and `y`.\n\n\n\ndino_data |>\n  summarize(r = cor(x, y))\n\n\nThis is a good place to pause, render, and commit changes with the commit message “Added answer for Ex 2.”\nThen, push these changes when you’re done.\n\n\nPlot y vs. x for the star dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between x and y for this dataset. How does this value compare to the r of dino?\n\n\nThis is another good place to pause, render, and commit changes with the commit message “Added answer for Ex 3.”\nThen, push these changes when you’re done.\n\n\nPlot y vs. x for the circle dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between x and y for this dataset. How does this value compare to the r of dino?\n\n\nYou should pause again, render, commit changes with the commit message “Added answer for Ex 4”.\nThen, push.\n\nFinally, let’s plot all datasets at once. In order to do this we will make use of faceting, given by the code below:\n\n\n\n\n\n\nNote\n\n\n\nFacet by the dataset variable, placing the plots in a 3 column grid, and don’t add a legend.\n\n\n\nggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+\n  geom_point()+\n  facet_wrap(~ dataset, ncol = 3) +\n  theme(legend.position = \"none\")\n\nAnd we can use the group_by function to generate all the summary correlation coefficients. We’ll go through these functions next week when we learn about data wrangling.\n\ndatasaurus_dozen |>\n  group_by(dataset) |>\n  summarize(r = cor(x, y)) \n\n\nInclude the faceted plot and the summary of the correlation coefficients in your lab write-up by including relevant code in R chunks (give them appropriate names). In the narrative below the code chunks, briefly comment on what you notice about the plots and the correlations between x and y values within each of them (one or two sentences is fine!).\n\nYou’re done with the data analysis exercises, but we’d like to do one more thing to customize the look of the report."
+  },
+  {
+    "objectID": "labs/lab-0.html#resize-your-figures",
+    "href": "labs/lab-0.html#resize-your-figures",
+    "title": "Lab 0 - Hello R!",
+    "section": "Resize your figures",
+    "text": "Resize your figures\nWe can customize the output from a particular R chunk by including options in the header that will override any global settings.\n\nIn the R chunks you wrote for Exercises 2-5, customize the settings by modifying the options in the R chunks used to create those figures.\n\nFor Exercises 2, 3, and 4, we want square figures. We can use fig.height and fig.width in the options to adjust the height and width of figures. Modify the chunks in Exercises 2-4 to be as follows:\n\n```{r}\n#| label: ex2-chunk-label\n#| fig-height: 5\n#| fig-width: 5\n\n# Your code that created the figure\n```\n\nFor Exercise 5, modify your figure to have fig-height of 10 and fig-width of 6.\nNow, save and render.\nOnce you’ve created this PDF file, you’re done!\n\nCommit all remaining changes with the commit message “Done with Lab 1!”.\nThen push."
+  },
+  {
+    "objectID": "labs/lab-1.html",
+    "href": "labs/lab-1.html",
+    "title": "Lab 1 - Data visualization",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due Monday, Sep 12 at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-1.html#packages",
+    "href": "labs/lab-1.html#packages",
+    "title": "Lab 1 - Data visualization",
+    "section": "Packages",
+    "text": "Packages\nWe will use the tidyverse package to create and customize plots in R.\n\nlibrary(tidyverse)\nlibrary(viridis)"
+  },
+  {
+    "objectID": "labs/lab-1.html#data-lets-take-a-trip-to-the-midwest",
+    "href": "labs/lab-1.html#data-lets-take-a-trip-to-the-midwest",
+    "title": "Lab 1 - Data visualization",
+    "section": "Data: Let’s take a trip to the Midwest",
+    "text": "Data: Let’s take a trip to the Midwest\nThe data in this lab is in the midwest data frame. It is part of the ggplot2 R package, so the midwest data set is automatically loaded when you load the tidyverse package.\nThe data contains demographic characteristics of counties in the Midwest region of the United States.\nBecause the data set is part of the ggplot2 package, you can read documentation for the data set, including variable definitions by typing ?midwest in the console."
+  },
+  {
+    "objectID": "labs/lab-2.html",
+    "href": "labs/lab-2.html",
+    "title": "Lab 2 - wrangling-data",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due Monday, Sep 19 at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-2.html#warm-up",
+    "href": "labs/lab-2.html#warm-up",
+    "title": "Lab 2 - wrangling-data",
+    "section": "Warm up",
+    "text": "Warm up\nBefore we introduce the data, let’s warm up with some simple exercises.\n\nUpdate the YAML, changing the author name to your name, and render the document.\nCommit your changes with a meaningful commit message.\nPush your changes to GitHub.\nGo to your repo on GitHub and confirm that your changes are visible in your Qmd and pdf files. If anything is missing, commit and push again."
+  },
+  {
+    "objectID": "labs/lab-2.html#packages",
+    "href": "labs/lab-2.html#packages",
+    "title": "Lab 2 - wrangling-data",
+    "section": "Packages",
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling. This package is already installed for you. You can load them by running the following in your Console:\n\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "labs/lab-2.html#data",
+    "href": "labs/lab-2.html#data",
+    "title": "Lab 2 - wrangling-data",
+    "section": "Data",
+    "text": "Data\nThe dataset for this assignment can be found as a CSv (comma separated values) file in the data folder of your repository. You can read it in using the following.\n\nnobel <- read_csv(\"labs/data/nobel.csv\")\n\nThe variable descriptions are as follows:\n\n\nid: ID number\n\nfirstname: First name of laureate\n\nsurname: Surname\n\nyear: Year prize won\n\ncategory: Category of prize\n\naffiliation: Affiliation of laureate\n\ncity: City of laureate in prize year\n\ncountry: Country of laureate in prize year\n\nborn_date: Birth date of laureate\n\ndied_date: Death date of laureate\n\ngender: Gender of laureate\n\nborn_city: City where laureate was born\n\nborn_country: Country where laureate was born\n\nborn_country_code: Code of country where laureate was born\n\ndied_city: City where laureate died\n\ndied_country: Country where laureate died\n\ndied_country_code: Code of country where laureate died\n\noverall_motivation: Overall motivation for recognition\n\nshare: Number of other winners award is shared with\n\nmotivation: Motivation for recognition\n\nIn a few cases the name of the city/country changed after laureate was given (e.g. in 1975 Bosnia and Herzegovina was called the Socialist Federative Republic of Yugoslavia). In these cases the variables below reflect a different name than their counterparts without the suffix `_original`.\n\n\nborn_country_original: Original country where laureate was born\n\nborn_city_original: Original city where laureate was born\n\ndied_country_original: Original country where laureate died\n\ndied_city_original: Original city where laureate died\n\ncity_original: Original city where laureate lived at the time of winning the award\n\ncountry_original: Original country where laureate lived at the time of winning the award"
+  },
+  {
+    "objectID": "labs/lab-2.html#get-to-know-your-data",
+    "href": "labs/lab-2.html#get-to-know-your-data",
+    "title": "Lab 2 - wrangling-data",
+    "section": "Get to know your data",
+    "text": "Get to know your data\n\nHow many observations and how many variables are in the dataset? Use inline code to answer this question. What does each row represent?\n\nThere are some observations in this dataset that we will exclude from our analysis to match the Buzzfeed results.\n\nCreate a new data frame called nobel_living that filters for\n\n\nlaureates for whom country is available\nlaureates who are people as opposed to organizations (organizations are denoted with \"org\" as their gender)\nlaureates who are still alive (their died_date is NA)\n\n\n\n\nConfirm that once you have filtered for these characteristics you are left with a data frame with r nrow(nobel_living)` observations, once again using inline code."
+  },
+  {
+    "objectID": "labs/lab-2.html#most-living-nobel-laureates-were-based-in-the-us-when-they-won-their-prizes",
+    "href": "labs/lab-2.html#most-living-nobel-laureates-were-based-in-the-us-when-they-won-their-prizes",
+    "title": "Lab 2 - wrangling-data",
+    "section": "Most living Nobel laureates were based in the US when they won their prizes",
+    "text": "Most living Nobel laureates were based in the US when they won their prizes\n… says the Buzzfeed article. Let’s see if that’s true.\nFirst, we’ll create a new variable to identify whether the laureate was in the US when they won their prize. We’ll use the mutate() function for this. The following pipeline mutates the nobel_living data frame by adding a new variable called country_us. We use an if statement to create this variable. The first argument in the if_else() function we’re using to write this if statement is the condition we’re testing for. If country is equal to \"USA\", we set country_us to \"USA\". If not, we set the country_us to \"Other\".\n\nNote that we can achieve the same result using the `fct_other()` function we have seen before (i.e. with `country_us = fct_other(country, \"USA\")`). We decided to use the `if_else()` here to show you one example of an if statement in R.\n\n\n\n\nNext, we will limit our analysis to only the following categories: Physics, Medicine, Chemistry, and Economics.\n\n\n\nFor the next exercise work with the nobel_living_science data frame you created above. This means you’ll need to define this data frame in your R Markdown document, even though the next exercise doesn’t explicitly ask you to do so.\n\n\nCreate a faceted bar plot visualizing the relationship between the category of prize and whether the laureate was in the US when they won the nobel prize. Interpret your visualization, and say a few words about whether the Buzzfeed headline is supported by the data.\n\nYour visualization should be faceted by category.\nFor each facet you should have two bars, one for winners in the US and one for Other.\nFlip the coordinates so the bars are horizontal, not vertical.\n\n\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "labs/lab-2.html#but-of-those-us-based-nobel-laureates-many-were-born-in-other-countries",
+    "href": "labs/lab-2.html#but-of-those-us-based-nobel-laureates-many-were-born-in-other-countries",
+    "title": "Lab 2 - wrangling-data",
+    "section": "But of those US-based Nobel laureates, many were born in other countries",
+    "text": "But of those US-based Nobel laureates, many were born in other countries\n\n**Hint:** You should be able to ~~cheat~~ borrow from code you used earlier to create the `country_us` variable.\n\n\nCreate a new variable called born_country_us that has the value \"USA\" if the laureate is born in the US, and \"Other\" otherwise. How many of the winners are born in the US?\n\nAdd a second variable to your visualization from Exercise 3 based on whether the laureate was born in the US or not. Based on your visualization, do the data appear to support Buzzfeed’s claim? Explain your reasoning in 1-2 sentences.\n\nYour final visualization should contain a facet for each category.\nWithin each facet, there should be a bar for whether the laureate won the award in the US or not.\nEach bar should have segments for whether the laureate was born in the US or not.\n\n\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.\n\n\n\nIn a single pipeline, filter for laureates who won their prize in the US, but were born outside of the US, and then create a frequency table (with the count() function) for their birth country (born_country) and arrange the resulting data frame in descending order of number of observations for each country. Which country is the most common?\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "prepare/08-31.html",
+    "href": "prepare/08-31.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Watch: Meet the toolkit\nRead:\n\nR for Data Science: Chapter 1 - Introduction\nIntro to Modern Data Science: Chapter 1 - Hello data\n\nIf you haven’t yet done so:\n\nJoin the course Slack using the invitation link in your email.\nComplete the Getting to know you survey.\nReserve a STA 198-199 container at https://cmgr.oit.duke.edu/containers."
+  },
+  {
+    "objectID": "prepare/09-05.html",
+    "href": "prepare/09-05.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.1 and 2.4\n\nIf you haven’t yet done so:\n\nEdit the GitHub username document (on Sakai) to ensure your name is correct\nRead the syllabus!\nComplete the Getting to know you survey\nGet a GitHub account if you don’t have one (some advice for choosing a username here)\nJoin the course Slack using the invitation link in your email.\nReserve a STA 198-199 container at https://cmgr.oit.duke.edu/containers."
+  },
+  {
+    "objectID": "prepare/09-07.html",
+    "href": "prepare/09-07.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Read:\n\nIMS: Chp 4 - Exploring categorical data\nIMS: Chp 5 - Exploring numerical data\n\nWatch:\n\nVisualizing numerical data\nVisualizing categorical data"
+  },
+  {
+    "objectID": "prepare/09-08.html",
+    "href": "prepare/09-08.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.5 - 2.10\n\nWatch:\n\nData and visualization\nVisualising data with ggplot2"
+  },
+  {
+    "objectID": "prepare/9-12.html",
+    "href": "prepare/9-12.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Note\n\n\n\nVideos use the “old school” pipe (%>%) but we’ll be using the newer (|>) pipe operator in class."
+  },
+  {
+    "objectID": "prepare/9-14.html",
+    "href": "prepare/9-14.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Note\n\n\n\nVideos use the “old school” pipe (%>%) but we’ll be using the newer (|>) pipe operator in class."
+  },
+  {
+    "objectID": "prepare/9-15.html",
+    "href": "prepare/9-15.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Note\n\n\n\nVideos use the “old school” pipe (%>%) but we’ll be using the newer (|>) pipe operator in class."
+  },
+  {
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "Project description",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "project-tips-resources.html",
+    "href": "project-tips-resources.html",
+    "title": "Project tips + resources",
+    "section": "",
+    "text": "To be posted."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#syllabus",
+    "href": "slides/01-welcome-199.html#syllabus",
+    "title": "Welcome to STA 199",
+    "section": "Syllabus",
+    "text": "Syllabus\nsta199-f22-2.github.io/"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#goals-for-day-1",
+    "href": "slides/01-welcome-199.html#goals-for-day-1",
+    "title": "Welcome to STA 199",
+    "section": "Goals for Day 1",
+    "text": "Goals for Day 1\n\nGet to know the professor & ta\nGet to know each other\nCourse overview\nRegister with GitHub & Slack\nIntroduce R + start thinking about data"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#who-am-i",
+    "href": "slides/01-welcome-199.html#who-am-i",
+    "title": "Welcome to STA 199",
+    "section": "Who Am I?",
+    "text": "Who Am I?"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#who-are-you",
+    "href": "slides/01-welcome-199.html#who-are-you",
+    "title": "Welcome to STA 199",
+    "section": "Who Are You?",
+    "text": "Who Are You?\nPlease share with your neighbors:\n\nMajor\nYear\nWhy you taking the course\nWhat other courses are you taking\nAnything else"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#our-classroom",
+    "href": "slides/01-welcome-199.html#our-classroom",
+    "title": "Welcome to STA 199",
+    "section": "Our Classroom",
+    "text": "Our Classroom\n\nCommunity\nCommunication\nRespect"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#what-is-data-science",
+    "href": "slides/01-welcome-199.html#what-is-data-science",
+    "title": "Welcome to STA 199",
+    "section": "What is data science?",
+    "text": "What is data science?\n“Data science is a concept to unify statistics, data analysis, machine learning and their related methods in order to understand and analyze actual phenomena with data. It employs techniques and theories drawn from many fields within the context of mathematics, statistics, information science, and computer science.”\n-Wikipedia"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#examples-of-data-science",
+    "href": "slides/01-welcome-199.html#examples-of-data-science",
+    "title": "Welcome to STA 199",
+    "section": "Examples of data science",
+    "text": "Examples of data science\n\nIdentification and prediction of disease\nTargeted advertising\nSupply chain optimization\nSports recruitment + strategist\nThe list goes on and on….."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#jobs",
+    "href": "slides/01-welcome-199.html#jobs",
+    "title": "Welcome to STA 199",
+    "section": "Jobs",
+    "text": "Jobs"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#jobs-1",
+    "href": "slides/01-welcome-199.html#jobs-1",
+    "title": "Welcome to STA 199",
+    "section": "Jobs",
+    "text": "Jobs"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#data-literacy",
+    "href": "slides/01-welcome-199.html#data-literacy",
+    "title": "Welcome to STA 199",
+    "section": "Data literacy",
+    "text": "Data literacy"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#course-objectives",
+    "href": "slides/01-welcome-199.html#course-objectives",
+    "title": "Welcome to STA 199",
+    "section": "Course objectives",
+    "text": "Course objectives\n\nLearn to explore, visualize, and analyze data in a reproducible and shareable manner\nGain experience in data wrangling, exploratory data analysis, predictive modeling, and data visualization\nWork on problems and case studies inspired by and based on real-world questions and data\nLearn to effectively communicate results through written assignments and final project presentation"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#some-of-what-you-will-learn",
+    "href": "slides/01-welcome-199.html#some-of-what-you-will-learn",
+    "title": "Welcome to STA 199",
+    "section": "Some of what you will learn",
+    "text": "Some of what you will learn\n\n\n\n\n\n– Fundamentals of R\n– Data visualization\n– Web scraping\n– Version control with GitHub\n\n– Reproducible reports with Quarto\n– Regression and classification\n– Statistical inference"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#r---figures",
+    "href": "slides/01-welcome-199.html#r---figures",
+    "title": "Welcome to STA 199",
+    "section": "R - figures",
+    "text": "R - figures\n\n\n\n\n\n\n\n\n\n\nFigure 1: Example R Figures"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#r---apps",
+    "href": "slides/01-welcome-199.html#r---apps",
+    "title": "Welcome to STA 199",
+    "section": "R - apps",
+    "text": "R - apps"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#r",
+    "href": "slides/01-welcome-199.html#r",
+    "title": "Welcome to STA 199",
+    "section": "R",
+    "text": "R\n\n\n\n\n\n\nNote\n\n\n This is a new language"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#workflow",
+    "href": "slides/01-welcome-199.html#workflow",
+    "title": "Welcome to STA 199",
+    "section": "Workflow",
+    "text": "Workflow\nBefore Class\n\nWatch lecture content videos\n\nDuring Class\n\nWarm up question\nMix of lecture and interaction"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#please-bring-your-laptops-if-able",
+    "href": "slides/01-welcome-199.html#please-bring-your-laptops-if-able",
+    "title": "Welcome to STA 199",
+    "section": "Please bring your laptops if able",
+    "text": "Please bring your laptops if able"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#activities-and-assessments",
+    "href": "slides/01-welcome-199.html#activities-and-assessments",
+    "title": "Welcome to STA 199",
+    "section": "Activities and assessments",
+    "text": "Activities and assessments\n\nHomework: Individual assignments combining conceptual and computational skills.\nLabs: Individual or team assignments focusing on computational skills.\nExams: Two take-home exams.\nFinal Project: Team project presented during the final exam period.\nApplication Exercises: Exercises worked on during the live lecture session.\nStatistics Experiences: Engage with statistics outside of the classroom and reflect on your experience."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#lab",
+    "href": "slides/01-welcome-199.html#lab",
+    "title": "Welcome to STA 199",
+    "section": "Lab",
+    "text": "Lab\n\nFocus on computing using R tidyverse syntax\nApply concepts from lecture to case study scenarios\nWork on labs individually or in teams of 3 - 4"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#textbooks-and-readings",
+    "href": "slides/01-welcome-199.html#textbooks-and-readings",
+    "title": "Welcome to STA 199",
+    "section": "Textbooks and readings",
+    "text": "Textbooks and readings\n\nR for Data Science by Grolemund & Wickham (2nd ed. O’Reilly)\nIntroduction to Modern Statistics by Cetinkaya-Rundel & Hardin (1st ed. OpenIntro)"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#where-to-find-help-in-the-course",
+    "href": "slides/01-welcome-199.html#where-to-find-help-in-the-course",
+    "title": "Welcome to STA 199",
+    "section": "Where to find help in the course",
+    "text": "Where to find help in the course\n\nAttend Office hours to meet with a member of the teaching team\nEmail me to set up a time: esm70@duke.edu"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#academic-resource-center",
+    "href": "slides/01-welcome-199.html#academic-resource-center",
+    "title": "Welcome to STA 199",
+    "section": "Academic Resource Center",
+    "text": "Academic Resource Center\nThe Academic Resource Center (ARC) offers free services to all students during their undergraduate careers at Duke.\nServices include:\n– Learning Consultations\n– Peer Tutoring and Study Groups\n– ADHD/LD Coaching, Outreach Workshops and more\nContact the ARC at ARC@duke.edu or call 919-684-5917 to schedule an appointment."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#create-a-github-account-why",
+    "href": "slides/01-welcome-199.html#create-a-github-account-why",
+    "title": "Welcome to STA 199",
+    "section": "Create a GitHub account (Why?)",
+    "text": "Create a GitHub account (Why?)\nGitHub, Inc., is an Internet hosting service for software development and version control."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#create-a-github-account",
+    "href": "slides/01-welcome-199.html#create-a-github-account",
+    "title": "Welcome to STA 199",
+    "section": "Create a GitHub account",
+    "text": "Create a GitHub account\nPlease do this before the Getting to know you survey\nGo to https://github.com/, and create an account (unless you already have one).\nSome tips from Happy Git with R.\n– Incorporate your actual name! – Reuse your username from other contexts if you can, e. g., Twitter or Slack. – Pick a username you will be comfortable revealing to your future boss. – Be as unique as possible in as few characters as possible. Shorter is better than longer. – Avoid words with special meaning in programming (e.g. NA)."
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#slack",
+    "href": "slides/01-welcome-199.html#slack",
+    "title": "Welcome to STA 199",
+    "section": "Slack",
+    "text": "Slack\nPlease click the Slack link located here or in Sakai announcements to be a part of the discussions!"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#r-studio",
+    "href": "slides/01-welcome-199.html#r-studio",
+    "title": "Welcome to STA 199",
+    "section": "R-Studio",
+    "text": "R-Studio\n– Reserve a STA198-1991 RStudio container – Go to https://vm-manage.oit.duke.edu/containers – Click Reserve Container for the STA198-199 container"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#our-turn",
+    "href": "slides/01-welcome-199.html#our-turn",
+    "title": "Welcome to STA 199",
+    "section": "Our Turn",
+    "text": "Our Turn\nClone a repo so you have access to the qmd"
+  },
+  {
+    "objectID": "slides/01-welcome-199.html#for-wednesday",
+    "href": "slides/01-welcome-199.html#for-wednesday",
+    "title": "Welcome to STA 199",
+    "section": "For Wednesday",
+    "text": "For Wednesday\n– We’ll start talking about the computing toolkit\n– Watch videos for Wednesday\n– Complete Getting to Know You Survey\nPlease bring laptop to class if able for next time!\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/02-Meet-the-toolkit.html#github-commands-pull-commit-push-thursday-prep",
+    "href": "slides/02-Meet-the-toolkit.html#github-commands-pull-commit-push-thursday-prep",
+    "title": "Welcome to STA 199",
+    "section": "GitHub Commands: Pull Commit Push (Thursday Prep)",
+    "text": "GitHub Commands: Pull Commit Push (Thursday Prep)"
+  },
+  {
+    "objectID": "slides/02-Meet-the-toolkit.html#github-commands-pull-commit-push-thursday-prep-1",
+    "href": "slides/02-Meet-the-toolkit.html#github-commands-pull-commit-push-thursday-prep-1",
+    "title": "Welcome to STA 199",
+    "section": "GitHub Commands: Pull Commit Push (Thursday Prep)",
+    "text": "GitHub Commands: Pull Commit Push (Thursday Prep)"
+  },
+  {
+    "objectID": "slides/02-Meet-the-toolkit.html#github-commands-pull-commit-push-thursday-prep-2",
+    "href": "slides/02-Meet-the-toolkit.html#github-commands-pull-commit-push-thursday-prep-2",
+    "title": "Welcome to STA 199",
+    "section": "GitHub Commands: Pull Commit Push (Thursday Prep)",
+    "text": "GitHub Commands: Pull Commit Push (Thursday Prep)"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#goals-for-today",
+    "href": "slides/03-Grammer-of-Graphics.html#goals-for-today",
+    "title": "Grammer of Graphics",
+    "section": "Goals for today",
+    "text": "Goals for today\n– Think about what to do (and not to do) with visualizations\n– Understand the fundamentals of ggplot\n– Build appropriate visualizations\n– More practice with R"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#announcements",
+    "href": "slides/03-Grammer-of-Graphics.html#announcements",
+    "title": "Grammer of Graphics",
+    "section": "Announcements",
+    "text": "Announcements\n– Turn in AE’s via GitHub (will go over today)\n– Will turn in Lab 1 via GitHub (Thursday)\n– Release HW 1 Wednesday (Turned in on Gradescope: Being set up now)"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#prepare-reading-questions",
+    "href": "slides/03-Grammer-of-Graphics.html#prepare-reading-questions",
+    "title": "Grammer of Graphics",
+    "section": "Prepare Reading Questions",
+    "text": "Prepare Reading Questions\nhttps://app.sli.do/event/g6fnKCDuZ1sw8NKiZTu3Rb"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#reading-highlights",
+    "href": "slides/03-Grammer-of-Graphics.html#reading-highlights",
+    "title": "Grammer of Graphics",
+    "section": "Reading Highlights",
+    "text": "Reading Highlights\n– Sometimes you’ll run the code and nothing happens. Check the left-hand of your console: if it’s a +, it means that R doesn’t think you’ve typed a complete expression and it’s waiting for you to finish it."
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#examining-data-visualization",
+    "href": "slides/03-Grammer-of-Graphics.html#examining-data-visualization",
+    "title": "Grammer of Graphics",
+    "section": "Examining data visualization",
+    "text": "Examining data visualization\n\n\n\n\n\nDiscuss the following for the visualization.\n– What is the visualization trying to show?\n– What is effective, i.e. what is done well?\n– What is ineffective, i.e. what could be improved?\n– What are you curious about after looking at the visualization?\n\n\n\n−+\n04:00\n\n\n\n\n\n\n\nSource: Twitter"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#ae-02-starwars",
+    "href": "slides/03-Grammer-of-Graphics.html#ae-02-starwars",
+    "title": "Grammer of Graphics",
+    "section": "ae-02-starwars",
+    "text": "ae-02-starwars\n\nGo to the course GitHub org and find your ae-02-starwars (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today (Thursday by 11:59p ET)."
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#exercises-2.3.1",
+    "href": "slides/03-Grammer-of-Graphics.html#exercises-2.3.1",
+    "title": "Grammer of Graphics",
+    "section": "Exercises 2.3.1",
+    "text": "Exercises 2.3.1"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#match-the-variables-to-plots",
+    "href": "slides/03-Grammer-of-Graphics.html#match-the-variables-to-plots",
+    "title": "Grammer of Graphics",
+    "section": "Match the variables to plots",
+    "text": "Match the variables to plots\n\n\n– 1 categorical variable, 1 quantitative variable (often ordinal)\n– 2 quantitative variables\n– 1 quantitative variable\n\n\n\n−+\n04:00\n\n\n\n\n– geom_histogram\n– geom_point\n– geom_bar"
+  },
+  {
+    "objectID": "slides/03-Grammer-of-Graphics.html#recap-of-ae",
+    "href": "slides/03-Grammer-of-Graphics.html#recap-of-ae",
+    "title": "Grammer of Graphics",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n– Construct plots with ggplot().\n– Layers of ggplots are separated by +s.\n– The formula is (almost) always as follows:\n\nggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +\n  geom_XXX()\n\n– Aesthetic attributes of a geometries (color, size, transparency, etc.) can be mapped to variables in the data or set by the user.\n– Use facet_wrap() when faceting (creating small multiples) by one variable and facet_grid() when faceting by two variables.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#checklist",
+    "href": "slides/04-Visualizing-various-types-of-data.html#checklist",
+    "title": "Visualizing various types of data",
+    "section": "Checklist",
+    "text": "Checklist\n\n\n\n– Go to the course GitHub org and find your ae-03-penguins (repo name will be suffixed with your GitHub name).\n– Clone the repo in your container, open the Quarto document in the repo\n– Reach out if you have questions"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#warm-up-exercises-2.3.1",
+    "href": "slides/04-Visualizing-various-types-of-data.html#warm-up-exercises-2.3.1",
+    "title": "Visualizing various types of data",
+    "section": "Warm up: Exercises 2.3.1",
+    "text": "Warm up: Exercises 2.3.1"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data",
+    "href": "slides/04-Visualizing-various-types-of-data.html#questions-from-chp-4---exploring-categorical-data-chp-5---exploring-numerical-data",
+    "title": "Visualizing various types of data",
+    "section": "Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data",
+    "text": "Questions from Chp 4 - Exploring categorical data / Chp 5 - Exploring numerical data\nhttps://app.sli.do/event/mX7kxXxd49tL4VS9iwCa2T"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#how-to-turn-aes-via-github",
+    "href": "slides/04-Visualizing-various-types-of-data.html#how-to-turn-aes-via-github",
+    "title": "Visualizing various types of data",
+    "section": "How to turn AE’s via Github",
+    "text": "How to turn AE’s via Github\n– render, commit, and push\n\nIf you made any changes since the last render, render again to get the final version of the AE.\nCheck the box next to each document in the Git tab (this is called “staging” the changes). Commit the changes you made using an simple and informative message.\nUse the green arrow to push your changes to your repo on GitHub.\nCheck your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot",
+    "href": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot",
+    "title": "Visualizing various types of data",
+    "section": "The variables dictate the plot",
+    "text": "The variables dictate the plot\n– Assess the relationship between height and weight\n– Investigate the distribution of scores on exam 1\n– Explore 2022 temperatures between Montana and North Carolina\n– Examine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended)"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot-1",
+    "href": "slides/04-Visualizing-various-types-of-data.html#the-variables-dictate-the-plot-1",
+    "title": "Visualizing various types of data",
+    "section": "The variables dictate the plot",
+    "text": "The variables dictate the plot\n\nAssess the relationship between height and weight - geom_point()\nInvestigate the distribution of scores on exam 1 - geom_histogram() / geom_boxplot\nExplore 2022 temperatures between Montana and North Carolina - geom_histogram / geom_boxplot (with changes in the aes!)\nExamine if drinking coffee or not impacts the amount of sleep you get (above recommended, at recommended, below recommended) - geom_bar (with changes in the aes!)"
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#ae-03",
+    "href": "slides/04-Visualizing-various-types-of-data.html#ae-03",
+    "title": "Visualizing various types of data",
+    "section": "ae-03",
+    "text": "ae-03\n\nGo to the course GitHub org and find your ae-03 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/04-Visualizing-various-types-of-data.html#recap-of-ae",
+    "href": "slides/04-Visualizing-various-types-of-data.html#recap-of-ae",
+    "title": "Visualizing various types of data",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nTake control of your labels\nUse color to your advantage. https://ggplot2.tidyverse.org/reference/ggtheme.html & https://ggplot2.tidyverse.org/reference/scale_viridis.html\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#checklist",
+    "href": "slides/05-grammar-of-data-wrangling.html#checklist",
+    "title": "Grammar of data wrangling",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone your ae-03 repo. – Turn in Lab 1 via Gradescope – Reach out (OH should all be updated) – Reminder: AEs due Thursday and Saturday 11:59; Labs due Monday; HWs due in 1 week from assigned"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#goals",
+    "href": "slides/05-grammar-of-data-wrangling.html#goals",
+    "title": "Grammar of data wrangling",
+    "section": "Goals",
+    "text": "Goals\n\nUnderstand why we need to manipulate data\nCalculate summary measures of data set\nManipulate the format of data\nPractice with tidyverse functions"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#cant-commit",
+    "href": "slides/05-grammar-of-data-wrangling.html#cant-commit",
+    "title": "Grammar of data wrangling",
+    "section": "Can’t Commit?",
+    "text": "Can’t Commit?"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#r4ds-chp-4---data-transformation",
+    "href": "slides/05-grammar-of-data-wrangling.html#r4ds-chp-4---data-transformation",
+    "title": "Grammar of data wrangling",
+    "section": "R4DS: Chp 4 - Data transformation",
+    "text": "R4DS: Chp 4 - Data transformation\nhttps://wall.sli.do/event/56i17rXu3VTsLVtwRZCX9w?section=98f8a405-2365-4313-9a45-a84f43a58b9c"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#warm-up",
+    "href": "slides/05-grammar-of-data-wrangling.html#warm-up",
+    "title": "Grammar of data wrangling",
+    "section": "Warm up",
+    "text": "Warm up\n\n\n\nWhat is the difference between long and wide data?"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#ae-03",
+    "href": "slides/05-grammar-of-data-wrangling.html#ae-03",
+    "title": "Grammar of data wrangling",
+    "section": "ae-03",
+    "text": "ae-03\n\n\nGo to the course GitHub org and find your ae-02 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
+    "href": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
+    "title": "Grammar of data wrangling",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nWe can transform data to learn more about what’s going on\nPipe operator allows us to step through the process and combine multiple functions together\nData are messy. This are valuable tools to tell the story you want\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  }
+]
