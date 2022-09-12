@@ -1,0 +1,206 @@
+---
+title: "ae-02 Data visualization"
+author: [INSERT NAME HERE]
+format: html
+editor: visual
+---
+
+## Packages and Data
+
+We will be using functions from the **tidyverse** package. Please library the package before we begin. If R can't find the package, you need to install the package using **install.packages("tidyverse**)
+
+```{r load-packages, warning = FALSE, message  = FALSE }
+library(tidyverse)
+```
+
+```{r load-data, warning = FALSE, message = FALSE}
+starwars <- read_csv("data/starwars.csv")
+```
+
+For this analysis, we will data on the characters in the *Stars Wars* movie franchise.
+
+## Getting started
+
+### Get to know the data
+
+We can use the `glimpse` function to get an overview (or "glimpse") of the data.
+
+```{r glimpse-starwars}
+glimpse(starwars)
+```
+
+-   How many observations (rows) are in the data set? 87 rows
+-   How many variables (columns) are in the data set? 14
+-   What does each row represent? Each column?
+
+### Getting started with `ggplot2`
+
+-   `ggplot` creates the initial base coordinate system, and we will add layers to that base. We first specify the data set we will use with `data = starwars`.
+
+```{r starwars-base}
+ggplot(data = starwars)
+```
+
+-   The `mapping` argument is paired with an aesthetic (`aes`), which tells us how the variables in our data set should be mapped to the visual properties of the graph. In ggplot2 , aesthetic means "something you can see". Each aesthetic is a mapping between a visual cue and a variable. Let's set the stage to explore the relationship between the height and mass of each Star Wars character.
+
+```{r starwars-map}
+ggplot(data = starwars, 
+       mapping = aes(x = height , y = mass)) 
+```
+
+-   What type of variable is height?
+
+-   What type of variable is mass?
+
+-   What plot is most appropriate to explore the relationship between height and mass?
+
+-   The `geom_xx` function specifies the type of plot we want to use to represent the data. In the code below, we use `geom_point` which creates a plot where each observation is represented by a point.
+
+```{r starwars-point}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass)) +
+  geom_point() 
+```
+
+## Step 1
+
+Modify the following plot to change the color of all points to `"pink"`. Note: pink needs to be in quotes because it is not a variable mapped to from our data to our plot. Because it is not a variable being mapped to our plot, it does not go in `aes`thetic.
+
+```{r starwars-plot-color}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass)) +
+  geom_point(color = "pink" ) 
+```
+
+-   Do you notice anything interesting about these data?
+
+## Step 1B
+
+For the sake of this activity, we are going to remove the extreme character.
+
+```{r}
+## Remove outlier 
+starwars <- subset(starwars, mass < 1000)
+```
+
+## Step 2
+
+Add labels for the title and x and y axes. Change the \_\_\_\_\_ to informative labels. This is good practice. Often, you do not want to use the column headers as labels.
+
+```{r starwars-plot-labels}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass)) +
+  geom_point(color = "pink") + 
+  labs(x = "Height (in inches)", 
+       y = "Mass", 
+       title = "Height \nvs Mass")
+```
+
+## Step 3
+
+An `aes`thetic is a visual property of one of the objects in your plot. Aesthetic options are:
+
+-   shape
+-   color
+-   size
+-   fill
+
+Modify the plot below, so the color of the points is based on `hair_color`. Note: When you add `aes`thetic options, they need to be seperated by a , . What happens if you put hair_color in geom_point?
+
+```{r starwars-aes-color}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass, color = hair_color )) +
+  geom_point()
+```
+
+-   Does the relationship of characters' height and mass change based on their hair color?
+
+## Step 4
+
+Modify the plot below, so the color of the points is based on `hair_color` and the size is based on `birth_year`.
+
+```{r starwars-color-size}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass, color = hair_color, size = birth_year)) +
+  geom_point(alpha = 1)
+```
+
+## Step 5
+
+Use `facet_wrap` to display the association between mass and height for different values of `eye_color`. Note: Eye color needs to be in quotes because it is not directly mapped from our data set in `aes`thetic.
+
+```{r starwars-facet}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass)) +
+  geom_point() +
+  facet_wrap("eye_color")
+```
+
+## Step 6
+
+Use `facet_grid` to display the association between mass and height for different combinations of `eye_color` and `hair_color`.
+
+```{r starwars-facet-grid}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass)) +
+  geom_point() +
+  facet_grid(c("eye_color", "hair_color"))
+```
+
+## Step 7
+
+Use `facet_grid` to display the association between mass and height for different combinations of `eye_color` and `hair_color` with the color based on `hair_color`. Add labels for the title, x and y axes, and the color.
+
+```{r starwars-plot-final}
+ggplot(data = starwars, 
+       mapping = aes(x = height, y = mass, color = hair_color))+
+  geom_point() +
+  facet_grid(c("eye_color", "hair_color")) +
+    labs(x = "Height (in inches)", 
+       y = "Mass", 
+       title = "Height \nvs Mass",
+       color = "Hair Color"
+       )
+
+```
+
+## Optional (Try it on your own)
+
+Suppose now that you want to make a boxplot for the heights of all characters. What changes from the code above? Hint: Think about how many variables we are working with \| Think about the type of plot we are making.
+
+```{r}
+ggplot(starwars, 
+       aes(x = height)) + 
+       geom_boxplot()
+
+```
+
+Copy your code from the previous code chunk and add appropriate labels.
+
+```{r}
+ggplot(starwars, 
+       aes(x = height)) + 
+       geom_boxplot() + 
+       labs(title = "Height of all Characters")
+
+```
+
+Does height change based on the sex of the character? Create side-by-side boxplots to answer the question. Hint: Use group and fill in the `aes`thetic options.
+
+```{r}
+ggplot(data = starwars, 
+       mapping = aes(x = height , group = sex, fill = sex )) +
+  geom_boxplot(show.legend = T) 
+```
+
+Yes. It looks like the relationship between height differs based on the character's sex. Character's with no sex seem to be much shorter than the others, while also having the most variability. 
+
+## render, commit, and push
+
+1.  If you made any changes since the last render, render again to get the final version of the AE.
+
+2.  Check the box next to each document in the Git tab (this is called "staging" the changes). Commit the changes you made using an simple and informative message.
+
+3.  Use the **green arrow** to push your changes to your repo on GitHub.
+
+4.  Check your repo on GitHub and see the updated files. Once your updated files are in your repo on GitHub, you're good to go!
