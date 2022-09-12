@@ -1,0 +1,50 @@
+---
+title: "Grammar of data wrangling"
+subtitle: "Lecture 5"
+date: "September 12, 2022"
+format: revealjs
+---
+
+
+
+## Checklist 
+
+-   Clone your `ae-03` repo.
+-   Turn in Lab 1 via Gradescope 
+
+## Warm up
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+What is the difference between long and wide data? 
+
+![](images/05-data-wrangling/widelong.png){fig-align="center"}
+
+## Can't Commit? 
+
+![](images/05-data-wrangling/projectpush.png){fig-align="center"}
+
+## R4DS: Chp 4 - Data transformation
+
+https://wall.sli.do/event/56i17rXu3VTsLVtwRZCX9w?section=98f8a405-2365-4313-9a45-a84f43a58b9c
+
+
+# Application exercise
+
+## `ae-03`
+
+::: appex
+-   Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae-02` (repo name will be suffixed with your GitHub name).
+-   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
+-   Render, commit, and push your edits by the AE deadline -- 3 days from today.
+:::
+
+## Recap of AE {.smaller}
+
+-   Something about pipe...
+-   Something about building pipelines
+-   ...

@@ -10,22 +10,21 @@ date: "September 5th, 2022"
 
 -- Have checked the GitHub username sheet
 
--- Keeping up with the **Prepare** link on course website 
+-- Keeping up with the **Prepare** link on course website
 
---   Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-02-starwars` (repo name will be suffixed with your GitHub name).
---   Clone the repo in your container, open the Quarto document in the repo
+-- Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-02-starwars` (repo name will be suffixed with your GitHub name). -- Clone the repo in your container, open the Quarto document in the repo
 
-## Goals for today 
+## Goals for today
 
--- Think about what to do (and not to do) with visualizations 
+-- Think about what to do (and not to do) with visualizations
 
--- Understand the fundamentals of ggplot 
+-- Understand the fundamentals of ggplot
 
--- Build appropriate visualizations 
+-- Build appropriate visualizations
 
--- More practice with R 
+-- More practice with R
 
-## Announcements 
+## Announcements
 
 -- Turn in AE's via GitHub (will go over today)
 
@@ -33,14 +32,13 @@ date: "September 5th, 2022"
 
 -- Release HW 1 Wednesday (Turned in on Gradescope: Being set up now)
 
-
 ## Prepare Reading Questions
 
 https://app.sli.do/event/g6fnKCDuZ1sw8NKiZTu3Rb
 
-## Reading Highlights 
+## Reading Highlights
 
--- Sometimes you’ll run the code and nothing happens. Check the left-hand of your console: if it’s a +, it means that R doesn’t think you’ve typed a complete expression and it’s waiting for you to finish it. 
+-- Sometimes you'll run the code and nothing happens. Check the left-hand of your console: if it's a +, it means that R doesn't think you've typed a complete expression and it's waiting for you to finish it.
 
 ![](images/03-Grammer-of-Graphics/plus.png){fig-align="center"}
 
@@ -55,13 +53,13 @@ library(countdown)
 ::: {.column width="50%"}
 Discuss the following for the visualization.
 
---   What is the visualization trying to show?
+-- What is the visualization trying to show?
 
---   What is effective, i.e. what is done well?
+-- What is effective, i.e. what is done well?
 
---   What is ineffective, i.e. what could be improved?
+-- What is ineffective, i.e. what could be improved?
 
---   What are you curious about after looking at the visualization?
+-- What are you curious about after looking at the visualization?
 
 ```{r}
 #| echo: false
@@ -69,20 +67,14 @@ countdown(minutes = 4, left = 0, color_text = "#325b74")
 ```
 :::
 
-
 ::: {.column width="50%"}
-
 ![Source: [Twitter](https://twitter.com/reina_sabah/status/1291509085855260672)](images/03-Grammer-of-Graphics/female-heights.png){fig-align="center"}
-
 :::
 :::
-
-
 
 # Application exercise
 
 ## `ae-02-starwars`
-
 
 -   Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-02-starwars` (repo name will be suffixed with your GitHub name).
 -   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
@@ -92,20 +84,15 @@ countdown(minutes = 4, left = 0, color_text = "#325b74")
 
 ![](images/03-Grammer-of-Graphics/what'swrong.png){fig-align="center"}
 
-
-
-
 ## Match the variables to plots
 
 ::: columns
 ::: {.column width="60%"}
+-- 1 categorical variable, 1 quantitative variable (often ordinal)
 
+-- 2 quantitative variables
 
---   1 categorical variable, 1 quantitative variable (often ordinal)
-
---   2 quantitative variables
-
---   1 quantitative variable 
+-- 1 quantitative variable
 
 ```{r}
 #| echo: false
@@ -113,30 +100,22 @@ countdown(minutes = 4, left = 0, color_text = "#325b74")
 ```
 :::
 
-
 ::: {.column width="40%"}
-
 -- geom_histogram
 
 -- geom_point
 
 -- geom_bar
-
 :::
 :::
-
-
-
-
-
 
 ## Recap of AE {.smaller}
 
---   Construct plots with `ggplot()`.
+-- Construct plots with `ggplot()`.
 
---   Layers of ggplots are separated by `+`s.
+-- Layers of ggplots are separated by `+`s.
 
---   The formula is (almost) always as follows:
+-- The formula is (almost) always as follows:
 
 ```{r}
 #| eval: false
@@ -144,6 +123,6 @@ ggplot(DATA, aes(x = X-VAR, y = Y-VAR, ...)) +
   geom_XXX()
 ```
 
---   Aesthetic attributes of a geometries (color, size, transparency, etc.) can be **map**ped to variables in the data or **set** by the user.
+-- Aesthetic attributes of a geometries (color, size, transparency, etc.) can be **map**ped to variables in the data or **set** by the user.
 
---   Use `facet_wrap()` when faceting (creating small multiples) by one variable and `facet_grid()` when faceting by two variables.
+-- Use `facet_wrap()` when faceting (creating small multiples) by one variable and `facet_grid()` when faceting by two variables.

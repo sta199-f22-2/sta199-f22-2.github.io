@@ -13,8 +13,7 @@ Go to the [course GitHub organization](https://github.com/sta199-f22-1) and loca
 This AE is due Friday, Sep 16 at 11:59pm.
 :::
 
-To demonstrate data wrangling we will use `flights`, a tibble in the **nycflights13** R package.
-It includes characteristics of all flights departing from New York City (JFK, LGA, EWR) in 2013.
+To demonstrate data wrangling we will use `flights`, a tibble in the **nycflights13** R package. It includes characteristics of all flights departing from New York City (JFK, LGA, EWR) in 2013.
 
 ```{r}
 #| label: load-packages
@@ -24,8 +23,7 @@ library(tidyverse)
 library(nycflights13)
 ```
 
-The data frame has over 336,000 observations (rows), `r nrow(flights)` observations to be exact, so we will **not** view the entire data frame.
-Instead we'll use the commands below to help us explore the data.
+The data frame has over 336,000 observations (rows), `r nrow(flights)` observations to be exact, so we will **not** view the entire data frame. Instead we'll use the commands below to help us explore the data.
 
 ```{r}
 #| label: glimpse-data
@@ -49,8 +47,7 @@ The `head()` function returns "A tibble: 6 x 19" and then the first six rows of 
 
 # Tibble vs. data frame
 
-A **tibble** is an opinionated version of the `R` data frame.
-In other words, all tibbles are data frames, but not all data frames are tibbles!
+A **tibble** is an opinionated version of the `R` data frame. In other words, all tibbles are data frames, but not all data frames are tibbles!
 
 There are two main differences between a tibble and a data frame:
 
@@ -69,9 +66,7 @@ cars$apple
 
 # Data wrangling with `dplyr`
 
-**dplyr** is the primary package in the tidyverse for data wrangling.
-[Click here](https://dplyr.tidyverse.org/) for the dplyr reference page.
-[Click here](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf) for the dplyr cheatsheet.
+**dplyr** is the primary package in the tidyverse for data wrangling. [Click here](https://dplyr.tidyverse.org/) for the dplyr reference page. [Click here](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf) for the dplyr cheatsheet.
 
 Quick summary of key dplyr functions[^1]:
 
@@ -136,9 +131,7 @@ flights |>
 
 ## The pipe
 
-Before working with more data wrangling functions, let's formally introduce the pipe.
-The **pipe**, `|>`, is an operator (a tool) for passing information from one process to another.
-We will use `|>` mainly in data pipelines to pass the output of the previous line of code as the first input of the next line of code.
+Before working with more data wrangling functions, let's formally introduce the pipe. The **pipe**, `|>`, is an operator (a tool) for passing information from one process to another. We will use `|>` mainly in data pipelines to pass the output of the previous line of code as the first input of the next line of code.
 
 When reading code "in English", say "and then" whenever you see a pipe.
 
@@ -170,6 +163,10 @@ flights |>
 
 flights |>
   slice((n()-1):n())
+
+flights |>
+  slice(n)
+
 ```
 
 ## `arrange()`
@@ -194,7 +191,7 @@ flights |>
   arrange(desc(dep_delay))
 ```
 
--   **Your turn (5 minutes):** Create a data frame that only includes the plane tail number (`tailnum`), carrier (`carrier`), and departure delay for the flight with the longest departure delay. What is the plane tail number (`tailnum`) for this flight? *Share your response on Slack on the relevant thread on #general **using code formatting**.*
+-   **Your turn (5 minutes):** Create a data frame that only includes the plane tail number (`tailnum`), carrier (`carrier`), and departure delay for the flight with the longest departure delay. What is the plane tail number (`tailnum`) for this flight? 
 
 ```{r}
 #| label: longest-delay
@@ -245,7 +242,7 @@ We can do more complex tasks using logical operators:
 
 The final operator only makes sense if `x` is logical (TRUE / FALSE).
 
--   **Your turn (4 minutes):** Describe what the code is doing in words. *Share your response on Slack on the relevant thread on #general.*
+-   **Your turn (4 minutes):** Describe what the code is doing in words. 
 
 ```{r}
 #| label: nc-early
@@ -278,14 +275,14 @@ flights |>
   filter(n == min(n))
 ```
 
--   **Your turn (5 minutes):** On which date (month + day) was there the largest number of flights? How many flights were there on that day? *Share your response on Slack on the relevant thread on #general using code formatting.*
+-   **Your turn (5 minutes):** On which date (month + day) was there the largest number of flights? How many flights were there on that day? 
 
 ```{r}
 #| label: count-date
 
 flights |>
   count(month, day) |>
-  filter(n == min(n))
+  filter(n == max(n))
 ```
 
 ## `mutate()`
@@ -312,7 +309,7 @@ flights |>
 
 flights |>
   count(month) |>
-  mutate(perc = n / sum(n) * 100)
+  mutate(perc = n / sum(n) * 100) 
 ```
 
 ## `summarize()`
@@ -341,8 +338,7 @@ flights |>
 
 ## `group_by()`
 
-`group_by()` is used for grouped operations.
-It's very powerful when paired with `summarise()` to calculate summary statistics by group.
+`group_by()` is used for grouped operations. It's very powerful when paired with `summarise()` to calculate summary statistics by group.
 
 Here we find the mean and standard deviation of departure delay for each month.
 
@@ -357,7 +353,7 @@ flights |>
     )
 ```
 
--   **Your turn (4 minutes):** What is the median departure delay for each airports around NYC (`origin`)? *Which airport has the shortest median departure delay? Share your response on Slack on the relevant thread.*
+-   **Your turn (4 minutes):** What is the median departure delay for each airports around NYC (`origin`)? 
 
 ```{r}
 #| label: dep-origin
@@ -369,14 +365,19 @@ flights |>
     )
 ```
 
-# Additional Practice
+# Additional Practice | Optional
 
 1.  Create a new dataset that only contains flights that do not have a missing departure time. Include the columns `year`, `month`, `day`, `dep_time`, `dep_delay`, and `dep_delay_hours` (the departure delay in hours). *Hint: Note you may need to use `mutate()` to make one or more of these variables.*
 
 ```{r}
 #| label: add-practice-1
 
-# add code here
+new.data <- flights |> 
+  filter(!is.na(dep_time)) |>
+  select(year, month, day, dep_time, dep_delay) |> 
+  mutate(dep_delay_hours = dep_delay / 60) #assuming dep_delay is in minutes 
+  
+  
 ```
 
 2.  For each airplane (uniquely identified by `tailnum`), use a `group_by()` paired with `summarize()` to find the sample size, mean, and standard deviation of flight distances. Then include only the top 5 and bottom 5 airplanes in terms of mean distance traveled per flight in the final data frame.
@@ -384,5 +385,12 @@ flights |>
 ```{r}
 #| label: add-practice-2
 
-# add code here
+flights |>
+  group_by(tailnum) |>
+  summarize(n = n(), 
+            mean.flight = mean(distance),
+            sd.flight = sd(distance)) |>
+  slice(1:5, (n() - 4):n())
+  
+
 ```

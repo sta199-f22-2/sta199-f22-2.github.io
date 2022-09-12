@@ -845,5 +845,47 @@
     "title": "Visualizing various types of data",
     "section": "Recap of AE",
     "text": "Recap of AE\n\nPick geoms based on data types.\nSet appropriate binwidths for histograms.\nTurn off legends when they provide redundant information with show.legend = FALSE.\nTake control of your labels\nUse color to your advantage. https://ggplot2.tidyverse.org/reference/ggtheme.html & https://ggplot2.tidyverse.org/reference/scale_viridis.html\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#while-you-wait-for-class-to-begin",
+    "href": "slides/05-grammar-of-data-wrangling.html#while-you-wait-for-class-to-begin",
+    "title": "Grammar of data wrangling",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\n\nAny questions from prepare materials?\n\n\n\nClone your ae-03 repo."
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#announcements",
+    "href": "slides/05-grammar-of-data-wrangling.html#announcements",
+    "title": "Grammar of data wrangling",
+    "section": "Announcements",
+    "text": "Announcements\n\nTo be posted…"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#ae-03",
+    "href": "slides/05-grammar-of-data-wrangling.html#ae-03",
+    "title": "Grammar of data wrangling",
+    "section": "ae-03",
+    "text": "ae-03\n\n\nGo to the course GitHub org and find your ae-02 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
+    "href": "slides/05-grammar-of-data-wrangling.html#recap-of-ae",
+    "title": "Grammar of data wrangling",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nSomething about pipe…\nSomething about building pipelines\n…\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#checklist",
+    "href": "slides/05-grammar-of-data-wrangling.html#checklist",
+    "title": "Grammar of data wrangling",
+    "section": "Checklist",
+    "text": "Checklist\n\nClone your ae-03 repo.\nTurn in Lab 1 via Gradescope"
+  },
+  {
+    "objectID": "slides/05-grammar-of-data-wrangling.html#cant-commit",
+    "href": "slides/05-grammar-of-data-wrangling.html#cant-commit",
+    "title": "Grammar of data wrangling",
+    "section": "Can’t Commit?",
+    "text": "Can’t Commit?"
   }
 ]
