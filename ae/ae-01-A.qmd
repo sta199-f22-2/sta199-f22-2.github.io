@@ -1,8 +1,15 @@
 ---
-title: "MTCars"
-format: html
+title: "AE 01: MTCars"
+categories: 
+  - Application exercise
 editor: visual
+execute:
+  fig-width: 7
+  fig-asp: 4
+  fig-align: center
+  warning: false
 ---
+
 
 These data were extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973--74 models).
 
