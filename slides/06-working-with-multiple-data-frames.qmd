@@ -21,7 +21,7 @@ library(countdown)
 
 ## R4DS: Chp 20 - Joins - Sections 20.1 - 20.4
 
--   Any questions from prepare materials?
+--   Any questions from prepare materials?
 
 ```{=html}
 <iframe src="https://app.sli.do/event/42LZs9cfGudq7ajPBjzCCb" width="900" height="600"></iframe>
@@ -38,21 +38,18 @@ library(countdown)
 
 --   Grading questions
 
+# Goals
+
+-- 
+
+-- Join multiple data frames 
+
 ## Joining datasets
 
-::: question
-Describe a scenario where two datasets that contain information about students from this class may need to be joined.
-What might the analysis be about?
-What column (information) could be used to join the datasets?
-:::
+**Data merging** is the process of combining two or more data sets into a single data set. Most often, this process is necessary when you have raw data stored in multiple files, worksheets, or data tables, that you want to analyze together.
 
-```{r}
-#| echo: false
 
-countdown(minutes = 3)
-```
 
-# Application exercise
 
 ## Goal
 
