@@ -89,6 +89,11 @@ Once again, make sure to commit and push all changed files so that your Git pane
     -   Which state has the single largest county? How do you know based on the plot?
 6.  *Do some states have a higher percentage of their counties located in a metropolitan area?* Create a segmented bar chart with one bar per state and the fill determined by the distribution of `metro`, whether a county is considered in a metro area. The y axis of the segmented barplot should range from 0 to 1.
     -   What do you notice from the plot?
+    
+```{r}
+
+```
+    
 
 ::: callout-note
 For this exercise, you should begin with the data wrangling code below. We will learn more about data wrangling next week.
