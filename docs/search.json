@@ -1104,5 +1104,61 @@
     "title": "Grammar of data wrangling",
     "section": "Recap of AE",
     "text": "Recap of AE\n\nWe can transform data to learn more about what’s going on\nPipe operator allows us to step through the process and combine multiple functions together\nData are messy. This are valuable tools to tell the story you want\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#while-you-wait-for-class-to-begin",
+    "href": "slides/06-working-with-multiple-data-frames.html#while-you-wait-for-class-to-begin",
+    "title": "Working with multiple data frames",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\n\nAny questions from prepare materials?\n\n\n\nClone your ae-04 repo."
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#announcements",
+    "href": "slides/06-working-with-multiple-data-frames.html#announcements",
+    "title": "Working with multiple data frames",
+    "section": "Announcements",
+    "text": "Announcements\n– Requesting videos for missed classes\n– Ae keys posted after deadline\n– Late work policy\n– Grading questions"
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#joining-datasets",
+    "href": "slides/06-working-with-multiple-data-frames.html#joining-datasets",
+    "title": "Working with multiple data frames",
+    "section": "Joining datasets",
+    "text": "Joining datasets\n\nDescribe a scenario where two datasets that contain information about students from this class may need to be joined. What might the analysis be about? What column (information) could be used to join the datasets?\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#goal",
+    "href": "slides/06-working-with-multiple-data-frames.html#goal",
+    "title": "Working with multiple data frames",
+    "section": "Goal",
+    "text": "Goal\nJoin data from multiple data frames, summarize it, and create this plot."
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#ae-04",
+    "href": "slides/06-working-with-multiple-data-frames.html#ae-04",
+    "title": "Working with multiple data frames",
+    "section": "ae-04",
+    "text": "ae-04\n\n\nGo to the course GitHub org and find your ae-04 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#recap-of-ae",
+    "href": "slides/06-working-with-multiple-data-frames.html#recap-of-ae",
+    "title": "Working with multiple data frames",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nTBD…\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#checklist",
+    "href": "slides/06-working-with-multiple-data-frames.html#checklist",
+    "title": "Working with multiple data frames",
+    "section": "Checklist",
+    "text": "Checklist\n\n\n\n– Clone ae-05\n– Watch ae-04 video + turn in ae-04 by Thursday 11:59pm\n– Turn in hw1 by Thursday 11:59pm on Gradescope"
+  },
+  {
+    "objectID": "slides/06-working-with-multiple-data-frames.html#r4ds-chp-20---joins---sections-20.1---20.4",
+    "href": "slides/06-working-with-multiple-data-frames.html#r4ds-chp-20---joins---sections-20.1---20.4",
+    "title": "Working with multiple data frames",
+    "section": "R4DS: Chp 20 - Joins - Sections 20.1 - 20.4",
+    "text": "R4DS: Chp 20 - Joins - Sections 20.1 - 20.4\n\nAny questions from prepare materials?\n\n\n\nClone your ae-04 repo."
   }
 ]

@@ -5,7 +5,7 @@ date: "September 15, 2022"
 format: revealjs
 ---
 
-# Warm up
+## Checklist
 
 ```{r}
 #| echo: false
@@ -13,18 +13,30 @@ format: revealjs
 library(countdown)
 ```
 
-## While you wait for class to begin...
+-- Clone ae-05 
+
+-- Watch ae-04 video + turn in ae-04 by Thursday 11:59pm
+
+-- Turn in hw1 by Thursday 11:59pm on Gradescope 
+
+## R4DS: Chp 20 - Joins - Sections 20.1 - 20.4
 
 -   Any questions from prepare materials?
 
 ```{=html}
-<iframe src="https://app.sli.do/event/9mqwqdqbgesgLASUHGpwU8/embed/polls/52941ba5-0668-4cad-9b86-82505db6b862" width="900" height="600"></iframe>
+<iframe src="https://app.sli.do/event/42LZs9cfGudq7ajPBjzCCb" width="900" height="600"></iframe>
 ```
 -   Clone your `ae-04` repo.
 
 ## Announcements
 
--   Requesting videos for missed classes
+--   Requesting videos for missed classes
+
+--   Ae keys posted after deadline 
+
+--   Late work policy 
+
+--   Grading questions
 
 ## Joining datasets
 

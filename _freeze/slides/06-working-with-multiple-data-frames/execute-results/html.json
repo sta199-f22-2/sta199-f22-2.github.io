@@ -1,0 +1,21 @@
+{
+  "hash": "483c25267ccd4a0e45ba27823b51ceaf",
+  "result": {
+    "markdown": "---\ntitle: \"Working with multiple data frames\"\nsubtitle: \"Lecture 6\"\ndate: \"September 15, 2022\"\nformat: revealjs\n---\n\n\n## Checklist\n\n\n::: {.cell}\n\n:::\n\n\n-- Clone ae-05 \n\n-- Watch ae-04 video + turn in ae-04 by Thursday 11:59pm\n\n-- Turn in hw1 by Thursday 11:59pm on Gradescope \n\n## R4DS: Chp 20 - Joins - Sections 20.1 - 20.4\n\n-   Any questions from prepare materials?\n\n\n```{=html}\n<iframe src=\"https://app.sli.do/event/42LZs9cfGudq7ajPBjzCCb\" width=\"900\" height=\"600\"></iframe>\n```\n\n-   Clone your `ae-04` repo.\n\n## Announcements\n\n--   Requesting videos for missed classes\n\n--   Ae keys posted after deadline \n\n--   Late work policy \n\n--   Grading questions\n\n## Joining datasets\n\n::: question\nDescribe a scenario where two datasets that contain information about students from this class may need to be joined.\nWhat might the analysis be about?\nWhat column (information) could be used to join the datasets?\n:::\n\n\n::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<div class=\"countdown\" id=\"timer_b8ba4895\" data-update-every=\"1\" tabindex=\"0\" style=\"right:0;bottom:0;\">\n<div class=\"countdown-controls\"><button class=\"countdown-bump-down\">&minus;</button><button class=\"countdown-bump-up\">&plus;</button></div>\n<code class=\"countdown-time\"><span class=\"countdown-digits minutes\">03</span><span class=\"countdown-digits colon\">:</span><span class=\"countdown-digits seconds\">00</span></code>\n</div>\n```\n:::\n:::\n\n\n# Application exercise\n\n## Goal\n\nJoin data from multiple data frames, summarize it, and create this plot.\n\n![](images/06/aquaculture-production-by-continent.png){fig-align=\"center\"}\n\n## `ae-04`\n\n::: appex\n-   Go to the course [GitHub org](https://github.com/sta199-f22-1) and find your `ae-04` (repo name will be suffixed with your GitHub name).\n-   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\n-   Render, commit, and push your edits by the AE deadline -- 3 days from today.\n:::\n\n## Recap of AE {.smaller}\n\n-   TBD...\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"../site_libs/countdown-0.4.0/countdown.css\" rel=\"stylesheet\" />\r\n<script src=\"../site_libs/countdown-0.4.0/countdown.js\"></script>\r\n"
+      ],
+      "include-after-body": [
+        "\r\n<script>\r\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\r\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\r\n  // slide changes (different for each slide format).\r\n  (function () {\r\n    function fireSlideChanged(previousSlide, currentSlide) {\r\n\r\n      // dispatch for htmlwidgets\r\n      const event = window.document.createEvent(\"Event\");\r\n      event.initEvent(\"slideenter\", true, true);\r\n      window.document.dispatchEvent(event);\r\n\r\n      // dispatch for shiny\r\n      if (window.jQuery) {\r\n        if (previousSlide) {\r\n          window.jQuery(previousSlide).trigger(\"hidden\");\r\n        }\r\n        if (currentSlide) {\r\n          window.jQuery(currentSlide).trigger(\"shown\");\r\n        }\r\n      }\r\n    }\r\n\r\n    // hookup for reveal\r\n    if (window.Reveal) {\r\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\r\n        fireSlideChanged(event.previousSlide, event.currentSlide);\r\n      });\r\n    }\r\n\r\n    // hookup for slidy\r\n    if (window.w3c_slidy) {\r\n      window.w3c_slidy.add_observer(function (slide_num) {\r\n        // slide_num starts at position 1\r\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\r\n      });\r\n    }\r\n\r\n  })();\r\n</script>\r\n\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
