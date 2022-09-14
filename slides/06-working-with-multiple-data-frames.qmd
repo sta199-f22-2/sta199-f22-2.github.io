@@ -32,7 +32,9 @@ library(countdown)
 
 --   Requesting videos for missed classes
 
---   Ae keys posted after deadline 
+--   Ae: 80% rule + keys posted after deadline 
+
+--   Hw: 
 
 --   Late work policy 
 

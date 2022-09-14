@@ -10,12 +10,9 @@ This homework is due Thursday, Sep 15 at 11:59pm.
 
 # Getting Started
 
--   Go to the [sta199-f22-2](https://github.com/sta199-f22-2) organization on GitHub.
-    Click on the repo with the prefix `hw-01`.
-    It contains the starter documents you need to complete the homework assignment.
+-   Go to the [sta199-f22-2](https://github.com/sta199-f22-2) organization on GitHub. Click on the repo with the prefix `hw-01`. It contains the starter documents you need to complete the homework assignment.
 
--   Clone the repo and start a new project in RStudio.
-    See the [Lab 0 instructions](https://sta199-f22-1.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project) for details on cloning a repo and starting a new R project.
+-   Clone the repo and start a new project in RStudio. See the [Lab 0 instructions](https://sta199-f22-1.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project) for details on cloning a repo and starting a new R project.
 
 ## Packages
 
@@ -31,14 +28,10 @@ library(openintro)
 
 As we've discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.
 
-Remember that continuing to develop a sound workflow for reproducible data analysis is important as you complete this homework and other assignments in this course.
-There will be periodic reminders in this assignment to remind you to knit, commit, and push your changes to GithHub.
-You should have **at least 3 commits with meaningful commit messages** by the end of the assignment.
+Remember that continuing to develop a sound workflow for reproducible data analysis is important as you complete this homework and other assignments in this course. There will be periodic reminders in this assignment to remind you to knit, commit, and push your changes to GithHub. You should have **at least 3 commits with meaningful commit messages** by the end of the assignment.
 
 ::: callout-note
-Note: Do not let R output answer the question for you unless the question specifically asks for just a plot.
-For example, if the question asks for the number of columns in the data set, please type out the number of columns.
-You are subject to lose points if you do not.
+Note: Do not let R output answer the question for you unless the question specifically asks for just a plot. For example, if the question asks for the number of columns in the data set, please type out the number of columns. You are subject to lose points if you do not.
 :::
 
 ## Workflow + formatting
@@ -60,14 +53,11 @@ Make sure to
 Use this dataset for Exercises 1 and 2.
 :::
 
-For the following two exercises you will work with data on houses that were sold in the Duke Forest neighborhood of Durham, NC in November 2020.
-The `duke_forest` dataset comes from the **openintro** package.
-You can see a list of the variables on the [package website](https://openintrostat.github.io/openintro/reference/duke_forest.html) or by running `?duke_forest` in your console.
+For the following two exercises you will work with data on houses that were sold in the Duke Forest neighborhood of Durham, NC in November 2020. The `duke_forest` dataset comes from the **openintro** package. You can see a list of the variables on the [package website](https://openintrostat.github.io/openintro/reference/duke_forest.html) or by running `?duke_forest` in your console.
 
 ## Exercise 1
 
-Suppose you're helping some family friends who are looking to buy a house in Duke Forest.
-As they browse Zillow listings, they realize some houses have garages and others don't, and they wonder: **Does having a garage make a difference?**
+Suppose you're helping some family friends who are looking to buy a house in Duke Forest. As they browse Zillow listings, they realize some houses have garages and others don't, and they wonder: **Does having a garage make a difference?**
 
 Luckily, you can help them answer this question with data visualization!
 
@@ -88,17 +78,12 @@ duke_forest |>
 -   Finally, include a brief (2-3 sentence) narrative comparing the distributions of prices of Duke Forest houses that do and don't have garages. Your narrative should touch on whether having a garage "makes a difference" in terms of the price of the house.
 
 ::: render-commit-push
-Now is a good time to render, commit, and push.
-Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding.
-<br>
+Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding. <br>
 :::
 
 ## Exercise 2
 
-It's expected that within any given marker larger houses will be priced higher.
-It's also expected that the age of the house will have an effect on the price.
-However in some markets new houses might be more expensive while in others new construction might mean "no character" and hence be less expensive.
-So your family friends ask: "In Duke Forest, do houses that are bigger and more expensive tend to be newer ones than those that are smaller and cheaper?"
+It's expected that within any given marker larger houses will be priced higher. It's also expected that the age of the house will have an effect on the price. However in some markets new houses might be more expensive while in others new construction might mean "no character" and hence be less expensive. So your family friends ask: "In Duke Forest, do houses that are bigger and more expensive tend to be newer ones than those that are smaller and cheaper?"
 
 Once again, data visualization skills to the rescue!
 
@@ -113,8 +98,7 @@ Once again, data visualization skills to the rescue!
 ::: render-commit-push
 Now is a good time to render, commit, and push.
 
-Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding.
-<br>
+Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding. <br>
 :::
 
 ## Data 2: BRFSS
@@ -123,16 +107,11 @@ Make sure that you commit and push all changed documents and your Git pane is co
 Use this dataset for Exercises 3 to 5.
 :::
 
-> The Behavioral Risk Factor Surveillance System (BRFSS) is the nation's premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services.
-> Established in 1984 with 15 states, BRFSS now collects data in all 50 states as well as the District of Columbia and three U.S. territories.
-> BRFSS completes more than 400,000 adult interviews each year, making it the largest continuously conducted health survey system in the world.
+> The Behavioral Risk Factor Surveillance System (BRFSS) is the nation's premier system of health-related telephone surveys that collect state data about U.S. residents regarding their health-related risk behaviors, chronic health conditions, and use of preventive services. Established in 1984 with 15 states, BRFSS now collects data in all 50 states as well as the District of Columbia and three U.S. territories. BRFSS completes more than 400,000 adult interviews each year, making it the largest continuously conducted health survey system in the world.
 >
 > Source: [cdc.gov/brfss](https://www.cdc.gov/brfss/)
 
-In the following exercises we will work with data from the 2020 BRFSS survey.
-The originally come from [here](https://michaelminn.net/tutorials/r-brfss/), though we will work with a random sample of responses and a small number of variables from the data provided.
-These have already been sampled for you and the dataset you'll use can be found in the `data` folder of your repo.
-It's called `brfss.csv`.
+In the following exercises we will work with data from the 2020 BRFSS survey. The originally come from [here](https://michaelminn.net/tutorials/r-brfss/), though we will work with a random sample of responses and a small number of variables from the data provided. These have already been sampled for you and the dataset you'll use can be found in the `data` folder of your repo. It's called `brfss.csv`.
 
 ```{r load-data}
 #| message: false
@@ -147,8 +126,7 @@ brfss <- read_csv("data/brfss.csv")
 -   Include the code and resulting output used to support your answer.
 
 ::: render-commit-push
-<br> Now is a good time to render, commit, and push.
-<br><br>
+<br> Now is a good time to render, commit, and push. <br><br>
 :::
 
 ## Exercise 4
@@ -173,8 +151,7 @@ brfss |>
 -   Comment on the motivating question based on evidence from the visualization: Do people who smoke more tend to have worse health conditions?
 
 ::: render-commit-push
-<br> Now is a good time to render, commit, and push.
-<br><br>
+<br> Now is a good time to render, commit, and push. <br><br>
 :::
 
 ## Exercise 5
@@ -187,8 +164,7 @@ brfss |>
 -   Comment on the motivating question based on evidence from the visualization: How are sleep and general health associated?
 
 ::: render-commit-push
-<br> Now is a good time to render, commit, and push.
-<br><br>
+<br> Now is a good time to render, commit, and push. <br><br>
 :::
 
 ## Exercise 6
@@ -209,8 +185,7 @@ ggplot(data=mpg,mapping=aes(x=drv,fill=class))+geom_bar() +scale_fill_viridis_d(
 ::: render-commit-push
 <br> Render, commit, and push one last time.
 
-Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding.
-<br>
+Make sure that you commit and push all changed documents and your Git pane is completely empty before proceding. <br>
 :::
 
 # Wrap up

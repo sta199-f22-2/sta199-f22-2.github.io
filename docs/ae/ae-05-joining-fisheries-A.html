@@ -513,29 +513,10 @@ $ continent &lt;chr&gt; "Asia", "Europe", "Europe", "Africa", "Oceania", "Europe
 </div>
 <ul>
 <li>
-<strong>Demo:</strong> Calculate the mean aquaculture proportion (we’ll call it <code>mean_aq_prop</code>) for continents in the fisheries data using the <code><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize()</a></code> function in dplyr. Note that the function for calculating the mean is <code><a href="https://rdrr.io/r/base/mean.html">mean()</a></code> in R.</li>
+<strong>Your turn (5 minutes):</strong> Now expand your calculations to also calculate the mean, minimum and maximum aquaculture proportion for continents in the fisheries data. Note that the functions for calculating minimum and maximum in R are <code><a href="https://rdrr.io/r/base/Extremes.html">min()</a></code> and <code><a href="https://rdrr.io/r/base/Extremes.html">max()</a></code> respectively.</li>
 </ul>
 <div class="cell">
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fisheries</span> <span class="op">|&gt;</span>                              <span class="co"># start with fisheries data frame</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">continent</span><span class="op">)</span> <span class="op">|&gt;</span>                  <span class="co"># group by continent</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_aq_prop <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">aq_prop</span><span class="op">)</span><span class="op">)</span> <span class="co"># calculate mean aquaculture</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 2
-  continent mean_aq_prop
-  &lt;chr&gt;            &lt;dbl&gt;
-1 Africa          0.0943
-2 Americas        0.192 
-3 Asia            0.367 
-4 Europe          0.165 
-5 Oceania         0.150 </code></pre>
-</div>
-</div>
-<ul>
-<li>
-<strong>Your turn (5 minutes):</strong> Now expand your calculations to also calculate the minimum and maximum aquaculture proportion for continents in the fisheries data. Note that the functions for calculating minimum and maximum in R are <code><a href="https://rdrr.io/r/base/Extremes.html">min()</a></code> and <code><a href="https://rdrr.io/r/base/Extremes.html">max()</a></code> respectively.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fisheries</span> <span class="op">|&gt;</span>                              <span class="co"># start with fisheries data frame</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">continent</span><span class="op">)</span> <span class="op">|&gt;</span>                  <span class="co"># group by continent</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>                              <span class="co"># calculate summary stats  </span></span>
 <span>    min_aq_prop  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">aq_prop</span><span class="op">)</span>,</span>
@@ -555,10 +536,10 @@ $ continent &lt;chr&gt; "Asia", "Europe", "Europe", "Africa", "Oceania", "Europe
 </div>
 <ul>
 <li>
-<strong>Demo:</strong> Create a new data frame called <code>fisheries_summary</code> that calculates minimum, mean, and maximum aquaculture proportion for each continent in the fisheries data. Then, determine which continent has the largest value of <code>max_ap</code>?</li>
+<strong>Demo:</strong> Create a new data frame called <code>fisheries_summary</code> that calculates minimum, mean, and maximum aquaculture proportion for each continent in the fisheries data.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fisheries_summary</span> <span class="op">&lt;-</span> <span class="va">fisheries</span> <span class="op">|&gt;</span>         <span class="co"># start with fisheries data frame</span></span>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fisheries_summary</span> <span class="op">&lt;-</span> <span class="va">fisheries</span> <span class="op">|&gt;</span>         <span class="co"># start with fisheries data frame</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">continent</span><span class="op">)</span> <span class="op">|&gt;</span>                  <span class="co"># group by continent</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>                              <span class="co"># calculate summary stats  </span></span>
 <span>    min_aq_prop  <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">aq_prop</span><span class="op">)</span>,</span>
@@ -568,10 +549,10 @@ $ continent &lt;chr&gt; "Asia", "Europe", "Europe", "Africa", "Oceania", "Europe
 </div>
 <ul>
 <li>
-<strong>Demo:</strong> Take the <code>fisheries_summary</code> data frame and order the results in descending order of mean aquaculture proportion.</li>
+<strong>Demo:</strong> Then, determine which continent has the largest value of <code>max_ap</code>. Take the <code>fisheries_summary</code> data frame and order the results in descending order of mean aquaculture proportion.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fisheries_summary</span> <span class="op">|&gt;</span>            <span class="co"># start with fisheries_summary data frame</span></span>
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">fisheries_summary</span> <span class="op">|&gt;</span>            <span class="co"># start with fisheries_summary data frame</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html">desc</a></span><span class="op">(</span><span class="va">mean_aq_prop</span><span class="op">)</span><span class="op">)</span>   <span class="co"># order in descending order of mean_aq_prop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 4
@@ -593,7 +574,7 @@ $ continent &lt;chr&gt; "Asia", "Europe", "Europe", "Africa", "Oceania", "Europe
 </figure>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">fisheries_summary</span>, </span>
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">fisheries_summary</span>, </span>
 <span>       <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="fu"><a href="https://forcats.tidyverse.org/reference/fct_reorder.html">fct_reorder</a></span><span class="op">(</span><span class="va">continent</span>, <span class="va">mean_aq_prop</span><span class="op">)</span>, x <span class="op">=</span> <span class="va">mean_aq_prop</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu"><a href="https://scales.r-lib.org/reference/label_percent.html">label_percent</a></span><span class="op">(</span>accuracy <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -614,7 +595,7 @@ $ continent &lt;chr&gt; "Asia", "Europe", "Europe", "Africa", "Oceania", "Europe
 <strong>Your turn (optional):</strong> Change the <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme</a> of the plot and make any other changes you would like to improve it.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># add your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
