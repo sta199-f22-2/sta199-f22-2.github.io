@@ -319,32 +319,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section><section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The data originally come from the <strong>fivethirtyeight</strong> package but we’ll use versions of the data that have been slightly modified to better suit this assignment. You can load the two datasets we’ll be using for this analysis with the following:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">major_income_undergrad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/major_income_undergrad.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 172 Columns: 12
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr  (2): major, major_category
-dbl (10): major_code, undergrad_total, undergrad_employed, undergrad_employe...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">major_income_grad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/major_income_grad.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 172 Columns: 11
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (2): major, major_category
-dbl (9): major_code, grad_total, grad_employed, grad_employed_fulltime_yearr...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">major_income_undergrad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/major_income_undergrad.csv"</span><span class="op">)</span></span>
+<span><span class="va">major_income_grad</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/major_income_grad.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can also take a quick peek at your data frames and view their dimensions with the <code>glimpse</code> function.</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">major_income_undergrad</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">major_income_undergrad</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 172
 Columns: 12
@@ -361,7 +341,7 @@ $ undergrad_median                      &lt;dbl&gt; 65000, 48000, 50000, 41600, 
 $ undergrad_p75th                       &lt;dbl&gt; 98000, 71000, 75000, 60000, 7800…
 $ undergrad_sharewomen                  &lt;dbl&gt; 0.09071251, 0.69036529, 0.651659…</code></pre>
 </div>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">major_income_grad</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">major_income_grad</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 172
 Columns: 11
@@ -484,7 +464,7 @@ $ grad_p75th                       &lt;dbl&gt; 53000, 40000, 45000, 24500, 40600
 <li>
 <p>First, let’s create a new vector called <code>stem_categories</code> that lists the major categories that are considered STEM fields.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">stem_categories</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">stem_categories</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
 <span>  <span class="st">"Biology &amp; Life Science"</span>,</span>
 <span>  <span class="st">"Computers &amp; Mathematics"</span>,</span>
 <span>  <span class="st">"Engineering"</span>,</span>
@@ -493,8 +473,8 @@ $ grad_p75th                       &lt;dbl&gt; 53000, 40000, 45000, 24500, 40600
 </div>
 <p>Then, fill in the partial code to create a new variable in our data frame indicating whether a major is STEM or not. Note that you need to figure out the logical operator that goes into <code>___</code>. Double check that you have successfully created this variable by selecting the variables <code>major_type</code> and <code>stem_categories</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>major_income_undergrad <span class="ot">&lt;-</span> major_income_undergrad <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">major_type =</span> <span class="fu">if_else</span>(major_category ___ stem_categories, <span class="st">"STEM"</span>, <span class="st">"Not STEM"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>major_income_undergrad <span class="ot">&lt;-</span> major_income_undergrad <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">major_type =</span> <span class="fu">if_else</span>(major_category ___ stem_categories, <span class="st">"STEM"</span>, <span class="st">"Not STEM"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 
@@ -522,7 +502,7 @@ $ grad_p75th                       &lt;dbl&gt; 53000, 40000, 45000, 24500, 40600
 <li>
 <p>Create a new variable called <code>grad_multiplier</code> – the ratio of median income of those with a graduate degree divided by median income of those with an undergraduate degree, for STEM majors. The result should be tibble with the variables <code>major</code>, <code>grad_multiplier</code>, <code>grad_median</code>, and <code>undergrad_median</code>. The results should be displayed in descending order of <code>grad_multiplier</code> and display the STEM majors with top 10 <code>grad_multiplier</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#\ label: grad-multiplier</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#\ label: grad-multiplier</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </li>
 </ol>

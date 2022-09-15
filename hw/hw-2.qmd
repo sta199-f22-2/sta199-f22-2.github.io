@@ -46,6 +46,7 @@ library(scales)
 The data originally come from the **fivethirtyeight** package but we'll use versions of the data that have been slightly modified to better suit this assignment. You can load the two datasets we'll be using for this analysis with the following:
 
 ```{r}
+#| message: false
 major_income_undergrad <- read_csv("data/major_income_undergrad.csv")
 major_income_grad <- read_csv("data/major_income_grad.csv")
 ```
