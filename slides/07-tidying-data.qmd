@@ -1,7 +1,7 @@
 ---
 title: "Tidying data"
 subtitle: "Lecture 7"
-date: "September 20, 2022"
+date: "September 19, 2022"
 format: revealjs
 ---
 

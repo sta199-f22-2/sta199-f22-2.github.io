@@ -1,5 +1,5 @@
 ---
-title: "AE 05: Pivoting StatSci Majors"
+title: "AE 06: Pivoting StatSci Majors"
 subtitle: "Suggested answers"
 categories: 
   - Application exercise
@@ -27,7 +27,7 @@ The data come from the [Office of the University Registrar](https://registrar.du
 
 library(tidyverse)
 
-statsci <- read_csv("ae/data/statsci.csv")
+statsci <- read_csv("data/statsci.csv")
 ```
 
 And let's take a look at the data.
