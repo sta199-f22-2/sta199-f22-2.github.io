@@ -329,65 +329,59 @@
   <p class="date">September 19, 2022</p>
 </section>
 
-<section>
-<section id="warm-up" class="title-slide slide level1 center">
-<h1>Warm up</h1>
+<section id="checklist" class="slide level2">
+<h2>Checklist</h2>
 <div class="cell">
 
 </div>
-</section>
-<section id="checklist" class="slide level2">
-<h2>Checklist</h2>
 <ul>
-<li class="fragment">Open your <code>ae-06</code> project in RStudio (that you already started on Tuesday), render your document, and commit and push.</li>
-<li class="fragment">Any questions from prepare materials? Go to <a href="https://www.slido.com/">slido.com</a> / #sta199. You can also upvote others’ questions.</li>
+<li class="fragment"><p>Open your <code>ae-06</code> project in RStudio (that you already started on Tuesday), render your document, and commit and push.</p></li>
+<li class="fragment"><p>Any questions from prepare materials? Go to <a href="https://app.sli.do/event/jqUCoxmpsqKVcCKKwbn4Vg">slido</a>. You can also upvote others’ questions.</p></li>
+<li class="fragment"><p>Lab 02 Due Tonight.</p></li>
+<li class="fragment"><p>Start Early. Render Often. Ask Questions.</p></li>
+<li class="fragment"><p>Groups are coming after Exam 1.</p></li>
 </ul>
 </section>
-<section id="announcements" class="slide level2 smaller">
-<h2>Announcements</h2>
-<ul>
-<li class="fragment">My office hours this week 2-3 pm on Tuesday or by appointment</li>
-<li class="fragment">Questions from last time:
-<ul>
-<li class="fragment">TBA</li>
-</ul></li>
-</ul>
-</section>
-<section id="tidying-datasets" class="slide level2">
-<h2>Tidying datasets</h2>
-<div class="question">
+<section id="warm-up-tidying-datasets" class="slide level2">
+<h2>Warm Up: Tidying datasets</h2>
 <p>What makes a dataset “tidy”?</p>
-</div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ecaf929c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_7c379688" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
-</section></section>
+</section>
+<section id="tidy-data" class="slide level2">
+<h2>Tidy Data</h2>
+<p>There are three interrelated rules that make a dataset tidy:</p>
+<ul>
+<li class="fragment"><p>Each variable is a column; each column is a variable.</p></li>
+<li class="fragment"><p>Each observation is row; each row is an observation.</p></li>
+<li class="fragment"><p>Each value is a cell; each cell is a single value.</p></li>
+</ul>
+</section>
 <section>
 <section id="application-exercise" class="title-slide slide level1 center">
 <h1>Application exercise</h1>
 
 </section>
-<section id="ae-05" class="slide level2">
-<h2><code>ae-05</code></h2>
-<div class="appex">
+<section id="ae-06" class="slide level2">
+<h2><code>ae-06</code></h2>
 <ul>
-<li class="fragment">Go to the course <a href="https://github.com/sta199-f22-1">GitHub org</a> and find your <code>ae-05</code> (repo name will be suffixed with your GitHub name).</li>
+<li class="fragment">Go to the course <a href="https://github.com/sta199-f22-2">GitHub org</a> and find your <code>ae-06</code> (repo name will be suffixed with your GitHub name).</li>
 <li class="fragment">Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.</li>
 <li class="fragment">Render, commit, and push your edits by the AE deadline – 3 days from today.</li>
 </ul>
-</div>
 </section>
 <section id="recap-of-ae" class="slide level2 smaller">
 <h2>Recap of AE</h2>
 <ul>
-<li class="fragment">Data sets can’t be labeled as <em>wide</em> or <em>long</em> but they can be made <em>wider</em> or <em>longer</em> for a certain analysis that requires a certain format</li>
-<li class="fragment">When pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the <code>pivot_longer()</code> function.</li>
-<li class="fragment">You can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.</li>
+<li class="fragment"><p>When pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the <code>pivot_longer()</code> function.</p></li>
+<li class="fragment"><p>You can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.</p></li>
+<li class="fragment"><p><code>pivot_wider()</code> which makes datasets wider by increasing columns and reducing rows. <code>pivot_wider()</code> has the opposite interface to pivot_longer(): we need to provide the existing columns that define the values (values_from) and the column name (names_from).</p></li>
 </ul>
 
 
