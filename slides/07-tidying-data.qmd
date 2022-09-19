@@ -22,6 +22,17 @@ library(countdown)
 
 - Groups are coming after Exam 1.
 
+
+## Goals: 
+
+-- Understand `pivot_longer`
+
+-- ggplot practice 
+
+-- Practice re-creating graphs 
+
+-- "New" functions: if_else / scale_continuous_x
+
 ## Warm Up: Tidying datasets
 
 

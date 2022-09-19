@@ -1295,32 +1295,18 @@
     "text": "Checklist\n\n\n\n\nOpen your ae-06 project in RStudio (that you already started on Tuesday), render your document, and commit and push.\nAny questions from prepare materials? Go to slido. You can also upvote others’ questions.\nLab 02 Due Tonight.\nStart Early. Render Often. Ask Questions.\nGroups are coming after Exam 1."
   },
   {
-    "objectID": "slides/07-tidying-data.html#announcements",
-    "href": "slides/07-tidying-data.html#announcements",
+    "objectID": "slides/07-tidying-data.html#goals",
+    "href": "slides/07-tidying-data.html#goals",
     "title": "Tidying data",
-    "section": "Announcements",
-    "text": "Announcements\n\nMy office hours this week 2-3 pm on Tuesday or by appointment\nQuestions from last time:\n\nTBA"
+    "section": "Goals:",
+    "text": "Goals:\n– Understand pivot_longer\n– ggplot practice\n– Practice re-creating graphs\n– “New” functions: if_else / scale_continuous_x"
   },
   {
-    "objectID": "slides/07-tidying-data.html#tidying-datasets",
-    "href": "slides/07-tidying-data.html#tidying-datasets",
+    "objectID": "slides/07-tidying-data.html#warm-up-tidying-datasets",
+    "href": "slides/07-tidying-data.html#warm-up-tidying-datasets",
     "title": "Tidying data",
-    "section": "Tidying datasets",
-    "text": "Tidying datasets\n\nWhat makes a dataset “tidy”?\n\n\n\n\n−+\n03:00"
-  },
-  {
-    "objectID": "slides/07-tidying-data.html#ae-05",
-    "href": "slides/07-tidying-data.html#ae-05",
-    "title": "Tidying data",
-    "section": "ae-05",
-    "text": "ae-05\n\n\nGo to the course GitHub org and find your ae-05 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
-  },
-  {
-    "objectID": "slides/07-tidying-data.html#recap-of-ae",
-    "href": "slides/07-tidying-data.html#recap-of-ae",
-    "title": "Tidying data",
-    "section": "Recap of AE",
-    "text": "Recap of AE\n\nWhen pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the pivot_longer() function.\nYou can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.\npivot_wider() which makes datasets wider by increasing columns and reducing rows. pivot_wider() has the opposite interface to pivot_longer(): we need to provide the existing columns that define the values (values_from) and the column name (names_from).\n\n\n\n\n🔗 sta199-f22-2.github.io"
+    "section": "Warm Up: Tidying datasets",
+    "text": "Warm Up: Tidying datasets\nWhat makes a dataset “tidy”?\n\n\n\n−+\n03:00"
   },
   {
     "objectID": "slides/07-tidying-data.html#tidy-data",
@@ -1337,17 +1323,10 @@
     "text": "ae-06\n\nGo to the course GitHub org and find your ae-06 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
   },
   {
-    "objectID": "slides/07-tidying-data.html#checklist-1",
-    "href": "slides/07-tidying-data.html#checklist-1",
+    "objectID": "slides/07-tidying-data.html#recap-of-ae",
+    "href": "slides/07-tidying-data.html#recap-of-ae",
     "title": "Tidying data",
-    "section": "Checklist",
-    "text": "Checklist\n\nOpen your ae-06 project in RStudio (that you already started on Tuesday), render your document, and commit and push.\nAny questions from prepare materials? Go to slido.com. You can also upvote others’ questions.\nLab 02 Due Tonight\nStart Early. Render Often. Ask Questions."
-  },
-  {
-    "objectID": "slides/07-tidying-data.html#warm-up-tidying-datasets",
-    "href": "slides/07-tidying-data.html#warm-up-tidying-datasets",
-    "title": "Tidying data",
-    "section": "Warm Up: Tidying datasets",
-    "text": "Warm Up: Tidying datasets\nWhat makes a dataset “tidy”?\n\n\n\n−+\n03:00"
+    "section": "Recap of AE",
+    "text": "Recap of AE\n\nWhen pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the pivot_longer() function.\nYou can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.\npivot_wider() which makes datasets wider by increasing columns and reducing rows. pivot_wider() has the opposite interface to pivot_longer(): we need to provide the existing columns that define the values (values_from) and the column name (names_from).\n\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
