@@ -1397,7 +1397,7 @@
     "href": "slides/08-tidying-data.html#checklist",
     "title": "Types and Classes",
     "section": "Checklist",
-    "text": "Checklist"
+    "text": "Checklist\n\n\n\n\nOpen your ae-07 project in RStudio.\nHW2 Due Tomorrow.\nExam 1 is coming (next week!)"
   },
   {
     "objectID": "slides/08-tidying-data.html#checklist-1",
@@ -1411,7 +1411,7 @@
     "href": "slides/08-tidying-data.html#announcements",
     "title": "Types and Classes",
     "section": "Announcements",
-    "text": "Announcements\n– Regrade Requests"
+    "text": "Announcements\n– Regrade requests\n– Be detailed\n– Ask clarification question in Slack\n– Single pipeline"
   },
   {
     "objectID": "slides/08-tidying-data.html#goals",
@@ -1439,6 +1439,20 @@
     "href": "slides/08-tidying-data.html#recap-of-ae",
     "title": "Types and Classes",
     "section": "Recap of AE",
-    "text": "Recap of AE\n– logical: a logical value.\n– integer: an integer (positive or negative). Many R programmers do not use this mode since every integer value can be represented as a double.\n– double: a real number stored in “double-precision floatint point format.”\n– complex: a complex number\n– character: a sequence of characters, called a “string” in other programming languages\n– list: a list of named values\n– NULL: a special type with only one possible value, known as NULL\nMore information can be found here: https://statsandr.com/blog/data-types-in-r/\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "Recap of AE\n– logical: a logical value.\n– integer: an integer (positive or negative).\n– double: a real number stored in “double-precision floatint point format.”\n– character: a sequence of characters, called a “string” in other programming languages\nMore information can be found here: https://statsandr.com/blog/data-types-in-r/\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#types-and-classes",
+    "href": "slides/08-tidying-data.html#types-and-classes",
+    "title": "Types and Classes",
+    "section": "Types and Classes",
+    "text": "Types and Classes\n– Type is how an object is stored in memory.\n\ndouble: a real number stored in “double-precision floatint point format.”\ninteger: an integer (positive or negative).\n\n– Class is metadata about the object that can determine how common functions operate on that object."
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#types-and-classes-1",
+    "href": "slides/08-tidying-data.html#types-and-classes-1",
+    "title": "Types and Classes",
+    "section": "Types and Classes",
+    "text": "Types and Classes\nclass() - what kind of object is it (high-level)? typeof() - what is the object’s data type (low-level)?\nChanging the type of a variable changes it’s class, and how functions oberate on the object. We will get practice with this in the application exercise."
   }
 ]
