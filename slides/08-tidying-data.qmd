@@ -25,7 +25,7 @@ library(countdown)
 
 -- Be detailed 
 
--- Ask clarification question in Slack 
+-- Ask clarification questions in Slack 
 
 -- Single pipe*line*
 
@@ -37,6 +37,10 @@ library(countdown)
 -- ggplot practice
 
 -- Practice re-creating graphs
+
+## Prep Questions 
+
+[Slido](https://app.sli.do/event/mMdYZ53mpsUs2ZeGGxkm9s)
 
 ## Warm Up: Types of variables
 
@@ -70,6 +74,7 @@ Categorical or quantitative?
 ## Types and Classes 
 
 `class()` - what kind of object is it (high-level)?
+
 `typeof()` - what is the object’s data type (low-level)?
 
 Changing the type of a variable changes it's class, and how functions oberate on the object. We will get practice with this in the application exercise. 
