@@ -50,13 +50,14 @@ library(tidyverse)
 library(scales)
 library(skimr)
 
+mtcars07 <- read_csv("data/mtcars07.csv" , col_types = NULL)
+
+
 glimpse(mtcars)
 
-mtcars <- mtcars |>
-  mutate(carb = as.factor(carb))
 ```
 
-Create side-by-side boxplots of the number of mpg cars get versus the type of Engine they have. 
+**3-min** Run the code below to create side-by-side boxplots of the number of mpg cars get versus the type of Engine they have. 
 ```{r}
 mtcars |>
 ggplot(
@@ -69,7 +70,7 @@ Why doesn't this work?
 
 *Answer Here*
 
-**3min** Edit the code below to fix the issue.
+Edit the code below to fix the issue.
 
 ```{r}
 mtcars |>

@@ -1391,5 +1391,54 @@
     "title": "AE 07: Hotel bookings",
     "section": "Packages",
     "text": "Packages\nWe will use the following two packages in this application exercise.\n\n\ntidyverse: For data import, wrangling, and visualization.\n\nskimr: For summarizing the entire data frame at once.\n\nscales: For better axis labels.\n\nTo be productive in R, you need to be familiar with the major types and the operations on these types. Each R object has a un underlying “type”, which determines the set of possible values for that object. You can find the type of an object using the typeof function.\nlogical: a logical value.\ninteger: an integer (positive or negative). Many R programmers do not use this mode since every integer value can be represented as a double.\ndouble: a real number stored in “double-precision floatint point format.”\ncomplex: a complex number\ncharacter: a sequence of characters, called a “string” in other programming languages\nlist: a list of named values\nNULL: a special type with only one possible value, known as NULL\nMore information can be found here: https://statsandr.com/blog/data-types-in-r/"
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#checklist",
+    "href": "slides/08-tidying-data.html#checklist",
+    "title": "Types and Classes",
+    "section": "Checklist",
+    "text": "Checklist"
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#checklist-1",
+    "href": "slides/08-tidying-data.html#checklist-1",
+    "title": "Types and Classes",
+    "section": "Checklist",
+    "text": "Checklist\n\nOpen your ae-07 project in RStudio.\nHW2 Due Tomorrow.\nExam 1 is coming (next week!)"
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#announcements",
+    "href": "slides/08-tidying-data.html#announcements",
+    "title": "Types and Classes",
+    "section": "Announcements",
+    "text": "Announcements\n– Regrade Requests"
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#goals",
+    "href": "slides/08-tidying-data.html#goals",
+    "title": "Types and Classes",
+    "section": "Goals:",
+    "text": "Goals:\n– Understand how R treats data\n– ggplot practice\n– Practice re-creating graphs"
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#warm-up-types-of-variables",
+    "href": "slides/08-tidying-data.html#warm-up-types-of-variables",
+    "title": "Types and Classes",
+    "section": "Warm Up: Types of variables",
+    "text": "Warm Up: Types of variables\n\n\n\n−+\n03:00\n\n\n\nCategorical or quantitative?\n– Zipcode\n– Ounces of water drank\n– Height of students (measured tall / short)\n– Hours spent playing video games"
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#ae-07",
+    "href": "slides/08-tidying-data.html#ae-07",
+    "title": "Types and Classes",
+    "section": "ae-07",
+    "text": "ae-07\n\nGo to the course GitHub org and find your ae-07 (repo name will be suffixed with your GitHub name).\nClone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\nRender, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/08-tidying-data.html#recap-of-ae",
+    "href": "slides/08-tidying-data.html#recap-of-ae",
+    "title": "Types and Classes",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n– logical: a logical value.\n– integer: an integer (positive or negative). Many R programmers do not use this mode since every integer value can be represented as a double.\n– double: a real number stored in “double-precision floatint point format.”\n– complex: a complex number\n– character: a sequence of characters, called a “string” in other programming languages\n– list: a list of named values\n– NULL: a special type with only one possible value, known as NULL\nMore information can be found here: https://statsandr.com/blog/data-types-in-r/\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
