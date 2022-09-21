@@ -67,9 +67,9 @@ country_inflation <- read_csv("data/country-inflation.csv")
 
 3.  Create a vector called `countries_of_interest` which contains the names of countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:
 
-    ```{r}
-    countries_of_interest <- c("Türkiye", "United States")
-    ```
+```{r}
+countries_of_interest <- c("Türkiye", "United States")
+```
 
     Your `countries_of_interest` should consist of no more than five countries. Make sure that the spelling of your countries matches how they appear in the dataset.
 
@@ -85,13 +85,13 @@ country_inflation <- read_csv("data/country-inflation.csv")
 
     -   Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25). *Hint:* The `label_percent()` function from the scales package will be useful.
 
-        ```{r}
-        #| eval: false
+```{r}
+#| eval: false
 
-        ggplot(...) +
-          ... +
-          scale_y_continuous(label = label_percent())
-        ```
+ggplot(...) +
+    ... +
+    scale_y_continous(labels = label_percent(scale = 1))
+```
 
 ::: render-commit-push
 If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
@@ -140,16 +140,16 @@ cpi_divisions <- read_csv("data/cpi-divisions.csv")
 
     -   If your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically. *Hint:* The `legend.position` and `legend.direction` arguments of the `theme()` functions will be useful.
 
-        ```{r}
-        #| eval: false
+```{r}
+#| eval: false
 
-        ggplot(...) +
-          ... +
-          theme(
-            legend.position = "bottom", 
-            legend.direction = "vertical"
+ggplot(...) +
+   ... +
+    theme(
+        legend.position = "bottom", 
+        legend.direction = "vertical"
           )
-        ```
+```
 
     -   The plot should have an appropriate title (and optionally a subtitle).
 
@@ -187,11 +187,11 @@ To submit your assignment:
 | Component             | Points |
 |:----------------------|:-------|
 | Ex 1                  | 3      |
-| Ex 2                  | 15     |
-| Ex 3                  | 3      |
+| Ex 2                  | 6     |
+| Ex 3                  | 4      |
 | Ex 4                  | 12     |
-| Ex 5                  | 7      |
-| Ex 6                  | 3      |
+| Ex 5                  | 4      |
+| Ex 6                  | 4      |
 | Ex 7                  | 12     |
 | Workflow & formatting | 5      |
 | **Total**             | **50** |

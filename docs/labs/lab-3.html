@@ -326,13 +326,13 @@ Important
 <ol type="1">
 <li><p>What does each row of the <code>country_inflation</code> dataset represent? What are the columns in the dataset and what do they represent?</p></li>
 <li><p>Reshape (pivot) <code>country_inflation</code> such that each row represents a country/year combination, with columns <code>country</code>, <code>year</code>, and <code>annual_inflation</code>. Make sure that <code>annual_inflation</code> is a numeric variable. Save the result as a new data frame – you should give it a concise and informative name.</p></li>
-<li>
-<p>Create a vector called <code>countries_of_interest</code> which contains the names of countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:</p>
+<li><p>Create a vector called <code>countries_of_interest</code> which contains the names of countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:</p></li>
+</ol>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">countries_of_interest</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Türkiye"</span>, <span class="st">"United States"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Your <code>countries_of_interest</code> should consist of no more than five countries. Make sure that the spelling of your countries matches how they appear in the dataset.</p>
-</li>
+<pre><code>Your `countries_of_interest` should consist of no more than five countries. Make sure that the spelling of your countries matches how they appear in the dataset.</code></pre>
+<ol start="4" type="1">
 <li>
 <p>In a single pipeline, filter your reshaped dataset to include only the <code>countries_of_interest</code> from the previous exercise and create a plot of annual inflation vs.&nbsp;year for these countries. Then, in a few sentences, state why you chose these countries and describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.</p>
 <ul>
@@ -340,17 +340,15 @@ Important
 <li><p>Each country should be represented by a different color line.</p></li>
 <li><p>Axes and legend should be properly labeled.</p></li>
 <li><p>The plot should have an appropriate title (and optionally a subtitle).</p></li>
-<li>
-<p>Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25). <em>Hint:</em> The <code><a href="https://scales.r-lib.org/reference/label_percent.html">label_percent()</a></code> function from the scales package will be useful.</p>
-<div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">...</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="va">...</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu"><a href="https://scales.r-lib.org/reference/label_percent.html">label_percent</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</li>
+<li><p>Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25). <em>Hint:</em> The <code><a href="https://scales.r-lib.org/reference/label_percent.html">label_percent()</a></code> function from the scales package will be useful.</p></li>
 </ul>
 </li>
 </ol>
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">...</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="va">...</span> <span class="op">+</span></span>
+<span>    <span class="fu">scale_y_continous</span><span class="op">(</span>labels <span class="op">=</span> <span class="fu"><a href="https://scales.r-lib.org/reference/label_percent.html">label_percent</a></span><span class="op">(</span>scale <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="render-commit-push">
 <p>If you haven’t yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
 <p><br></p>
@@ -372,7 +370,7 @@ Important
 </ul>
 <p>Let’s load both of these files.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">us_inflation</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/us-inflation.csv"</span><span class="op">)</span></span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">us_inflation</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/us-inflation.csv"</span><span class="op">)</span></span>
 <span><span class="va">cpi_divisions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/cpi-divisions.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
@@ -388,22 +386,21 @@ Important
 <li><p>Data should be represented with points as well as lines connecting the points for each division.</p></li>
 <li><p>Each division should be represented by a different color.</p></li>
 <li><p>Axes and legend should be properly labeled.</p></li>
-<li>
-<p>If your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically. <em>Hint:</em> The <code>legend.position</code> and <code>legend.direction</code> arguments of the <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> functions will be useful.</p>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">...</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="va">...</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
-<span>    legend.position <span class="op">=</span> <span class="st">"bottom"</span>, </span>
-<span>    legend.direction <span class="op">=</span> <span class="st">"vertical"</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</li>
-<li><p>The plot should have an appropriate title (and optionally a subtitle).</p></li>
-<li><p>Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25).</p></li>
+<li><p>If your legend has labels that are too long, you can try moving the legend to the bottom and stack the labels vertically. <em>Hint:</em> The <code>legend.position</code> and <code>legend.direction</code> arguments of the <code><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme()</a></code> functions will be useful.</p></li>
 </ul>
 </li>
 </ol>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">...</span><span class="op">)</span> <span class="op">+</span></span>
+<span>   <span class="va">...</span> <span class="op">+</span></span>
+<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>        legend.position <span class="op">=</span> <span class="st">"bottom"</span>, </span>
+<span>        legend.direction <span class="op">=</span> <span class="st">"vertical"</span></span>
+<span>          <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>-   The plot should have an appropriate title (and optionally a subtitle).
+
+-   Axis labels for annual inflation should be shown in percentages (e.g., 25% not 25).</code></pre>
 <div class="render-commit-push">
 <p>If you haven’t yet done so since Part 1, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
 <p><br></p>
@@ -447,11 +444,11 @@ Warning
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 2</td>
-<td style="text-align: left;">15</td>
+<td style="text-align: left;">6</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ex 3</td>
-<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 4</td>
@@ -459,11 +456,11 @@ Warning
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ex 5</td>
-<td style="text-align: left;">7</td>
+<td style="text-align: left;">4</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 6</td>
-<td style="text-align: left;">3</td>
+<td style="text-align: left;">4</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ex 7</td>
