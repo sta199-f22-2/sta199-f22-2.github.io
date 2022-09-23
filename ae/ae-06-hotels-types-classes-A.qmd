@@ -242,16 +242,16 @@ Take a look at the the following visualization. How are the months ordered? What
 ```{r}
 #| label: label-me
 
-hotels %>%
+hotels |>
   mutate(
   arrival_date_month = fct_relevel(arrival_date_month, "January", "February", "March", "April", "May", "June",
               "July", "August", "September", "October", "November", "December")) |>
-  mutate(arrival_date_month = case_when(
-    adr == "My average rate was 124" ~ 124,
+  mutate(adr = case_when(
+    is.na(adr) ~ 124,
     TRUE ~ as.numeric(adr)
   )) |>
   group_by(hotel, arrival_date_month) |>
-  summarise(mean_adr = mean(adr)) %>%       # calculate mean adr for each group
+  summarise(mean_adr = mean(adr)) |>       # calculate mean adr for each group
   ggplot(aes(
     x = arrival_date_month,                 # x-axis = arrival_date_month
     y = mean_adr,                           # y-axis = mean_adr calculated above

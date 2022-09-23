@@ -44,6 +44,13 @@ d %>%
       )
     }
   ) %>%
+    text_transform(cells_body(columns = c(hw_sa)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
+      )
+    }
+  ) %>% 
   text_transform(cells_body(columns = c(hw)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("keyboard", fill_opacity = 0.1),
@@ -51,6 +58,13 @@ d %>%
       )
     }
   ) %>%
+      text_transform(cells_body(columns = c(lab_sa)),
+    fn = function(x) {
+      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
+        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
+      )
+    }
+  ) %>% 
   text_transform(cells_body(columns = c(lab)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("users-rectangle", fill_opacity = 0.1),
@@ -76,7 +90,7 @@ d %>%
   sub_missing(columns = c(date, what, topic, notes), missing_text = "") %>%
   cols_align(
     align = "center", 
-    columns = c(week, dow, prepare, slides, ae, hw, lab, exam, project)
+    columns = c(week, dow, prepare, slides, ae, hw, hw_sa, lab, lab_sa, exam, project)
     ) %>%
   cols_align(
     align = "left", 
