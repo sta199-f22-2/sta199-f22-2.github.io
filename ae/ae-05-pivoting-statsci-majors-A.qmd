@@ -15,7 +15,7 @@ Our ultimate goal in this application exercise is to make the following data vis
 
 -   **Your turn (3 minutes):** Take a close look at the plot and describe what it shows in 2-3 sentences.
 
-*Add your response here.*
+*This plot describes the relationship between a graduation year and the number of majors graduating. This relationsip is broken down by degree type. It appears that the number of majors graduating's relationship with graduation year changes by degree type, with BS and BS2 majors having more graduating in later years than the others.*
 
 ## Data
 

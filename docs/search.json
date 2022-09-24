@@ -221,7 +221,7 @@
     "href": "ae/ae-05-pivoting-statsci-majors-A.html",
     "title": "AE 06: Pivoting StatSci Majors",
     "section": "",
-    "text": "Our ultimate goal in this application exercise is to make the following data visualization.\n\n\n\n\n\n\nYour turn (3 minutes): Take a close look at the plot and describe what it shows in 2-3 sentences.\n\nAdd your response here."
+    "text": "Our ultimate goal in this application exercise is to make the following data visualization.\n\n\n\n\n\n\nYour turn (3 minutes): Take a close look at the plot and describe what it shows in 2-3 sentences.\n\nThis plot describes the relationship between a graduation year and the number of majors graduating. This relationsip is broken down by degree type. It appears that the number of majors graduating’s relationship with graduation year changes by degree type, with BS and BS2 majors having more graduating in later years than the others."
   },
   {
     "objectID": "ae/ae-05-pivoting-statsci-majors-A.html#data",
