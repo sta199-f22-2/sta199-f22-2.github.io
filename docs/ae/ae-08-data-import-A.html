@@ -247,6 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="#packages" id="toc-packages" class="nav-link active" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#nobel-winners" id="toc-nobel-winners" class="nav-link" data-scroll-target="#nobel-winners">Nobel winners</a></li>
   <li><a href="#sales" id="toc-sales" class="nav-link" data-scroll-target="#sales">Sales</a></li>
+  <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional">Optional</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/ae/ae-08-data-import-A.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
@@ -319,8 +320,8 @@ date  (2): born_date, died_date
 <li>
 <p><strong>Demo:</strong> Write out the two new datasets you created into the <code>data</code> folder:</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="va">nobel_stem</span>, file <span class="op">=</span> <span class="st">"nobel-stem.csv"</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="va">nobel_nonstem</span>, file <span class="op">=</span> <span class="st">"nobel-nonstem.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="va">nobel_stem</span>, file <span class="op">=</span> <span class="st">"data/nobel-stem.csv"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv</a></span><span class="op">(</span><span class="va">nobel_nonstem</span>, file <span class="op">=</span> <span class="st">"data/nobel-nonstem.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </li>
 </ul></section><section id="sales" class="level2"><h2 class="anchored" data-anchor-id="sales">Sales</h2>
@@ -345,7 +346,7 @@ date  (2): born_date, died_date
 <p><strong>Demo - Stretch goal:</strong> Manipulate the sales data such such that it looks like the following.</p>
 <p><img src="images/sales-2.png" class="img-fluid" width="300"></p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales2</span> <span class="op">&lt;-</span> <span class="va">sales</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
 <span>    is_brand_name <span class="op">=</span> <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect</a></span><span class="op">(</span><span class="va">id</span>, <span class="st">"Brand"</span><span class="op">)</span>,</span>
 <span>    brand <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">is_brand_name</span>, <span class="va">id</span>, <span class="cn">NULL</span><span class="op">)</span></span>
@@ -353,18 +354,6 @@ date  (2): born_date, died_date
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/fill.html">fill</a></span><span class="op">(</span><span class="va">brand</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="va">is_brand_name</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">brand</span>, <span class="va">id</span>, <span class="va">n</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 7 × 3
-  brand   id    n    
-  &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;
-1 Brand 1 1234  8    
-2 Brand 1 8721  2    
-3 Brand 1 1822  3    
-4 Brand 2 3333  1    
-5 Brand 2 2156  3    
-6 Brand 2 3987  6    
-7 Brand 2 3216  5    </code></pre>
-</div>
 </div>
 </li>
 </ul>
@@ -373,7 +362,7 @@ date  (2): born_date, died_date
 <p><strong>Question:</strong> Why should we bother with writing code for reading the data in by skipping columns and assigning variable names as well as cleaning it up in multiple steps instead of opening the Excel file and editing the data in there to prepare it for a clean import?</p>
 <p>Because the code allows us to struggle once and re-use for future datasets and leaves a transparent trail of our modifications while manipulating the data in Excel directly is neither reproducible nor reusable.</p>
 </li>
-</ul>
+</ul></section><section id="optional" class="level2"><h2 class="anchored" data-anchor-id="optional">Optional</h2>
 
 
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

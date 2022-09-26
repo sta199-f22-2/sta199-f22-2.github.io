@@ -56,8 +56,8 @@ library(readxl)
     ```{r}
     #| label: nobel-export
 
-    write_csv(nobel_stem, file = "nobel-stem.csv")
-    write_csv(nobel_nonstem, file = "nobel-nonstem.csv")
+    write_csv(nobel_stem, file = "data/nobel-stem.csv")
+    write_csv(nobel_nonstem, file = "data/nobel-nonstem.csv")
     ```
 
 ## Sales
@@ -87,7 +87,7 @@ Sales data are stored in an Excel file that looks like the following:
     ```{r}
     #| label: sales-cleanup
 
-    sales |>
+    sales2 <- sales |>
       mutate(
         is_brand_name = str_detect(id, "Brand"),
         brand = if_else(is_brand_name, id, NULL)
@@ -102,3 +102,7 @@ Sales data are stored in an Excel file that looks like the following:
 -   **Question:** Why should we bother with writing code for reading the data in by skipping columns and assigning variable names as well as cleaning it up in multiple steps instead of opening the Excel file and editing the data in there to prepare it for a clean import?
 
     Because the code allows us to struggle once and re-use for future datasets and leaves a transparent trail of our modifications while manipulating the data in Excel directly is neither reproducible nor reusable.
+    
+## Optional 
+
+
