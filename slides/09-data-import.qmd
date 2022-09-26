@@ -15,7 +15,7 @@ library(countdown)
 
 -   Open your `ae-08` project in RStudio.
 
--   HW2 Due Tonight.
+-   Lab-03 Due Tonight.
 
 -   Exam 1 is coming (This week!)
 
