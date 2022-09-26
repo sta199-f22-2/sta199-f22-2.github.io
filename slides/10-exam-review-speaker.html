@@ -10,8 +10,8 @@
   <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Dr.&nbsp;Elijah Meyer + Konnie Huang">
-  <meta name="dcterms.date" content="2022-09-26">
-  <title>STA 199 - Data Import</title>
+  <meta name="dcterms.date" content="2022-09-21">
+  <title>STA 199 - Exam Review</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -320,87 +320,56 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Data Import</h1>
-  <p class="subtitle">Lecture 9</p>
+  <h1 class="title">Exam Review</h1>
+  <p class="subtitle">Lecture 10</p>
   <p class="author">Dr.&nbsp;Elijah Meyer + Konnie Huang</p>
   <p class="institute">Duke University <br> STA 199 - Fall 2022</p>
-  <p class="date">September 26, 2022</p>
+  <p class="date">September 21, 2022</p>
 </section>
 
 <section id="checklist" class="slide level2">
 <h2>Checklist</h2>
-<div class="cell">
+</section>
+<section id="pivot-wider-and-longer" class="slide level2">
+<h2>Pivot Wider and Longer</h2>
+<p>With a wide structure, each person (observational unit) has one observation (row) and a separate column contains data for each measurement. With a long structure, each person (observational unit) has multiple observations; one measurement per row.</p>
 
+<img data-src="images/wide_and_long.png" class="r-stretch quarto-figure-center"></section>
+<section id="in-action" class="slide level2">
+<h2>In action</h2>
+
+<img data-src="images/tidyr-longer-wider.gif" class="r-stretch quarto-figure-center"></section>
+<section id="the-code" class="slide level2">
+<h2>The code</h2>
+<p><code>babies_long &lt;- babies |&gt;    pivot_longer(     cols         = -c("id, "sex"),     names_to     = "months",     names_prefix = "weight_",     values_to    = "weight"   )</code></p>
+</section>
+<section id="the-code---answers" class="slide level2 smaller">
+<h2>The code - answers</h2>
+<p><code>babies_long &lt;- babies |&gt;    pivot_longer(     cols         = c(-id, -sex),     names_to     = "months",     names_prefix = "weight_",     values_to    = "weight"   )</code></p>
+<p>– The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.</p>
+<p>– The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.</p>
+<p>– The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.</p>
+<p>– The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted.</p>
+
+<img data-src="images/longer-answers.png" class="r-stretch quarto-figure-center"></section>
+<section id="pivot-wider" class="slide level2">
+<h2>pivot-wider</h2>
+<p>babies &lt;- babies_long %&gt;% pivot_wider( names_from = “months”, values_from = c(“weight”, “length”) )</p>
+</section>
+<section id="output" class="slide level2">
+<h2>output</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/wider-answers.png"></p>
+</figure>
 </div>
-<ul>
-<li class="fragment"><p>Open your <code>ae-08</code> project in RStudio.</p></li>
-<li class="fragment"><p>Lab-03 Due Tonight.</p></li>
-<li class="fragment"><p>Exam 1 is coming (This week!)</p></li>
-</ul>
-</section>
-<section id="exam-study-tips" class="slide level2">
-<h2>Exam Study Tips</h2>
-<p>– Take notes that you can reference</p>
-<p>– Go back through feedback</p>
-<p>– Revisit AEs</p>
-<p>– Review keys</p>
-<p>– Ask questions</p>
-</section>
-<section id="survey" class="slide level2">
-<h2>Survey</h2>
-<p>– Review</p>
-<p>– Feedback</p>
-</section>
-<section id="regrades" class="slide level2">
-<h2>Regrades</h2>
-<p>– What they are</p>
-<p>and are not…</p>
-</section>
-<section id="goals" class="slide level2">
-<h2>Goals</h2>
-<p>– Understand how to export data files</p>
-<p>– Understand multiple ways to read in data</p>
-<p>– “New” functions: str_detect and fill</p>
-<p>– Review</p>
-</section>
-<section id="prep-questions" class="slide level2">
-<h2>Prep Questions</h2>
-<p><a href="https://app.sli.do/event/ve6T56b8H5FdUpqgV9U7tQ">Slido-Exam</a></p>
-<p><a href="https://app.sli.do/event/ppjZjZRgcEL8u9DVhe1CsD">Slido-Reading</a></p>
-</section>
-<section id="warm-up" class="slide level2">
-<h2>Warm Up</h2>
-<p>Why should we bother with writing code to edit data rather than just editing the Excel file?</p>
-<p>What is the difference between read.csv and read_csv?</p>
-</section>
-<section id="read.csv-vs-read_csv" class="slide level2">
-<h2>read.csv vs read_csv</h2>
+<p>These data are in your ae-10 repo so you can try out this code and practice for yourself!</p>
 
-<img data-src="images/tibble.png" width="801" class="r-stretch quarto-figure-center"></section>
-<section>
-<section id="application-exercise" class="title-slide slide level1 center">
-<h1>Application exercise</h1>
-
-</section>
-<section id="ae-08" class="slide level2">
-<h2><code>ae-08</code></h2>
-<p>– Go to the course <a href="https://github.com/sta199-f22-2">GitHub org</a> and find your <code>ae-08</code> (repo name will be suffixed with your GitHub name).</p>
-<p>– Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.</p>
-<p>– Render, commit, and push your edits by the AE deadline – 3 days from today.</p>
-</section>
-<section id="recap-of-ae" class="slide level2 smaller">
-<h2>Recap of AE</h2>
-
-<img data-src="images/import.png" class="r-stretch quarto-figure-center"></section>
-<section id="recap-of-ae-1" class="slide level2">
-<h2>Recap of AE</h2>
-<p>– There are also special functions to work with dates and times! See preperation reading.</p>
-
-
-<img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><img src="images/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://sta199-f22-2.github.io/">🔗 sta199-f22-2.github.io</a></p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -435,7 +404,7 @@
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":"16641586043969878919","id":"4500f92608a60b7b","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":"16642187294211799450","id":"5f7f6911b045815e","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -615,48 +584,6 @@
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        function fireSlideChanged(previousSlide, currentSlide) {
-
-          // dispatch for htmlwidgets
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for reveal
-        if (window.Reveal) {
-          window.Reveal.addEventListener("slidechanged", function(event) {
-            fireSlideChanged(event.previousSlide, event.currentSlide);
-          });
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

@@ -7,82 +7,69 @@ format: revealjs
 
 ## Checklist
 
-```{r}
-#| echo: false
 
-library(countdown)
-```
+## Pivot Wider and Longer 
 
--   Open your `ae-08` project in RStudio.
+With a wide structure, each person (observational unit) has one observation (row) and a separate column contains data for each measurement. With a long structure, each person (observational unit) has multiple observations; one measurement per row.
 
--   HW2 Due Tonight.
+![](images/wide_and_long.png){fig-align="center"}
 
--   Exam 1 is coming (This week!)
+## In action 
 
-## Exam Study Tips
+![](images/tidyr-longer-wider.gif){fig-align="center"}
 
--- Take notes that you can reference 
+## The code 
 
--- Go back through feedback 
+`babies_long <- babies |> 
+  pivot_longer(
+    cols         = -c("id, "sex"),
+    names_to     = "months",
+    names_prefix = "weight_",
+    values_to    = "weight"
+  )` 
+  
 
--- Revisit AEs 
+## The code - answers {.smaller}
 
--- Review keys 
+`babies_long <- babies |> 
+  pivot_longer(
+    cols         = c(-id, -sex),
+    names_to     = "months",
+    names_prefix = "weight_",
+    values_to    = "weight"
+  )` 
+  
+  -- The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.
+  
+  -- The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.
+  
+  -- The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.
+  
+  -- The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted.
 
--- Ask questions 
 
-## Survey 
+![](images/longer-answers.png){fig-align="center"}
 
--- Review 
+## pivot-wider 
 
--- Feedback
+babies <- babies_long %>% 
+  pivot_wider(
+    names_from  = "months",
+    values_from = c("weight", "length")
+  )
+  
+## output
 
-## Regrades 
-
--- What they are 
-
-and are not...
+![](images/wider-answers.png){fig-align="center"}
 
 
-## Goals
 
--- Understand how to export data files 
 
--- Understand multiple ways to read in data 
+These data are in your ae-10 repo so you can try out this code and practice for yourself! 
 
--- "New" functions: str_detect and fill 
 
--- ggplot practice
 
-## Prep Questions
 
-[Slido-Exam](https://app.sli.do/event/ve6T56b8H5FdUpqgV9U7tQ)
 
-[Slido-Reading](https://app.sli.do/event/ppjZjZRgcEL8u9DVhe1CsD)
 
-## Warm Up 
-Why should we bother with writing code to edit data rather than just editing the Excel file? 
 
-What is the difference between read.csv and read_csv? 
-
-## read.csv vs read_csv
-
-![](images/tibble.png){fig-align="center" width="801"}
-
-# Application exercise
-
-## `ae-08`
-
---   Go to the course [GitHub org](https://github.com/sta199-f22-2) and find your `ae-08` (repo name will be suffixed with your GitHub name).
-
---   Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.
-
---   Render, commit, and push your edits by the AE deadline -- 3 days from today.
-
-## Recap of AE {.smaller}
-
-![](images/import.png){fig-align="center"}
-
-## Recap of AE
-
--- There are also special functions to work with dates and times! See preperation reading. 

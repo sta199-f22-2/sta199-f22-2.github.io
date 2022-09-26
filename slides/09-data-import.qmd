@@ -52,7 +52,7 @@ and are not...
 
 -- "New" functions: str_detect and fill 
 
--- ggplot practice
+-- Review
 
 ## Prep Questions
 

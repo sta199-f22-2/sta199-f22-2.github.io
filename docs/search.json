@@ -1544,7 +1544,7 @@
     "href": "slides/09-data-import.html#goals",
     "title": "Data Import",
     "section": "Goals",
-    "text": "Goals\n– Understand how to export data files\n– Understand multiple ways to read in data\n– “New” functions: str_detect and fill\n– ggplot practice"
+    "text": "Goals\n– Understand how to export data files\n– Understand multiple ways to read in data\n– “New” functions: str_detect and fill\n– Review"
   },
   {
     "objectID": "slides/09-data-import.html#prep-questions",
@@ -1587,5 +1587,54 @@
     "title": "Data Import",
     "section": "Recap of AE",
     "text": "Recap of AE\n– There are also special functions to work with dates and times! See preperation reading.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#checklist",
+    "href": "slides/10-exam-review.html#checklist",
+    "title": "Exam Review",
+    "section": "Checklist",
+    "text": "Checklist"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#pivot-wider-and-longer",
+    "href": "slides/10-exam-review.html#pivot-wider-and-longer",
+    "title": "Exam Review",
+    "section": "Pivot Wider and Longer",
+    "text": "Pivot Wider and Longer\nWith a wide structure, each person (observational unit) has one observation (row) and a separate column contains data for each measurement. With a long structure, each person (observational unit) has multiple observations; one measurement per row."
+  },
+  {
+    "objectID": "slides/10-exam-review.html#in-action",
+    "href": "slides/10-exam-review.html#in-action",
+    "title": "Exam Review",
+    "section": "In action",
+    "text": "In action"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#the-code",
+    "href": "slides/10-exam-review.html#the-code",
+    "title": "Exam Review",
+    "section": "The code",
+    "text": "The code\nbabies_long <- babies |>    pivot_longer(     cols         = -c(\"id, \"sex\"),     names_to     = \"months\",     names_prefix = \"weight_\",     values_to    = \"weight\"   )"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#the-code---answers",
+    "href": "slides/10-exam-review.html#the-code---answers",
+    "title": "Exam Review",
+    "section": "The code - answers",
+    "text": "The code - answers\nbabies_long <- babies |>    pivot_longer(     cols         = c(-id, -sex),     names_to     = \"months\",     names_prefix = \"weight_\",     values_to    = \"weight\"   )\n– The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.\n– The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.\n– The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.\n– The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted."
+  },
+  {
+    "objectID": "slides/10-exam-review.html#pivot-wider",
+    "href": "slides/10-exam-review.html#pivot-wider",
+    "title": "Exam Review",
+    "section": "pivot-wider",
+    "text": "pivot-wider\nbabies <- babies_long %>% pivot_wider( names_from = “months”, values_from = c(“weight”, “length”) )"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#output",
+    "href": "slides/10-exam-review.html#output",
+    "title": "Exam Review",
+    "section": "output",
+    "text": "output\n\n\n\n\n\nThese data are in your ae-10 repo so you can try out this code and practice for yourself!\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
