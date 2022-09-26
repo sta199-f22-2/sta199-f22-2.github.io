@@ -1482,5 +1482,103 @@
     "title": "Types and Classes",
     "section": "Recap of AE",
     "text": "Recap of AE\n– logical: a logical value.\n– integer: an integer (positive or negative).\n– double: a real number stored in “double-precision floatint point format.”\n– character: a sequence of characters, called a “string” in other programming languages\nMore information can be found here: https://statsandr.com/blog/data-types-in-r/\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "ae/ae-08-data-import-A.html",
+    "href": "ae/ae-08-data-import-A.html",
+    "title": "AE 08: Data import",
+    "section": "",
+    "text": "We will use the following two packages in this application exercise.\n\n\ntidyverse: For data import, wrangling, and visualization.\n\nreadxl: For importing data from Excel.\n\n\nlibrary(tidyverse)\nlibrary(readxl)"
+  },
+  {
+    "objectID": "ae/ae-08-data-import-A.html#nobel-winners",
+    "href": "ae/ae-08-data-import-A.html#nobel-winners",
+    "title": "AE 08: Data import",
+    "section": "Nobel winners",
+    "text": "Nobel winners\n\n\nDemo: Load the data from the data folder and assign it to nobel. Confirm that this new object appears in your Environment tab.\n\nnobel <- read_csv(\"data/nobel.csv\")\n\nRows: 935 Columns: 26\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (21): firstname, surname, category, affiliation, city, country, gender,...\ndbl   (3): id, year, share\ndate  (2): born_date, died_date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\n\n\n\nYour turn (4 minutes): Split the data into two – nobel laureates in STEM fields (category should be Physics, Medicine, Chemistry, or Economics) and nobel laureates in non-STEM fields. Name these two new objects appropriately. Remember: Use concise and evocative names. Confirm that these new objects appear in your Environment tab and that the sum of the number of observations in the two new data frames add to the number of observations in the original data frame.\n\n# define stem fields\nstem_fields <- c(\"Physics\", \"Medicine\", \"Chemistry\", \"Economics\")\n\n# stem laureates\nnobel_stem <- nobel %>%\n  filter(category %in% stem_fields)\n\n# non-steam laureates\nnobel_nonstem <- nobel %>%\n  filter(!(category %in% stem_fields))\n\n\n\nDemo: Write out the two new datasets you created into the data folder:\n\nwrite_csv(nobel_stem, file = \"nobel-stem.csv\")\nwrite_csv(nobel_nonstem, file = \"nobel-nonstem.csv\")"
+  },
+  {
+    "objectID": "ae/ae-08-data-import-A.html#sales",
+    "href": "ae/ae-08-data-import-A.html#sales",
+    "title": "AE 08: Data import",
+    "section": "Sales",
+    "text": "Sales\nSales data are stored in an Excel file that looks like the following:\n\n\n\n\n\n\nDemo: Read in the Excel file called sales.xlsx from the data/ folder such that it looks like the following.\n\n\nsales <- read_excel(\n  \"data/sales.xlsx\", \n  skip = 3,\n  col_names = c(\"id\", \"n\")\n  )\n\n\n\nDemo - Stretch goal: Manipulate the sales data such such that it looks like the following.\n\n\nsales |>\n  mutate(\n    is_brand_name = str_detect(id, \"Brand\"),\n    brand = if_else(is_brand_name, id, NULL)\n  ) |>\n  fill(brand) |>\n  filter(!is_brand_name) |>\n  select(brand, id, n)\n\n# A tibble: 7 × 3\n  brand   id    n    \n  <chr>   <chr> <chr>\n1 Brand 1 1234  8    \n2 Brand 1 8721  2    \n3 Brand 1 1822  3    \n4 Brand 2 3333  1    \n5 Brand 2 2156  3    \n6 Brand 2 3987  6    \n7 Brand 2 3216  5    \n\n\n\n\n\n\nQuestion: Why should we bother with writing code for reading the data in by skipping columns and assigning variable names as well as cleaning it up in multiple steps instead of opening the Excel file and editing the data in there to prepare it for a clean import?\nBecause the code allows us to struggle once and re-use for future datasets and leaves a transparent trail of our modifications while manipulating the data in Excel directly is neither reproducible nor reusable."
+  },
+  {
+    "objectID": "slides/09-data-import.html#checklist",
+    "href": "slides/09-data-import.html#checklist",
+    "title": "Data Import",
+    "section": "Checklist",
+    "text": "Checklist\n\n\n\n\nOpen your ae-08 project in RStudio.\nHW2 Due Tonight.\nExam 1 is coming (This week!)"
+  },
+  {
+    "objectID": "slides/09-data-import.html#exam-study-tips",
+    "href": "slides/09-data-import.html#exam-study-tips",
+    "title": "Data Import",
+    "section": "Exam Study Tips",
+    "text": "Exam Study Tips\n– Take notes that you can reference\n– Go back through feedback\n– Revisit AEs\n– Review keys\n– Ask questions"
+  },
+  {
+    "objectID": "slides/09-data-import.html#survey",
+    "href": "slides/09-data-import.html#survey",
+    "title": "Data Import",
+    "section": "Survey",
+    "text": "Survey\n– Review\n– Feedback"
+  },
+  {
+    "objectID": "slides/09-data-import.html#goals",
+    "href": "slides/09-data-import.html#goals",
+    "title": "Data Import",
+    "section": "Goals",
+    "text": "Goals\n– Understand how to export data files\n– Understand multiple ways to read in data\n– “New” functions: str_detect and fill\n– ggplot practice"
+  },
+  {
+    "objectID": "slides/09-data-import.html#prep-questions",
+    "href": "slides/09-data-import.html#prep-questions",
+    "title": "Data Import",
+    "section": "Prep Questions",
+    "text": "Prep Questions\nSlido-Exam\nSlido-Reading"
+  },
+  {
+    "objectID": "slides/09-data-import.html#warm-up",
+    "href": "slides/09-data-import.html#warm-up",
+    "title": "Data Import",
+    "section": "Warm Up",
+    "text": "Warm Up\nWhy should we bother with writing code to edit data rather than just editing the Excel file?\nWhat is the difference between read.csv and read_csv?"
+  },
+  {
+    "objectID": "slides/09-data-import.html#read.csv-vs-read_csv",
+    "href": "slides/09-data-import.html#read.csv-vs-read_csv",
+    "title": "Data Import",
+    "section": "read.csv vs read_csv",
+    "text": "read.csv vs read_csv"
+  },
+  {
+    "objectID": "slides/09-data-import.html#ae-08",
+    "href": "slides/09-data-import.html#ae-08",
+    "title": "Data Import",
+    "section": "ae-08",
+    "text": "ae-08\n– Go to the course GitHub org and find your ae-08 (repo name will be suffixed with your GitHub name).\n– Clone the repo in your container, open the Quarto document in the repo, and follow along and complete the exercises.\n– Render, commit, and push your edits by the AE deadline – 3 days from today."
+  },
+  {
+    "objectID": "slides/09-data-import.html#recap-of-ae",
+    "href": "slides/09-data-import.html#recap-of-ae",
+    "title": "Data Import",
+    "section": "Recap of AE",
+    "text": "Recap of AE"
+  },
+  {
+    "objectID": "slides/09-data-import.html#regrades",
+    "href": "slides/09-data-import.html#regrades",
+    "title": "Data Import",
+    "section": "Regrades",
+    "text": "Regrades\n– What they are\nand are not…"
+  },
+  {
+    "objectID": "slides/09-data-import.html#recap-of-ae-1",
+    "href": "slides/09-data-import.html#recap-of-ae-1",
+    "title": "Data Import",
+    "section": "Recap of AE",
+    "text": "Recap of AE\n– There are also special functions to work with dates and times! See preperation reading.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
