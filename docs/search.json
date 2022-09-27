@@ -1617,6 +1617,20 @@
     "text": "Checklist"
   },
   {
+    "objectID": "slides/10-exam-review.html#warm-up",
+    "href": "slides/10-exam-review.html#warm-up",
+    "title": "Exam Review",
+    "section": "Warm up",
+    "text": "Warm up\nSuppose you and another researcher collected data on coffee separately. You collect the data on the left, and they collect the data on the right. Based on the question asked, identify the appropriate join function to join these two data together.\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n– Add a column to your data set called special to indicate which months had speical drink offers.\n– Add a column to your data set called special to indicate which months had speical drink offers. Only include months in your data set that had specials."
+  },
+  {
+    "objectID": "slides/10-exam-review.html#left_join",
+    "href": "slides/10-exam-review.html#left_join",
+    "title": "Exam Review",
+    "section": "left_join",
+    "text": "left_join"
+  },
+  {
     "objectID": "slides/10-exam-review.html#pivot-wider-and-longer",
     "href": "slides/10-exam-review.html#pivot-wider-and-longer",
     "title": "Exam Review",

@@ -8,6 +8,28 @@ format: revealjs
 ## Checklist
 
 
+## Warm up {.smaller}
+
+Suppose you and another researcher collected data on coffee separately. You collect the data on the left, and they collect the data on the right. Based on the question asked, identify the appropriate join function to join these two data together. 
+
+::: {layout="[[50,-10,50]]"}
+![](images/coffee1.png){width="650" height="330" fig-align="center"}
+
+![](images/coffee2.png){width="650" height="300"}
+:::
+
+-- Add a column to your data set called `special` to indicate which months had speical drink offers.
+
+-- Add a column to your data set called `special` to indicate which months had speical drink offers. Only include months in your data set that had specials. 
+
+## left_join
+
+![](images/leftjoin.png){fig-align="center"}
+
+![](images/innerjoin.png){fig-align="center"}
+
+
+
 ## Pivot Wider and Longer 
 
 With a wide structure, each person (observational unit) has one observation (row) and a separate column contains data for each measurement. With a long structure, each person (observational unit) has multiple observations; one measurement per row.

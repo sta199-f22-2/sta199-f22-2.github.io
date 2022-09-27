@@ -198,11 +198,11 @@ The Academic Resource Center (ARC) offers free services to all students during t
 
 Services include:
 
---   Learning Consultations
+-- Learning Consultations
 
---   Peer Tutoring and Study Groups
+-- Peer Tutoring and Study Groups
 
---   ADHD/LD Coaching, Outreach Workshops and more
+-- ADHD/LD Coaching, Outreach Workshops and more
 
 Contact the ARC at ARC\@duke.edu or call 919-684-5917 to schedule an appointment.
 
@@ -218,11 +218,7 @@ Go to https://github.com/, and create an account (unless you already have one).
 
 Some tips from Happy Git with R.
 
---   Incorporate your actual name!
---   Reuse your username from other contexts if you can, e. g., Twitter or Slack.
---   Pick a username you will be comfortable revealing to your future boss.
---   Be as unique as possible in as few characters as possible. Shorter is better than longer.
---   Avoid words with special meaning in programming (e.g. NA).
+-- Incorporate your actual name! -- Reuse your username from other contexts if you can, e. g., Twitter or Slack. -- Pick a username you will be comfortable revealing to your future boss. -- Be as unique as possible in as few characters as possible. Shorter is better than longer. -- Avoid words with special meaning in programming (e.g. NA).
 
 ## Slack
 
@@ -230,9 +226,7 @@ Please click the Slack link located [here](https://join.slack.com/t/sta199-f22-2
 
 ## R-Studio
 
---   Reserve a STA198-1991 RStudio container
-    --   Go to https://vm-manage.oit.duke.edu/containers
-    --   Click Reserve Container for the STA198-199 container
+-- Reserve a STA198-1991 RStudio container -- Go to https://vm-manage.oit.duke.edu/containers -- Click Reserve Container for the STA198-199 container
 
 ## Our Turn
 
@@ -240,10 +234,10 @@ Please click the Slack link located [here](https://join.slack.com/t/sta199-f22-2
 
 ## For Wednesday
 
---   We'll start talking about the computing toolkit
+-- We'll start talking about the computing toolkit
 
---   Watch videos for Wednesday
+-- Watch videos for Wednesday
 
---   Complete *Getting to Know You* Survey
+-- Complete *Getting to Know You* Survey
 
 Please bring laptop to class if able for next time!
