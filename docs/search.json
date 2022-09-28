@@ -1617,97 +1617,6 @@
     "text": "Checklist\n– Clone exam review repo\n– Prepare for exam 1"
   },
   {
-    "objectID": "slides/10-exam-review.html#warm-up",
-    "href": "slides/10-exam-review.html#warm-up",
-    "title": "Exam Review",
-    "section": "Warm up",
-    "text": "Warm up\nSuppose you and another researcher collected data on coffee separately. You collect the data on the left, and they collect the data on the right. Based on the question asked, identify the appropriate join function to join these two data together.\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n– Add a column to your data set called special to indicate which months had speical drink offers.\n– Add a column to your data set called special to indicate which months had speical drink offers. Only include months in your data set that had specials."
-  },
-  {
-    "objectID": "slides/10-exam-review.html#left_join",
-    "href": "slides/10-exam-review.html#left_join",
-    "title": "Exam Review",
-    "section": "left_join",
-    "text": "left_join"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#pivot-wider-and-longer",
-    "href": "slides/10-exam-review.html#pivot-wider-and-longer",
-    "title": "Exam Review",
-    "section": "Pivot Wider and Longer",
-    "text": "Pivot Wider and Longer\nWith a wide structure, each person (observational unit) has one observation (row) and a separate column contains data for each measurement. With a long structure, each person (observational unit) has multiple observations; one measurement per row."
-  },
-  {
-    "objectID": "slides/10-exam-review.html#in-action",
-    "href": "slides/10-exam-review.html#in-action",
-    "title": "Exam Review",
-    "section": "In action",
-    "text": "In action\n{Long to Wide + Wide to Long}"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#the-code",
-    "href": "slides/10-exam-review.html#the-code",
-    "title": "Exam Review",
-    "section": "The code",
-    "text": "The code\n\nbabies_long <- babies |>\npivot_longer(\ncols = -c(“id,”sex”),\nnames_to = “months”,\nnames_prefix = “weight_”,\nvalues_to = “weight”\n)"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#the-code---answers",
-    "href": "slides/10-exam-review.html#the-code---answers",
-    "title": "Exam Review",
-    "section": "The code - answers",
-    "text": "The code - answers\n– The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.\n– The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.\n– The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.\n– The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted."
-  },
-  {
-    "objectID": "slides/10-exam-review.html#pivot-wider",
-    "href": "slides/10-exam-review.html#pivot-wider",
-    "title": "Exam Review",
-    "section": "pivot-wider",
-    "text": "pivot-wider\nbabies <- babies_long |>\npivot_wider(\nnames_from = “months”,\nvalues_from = c(“weight”, “length”)\n)"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#output",
-    "href": "slides/10-exam-review.html#output",
-    "title": "Exam Review",
-    "section": "output",
-    "text": "output"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#the-data",
-    "href": "slides/10-exam-review.html#the-data",
-    "title": "Exam Review",
-    "section": "The data",
-    "text": "The data"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#inner_join",
-    "href": "slides/10-exam-review.html#inner_join",
-    "title": "Exam Review",
-    "section": "inner_join",
-    "text": "inner_join"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#the-code---answers-..smaller",
-    "href": "slides/10-exam-review.html#the-code---answers-..smaller",
-    "title": "Exam Review",
-    "section": "The code - answers {..smaller}",
-    "text": "The code - answers {..smaller}\nbabies_long <- babies |> / pivot_longer( / cols = c(-id, -sex), / names_to = “months”, / names_prefix = “weight_”, / values_to = “weight” / )\n– The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.\n– The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.\n– The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.\n– The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted."
-  },
-  {
-    "objectID": "slides/10-exam-review.html#long-data",
-    "href": "slides/10-exam-review.html#long-data",
-    "title": "Exam Review",
-    "section": "long data",
-    "text": "long data"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#long-data-to-wide",
-    "href": "slides/10-exam-review.html#long-data-to-wide",
-    "title": "Exam Review",
-    "section": "long data to wide",
-    "text": "long data to wide"
-  },
-  {
     "objectID": "slides/10-exam-review.html#exam-logistics",
     "href": "slides/10-exam-review.html#exam-logistics",
     "title": "Exam Review",
@@ -1727,6 +1636,90 @@
     "title": "Exam Review",
     "section": "Goals",
     "text": "Goals\n– Pivots\n– Joins\n– Relationship Discussion\n– Data wrangling with dplyr"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#warm-up",
+    "href": "slides/10-exam-review.html#warm-up",
+    "title": "Exam Review",
+    "section": "Warm up",
+    "text": "Warm up\nSuppose you and another researcher collected data on coffee separately. You collect the data on the left, and they collect the data on the right. Based on the question asked, identify the appropriate join function to join these two data together.\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n– Add a column to your data set called special to indicate which months had speical drink offers.\n– Add a column to your data set called special to indicate which months had speical drink offers. Only include months in your data set that had specials."
+  },
+  {
+    "objectID": "slides/10-exam-review.html#left_join",
+    "href": "slides/10-exam-review.html#left_join",
+    "title": "Exam Review",
+    "section": "left_join",
+    "text": "left_join"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#inner_join",
+    "href": "slides/10-exam-review.html#inner_join",
+    "title": "Exam Review",
+    "section": "inner_join",
+    "text": "inner_join"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#pivot-wider-and-longer",
+    "href": "slides/10-exam-review.html#pivot-wider-and-longer",
+    "title": "Exam Review",
+    "section": "Pivot Wider and Longer",
+    "text": "Pivot Wider and Longer\nWith a wide structure, each person (observational unit) has one observation (row) and a separate column contains data for each measurement. With a long structure, each person (observational unit) has multiple observations; one measurement per row."
+  },
+  {
+    "objectID": "slides/10-exam-review.html#the-data",
+    "href": "slides/10-exam-review.html#the-data",
+    "title": "Exam Review",
+    "section": "The data",
+    "text": "The data"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#the-code",
+    "href": "slides/10-exam-review.html#the-code",
+    "title": "Exam Review",
+    "section": "The code",
+    "text": "The code\n\nbabies_long <- babies |>\npivot_longer(\ncols = -c(“id,”sex”),\nnames_to = “months”,\nnames_prefix = “weight_”,\nvalues_to = “weight”\n)"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#the-code---answers",
+    "href": "slides/10-exam-review.html#the-code---answers",
+    "title": "Exam Review",
+    "section": "The code - answers",
+    "text": "The code - answers\n– The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.\n– The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.\n– The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.\n– The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted."
+  },
+  {
+    "objectID": "slides/10-exam-review.html#in-action",
+    "href": "slides/10-exam-review.html#in-action",
+    "title": "Exam Review",
+    "section": "In action",
+    "text": "In action\n{Long to Wide + Wide to Long}"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#long-data",
+    "href": "slides/10-exam-review.html#long-data",
+    "title": "Exam Review",
+    "section": "long data",
+    "text": "long data"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#long-data-to-wide",
+    "href": "slides/10-exam-review.html#long-data-to-wide",
+    "title": "Exam Review",
+    "section": "long data to wide",
+    "text": "long data to wide"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#pivot-wider",
+    "href": "slides/10-exam-review.html#pivot-wider",
+    "title": "Exam Review",
+    "section": "pivot-wider",
+    "text": "pivot-wider\nbabies <- babies_long |>\npivot_wider(\nnames_from = “months”,\nvalues_from = c(“weight”, “length”)\n)"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#output",
+    "href": "slides/10-exam-review.html#output",
+    "title": "Exam Review",
+    "section": "output",
+    "text": "output"
   },
   {
     "objectID": "slides/10-exam-review.html#relationships",
