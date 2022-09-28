@@ -1,0 +1,149 @@
+---
+title: "Exam Review"
+categories: 
+  - Application exercise
+  - Answers
+editor: visual
+---
+
+## Packages
+
+We will use the following two packages in this application exercise.
+
+-   **tidyverse**: For data import, wrangling, and visualization.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+```
+
+For the remaining time, we will practice data wrangling with dplyr. We will be using the Student Exams data set. This is fictional data. The dataset is not from a real context, and the data set does not represent real people. The purpose of this data set is to teach data science and practice using R functions.
+
+
+```{r}
+#| label: data
+studentexams <- read_csv("data/StudentsPerformance.csv")
+
+```
+
+First, let's take a `glimpse` at our data. 
+
+```{r}
+#| label: view-data
+glimpse(studentexams)
+```
+
+Identify the variable names. Identify their type. 
+
+**Inline code example** There are `r nrow(studentexams)` number of rows in the data set and `r ncol(studentexams)` columns in the data set. 
+
+Some variable names have spaces. This won't work. Let's clean these up using `rename`. 
+
+`rename()` changes the name of columns.
+
+```{r}
+#| label: rename
+
+studentexams <- rename(studentexams, math_score = `math score`,
+                                     reading_score = `reading score`, 
+                                     writing_score = `writing score`,
+                                  parental_level_of_education = `parental level of education`)
+```
+
+
+`filter()` :chooses rows based on column values.
+
+Filter these data so that it only contains rows where math scores are at or equal to 70. 
+
+Then, filter the data to only look at student performance if they received standard lunch.
+
+```{r}
+#| label: filter
+
+studentexams |>
+  filter(math_score >= 70)
+
+studentexams |> 
+  filter(lunch == "standard")
+```
+
+Why does == work here but not in the homework? Check Sakai for a more detailed explanation!
+
+`mutate()` changes the values of columns and creates new columns. Let's use this with if else to create a new variable. Create a new variable called math_pass. Have it display yes if the student received a 70 or higher on their math exam. If they did not, have it say no.
+
+Hint: Think of if else as: 
+
+If this /
+Then this / 
+Else this /
+
+```{r}
+#| label: mutate
+
+studentexams |> 
+  mutate(
+    math_pass = if_else(math_score >= 70, "Yes", "No")
+  )
+
+```
+
+
+Now, use mutate to make gender a factor. 
+
+```{r}
+#| label: mutate2
+
+studentexams|>
+  mutate(gender = as.factor(gender))
+
+```
+
+
+`select()` changes whether or not a column is included.
+
+`slice()` chooses rows based on location.
+
+Now, only display the first 5 rows of the three exam score columns.
+
+```{r}
+#| label: display
+
+studentexams |>
+  select(math_score, reading_score, writing_score) |>
+  slice(1:5)
+
+```
+
+
+Note: You can combine with functions like head and tail to look at data too!
+
+
+`group_by()` perform calculations separately for each value of a variable
+
+`summarise()` collapses a group into a single row
+
+Now, group students by their parental level of education and calculate their mean math score. Arrange this in descending order. 
+
+```{r}
+#| label: calculate
+
+studentexams |>
+  group_by(parental_level_of_education) |>
+  summarise(mean_math = mean(math_score)) |>
+  arrange(desc(mean_math))
+
+```
+
+## Your turn! 
+
+Ask a question about these data and answer it. Create appropriate plots to help answer your question. 
+
+```{r}
+#| label: name-code-chunk
+
+```
+
+
+
