@@ -15,6 +15,14 @@ format: revealjs
 
 -- This is an individual exam (No Slack / No TAs / No Instructor)
 
+-- Clarification questions are welcome. Debuging is not: 
+
+What’s a tiny bit of help vs. what’s help to get unstuck
+
+There would be no equivalent to this in an in person exam
+
+If a student truly is stuck because of a reason not in their control, we wouldn’t penalize them anyway
+
 -- Turn in via PDF. If you fail to do so, we will grade your latest commit and issue a penalty
 
 -- Cite any code you obtain outside of the course materials
@@ -122,9 +130,28 @@ babies <- babies_long |> \
 
 ![](images/wider-answers.png){fig-align="center"}
 
+## Relationships 
+
+How we talk about graphs....
+
+## Scatterplot
+
+![](images/scatter.png){fig-align="center"}
+
+## Interactions
+
+![](images/interaction.png){fig-align="center"}
 
 
+## Boxplot 
 
+
+![](images/boxplot.png){fig-align="center"}
+
+
+## Barplot
+
+![](images/barplot.png){fig-align="center"}
 
 
 

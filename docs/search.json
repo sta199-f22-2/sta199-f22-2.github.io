@@ -1670,7 +1670,7 @@
     "href": "slides/10-exam-review.html#output",
     "title": "Exam Review",
     "section": "output",
-    "text": "output\n\n\n\n\n\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "output"
   },
   {
     "objectID": "slides/10-exam-review.html#the-data",
@@ -1712,7 +1712,7 @@
     "href": "slides/10-exam-review.html#exam-logistics",
     "title": "Exam Review",
     "section": "Exam Logistics",
-    "text": "Exam Logistics\n– This is an individual exam (No Slack / No TAs / No Instructor)\n– Turn in via PDF. If you fail to do so, we will grade your latest commit and issue a penalty\n– Cite any code you obtain outside of the course materials\n– Look at what’s rendered!"
+    "text": "Exam Logistics\n– This is an individual exam (No Slack / No TAs / No Instructor)\n– Clarification questions are welcome. Debuging is not:\nWhat’s a tiny bit of help vs. what’s help to get unstuck\nThere would be no equivalent to this in an in person exam\nIf a student truly is stuck because of a reason not in their control, we wouldn’t penalize them anyway\n– Turn in via PDF. If you fail to do so, we will grade your latest commit and issue a penalty\n– Cite any code you obtain outside of the course materials\n– Look at what’s rendered!"
   },
   {
     "objectID": "slides/10-exam-review.html#office-hours",
@@ -1727,5 +1727,40 @@
     "title": "Exam Review",
     "section": "Goals",
     "text": "Goals\n– Pivots\n– Joins\n– Relationship Discussion\n– Data wrangling with dplyr"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#relationships",
+    "href": "slides/10-exam-review.html#relationships",
+    "title": "Exam Review",
+    "section": "Relationships",
+    "text": "Relationships\nHow we talk about graphs…."
+  },
+  {
+    "objectID": "slides/10-exam-review.html#scatterplot",
+    "href": "slides/10-exam-review.html#scatterplot",
+    "title": "Exam Review",
+    "section": "Scatterplot",
+    "text": "Scatterplot"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#interactions",
+    "href": "slides/10-exam-review.html#interactions",
+    "title": "Exam Review",
+    "section": "Interactions",
+    "text": "Interactions"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#boxplot",
+    "href": "slides/10-exam-review.html#boxplot",
+    "title": "Exam Review",
+    "section": "Boxplot",
+    "text": "Boxplot"
+  },
+  {
+    "objectID": "slides/10-exam-review.html#barplot",
+    "href": "slides/10-exam-review.html#barplot",
+    "title": "Exam Review",
+    "section": "Barplot",
+    "text": "Barplot\n\n\n\n\n\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
