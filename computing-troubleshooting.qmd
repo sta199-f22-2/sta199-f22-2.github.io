@@ -8,3 +8,18 @@ If you're having difficulty launching an RStudio session from your reserved cont
 
 -   If the status shows `Operational`, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you've tried and the errors you see (including verbatim errors and/or screenshots).
 
+## Tips for not rendering
+
+These are questions to ask yourself / check if you are having trouble rendering your document.
+
+-- Are my code chunk labels weird? To create a code chunk label, you need the following `#| label:` at the start of your code chunk. If you have spaces in the name you put, or if you are using special characters, you may not be able to render your document. Note: if you want to make a comment, use `#` only. 
+
+-- Does your code run? If you have errors in your code, you will also have errors when rendering the document.
+
+-- Did you put View() in a code chunk? We don't use View often, but we need to be aware that any function that calls for an external viewer will break the render. 
+
+
+## Tips for not seeing my changes in Git
+
+-- Are you in the right project? You can see the project you are working in in the top right corner of your screen. This MUST be the project that you cloned for the exam / assignment / lab. Do not use the files tab to go search for a file outside of your project repo. 
+

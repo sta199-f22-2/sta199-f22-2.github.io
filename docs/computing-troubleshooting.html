@@ -202,7 +202,14 @@ ul.task-list{list-style: none;}
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tips-for-not-rendering" id="toc-tips-for-not-rendering" class="nav-link active" data-scroll-target="#tips-for-not-rendering">Tips for not rendering</a></li>
+  <li><a href="#tips-for-not-seeing-my-changes-in-git" id="toc-tips-for-not-seeing-my-changes-in-git" class="nav-link" data-scroll-target="#tips-for-not-seeing-my-changes-in-git">Tips for not seeing my changes in Git</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/computing-troubleshooting.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -228,8 +235,19 @@ ul.task-list{list-style: none;}
 <li><p>If the status shows something other than <code>Operational</code>, this means there is a known incident with the containers. Check back later to see if it’s been resolved. If there’s a deadline coming up soon, post on the course forum to let us know that there’s an issue. We can look into how quickly it might get resolved and decide on what to do about the deadline accordingly. Note: We don’t anticipate this to happen regularly, the systems are Operational a huge majority of the time!</p></li>
 <li><p>If the status shows <code>Operational</code>, this means the system is expected to be working. Check your internet connection, if need be, restart your computer to ensure a fresh new connection. If your issue persists, post on the course forum with details on what you’ve tried and the errors you see (including verbatim errors and/or screenshots).</p></li>
 </ul>
+<section id="tips-for-not-rendering" class="level2">
+<h2 class="anchored" data-anchor-id="tips-for-not-rendering">Tips for not rendering</h2>
+<p>These are questions to ask yourself / check if you are having trouble rendering your document.</p>
+<p>– Are my code chunk labels weird? To create a code chunk label, you need the following <code>#| label:</code> at the start of your code chunk. If you have spaces in the name you put, or if you are using special characters, you may not be able to render your document. Note: if you want to make a comment, use <code>#</code> only.</p>
+<p>– Does your code run? If you have errors in your code, you will also have errors when rendering the document.</p>
+<p>– Did you put View() in a code chunk? We don’t use View often, but we need to be aware that any function that calls for an external viewer will break the render.</p>
+</section>
+<section id="tips-for-not-seeing-my-changes-in-git" class="level2">
+<h2 class="anchored" data-anchor-id="tips-for-not-seeing-my-changes-in-git">Tips for not seeing my changes in Git</h2>
+<p>– Are you in the right project? You can see the project you are working in in the top right corner of your screen. This MUST be the project that you cloned for the exam / assignment / lab. Do not use the files tab to go search for a file outside of your project repo.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
