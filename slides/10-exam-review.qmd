@@ -7,6 +7,35 @@ format: revealjs
 
 ## Checklist
 
+-- Clone exam review repo 
+
+-- Prepare for exam 1
+
+## Exam Logistics {.smaller}
+
+-- This is an individual exam (No Slack / No TAs / No Instructor)
+
+-- Turn in via PDF. If you fail to do so, we will grade your latest commit and issue a penalty
+
+-- Cite any code you obtain outside of the course materials
+
+-- Look at what's rendered!
+
+
+## Office Hours 
+
+-- Friday 10:00 - 11:00AM
+
+## Goals 
+
+-- Pivots 
+
+-- Joins 
+
+-- Relationship Discussion 
+
+-- Data wrangling with dplyr
+
 
 ## Warm up {.smaller}
 
@@ -24,9 +53,10 @@ Suppose you and another researcher collected data on coffee separately. You coll
 
 ## left_join
 
-![](images/leftjoin.png){fig-align="center"}
+![](images/leftjoin.png){width="500" height="500" fig-align="center"}
 
-![](images/innerjoin.png){fig-align="center"}
+## inner_join 
+![](images/innerjoin.png){width="500" height="500" fig-align="center"}
 
 
 
@@ -36,31 +66,28 @@ With a wide structure, each person (observational unit) has one observation (row
 
 ![](images/wide_and_long.png){fig-align="center"}
 
-## In action 
+## The data 
 
-![](images/tidyr-longer-wider.gif){fig-align="center"}
+![](images/babies.png){fig-align="center"}
 
-## The code 
 
-`babies_long <- babies |> 
-  pivot_longer(
-    cols         = -c("id, "sex"),
-    names_to     = "months",
-    names_prefix = "weight_",
-    values_to    = "weight"
-  )` 
+## The code {.smaller}
+
+![](images/babies.png){fig-align="center"}
+
+
+
+babies_long <- babies |> \
+  pivot_longer( \
+    cols         = -c("id, "sex"), \
+    names_to     = "months", \
+    names_prefix = "weight_", \
+    values_to    = "weight" \
+  ) 
   
 
 ## The code - answers {.smaller}
 
-`babies_long <- babies |> 
-  pivot_longer(
-    cols         = c(-id, -sex),
-    names_to     = "months",
-    names_prefix = "weight_",
-    values_to    = "weight"
-  )` 
-  
   -- The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.
   
   -- The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.
@@ -68,26 +95,32 @@ With a wide structure, each person (observational unit) has one observation (row
   -- The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.
   
   -- The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted.
+  
+## In action 
 
+![](images/tidyr-longer-wider.gif){Long to Wide + Wide to Long}
+
+
+## long data
 
 ![](images/longer-answers.png){fig-align="center"}
 
+## long data to wide
+
+![](images/longbaby.png){fig-align="center"}
+
+
 ## pivot-wider 
 
-babies <- babies_long %>% 
-  pivot_wider(
-    names_from  = "months",
-    values_from = c("weight", "length")
+babies <- babies_long |> \
+  pivot_wider( \
+    names_from  = "months", \
+    values_from = c("weight", "length") \
   )
   
 ## output
 
 ![](images/wider-answers.png){fig-align="center"}
-
-
-
-
-These data are in your ae-10 repo so you can try out this code and practice for yourself! 
 
 
 

@@ -329,6 +329,26 @@
 
 <section id="checklist" class="slide level2">
 <h2>Checklist</h2>
+<p>– Clone exam review repo</p>
+<p>– Prepare for exam 1</p>
+</section>
+<section id="exam-logistics" class="slide level2 smaller">
+<h2>Exam Logistics</h2>
+<p>– This is an individual exam (No Slack / No TAs / No Instructor)</p>
+<p>– Turn in via PDF. If you fail to do so, we will grade your latest commit and issue a penalty</p>
+<p>– Cite any code you obtain outside of the course materials</p>
+<p>– Look at what’s rendered!</p>
+</section>
+<section id="office-hours" class="slide level2">
+<h2>Office Hours</h2>
+<p>– Friday 10:00 - 11:00AM</p>
+</section>
+<section id="goals" class="slide level2">
+<h2>Goals</h2>
+<p>– Pivots</p>
+<p>– Joins</p>
+<p>– Relationship Discussion</p>
+<p>– Data wrangling with dplyr</p>
 </section>
 <section id="warm-up" class="slide level2 smaller">
 <h2>Warm up</h2>
@@ -357,12 +377,15 @@
 <h2>left_join</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/leftjoin.png"></p>
+<p><img data-src="images/leftjoin.png" width="500" height="500"></p>
 </figure>
 </div>
+</section>
+<section id="inner_join" class="slide level2">
+<h2>inner_join</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/innerjoin.png"></p>
+<p><img data-src="images/innerjoin.png" width="500" height="500"></p>
 </figure>
 </div>
 </section>
@@ -371,26 +394,47 @@
 <p>With a wide structure, each person (observational unit) has one observation (row) and a separate column contains data for each measurement. With a long structure, each person (observational unit) has multiple observations; one measurement per row.</p>
 
 <img data-src="images/wide_and_long.png" class="r-stretch quarto-figure-center"></section>
-<section id="in-action" class="slide level2">
-<h2>In action</h2>
+<section id="the-data" class="slide level2">
+<h2>The data</h2>
 
-<img data-src="images/tidyr-longer-wider.gif" class="r-stretch quarto-figure-center"></section>
-<section id="the-code" class="slide level2">
+<img data-src="images/babies.png" class="r-stretch quarto-figure-center"></section>
+<section id="the-code" class="slide level2 smaller">
 <h2>The code</h2>
-<p><code>babies_long &lt;- babies |&gt;    pivot_longer(     cols         = -c("id, "sex"),     names_to     = "months",     names_prefix = "weight_",     values_to    = "weight"   )</code></p>
+
+<img data-src="images/babies.png" class="r-stretch quarto-figure-center"><p>babies_long &lt;- babies |&gt;<br>
+pivot_longer(<br>
+cols = -c(“id,”sex”),<br>
+names_to = “months”,<br>
+names_prefix = “weight_”,<br>
+values_to = “weight”<br>
+)</p>
 </section>
 <section id="the-code---answers" class="slide level2 smaller">
 <h2>The code - answers</h2>
-<p><code>babies_long &lt;- babies |&gt;    pivot_longer(     cols         = c(-id, -sex),     names_to     = "months",     names_prefix = "weight_",     values_to    = "weight"   )</code></p>
 <p>– The second argument to the pivot_longer() function is the cols argument. You should pass the name of the columns you want to make longer to the cols argument.</p>
 <p>– The third argument to the pivot_longer() function is the names_to argument. You should pass the names_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the previous column names that were pivoted.</p>
 <p>– The fourth argument to the pivot_longer() function is the names_prefix argument. You should pass the names_prefix argument a regular expression that tells pivot_longer() what to remove from the start of each of the previous column names that we pivoted.</p>
 <p>– The eighth argument (we left the 5th, 6th, and 7th arguments at their default values) to the pivot_longer() function is the values_to argument. You should pass the values_to argument a character string or character vector that tells pivot_longer() what you want to name the column that will contain the values from the columns that were pivoted.</p>
+</section>
+<section id="in-action" class="slide level2">
+<h2>In action</h2>
+<p><img data-src="images/tidyr-longer-wider.gif">{Long to Wide + Wide to Long}</p>
+</section>
+<section id="long-data" class="slide level2">
+<h2>long data</h2>
 
 <img data-src="images/longer-answers.png" class="r-stretch quarto-figure-center"></section>
+<section id="long-data-to-wide" class="slide level2">
+<h2>long data to wide</h2>
+
+<img data-src="images/longbaby.png" class="r-stretch quarto-figure-center"></section>
 <section id="pivot-wider" class="slide level2">
 <h2>pivot-wider</h2>
-<p>babies &lt;- babies_long %&gt;% pivot_wider( names_from = “months”, values_from = c(“weight”, “length”) )</p>
+<p>babies &lt;- babies_long |&gt;<br>
+pivot_wider(<br>
+names_from = “months”,<br>
+values_from = c(“weight”, “length”)<br>
+)</p>
 </section>
 <section id="output" class="slide level2">
 <h2>output</h2>
@@ -399,7 +443,6 @@
 <p><img data-src="images/wider-answers.png"></p>
 </figure>
 </div>
-<p>These data are in your ae-10 repo so you can try out this code and practice for yourself!</p>
 
 <p><img src="images/logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
