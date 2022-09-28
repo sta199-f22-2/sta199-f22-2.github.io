@@ -1701,13 +1701,6 @@
     "text": "In action\n{Long to Wide + Wide to Long}"
   },
   {
-    "objectID": "slides/10-exam-review.html#long-data",
-    "href": "slides/10-exam-review.html#long-data",
-    "title": "Exam Review",
-    "section": "long data",
-    "text": "long data"
-  },
-  {
     "objectID": "slides/10-exam-review.html#long-data-to-wide",
     "href": "slides/10-exam-review.html#long-data-to-wide",
     "title": "Exam Review",
@@ -1720,13 +1713,6 @@
     "title": "Exam Review",
     "section": "pivot-wider",
     "text": "pivot-wider\nbabies <- babies_long |>\npivot_wider(\nnames_from = “months”,\nvalues_from = “weight)\n)"
-  },
-  {
-    "objectID": "slides/10-exam-review.html#output",
-    "href": "slides/10-exam-review.html#output",
-    "title": "Exam Review",
-    "section": "output",
-    "text": "output"
   },
   {
     "objectID": "slides/10-exam-review.html#relationships",
