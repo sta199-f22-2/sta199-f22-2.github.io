@@ -405,9 +405,9 @@
 <section id="the-code" class="slide level2 smaller">
 <h2>The code</h2>
 
-<img data-src="images/babies.png" class="r-stretch quarto-figure-center"><p>babies_long &lt;- babies |&gt;<br>
+<img data-src="images/babies.png" class="r-stretch quarto-figure-center"><p>babies &lt;- babies |&gt;<br>
 pivot_longer(<br>
-cols = -c(“id,”sex”),<br>
+cols = -c(“id”, “sex”),<br>
 names_to = “months”,<br>
 names_prefix = “weight_”,<br>
 values_to = “weight”<br>
@@ -424,10 +424,6 @@ values_to = “weight”<br>
 <h2>In action</h2>
 <p><img data-src="images/tidyr-longer-wider.gif">{Long to Wide + Wide to Long}</p>
 </section>
-<section id="long-data" class="slide level2">
-<h2>long data</h2>
-
-<img data-src="images/longer-answers.png" class="r-stretch quarto-figure-center"></section>
 <section id="long-data-to-wide" class="slide level2">
 <h2>long data to wide</h2>
 
@@ -437,13 +433,9 @@ values_to = “weight”<br>
 <p>babies &lt;- babies_long |&gt;<br>
 pivot_wider(<br>
 names_from = “months”,<br>
-values_from = c(“weight”, “length”)<br>
+values_from = “weight)<br>
 )</p>
 </section>
-<section id="output" class="slide level2">
-<h2>output</h2>
-
-<img data-src="images/wider-answers.png" class="r-stretch quarto-figure-center"></section>
 <section id="relationships" class="slide level2">
 <h2>Relationships</h2>
 <p>How we talk about graphs….</p>

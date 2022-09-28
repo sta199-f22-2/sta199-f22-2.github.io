@@ -1684,7 +1684,7 @@
     "href": "slides/10-exam-review.html#the-code",
     "title": "Exam Review",
     "section": "The code",
-    "text": "The code\n\nbabies_long <- babies |>\npivot_longer(\ncols = -c(“id,”sex”),\nnames_to = “months”,\nnames_prefix = “weight_”,\nvalues_to = “weight”\n)"
+    "text": "The code\n\nbabies <- babies |>\npivot_longer(\ncols = -c(“id”, “sex”),\nnames_to = “months”,\nnames_prefix = “weight_”,\nvalues_to = “weight”\n)"
   },
   {
     "objectID": "slides/10-exam-review.html#the-code---answers",
@@ -1719,7 +1719,7 @@
     "href": "slides/10-exam-review.html#pivot-wider",
     "title": "Exam Review",
     "section": "pivot-wider",
-    "text": "pivot-wider\nbabies <- babies_long |>\npivot_wider(\nnames_from = “months”,\nvalues_from = c(“weight”, “length”)\n)"
+    "text": "pivot-wider\nbabies <- babies_long |>\npivot_wider(\nnames_from = “months”,\nvalues_from = “weight)\n)"
   },
   {
     "objectID": "slides/10-exam-review.html#output",

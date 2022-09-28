@@ -85,9 +85,9 @@ With a wide structure, each person (observational unit) has one observation (row
 
 
 
-babies_long <- babies |> \
+babies <- babies |> \
   pivot_longer( \
-    cols         = -c("id, "sex"), \
+    cols         = -c("id", "sex"), \
     names_to     = "months", \
     names_prefix = "weight_", \
     values_to    = "weight" \
@@ -109,10 +109,6 @@ babies_long <- babies |> \
 ![](images/tidyr-longer-wider.gif){Long to Wide + Wide to Long}
 
 
-## long data
-
-![](images/longer-answers.png){fig-align="center"}
-
 ## long data to wide
 
 ![](images/longbaby.png){fig-align="center"}
@@ -123,12 +119,9 @@ babies_long <- babies |> \
 babies <- babies_long |> \
   pivot_wider( \
     names_from  = "months", \
-    values_from = c("weight", "length") \
+    values_from = "weight) \
   )
   
-## output
-
-![](images/wider-answers.png){fig-align="center"}
 
 ## Relationships 
 
