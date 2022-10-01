@@ -1,8 +1,6 @@
 ---
 title: "AE 09: Data Ethics"
-categories: 
-  - Application exercise
-  - Answers
+format: pdf
 editor: visual
 ---
 
