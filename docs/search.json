@@ -1783,5 +1783,145 @@
     "title": "AE 09: Data Ethics",
     "section": "",
     "text": "In September 2019, YouGov survey asked 1,639 GB adults the following question:\n\nIn hindsight, do you think Britain was right/wrong to vote to leave EU?\n\nRight to leave\n\nWrong to leave\n\nDon’t know\n\n\nThe data from the survey is in data/brexit.csv.\n\nbrexit <- read_csv(\"data/brexit.csv\")\n\nIn this application exercise we tell different stories with the same data.\nExercise 1 - Free scales\nCreate a segmented bar plot facet by region to explore counts of votes to the question Was Britain right/wrong to leave EU.\nNext, use scales = \"free_x\" as an argument to the facet_wrap() function. How does the visualisation change? How is the story this visualisation telling different than the story the original plot tells?\n\nggplot(brexit, aes(y = opinion, fill = opinion)) +\n  geom_bar() +\n    facet_wrap(~region,\n    nrow = 1, labeller = label_wrap_gen(width = 12),\n    scales = \"free_x\"\n  ) +\n  guides(fill = \"none\") +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    x = NULL, y = NULL\n  ) +\n  scale_fill_manual(values = c(\n    \"Wrong\" = \"#ef8a62\",\n    \"Right\" = \"#67a9cf\",\n    \"Don't know\" = \"gray\"\n  )) +\n  theme_minimal()\n\n\n\n\nAnswer Here\nThe visualization changes, as the x-axis changes based on the sample size within each facet. It visually is harder to see what is going on, and it appears to suggest, for example, London’s “Wrong” votes are similar to North, despite having drastically different sample sizes.\nExercise 2 - Comparing proportions across facets\nFirst, calculate the proportion of wrong, right, and don’t know answers in each category and then plot these proportions (rather than the counts) and then improve axis labeling. How is the story this visualisation telling different than the story the original plot tells? Hint: You’ll need the scales package to improve axis labeling.\n\nbrexit |>\n  group_by(region, opinion) |>\n  summarize(n = n()) |>\n  mutate(freq = n / sum(n)) |>\n  ggplot() + \n  geom_bar(aes(y = opinion, x = freq, fill = opinion), stat = \"identity\") +\n  facet_wrap(~ region, nrow = 1) +\n  scale_x_continuous(limits = c(0,1)) +\n  theme_bw() +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    y = NULL, x = \"Proportion\"\n  ) + \n    scale_fill_manual(values = c(\n    \"Wrong\" = \"#ef8a62\",\n    \"Right\" = \"#67a9cf\",\n    \"Don't know\" = \"gray\"\n  ))\n\n`summarise()` has grouped output by 'region'. You can override using the\n`.groups` argument.\n\n\n\n\n\nAnswer Here\nThe x-axis is now proportions.\nExercise 3 - Comparing proportions across bars\nRecreate the same visualisation from the previous exercise, this time dodging the bars for opinion proportions for each region, rather than faceting by region and then improve the legend. How is the story this visualisation telling different than the story the previous plot tells?\n\nbrexit |>\n  group_by(region, opinion) |>\n  summarize(n = n()) |>\n  mutate(freq = n / sum(n)) |>\n  ggplot() + \n  geom_bar(\n    aes(y = opinion, x = freq, fill = region), \n    position = \"dodge\", stat = \"identity\"\n  ) +\n  scale_x_continuous(limits = c(0,1)) +\n  theme_bw() +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    y = NULL, x = \"Proportion\", \n    fill = \"Region\"\n  ) \n\n`summarise()` has grouped output by 'region'. You can override using the\n`.groups` argument.\n\n\n\n\n\nAnswer Here\nThis visualization tells the story of within opinion vs within region like the others."
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#checklist",
+    "href": "slides/11-data-ethics.html#checklist",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone exam review repo\n– Breath a little! The exam is over :)"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#goals",
+    "href": "slides/11-data-ethics.html#goals",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Goals",
+    "text": "Goals"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#causality",
+    "href": "slides/11-data-ethics.html#causality",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Causality",
+    "text": "Causality"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section",
+    "href": "slides/11-data-ethics.html#section",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "– What questions do you have?\n– What do you wonder?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#original-study",
+    "href": "slides/11-data-ethics.html#original-study",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Original study",
+    "text": "Original study\nMoore, Steven C., et al. “Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults.” JAMA internal medicine 176.6 (2016): 816-825.\n\nVolunteers were asked about their physical activity level over the preceding year.\nHalf exercised less than about 150 minutes per week, half exercised more.\nCompared to the bottom 10% of exercisers, the top 10% had lower rates of esophageal, liver, lung, endometrial, colon, and breast cancer.\nResearchers found no association between exercising and 13 other cancers (e.g. pancreatic, ovarian, and brain)."
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#the-takeaway",
+    "href": "slides/11-data-ethics.html#the-takeaway",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "The Takeaway",
+    "text": "The Takeaway"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-1",
+    "href": "slides/11-data-ethics.html#section-1",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "– What is your takeaway?\n– Do you find anything interesting / suspicious?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#axes-matter",
+    "href": "slides/11-data-ethics.html#axes-matter",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Axes matter",
+    "text": "Axes matter"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#how-woul-you-fix-this-graph",
+    "href": "slides/11-data-ethics.html#how-woul-you-fix-this-graph",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "How woul you fix this graph?",
+    "text": "How woul you fix this graph?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-2",
+    "href": "slides/11-data-ethics.html#section-2",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "Put this in the AE as fill in the blank code?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#whats-wrong-with-this-graph",
+    "href": "slides/11-data-ethics.html#whats-wrong-with-this-graph",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "What’s wrong with this graph?",
+    "text": "What’s wrong with this graph?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#what-is-uncertainty",
+    "href": "slides/11-data-ethics.html#what-is-uncertainty",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "What is uncertainty?",
+    "text": "What is uncertainty?\n– “How sure are you of your conclusions?”"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#what-is-uncertainty-1",
+    "href": "slides/11-data-ethics.html#what-is-uncertainty-1",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "What is uncertainty?",
+    "text": "What is uncertainty?\nThere are many reasons why a data analysis might still leave us in a position of uncertainty\n– We don’t have population data\n– Measurement error\n– Reporting error"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#quick-example",
+    "href": "slides/11-data-ethics.html#quick-example",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Quick Example",
+    "text": "Quick Example\n\n\n\n\n\n\nFlip 1: Heads\nFlip 2: Heads\nFlip 3: Tails\nFlip 4: Heads"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-4",
+    "href": "slides/11-data-ethics.html#section-4",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "So the answer is No! …. No?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-6",
+    "href": "slides/11-data-ethics.html#section-6",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "The Art of Skepticism in a Data-Driven World\n\nby Carl Bergstrom and Jevin West"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-7",
+    "href": "slides/11-data-ethics.html#section-7",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "Getting Smarter about Visual Information\n\nby Alberto Cairo"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#ok-cupid-data-breach",
+    "href": "slides/11-data-ethics.html#ok-cupid-data-breach",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "OK Cupid data breach",
+    "text": "OK Cupid data breach\n– In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details\n– Researchers didn’t release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames\n\nSome may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.\n\n\nResearchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#question",
+    "href": "slides/11-data-ethics.html#question",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Question",
+    "text": "Question\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-9",
+    "href": "slides/11-data-ethics.html#section-9",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "“It looks like we can scrape student ID and email information. What type of project can we do with ths?”\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

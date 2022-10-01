@@ -1,0 +1,60 @@
+---
+title: "Lab 3 - Data tidying"
+categories: "Lab"
+execute:
+  eval: true
+---
+
+::: callout-important
+This lab is due Monday, Sep 26 at 11:59pm.
+:::
+
+
+
+
+
+
+::: render-commit-push
+If you haven't yet done so since Part 1, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+
+<br>
+:::
+
+# Submission
+
+Once you are finished with the lab, you will your final PDF document to Gradescope.
+
+::: callout-warning
+Before you wrap up the assignment, make sure all documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.
+
+You must turn in a PDF file to the Gradescope page by the submission deadline to be considered "on time".
+
+Make sure your data are tidy! That is, your code should not be running off the pages and spaced properly. See: https://style.tidyverse.org/ggplot2.html
+:::
+
+To submit your assignment:
+
+-   Go to <http://www.gradescope.com> and click *Log in* in the top right corner.
+-   Click *School Credentials* $\rightarrow$ *Duke NetID* and log in using your NetID credentials.
+-   Click on your *STA 199* course.
+-   Click on the assignment, and you'll be prompted to submit it.
+-   Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be "checked"). *If you do not do this, you will be subject to lose points on the assignment.*
+-   Select the first page of your .pdf submission to be associated with the *"Workflow & formatting"* question.
+
+# Grading
+
+| Component             | Points |
+|:----------------------|:-------|
+| Ex 1                  | 3      |
+| Ex 2                  | 6      |
+| Ex 3                  | 4      |
+| Ex 4                  | 12     |
+| Ex 5                  | 4      |
+| Ex 6                  | 4      |
+| Ex 7                  | 12     |
+| Workflow & formatting | 5      |
+| **Total**             | **50** |
+
+::: callout-note
+The "Workflow & formatting" component assesses the reproducible workflow. This includes having at least 3 informative commit messages, labeling the code chunks, and having readable code that does not exceed 80 characters, i.e., we can read all your code in the rendered PDF.
+:::

@@ -1,0 +1,251 @@
+---
+title: "Lecture 11 - Data Ethics"
+subtitle: "Lecture 10"
+date: "October 3, 2022"
+format: revealjs
+---
+
+## Checklist
+
+-- Clone exam review repo 
+
+-- Breath a little! The exam is over :) 
+
+## Goals 
+
+
+
+## Causality 
+
+```{r}
+#| echo: false
+
+library(countdown)
+library(tidyverse)
+library(lubridate)
+library(scales)
+```
+
+
+![](images/10-data-ethics/exercise-cancer-time.png){width="900" height="400" fig-align="center"}
+
+
+## 
+
+![](images/10-data-ethics/exercise-cancer-latimes.png){width="900" height="400" fig-align="center"}
+
+-- What questions do you have? 
+
+-- What do you wonder? 
+
+
+## Original study {.smaller}
+
+Moore, Steven C., et al. **["Association of leisure-time physical activity with risk of 26 types of cancer in 1.44 million adults."](https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2521826)** JAMA internal medicine 176.6 (2016): 816-825.
+
+- **Volunteers** were **asked** about their physical activity level over the preceding year. 
+- Half exercised less than about 150 minutes per week, half exercised more. 
+- Compared to the bottom 10% of exercisers, the top 10% had lower rates of esophageal, liver, lung, endometrial, colon, and breast cancer.
+- Researchers found no association between exercising and 13 other cancers (e.g. pancreatic, ovarian, and brain).
+
+## The Takeaway 
+
+
+
+# Telling a story {.smaller}
+
+##
+
+![](images/10-data-ethics/tax1.png){width="400" height="450" fig-align="center"}
+
+-- What is your takeaway? 
+
+-- Do you find anything interesting / suspicious? 
+
+
+## Axes matter
+
+![](images/10-data-ethics/axis-start-at-0.png){width="900" height="400" fig-align="center"}
+
+## How woul you fix this graph?
+
+![](images/10-data-ethics/cost_of_gas.png){width="900" height="400" fig-align="center"}
+
+##
+
+Put this in the AE as fill in the blank code?
+
+```{r}
+#| echo: false
+
+df <- tibble(
+  date = ymd(c("2019-11-01", "2020-10-25", "2020-11-01")),
+  cost = c(3.17, 3.51, 3.57)
+)
+ggplot(df, aes(x = date, y = cost, group = 1)) +
+  geom_point() +
+  geom_line() +
+  geom_label(aes(label = cost), hjust = -0.25) +
+  labs(
+    title = "Cost of gas",
+    subtitle = "National average",
+    x = NULL, y = NULL, 
+    caption = "Source: AAA Fuel Gauge Report"
+  ) +
+  scale_x_continuous(
+    breaks = ymd(c("2019-11-01", "2020-10-25", "2020-11-01")), 
+    labels = c("Last year", "Last week", "Current"),
+    guide = guide_axis(angle = 90),
+    limits = ymd(c("2019-11-01", "2020-11-29")),
+    minor_breaks = ymd(c("2019-11-01", "2020-10-25", "2020-11-01"))
+  ) +
+  scale_y_continuous(labels = label_dollar())
+
+```
+
+## What's wrong with this graph?
+
+![](images/10-data-ethics/ga-dph-declining-bars.jpg){width="900" height="500" fig-align="center"}
+
+
+
+# Visualising uncertainty
+
+## What is uncertainty? 
+
+-- "How sure are you of your conclusions?"
+
+## What is uncertainty?
+
+There are many reasons why a data analysis might still leave us in a position of uncertainty
+
+-- We don't have population data 
+
+-- Measurement error
+
+-- Reporting error 
+
+## Quick Example {.smaller}
+
+![](images/10-data-ethics/coin-flip.png){width="400" height="400" fig-align="center"}
+
+- Flip 1: Heads
+- Flip 2: Heads 
+- Flip 3: Tails 
+- Flip 4: Heads
+
+##
+
+
+![](images/10-data-ethics/freq-coin.png){width="650" height="500" fig-align="center"}
+
+
+
+## {.smaller}
+
+```{r}
+#| echo: false
+
+catalan <- tibble(
+  response = c("No", "Yes", "No answer"),
+  rate     = c(45.3, 44.5, 10.2)
+) %>%
+  mutate(response = fct_relevel(response, "No", "Yes", "No answer"))
+
+ggplot(catalan, aes(y = fct_rev(response), x = rate, color = response, group = response)) +
+  geom_point() +
+  geom_segment(aes(x = 0, xend = rate, 
+                   y = fct_rev(response), yend = fct_rev(response)),
+               size = 1) +
+  scale_color_manual(values = c("#5C8AA9", "#9D303A", "gray")) +
+  scale_x_continuous(labels = label_percent(scale = 1)) +
+  guides(color = "none") +
+  theme_minimal(base_size = 16) +
+  labs(
+    title = "Do you want Catalonia\nto become an independent state?",
+    caption = "",
+    x = NULL, y = NULL
+  )
+```
+
+So the answer is No! .... No? 
+
+## {.smaller}
+
+```{r} 
+#| echo: false
+catalan <- catalan %>%
+  mutate(
+    low = rate - 2.95,
+    high = rate + 2.95
+  )
+ggplot(catalan, aes(y = fct_rev(response), x = rate, color = response, group = response)) +
+  geom_segment(aes(x = low, xend = high, 
+                   y = fct_rev(response), yend = fct_rev(response)),
+               size = 0.8, color = "black") +
+  geom_point(size = 3) +
+  scale_color_manual(values = c("#5C8AA9", "#9D303A", "gray")) +
+  scale_x_continuous(labels = label_percent(scale = 1)) +
+  guides(color = "none") +
+  theme_minimal(base_size = 16) +
+  labs(
+    title = "Do you want Catalonia\nto become an independent state?",
+    caption = "The probability of the tiny difference between the\n'No' and 'Yes' being just due to random chance is very high.",
+    x = NULL, y = NULL
+  )
+```
+
+
+##
+
+![](images/10-data-ethics/calling-bullshit.png){width="300" height="430"}
+
+The Art of Skepticism in a Data-Driven World   \
+
+by Carl Bergstrom and Jevin West
+
+
+##
+
+
+![](images/10-data-ethics/cairo-how-charts-lie.jpg){width="300" height="430"}
+
+Getting Smarter about Visual Information  \
+
+by Alberto Cairo
+
+
+# Data Privacy 
+
+# Case study: OK Cupid
+
+## OK Cupid data breach {.smaller}
+
+-- In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details
+
+-- Researchers didn't release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames
+
+> Some may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form. 
+
+> Researchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær
+
+
+## Question 
+
+In analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don't violate reasonable expectations of privacy?
+
+## 
+![](images/10-data-ethics/okcupid-tweet.png){}
+
+
+
+
+# "It looks like we can scrape student ID and email information. What type of project can we do with this?"
+
+
+
+
+
+
+
+
