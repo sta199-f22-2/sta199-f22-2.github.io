@@ -322,6 +322,13 @@
     "text": "Optional"
   },
   {
+    "objectID": "ae/ae-09-brexit-A.html",
+    "href": "ae/ae-09-brexit-A.html",
+    "title": "AE 09: Data Ethics",
+    "section": "",
+    "text": "In September 2019, YouGov survey asked 1,639 GB adults the following question:\n\nIn hindsight, do you think Britain was right/wrong to vote to leave EU?\n\nRight to leave\n\nWrong to leave\n\nDon’t know\n\n\nThe data from the survey is in data/brexit.csv.\n\nbrexit <- read_csv(\"data/brexit.csv\")\n\nIn this application exercise we tell different stories with the same data.\nExercise 1 - Free scales\nCreate a segmented bar plot facet by region to explore counts of votes to the question Was Britain right/wrong to leave EU.\nNext, use scales = \"free_x\" as an argument to the facet_wrap() function. How does the visualisation change? How is the story this visualisation telling different than the story the original plot tells?\n\nggplot(brexit, aes(y = opinion, fill = opinion)) +\n  geom_bar() +\n    facet_wrap(~region,\n    nrow = 1, labeller = label_wrap_gen(width = 12),\n    scales = \"free_x\"\n  ) +\n  guides(fill = \"none\") +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    x = NULL, y = NULL\n  ) +\n  scale_fill_manual(values = c(\n    \"Wrong\" = \"#ef8a62\",\n    \"Right\" = \"#67a9cf\",\n    \"Don't know\" = \"gray\"\n  )) +\n  theme_minimal()\n\n\n\n\nAnswer Here\nThe visualization changes, as the x-axis changes based on the sample size within each facet. It visually is harder to see what is going on, and it appears to suggest, for example, London’s “Wrong” votes are similar to North, despite having drastically different sample sizes.\nExercise 2 - Comparing proportions across facets\nFirst, calculate the proportion of wrong, right, and don’t know answers in each category and then plot these proportions (rather than the counts) and then improve axis labeling. How is the story this visualisation telling different than the story the original plot tells? Hint: You’ll need the scales package to improve axis labeling.\n\nbrexit |>\n  group_by(region, opinion) |>\n  summarize(n = n()) |>\n  mutate(freq = n / sum(n)) |>\n  ggplot() + \n  geom_bar(aes(y = opinion, x = freq, fill = opinion), stat = \"identity\") +\n  facet_wrap(~ region, nrow = 1) +\n  scale_x_continuous(limits = c(0,1)) +\n  theme_bw() +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    y = NULL, x = \"Proportion\"\n  ) + \n    scale_fill_manual(values = c(\n    \"Wrong\" = \"#ef8a62\",\n    \"Right\" = \"#67a9cf\",\n    \"Don't know\" = \"gray\"\n  ))\n\n`summarise()` has grouped output by 'region'. You can override using the\n`.groups` argument.\n\n\n\n\n\nAnswer Here\nThe x-axis is now proportions.\nExercise 3 - Comparing proportions across bars\nRecreate the same visualisation from the previous exercise, this time dodging the bars for opinion proportions for each region, rather than faceting by region and then improve the legend. How is the story this visualisation telling different than the story the previous plot tells?\n\nbrexit |>\n  group_by(region, opinion) |>\n  summarize(n = n()) |>\n  mutate(freq = n / sum(n)) |>\n  ggplot() + \n  geom_bar(\n    aes(y = opinion, x = freq, fill = region), \n    position = \"dodge\", stat = \"identity\"\n  ) +\n  scale_x_continuous(limits = c(0,1)) +\n  theme_bw() +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    y = NULL, x = \"Proportion\", \n    fill = \"Region\"\n  ) \n\n`summarise()` has grouped output by 'region'. You can override using the\n`.groups` argument.\n\n\n\n\n\nAnswer Here\nThis visualization tells the story of within opinion vs within region like the others."
+  },
+  {
     "objectID": "ae/exam-review.html",
     "href": "ae/exam-review.html",
     "title": "Exam Review",
@@ -739,7 +746,7 @@
     "href": "index.html",
     "title": "STA 199: Introduction to Data Science",
     "section": "",
-    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      hw_sa\n      lab\n      lab_sa\n      exam\n      project\n      notes\n    \n\n\n1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n\nRelease Lab 0\n\n\n\nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\n\n\n\n\n\n2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\n\n\nRelease: Lab 1 / Release: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\n\n\nDue: Lab 1\n\n\n\nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\n\n\nRelease: Lab 2 / Due: HW 1 / Release: HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\n\n\nDue: Lab 2\n\n\n\nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\n\n\nRelease: Lab 3 / Due HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\n\n\nDue: Lab 3\n\n\n\nW\n28 September\nLec 10\nExam 1 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\nM\n3 October\nLec 11\nData science ethics\n\n\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n\n\n\nW\n5 October\nLec 12\nWeb scraping\n\n\n\n\n\n\n\n\n\nRelease: HW 3\n\n\n\nTh\n6 October\nLab\nBonus lab\n\n\n\n\n\n\n\n\n\nRelease: Lab\n\n\n7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n12 October\nLec 13\nFunctions + iteration\n\n\n\n\n\n\n\n\n\nDue: HW 3\n\n\n\nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n\n\n8\nM\n17 October\nLec 14\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n20 October\nLab 5\nExploratory data analysis\n\n\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\n\n\nDue: Lab 5\n\n\n\nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\n\n\nRelease: HW 4\n\n\n\nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\n\n\nRelease: Lab 6\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\nM\n31 October\nLec 18\nLogistic regression\n\n\n\n\n\n\n\n\n\nDue: Lab 6\n\n\n\nW\n2 November\nLec 19\nPrediction and overfitting\n\n\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n\n\n\nTh\n3 November\nLab 7\nPredicting a categorical outcome\n\n\n\n\n\n\n\n\n\nRelease: Lab 7\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\n\n\nDue: Lab 7\n\n\n\nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\n\n\nDue: HW 5\n\n\n\nTh\n10 November\nLab 8\nBootstrapping\n\n\n\n\n\n\n\n\n\nRelease: Lab 8\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\n\n\nDue: Lab 8\n\n\n\nW\n16 November\nLec 23\nExam 2 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n17 November\nLab\nNo lab - Work on Exam 2\n\n\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n\n\n\nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\n\n\nDue: Project draft due\n\n\n14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n\n\n\n\n15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\n\n\nDue: Project everything\n\n\n\nF\n9 December\n\n\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
+    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      hw_sa\n      lab\n      lab_sa\n      exam\n      project\n      notes\n    \n\n\n1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n\nRelease Lab 0\n\n\n\nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\n\n\n\n\n\n2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\n\n\nRelease: Lab 1 / Release: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\n\n\nDue: Lab 1\n\n\n\nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\n\n\nRelease: Lab 2 / Due: HW 1 / Release: HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\n\n\nDue: Lab 2\n\n\n\nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\n\n\nRelease: Lab 3 / Due HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\n\n\nDue: Lab 3\n\n\n\nW\n28 September\nLec 10\nExam 1 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\nM\n3 October\nLec 11\nData science ethics\n\n\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n\n\n\nW\n5 October\nLec 12\nWeb scraping\n\n\n\n\n\n\n\n\n\nRelease: HW 3\n\n\n\nTh\n6 October\nLab\nMerge Conflicts + Ethics\n\n\n\n\n\n\n\n\n\nRelease: Lab\n\n\n7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n12 October\nLec 13\nFunctions + iteration\n\n\n\n\n\n\n\n\n\nDue: HW 3\n\n\n\nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n\n\n8\nM\n17 October\nLec 14\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n20 October\nLab 5\nExploratory data analysis\n\n\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\n\n\nDue: Lab 5\n\n\n\nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\n\n\nRelease: HW 4\n\n\n\nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\n\n\nRelease: Lab 6\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\nM\n31 October\nLec 18\nLogistic regression\n\n\n\n\n\n\n\n\n\nDue: Lab 6\n\n\n\nW\n2 November\nLec 19\nPrediction and overfitting\n\n\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n\n\n\nTh\n3 November\nLab 7\nPredicting a categorical outcome\n\n\n\n\n\n\n\n\n\nRelease: Lab 7\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\n\n\nDue: Lab 7\n\n\n\nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\n\n\nDue: HW 5\n\n\n\nTh\n10 November\nLab 8\nBootstrapping\n\n\n\n\n\n\n\n\n\nRelease: Lab 8\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\n\n\nDue: Lab 8\n\n\n\nW\n16 November\nLec 23\nExam 2 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n17 November\nLab\nNo lab - Work on Exam 2\n\n\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n\n\n\nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\n\n\nDue: Project draft due\n\n\n14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n\n\n\n\n15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\n\n\nDue: Project everything\n\n\n\nF\n9 December\n\n\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
   },
   {
     "objectID": "labs/lab-0.html",
@@ -915,6 +922,55 @@
     "title": "Lab 3 - Data tidying",
     "section": "Data",
     "text": "Data\nThe datasets that you will work with in this dataset come from the Organization for Economic Co-Operation and Development (OECD), stats.oecd.org."
+  },
+  {
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due October 10th at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-4.html#setup",
+    "href": "labs/lab-4.html#setup",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Setup",
+    "text": "Setup\n\nClone the repo and open the .qmd file.\nAssign the numbers 1, 2, 3, and 4 to each of the team members. If your team has fewer than 4 people, some people will need to have multiple numbers. If your team has more than 4 people, some people will need to share some numbers."
+  },
+  {
+    "objectID": "labs/lab-4.html#lets-cause-a-merge-conflict",
+    "href": "labs/lab-4.html#lets-cause-a-merge-conflict",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Let’s cause a merge conflict!",
+    "text": "Let’s cause a merge conflict!\nOur goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a merge conflict) and requires human intervention, then another type of where that git can figure out how to do without human intervention.\nDoing this will require some tight choreography, so pay attention!\nTake turns in completing the exercise, only one member at a time. Others should just watch, not doing anything on their own projects (this includes not even pulling changes!) until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!\nBefore starting: everyone should have the repo cloned and know which role number(s) they are.\nRole 1:\n\nChange the team name to your actual team name.\nKnit, render, push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 2:\n\nChange the team name to some other word.\nKnit, render, push. You should get an error.\nPull. Take a look at the document with the merge conflict.\nClear the merge conflict by editing the document to choose the correct/preferred change.\nKnit.\n\nClick the Stage checkbox for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.\nrender and push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 3:\n\nChange the a label of the first code chunk\nKnit, render, push. You should get an error.\nPull. No merge conflicts should occur, but you should see a message about merging.\nNow push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 4:\n\nChange the label of the first code chunk to something other than previous role did.\nKnit, render, push. You should get an error.\nPull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. render, and push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nEveryone: Pull, and observe the changes in your document."
+  },
+  {
+    "objectID": "labs/lab-4.html#tips-for-collaborating-via-github",
+    "href": "labs/lab-4.html#tips-for-collaborating-via-github",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Tips for collaborating via GitHub",
+    "text": "Tips for collaborating via GitHub\n\nAlways pull first before you start working.\nResolve a merge conflict (render and push) before continuing your work. Never do new work while resolving a merge conflict.\nKnit, render, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.\nIf you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don’t let it linger and get bigger."
+  },
+  {
+    "objectID": "labs/lab-4.html#packages",
+    "href": "labs/lab-4.html#packages",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Packages",
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualisation. This package is already installed for you. You can load it by running the following in your Console:"
+  },
+  {
+    "objectID": "labs/lab-4.html#packages-1",
+    "href": "labs/lab-4.html#packages-1",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Packages",
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualisation.\n\nlibrary(tidyverse)\n\nSince the exercises for this week are short it’s possible not every team member will get to commit and push during the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline."
+  },
+  {
+    "objectID": "labs/lab-4.html#data",
+    "href": "labs/lab-4.html#data",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Data",
+    "text": "Data\nIn this lab you’ll construct the dataset!"
   },
   {
     "objectID": "prepare/08-31.html",
@@ -1778,13 +1834,6 @@
     "text": "Barplot\n\n\n\n\n\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "ae/ae-09-brexit-A.html",
-    "href": "ae/ae-09-brexit-A.html",
-    "title": "AE 09: Data Ethics",
-    "section": "",
-    "text": "In September 2019, YouGov survey asked 1,639 GB adults the following question:\n\nIn hindsight, do you think Britain was right/wrong to vote to leave EU?\n\nRight to leave\n\nWrong to leave\n\nDon’t know\n\n\nThe data from the survey is in data/brexit.csv.\n\nbrexit <- read_csv(\"data/brexit.csv\")\n\nIn this application exercise we tell different stories with the same data.\nExercise 1 - Free scales\nCreate a segmented bar plot facet by region to explore counts of votes to the question Was Britain right/wrong to leave EU.\nNext, use scales = \"free_x\" as an argument to the facet_wrap() function. How does the visualisation change? How is the story this visualisation telling different than the story the original plot tells?\n\nggplot(brexit, aes(y = opinion, fill = opinion)) +\n  geom_bar() +\n    facet_wrap(~region,\n    nrow = 1, labeller = label_wrap_gen(width = 12),\n    scales = \"free_x\"\n  ) +\n  guides(fill = \"none\") +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    x = NULL, y = NULL\n  ) +\n  scale_fill_manual(values = c(\n    \"Wrong\" = \"#ef8a62\",\n    \"Right\" = \"#67a9cf\",\n    \"Don't know\" = \"gray\"\n  )) +\n  theme_minimal()\n\n\n\n\nAnswer Here\nThe visualization changes, as the x-axis changes based on the sample size within each facet. It visually is harder to see what is going on, and it appears to suggest, for example, London’s “Wrong” votes are similar to North, despite having drastically different sample sizes.\nExercise 2 - Comparing proportions across facets\nFirst, calculate the proportion of wrong, right, and don’t know answers in each category and then plot these proportions (rather than the counts) and then improve axis labeling. How is the story this visualisation telling different than the story the original plot tells? Hint: You’ll need the scales package to improve axis labeling.\n\nbrexit |>\n  group_by(region, opinion) |>\n  summarize(n = n()) |>\n  mutate(freq = n / sum(n)) |>\n  ggplot() + \n  geom_bar(aes(y = opinion, x = freq, fill = opinion), stat = \"identity\") +\n  facet_wrap(~ region, nrow = 1) +\n  scale_x_continuous(limits = c(0,1)) +\n  theme_bw() +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    y = NULL, x = \"Proportion\"\n  ) + \n    scale_fill_manual(values = c(\n    \"Wrong\" = \"#ef8a62\",\n    \"Right\" = \"#67a9cf\",\n    \"Don't know\" = \"gray\"\n  ))\n\n`summarise()` has grouped output by 'region'. You can override using the\n`.groups` argument.\n\n\n\n\n\nAnswer Here\nThe x-axis is now proportions.\nExercise 3 - Comparing proportions across bars\nRecreate the same visualisation from the previous exercise, this time dodging the bars for opinion proportions for each region, rather than faceting by region and then improve the legend. How is the story this visualisation telling different than the story the previous plot tells?\n\nbrexit |>\n  group_by(region, opinion) |>\n  summarize(n = n()) |>\n  mutate(freq = n / sum(n)) |>\n  ggplot() + \n  geom_bar(\n    aes(y = opinion, x = freq, fill = region), \n    position = \"dodge\", stat = \"identity\"\n  ) +\n  scale_x_continuous(limits = c(0,1)) +\n  theme_bw() +\n  labs(\n    title = \"Was Britain right/wrong to vote to leave EU?\",\n    subtitle = \"YouGov Survey Results, 2-3 September 2019\",\n    caption = \"Source: bit.ly/2lCJZVg\",\n    y = NULL, x = \"Proportion\", \n    fill = \"Region\"\n  ) \n\n`summarise()` has grouped output by 'region'. You can override using the\n`.groups` argument.\n\n\n\n\n\nAnswer Here\nThis visualization tells the story of within opinion vs within region like the others."
-  },
-  {
     "objectID": "slides/11-data-ethics.html#checklist",
     "href": "slides/11-data-ethics.html#checklist",
     "title": "Lecture 11 - Data Ethics",
@@ -1916,61 +1965,5 @@
     "title": "Lecture 11 - Data Ethics",
     "section": "Question",
     "text": "Question\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
-  },
-  {
-    "objectID": "slides/11-data-ethics.html#section-9",
-    "href": "slides/11-data-ethics.html#section-9",
-    "title": "Lecture 11 - Data Ethics",
-    "section": "",
-    "text": "“It looks like we can scrape student ID and email information. What type of project can we do with ths?”\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
-    "objectID": "labs/lab-4.html",
-    "href": "labs/lab-4.html",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "",
-    "text": "Important\n\n\n\nThis lab is due October 10th at 11:59pm."
-  },
-  {
-    "objectID": "labs/lab-4.html#setup",
-    "href": "labs/lab-4.html#setup",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Setup",
-    "text": "Setup\n\nClone the repo and open the .qmd file.\nAssign the numbers 1, 2, 3, and 4 to each of the team members. If your team has fewer than 4 people, some people will need to have multiple numbers. If your team has more than 4 people, some people will need to share some numbers."
-  },
-  {
-    "objectID": "labs/lab-4.html#lets-cause-a-merge-conflict",
-    "href": "labs/lab-4.html#lets-cause-a-merge-conflict",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Let’s cause a merge conflict!",
-    "text": "Let’s cause a merge conflict!\nOur goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a merge conflict) and requires human intervention, then another type of where that git can figure out how to do without human intervention.\nDoing this will require some tight choreography, so pay attention!\nTake turns in completing the exercise, only one member at a time. Others should just watch, not doing anything on their own projects (this includes not even pulling changes!) until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!\nBefore starting: everyone should have the repo cloned and know which role number(s) they are.\nRole 1:\n\nChange the team name to your actual team name.\nKnit, render, push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 2:\n\nChange the team name to some other word.\nKnit, render, push. You should get an error.\nPull. Take a look at the document with the merge conflict.\nClear the merge conflict by editing the document to choose the correct/preferred change.\nKnit.\n\nClick the Stage checkbox for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.\nrender and push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 3:\n\nChange the a label of the first code chunk\nKnit, render, push. You should get an error.\nPull. No merge conflicts should occur, but you should see a message about merging.\nNow push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 4:\n\nChange the label of the first code chunk to something other than previous role did.\nKnit, render, push. You should get an error.\nPull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. render, and push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nEveryone: Pull, and observe the changes in your document."
-  },
-  {
-    "objectID": "labs/lab-4.html#tips-for-collaborating-via-github",
-    "href": "labs/lab-4.html#tips-for-collaborating-via-github",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Tips for collaborating via GitHub",
-    "text": "Tips for collaborating via GitHub\n\nAlways pull first before you start working.\nResolve a merge conflict (render and push) before continuing your work. Never do new work while resolving a merge conflict.\nKnit, render, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.\nIf you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don’t let it linger and get bigger."
-  },
-  {
-    "objectID": "labs/lab-4.html#packages",
-    "href": "labs/lab-4.html#packages",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Packages",
-    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualisation. This package is already installed for you. You can load it by running the following in your Console:"
-  },
-  {
-    "objectID": "labs/lab-4.html#packages-1",
-    "href": "labs/lab-4.html#packages-1",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Packages",
-    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualisation.\n\nlibrary(tidyverse)\n\nSince the exercises for this week are short it’s possible not every team member will get to commit and push during the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline."
-  },
-  {
-    "objectID": "labs/lab-4.html#data",
-    "href": "labs/lab-4.html#data",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Data",
-    "text": "Data\nIn this lab you’ll construct the dataset!"
   }
 ]
