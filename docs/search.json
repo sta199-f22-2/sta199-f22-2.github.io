@@ -1043,6 +1043,20 @@
     "text": "📖 Read:\n\nR4DS: Chp 14 - Numbers (Sections 14.1, 14.2, and 14.4)\nR4DS: Chp 15 - Strings (Sections 15.1 - 15.3)"
   },
   {
+    "objectID": "prepare/10-03.html",
+    "href": "prepare/10-03.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nModern Data Science with R: Chp 8\n\n⌨️ Watch:\n\nMisrepresentation\nData privacy\nAlgorithmic bias\nOptional (but highly recommended) videos:\n\nAlberto Cairo - How charts lie\nThe Guardian - Cambridge Analytica whistleblower\nJoy Buolamwini - How I’m fighting bias in algorithms\nCathy O’Neil - Weapons of Math Destruction\nSafiya Umoja Noble - Imagining a Future Free from the Algorithms of Oppression\nKristian Lum - What’s An Algorithm Got To Do With It"
+  },
+  {
+    "objectID": "prepare/10-05.html",
+    "href": "prepare/10-05.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Note\n\n\n\nVideos use the “old school” pipe (%>%) but we’ll be using the newer (|>) pipe operator in class."
+  },
+  {
     "objectID": "prepare/9-12.html",
     "href": "prepare/9-12.html",
     "title": "Prepare",
