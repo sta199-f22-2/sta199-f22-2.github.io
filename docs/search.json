@@ -1923,5 +1923,54 @@
     "title": "Lecture 11 - Data Ethics",
     "section": "",
     "text": "“It looks like we can scrape student ID and email information. What type of project can we do with ths?”\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "labs/lab-4.html",
+    "href": "labs/lab-4.html",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due October 10th at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-4.html#setup",
+    "href": "labs/lab-4.html#setup",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Setup",
+    "text": "Setup\n\nClone the repo and open the .qmd file.\nAssign the numbers 1, 2, 3, and 4 to each of the team members. If your team has fewer than 4 people, some people will need to have multiple numbers. If your team has more than 4 people, some people will need to share some numbers."
+  },
+  {
+    "objectID": "labs/lab-4.html#lets-cause-a-merge-conflict",
+    "href": "labs/lab-4.html#lets-cause-a-merge-conflict",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Let’s cause a merge conflict!",
+    "text": "Let’s cause a merge conflict!\nOur goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a merge conflict) and requires human intervention, then another type of where that git can figure out how to do without human intervention.\nDoing this will require some tight choreography, so pay attention!\nTake turns in completing the exercise, only one member at a time. Others should just watch, not doing anything on their own projects (this includes not even pulling changes!) until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!\nBefore starting: everyone should have the repo cloned and know which role number(s) they are.\nRole 1:\n\nChange the team name to your actual team name.\nKnit, render, push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 2:\n\nChange the team name to some other word.\nKnit, render, push. You should get an error.\nPull. Take a look at the document with the merge conflict.\nClear the merge conflict by editing the document to choose the correct/preferred change.\nKnit.\n\nClick the Stage checkbox for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.\nrender and push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 3:\n\nChange the a label of the first code chunk\nKnit, render, push. You should get an error.\nPull. No merge conflicts should occur, but you should see a message about merging.\nNow push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nRole 4:\n\nChange the label of the first code chunk to something other than previous role did.\nKnit, render, push. You should get an error.\nPull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. render, and push.\n\n🛑 Make sure the previous role has finished before moving on to the next step.\nEveryone: Pull, and observe the changes in your document."
+  },
+  {
+    "objectID": "labs/lab-4.html#tips-for-collaborating-via-github",
+    "href": "labs/lab-4.html#tips-for-collaborating-via-github",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Tips for collaborating via GitHub",
+    "text": "Tips for collaborating via GitHub\n\nAlways pull first before you start working.\nResolve a merge conflict (render and push) before continuing your work. Never do new work while resolving a merge conflict.\nKnit, render, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.\nIf you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don’t let it linger and get bigger."
+  },
+  {
+    "objectID": "labs/lab-4.html#packages",
+    "href": "labs/lab-4.html#packages",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Packages",
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualisation. This package is already installed for you. You can load it by running the following in your Console:"
+  },
+  {
+    "objectID": "labs/lab-4.html#packages-1",
+    "href": "labs/lab-4.html#packages-1",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Packages",
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualisation.\n\nlibrary(tidyverse)\n\nSince the exercises for this week are short it’s possible not every team member will get to commit and push during the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline."
+  },
+  {
+    "objectID": "labs/lab-4.html#data",
+    "href": "labs/lab-4.html#data",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Data",
+    "text": "Data\nIn this lab you’ll construct the dataset!"
   }
 ]

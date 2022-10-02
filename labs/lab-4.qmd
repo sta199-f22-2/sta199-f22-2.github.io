@@ -1,31 +1,248 @@
 ---
-title: "Lab 3 - Data tidying"
+title: "Lab 4 - Merge Conflicts - Ethics"
 categories: "Lab"
 execute:
   eval: true
 ---
 
 ::: callout-important
-This lab is due Monday, Sep 26 at 11:59pm.
+This lab is due October 10th at 11:59pm.
 :::
 
+# Learning Goals 
+
+- Collaborating on GitHub and resolving merge conflicts
+- Critiquing visualisations that misrepresent data
+- Improving data visualisations to better convey the right message
+
+# Team Up
+
+**Instructions on how to create teams for STA199**
 
 
+
+
+
+
+# Resolving merge conflicts 
+
+Research rarely happens alone. Thus, for the remainder of the semester, you will be working in teams to complete labs and your semester project. This includes using a shared GitHub repo for labs and projects. Sometimes things will go swimmingly, and sometimes you'll run into merge conflicts. \ 
+
+When you and your teammates work on the lines of code within a document, and both try to push your changes, you will run into issues. Merge conflicts happen when you merge branches that have competing renders, and Git needs your help to decide which changes to incorporate in the final merge. \
+
+Our first task today is to walk you through a merge conflict! \
+
+
+::: render-render-push
+If you haven't yet done so since Part 1, now is a good time to render, render, and push. Make sure that you render and push all changed documents and your Git pane is completely empty before proceeding.
+
+-   Pushing to a repo replaces the code on GitHub with the code you have on your computer.
+-   If a collaborator has made a change to your repo on GitHub that you haven't incorporated into your local work, GitHub will stop you from pushing to the repo because this could overwrite your collaborator's work!
+-   So you need to explicitly "merge" your collaborator's work before you can push.
+-   If your and your collaborator's changes are in different files or in different parts of the same file, git merges the work for you automatically when you \*pull\*.
+-   If you both changed the same part of a file, git will produce a \*\*merge conflict\*\* because it doesn't know how which change you want to keep and which change you want to overwrite.
+
+Git will put conflict markers in your code that look like:
+
+    <<<<<<< HEAD 
+
+    See also: [dplyr documentation](https://dplyr.tidyverse.org/)   
+
+    ======= 
+
+    See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)  
+
+    >>>>>>> some1alpha2numeric3string4
+
+The `===`s separate *your* changes (top) from *their* changes (bottom).
+
+Note that on top you see the word `HEAD`, which indicates that these are your changes.
+
+And at the bottom you see `some1alpha2numeric3string4` (well, it probably looks more like `28e7b2ceb39972085a0860892062810fb812a08f`).
+
+This is the **hash** (a unique identifier) of the render your collaborator made with the conflicting change.
+
+Your job is to *reconcile* the changes: edit the file so that it incorporates the best of both versions and delete the `<<<`, `===`, and `>>>` lines.
+Then you can stage and render the result.
+
+# Merge conflict activity
+
+## Setup
+
+-   Clone the repo and open the .qmd file.
+-   Assign the numbers 1, 2, 3, and 4 to each of the team members. If your team has fewer than 4 people, some people will need to have multiple numbers. If your team has more than 4 people, some people will need to share some numbers.
+
+## Let's cause a merge conflict!
+
+Our goal is to see two different types of merges: first we'll see a type of merge that git can't figure out on its own how to do on its own (a **merge conflict**) and requires human intervention, then another type of where that git can figure out how to do without human intervention.
+
+Doing this will require some tight choreography, so pay attention!
+
+Take turns in completing the exercise, only one member at a time.
+**Others should just watch, not doing anything on their own projects (this includes not even pulling changes!)** until they are instructed to.
+If you feel like you won't be able to resist the urge to touch your computer when it's not your turn, we recommend putting your hands in your pockets or sitting on them!
+
+**Before starting**: everyone should have the repo cloned and know which role number(s) they are.
+
+**Role 1:**
+
+-   Change the team name to your actual team name.
+-   Knit, render, push.
+
+🛑 Make sure the previous role has finished before moving on to the next step.
+
+**Role 2:**
+
+-   Change the team name to some other word.
+-   Knit, render, push. You should get an error.
+-   Pull. Take a look at the document with the merge conflict.
+-   Clear the merge conflict by editing the document to choose the correct/preferred change.
+-   Knit.
+-   **Click the Stage checkbox** for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.
+-   render and push.
+
+🛑 Make sure the previous role has finished before moving on to the next step.
+
+**Role 3:**
+
+-   Change the a label of the first code chunk
+-   Knit, render, push. You should get an error.
+-   Pull. No merge conflicts should occur, but you should see a message about merging.
+-   Now push.
+
+🛑 Make sure the previous role has finished before moving on to the next step.
+
+**Role 4:**
+
+-   Change the label of the first code chunk to something other than previous role did.
+-   Knit, render, push. You should get an error.
+-   Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. render, and push.
+
+🛑 Make sure the previous role has finished before moving on to the next step.
+
+**Everyone:** Pull, and observe the changes in your document.
+
+## Tips for collaborating via GitHub
+
+-   Always pull first before you start working.
+-   Resolve a merge conflict (render and push) *before* continuing your work. Never do new work while resolving a merge conflict.
+-   Knit, render, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.
+-   If you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don't let it linger and get bigger.
+
+# Conveying the right message through visualisation
+
+## Packages
+
+We'll use the **tidyverse** package for much of the data wrangling and visualisation.
+This package is already installed for you.
+You can load it by running the following in your Console:
+
+## Packages
+
+We'll use the **tidyverse** package for much of the data wrangling and visualisation.
+
+```{r load-packages, message = FALSE}
+library(tidyverse)
+```
+
+Since the exercises for this week are short it's possible not every team member will get to commit and push **during** the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline.
+
+
+## Data
+
+In this lab you'll construct the dataset!
+
+# Exercises
+
+The following visualisation was shared [on Twitter](https://twitter.com/JonBoeckenstedt/status/1291602888376999936) as "extraordinary misleading".
+
+![](images/lab-4/masks-v-nomasks.png)
+
+1. What is misleading about this visualisation and how you might go about fixing it? 
 
 
 
 ::: render-commit-push
-If you haven't yet done so since Part 1, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
 
 <br>
 :::
+
+**Everyone now pull**
+
+2. Create a data frame that can be used to re-construct this visualisation. You may need to guess some of the numbers, that’s ok. You should first think about how many rows and columns you’ll need and what you want to call your variables. Then, you can use the tribble() function for this. For example, if you wanted to construct the following data frame
+
+```{r}
+#| label: tribble
+#| echo: false
+df <- tribble(
+  ~date, ~count,
+  "1/1/2020", 15,
+  "2/1/2020", 20,
+  "3/1/2020", 22,
+)
+```
+
+You can create the data frame below. Print the first 5 rows of the data frame after creating it. You may name the data frame what you like. We often try and keep data frame names small and informative. 
+
+::: render-commit-push
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+
+**Everyone now pull**
+
+<br>
+:::
+
+```{r}
+#| label: label-name-here
+```
+
+3.  Make a visualisation that more accurately (and honestly) tells the story.
+
+```{r}
+#| label: label-name-here
+
+```
+
+::: render-commit-push
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+
+<br>
+:::
+
+**Everyone now pull**
+
+
+4.  What message is more clear in your visualisation than it was in the original visualization?
+
+
+::: render-commit-push
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+
+<br>
+:::
+
+**Everyone now pull**
+
+5.  What, if any, useful information do these data and your visualization tell us about mask wearing and COVID? Answers should focus only on what the visualization tells.
+
+
+::: render-commit-push
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+
+<br>
+:::
+
+**Everyone now pull**
+
+
 
 # Submission
 
 Once you are finished with the lab, you will your final PDF document to Gradescope.
 
 ::: callout-warning
-Before you wrap up the assignment, make sure all documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.
+Before you wrap up the assignment, make sure all documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to render and push changes.
 
 You must turn in a PDF file to the Gradescope page by the submission deadline to be considered "on time".
 
@@ -50,11 +267,9 @@ To submit your assignment:
 | Ex 3                  | 4      |
 | Ex 4                  | 12     |
 | Ex 5                  | 4      |
-| Ex 6                  | 4      |
-| Ex 7                  | 12     |
 | Workflow & formatting | 5      |
 | **Total**             | **50** |
 
 ::: callout-note
-The "Workflow & formatting" component assesses the reproducible workflow. This includes having at least 3 informative commit messages, labeling the code chunks, and having readable code that does not exceed 80 characters, i.e., we can read all your code in the rendered PDF.
+The "Workflow & formatting" component assesses the reproducible workflow. This includes having at least 3 informative render messages, labeling the code chunks, and having readable code that does not exceed 80 characters, i.e., we can read all your code in the rendered PDF.
 :::
