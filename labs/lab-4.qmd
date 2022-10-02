@@ -174,7 +174,7 @@ If you haven't yet done so, now is a good time to render, commit, and push. Make
 
 ```{r}
 #| label: tribble
-#| echo: false
+#| echo: true
 df <- tribble(
   ~date, ~count,
   "1/1/2020", 15,
