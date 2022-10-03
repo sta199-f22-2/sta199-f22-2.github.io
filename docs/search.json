@@ -1859,7 +1859,14 @@
     "href": "slides/11-data-ethics.html#checklist",
     "title": "Lecture 11 - Data Ethics",
     "section": "Checklist",
-    "text": "Checklist\n– Clone exam review repo\n– Breath a little! The exam is over :)"
+    "text": "Checklist\n– Clone exam data ethics\n– Breath a little! The exam is over :)"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#announcements",
+    "href": "slides/11-data-ethics.html#announcements",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Announcements",
+    "text": "Announcements\n– Exams graded by Friday\n– Groups are coming"
   },
   {
     "objectID": "slides/11-data-ethics.html#goals",
@@ -1974,31 +1981,10 @@
     "text": "Getting Smarter about Visual Information\n\nby Alberto Cairo"
   },
   {
-    "objectID": "slides/11-data-ethics.html#what-are-you-okay-with",
-    "href": "slides/11-data-ethics.html#what-are-you-okay-with",
+    "objectID": "slides/11-data-ethics.html#for-next-time-dont-do-this",
+    "href": "slides/11-data-ethics.html#for-next-time-dont-do-this",
     "title": "Lecture 11 - Data Ethics",
-    "section": "What are you okay with?",
-    "text": "What are you okay with?\n\nName\nAge\nEmail\nPhone Number\nList of every video you watch\nList of every video you comment on\nHow you type: speed, accuracy\nHow long you spend on different content\nList of all your private messages (date, time, person sent to)\nInfo about your photos (how it was taken, where it was taken (GPS), when it was taken)\nBrowsing history"
-  },
-  {
-    "objectID": "slides/11-data-ethics.html#ok-cupid-data-breach",
-    "href": "slides/11-data-ethics.html#ok-cupid-data-breach",
-    "title": "Lecture 11 - Data Ethics",
-    "section": "OK Cupid data breach",
-    "text": "OK Cupid data breach\n– In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details\n– Researchers didn’t release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames\n\nSome may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.\n\n\nResearchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær"
-  },
-  {
-    "objectID": "slides/11-data-ethics.html#question",
-    "href": "slides/11-data-ethics.html#question",
-    "title": "Lecture 11 - Data Ethics",
-    "section": "Question",
-    "text": "Question\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
-  },
-  {
-    "objectID": "slides/11-data-ethics.html#dont-do-this",
-    "href": "slides/11-data-ethics.html#dont-do-this",
-    "title": "Lecture 11 - Data Ethics",
-    "section": "Don’t do this",
-    "text": "Don’t do this\n“It looks like we can scrape student ID and email information. What type of project can we do with this?”\n\n\n\n🔗 sta199-f22-2.github.io"
+    "section": "For Next Time: Don’t do this",
+    "text": "For Next Time: Don’t do this\n“It looks like we can scrape student ID and email information. What type of project can we do with this?”\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

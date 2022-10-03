@@ -7,7 +7,7 @@ format: revealjs
 
 ## Checklist
 
--- Clone exam review repo 
+-- Clone exam data ethics 
 
 -- Breath a little! The exam is over :) 
 
