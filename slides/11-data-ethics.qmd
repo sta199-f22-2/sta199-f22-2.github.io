@@ -16,8 +16,11 @@ format: revealjs
 -- Understand causality 
 
 -- Understand how to improve graphs 
+
   --- axes
+  
   --- scales 
+  
   --- uncertainty 
 
 -- Think about data
@@ -96,7 +99,8 @@ Moore, Steven C., et al. **["Association of leisure-time physical activity with 
 
 ## {.smaller}
 
-![](images/10-data-ethics/interest1.png){width=300" height="600" fig-align="center"}
+![](images/10-data-ethics/interest1.png){width=200" height="400" fig-align="center"}
+
 -- What does this graph represent? 
 
 -- What is the story of these data? 
@@ -187,12 +191,15 @@ There are many reasons why a data analysis might still leave us in a position of
 
 Suppose a researcher was interested in how diet impacted chicken weight? They assigned 5 chickens to 1 of 4 different diets. Here are the reported median weights of the 4 groups of chickens:
 
-Diet 1: 160 grams /
-Diet 2: 225 grams /
-Diet 3: 280 grams /
-Diet 4: 245 grams /
+-- Diet 1: 160 grams
 
-So Diet 4 causes heavier chickens? Other reasons? 
+-- Diet 2: 225 grams 
+
+-- Diet 3: 280 grams 
+
+-- Diet 4: 245 grams 
+
+- So Diet 4 causes heavier chickens? Other reasons? 
 
 ## 
 
@@ -275,6 +282,20 @@ by Alberto Cairo
 
 
 # Data Privacy 
+
+## What are you okay with? {.smaller}
+
+- Name
+- Age
+- Email
+- Phone Number
+- List of every video you watch
+- List of every video you comment on
+- How you type: speed, accuracy
+- How long you spend on different content
+- List of all your private messages (date, time, person sent to)
+- Info about your photos (how it was taken, where it was taken (GPS), when it was taken)
+- Browsing history
 
 # Case study: OK Cupid
 
