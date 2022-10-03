@@ -1859,7 +1859,7 @@
     "href": "slides/11-data-ethics.html#goals",
     "title": "Lecture 11 - Data Ethics",
     "section": "Goals",
-    "text": "Goals"
+    "text": "Goals\n– Understand causality\n– Understand how to improve graphs — axes — scales — uncertainty\n– Think about data\n– Be a skeptic\n– Practice in R"
   },
   {
     "objectID": "slides/11-data-ethics.html#causality",
@@ -1887,7 +1887,7 @@
     "href": "slides/11-data-ethics.html#the-takeaway",
     "title": "Lecture 11 - Data Ethics",
     "section": "The Takeaway",
-    "text": "The Takeaway"
+    "text": "The Takeaway\n– Be a skeptic\n– Ask questions\n– Let the data tell the story, don’t tell the data for the story\n– Most studies should not claim causality"
   },
   {
     "objectID": "slides/11-data-ethics.html#section-1",
@@ -1950,7 +1950,7 @@
     "href": "slides/11-data-ethics.html#section-4",
     "title": "Lecture 11 - Data Ethics",
     "section": "",
-    "text": "So the answer is No! …. No?"
+    "text": "– What does this graph represent?\n– What is the story of these data?\n– Is the graph misleading?\n– How could you improve this graph?"
   },
   {
     "objectID": "slides/11-data-ethics.html#section-6",
@@ -1964,7 +1964,7 @@
     "href": "slides/11-data-ethics.html#section-7",
     "title": "Lecture 11 - Data Ethics",
     "section": "",
-    "text": "Getting Smarter about Visual Information\n\nby Alberto Cairo"
+    "text": "Suppose a researcher was interested in how diet impacted chicken weight? They assigned 5 chickens to 1 of 4 different diets. Here are the reported median weights of the 4 groups of chickens:\nDiet 1: 160 grams / Diet 2: 225 grams / Diet 3: 280 grams / Diet 4: 245 grams /\nSo Diet 4 causes heavier chickens? Other reasons?"
   },
   {
     "objectID": "slides/11-data-ethics.html#ok-cupid-data-breach",
@@ -1979,5 +1979,75 @@
     "title": "Lecture 11 - Data Ethics",
     "section": "Question",
     "text": "Question\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#the-study",
+    "href": "slides/11-data-ethics.html#the-study",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "The Study",
+    "text": "The Study\n– 5 men and 11 women showed up, aged 19 to 67.\n– Frank randomly assigned the subjects to one of three diet groups. One group followed a low-carbohydrate diet. Another followed the same low-carb diet plus a daily 1.5 oz. bar of dark chocolate. And the rest, a control group, were instructed to make no changes to their current diet.\n– They weighed themselves each morning for 21 days, and the study finished with a final round of questionnaires and blood tests."
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#the-great-chocolate-hoak",
+    "href": "slides/11-data-ethics.html#the-great-chocolate-hoak",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "The Great Chocolate Hoak",
+    "text": "The Great Chocolate Hoak\n“If you measure a large number of things about a small number of people, you are almost guaranteed to get a “statistically significant” result. Our study included 18 different measurements—weight, cholesterol, sodium, blood protein levels, sleep quality, well-being, etc.—from 15 people. . . .”\n“It was, in fact, a fairly typical study for the field of diet research. Which is to say: It was terrible science. The results are meaningless, and the health claims that the media blasted out to millions of people around the world are utterly unfounded.”"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-3",
+    "href": "slides/11-data-ethics.html#section-3",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "– What does this graph represent?\n– What is the story of these data?\n– Is the graph misleading?\n– How could you improve this graph?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-8",
+    "href": "slides/11-data-ethics.html#section-8",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "Suppose a researcher was interested in how diet impacted chicken weight? They assigned 5 chickens to 1 of 4 different diets. Here are the reported median weights of the 4 groups of chickens:\nDiet 1: 160 grams Diet 2: 225 grams Diet 3: 280 grams Diet 4: 245 grams\nSo Diet 4 causes heavier chickens? Other reasons?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-10",
+    "href": "slides/11-data-ethics.html#section-10",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "So the answer is No! …. No?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-12",
+    "href": "slides/11-data-ethics.html#section-12",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "Getting Smarter about Visual Information\n\nby Alberto Cairo"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-13",
+    "href": "slides/11-data-ethics.html#section-13",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "Getting Smarter about Visual Information\n\nby Alberto Cairo"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#dont-do-this",
+    "href": "slides/11-data-ethics.html#dont-do-this",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "Don’t do this",
+    "text": "Don’t do this\n“It looks like we can scrape student ID and email information. What type of project can we do with this?”\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-9",
+    "href": "slides/11-data-ethics.html#section-9",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "So the answer is No! …. No?"
+  },
+  {
+    "objectID": "slides/11-data-ethics.html#section-11",
+    "href": "slides/11-data-ethics.html#section-11",
+    "title": "Lecture 11 - Data Ethics",
+    "section": "",
+    "text": "The Art of Skepticism in a Data-Driven World\n\nby Carl Bergstrom and Jevin West"
   }
 ]

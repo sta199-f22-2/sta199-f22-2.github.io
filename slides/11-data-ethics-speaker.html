@@ -334,27 +334,47 @@
 </section>
 <section id="goals" class="slide level2">
 <h2>Goals</h2>
+<p>– Understand causality</p>
+<p>– Understand how to improve graphs — axes — scales — uncertainty</p>
+<p>– Think about data</p>
+<p>– Be a skeptic</p>
+<p>– Practice in R</p>
 </section>
-<section id="causality" class="slide level2">
-<h2>Causality</h2>
+<section>
+<section id="causality" class="title-slide slide level1 center">
+<h1>Causality</h1>
 <div class="cell">
 
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/10-data-ethics/exercise-cancer-time.png" width="900" height="400"></p>
-</figure>
 </div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/10-data-ethics/exercise-cancer-latimes.png" width="900" height="400"></p>
+<p><img data-src="images/10-data-ethics/chocolate.png" width="900" height="400"></p>
 </figure>
 </div>
 <p>– What questions do you have?</p>
 <p>– What do you wonder?</p>
+</section>
+<section id="the-study" class="slide level2">
+<h2>The Study</h2>
+<p>– 5 men and 11 women showed up, aged 19 to 67.</p>
+<p>– Frank randomly assigned the subjects to one of three diet groups. One group followed a low-carbohydrate diet. Another followed the same low-carb diet plus a daily 1.5 oz. bar of dark chocolate. And the rest, a control group, were instructed to make no changes to their current diet.</p>
+<p>– They weighed themselves each morning for 21 days, and the study finished with a final round of questionnaires and blood tests.</p>
+</section>
+<section id="the-great-chocolate-hoak" class="slide level2">
+<h2>The Great Chocolate Hoak</h2>
+<p>“If you measure a large number of things about a small number of people, you are almost guaranteed to get a “statistically significant” result. Our study included 18 different measurements—weight, cholesterol, sodium, blood protein levels, sleep quality, well-being, etc.—from 15 people. . . .”</p>
+<p>“It was, in fact, a fairly typical study for the field of diet research. Which is to say: It was terrible science. The results are meaningless, and the health claims that the media blasted out to millions of people around the world are utterly unfounded.”</p>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/10-data-ethics/exercise-cancer-latimes.png" width="900" height="400"></p>
+</figure>
+</div>
 </section>
 <section id="original-study" class="slide level2 smaller">
 <h2>Original study</h2>
@@ -366,26 +386,40 @@
 <li class="fragment">Researchers found no association between exercising and 13 other cancers (e.g.&nbsp;pancreatic, ovarian, and brain).</li>
 </ul>
 </section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/10-data-ethics/exercise-cancer-time.png" width="900" height="400"></p>
+</figure>
+</div>
+</section>
 <section id="the-takeaway" class="slide level2">
 <h2>The Takeaway</h2>
-</section>
+<p>– Be a skeptic</p>
+<p>– Ask questions</p>
+<p>– Let the data tell the story, don’t tell the data for the story</p>
+<p>– Most studies should not claim causality</p>
+</section></section>
 <section>
 <section id="telling-a-story" class="title-slide slide level1 smaller center">
 <h1>Telling a story</h1>
 
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-3" class="slide level2 smaller">
+<h2></h2>
+<p><img data-src="images/10-data-ethics/interest1.png" data-fig-align="center" height="600"> – What does this graph represent?</p>
+<p>– What is the story of these data?</p>
+<p>– Is the graph misleading?</p>
+<p>– How could you improve this graph?</p>
+</section>
+<section id="section-4" class="slide level2">
 <h2></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/10-data-ethics/tax1.png" width="400" height="450"></p>
+<p><img data-src="images/10-data-ethics/interest2.png" height="700"></p>
 </figure>
 </div>
-<p>– What is your takeaway?</p>
-<p>– Do you find anything interesting / suspicious?</p>
-</section>
-<section id="axes-matter" class="slide level2">
-<h2>Axes matter</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/10-data-ethics/axis-start-at-0.png" width="900" height="400"></p>
@@ -400,9 +434,8 @@
 </figure>
 </div>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
-<p>Put this in the AE as fill in the blank code?</p>
 
 <img data-src="11-data-ethics_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
 <section id="whats-wrong-with-this-graph" class="slide level2">
@@ -443,7 +476,7 @@
 <li class="fragment">Flip 4: Heads</li>
 </ul>
 </section>
-<section id="section-3" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -451,23 +484,37 @@
 </figure>
 </div>
 </section>
-<section id="section-4" class="slide level2 smaller">
+<section id="section-7" class="slide level2">
+<h2></h2>
+<p>Suppose a researcher was interested in how diet impacted chicken weight? They assigned 5 chickens to 1 of 4 different diets. Here are the reported median weights of the 4 groups of chickens:</p>
+<p>Diet 1: 160 grams / Diet 2: 225 grams / Diet 3: 280 grams / Diet 4: 245 grams /</p>
+<p>So Diet 4 causes heavier chickens? Other reasons?</p>
+</section>
+<section id="section-8" class="slide level2">
+<h2></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/10-data-ethics/chickweight.png" width="650" height="600"></p>
+</figure>
+</div>
+</section>
+<section id="section-9" class="slide level2 smaller">
 <h2></h2>
 
 <img data-src="11-data-ethics_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><p>So the answer is No! …. No?</p>
 </section>
-<section id="section-5" class="slide level2 smaller">
+<section id="section-10" class="slide level2 smaller">
 <h2></h2>
 
 <img data-src="11-data-ethics_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
-<section id="section-6" class="slide level2">
+<section id="section-11" class="slide level2">
 <h2></h2>
 <p><img data-src="images/10-data-ethics/calling-bullshit.png" width="300" height="430"></p>
 <p>The Art of Skepticism in a Data-Driven World<br>
 </p>
 <p>by Carl Bergstrom and Jevin West</p>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-12" class="slide level2">
 <h2></h2>
 <p><img data-src="images/10-data-ethics/cairo-how-charts-lie.jpg" width="300" height="430"></p>
 <p>Getting Smarter about Visual Information<br>
@@ -499,18 +546,19 @@
 <h2>Question</h2>
 <p>In analysis of data that individuals willingly shared publicly on a given platform (e.g.&nbsp;social media), how do you make sure you don’t violate reasonable expectations of privacy?</p>
 </section>
-<section id="section-8" class="slide level2">
+<section id="section-13" class="slide level2">
 <h2></h2>
 
-<img data-src="images/10-data-ethics/okcupid-tweet.png" class="r-stretch"></section></section>
-<section id="it-looks-like-we-can-scrape-student-id-and-email-information.-what-type-of-project-can-we-do-with-this" class="title-slide slide level1 center">
-<h1>“It looks like we can scrape student ID and email information. What type of project can we do with this?”</h1>
+<img data-src="images/10-data-ethics/okcupid-tweet.png" class="r-stretch"></section>
+<section id="dont-do-this" class="slide level2">
+<h2>Don’t do this</h2>
+<p>“It looks like we can scrape student ID and email information. What type of project can we do with this?”</p>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://sta199-f22-2.github.io/">🔗 sta199-f22-2.github.io</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

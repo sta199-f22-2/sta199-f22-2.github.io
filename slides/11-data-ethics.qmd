@@ -13,9 +13,20 @@ format: revealjs
 
 ## Goals 
 
+-- Understand causality 
 
+-- Understand how to improve graphs 
+  --- axes
+  --- scales 
+  --- uncertainty 
 
-## Causality 
+-- Think about data
+
+-- Be a skeptic 
+
+-- Practice in R
+
+# Causality 
 
 ```{r}
 #| echo: false
@@ -27,16 +38,33 @@ library(scales)
 ```
 
 
-![](images/10-data-ethics/exercise-cancer-time.png){width="900" height="400" fig-align="center"}
+##
 
 
-## 
-
-![](images/10-data-ethics/exercise-cancer-latimes.png){width="900" height="400" fig-align="center"}
+![](images/10-data-ethics/chocolate.png){width="900" height="400" fig-align="center"}
 
 -- What questions do you have? 
 
 -- What do you wonder? 
+
+
+## The Study 
+
+-- 5 men and 11 women showed up, aged 19 to 67. 
+
+-- Frank randomly assigned the subjects to one of three diet groups. One group followed a low-carbohydrate diet. Another followed the same low-carb diet plus a daily 1.5 oz. bar of dark chocolate. And the rest, a control group, were instructed to make no changes to their current diet. 
+
+-- They weighed themselves each morning for 21 days, and the study finished with a final round of questionnaires and blood tests.
+
+## The Great Chocolate Hoak 
+
+"If you measure a large number of things about a small number of people, you are almost guaranteed to get a “statistically significant” result. Our study included 18 different measurements—weight, cholesterol, sodium, blood protein levels, sleep quality, well-being, etc.—from 15 people. . . ."
+
+"It was, in fact, a fairly typical study for the field of diet research. Which is to say: It was terrible science. The results are meaningless, and the health claims that the media blasted out to millions of people around the world are utterly unfounded."
+
+##
+
+![](images/10-data-ethics/exercise-cancer-latimes.png){width="900" height="400" fig-align="center"}
 
 
 ## Original study {.smaller}
@@ -48,22 +76,40 @@ Moore, Steven C., et al. **["Association of leisure-time physical activity with 
 - Compared to the bottom 10% of exercisers, the top 10% had lower rates of esophageal, liver, lung, endometrial, colon, and breast cancer.
 - Researchers found no association between exercising and 13 other cancers (e.g. pancreatic, ovarian, and brain).
 
+## 
+
+![](images/10-data-ethics/exercise-cancer-time.png){width="900" height="400" fig-align="center"}
+
 ## The Takeaway 
+
+-- Be a skeptic 
+
+-- Ask questions 
+
+-- Let the data tell the story, don't tell the data for the story 
+
+-- Most studies should not claim causality 
 
 
 
 # Telling a story {.smaller}
 
+## {.smaller}
+
+![](images/10-data-ethics/interest1.png){width=300" height="600" fig-align="center"}
+-- What does this graph represent? 
+
+-- What is the story of these data? 
+
+-- Is the graph misleading?
+
+-- How could you improve this graph?
+
 ##
 
-![](images/10-data-ethics/tax1.png){width="400" height="450" fig-align="center"}
-
--- What is your takeaway? 
-
--- Do you find anything interesting / suspicious? 
+![](images/10-data-ethics/interest2.png){width=400" height="700" fig-align="center"}
 
 
-## Axes matter
 
 ![](images/10-data-ethics/axis-start-at-0.png){width="900" height="400" fig-align="center"}
 
@@ -72,8 +118,6 @@ Moore, Steven C., et al. **["Association of leisure-time physical activity with 
 ![](images/10-data-ethics/cost_of_gas.png){width="900" height="400" fig-align="center"}
 
 ##
-
-Put this in the AE as fill in the blank code?
 
 ```{r}
 #| echo: false
@@ -96,8 +140,7 @@ ggplot(df, aes(x = date, y = cost, group = 1)) +
     breaks = ymd(c("2019-11-01", "2020-10-25", "2020-11-01")), 
     labels = c("Last year", "Last week", "Current"),
     guide = guide_axis(angle = 90),
-    limits = ymd(c("2019-11-01", "2020-11-29")),
-    minor_breaks = ymd(c("2019-11-01", "2020-10-25", "2020-11-01"))
+    limits = ymd(c("2019-11-01", "2020-11-29"))
   ) +
   scale_y_continuous(labels = label_dollar())
 
@@ -138,6 +181,22 @@ There are many reasons why a data analysis might still leave us in a position of
 
 
 ![](images/10-data-ethics/freq-coin.png){width="650" height="500" fig-align="center"}
+
+## 
+
+
+Suppose a researcher was interested in how diet impacted chicken weight? They assigned 5 chickens to 1 of 4 different diets. Here are the reported median weights of the 4 groups of chickens:
+
+Diet 1: 160 grams /
+Diet 2: 225 grams /
+Diet 3: 280 grams /
+Diet 4: 245 grams /
+
+So Diet 4 causes heavier chickens? Other reasons? 
+
+## 
+
+![](images/10-data-ethics/chickweight.png){width="650" height="600" fig-align="center"}
 
 
 
@@ -240,7 +299,9 @@ In analysis of data that individuals willingly shared publicly on a given platfo
 
 
 
-# "It looks like we can scrape student ID and email information. What type of project can we do with this?"
+## Don't do this
+
+"It looks like we can scrape student ID and email information. What type of project can we do with this?"
 
 
 
