@@ -11,6 +11,13 @@ format: revealjs
 
 -- Breath a little! The exam is over :) 
 
+## Announcements 
+
+-- Exams graded by Friday 
+
+-- Groups are coming
+
+
 ## Goals 
 
 -- Understand causality 
@@ -280,47 +287,10 @@ Getting Smarter about Visual Information  \
 
 by Alberto Cairo
 
-
-# Data Privacy 
-
-## What are you okay with? {.smaller}
-
-- Name
-- Age
-- Email
-- Phone Number
-- List of every video you watch
-- List of every video you comment on
-- How you type: speed, accuracy
-- How long you spend on different content
-- List of all your private messages (date, time, person sent to)
-- Info about your photos (how it was taken, where it was taken (GPS), when it was taken)
-- Browsing history
-
-# Case study: OK Cupid
-
-## OK Cupid data breach {.smaller}
-
--- In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details
-
--- Researchers didn't release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames
-
-> Some may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form. 
-
-> Researchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær
+# ae-10 Data Ethics
 
 
-## Question 
-
-In analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don't violate reasonable expectations of privacy?
-
-## 
-![](images/10-data-ethics/okcupid-tweet.png){}
-
-
-
-
-## Don't do this
+## For Next Time: Don't do this
 
 "It looks like we can scrape student ID and email information. What type of project can we do with this?"
 
