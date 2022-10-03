@@ -17,11 +17,11 @@ format: revealjs
 
 -- Understand how to improve graphs 
 
-  --- axes
+axes
   
-  --- scales 
+scales 
   
-  --- uncertainty 
+uncertainty 
 
 -- Think about data
 
@@ -103,7 +103,7 @@ Moore, Steven C., et al. **["Association of leisure-time physical activity with 
 
 -- What does this graph represent? 
 
--- What is the story of these data? 
+-- What are the story of these data? 
 
 -- Is the graph misleading?
 
