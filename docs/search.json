@@ -2021,5 +2021,54 @@
     "title": "Lecture 11 - Data Ethics",
     "section": "For Next Time: Don’t do this",
     "text": "For Next Time: Don’t do this\n“It looks like we can scrape student ID and email information. What type of project can we do with this?”\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#checklist",
+    "href": "slides/12-data-privacy.html#checklist",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-11 data-privacy repo"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#announcements",
+    "href": "slides/12-data-privacy.html#announcements",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "Announcements",
+    "text": "Announcements\nLab Group Instructions:\n– You can find your groups ______ after class.\n– You may only switch groups under extreme circumstances (working with friends does not count)\n– View group before Lab 04. This will make it easier for TAs to seat / group you."
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#section",
+    "href": "slides/12-data-privacy.html#section",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "",
+    "text": "Every time we use apps, websites, and devices, our data is being collected and used or sold to others. More importantly, decisions are made by law enforcement, financial institutions, and governments based on data that directly affect the lives of people."
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#warm-up-what-are-you-okay-with",
+    "href": "slides/12-data-privacy.html#warm-up-what-are-you-okay-with",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "Warm up: What are you okay with?",
+    "text": "Warm up: What are you okay with?\n\nName\nAge\nEmail\nPhone Number\nList of every video you watch\nList of every video you comment on\nHow you type: speed, accuracy\nHow long you spend on different content\nList of all your private messages (date, time, person sent to)\nInfo about your photos (how it was taken, where it was taken (GPS), when it was taken)\nBrowsing history"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#ok-cupid-data-breach",
+    "href": "slides/12-data-privacy.html#ok-cupid-data-breach",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "OK Cupid data breach",
+    "text": "OK Cupid data breach\n– In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details\n– Researchers didn’t release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames\n\nSome may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.\n\n\nResearchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#question",
+    "href": "slides/12-data-privacy.html#question",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "Question",
+    "text": "Question\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#section-1",
+    "href": "slides/12-data-privacy.html#section-1",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "",
+    "text": "🔗 sta199-f22-2.github.io"
   }
 ]

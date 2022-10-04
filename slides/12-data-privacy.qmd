@@ -1,0 +1,60 @@
+---
+title: "Lecture 12 - Data Ethics 2"
+subtitle: "Lecture 10"
+date: "October 5, 2022"
+format: revealjs
+---
+
+## Checklist
+
+-- Clone ae-11 data-privacy repo
+
+## Announcements 
+
+Lab Group Instructions: 
+
+-- You can find your groups ______ after class. 
+
+-- You may only switch groups under extreme circumstances (working with friends does not count)
+
+-- View group before Lab 04. This will make it easier for TAs to seat / group you. 
+
+# Data Privacy 
+
+##
+
+Every time we use apps, websites, and devices, our data is being collected and used or sold to others. More importantly, decisions are made by law enforcement, financial institutions, and governments based on data that directly affect the lives of people.
+
+## Warm up: What are you okay with? {.smaller}
+
+- Name
+- Age
+- Email
+- Phone Number
+- List of every video you watch
+- List of every video you comment on
+- How you type: speed, accuracy
+- How long you spend on different content
+- List of all your private messages (date, time, person sent to)
+- Info about your photos (how it was taken, where it was taken (GPS), when it was taken)
+- Browsing history
+
+# Case study: OK Cupid
+
+## OK Cupid data breach {.smaller}
+
+-- In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details
+
+-- Researchers didn't release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames
+
+> Some may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form. 
+
+> Researchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær
+
+
+## Question 
+
+In analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don't violate reasonable expectations of privacy?
+
+## 
+![](images/10-data-ethics/okcupid-tweet.png){}
