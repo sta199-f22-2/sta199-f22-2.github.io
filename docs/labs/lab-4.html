@@ -249,8 +249,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a></li>
-  <li><a href="#team-up" id="toc-team-up" class="nav-link" data-scroll-target="#team-up">Team Up</a></li>
+<li>
+<a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a>
+  <ul class="collapse">
+<li><a href="#why-teams-rationale" id="toc-why-teams-rationale" class="nav-link" data-scroll-target="#why-teams-rationale">Why Teams: Rationale</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
+  <li>
+<a href="#team-expectations" id="toc-team-expectations" class="nav-link" data-scroll-target="#team-expectations">Team expectations</a>
+  <ul class="collapse">
+<li><a href="#weekly-meetings" id="toc-weekly-meetings" class="nav-link" data-scroll-target="#weekly-meetings">Weekly meetings</a></li>
+  <li><a href="#meeting-location" id="toc-meeting-location" class="nav-link" data-scroll-target="#meeting-location">Meeting “location”</a></li>
+  <li><a href="#primary-method-of-communication" id="toc-primary-method-of-communication" class="nav-link" data-scroll-target="#primary-method-of-communication">Primary method of communication</a></li>
+  <li><a href="#how-should-someone-notify-the-other-members-if-they-are-unable-to-attend-lab-or-a-scheduled-team-meeting" id="toc-how-should-someone-notify-the-other-members-if-they-are-unable-to-attend-lab-or-a-scheduled-team-meeting" class="nav-link" data-scroll-target="#how-should-someone-notify-the-other-members-if-they-are-unable-to-attend-lab-or-a-scheduled-team-meeting">How should someone notify the other members if they are unable to attend lab or a scheduled team meeting?</a></li>
+  <li><a href="#by-when-should-everyone-have-their-portion-of-the-lab-completed" id="toc-by-when-should-everyone-have-their-portion-of-the-lab-completed" class="nav-link" data-scroll-target="#by-when-should-everyone-have-their-portion-of-the-lab-completed">By when should everyone have their portion of the lab completed?</a></li>
+  <li><a href="#any-other-items-the-team-would-like-to-discuss-or-plan." id="toc-any-other-items-the-team-would-like-to-discuss-or-plan." class="nav-link" data-scroll-target="#any-other-items-the-team-would-like-to-discuss-or-plan.">Any other items the team would like to discuss or plan.</a></li>
+  </ul>
+</li>
+  <li><a href="#missing-teammates" id="toc-missing-teammates" class="nav-link" data-scroll-target="#missing-teammates">Missing Teammates</a></li>
+  </ul>
+</li>
   <li><a href="#resolving-merge-conflicts" id="toc-resolving-merge-conflicts" class="nav-link" data-scroll-target="#resolving-merge-conflicts">Resolving merge conflicts</a></li>
   <li>
 <a href="#merge-conflict-activity" id="toc-merge-conflict-activity" class="nav-link" data-scroll-target="#merge-conflict-activity">Merge conflict activity</a>
@@ -261,10 +278,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul>
 </li>
   <li>
-<a href="#conveying-the-right-message-through-visualisation" id="toc-conveying-the-right-message-through-visualisation" class="nav-link" data-scroll-target="#conveying-the-right-message-through-visualisation">Conveying the right message through visualisation</a>
+<a href="#conveying-the-right-message-through-visualization" id="toc-conveying-the-right-message-through-visualization" class="nav-link" data-scroll-target="#conveying-the-right-message-through-visualization">Conveying the right message through visualization</a>
   <ul class="collapse">
 <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#packages-1" id="toc-packages-1" class="nav-link" data-scroll-target="#packages-1">Packages</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   </ul>
 </li>
@@ -300,21 +316,42 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This lab is due October 10th at 11:59pm.</p>
+<p>This lab is due October 11th at 11:59pm.</p>
 </div>
 </div>
 <section id="learning-goals" class="level1"><h1>Learning Goals</h1>
 <ul>
 <li>Collaborating on GitHub and resolving merge conflicts</li>
-<li>Critiquing visualisations that misrepresent data</li>
-<li>Improving data visualisations to better convey the right message</li>
-</ul></section><section id="team-up" class="level1"><h1>Team Up</h1>
-<p><strong>Instructions on how to create teams for STA199</strong></p>
-</section><section id="resolving-merge-conflicts" class="level1"><h1>Resolving merge conflicts</h1>
-<p>Research rarely happens alone. Thus, for the remainder of the semester, you will be working in teams to complete labs and your semester project. This includes using a shared GitHub repo for labs and projects. Sometimes things will go swimmingly, and sometimes you’ll run into merge conflicts. &nbsp;</p>
+<li>Critiquing visualizations that misrepresent data</li>
+<li>Improving data visualizations to better convey the right message</li>
+</ul>
+<section id="why-teams-rationale" class="level2"><h2 class="anchored" data-anchor-id="why-teams-rationale">Why Teams: Rationale</h2>
+<p>In the real world, data scientists and statisticians often work in research teams. It is a skill to be able to communicate and work together on common projects. Thus, the remaining labs + your project will be team based.</p>
+<p>Teams work better when members have a common understanding of the team’s goals and expectations for collaboration. The purpose of this activity is to help your team making a plan for working together during lab and outside of the scheduled lab time.</p>
+<p>Each team member will have some ideas about how a team should operate. These ideas may be very different. This is your opportunity to share your thoughts and ideas to promote optimal team function and prevent misunderstandings in the future.</p>
+</section><section id="instructions" class="level2"><h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>Discuss each of the items below as a team.</p>
+<p>Have <em>one person</em> act as the recorder and type the team’s decisions in this document.</p>
+<p><em>Be sure the team agrees on an item before it is added to the document.</em></p>
+<p>Once the document is complete, the recorder should render, commit, and push the team agreement to GitHub. All team members can refer to this lab document throughout the semester.</p>
+</section><section id="team-expectations" class="level2"><h2 class="anchored" data-anchor-id="team-expectations">Team expectations</h2>
+<section id="weekly-meetings" class="level3"><h3 class="anchored" data-anchor-id="weekly-meetings">Weekly meetings</h3>
+<p>Identify a 1 - 2 hour weekly block outside of lab where the team can meet to work on assignments. All team members should block off this time on their calendar in case the group needs to meet to finish lab or work on the project.</p>
+</section><section id="meeting-location" class="level3"><h3 class="anchored" data-anchor-id="meeting-location">Meeting “location”</h3>
+<p>How the team will meet to work together (e.g.&nbsp;in-person, Zoom, Facetime, Google Hangouts). Be sure every member is able to access the virtual meeting space, if needed. If you are unable to find a weekly time when the team can meet, briefly outline a plan to work on assignments outside of lab. Otherwise, you can delete this item.</p>
+</section><section id="primary-method-of-communication" class="level3"><h3 class="anchored" data-anchor-id="primary-method-of-communication">Primary method of communication</h3>
+<p>The team’s primary method of communication outside of meetings (e.g.&nbsp;Slack, text messages, etc.)</p>
+</section><section id="how-should-someone-notify-the-other-members-if-they-are-unable-to-attend-lab-or-a-scheduled-team-meeting" class="level3"><h3 class="anchored" data-anchor-id="how-should-someone-notify-the-other-members-if-they-are-unable-to-attend-lab-or-a-scheduled-team-meeting">How should someone notify the other members if they are unable to attend lab or a scheduled team meeting?</h3>
+</section><section id="by-when-should-everyone-have-their-portion-of-the-lab-completed" class="level3"><h3 class="anchored" data-anchor-id="by-when-should-everyone-have-their-portion-of-the-lab-completed">By when should everyone have their portion of the lab completed?</h3>
+<p>Keep in mind your team may want to have time to review the lab before turning it in to make sure it is a cohesive write up.</p>
+</section><section id="any-other-items-the-team-would-like-to-discuss-or-plan." class="level3"><h3 class="anchored" data-anchor-id="any-other-items-the-team-would-like-to-discuss-or-plan.">Any other items the team would like to discuss or plan.</h3>
+</section></section><section id="missing-teammates" class="level2"><h2 class="anchored" data-anchor-id="missing-teammates">Missing Teammates</h2>
+<p>If you are missing teammates for today’s lab, it is your responsibility to reach out, say hello, and communicate with them that they must contribute to the above questions before submitting lab-04 to Gradescope.</p>
+</section></section><section id="resolving-merge-conflicts" class="level1"><h1>Resolving merge conflicts</h1>
+<p>Working in teams includes using a shared GitHub repo for labs and projects. Sometimes things will go swimmingly, and sometimes you’ll run into merge conflicts. &nbsp;</p>
 <p>When you and your teammates work on the lines of code within a document, and both try to push your changes, you will run into issues. Merge conflicts happen when you merge branches that have competing renders, and Git needs your help to decide which changes to incorporate in the final merge.<br></p>
 <p>Our first task today is to walk you through a merge conflict!<br></p>
-<p>::: render-render-push If you haven’t yet done so since Part 1, now is a good time to render, render, and push. Make sure that you render and push all changed documents and your Git pane is completely empty before proceeding.</p>
+<p>If you haven’t yet done so since filling out the <em>Team Agreement</em>, now is a good time to render, commit, and push. Make sure that you render and push all changed documents and your Git pane is completely empty before proceeding.</p>
 <ul>
 <li>Pushing to a repo replaces the code on GitHub with the code you have on your computer.</li>
 <li>If a collaborator has made a change to your repo on GitHub that you haven’t incorporated into your local work, GitHub will stop you from pushing to the repo because this could overwrite your collaborator’s work!</li>
@@ -350,16 +387,16 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 <p><strong>Role 1:</strong></p>
 <ul>
 <li>Change the team name to your actual team name.</li>
-<li>Knit, render, push.</li>
+<li>render, commit, push.</li>
 </ul>
 <p>🛑 Make sure the previous role has finished before moving on to the next step.</p>
 <p><strong>Role 2:</strong></p>
 <ul>
 <li>Change the team name to some other word.</li>
-<li>Knit, render, push. You should get an error.</li>
+<li>Render, commit, push. You should get an error.</li>
 <li>Pull. Take a look at the document with the merge conflict.</li>
 <li>Clear the merge conflict by editing the document to choose the correct/preferred change.</li>
-<li>Knit.</li>
+<li>Render.</li>
 <li>
 <strong>Click the Stage checkbox</strong> for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.</li>
 <li>render and push.</li>
@@ -368,7 +405,7 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 <p><strong>Role 3:</strong></p>
 <ul>
 <li>Change the a label of the first code chunk</li>
-<li>Knit, render, push. You should get an error.</li>
+<li>Render, commit, push. You should get an error.</li>
 <li>Pull. No merge conflicts should occur, but you should see a message about merging.</li>
 <li>Now push.</li>
 </ul>
@@ -376,33 +413,32 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 <p><strong>Role 4:</strong></p>
 <ul>
 <li>Change the label of the first code chunk to something other than previous role did.</li>
-<li>Knit, render, push. You should get an error.</li>
+<li>Render, commit, push. You should get an error.</li>
 <li>Pull. Take a look at the document with the merge conflict. Clear the merge conflict by choosing the correct/preferred change. render, and push.</li>
 </ul>
 <p>🛑 Make sure the previous role has finished before moving on to the next step.</p>
 <p><strong>Everyone:</strong> Pull, and observe the changes in your document.</p>
 </section><section id="tips-for-collaborating-via-github" class="level2"><h2 class="anchored" data-anchor-id="tips-for-collaborating-via-github">Tips for collaborating via GitHub</h2>
 <ul>
-<li>Always pull first before you start working.</li>
+<li><strong>Always pull first before you start working.</strong></li>
 <li>Resolve a merge conflict (render and push) <em>before</em> continuing your work. Never do new work while resolving a merge conflict.</li>
-<li>Knit, render, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.</li>
+<li>Render, commit, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.</li>
 <li>If you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don’t let it linger and get bigger.</li>
-</ul></section></section><section id="conveying-the-right-message-through-visualisation" class="level1"><h1>Conveying the right message through visualisation</h1>
+</ul></section></section><section id="conveying-the-right-message-through-visualization" class="level1"><h1>Conveying the right message through visualization</h1>
 <section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<p>We’ll use the <strong>tidyverse</strong> package for much of the data wrangling and visualisation. This package is already installed for you. You can load it by running the following in your Console:</p>
-</section><section id="packages-1" class="level2"><h2 class="anchored" data-anchor-id="packages-1">Packages</h2>
 <p>We’ll use the <strong>tidyverse</strong> package for much of the data wrangling and visualisation.</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Since the exercises for this week are short it’s possible not every team member will get to commit and push <strong>during</strong> the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline.</p>
+<p>Note: Everyone should intellectually contribute to every question. However, no two teammates should work on the same question at the same time below.</p>
 </section><section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
-<p>In this lab you’ll construct the dataset!</p>
+<p>In this lab you’ll construct the data set!</p>
 </section></section><section id="exercises" class="level1"><h1>Exercises</h1>
-<p>The following visualisation was shared <a href="https://twitter.com/JonBoeckenstedt/status/1291602888376999936">on Twitter</a> as “extraordinary misleading”.</p>
+<p>The following visualization was shared <a href="https://twitter.com/JonBoeckenstedt/status/1291602888376999936">on Twitter</a> as “extraordinary misleading”.</p>
 <p><img src="images/lab-4/masks-v-nomasks.png" class="img-fluid"></p>
 <ol type="1">
-<li>What is misleading about this visualisation and how you might go about fixing it?</li>
+<li>What is misleading about this visualization and how you might go about fixing it?</li>
 </ol>
 <div class="render-commit-push">
 <p>If you haven’t yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
@@ -410,7 +446,7 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 </div>
 <p><strong>Everyone now pull</strong></p>
 <ol start="2" type="1">
-<li>Create a data frame that can be used to re-construct this visualisation. You may need to guess some of the numbers, that’s ok. You should first think about how many rows and columns you’ll need and what you want to call your variables. Then, you can use the tribble() function for this. For example, if you wanted to construct the following data frame</li>
+<li>Create a data frame that can be used to re-construct this visualization. You may need to guess some of the numbers, that’s ok. You should first think about how many rows and columns you’ll need and what you want to call your variables. Then, you can use the tribble() function for this. For example, if you wanted to construct the following data frame</li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tribble.html">tribble</a></span><span class="op">(</span></span>
@@ -423,14 +459,14 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 <p>You can create the data frame below. Print the first 5 rows of the data frame after creating it. You may name the data frame what you like. We often try and keep data frame names small and informative.</p>
 <div class="render-commit-push">
 <p>If you haven’t yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
-<p><strong>Everyone now pull</strong></p>
 <p><br></p>
 </div>
+<p><strong>Everyone now pull</strong></p>
 <div class="cell">
 
 </div>
 <ol start="3" type="1">
-<li>Make a visualisation that more accurately (and honestly) tells the story.</li>
+<li>Make a visualization that more accurately (and honestly) tells the story.</li>
 </ol>
 <div class="cell">
 
@@ -441,7 +477,7 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 </div>
 <p><strong>Everyone now pull</strong></p>
 <ol start="4" type="1">
-<li>What message is more clear in your visualisation than it was in the original visualization?</li>
+<li>What message is more clear in your visualization than it was in the original visualization?</li>
 </ol>
 <div class="render-commit-push">
 <p>If you haven’t yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.</p>
@@ -490,30 +526,34 @@ Warning
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: left;">Team Agreement</td>
+<td style="text-align: left;">10</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">Ex 1</td>
-<td style="text-align: left;">3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ex 2</td>
-<td style="text-align: left;">6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ex 3</td>
-<td style="text-align: left;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ex 4</td>
-<td style="text-align: left;">12</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ex 5</td>
-<td style="text-align: left;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Workflow &amp; formatting</td>
 <td style="text-align: left;">5</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">Ex 2</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ex 3</td>
+<td style="text-align: left;">15</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ex 4</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ex 5</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Workflow &amp; formatting</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>Total</strong></td>
 <td style="text-align: left;"><strong>50</strong></td>
 </tr>
