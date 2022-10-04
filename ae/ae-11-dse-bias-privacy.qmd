@@ -1,5 +1,5 @@
 ---
-title: "AE 08: Data science ethics"
+title: "AE 11: Data science ethics"
 subtitle: "Suggested answers"
 categories: 
   - Application exercise
@@ -7,7 +7,20 @@ categories:
 editor: visual
 ---
 
-# Part 1 - Predicting ethnicity
+# Part 1 - Data privacy 
+
+Consider the following scenario: There appears to be an increase in bicycle accidents around the school before and after class. You have been tasked with collecting data to help protect the health of your peers and improve your community. What data might you collect and how? What responsibility do you have to protect that
+data?
+
+Specifically: 
+
+- which data would you collect
+
+- how would you collect the data
+
+- how would you keep data private. 
+
+# Part 2 - Predicting ethnicity
 
 **Your turn (12 minutes):** Imai and Khanna (2016) built a racial prediction algorithm using a Bayes classifier trained on voter registration records from Florida and the U.S. Census Bureau's name list.
 
@@ -36,7 +49,7 @@ predict_race(voter.file = voters, surname.only = TRUE) %>%
 -   If you have installed the package, re-run the code, this time to see what the package predicts for your race. Now consider the same questions again: Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?
 
 ```{r}
-me <- tibble(surname = "Rundel")
+me <- tibble(surname = "Blake")
 
 predict_race(voter.file = me, surname.only = TRUE)
 ```

@@ -58,3 +58,25 @@ In analysis of data that individuals willingly shared publicly on a given platfo
 
 ## 
 ![](images/10-data-ethics/okcupid-tweet.png){}
+
+
+## 
+
+Application Exercise 11 - data privacy 
+
+
+
+## Intended use {.smaller}
+
+-- Name
+-- Age
+-- Email
+-- Phone Number
+-- How long you spend on different content
+-- List of all your private messages (date, time, person sent to)
+-- Info about your photos (how it was taken, where it was taken (GPS), when it was taken)
+-- Browsing history
+
+- Targeted ads 
+- Candidate for a job (Amazon has done this)
+- Predict your race to map votes (This is being done)
