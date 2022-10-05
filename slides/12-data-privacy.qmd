@@ -79,7 +79,7 @@ In analysis of data that individuals willingly shared publicly on a given platfo
 
 
 
-# Application Exercise 11 - data privacy 
+# Application Exercise 11 - data privacy - part 1
 
 
 
@@ -105,7 +105,9 @@ In analysis of data that individuals willingly shared publicly on a given platfo
 - Candidate for a job (Amazon has done this)
 - Predict your race to map votes (This is being done)
 
-# Bias in algorithims 
+# Application Exercise 11 - data privacy - part 2
+
+# Bias in algorithims - part 3
 
 ## Gettysburg Activity: Representative words of word length
 
