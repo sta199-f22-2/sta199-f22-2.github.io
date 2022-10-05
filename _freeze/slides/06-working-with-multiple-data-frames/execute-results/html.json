@@ -1,8 +1,10 @@
 {
-  "hash": "295eefe9b2cae0972dfed0854d41364b",
+  "hash": "bba957a388ea96c7ac91ac8c899becd8",
   "result": {
-    "markdown": "---\ntitle: \"Working with multiple data frames\"\nsubtitle: \"Lecture 6\"\ndate: \"September 14, 2022\"\nformat: revealjs\n---\n\n\n## Checklist\n\n\n::: {.cell}\n\n:::\n\n\n-- Clone ae-05 \n\n-- Watch ae-04 video + turn in ae-04 by Thursday 11:59pm\n\n-- Turn in hw1 by Thursday 11:59pm on Gradescope \n\n## R4DS: Chp 20 - Joins - Sections 20.1 - 20.4\n\n--   Any questions from prepare materials?\n\n\n```{=html}\n<iframe src=\"https://app.sli.do/event/42LZs9cfGudq7ajPBjzCCb\" width=\"900\" height=\"600\"></iframe>\n```\n\n-   Clone your `ae-04` repo.\n\n## Announcements\n\nVideos \n\n--   Requesting videos for missed classes\n\nAEs \n\n--   Ae: 80% rule + keys posted after deadline \n\nHomework + Labs\n\n--   Late work policy \n\n--   Drop 1\n\n# Goals\n\n-- Understand join functions\n\n-- Join multiple data frames \n\n## Joining datasets\n\n**Data merging** is the process of combining two or more data sets into a single data set. Most often, this process is necessary when you have raw data stored in multiple files, worksheets, or data tables, that you want to analyze together.\n\n## AE-05\n\nClone ae-05 \n\n\n## Recap of AE \n\n--   This is important! Data are messy!\n\n--   Think carfully about the join you use \n\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Working with multiple data frames\"\nsubtitle: \"Lecture 6\"\ndate: \"September 14, 2022\"\nformat: revealjs\n---\n\n\n## Checklist\n\n\n::: {.cell}\n\n:::\n\n\n-- Clone ae-05\n\n-- Watch ae-04 video + turn in ae-04 by Thursday 11:59pm\n\n-- Turn in hw1 by Thursday 11:59pm on Gradescope\n\n## R4DS: Chp 20 - Joins - Sections 20.1 - 20.4\n\n-- Any questions from prepare materials?\n\n\n```{=html}\n<iframe src=\"https://app.sli.do/event/42LZs9cfGudq7ajPBjzCCb\" width=\"900\" height=\"600\"></iframe>\n```\n\n-   Clone your `ae-04` repo.\n\n## Announcements\n\nVideos\n\n-- Requesting videos for missed classes\n\nAEs\n\n-- Ae: 80% rule + keys posted after deadline\n\nHomework + Labs\n\n-- Late work policy\n\n-- Drop 1\n\n# Goals\n\n-- Understand join functions\n\n-- Join multiple data frames\n\n## Joining datasets\n\n**Data merging** is the process of combining two or more data sets into a single data set. Most often, this process is necessary when you have raw data stored in multiple files, worksheets, or data tables, that you want to analyze together.\n\n## AE-05\n\nClone ae-05\n\n## Recap of AE\n\n-- This is important! Data are messy!\n\n-- Think carfully about the join you use\n",
+    "supporting": [
+      "06-working-with-multiple-data-frames_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

@@ -250,8 +250,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
    
   <ul>
 <li><a href="#part-1---data-privacy" id="toc-part-1---data-privacy" class="nav-link active" data-scroll-target="#part-1---data-privacy">Part 1 - Data privacy</a></li>
-  <li><a href="#part-2---predicting-ethnicity" id="toc-part-2---predicting-ethnicity" class="nav-link" data-scroll-target="#part-2---predicting-ethnicity">Part 2 - Predicting ethnicity</a></li>
-  <li><a href="#part-2---stochastic-parrots" id="toc-part-2---stochastic-parrots" class="nav-link" data-scroll-target="#part-2---stochastic-parrots">Part 2 - Stochastic parrots</a></li>
+  <li><a href="#part-2---predicting-ethnicity---data-ethics" id="toc-part-2---predicting-ethnicity---data-ethics" class="nav-link" data-scroll-target="#part-2---predicting-ethnicity---data-ethics">Part 2 - Predicting ethnicity - data ethics</a></li>
+  <li>
+<a href="#part-3---bias" id="toc-part-3---bias" class="nav-link" data-scroll-target="#part-3---bias">Part 3 - Bias</a>
+  <ul class="collapse">
+<li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional">Optional</a></li>
+  </ul>
+</li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/ae/ae-11-dse-bias-privacy.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
@@ -280,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>which data would you collect</p></li>
 <li><p>how would you collect the data</p></li>
 <li><p>how would you keep data private.</p></li>
-</ul></section><section id="part-2---predicting-ethnicity" class="level1"><h1>Part 2 - Predicting ethnicity</h1>
+</ul></section><section id="part-2---predicting-ethnicity---data-ethics" class="level1"><h1>Part 2 - Predicting ethnicity - data ethics</h1>
 <p><strong>Your turn (12 minutes):</strong> Imai and Khanna (2016) built a racial prediction algorithm using a Bayes classifier trained on voter registration records from Florida and the U.S. Census Bureau’s name list.</p>
 <ul>
 <li>The following is the title and the abstract of the paper. Take a minute to read them.</li>
@@ -339,7 +344,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 1   Blake 0.6663199 0.2276731 0.03137626 0.007787957 0.06684285</code></pre>
 </div>
 </div>
-</section><section id="part-2---stochastic-parrots" class="level1"><h1>Part 2 - Stochastic parrots</h1>
+</section><section id="part-3---bias" class="level1"><h1>Part 3 - Bias</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="images/getty.png" class="img-fluid figure-img" width="700"></p>
+</figure>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">5</span>,<span class="fl">4</span>,<span class="fl">3</span>,<span class="fl">2</span>,<span class="fl">3</span>,<span class="fl">4</span>,<span class="fl">7</span><span class="op">)</span> <span class="op">)</span></span>
+<span></span>
+<span><span class="va">data</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span><span class="op">)</span>, bins <span class="op">=</span> <span class="fl">20</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op">(</span>xintercept <span class="op">=</span> <span class="fl">4.22</span> , colour <span class="op">=</span> <span class="st">"red"</span> , size <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op">(</span>xintercept <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">data</span><span class="op">$</span><span class="va">x</span><span class="op">)</span> , color <span class="op">=</span> <span class="st">"blue"</span> , size <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="ae-11-dse-bias-privacy_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li><p>What are your major takeaways from this activity?</p></li>
+<li><p>How does this concept relate to bias in algorithms?</p></li>
+</ul>
+<section id="optional" class="level2"><h2 class="anchored" data-anchor-id="optional">Optional</h2>
+<p>Part 4 - Stochastic parrots</p>
 <p><strong>Your turn (10 minutes):</strong></p>
 <ul>
 <li>Read the following title and abstract.</li>
@@ -349,12 +377,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The past 3 years of work in NLP have been characterized by the development and deployment of ever larger language models, especially for English. BERT, its variants, GPT-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.</p>
 </blockquote>
 <ul>
-<li>Have you used a natural language model before? Describe your use.</li>
-<li>What is meant by “stochastic parrots” in the paper title?</li>
+<li><p>Have you used a natural language model before? Describe your use.</p></li>
+<li><p>What is meant by “stochastic parrots” in the paper title?</p></li>
 </ul>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

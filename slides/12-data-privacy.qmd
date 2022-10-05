@@ -7,17 +7,17 @@ format: revealjs
 
 ## Checklist
 
--- Clone ae-11 data-privacy repo
+-- Clone `ae-11-ethics-privacy`
 
 ## Announcements 
 
 Lab Group Instructions: 
 
--- You can find your groups ______ after class. 
+-- You can find your groups in the `teams` repo after class. 
 
 -- You may only switch groups under extreme circumstances (working with friends does not count)
 
--- View group before Lab 04. This will make it easier for TAs to seat / group you. 
+-- **View group number** before Lab 04. This will make it easier for TAs to seat / group you. 
 
 ## Goals 
 

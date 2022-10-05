@@ -347,7 +347,14 @@
     "href": "ae/ae-11-dse-bias-privacy.html",
     "title": "AE 11: Data science ethics",
     "section": "",
-    "text": "Part 2 - Predicting ethnicity\nYour turn (12 minutes): Imai and Khanna (2016) built a racial prediction algorithm using a Bayes classifier trained on voter registration records from Florida and the U.S. Census Bureau’s name list.\n\nThe following is the title and the abstract of the paper. Take a minute to read them.\n\n\nImproving Ecological Inference by Predicting Individual Ethnicity from Voter Registration Record (Imran and Khan, 2016)\n\n\nIn both political behavior research and voting rights litigation, turnout and vote choice for different racial groups are often inferred using aggregate election results and racial composition. Over the past several decades, many statistical methods have been proposed to address this ecological inference problem. We propose an alternative method to reduce aggregation bias by predicting individual-level ethnicity from voter registration records. Building on the existing methodological literature, we use Bayes’s rule to combine the Census Bureau’s Surname List with various information from geocoded voter registration records. We evaluate the performance of the proposed methodology using approximately nine million voter registration records from Florida, where self-reported ethnicity is available. We find that it is possible to reduce the false positive rate among Black and Latino voters to 6% and 3%, respectively, while maintaining the true positive rate above 80%. Moreover, we use our predictions to estimate turnout by race and find that our estimates yields substantially less amounts of bias and root mean squared error than standard ecological inference estimates. We provide open-source software to implement the proposed methodology. The open-source software is available for implementing the proposed methodology.\n\nThe said “source software” is the wru package: https://github.com/kosukeimai/wru.\n\nThen, if you feel comfortable, install the wru package and try it out using the sample data provided in the package. And if you don’t feel comfortable doing so, take a look at the results below. Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?\n\n\n# install.packages(\"wru\")\n\nlibrary(tidyverse)\nlibrary(wru)\n\npredict_race(voter.file = voters, surname.only = TRUE) %>% \n  select(surname, pred.whi, pred.bla, pred.his, pred.asi, pred.oth)\n\n      surname     pred.whi     pred.bla     pred.his   pred.asi   pred.oth\n1      Khanna 0.0049265455 0.0016079483 0.0023108109 0.88994257 0.10121213\n2        Imai 0.0059040605 0.0007184811 0.0193291824 0.76407641 0.20997186\n3      Rivera 0.0133185684 0.0121164643 0.8680470387 0.07086170 0.03565623\n4     Fifield 0.5122939613 0.0052487193 0.0596200858 0.06003480 0.36280243\n5        Zhou 0.0006977652 0.0006618759 0.0001766502 0.98773098 0.01073272\n6    Ratkovic 0.3845625798 0.0176011903 0.0131533900 0.04793387 0.53674897\n7     Johnson 0.1700395443 0.5164452995 0.0263012602 0.02193102 0.26528287\n8       Lopez 0.0122148735 0.0074083470 0.9026491278 0.03610843 0.04161922\n10 Wantchekon 0.1016771922 0.2873197891 0.3838356390 0.06225610 0.16491128\n9       Morse 0.4688011703 0.1153905281 0.0411994830 0.05237443 0.32223438\n\n\n\nIf you have installed the package, re-run the code, this time to see what the package predicts for your race. Now consider the same questions again: Was the publication of this model ethical? Does the open-source nature of the code affect your answer? Is it ethical to use this software? Does your answer change depending on the intended use?\n\n\nme <- tibble(surname = \"Blake\")\n\npredict_race(voter.file = me, surname.only = TRUE)\n\nWarning: Unknown or uninitialised column: `state`.\n\n\nProceeding with last name predictions...\n\n\nℹ All local files already up-to-date!\nℹ All local files already up-to-date!\n\n\n  surname  pred.whi  pred.bla   pred.his    pred.asi   pred.oth\n1   Blake 0.6663199 0.2276731 0.03137626 0.007787957 0.06684285\n\n\nPart 2 - Stochastic parrots\nYour turn (10 minutes):\n\nRead the following title and abstract.\n\n\nOn the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜 (Bender et. al., 2021)\nThe past 3 years of work in NLP have been characterized by the development and deployment of ever larger language models, especially for English. BERT, its variants, GPT-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.\n\n\nHave you used a natural language model before? Describe your use.\nWhat is meant by “stochastic parrots” in the paper title?"
+    "text": "Consider the following scenario: There appears to be an increase in bicycle accidents around the school before and after class. You have been tasked with collecting data to help protect the health of your peers and improve your community. What data might you collect and how? What responsibility do you have to protect that data?\nSpecifically:\n\nwhich data would you collect\nhow would you collect the data\nhow would you keep data private."
+  },
+  {
+    "objectID": "ae/ae-11-dse-bias-privacy.html#optional",
+    "href": "ae/ae-11-dse-bias-privacy.html#optional",
+    "title": "AE 11: Data science ethics",
+    "section": "Optional",
+    "text": "Optional\nPart 4 - Stochastic parrots\nYour turn (10 minutes):\n\nRead the following title and abstract.\n\n\nOn the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜 (Bender et. al., 2021)\nThe past 3 years of work in NLP have been characterized by the development and deployment of ever larger language models, especially for English. BERT, its variants, GPT-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.\n\n\nHave you used a natural language model before? Describe your use.\nWhat is meant by “stochastic parrots” in the paper title?"
   },
   {
     "objectID": "ae/exam-review.html",
@@ -2034,14 +2041,21 @@
     "href": "slides/12-data-privacy.html#checklist",
     "title": "Data Ethics 2",
     "section": "Checklist",
-    "text": "Checklist\n– Clone ae-11 data-privacy repo"
+    "text": "Checklist\n– Clone ae-11-ethics-privacy"
   },
   {
     "objectID": "slides/12-data-privacy.html#announcements",
     "href": "slides/12-data-privacy.html#announcements",
     "title": "Data Ethics 2",
     "section": "Announcements",
-    "text": "Announcements\nLab Group Instructions:\n– You can find your groups ______ after class.\n– You may only switch groups under extreme circumstances (working with friends does not count)\n– View group before Lab 04. This will make it easier for TAs to seat / group you."
+    "text": "Announcements\nLab Group Instructions:\n– You can find your groups in the teams repo after class.\n– You may only switch groups under extreme circumstances (working with friends does not count)\n– View group number before Lab 04. This will make it easier for TAs to seat / group you."
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#goals",
+    "href": "slides/12-data-privacy.html#goals",
+    "title": "Data Ethics 2",
+    "section": "Goals",
+    "text": "Goals\n\nThink\nData Ethics\nData privacy\nBias"
   },
   {
     "objectID": "slides/12-data-privacy.html#section",
@@ -2072,11 +2086,11 @@
     "text": "Question\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
   },
   {
-    "objectID": "slides/12-data-privacy.html#section-2",
-    "href": "slides/12-data-privacy.html#section-2",
-    "title": "Lecture 12 - Data Ethics 2",
-    "section": "",
-    "text": "Application Exercise 11 - data privacy"
+    "objectID": "slides/12-data-privacy.html#questions-for-you",
+    "href": "slides/12-data-privacy.html#questions-for-you",
+    "title": "Data Ethics 2",
+    "section": "Questions for you",
+    "text": "Questions for you\n\nShould you scrape these data?\nHow do you not violate reasonable expectations of privacy?"
   },
   {
     "objectID": "slides/12-data-privacy.html#intended-use",
@@ -2086,32 +2100,11 @@
     "text": "Intended use\n– Name\n– Age\n– Email\n– Phone Number\n– How long you spend on different content\n– List of all your private messages (date, time, person sent to)\n– Info about your photos (how it was taken, where it was taken (GPS), when it was taken)\n– Browsing history\n\nTargeted ads\nCandidate for a job (Amazon has done this)\nPredict your race to map votes (This is being done)"
   },
   {
-    "objectID": "slides/12-data-privacy.html#questions-for-you",
-    "href": "slides/12-data-privacy.html#questions-for-you",
+    "objectID": "slides/12-data-privacy.html#gettysburg-activity-representative-words-of-word-length",
+    "href": "slides/12-data-privacy.html#gettysburg-activity-representative-words-of-word-length",
     "title": "Data Ethics 2",
-    "section": "Questions for you",
-    "text": "Questions for you\n\nShould you scrape these data?\nHow do you not violate reasonable expectations of privacy?"
-  },
-  {
-    "objectID": "slides/12-data-privacy.html#bias-in-algorithims",
-    "href": "slides/12-data-privacy.html#bias-in-algorithims",
-    "title": "Data Ethics 2",
-    "section": "Bias in algorithims",
-    "text": "Bias in algorithims"
-  },
-  {
-    "objectID": "slides/12-data-privacy.html#gettysburg-activity",
-    "href": "slides/12-data-privacy.html#gettysburg-activity",
-    "title": "Data Ethics 2",
-    "section": "Gettysburg Activity",
-    "text": "Gettysburg Activity"
-  },
-  {
-    "objectID": "slides/12-data-privacy.html#section-3",
-    "href": "slides/12-data-privacy.html#section-3",
-    "title": "Lecture 12 - Data Ethics 2",
-    "section": "",
-    "text": "– You will have 30 seconds to pick 10 words that you think are representative of all words in the speech\nSET UP COUNTDOWN"
+    "section": "Gettysburg Activity: Representative words of word length",
+    "text": "Gettysburg Activity: Representative words of word length\n\n\n\n\n\n\n\n−+\n00:30"
   },
   {
     "objectID": "slides/12-data-privacy.html#question-of-interest",
@@ -2147,26 +2140,5 @@
     "title": "Data Ethics 2",
     "section": "Parting Thoughts",
     "text": "Parting Thoughts\n\nAsk questions\nSlow down\nThink critically\n\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
-    "objectID": "slides/12-data-privacy.html#goals",
-    "href": "slides/12-data-privacy.html#goals",
-    "title": "Data Ethics 2",
-    "section": "Goals",
-    "text": "Goals\n\nThink\nData Ethics\nData privacy\nBias"
-  },
-  {
-    "objectID": "slides/12-data-privacy.html#representative-words-of-word-length",
-    "href": "slides/12-data-privacy.html#representative-words-of-word-length",
-    "title": "Data Ethics 2",
-    "section": "Representative words of word length",
-    "text": "Representative words of word length\n\n\n\n\n−+\n00:30"
-  },
-  {
-    "objectID": "slides/12-data-privacy.html#gettysburg-activity-representative-words-of-word-length",
-    "href": "slides/12-data-privacy.html#gettysburg-activity-representative-words-of-word-length",
-    "title": "Data Ethics 2",
-    "section": "Gettysburg Activity: Representative words of word length",
-    "text": "Gettysburg Activity: Representative words of word length\n\n\n\n\n\n\n\n−+\n00:30"
   }
 ]

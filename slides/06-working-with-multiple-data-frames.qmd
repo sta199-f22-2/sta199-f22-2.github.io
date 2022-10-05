@@ -13,15 +13,15 @@ format: revealjs
 library(countdown)
 ```
 
--- Clone ae-05 
+-- Clone ae-05
 
 -- Watch ae-04 video + turn in ae-04 by Thursday 11:59pm
 
--- Turn in hw1 by Thursday 11:59pm on Gradescope 
+-- Turn in hw1 by Thursday 11:59pm on Gradescope
 
 ## R4DS: Chp 20 - Joins - Sections 20.1 - 20.4
 
---   Any questions from prepare materials?
+-- Any questions from prepare materials?
 
 ```{=html}
 <iframe src="https://app.sli.do/event/42LZs9cfGudq7ajPBjzCCb" width="900" height="600"></iframe>
@@ -30,25 +30,25 @@ library(countdown)
 
 ## Announcements
 
-Videos 
+Videos
 
---   Requesting videos for missed classes
+-- Requesting videos for missed classes
 
-AEs 
+AEs
 
---   Ae: 80% rule + keys posted after deadline 
+-- Ae: 80% rule + keys posted after deadline
 
 Homework + Labs
 
---   Late work policy 
+-- Late work policy
 
---   Drop 1
+-- Drop 1
 
 # Goals
 
 -- Understand join functions
 
--- Join multiple data frames 
+-- Join multiple data frames
 
 ## Joining datasets
 
@@ -56,12 +56,10 @@ Homework + Labs
 
 ## AE-05
 
-Clone ae-05 
+Clone ae-05
 
+## Recap of AE
 
-## Recap of AE 
+-- This is important! Data are messy!
 
---   This is important! Data are messy!
-
---   Think carfully about the join you use 
-
+-- Think carfully about the join you use
