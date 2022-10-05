@@ -23,9 +23,13 @@ Teams work better when members have a common understanding of the team's goals a
 
 Each team member will have some ideas about how a team should operate. These ideas may be very different. This is your opportunity to share your thoughts and ideas to promote optimal team function and prevent misunderstandings in the future.
 
+## Team Name
+
+Discuss with your group a team name to be called. Your GitHub repos will be created for this team name moving forward. Report your team name to your Lab Leader before moving on.
+
 ## Instructions
 
-Discuss each of the items below as a team.
+Discuss each of the items below with all in-person team members.
 
 Have *one person* act as the recorder and type the team's decisions in this document.
 
@@ -33,7 +37,7 @@ Have *one person* act as the recorder and type the team's decisions in this docu
 
 Once the document is complete, the recorder should render, commit, and push the team agreement to GitHub. All team members can refer to this lab document throughout the semester.
 
-## Team expectations
+## Team Agreement 
 
 ### Weekly meetings
 
@@ -55,9 +59,9 @@ Keep in mind your team may want to have time to review the lab before turning it
 
 ### Any other items the team would like to discuss or plan.
 
-## Missing Teammates
+### Missing Teammates
 
-If you are missing teammates for today's lab, it is your responsibility to reach out, say hello, and communicate with them that they must contribute to the above questions before submitting lab-04 to Gradescope.
+If you are missing teammates for today's lab, it is your responsibility to reach out, say hello, and communicate with them that they must contribute to the above and below questions before submitting lab-04 to Gradescope. You can find their email in the teams repo. The link to the teams repo is located on our website on the teaching team tab.
 
 # Resolving merge conflicts
 
@@ -161,7 +165,6 @@ Take turns in completing the exercise, only one member at a time. **Others shoul
 
 # Conveying the right message through visualization
 
-
 ## Packages
 
 We'll use the **tidyverse** package for much of the data wrangling and visualisation.
@@ -172,7 +175,7 @@ library(tidyverse)
 
 Since the exercises for this week are short it's possible not every team member will get to commit and push **during** the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline.
 
-Note: Everyone should intellectually contribute to every question. However, no two teammates should work on the same question at the same time below. 
+Note: Everyone should intellectually contribute to every question. However, no two teammates should work on the same question at the same time below.
 
 ## Data
 
