@@ -973,25 +973,25 @@
     "text": "Why Teams: Rationale\nIn the real world, data scientists and statisticians often work in research teams. It is a skill to be able to communicate and work together on common projects. Thus, the remaining labs + your project will be team based.\nTeams work better when members have a common understanding of the team’s goals and expectations for collaboration. The purpose of this activity is to help your team making a plan for working together during lab and outside of the scheduled lab time.\nEach team member will have some ideas about how a team should operate. These ideas may be very different. This is your opportunity to share your thoughts and ideas to promote optimal team function and prevent misunderstandings in the future."
   },
   {
+    "objectID": "labs/lab-4.html#team-name",
+    "href": "labs/lab-4.html#team-name",
+    "title": "Lab 4 - Merge Conflicts - Ethics",
+    "section": "Team Name",
+    "text": "Team Name\nDiscuss with your group a team name to be called. Your GitHub repos will be created for this team name moving forward. Report your team name to your Lab Leader before moving on."
+  },
+  {
     "objectID": "labs/lab-4.html#instructions",
     "href": "labs/lab-4.html#instructions",
     "title": "Lab 4 - Merge Conflicts - Ethics",
     "section": "Instructions",
-    "text": "Instructions\nDiscuss each of the items below as a team.\nHave one person act as the recorder and type the team’s decisions in this document.\nBe sure the team agrees on an item before it is added to the document.\nOnce the document is complete, the recorder should render, commit, and push the team agreement to GitHub. All team members can refer to this lab document throughout the semester."
+    "text": "Instructions\nDiscuss each of the items below with all in-person team members.\nHave one person act as the recorder and type the team’s decisions in this document.\nBe sure the team agrees on an item before it is added to the document.\nOnce the document is complete, the recorder should render, commit, and push the team agreement to GitHub. All team members can refer to this lab document throughout the semester."
   },
   {
-    "objectID": "labs/lab-4.html#team-expectations",
-    "href": "labs/lab-4.html#team-expectations",
+    "objectID": "labs/lab-4.html#team-agreement",
+    "href": "labs/lab-4.html#team-agreement",
     "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Team expectations",
-    "text": "Team expectations\nWeekly meetings\nIdentify a 1 - 2 hour weekly block outside of lab where the team can meet to work on assignments. All team members should block off this time on their calendar in case the group needs to meet to finish lab or work on the project.\nMeeting “location”\nHow the team will meet to work together (e.g. in-person, Zoom, Facetime, Google Hangouts). Be sure every member is able to access the virtual meeting space, if needed. If you are unable to find a weekly time when the team can meet, briefly outline a plan to work on assignments outside of lab. Otherwise, you can delete this item.\nPrimary method of communication\nThe team’s primary method of communication outside of meetings (e.g. Slack, text messages, etc.)\nHow should someone notify the other members if they are unable to attend lab or a scheduled team meeting?\nBy when should everyone have their portion of the lab completed?\nKeep in mind your team may want to have time to review the lab before turning it in to make sure it is a cohesive write up.\nAny other items the team would like to discuss or plan."
-  },
-  {
-    "objectID": "labs/lab-4.html#missing-teammates",
-    "href": "labs/lab-4.html#missing-teammates",
-    "title": "Lab 4 - Merge Conflicts - Ethics",
-    "section": "Missing Teammates",
-    "text": "Missing Teammates\nIf you are missing teammates for today’s lab, it is your responsibility to reach out, say hello, and communicate with them that they must contribute to the above questions before submitting lab-04 to Gradescope."
+    "section": "Team Agreement",
+    "text": "Team Agreement\nWeekly meetings\nIdentify a 1 - 2 hour weekly block outside of lab where the team can meet to work on assignments. All team members should block off this time on their calendar in case the group needs to meet to finish lab or work on the project.\nMeeting “location”\nHow the team will meet to work together (e.g. in-person, Zoom, Facetime, Google Hangouts). Be sure every member is able to access the virtual meeting space, if needed. If you are unable to find a weekly time when the team can meet, briefly outline a plan to work on assignments outside of lab. Otherwise, you can delete this item.\nPrimary method of communication\nThe team’s primary method of communication outside of meetings (e.g. Slack, text messages, etc.)\nHow should someone notify the other members if they are unable to attend lab or a scheduled team meeting?\nBy when should everyone have their portion of the lab completed?\nKeep in mind your team may want to have time to review the lab before turning it in to make sure it is a cohesive write up.\nAny other items the team would like to discuss or plan.\nMissing Teammates\nIf you are missing teammates for today’s lab, it is your responsibility to reach out, say hello, and communicate with them that they must contribute to the above and below questions before submitting lab-04 to Gradescope. You can find their email in the teams repo. The link to the teams repo is located on our website on the teaching team tab."
   },
   {
     "objectID": "labs/lab-4.html#setup",
