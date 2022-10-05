@@ -2032,42 +2032,42 @@
   {
     "objectID": "slides/12-data-privacy.html#checklist",
     "href": "slides/12-data-privacy.html#checklist",
-    "title": "Lecture 12 - Data Ethics 2",
+    "title": "Data Ethics 2",
     "section": "Checklist",
     "text": "Checklist\n– Clone ae-11 data-privacy repo"
   },
   {
     "objectID": "slides/12-data-privacy.html#announcements",
     "href": "slides/12-data-privacy.html#announcements",
-    "title": "Lecture 12 - Data Ethics 2",
+    "title": "Data Ethics 2",
     "section": "Announcements",
     "text": "Announcements\nLab Group Instructions:\n– You can find your groups ______ after class.\n– You may only switch groups under extreme circumstances (working with friends does not count)\n– View group before Lab 04. This will make it easier for TAs to seat / group you."
   },
   {
     "objectID": "slides/12-data-privacy.html#section",
     "href": "slides/12-data-privacy.html#section",
-    "title": "Lecture 12 - Data Ethics 2",
+    "title": "Data Ethics 2",
     "section": "",
     "text": "Every time we use apps, websites, and devices, our data is being collected and used or sold to others. More importantly, decisions are made by law enforcement, financial institutions, and governments based on data that directly affect the lives of people."
   },
   {
     "objectID": "slides/12-data-privacy.html#warm-up-what-are-you-okay-with",
     "href": "slides/12-data-privacy.html#warm-up-what-are-you-okay-with",
-    "title": "Lecture 12 - Data Ethics 2",
+    "title": "Data Ethics 2",
     "section": "Warm up: What are you okay with?",
     "text": "Warm up: What are you okay with?\n\nName\nAge\nEmail\nPhone Number\nList of every video you watch\nList of every video you comment on\nHow you type: speed, accuracy\nHow long you spend on different content\nList of all your private messages (date, time, person sent to)\nInfo about your photos (how it was taken, where it was taken (GPS), when it was taken)\nBrowsing history"
   },
   {
     "objectID": "slides/12-data-privacy.html#ok-cupid-data-breach",
     "href": "slides/12-data-privacy.html#ok-cupid-data-breach",
-    "title": "Lecture 12 - Data Ethics 2",
+    "title": "Data Ethics 2",
     "section": "OK Cupid data breach",
     "text": "OK Cupid data breach\n– In 2016, researchers published data of 70,000 OkCupid users—including usernames, political leanings, drug usage, and intimate sexual details\n– Researchers didn’t release the real names and pictures of OKCupid users, but their identities could easily be uncovered from the details provided, e.g. usernames\n\nSome may object to the ethics of gathering and releasing this data. However, all the data found in the dataset are or were already publicly available, so releasing this dataset merely presents it in a more useful form.\n\n\nResearchers Emil Kirkegaard and Julius Daugbjerg Bjerrekær"
   },
   {
     "objectID": "slides/12-data-privacy.html#question",
     "href": "slides/12-data-privacy.html#question",
-    "title": "Lecture 12 - Data Ethics 2",
+    "title": "Data Ethics 2",
     "section": "Question",
     "text": "Question\nIn analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don’t violate reasonable expectations of privacy?"
   },
@@ -2081,8 +2081,92 @@
   {
     "objectID": "slides/12-data-privacy.html#intended-use",
     "href": "slides/12-data-privacy.html#intended-use",
-    "title": "Lecture 12 - Data Ethics 2",
+    "title": "Data Ethics 2",
     "section": "Intended use",
-    "text": "Intended use\n– Name – Age – Email – Phone Number – How long you spend on different content – List of all your private messages (date, time, person sent to) – Info about your photos (how it was taken, where it was taken (GPS), when it was taken) – Browsing history\n\nTargeted ads\nCandidate for a job (Amazon has done this)\nPredict your race to map votes (This is being done)\n\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "Intended use\n– Name\n– Age\n– Email\n– Phone Number\n– How long you spend on different content\n– List of all your private messages (date, time, person sent to)\n– Info about your photos (how it was taken, where it was taken (GPS), when it was taken)\n– Browsing history\n\nTargeted ads\nCandidate for a job (Amazon has done this)\nPredict your race to map votes (This is being done)"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#questions-for-you",
+    "href": "slides/12-data-privacy.html#questions-for-you",
+    "title": "Data Ethics 2",
+    "section": "Questions for you",
+    "text": "Questions for you\n\nShould you scrape these data?\nHow do you not violate reasonable expectations of privacy?"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#bias-in-algorithims",
+    "href": "slides/12-data-privacy.html#bias-in-algorithims",
+    "title": "Data Ethics 2",
+    "section": "Bias in algorithims",
+    "text": "Bias in algorithims"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#gettysburg-activity",
+    "href": "slides/12-data-privacy.html#gettysburg-activity",
+    "title": "Data Ethics 2",
+    "section": "Gettysburg Activity",
+    "text": "Gettysburg Activity"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#section-3",
+    "href": "slides/12-data-privacy.html#section-3",
+    "title": "Lecture 12 - Data Ethics 2",
+    "section": "",
+    "text": "– You will have 30 seconds to pick 10 words that you think are representative of all words in the speech\nSET UP COUNTDOWN"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#question-of-interest",
+    "href": "slides/12-data-privacy.html#question-of-interest",
+    "title": "Data Ethics 2",
+    "section": "Question of Interest",
+    "text": "Question of Interest\nWhat is the typical word length in the Gettysburg Address?\n– Using R, calculate the mean word length of your 10 words."
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#population-word-length",
+    "href": "slides/12-data-privacy.html#population-word-length",
+    "title": "Data Ethics 2",
+    "section": "Population Word Length",
+    "text": "Population Word Length\nWrite down the population mean word length\nWrite down the mean of your 10 words\nWere you close? How about the rest of the class?\nAre humans bias? How does this activity relate to bias in algorithms?"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#bias",
+    "href": "slides/12-data-privacy.html#bias",
+    "title": "Data Ethics 2",
+    "section": "Bias",
+    "text": "Bias\nBias is a disproportionate weight in favor of or against an idea or thing\n\nWe all have bias\nBias can be a part of science and research"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#facial-recognition",
+    "href": "slides/12-data-privacy.html#facial-recognition",
+    "title": "Data Ethics 2",
+    "section": "Facial Recognition",
+    "text": "Facial Recognition"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#parting-thoughts",
+    "href": "slides/12-data-privacy.html#parting-thoughts",
+    "title": "Data Ethics 2",
+    "section": "Parting Thoughts",
+    "text": "Parting Thoughts\n\nAsk questions\nSlow down\nThink critically\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#goals",
+    "href": "slides/12-data-privacy.html#goals",
+    "title": "Data Ethics 2",
+    "section": "Goals",
+    "text": "Goals\n\nThink\nData Ethics\nData privacy\nBias"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#representative-words-of-word-length",
+    "href": "slides/12-data-privacy.html#representative-words-of-word-length",
+    "title": "Data Ethics 2",
+    "section": "Representative words of word length",
+    "text": "Representative words of word length\n\n\n\n\n−+\n00:30"
+  },
+  {
+    "objectID": "slides/12-data-privacy.html#gettysburg-activity-representative-words-of-word-length",
+    "href": "slides/12-data-privacy.html#gettysburg-activity-representative-words-of-word-length",
+    "title": "Data Ethics 2",
+    "section": "Gettysburg Activity: Representative words of word length",
+    "text": "Gettysburg Activity: Representative words of word length\n\n\n\n\n\n\n\n−+\n00:30"
   }
 ]

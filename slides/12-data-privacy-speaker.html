@@ -11,7 +11,7 @@
 
   <meta name="author" content="Dr.&nbsp;Elijah Meyer + Konnie Huang">
   <meta name="dcterms.date" content="2022-10-05">
-  <title>STA 199 - Lecture 12 - Data Ethics 2</title>
+  <title>STA 199 - Data Ethics 2</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -314,14 +314,16 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../site_libs/countdown-0.4.0/countdown.css" rel="stylesheet">
+  <script src="../site_libs/countdown-0.4.0/countdown.js"></script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Lecture 12 - Data Ethics 2</h1>
-  <p class="subtitle">Lecture 10</p>
+  <h1 class="title">Data Ethics 2</h1>
+  <p class="subtitle">Lecture 12</p>
   <p class="author">Dr.&nbsp;Elijah Meyer + Konnie Huang</p>
   <p class="institute">Duke University <br> STA 199 - Fall 2022</p>
   <p class="date">October 5, 2022</p>
@@ -337,6 +339,15 @@
 <p>– You can find your groups ______ after class.</p>
 <p>– You may only switch groups under extreme circumstances (working with friends does not count)</p>
 <p>– View group before Lab 04. This will make it easier for TAs to seat / group you.</p>
+</section>
+<section id="goals" class="slide level2">
+<h2>Goals</h2>
+<ul>
+<li class="fragment"><p>Think</p></li>
+<li class="fragment"><p>Data Ethics</p></li>
+<li class="fragment"><p>Data privacy</p></li>
+<li class="fragment"><p>Bias</p></li>
+</ul>
 </section>
 <section>
 <section id="data-privacy" class="title-slide slide level1 center">
@@ -387,17 +398,97 @@
 <h2></h2>
 
 <img data-src="images/10-data-ethics/okcupid-tweet.png" class="r-stretch"></section>
-<section id="section-2" class="slide level2">
-<h2></h2>
-<p>Application Exercise 11 - data privacy</p>
+<section id="questions-for-you" class="slide level2">
+<h2>Questions for you</h2>
+<ul>
+<li class="fragment"><p>Should you scrape these data?</p></li>
+<li class="fragment"><p>How do you not violate reasonable expectations of privacy?</p></li>
+</ul>
+</section></section>
+<section>
+<section id="application-exercise-11---data-privacy" class="title-slide slide level1 center">
+<h1>Application Exercise 11 - data privacy</h1>
+
 </section>
 <section id="intended-use" class="slide level2 smaller">
 <h2>Intended use</h2>
-<p>– Name – Age – Email – Phone Number – How long you spend on different content – List of all your private messages (date, time, person sent to) – Info about your photos (how it was taken, where it was taken (GPS), when it was taken) – Browsing history</p>
+<p>– Name</p>
+<p>– Age</p>
+<p>– Email</p>
+<p>– Phone Number</p>
+<p>– How long you spend on different content</p>
+<p>– List of all your private messages (date, time, person sent to)</p>
+<p>– Info about your photos (how it was taken, where it was taken (GPS), when it was taken)</p>
+<p>– Browsing history</p>
 <ul>
 <li class="fragment">Targeted ads</li>
 <li class="fragment">Candidate for a job (Amazon has done this)</li>
 <li class="fragment">Predict your race to map votes (This is being done)</li>
+</ul>
+</section></section>
+<section>
+<section id="bias-in-algorithims" class="title-slide slide level1 center">
+<h1>Bias in algorithims</h1>
+
+</section>
+<section id="gettysburg-activity-representative-words-of-word-length" class="slide level2">
+<h2>Gettysburg Activity: Representative words of word length</h2>
+<div class="cell">
+
+</div>
+
+<img data-src="images/11-data-privacy/getty.png" class="r-stretch quarto-figure-center"><div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_392e903c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
+<code class="countdown-time"><span class="countdown-digits minutes">00</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">30</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="question-of-interest" class="slide level2">
+<h2>Question of Interest</h2>
+<p>What is the typical word length in the Gettysburg Address?</p>
+<p>– Using R, calculate the mean word length of your 10 words.</p>
+</section>
+<section id="population-word-length" class="slide level2">
+<h2>Population Word Length</h2>
+<p>Write down the population mean word length</p>
+<p>Write down the mean of your 10 words</p>
+<p>Were you close? How about the rest of the class?</p>
+<p>Are humans bias? How does this activity relate to bias in algorithms?</p>
+</section>
+<section id="bias" class="slide level2">
+<h2>Bias</h2>
+<p>Bias is a disproportionate weight in favor of or against an idea or thing</p>
+<ul>
+<li class="fragment"><p>We all have bias</p></li>
+<li class="fragment"><p>Bias can be a part of science and research</p></li>
+</ul>
+</section></section>
+<section>
+<section id="examples" class="title-slide slide level1 center">
+<h1>Examples</h1>
+
+</section>
+<section id="facial-recognition" class="slide level2">
+<h2>Facial Recognition</h2>
+
+<img data-src="images/11-data-privacy/facialanalysis.png" width="500" class="r-stretch quarto-figure-center"></section>
+<section id="section-2" class="slide level2">
+<h2></h2>
+
+<img data-src="images/11-data-privacy/bigdata.png" width="500" class="r-stretch quarto-figure-center"></section>
+<section id="section-3" class="slide level2">
+<h2></h2>
+
+<img data-src="images/11-data-privacy/USAtt.png" width="500" class="r-stretch quarto-figure-center"></section>
+<section id="parting-thoughts" class="slide level2">
+<h2>Parting Thoughts</h2>
+<ul>
+<li class="fragment"><p>Ask questions</p></li>
+<li class="fragment"><p>Slow down</p></li>
+<li class="fragment"><p>Think critically</p></li>
 </ul>
 
 
@@ -619,6 +710,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

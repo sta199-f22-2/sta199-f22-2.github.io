@@ -1,6 +1,6 @@
 ---
-title: "Lecture 12 - Data Ethics 2"
-subtitle: "Lecture 10"
+title: "Data Ethics 2"
+subtitle: "Lecture 12"
 date: "October 5, 2022"
 format: revealjs
 ---
@@ -18,6 +18,16 @@ Lab Group Instructions:
 -- You may only switch groups under extreme circumstances (working with friends does not count)
 
 -- View group before Lab 04. This will make it easier for TAs to seat / group you. 
+
+## Goals 
+
+- Think 
+
+- Data Ethics 
+
+- Data privacy 
+
+- Bias 
 
 # Data Privacy 
 
@@ -56,27 +66,107 @@ Every time we use apps, websites, and devices, our data is being collected and u
 
 In analysis of data that individuals willingly shared publicly on a given platform (e.g. social media), how do you make sure you don't violate reasonable expectations of privacy?
 
+
+
 ## 
 ![](images/10-data-ethics/okcupid-tweet.png){}
 
+## Questions for you 
 
-## 
+- Should you scrape these data? 
 
-Application Exercise 11 - data privacy 
+- How do you not violate reasonable expectations of privacy? 
+
+
+
+# Application Exercise 11 - data privacy 
 
 
 
 ## Intended use {.smaller}
 
 -- Name
+
 -- Age
+
 -- Email
+
 -- Phone Number
+
 -- How long you spend on different content
+
 -- List of all your private messages (date, time, person sent to)
+
 -- Info about your photos (how it was taken, where it was taken (GPS), when it was taken)
+
 -- Browsing history
 
 - Targeted ads 
 - Candidate for a job (Amazon has done this)
 - Predict your race to map votes (This is being done)
+
+# Bias in algorithims 
+
+## Gettysburg Activity: Representative words of word length
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+![](images/11-data-privacy/getty.png){fig-align="center"}
+```{r}
+#| echo: false
+
+countdown(minutes = .5)
+```
+
+## Question of Interest
+
+What is the typical word length in the Gettysburg Address?
+
+-- Using R, calculate the mean word length of your 10 words.
+
+## Population Word Length 
+
+Write down the population mean word length
+
+Write down the mean of your 10 words
+
+Were you close? How about the rest of the class? 
+
+Are humans bias? How does this activity relate to bias in algorithms? 
+
+## Bias 
+
+Bias is a disproportionate weight in favor of or against an idea or thing
+
+- We all have bias 
+
+- Bias can be a part of science and research 
+
+# Examples 
+
+## Facial Recognition 
+
+![](images/11-data-privacy/facialanalysis.png){fig-align="center" width="500"}
+
+
+##
+
+![](images/11-data-privacy/bigdata.png){fig-align="center" width="500"}
+
+##
+
+![](images/11-data-privacy/USAtt.png){fig-align="center" width="500"}
+
+
+
+## Parting Thoughts 
+
+- Ask questions 
+
+- Slow down 
+
+- Think critically 
