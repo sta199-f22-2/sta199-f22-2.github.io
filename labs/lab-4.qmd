@@ -37,7 +37,7 @@ Have *one person* act as the recorder and type the team's decisions in this docu
 
 Once the document is complete, the recorder should render, commit, and push the team agreement to GitHub. All team members can refer to this lab document throughout the semester.
 
-## Team Agreement 
+## Team Agreement
 
 ### Weekly meetings
 
@@ -133,7 +133,7 @@ Take turns in completing the exercise, only one member at a time. **Others shoul
 -   Clear the merge conflict by editing the document to choose the correct/preferred change.
 -   Render.
 -   **Click the Stage checkbox** for all files in your Git tab. Make sure they all have check marks, not filled-in boxes.
--   render and push.
+-   commit and push.
 
 🛑 Make sure the previous role has finished before moving on to the next step.
 
