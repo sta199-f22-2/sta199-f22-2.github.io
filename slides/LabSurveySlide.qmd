@@ -1,0 +1,10 @@
+---
+title: "Lab Extra Credit Survey"
+subtitle: ""
+date: "October 6, 2022"
+format: revealjs
+---
+
+## 
+
+![](images/ECSurvey.png){}
