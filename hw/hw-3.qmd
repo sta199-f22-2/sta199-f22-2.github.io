@@ -5,14 +5,18 @@ editor: visual
 ---
 
 ::: callout-important
-This homework is due Thursday, Oct 13 at 11:59pm ET.
+This homework is due Friday, Oct 14 at 11:59pm ET.
+:::
+
+::: callout-important
+Homeworks are to be turned in individually as usual (different from labs)
 :::
 
 # Getting started
 
--   Go to the [sta199-f22-1](https://github.com/sta199-f22-1) organization on GitHub. Click on the repo with the prefix `hw-03`. It contains the starter documents you need to complete the homework assignment.
+-   Go to the [sta199-f22-2](https://github.com/sta199-f22-2) organization on GitHub. Click on the repo with the prefix `hw-03`. It contains the starter documents you need to complete the homework assignment.
 
--   Clone the repo and start a new project in RStudio. See the [Lab 0 instructions](https://sta199-f22-1.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project) for details on cloning a repo and starting a new R project.
+-   Clone the repo and start a new project in RStudio. See the [Lab 0 instructions](https://sta199-f22-2.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project) for details on cloning a repo and starting a new R project.
 
 ## Workflow + formatting
 
