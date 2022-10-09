@@ -71,8 +71,9 @@ predict_race(voter.file = me, surname.only = TRUE)
 ![](images/getty.png){fig-align="center" width="700"}
 
 ```{r}
+#| eval: false
 library(tidyverse)
-data <- tibble(x = c(3,4,5,4,3,2,3,4,7) )
+data <- tibble(x = c(7,6,6,9,8,4.3,6,7,5.1,7,6.1,6.6,4,4.4,2,5.6,6.5,4.8,10,5,5,7,4.4,6.8) )
 
 data |>
   ggplot() + 
@@ -84,10 +85,14 @@ data |>
 
 ```
 
+
 - What are your major takeaways from this activity?
+
+*Class Answers* - We were bias when sampling.... even if we tried not to be. We did not take a random sample.
 
 - How does this concept relate to bias in algorithms? 
 
+*Class Answers* - Bias can creep into how the models are developed / the data used with the models. We need to think critically and ask questions throughout the research process to try and be as objective as possible.
 
 ## Optional 
 
