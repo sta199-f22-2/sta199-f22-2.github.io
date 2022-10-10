@@ -1,0 +1,176 @@
+---
+title: "Lab - Project Proposal"
+categories: "Lab"
+execute:
+  eval: true
+---
+
+::: callout-important
+This lab is due October 20th at 11:59pm.
+:::
+
+# Learning Goals
+
+-   Collaborate with your team to outline your project
+-   Think critically and craft questions that **can be answered** from your data
+
+# Introduction 
+
+*Pick a dataset and do something with it*. That is your final project.
+
+The final project for this class will consist of analysis on a dataset of your own choosing. The dataset may already exist, you may collect your own data by scraping the web.
+
+Choose the data based on your group’s interests. The goal of this project is for you to demonstrate proficiency in the techniques we have covered in this class (and beyond, if you like!) and apply them to a dataset to analyze it in a meaningful way
+
+# Data Sources 
+
+In order for you to have the greatest chance of success with this project it is important that you choose a manageable dataset. This means that the data should be readily accessible and large enough that multiple relationships can be explored. Your dataset must have at least 500 observations and at least ten variables (or has been approved by Prof. Tackett). The dataset should include a rich mix of categorical, discrete numeric, and continuous numeric data.
+
+If you are using a dataset that comes in a format that we haven’t encountered in class (for instance, a .DAT file), make sure that you are able to load it into RStudio as this can be tricky depending on the source. If you are having trouble, ask for help before it is too late.
+
+## Data sets that can not be used
+
+-- Data sets that have been used for class examples or assignments.
+
+-- Data sets from Kaggle.
+
+-- Data sets analyzed in another course.
+
+
+There will be limits on the number of groups that can use a given data set, so I encourage you to be creative!
+
+Some resources that may be helpful:
+
+-- [R Data Sources for Regression Analysis](https://rfun.library.duke.edu/blog/data-sources-for-regression-analysis/)
+
+-- [FiveThirtyEight](https://data.fivethirtyeight.com/)
+
+-- [TidyTuesday](https://github.com/rfordatascience/tidytuesday)
+
+Additions:
+
+-- [World Health Organization](https://www.who.int/data/gho/)
+
+-- [The National Bureau of Economic Research](https://www.nber.org/research/data?page=1&perPage=50)
+
+-- [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
+
+-- [General Social Survey](https://gss.norc.org/)
+
+-- [United Nations Data](http://data.un.org/)
+
+-- [United Nations Statistics Division](https://unstats.un.org/UNSDWebsite/)
+
+-- [U.K. Data](https://www.data.gov.uk/)
+
+-- [U.S. Data](https://data.gov/)
+
+-- [U.S. Census Data](https://www.census.gov/data.html)
+
+-- [European Statistics](https://ec.europa.eu/eurostat/)
+
+-- [Statistics Canada](https://www.statcan.gc.ca/en/start)
+
+-- [Pew Research](https://www.pewresearch.org/download-datasets/)
+
+-- [UNICEF](https://data.unicef.org/)
+
+-- [CDC](https://www.cdc.gov/datastatistics/index.html)
+
+-- [World Bank](https://datacatalog.worldbank.org/home)
+
+-- [Election Studies](https://electionstudies.org//)
+
+All analyses must be done in RStudio, and your final written report and analysis must be reproducible. This means that you must create a Quarto document attached to a GitHub repository that will create your written report exactly upon rendering.
+
+# Project proposal
+
+There are two main purposes of the project proposal:
+
+-- To help you think about the project early, so you can get a head start on finding data, reading relevant literature, thinking about the questions you wish to answer, etc.
+
+-- To ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will help you be successful for this project.
+
+Choose three substantially different datasets you are interested in analyzing. For each, identify the components below.
+
+Include the following in the proposal: 
+
+## Introduction and Data
+
+(a) **For each data set**, include the following:
+
+-- Identify the source of the data,
+
+-- When and how it was originally collected (by the original data curator, not necessarily how you found the data)
+
+-- A brief description of the observations
+
+## Research question
+
+Your research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following: 
+
+- Target population. 
+
+- Is the question origional? 
+
+- Can the question be answered?
+
+**Example of a poorly worded research question** 
+
+**Example of a well crafted research question** 
+
+(b) **For each data set, include the following**
+
+-- Describe the research topic along with a concise statement of the research question and hypotheses.
+
+-- Identify the types of variables in your research question. Categorical? Quantitative? 
+
+## Data set
+
+(c) **For each data set, include the following** 
+
+-- Use the `glimpse` function to provide a glimpse of the data set.
+
+-- Place the file containing your data in the data folder of the project repo
+
+### Notes
+
+-- Project proposals should have no more than one page of text. (not including the output from glimpse).
+
+-- You must use one of the data sets in the proposal for the final project, unless instructed otherwise when given feedback. 
+
+# Submission
+
+Once you are finished with the lab, you will your final PDF document to Gradescope.
+
+::: callout-warning
+Before you wrap up the assignment, make sure all documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to render and push changes.
+
+You must turn in a PDF file to the Gradescope page by the submission deadline to be considered "on time".
+
+Make sure your data are tidy! That is, your code should not be running off the pages and spaced properly. See: https://style.tidyverse.org/ggplot2.html
+:::
+
+To submit your assignment:
+
+-   Go to <http://www.gradescope.com> and click *Log in* in the top right corner.
+-   Click *School Credentials* $\rightarrow$ *Duke NetID* and log in using your NetID credentials.
+-   Click on your *STA 199* course.
+-   Click on the assignment, and you'll be prompted to submit it.
+-   Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be "checked"). *If you do not do this, you will be subject to lose points on the assignment.*
+
+# Grading
+
+| Component             | Points |
+|:----------------------|:-------|
+| Introduction/data        | 2     |
+| Research question                  | 2      |
+| Data sets                 | 1      |
+| **Total**             | **5** |
+
+
+
+
+
+
+

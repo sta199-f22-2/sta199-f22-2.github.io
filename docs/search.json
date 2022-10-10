@@ -2245,5 +2245,40 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "labs/lab-project-proposal.html",
+    "href": "labs/lab-project-proposal.html",
+    "title": "Lab - Project Proposal",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due October 20th at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-project-proposal.html#data-sets-that-can-not-be-used",
+    "href": "labs/lab-project-proposal.html#data-sets-that-can-not-be-used",
+    "title": "Lab - Project Proposal",
+    "section": "Data sets that can not be used",
+    "text": "Data sets that can not be used\n– Data sets that have been used for class examples or assignments.\n– Data sets from Kaggle.\n– Data sets analyzed in another course.\nThere will be limits on the number of groups that can use a given data set, so I encourage you to be creative!\nSome resources that may be helpful:\n– R Data Sources for Regression Analysis\n– FiveThirtyEight\n– TidyTuesday\nAdditions:\n– World Health Organization\n– The National Bureau of Economic Research\n– International Monetary Fund\n– General Social Survey\n– United Nations Data\n– United Nations Statistics Division\n– U.K. Data\n– U.S. Data\n– U.S. Census Data\n– European Statistics\n– Statistics Canada\n– Pew Research\n– UNICEF\n– CDC\n– World Bank\n– Election Studies\nAll analyses must be done in RStudio, and your final written report and analysis must be reproducible. This means that you must create a Quarto document attached to a GitHub repository that will create your written report exactly upon rendering."
+  },
+  {
+    "objectID": "labs/lab-project-proposal.html#introduction-and-data",
+    "href": "labs/lab-project-proposal.html#introduction-and-data",
+    "title": "Lab - Project Proposal",
+    "section": "Introduction and Data",
+    "text": "Introduction and Data\n\nFor each data set, include the following:\n\n– Identify the source of the data,\n– When and how it was originally collected (by the original data curator, not necessarily how you found the data)\n– A brief description of the observations"
+  },
+  {
+    "objectID": "labs/lab-project-proposal.html#research-question",
+    "href": "labs/lab-project-proposal.html#research-question",
+    "title": "Lab - Project Proposal",
+    "section": "Research question",
+    "text": "Research question\nYour research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:\n\nTarget population.\nIs the question origional?\nCan the question be answered?\n\nExample of a poorly worded research question\nExample of a well crafted research question\n\nFor each data set, include the following\n\n– Describe the research topic along with a concise statement of the research question and hypotheses.\n– Identify the types of variables in your research question. Categorical? Quantitative?"
+  },
+  {
+    "objectID": "labs/lab-project-proposal.html#data-set",
+    "href": "labs/lab-project-proposal.html#data-set",
+    "title": "Lab - Project Proposal",
+    "section": "Data set",
+    "text": "Data set\n\nFor each data set, include the following\n\n– Use the glimpse function to provide a glimpse of the data set.\n– Place the file containing your data in the data folder of the project repo\n\nNotes\n– Project proposals should have no more than one page of text. (not including the output from glimpse).\n– You must use one of the data sets in the proposal for the final project, unless instructed otherwise when given feedback."
   }
 ]
