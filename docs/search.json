@@ -1215,21 +1215,21 @@
     "href": "labs/lab-project-proposal.html#introduction-and-data",
     "title": "Lab - Project Proposal",
     "section": "Introduction and Data",
-    "text": "Introduction and Data\n\nFor each data set, include the following:\n\n– Identify the source of the data,\n– When and how it was originally collected (by the original data curator, not necessarily how you found the data)\n– A brief description of the observations"
+    "text": "Introduction and Data\n(a) Choose three substantially different data sets you are interested in analyzing. You must scrape at least 1 data set for your project proposal. For each, identify the components below.\nFor each data set, include the following:\n– Identify the source of the data,\n– When and how it was originally collected (by the original data curator, not necessarily how you found the data)\n– A brief description of the observations"
   },
   {
     "objectID": "labs/lab-project-proposal.html#research-question",
     "href": "labs/lab-project-proposal.html#research-question",
     "title": "Lab - Project Proposal",
     "section": "Research question",
-    "text": "Research question\nYour research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:\n\nTarget population.\nIs the question origional?\nCan the question be answered?\n\nExample of a poorly worded research question\nExample of a well crafted research question\n\nFor each data set, include the following\n\n– Describe the research topic along with a concise statement of the research question and hypotheses.\n– Identify the types of variables in your research question. Categorical? Quantitative?"
+    "text": "Research question\n(b) Your research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:\n\nTarget population.\nIs the question original?\nCan the question be answered?\n\nFor each data set, include the following\n– A well thought out formulated research question. You may include more than one research question if you want to receive feedback on different ideas for your project. However, 1 per data set is required.\n– Describe the research topic along with a concise statement of your hypotheses.\n– Identify the types of variables in your research question. Categorical? Quantitative?"
   },
   {
     "objectID": "labs/lab-project-proposal.html#data-set",
     "href": "labs/lab-project-proposal.html#data-set",
     "title": "Lab - Project Proposal",
     "section": "Data set",
-    "text": "Data set\n\nFor each data set, include the following\n\n– Use the glimpse function to provide a glimpse of the data set.\n– Place the file containing your data in the data folder of the project repo\n\nNotes\n– Project proposals should have no more than one page of text. (not including the output from glimpse).\n– You must use one of the data sets in the proposal for the final project, unless instructed otherwise when given feedback."
+    "text": "Data set\n(c) For each data set, include the following\n– Use the glimpse function to provide a glimpse of the data set.\n– Place the file containing your data in the data folder of the project repo\n\nNotes\n– It is critical to check feedback on your project proposal. Even if you earn a 10, it may not mean that your proposal is perfect.\n– You must use one of the data sets in the proposal for the final project, unless instructed otherwise when given feedback."
   },
   {
     "objectID": "prepare/08-31.html",

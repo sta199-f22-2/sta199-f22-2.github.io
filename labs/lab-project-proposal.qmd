@@ -14,19 +14,19 @@ This lab is due October 20th at 11:59pm.
 -   Collaborate with your team to outline your project
 -   Think critically and craft questions that **can be answered** from your data
 
-# Introduction 
+# Introduction
 
-*Pick a dataset and do something with it*. That is your final project.
+*Pick a data set and do something with it*. That is your final project.
 
-The final project for this class will consist of analysis on a dataset of your own choosing. The dataset may already exist, you may collect your own data by scraping the web.
+The final project for this class will consist of analysis on a data set of your own choosing. The data set may already exist, or you may collect your own data by scraping the web.
 
-Choose the data based on your group’s interests. The goal of this project is for you to demonstrate proficiency in the techniques we have covered in this class (and beyond, if you like!) and apply them to a dataset to analyze it in a meaningful way
+Choose the data based on your group's interests. The goal of this project is for you to demonstrate proficiency in the techniques we have covered, and will be covering in this class (and beyond, if you like!), and apply them to a data set to analyze it in a meaningful way
 
-# Data Sources 
+# Data Sources
 
-In order for you to have the greatest chance of success with this project it is important that you choose a manageable dataset. This means that the data should be readily accessible and large enough that multiple relationships can be explored. Your dataset must have at least 500 observations and at least ten variables (or has been approved by Prof. Tackett). The dataset should include a rich mix of categorical, discrete numeric, and continuous numeric data.
+In order for you to have the greatest chance of success with this project it is important that you choose a manageable data set. This means that the data should be readily accessible and large enough that multiple relationships can be explored. Your data set must have at least 500 observations and at least eight variables (or has been approved by your instructor). The data set should include a rich mix of categorical, discrete numeric, and continuous numeric data.
 
-If you are using a dataset that comes in a format that we haven’t encountered in class (for instance, a .DAT file), make sure that you are able to load it into RStudio as this can be tricky depending on the source. If you are having trouble, ask for help before it is too late.
+If you are using a data set that comes in a format that we haven't encountered in class (for instance, a .DAT file), make sure that you are able to load it into RStudio as this can be tricky depending on the source. If you are having trouble, ask for help before it is too late.
 
 ## Data sets that can not be used
 
@@ -35,7 +35,6 @@ If you are using a dataset that comes in a format that we haven’t encountered 
 -- Data sets from Kaggle.
 
 -- Data sets analyzed in another course.
-
 
 There will be limits on the number of groups that can use a given data set, so I encourage you to be creative!
 
@@ -83,7 +82,6 @@ Additions:
 
 All analyses must be done in RStudio, and your final written report and analysis must be reproducible. This means that you must create a Quarto document attached to a GitHub repository that will create your written report exactly upon rendering.
 
-
 # Project proposal
 
 There are two main purposes of the project proposal:
@@ -92,13 +90,13 @@ There are two main purposes of the project proposal:
 
 -- To ensure that the data you wish to analyze, methods you plan to use, and the scope of your analysis are feasible and will help you be successful for this project.
 
-Choose three substantially different data sets you are interested in analyzing. You *must scrape at least 1 data set for your project proposal*.  For each, identify the components below.
-
-Include the following in the proposal: 
+Include the following in the proposal:
 
 ## Introduction and Data
 
-(a) **For each data set**, include the following:
+\(a\) Choose three substantially different data sets you are interested in analyzing. You *must scrape at least 1 data set for your project proposal*. For each, identify the components below.
+
+**For each data set**, include the following:
 
 -- Identify the source of the data,
 
@@ -108,27 +106,25 @@ Include the following in the proposal:
 
 ## Research question
 
-Your research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following: 
+\(b\) Your research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:
 
-- Target population. 
+-   Target population.
 
-- Is the question origional? 
+-   Is the question original?
 
-- Can the question be answered?
+-   Can the question be answered?
 
-**Example of a poorly worded research question** 
+**For each data set, include the following**
 
-**Example of a well crafted research question** 
+-- A well thought out formulated research question. You may include more than one research question if you want to receive feedback on different ideas for your project. However, 1 per data set is required.
 
-(b) **For each data set, include the following**
+-- Describe the research topic along with a concise statement of your hypotheses.
 
--- Describe the research topic along with a concise statement of the research question and hypotheses.
-
--- Identify the types of variables in your research question. Categorical? Quantitative? 
+-- Identify the types of variables in your research question. Categorical? Quantitative?
 
 ## Data set
 
-(c) **For each data set, include the following** 
+\(c\) **For each data set, include the following**
 
 -- Use the `glimpse` function to provide a glimpse of the data set.
 
@@ -136,9 +132,9 @@ Your research question should contain at least three variables, and should be a 
 
 ### Notes
 
--- Project proposals should have no more than one page of text. (not including the output from glimpse).
+-- It is critical to check feedback on your project proposal. Even if you earn a 10, it may not mean that your proposal is perfect.
 
--- You must use one of the data sets in the proposal for the final project, unless instructed otherwise when given feedback. 
+-- You must use one of the data sets in the proposal for the final project, unless instructed otherwise when given feedback.
 
 # Submission
 
@@ -162,16 +158,10 @@ To submit your assignment:
 
 # Grading
 
-| Component             | Points |
-|:----------------------|:-------|
-| Introduction/data        | 2     |
-| Research question                  | 2      |
-| Data sets                 | 1      |
-| **Total**             | **5** |
-
-
-
-
-
-
-
+| Component               | Points |
+|:------------------------|:-------|
+| Introduction/data       | 3      |
+| Research question       | 3      |
+| Data sets               | 3      |
+| Workflow and Formatting | 1      |
+| **Total**               | **10** |
