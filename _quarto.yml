@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: docs
-  resouces:
+  resources:
     - sta199-f22-2-syllabus.pdf
 
 website:
@@ -13,7 +13,7 @@ website:
   repo-url: https://github.com/sta199-f22-2/sta199-f22-2.github.io/
   repo-actions: [edit, issue]
 
-  opengraph: true
+  open-graph: true
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
