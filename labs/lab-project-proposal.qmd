@@ -116,7 +116,7 @@ Include the following in the proposal:
 
 **For each data set, include the following**
 
--- A well thought out formulated research question. You may include more than one research question if you want to receive feedback on different ideas for your project. However, 1 per data set is required.
+-- A well thought out formulated research question. You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.
 
 -- Describe the research topic along with a concise statement of your hypotheses.
 
