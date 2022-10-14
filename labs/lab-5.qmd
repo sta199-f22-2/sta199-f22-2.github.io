@@ -54,7 +54,7 @@ If you haven't yet done so, now is a good time to render, commit, and push. Make
 
 In a computer store, 30% of the computers in stock are laptops and 70% are desktops.  Five percent of the laptops are on sale, while 10% of the desktops are on sale. 
 
-(a) Using the code below, create a hypothetical two-way table to represent this situation. Assume the total number of computers is 1000. 
+(a) Fill in the code below to create a hypothetical two-way table to represent this situation. Assume the total number of computers is 1000. 
 
 
 ```{r}
@@ -76,7 +76,7 @@ data |>
 
 (c) In your own words, explain what this probability means. 
 
-- Problems adapted from Mind on Statistics, 5th Ed. By Utts and Heckard
+- *Problems adapted from Mind on Statistics, 5th Ed. By Utts and Heckard*
 
 ::: render-commit-push
 If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
@@ -92,13 +92,9 @@ Bike sharing systems are new generation of traditional bike rentals where whole 
 
 
 ```{r}
-bike <- read_csv("labs/data/bike.csv")
-
-month <- c("11", "9" , "6" , "7")
-
-bike <- bike |>
-  mutate(mnth = as.factor(mnth)) |>
-  filter(mnth %in% month)
+#| message: false
+#| warning: false
+bike <- read_csv("data/bike.csv")
 ```
 
 ```{r}
@@ -139,11 +135,12 @@ Please watch the following video on Simpson's Paradox [here](https://www.youtube
 (c) In your own words, summarize Simpson's Paradox in 2-3 sentences. 
 
 
-(d) Compare and contrast your findings from part a and part b. What's different? 
+(d) Compare and contrast your findings from part (a) and part (b). What's different? 
 
 
 (e) Think critically about your answer to part d. What other context from this study could be creating this paradox? That is, identify a potential confounding variable in this study. Be sure to justify how your example could be a potential confounding variable by relating it back to both bike rentals and temperature. 
 
+- *Data subset from Progress in Artificial Intelligence, 2013*.
 # Submission
 
 Once you are finished with the lab, you will your final PDF document to Gradescope.
