@@ -1,0 +1,47 @@
+---
+title: "Lab 5 - Probability and Simpson's Paradox"
+categories: "Lab"
+execute:
+  eval: true
+---
+
+::: callout-important
+This lab is due October 24th at 11:59pm.
+:::
+
+# Learning Goals
+
+-- Calculate single event, conditional, and "and" probabilities
+
+-- Interpret probabilities in the context of the problem 
+
+-- Display a fundemental understanding of Simpson's Paradox 
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+heart_disease <- heart_disease %>%
+  mutate(
+    high_risk_names = if_else(high_risk == "1", "High risk", "Not high risk"),
+    education_names = case_when(
+      education == "1" ~ "Some high school",
+      education == "2" ~ "High school or GED",
+      education == "3" ~ "Some college or vocational school",
+      education == "4" ~ "College"
+    ),
+    education_names = fct_relevel(education_names, "Some high school", "High school or GED", "Some college or vocational school", "College")
+  )
+```
+
+
+
+## Exercise 2 
+
+
+
+
+
+
