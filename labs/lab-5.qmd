@@ -22,23 +22,69 @@ library(tidyverse)
 ```
 
 
+## Exercise 1 - Probability and You 
+
+We use probabilities all the time when making decisions. Below, in 3-4 sentences, provide at least *two* real world examples of when you use probability to make decisions in your every day life. Think critically. Be creative. 
+
+(a)
+
+## Exercise 2 - Risk of coronary heart disease
+
+This data set is from an ongoing cardiovascular study on residents of the town of Framingham, Massachusetts. We want to examine the relationship between various health characteristics and the risk of having heart disease. Use the following data set to answer the questions below. 
+
+Show your work by writing your answer as a fraction to potentially receive partial credit. For example, if your numerator is the combination of two values, show the addition to obtain these values. Example: (1+4) / 10 = 0.4.
+
+![](images/lab-5/diseasevseducation.png)
+
+(a) What is the probability of a random individual being high risk for cardiovascular disease? 
+
+(b) What is the probability of a random individual having some high school or GED education and not being high risk for cardiovascular disease? 
+
+(c) What is the probability that a random individual who is already high risk for cardiovascular disease has a college education? 
+
+(d) What is the probability that a random individual is at high risk for cardiovascular disease or has some college or vocational education? 
+
+::: render-commit-push
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+
+<br>
+:::
+
+## Exercise 3 - Computer store 
+
+In a computer store, 30% of the computers in stock are laptops and 70% are desktops.  Five percent of the laptops are on sale, while 10% of the desktops are on sale. 
+
+(a) Using the code below, create a hypothetical two-way table to represent this situation. Assume the total number of computers is 1000. 
+
+
 ```{r}
-heart_disease <- heart_disease %>%
-  mutate(
-    high_risk_names = if_else(high_risk == "1", "High risk", "Not high risk"),
-    education_names = case_when(
-      education == "1" ~ "Some high school",
-      education == "2" ~ "High school or GED",
-      education == "3" ~ "Some college or vocational school",
-      education == "4" ~ "College"
-    ),
-    education_names = fct_relevel(education_names, "Some high school", "High school or GED", "Some college or vocational school", "College")
+#| eval: false
+data <- tibble( 
+  Type = c(),
+  Sale = c(),
+  values = ()
   )
+
+data |>
+  pivot_wider( 
+    names_from = ...,
+    values_from = ....)
 ```
 
 
+(b) Calculate the probability of that a randomly selected computer will be a desktop, given that the computer is on sale.  
 
-## Exercise 2 
+(c) In your own words, explain what this probability means. 
+
+- Problems adapted from Mind on Statistics, 5th Ed. By Utts and Heckard
+
+::: render-commit-push
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+
+<br>
+:::
+
+## Exercise 4 - Bike rentals
 
 Bike sharing systems are new generation of traditional bike rentals where whole process from membership, rental and return back has become automatic. You are tasked to investigate the relationship between the temperature outside and the number of bikes rented in the Washington DC area between the years 2011 and 2022. You will be investigating data for the months June, July, September, and November. 
 
@@ -97,4 +143,41 @@ Please watch the following video on Simpson's Paradox [here](https://www.youtube
 
 
 (e) Think critically about your answer to part d. What other context from this study could be creating this paradox? That is, identify a potential confounding variable in this study. Be sure to justify how your example could be a potential confounding variable by relating it back to both bike rentals and temperature. 
+
+# Submission
+
+Once you are finished with the lab, you will your final PDF document to Gradescope.
+
+::: callout-warning
+Before you wrap up the assignment, make sure all documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to render and push changes.
+
+You must turn in a PDF file to the Gradescope page by the submission deadline to be considered "on time".
+
+Make sure your data are tidy! That is, your code should not be running off the pages and spaced properly. See: https://style.tidyverse.org/ggplot2.html
+:::
+
+To submit your assignment:
+
+-   Go to <http://www.gradescope.com> and click *Log in* in the top right corner.
+-   Click *School Credentials* $\rightarrow$ *Duke NetID* and log in using your NetID credentials.
+-   Click on your *STA 199* course.
+-   Click on the assignment, and you'll be prompted to submit it.
+-   Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be "checked"). *If you do not do this, you will be subject to lose points on the assignment.*
+-   Select the first page of your .pdf submission to be associated with the *"Workflow & formatting"* question.
+
+# Grading
+
+| Component             | Points |
+|:----------------------|:-------|
+| Ex 1                  | 4      |
+| Ex 2                  | 12      |
+| Ex 3                  | 15     |
+| Ex 4                  | 14      |
+| Workflow & formatting | 5      |
+| **Total**             | **50** |
+
+::: callout-note
+The "Workflow & formatting" component assesses the reproducible workflow. This includes having at least 3 informative render messages, labeling the code chunks, and having readable code that does not exceed 80 characters, i.e., we can read all your code in the rendered PDF.
+:::
+
 
