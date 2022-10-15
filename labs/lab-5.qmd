@@ -18,6 +18,7 @@ This lab is due October 24th at 11:59pm.
 -- Display a fundemental understanding of Simpson's Paradox 
 
 ```{r}
+#| message: false
 library(tidyverse)
 ```
 
@@ -99,34 +100,11 @@ bike <- read_csv("data/bike.csv")
 
 ```{r}
 
-bike |>
-  ggplot(aes(y = cnt, x = temp)) +
-  geom_point() + 
-  geom_smooth(method = "lm" , se = FALSE) + 
-  labs(
-    title = "Relationsip Between Bikes Rented and Temperatue" , 
-    subtitle = "Washington DC 2011-2012", 
-    x = "Temperature" , 
-    y = "Bikes Rented"
-  )
-
 ```
 
 (b) Another researcher suggests to look at the relationship between bikes rented and temperature by each of the four months of interest. Recreate your plot in part a, and color the points by month. Include a straight line for each of the four months to help discuss each month's relationship between bikes rented and temperature. In 3-4 sentences, summarize your findings. 
 
 ```{r}
-bike |>
-  mutate(mnth = as.factor(mnth)) |>
-  ggplot(aes(y = cnt, x = temp, color = mnth)) +
-  geom_point() + 
-  geom_smooth(method = "lm" , se = FALSE) + 
-    labs(
-    title = "Relationsip Between Bikes Rented and Temperatue By Month" , 
-    subtitle = "Washington DC 2011-2012", 
-    x = "Temperature" , 
-    y = "Bikes Rented",
-    color = "Month"
-  )
 
 ```
 
@@ -141,6 +119,7 @@ Please watch the following video on Simpson's Paradox [here](https://www.youtube
 (e) Think critically about your answer to part d. What other context from this study could be creating this paradox? That is, identify a potential confounding variable in this study. Be sure to justify how your example could be a potential confounding variable by relating it back to both bike rentals and temperature. 
 
 - *Data subset from Progress in Artificial Intelligence, 2013*.
+
 # Submission
 
 Once you are finished with the lab, you will your final PDF document to Gradescope.

@@ -258,6 +258,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#exercise-4---bike-rentals" id="toc-exercise-4---bike-rentals" class="nav-link" data-scroll-target="#exercise-4---bike-rentals">Exercise 4 - Bike rentals</a></li>
   </ul>
 </li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/labs/lab-5.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -297,16 +298,6 @@ Important
 <p>– Display a fundemental understanding of Simpson’s Paradox</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.3.6     ✔ purrr   0.3.4
-✔ tibble  3.1.8     ✔ dplyr   1.0.9
-✔ tidyr   1.2.0     ✔ stringr 1.4.1
-✔ readr   2.1.2     ✔ forcats 0.5.2
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()</code></pre>
-</div>
 </div>
 <section id="exercise-1---probability-and-you" class="level2"><h2 class="anchored" data-anchor-id="exercise-1---probability-and-you">Exercise 1 - Probability and You</h2>
 <p>We use probabilities all the time when making decisions. Below, in 3-4 sentences, provide at least <em>two</em> real world examples of when you use probability to make decisions in your every day life. Think critically. Be creative.</p>
@@ -332,16 +323,16 @@ Important
 <li>Fill in the code below to create a hypothetical two-way table to represent this situation. Assume the total number of computers is 1000.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>( </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Type =</span> <span class="fu">c</span>(),</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sale =</span> <span class="fu">c</span>(),</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">values =</span> ()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>( </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> ...,</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> ....)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>( </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Type =</span> <span class="fu">c</span>(),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sale =</span> <span class="fu">c</span>(),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">values =</span> ()</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>( </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> ...,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> ....)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="a">
 <li><p>Calculate the probability of that a randomly selected computer will be a desktop, given that the computer is on sale.</p></li>
@@ -360,48 +351,16 @@ Important
 <li>Read in the data. Then, create a scatter plot that investigates the relationship between the number of bikes rented and the temperature outside. Include a straight line of best fit to help discuss the discovered relationship. Summarize your findings in 2-3 sentences.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bike</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/bike.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bike</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/bike.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bike</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">cnt</span>, x <span class="op">=</span> <span class="va">temp</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span> , se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Relationsip Between Bikes Rented and Temperatue"</span> , </span>
-<span>    subtitle <span class="op">=</span> <span class="st">"Washington DC 2011-2012"</span>, </span>
-<span>    x <span class="op">=</span> <span class="st">"Temperature"</span> , </span>
-<span>    y <span class="op">=</span> <span class="st">"Bikes Rented"</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="lab-5_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
-</div>
+
 </div>
 <ol start="2" type="a">
 <li>Another researcher suggests to look at the relationship between bikes rented and temperature by each of the four months of interest. Recreate your plot in part a, and color the points by month. Include a straight line for each of the four months to help discuss each month’s relationship between bikes rented and temperature. In 3-4 sentences, summarize your findings.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">bike</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>mnth <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">as.factor</a></span><span class="op">(</span><span class="va">mnth</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y <span class="op">=</span> <span class="va">cnt</span>, x <span class="op">=</span> <span class="va">temp</span>, color <span class="op">=</span> <span class="va">mnth</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html">geom_smooth</a></span><span class="op">(</span>method <span class="op">=</span> <span class="st">"lm"</span> , se <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span> </span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Relationsip Between Bikes Rented and Temperatue By Month"</span> , </span>
-<span>    subtitle <span class="op">=</span> <span class="st">"Washington DC 2011-2012"</span>, </span>
-<span>    x <span class="op">=</span> <span class="st">"Temperature"</span> , </span>
-<span>    y <span class="op">=</span> <span class="st">"Bikes Rented"</span>,</span>
-<span>    color <span class="op">=</span> <span class="st">"Month"</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="lab-5_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
-</div>
+
 </div>
 <p>Please watch the following video on Simpson’s Paradox <a href="https://www.youtube.com/watch?v=ebEkn-BiW5k">here</a>. After you do, please answer the following questions.</p>
 <ol start="3" type="a">
@@ -411,8 +370,8 @@ Important
 </ol>
 <ul>
 <li>
-<em>Data subset from Progress in Artificial Intelligence, 2013</em>. # Submission</li>
-</ul>
+<em>Data subset from Progress in Artificial Intelligence, 2013</em>.</li>
+</ul></section></section><section id="submission" class="level1"><h1>Submission</h1>
 <p>Once you are finished with the lab, you will your final PDF document to Gradescope.</p>
 <div class="callout-warning callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -438,7 +397,7 @@ Warning
 <li>Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be “checked”). <em>If you do not do this, you will be subject to lose points on the assignment.</em>
 </li>
 <li>Select the first page of your .pdf submission to be associated with the <em>“Workflow &amp; formatting”</em> question.</li>
-</ul></section></section><section id="grading" class="level1"><h1>Grading</h1>
+</ul></section><section id="grading" class="level1"><h1>Grading</h1>
 <table class="table">
 <thead><tr class="header">
 <th style="text-align: left;">Component</th>
