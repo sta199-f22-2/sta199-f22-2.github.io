@@ -2581,5 +2581,40 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#checklist",
+    "href": "slides/14-functions-iteration.html#checklist",
+    "title": "Functions + Iteration",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-11-ethics-privacy"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#announcements",
+    "href": "slides/14-functions-iteration.html#announcements",
+    "title": "Functions + Iteration",
+    "section": "Announcements",
+    "text": "Announcements\n– No Homework this week\n– Project Proposal Due Thursday"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#reminder",
+    "href": "slides/14-functions-iteration.html#reminder",
+    "title": "Functions + Iteration",
+    "section": "Reminder",
+    "text": "Reminder\n– Merge conflicts can be avoided if you pull before making changes\n– Refer to previous lab for steps on how to fix “simple” merge conflicts\n– If conflicts continue to pile up….. save locally and “restart”"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#goals",
+    "href": "slides/14-functions-iteration.html#goals",
+    "title": "Functions + Iteration",
+    "section": "Goals",
+    "text": "Goals\n– What is a function?\n– How can we write them?\n– Why should we write them?\n– Review webscraping"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#warm-up",
+    "href": "slides/14-functions-iteration.html#warm-up",
+    "title": "Functions + Iteration",
+    "section": "Warm up?",
+    "text": "Warm up?\nTo convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9). /\nWrite a function in R that does this.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
