@@ -371,20 +371,6 @@
     "text": "Optional\nPart 4 - Stochastic parrots\nYour turn (10 minutes):\n\nRead the following title and abstract.\n\n\nOn the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜 (Bender et. al., 2021)\nThe past 3 years of work in NLP have been characterized by the development and deployment of ever larger language models, especially for English. BERT, its variants, GPT-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.\n\n\nHave you used a natural language model before? Describe your use.\nWhat is meant by “stochastic parrots” in the paper title?"
   },
   {
-    "objectID": "ae/ae-12-chronicle-A.html",
-    "href": "ae/ae-12-chronicle-A.html",
-    "title": "Opinion articles in The Chronicle",
-    "section": "",
-    "text": "This will be done in the chronicle.R R script. Save the resulting data frame in the data folder.\nSuggested scraping code can be found here."
-  },
-  {
-    "objectID": "ae/ae-12-chronicle-A.html#part-2---data-analysis",
-    "href": "ae/ae-12-chronicle-A.html#part-2---data-analysis",
-    "title": "Opinion articles in The Chronicle",
-    "section": "Part 2 - Data analysis",
-    "text": "Part 2 - Data analysis\nLet’s start by loading the packages we will need:\n\nlibrary(tidyverse)\n\n\n\nYour turn (1 minute): Load the data you saved into the data folder and name it chronicle.\n\n\nchronicle <- read_csv(\"data/chronicle.csv\")\n\n\n\nYour turn (3 minutes): Who are the most prolific authors of the 100 most recent opinion articles in The Chronicle?\n\n\nchronicle |>\n  count(author, sort = TRUE)\n\n# A tibble: 69 × 2\n   author                        n\n   <chr>                     <int>\n 1 Anthony Salgado               3\n 2 Billy Cao                     3\n 3 Community Editorial Board     3\n 4 Heidi Smith                   3\n 5 Linda Cao                     3\n 6 Luke A. Powery                3\n 7 Monday Monday                 3\n 8 Sonia Green                   3\n 9 Viktoria Wulff-Andersen       3\n10 Abdel Shehata                 2\n# … with 59 more rows\n\n\n\n\nDemo: Draw a line plot of the number of opinion articles published per day in The Chronicle.\n\n\nchronicle |>\n  count(date) |>\n  ggplot(aes(x = date, y = n, group = 1)) +\n  geom_line()\n\n\n\n\n\n\nDemo: What percent of the most recent 100 opinion articles in The Chronicle mention “climate” in their title?\n\n\nchronicle |>\n  mutate(\n    title = str_to_lower(title),\n    climate = if_else(str_detect(title, \"climate\"), \"mentioned\", \"not mentioned\")\n    ) |>\n  count(climate) |>\n  mutate(prop = n / sum(n))\n\n# A tibble: 2 × 3\n  climate           n  prop\n  <chr>         <int> <dbl>\n1 mentioned         3  0.03\n2 not mentioned    97  0.97\n\n\n\n\nYour turn (5 minutes): What percent of the most recent 100 opinion articles in The Chronicle mention “climate” in their title or abstract?\n\n\nchronicle |>\n  mutate(\n    title = str_to_lower(title),\n    abstract = str_to_lower(abstract),\n    climate = if_else(\n      str_detect(title, \"climate\") | str_detect(abstract, \"climate\"), \n      \"mentioned\", \n      \"not mentioned\"\n      )\n    ) |>\n  count(climate) |>\n  mutate(prop = n / sum(n))\n\n# A tibble: 2 × 3\n  climate           n  prop\n  <chr>         <int> <dbl>\n1 mentioned         4  0.04\n2 not mentioned    96  0.96\n\n\n\n\nTime permitting: Come up with another question and try to answer it using the data.\n\n\n# add code here"
-  },
-  {
     "objectID": "ae/ae-12-chronicle.html",
     "href": "ae/ae-12-chronicle.html",
     "title": "Opinion articles in The Chronicle",
@@ -2576,13 +2562,6 @@
     "text": "Workflow: Screen scraping vs. APIs\nTwo different scenarios for web scraping:\n\nScreen scraping: extract data from source code of website, with html parser (easy) or regular expression matching (less easy)\nWeb APIs (application programming interface): website offers a set of structured http requests that return JSON or XML files\n\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/14-functions-iteration.html#checklist",
     "href": "slides/14-functions-iteration.html#checklist",
     "title": "Functions + Iteration",
@@ -2611,11 +2590,11 @@
     "text": "Goals\n– Review R (Finish ae-12)\n– What is a function?\n– How can we write them?\n– Why should we write them?\n– Review web scraping"
   },
   {
-    "objectID": "slides/14-functions-iteration.html#warm-up",
-    "href": "slides/14-functions-iteration.html#warm-up",
+    "objectID": "slides/14-functions-iteration.html#warm-up---temperature-function",
+    "href": "slides/14-functions-iteration.html#warm-up---temperature-function",
     "title": "Functions + Iteration",
-    "section": "Warm up?",
-    "text": "Warm up?\nTo convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9).\nWrite a function in R that can take an input of a Fahrenheit temperature and output a temperature in Celsius."
+    "section": "Warm up - Temperature Function",
+    "text": "Warm up - Temperature Function\nTo convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9).\nWrite a function in R that can take an input of a Fahrenheit temperature and output a temperature in Celsius."
   },
   {
     "objectID": "slides/14-functions-iteration.html#why-we-need-functions",
@@ -2632,10 +2611,10 @@
     "text": "Iteration\n\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/14-functions-iteration.html#warm-up---temperature-function",
-    "href": "slides/14-functions-iteration.html#warm-up---temperature-function",
-    "title": "Functions + Iteration",
-    "section": "Warm up - Temperature Function",
-    "text": "Warm up - Temperature Function\nTo convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9).\nWrite a function in R that can take an input of a Fahrenheit temperature and output a temperature in Celsius."
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
