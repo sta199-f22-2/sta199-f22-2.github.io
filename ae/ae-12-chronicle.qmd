@@ -6,8 +6,7 @@ editor: visual
 
 ## Part 1 - Data scraping
 
-This will be done in the `chronicle-scrape.R` R script.
-Save the resulting data frame in the `data` folder.
+This will be done in the `chronicle-scrape.R` R script. Save the resulting data frame in the `data` folder.
 
 ## Part 2 - Data analysis
 

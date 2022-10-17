@@ -2587,7 +2587,7 @@
     "href": "slides/14-functions-iteration.html#checklist",
     "title": "Functions + Iteration",
     "section": "Checklist",
-    "text": "Checklist\n– Clone ae-11-ethics-privacy"
+    "text": "Checklist\n– Clone ae-13"
   },
   {
     "objectID": "slides/14-functions-iteration.html#announcements",
@@ -2608,13 +2608,34 @@
     "href": "slides/14-functions-iteration.html#goals",
     "title": "Functions + Iteration",
     "section": "Goals",
-    "text": "Goals\n– What is a function?\n– How can we write them?\n– Why should we write them?\n– Review webscraping"
+    "text": "Goals\n– Review R (Finish ae-12)\n– What is a function?\n– How can we write them?\n– Why should we write them?\n– Review web scraping"
   },
   {
     "objectID": "slides/14-functions-iteration.html#warm-up",
     "href": "slides/14-functions-iteration.html#warm-up",
     "title": "Functions + Iteration",
     "section": "Warm up?",
-    "text": "Warm up?\nTo convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9). /\nWrite a function in R that does this.\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "Warm up?\nTo convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9).\nWrite a function in R that can take an input of a Fahrenheit temperature and output a temperature in Celsius."
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#why-we-need-functions",
+    "href": "slides/14-functions-iteration.html#why-we-need-functions",
+    "title": "Functions + Iteration",
+    "section": "Why we need functions?",
+    "text": "Why we need functions?"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#iteration",
+    "href": "slides/14-functions-iteration.html#iteration",
+    "title": "Functions + Iteration",
+    "section": "Iteration",
+    "text": "Iteration\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/14-functions-iteration.html#warm-up---temperature-function",
+    "href": "slides/14-functions-iteration.html#warm-up---temperature-function",
+    "title": "Functions + Iteration",
+    "section": "Warm up - Temperature Function",
+    "text": "Warm up - Temperature Function\nTo convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9).\nWrite a function in R that can take an input of a Fahrenheit temperature and output a temperature in Celsius."
   }
 ]

@@ -6,8 +6,7 @@ editor: visual
 
 ## Part 1 - Data scraping
 
-This will be done in the `chronicle.R` R script.
-Save the resulting data frame in the `data` folder.
+This will be done in the `chronicle.R` R script. Save the resulting data frame in the `data` folder.
 
 Suggested scraping code can be found here.
 
@@ -28,7 +27,7 @@ library(tidyverse)
 #| label: load-data
 #| message: false
 
-chronicle <- read_csv("data/chronicle.csv")
+chronicle <- read_csv("ae/data/chronicle.csv")
 ```
 
 -   **Your turn (3 minutes):** Who are the most prolific authors of the 100 most recent opinion articles in The Chronicle?
