@@ -1,0 +1,253 @@
+---
+title: "The Chronicle Analysis + Functions and Iteration"
+format: html
+editor: visual
+---
+
+#Warm Up
+
+To convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9). Write a function below to do this: 
+
+```{r}
+
+F_to_C <- function(temp_F){
+  
+  temp_C <- (temp_F - 32) * 5/9 
+  
+  return(temp_C)
+}
+
+F_to_C(75)
+```
+
+
+# Refresher 
+
+If needed, go to <https://www.dukechronicle.com/section/opinion>
+
+## Part 2 - Data analysis
+
+Let's start by loading the packages we will need:
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(rvest)
+library(lubridate)
+```
+
+```{r}
+#| label: load-data
+#| message: false
+
+chronicle <- read_csv("data/chronicle.csv")
+```
+
+-   **Your turn (3 minutes):** Who are the most prolific authors of the 100 most recent opinion articles in The Chronicle?
+
+```{r}
+#| label: union-title-abstract
+
+chronicle |> 
+  count(author, sort = T)
+  
+
+```
+
+-   **Demo:** Draw a line plot of the number of opinion articles published per day in The Chronicle.
+
+```{r}
+#| label: articles-per-day
+
+chronicle |>
+  count(date) |> 
+  ggplot(
+    aes(x = date, y = n)) + 
+  geom_line()
+  
+
+```
+
+-   **Demo:** What percent of the most recent 100 opinion articles in The Chronicle mention "climate" in their title?
+
+**Hint**: https://cran.r-project.org/web/packages/stringr/vignettes/stringr.html (Look at the Locale Sensitive section)
+
+**Hint**: Think about creating a new variable
+
+```{r}
+#| label: climate-title
+
+chronicle |>
+  mutate(
+    title = str_to_lower(title),
+    climate = if_else(str_detect(title, "climate"), "mentioned", "not mentioned")
+  ) |>
+  count(climate) |>
+  mutate(prop = n / sum(n))
+
+```
+
+-   **Together** What percent of the most recent 100 opinion articles in The Chronicle mention "climate" in their title or abstract?
+
+```{r}
+#| label: climate-title-abstract
+#| eval: false
+
+chronicle |>
+  mutate(
+    title = str_to_lower(title),
+    abstract = str_to_lower(abstract),
+    climate = if_else(
+      
+str_detect(title, "climate") | str_detect(abstract, "climate"),
+"mentioned" , "not mentioned")
+    
+) |>
+  count(climate) |>
+  mutate(prop = n / sum(n))
+```
+
+#Amazon Candle
+
+![](images/candle.png){fig-align="center"}
+A researcher is interested in the manufacturing process of this candle. Specifically, they are interested in if it's potency has become less over time. In this exercise, our goal is to plot the number of reviews mentioning "no scent" or "no smell" per week. For the purpose of this exercise, *we will only use the first 10 pages of reviews.*
+
+
+Go to the link [here](https://www.amazon.com/Yankee-Candle-Large-Apple-Pumpkin/product-reviews/B008P8YTU6/ref=cm_cr_othr_d_show_all_btm?ie=UTF8&reviewerType=all_reviews)
+
+Think critically about how we would scrape the titles of the review, the review itself, and where/when the review was given from. Next, run the following code to do so below: 
+
+```{r}
+
+page <- read_html("https://www.amazon.com/Yankee-Candle-Large-Apple-Pumpkin/product-reviews/B008P8YTU6/ref=cm_cr_getr_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=1&sortBy=recent")
+
+titles <- page |>
+  html_nodes("#cm_cr-review_list .celwidget .a-row:nth-child(2)") |>
+  html_text2()
+
+reviews <- page |>
+  html_nodes(".a-spacing-small.review-data") |>
+  html_text2()
+
+countries_dates <- page |>
+  html_nodes("#cm_cr-review_list .review-date") |>
+  html_text2()
+  
+#Build data set
+amazon <- tibble(
+  title = titles,
+  review = reviews,
+  country_date = countries_dates
+)
+```
+
+##Write function 
+
+-- Why do we need a function? 
+
+*Add your response here.*
+
+```{r}
+scrape_review <- function(url){
+  Sys.sleep(2)
+  
+  page <- read_html(url)
+  
+titles <- page |>
+  html_nodes("#cm_cr-review_list .celwidget .a-row:nth-child(2)") |>
+  html_text2()
+
+reviews <- page |>
+  html_nodes(".a-spacing-small.review-data") |>
+  html_text2()
+
+countries_dates <- page |>
+  html_nodes("#cm_cr-review_list .review-date") |>
+  html_text2()
+  
+tibble(
+  title = titles,
+  review = reviews,
+  country_date = countries_dates
+)
+
+}
+  
+```
+
+##Test your function
+
+```{r}
+# page 1
+scrape_review("https://www.amazon.com/Yankee-Candle-Large-Apple-Pumpkin/product-reviews/B008P8YTU6/ref=cm_cr_getr_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=1&sortBy=recent")
+
+# page 2
+scrape_review("https://www.amazon.com/Yankee-Candle-Large-Apple-Pumpkin/product-reviews/B008P8YTU6/ref=cm_cr_getr_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=2&sortBy=recent")
+
+# page 3
+scrape_review("https://www.amazon.com/Yankee-Candle-Large-Apple-Pumpkin/product-reviews/B008P8YTU6/ref=cm_cr_getr_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=3&sortBy=recent")
+
+
+```
+
+
+-- What changes across URLs?
+
+*Add your response here.*
+
+
+You can use the paste() and paste0() functions in R to concatenate elements of a vector into a single string. The paste0() function concatenates strings using no space as the default separator.
+
+Use this information to create a list of urls for the first 10 pages of the amazon review. 
+
+```{r}
+yc_urls <- paste0("https://www.amazon.com/Yankee-Candle-Large-Apple-Pumpkin/product-reviews/B008P8YTU6/ref=cm_cr_getr_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=", 1:10, "&sortBy=recent" )
+```
+
+
+We have a function. We have a lot of urls. How do we iterate? 
+
+*Add your response here.*
+
+
+```{r}
+yc_reviews_all <- map_dfr(yc_urls , scrape_review)
+```
+
+
+
+We have the data! Let's clean it up. We need to get the date in working order and createad week variable. We also need to create a variable that detects if "no scent" or "no smell" is mentioned.
+
+
+Below, document what each line of code is doing.
+
+```{r}
+yc_reviews <- yc_reviews_all |>
+  mutate(
+    date = mdy(country_date), 
+    week = week(date), 
+    review = str_to_lower(review),
+    title = str_to_lower(title),
+    no_scent = case_when(
+      str_detect(review, "no scent") | str_detect(title, "no scent") ~ "mentioned",
+      str_detect(review, "no smell") | str_detect(title, "no smell") ~ "mentioned",
+      TRUE ~ "not mentioned"
+    )
+  )
+```
+
+
+Using the code above, make a line graph by week for the number of reviews that contained "no scent" or "no smell". 
+
+```{r}
+
+# add-code-here
+```
+
+
+
+-   **Your turn (3 minutes):** Outline how this exercise could be expanded to make a plot like [this one](https://twitter.com/nick_beauchamp/status/1473509106187223043) that compares number of reviews mentioning no scent/smell and number of COVID cases.
+
+*Add your response here.*
