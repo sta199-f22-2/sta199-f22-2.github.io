@@ -2783,6 +2783,83 @@
     "href": "slides/15-models.html#warm-up",
     "title": "Models",
     "section": "Warm up",
-    "text": "Warm up\n\n\n\n\n\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "Warm up\n\n– What is the relationship?\n– What is your best guess for a car’s MPG that weighs 5000 pounds?"
+  },
+  {
+    "objectID": "slides/15-models.html#what-is-a-statistical-model",
+    "href": "slides/15-models.html#what-is-a-statistical-model",
+    "title": "Models",
+    "section": "What is a statistical model?",
+    "text": "What is a statistical model?\n– Statistical modeling is the process of applying statistical analysis to a data set.\n– A statistical model is a mathematical representation (or mathematical model) of observed data."
+  },
+  {
+    "objectID": "slides/15-models.html#vocab---response-variable",
+    "href": "slides/15-models.html#vocab---response-variable",
+    "title": "Models",
+    "section": "Vocab - Response variable",
+    "text": "Vocab - Response variable"
+  },
+  {
+    "objectID": "slides/15-models.html#vocab---explanatory-variable",
+    "href": "slides/15-models.html#vocab---explanatory-variable",
+    "title": "Models",
+    "section": "Vocab - Explanatory variable",
+    "text": "Vocab - Explanatory variable"
+  },
+  {
+    "objectID": "slides/15-models.html#probability-1",
+    "href": "slides/15-models.html#probability-1",
+    "title": "Models",
+    "section": "Probability",
+    "text": "Probability\n\nA random process is one in which the outcome is unpredictable. We encounter random processes every day: will it rain today? how many minutes will pass until receiving your next text message? will the Packers win the Super Bowl?\nThe probability of an event is the long-run proportion of times the event would occur if the random process were repeated indefinitely (under identical conditions)."
+  },
+  {
+    "objectID": "slides/15-models.html#types-of-probabilities",
+    "href": "slides/15-models.html#types-of-probabilities",
+    "title": "Models",
+    "section": "Types of Probabilities",
+    "text": "Types of Probabilities\n– Single Event\n– Conditional\n– And"
+  },
+  {
+    "objectID": "slides/15-models.html#notation",
+    "href": "slides/15-models.html#notation",
+    "title": "Models",
+    "section": "Notation",
+    "text": "Notation\nWe will denote “events” by upper case letters near the beginning of the alphabet\n– P(A)\n– P(A|B)\n– P(A U B)"
+  },
+  {
+    "objectID": "slides/15-models.html#examples",
+    "href": "slides/15-models.html#examples",
+    "title": "Models",
+    "section": "Examples",
+    "text": "Examples\nWe often calculate probabilities using a table. Consider the following example:\n\n\n\n\nCured\nNot-Cured\nTotals\n\n\nNew Drug\n145\n250\n395\n\n\nStandard Drug\n300\n305\n605\n\n\n\n445\n555\n1,000\n\n\n\n\nWhat is the probability of \\(A\\)?\nWhat is the probability of \\(B^c\\)\nWhat is the probability of \\(B\\) and \\(A\\)?\nWhat is the probability of \\(B\\) given \\(A\\)?"
+  },
+  {
+    "objectID": "slides/15-models.html#example",
+    "href": "slides/15-models.html#example",
+    "title": "Models",
+    "section": "Example",
+    "text": "Example\nAs a student at Duke University, suppose your first class on Mondays is in Old Chemistry at 8:00am and you commute to school. From past experience, you know that there is a 20% chance of finding an open parking spot in Lot 6. Otherwise, you have to park in Lot 18. If you find a spot in Lot 6, you only have a 5% chance of being late to class. However, if you have to park in Lot 18, you have a 15% chance of being late to class."
+  },
+  {
+    "objectID": "slides/15-models.html#step-1",
+    "href": "slides/15-models.html#step-1",
+    "title": "Models",
+    "section": "Step 1",
+    "text": "Step 1\n“you know that there is a 20% chance of finding an open parking spot in Lot 6.”"
+  },
+  {
+    "objectID": "slides/15-models.html#step-2",
+    "href": "slides/15-models.html#step-2",
+    "title": "Models",
+    "section": "Step 2",
+    "text": "Step 2\n“if you park in Lot 6, the probability of being late to class is 5%; if you park in Log 18, the probability of being late to class is 15%."
+  },
+  {
+    "objectID": "slides/15-models.html#step-3",
+    "href": "slides/15-models.html#step-3",
+    "title": "Models",
+    "section": "Step 3",
+    "text": "Step 3\n\n\n\n\nLate to class\nNot late to class\nTotals\n\n\n\n\nLot 6\n10\n190\n200\n\n\nLot 18\n120\n680\n800\n\n\n\n130\n870\n1,000\n\n\n\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

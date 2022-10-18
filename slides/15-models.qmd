@@ -21,6 +21,8 @@ format: revealjs
 
 -- What a model is?
 
+-- Introduction to probability
+
 ## Warm up
 
 ![](images/scattercar.png){fig-align="center" width="700"}
@@ -103,3 +105,11 @@ As a student at Duke University, suppose your first class on Mondays is in Old C
 "if you park in Lot 6, the probability of being late to class is 5%; if you park in Log 18, the probability of being late to class is 15%.
 
 ![](images/step2.png){fig-align="center" width="700"}
+
+## Step 3
+
+|        | Late to class | Not late to class | Totals |
+|--------|---------------|-------------------|--------|
+| Lot 6  | 10            | 190               | 200    |
+| Lot 18 | 120           | 680               | 800    |
+|        | 130           | 870               | 1,000  |
