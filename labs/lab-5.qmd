@@ -25,7 +25,7 @@ library(tidyverse)
 
 ## Exercise 1 - Probability and You 
 
-We use probabilities all the time when making decisions. *As a group*, provide *two* real world examples of when you use probability to make decisions in your every day life. Think critically. Be creative. 
+We use probabilities all the time when making decisions. *As a group*, provide *two* real world examples of when you've used probability to make decisions in your every day life. Think critically. Be creative. 
 
 
 (a)
