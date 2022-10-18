@@ -1,0 +1,44 @@
+---
+title: "Models"
+subtitle: "Lecture 16"
+date: "October 17, 2022"
+format: revealjs
+---
+
+## Checklist
+
+-- Clone `ae-14`
+
+## Announcements
+
+-- Project Proposal Due Thursday
+
+## Goals 
+
+-- Introduce the idea of modeling 
+
+-- Why we model? 
+
+-- What a model is?
+
+## Warm up 
+
+![](images/scattercar.png){fig-align="center" width="700"}
+
+-- What is the relationship? 
+
+-- What is your best guess for a car's MPG that weighs 5000 pounds? 
+
+## What is a statistical model? 
+
+-- Statistical modeling is the process of applying statistical analysis to a data set. 
+
+-- A statistical model is a mathematical representation (or mathematical model) of observed data.
+
+## Vocab - Response variable
+
+![](images/response.png){fig-align="center" width="700"}
+
+## Vocab - Explanatory variable 
+
+![](images/explan.png){fig-align="center" width="700"}
