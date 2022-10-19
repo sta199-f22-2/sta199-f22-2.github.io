@@ -45,6 +45,12 @@ format: revealjs
 
 ![](images/explan.png){fig-align="center" width="700"}
 
+# Correlation
+
+![](images/corr-example.png){fig-align="center" width="700"}
+
+
+
 # Probability
 
 ## Probability
@@ -71,7 +77,7 @@ We will denote "events" by upper case letters near the beginning of the alphabet
 
 -- P(A U B)
 
-## Examples
+## Examples{.smaller}
 
 We often calculate probabilities using a table. Consider the following example:
 
