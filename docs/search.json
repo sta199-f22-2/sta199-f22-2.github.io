@@ -2776,7 +2776,7 @@
     "href": "slides/15-models.html#goals",
     "title": "Models",
     "section": "Goals",
-    "text": "Goals\n– Introduce the idea of modeling\n– Why we model?\n– What a model is?\n– Introduction to probability"
+    "text": "Goals\n– Introduce the idea of modeling\n– Why we model?\n– What a model is?\n– Correlation\n– Introduction to probability (maybe)"
   },
   {
     "objectID": "slides/15-models.html#warm-up",
@@ -2790,7 +2790,7 @@
     "href": "slides/15-models.html#what-is-a-statistical-model",
     "title": "Models",
     "section": "What is a statistical model?",
-    "text": "What is a statistical model?\n– Statistical modeling is the process of applying statistical analysis to a data set.\n– A statistical model is a mathematical representation (or mathematical model) of observed data."
+    "text": "What is a statistical model?\n– Statistical modeling is the process of applying statistical analysis to a data set.\n– A statistical model is a mathematical representation of observed data."
   },
   {
     "objectID": "slides/15-models.html#vocab---response-variable",
