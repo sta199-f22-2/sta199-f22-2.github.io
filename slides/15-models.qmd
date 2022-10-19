@@ -21,7 +21,9 @@ format: revealjs
 
 -- What a model is?
 
--- Introduction to probability
+-- Correlation 
+
+-- Introduction to probability (maybe)
 
 ## Warm up
 
@@ -35,7 +37,7 @@ format: revealjs
 
 -- Statistical modeling is the process of applying statistical analysis to a data set.
 
--- A statistical model is a mathematical representation (or mathematical model) of observed data.
+-- A statistical model is a mathematical representation of observed data.
 
 ## Vocab - Response variable
 
