@@ -311,7 +311,7 @@ Important
 <p>Note: Show your work by writing your answer as a fraction to potentially receive partial credit. For example, if your numerator is the combination of two values, show the addition to obtain these values. Example: (1+4) / 10 = 0.5.</p>
 <ol type="a">
 <li><p>How many levels of education are there in these data? How many levels of disease are there?</p></li>
-<li><p>Use <code>count</code> and <code>pivot-wider</code> to create a 4 x 3 data table below.</p></li>
+<li><p>Use <code>count</code> and <code>pivot_wider</code> to create a 4 x 3 data table.</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># insert-code-here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -356,6 +356,47 @@ Important
 </div>
 </section><section id="exercise-4---bike-rentals" class="level2"><h2 class="anchored" data-anchor-id="exercise-4---bike-rentals">Exercise 4 - Bike rentals</h2>
 <p>Bike sharing systems are new generation of traditional bike rentals where whole process from membership, rental and return back has become automatic. You are tasked to investigate the relationship between the temperature outside and the number of bikes rented in the Washington DC area between the years 2011 and 2022. You will be investigating data for the months June, July, September, and November.</p>
+<p>Below is a list of variables and their definitions:</p>
+<table class="table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 86%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Definition</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">season</td>
+<td style="text-align: left;">numerical representation of Summer, Fall, Winter, and Spring</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">year</td>
+<td style="text-align: left;">numerical representation of 2011 (0) or 2012 (1)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">mnth</td>
+<td style="text-align: left;">month in which data were collected</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">holiday</td>
+<td style="text-align: left;">indicator variable if data were collected on a holiday</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">weekday</td>
+<td style="text-align: left;">numerical representation of day of week</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">temp</td>
+<td style="text-align: left;">temperature in Celsius</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cnt</td>
+<td style="text-align: left;">count of bike rentals</td>
+</tr>
+</tbody>
+</table>
 <ol type="a">
 <li>Read in the data. Then, create a scatter plot that investigates the relationship between the number of bikes rented and the temperature outside. Include a straight line of best fit to help discuss the discovered relationship. Summarize your findings in 2-3 sentences.</li>
 </ol>
