@@ -45,7 +45,7 @@ library(robotstxt)
 library(fivethirtyeight)
 ```
 
-## Exercise 1 - Data Scraping (Need to Write)
+## Exercise 1 - Data Scraping
 
 (a) Please justify, using the tools we've learning in this course, if you are allowed to scrape data from each of the following websites:
 
@@ -59,6 +59,9 @@ https://www.rottentomatoes.com
 
 # insert-code-here
 ```
+
+
+## Exercise 2 - Rotten Tomatoes
 
 Rotten Tomatoes is an American review-aggregation website for film. They give percentage scores for movies based on how "good" the movies are. They provide 2 scores:
 
@@ -106,7 +109,7 @@ audience_score <- page |>
 
 (e) Create an appropriate plot the assess the relationship between a movie's audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.
 
-## Exercise 2 - The Work of Bob Ross
+## Exercise 3 - The Work of Bob Ross
 
 Bob Ross was a painter who was most famous for his PBS television show The Joy of Painting. In each episode, Ross created a new oil painting and provided instructions and commentary as he painted it. Ambitious viewers could paint along but viewers simply enjoyed watching and listening to Ross's soothing voice as he painted an outdoor scene in 30 minutes.
 
@@ -132,7 +135,7 @@ Bob Ross is known for painting "happy little trees", but was he actually more li
 
 (d) Does your analysis support Bob Ross's reputation of frequently painting "happy little trees"? Briefly explain.
 
-## Exercise 3 - America's Neighborhood Pollster
+## Exercise 4 - America's Neighborhood Pollster
 
 SurveyUSA interviewed 886 North Carolina adults 09/28/2022 through 10/02/2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question: *Are you optimistic or pessimistic about the economic outlook for your family over the next year?*
 
@@ -176,7 +179,7 @@ data |>
 ```
 
 
-## Exercise 4 - Candy
+## Exercise 5 - Candy
 
 ```{r}
 candy <- read_csv("https://raw.githubusercontent.com/fivethirtyeight/data/master/candy-power-ranking/candy-data.csv")
@@ -197,7 +200,7 @@ https://blog.albertkuo.me/post/point-shape-options-in-ggplot/
 
 (b) In 2-3 sentences, use the graph in part a to answer the following question: "Are candies with more sugar more expensive? Does this relationship change if it includes chocolate?
 
-## Exercise 5 - Write a function
+## Exercise 6 - Write a function
 
 Suppose you have two types of candy to give out on Haloween; chocolate bars and starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is \%50. With this information, create a function that outputs which type of candy bar you will give a trick-or-treater that knocks on your door. Have your function output a table of the number of chocolate bars and number of starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 and display the table results.
 
@@ -211,7 +214,6 @@ Hint: The `sample` function may be helpful. See the following: https://www.rdocu
 ```
 
 
-## Exercise 6 - Modeling Data ?
 
 
 # Wrap up
