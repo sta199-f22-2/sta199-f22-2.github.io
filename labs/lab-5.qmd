@@ -168,9 +168,9 @@ To submit your assignment:
 | Component             | Points |
 |:----------------------|:-------|
 | Ex 1                  | 4      |
-| Ex 2                  | 12     |
-| Ex 3                  | 15     |
-| Ex 4                  | 14     |
+| Ex 2                  | 14     |
+| Ex 3                  | 11     |
+| Ex 4                  | 16     |
 | Workflow & formatting | 5      |
 | **Total**             | **50** |
 
