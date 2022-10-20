@@ -44,7 +44,7 @@ Note: Show your work by writing your answer as a fraction to potentially receive
 
 (a) How many levels of education are there in these data? How many levels of disease are there?
 
-(b) Use `count` and `pivot_wider` to create a 4 x 3 data table.
+(b) Convert the data to a 4x3 data table where each cell is the number of people falling into each combination of Disease and Education. Hint: use `count` and `pivot_wider`.
 
 ```{r}
 
