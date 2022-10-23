@@ -1,0 +1,237 @@
+---
+title: "HW 4 - Scraping + recap"
+categories: "Homework"
+editor: visual
+---
+
+::: callout-important
+This homework is due Friday, Nov 2nd at 11:59pm ET.
+:::
+
+::: callout-important
+Homeworks are to be turned in individually as usual (different from labs)
+:::
+
+# Getting started
+
+-   Go to the [sta199-f22-2](https://github.com/sta199-f22-2) organization on GitHub. Click on the repo with the prefix `hw-03`. It contains the starter documents you need to complete the homework assignment.
+
+-   Clone the repo and start a new project in RStudio. See the [Lab 0 instructions](https://sta199-f22-2.github.io/labs/lab-0.html#clone-the-repo-start-new-rstudio-project) for details on cloning a repo and starting a new R project.
+
+## Workflow + formatting
+
+Make sure to
+
+-   Update author name on your document.
+-   Label all code chunks informatively and concisely.
+-   Follow the [Tidyverse style guide](https://style.tidyverse.org/).
+-   Make at least 3 commits.
+-   Resize figures where needed, avoid tiny or huge plots.
+-   Use informative labels for plot axes, titles, etc.
+-   Turn in an organized, well formatted document.
+
+## Packages
+
+We'll use the **tidyverse** package for much of the data wrangling and visualization, though you're welcomed to also load other packages as needed.
+
+```{r}
+#| label: load-packages
+#| message: false
+
+
+library(tidyverse)
+library(rvest)
+library(robotstxt)
+```
+
+## Exercise 1 - Data Scraping
+
+(a) Please justify, using the tools we've learning in this course, if you are allowed to scrape data from each of the following websites:
+
+https://www.espn.com/
+
+https://twitter.com/
+
+https://www.rottentomatoes.com
+
+```{r}
+
+# insert-code-here
+```
+
+## Exercise 2 - Rotten Tomatoes
+
+Rotten Tomatoes is an American review-aggregation website for film. They give percentage scores for movies based on how "good" the movies are. They provide 2 scores:
+
+![](images/popcornlogos.png) - The Audience Score, denoted by a popcorn bucket
+
+![](images/tomatologos.png) - The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film
+
+(a) We are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween
+
+Next, run the following code:
+
+```{r}
+
+
+page <- read_html("https://www.rottentomatoes.com/franchise/halloween")
+
+titles <- page |>
+  html_nodes("#franchise-media a") |>
+  html_text2()
+
+titles_clean <- titles[c(FALSE, TRUE)]
+
+titles
+
+titles_clean
+```
+
+In 2-3 sentences, describe what the above code is doing. Specifically, how is titles different from titles_clean?
+
+**Add Response**
+
+(c) Using `Selector Gadget`, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.
+
+```{r}
+#| eval: false
+tomato_score <- page |>
+  html_nodes("...") |>
+  html_text2()
+
+audience_score <- page |>
+  html_nodes("...") |>
+  html_text2()
+
+tomato_score 
+
+audience_score
+```
+
+(d) Create a tibble using the three variables you scraped. Name this tibble `halloween`
+
+```{r}
+
+#insert-code-here
+
+```
+
+(e) Create an appropriate plot the assess the relationship between a movie's audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.
+
+```{r}
+#insert-code-here
+
+```
+
+
+## Exercise 3 - Smoking during pregnacy
+
+In 2004, the state of North Carolina released a large data set containing information on births recorded in this state. This data set is useful to researchers studying the relation between habits and practices of expectant mothers and the birth of their children. We will work with a random sample of observations from this data set. We are interested in a babies weight, and will use the tools we've learned in class to investigate it.
+
+```{r}
+#| message: false
+ncbirths <- read_csv("data/ncbirths.csv")
+
+```
+
+(a) Create a version of the `ncbirths` data set omitting observations where there are NAs for `habit`. You can call this version `ncbirths_habitgiven`.
+
+(b) Plotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship between`habit` and `weight`.
+
+In 2-3 sentences, discuss the relationships observed.
+
+(c) Now, fit a linear model that investigates the relationship between `weight` and `ncbirths_habigtgiven`. Provide the summary output below.
+
+(d) Write the estimated least squares regression line below using proper notation.
+
+Hint: If you need to type an equation using proper notation, type your answers in-between $$    $$. You may use \hat{example} to put a hat on a character.
+
+## Exercise 4 - Smoking during pregnacy - part 2
+
+(a) Another researcher is interested in assessing the relationship between a babies weight, and the mother's age.
+
+Now, fit a linear another linear model to investigate this relationship. Provide the summary output below.
+
+(b) In 2-3 sentences, explain how R fit the least squares regression line to model these data.
+
+(c) Interpret the intercept in the context of the problem. Is this considered extrapolation? Why or why not?
+
+(d) Interpret the slope coefficient in the context of the problem.
+
+
+## Exercise 5 - America's Neighborhood Pollster
+
+SurveyUSA interviewed 886 North Carolina adults 09/28/2022 through 10/02/2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question: *Are you optimistic or pessimistic about the economic outlook for your family over the next year?*
+
+Responses were broken down into the following categories:
+
+| Variable | Levels                  |
+|:---------|:------------------------|
+| Age      | 18-49; 50+              |
+| Mood     | Optimistic; Pessimistic |
+
+(a) Of the 886 responses, 481 were between the ages of 18-49. Of the individuals that are between 18-49, 237 individuals responded that they were pessimistic. Of the individuals that are 50+, 164 claimed to be optimistic.
+
+Fill in the code below to create a hypothetical two-way table to represent this situation.
+
+```{r}
+#| eval: false
+data <- tibble( 
+  Type = c(),
+  Sale = c(),
+  values = ()
+  )
+
+data |>
+  pivot_wider( 
+    names_from = ...,
+    values_from = ....)
+```
+
+(b) Using your table from part a, calculate the probability that a randomly selected individual is 50+ and is pessimistic.
+
+(c) Using your table from part a, calculate the probability that a randomly selected individual is optimistic.
+
+(d) Using your table from part a, calculate the probability that a randomly selected 18-49 aged individual is optimistic.
+
+(e) Create an appropriate visualization to compare the the relationship between `Age` and `Mood`. Your plot should include appropriate labels. Hint: You may have to re manipulate the data into a more usable form.
+
+```{r}
+
+# insert-code - here
+
+```
+
+## Exercise 6 - Write a function
+
+Suppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 and display the table results.
+
+Hint: The `sample` function may be helpful. See the following: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sample
+
+```{r}
+
+#insert-code-here
+
+```
+
+# Wrap up
+
+## Submission
+
+-   Go to <http://www.gradescope.com> and click Log in in the top right corner.
+-   Click School Credentials Duke Net ID and log in using your Net ID credentials.
+-   Click on your STA 199 course.
+-   Click on the assignment, and you'll be prompted to submit it.
+-   Mark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be "checked"). If you do not do this, you will be subject to lose points on the assignment.
+-   Select the first page of your PDF submission to be associated with the "Workflow & formatting" question.
+
+## Grading
+
+-   Exercise 1: points
+-   Exercise 2: points
+-   Exercise 3: points
+-   Exercise 4: points
+-   Exercise 5: points
+-   Exercise 6: points
+-   Workflow + formatting: 4 points
+-   Total: 50 points
