@@ -26,13 +26,28 @@ format: revealjs
 
 ## Warm Up - Correlation 
 
+![](images/spurcorr.png)
 
 ## Review - Why we Model?
 
 
+## Review - Why we Model?
+
+-- Prediction 
+
+-- Mathematical Model of Relationships
+
 ## Review - How are Models Fit? 
 
 
+## Review - How are Models Fit? 
+
+![](images/RSS.png)
+
+
+## Review - How are Models Fit? 
+
+![](images/residexample.png)
 - What about in the categorical case? 
 
 
