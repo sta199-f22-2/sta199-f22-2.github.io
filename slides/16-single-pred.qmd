@@ -24,9 +24,9 @@ format: revealjs
 -- Interpret Intercepts 
 
 
-## Warm Up - Correlation 
+## Warm Up - Correlation vs Causation
 
-![](images/spurcorr.png)
+![](images/maine.png)
 
 ## Review - Why we Model?
 
