@@ -48,14 +48,18 @@ format: revealjs
 ## Review - How are Models Fit? 
 
 ![](images/residexample.png)
+
 - What about in the categorical case? 
 
 
 ## How we model - linear case 
 
-linear_reg() |>
-  set_engine("lm") |>
-  fit(y ~ x , data = data-set ) |>
+linear_reg() |> 
+
+  set_engine("lm") |> 
+  
+  fit(y ~ x , data = data-set ) |> \
+  
   tidy()
 
 

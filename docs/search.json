@@ -2882,5 +2882,75 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#checklist",
+    "href": "slides/16-single-pred.html#checklist",
+    "title": "Models",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-15"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#announcements",
+    "href": "slides/16-single-pred.html#announcements",
+    "title": "Models",
+    "section": "Announcements",
+    "text": "Announcements\n– Lab Feedback"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#goals",
+    "href": "slides/16-single-pred.html#goals",
+    "title": "Models",
+    "section": "Goals",
+    "text": "Goals\n– Modeling with single predictors\n– How to write equations\n– Interpret Slopes\n– Interpret Intercepts"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#warm-up---correlation",
+    "href": "slides/16-single-pred.html#warm-up---correlation",
+    "title": "Models",
+    "section": "Warm Up - Correlation",
+    "text": "Warm Up - Correlation"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#review---why-we-model",
+    "href": "slides/16-single-pred.html#review---why-we-model",
+    "title": "Models",
+    "section": "Review - Why we Model?",
+    "text": "Review - Why we Model?"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#review---why-we-model-1",
+    "href": "slides/16-single-pred.html#review---why-we-model-1",
+    "title": "Models",
+    "section": "Review - Why we Model?",
+    "text": "Review - Why we Model?\n– Prediction\n– Mathematical Model of Relationships"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#review---how-are-models-fit",
+    "href": "slides/16-single-pred.html#review---how-are-models-fit",
+    "title": "Models",
+    "section": "Review - How are Models Fit?",
+    "text": "Review - How are Models Fit?"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#review---how-are-models-fit-1",
+    "href": "slides/16-single-pred.html#review---how-are-models-fit-1",
+    "title": "Models",
+    "section": "Review - How are Models Fit?",
+    "text": "Review - How are Models Fit?"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#review---how-are-models-fit-2",
+    "href": "slides/16-single-pred.html#review---how-are-models-fit-2",
+    "title": "Models",
+    "section": "Review - How are Models Fit?",
+    "text": "Review - How are Models Fit?\n\n\nWhat about in the categorical case?"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#how-we-model---linear-case",
+    "href": "slides/16-single-pred.html#how-we-model---linear-case",
+    "title": "Models",
+    "section": "How we model - linear case",
+    "text": "How we model - linear case\nlinear_reg() |>\nset_engine(“lm”) |>\nfit(y ~ x , data = data-set ) |>\n\ntidy()\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
