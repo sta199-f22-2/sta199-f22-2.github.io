@@ -167,7 +167,7 @@ Take turns in completing the exercise, only one member at a time. **Others shoul
 
 ## Packages
 
-We'll use the **tidyverse** package for much of the data wrangling and visualisation.
+We'll use the **tidyverse** package for much of the data wrangling and visualization.
 
 ```{r load-packages, message = FALSE}
 library(tidyverse)

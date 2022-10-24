@@ -74,9 +74,7 @@ Let’s start by examining the relationship between divergence_time and parsim.
 
 (c) Recreate the visualization from Exercise 1, this time adding a regression line to the visualization.
 
-(d) Explain, in your own words, why the width of the SE band changes as we move along the x-axis. 
-
-(e) What do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?
+(d) What do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?
 
 
 3.(a) Since parsim takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)
