@@ -910,6 +910,83 @@
     "text": "Grading\n\nExercise 1: 10 points\nExercise 2: 10 points\nExercise 3: 10 points\nExercise 4: 3 points\nExercise 5: 3 points\nExercise 6: 10 points\nWorkflow + formatting: 4 points\nTotal: 50 points"
   },
   {
+    "objectID": "hw/hw-4.html",
+    "href": "hw/hw-4.html",
+    "title": "HW 4 - Scraping + recap",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due Friday, Nov 2nd at 11:59pm ET."
+  },
+  {
+    "objectID": "hw/hw-4.html#workflow-formatting",
+    "href": "hw/hw-4.html#workflow-formatting",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Workflow + formatting",
+    "text": "Workflow + formatting\nMake sure to\n\nUpdate author name on your document.\nLabel all code chunks informatively and concisely.\nFollow the Tidyverse style guide.\nMake at least 3 commits.\nResize figures where needed, avoid tiny or huge plots.\nUse informative labels for plot axes, titles, etc.\nTurn in an organized, well formatted document."
+  },
+  {
+    "objectID": "hw/hw-4.html#packages",
+    "href": "hw/hw-4.html#packages",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Packages",
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualization, though you’re welcomed to also load other packages as needed.\n\nlibrary(tidyverse)\nlibrary(rvest)\nlibrary(robotstxt)"
+  },
+  {
+    "objectID": "hw/hw-4.html#exercise-1---data-scraping",
+    "href": "hw/hw-4.html#exercise-1---data-scraping",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Exercise 1 - Data Scraping",
+    "text": "Exercise 1 - Data Scraping\n\nPlease justify, using the tools we’ve learning in this course, if you are allowed to scrape data from each of the following websites:\n\nhttps://www.espn.com/\nhttps://twitter.com/\nhttps://www.rottentomatoes.com\n\n# insert-code-here"
+  },
+  {
+    "objectID": "hw/hw-4.html#exercise-2---rotten-tomatoes",
+    "href": "hw/hw-4.html#exercise-2---rotten-tomatoes",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Exercise 2 - Rotten Tomatoes",
+    "text": "Exercise 2 - Rotten Tomatoes\nRotten Tomatoes is an American review-aggregation website for film. They give percentage scores for movies based on how “good” the movies are. They provide 2 scores:\n - The Audience Score, denoted by a popcorn bucket\n - The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film\n\nWe are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween\n\nNext, run the following code:\n\npage <- read_html(\"https://www.rottentomatoes.com/franchise/halloween\")\n\ntitles <- page |>\n  html_nodes(\"#franchise-media a\") |>\n  html_text2()\n\ntitles_clean <- titles[c(FALSE, TRUE)]\n\ntitles\n\n [1] \"\"                                         \n [2] \"Halloween Ends\"                           \n [3] \"\"                                         \n [4] \"Halloween Kills\"                          \n [5] \"\"                                         \n [6] \"Halloween\"                                \n [7] \"\"                                         \n [8] \"Halloween II\"                             \n [9] \"\"                                         \n[10] \"Halloween\"                                \n[11] \"\"                                         \n[12] \"Halloween: Resurrection\"                  \n[13] \"\"                                         \n[14] \"Halloween H20: 20 Years Later\"            \n[15] \"\"                                         \n[16] \"Halloween: The Curse of Michael Myers\"    \n[17] \"\"                                         \n[18] \"Halloween 5: The Revenge of Michael Myers\"\n[19] \"\"                                         \n[20] \"Halloween 4: The Return of Michael Myers\" \n[21] \"\"                                         \n[22] \"Halloween III: Season of the Witch\"       \n[23] \"\"                                         \n[24] \"Halloween II\"                             \n[25] \"\"                                         \n[26] \"Halloween\"                                \n\ntitles_clean\n\n [1] \"Halloween Ends\"                           \n [2] \"Halloween Kills\"                          \n [3] \"Halloween\"                                \n [4] \"Halloween II\"                             \n [5] \"Halloween\"                                \n [6] \"Halloween: Resurrection\"                  \n [7] \"Halloween H20: 20 Years Later\"            \n [8] \"Halloween: The Curse of Michael Myers\"    \n [9] \"Halloween 5: The Revenge of Michael Myers\"\n[10] \"Halloween 4: The Return of Michael Myers\" \n[11] \"Halloween III: Season of the Witch\"       \n[12] \"Halloween II\"                             \n[13] \"Halloween\"                                \n\n\nIn 2-3 sentences, describe what the above code is doing. Specifically, how is titles different from titles_clean?\nAdd Response\n\nUsing Selector Gadget, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.\n\n\ntomato_score <- page |>\n  html_nodes(\"...\") |>\n  html_text2()\n\naudience_score <- page |>\n  html_nodes(\"...\") |>\n  html_text2()\n\ntomato_score \n\naudience_score\n\n\nCreate a tibble using the three variables you scraped. Name this tibble halloween\n\n\n\n#insert-code-here\n\n\nCreate an appropriate plot the assess the relationship between a movie’s audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.\n\n\n#insert-code-here"
+  },
+  {
+    "objectID": "hw/hw-4.html#exercise-3---smoking-during-pregnacy",
+    "href": "hw/hw-4.html#exercise-3---smoking-during-pregnacy",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Exercise 3 - Smoking during pregnacy",
+    "text": "Exercise 3 - Smoking during pregnacy\nIn 2004, the state of North Carolina released a large data set containing information on births recorded in this state. This data set is useful to researchers studying the relation between habits and practices of expectant mothers and the birth of their children. We will work with a random sample of observations from this data set. We are interested in a babies weight, and will use the tools we’ve learned in class to investigate it.\n\nncbirths <- read_csv(\"data/ncbirths.csv\")\n\n\nCreate a version of the ncbirths data set omitting observations where there are NAs for habit. You can call this version ncbirths_habitgiven.\nPlotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship betweenhabit and weight.\n\nIn 2-3 sentences, discuss the relationships observed.\n\nNow, fit a linear model that investigates the relationship between weight and ncbirths_habigtgiven. Provide the summary output below.\nWrite the estimated least squares regression line below using proper notation.\n\nHint: If you need to type an equation using proper notation, type your answers in-between \\[    \\]. You may use to put a hat on a character."
+  },
+  {
+    "objectID": "hw/hw-4.html#exercise-4---smoking-during-pregnacy---part-2",
+    "href": "hw/hw-4.html#exercise-4---smoking-during-pregnacy---part-2",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Exercise 4 - Smoking during pregnacy - part 2",
+    "text": "Exercise 4 - Smoking during pregnacy - part 2\n\nAnother researcher is interested in assessing the relationship between a babies weight, and the mother’s age.\n\nNow, fit a linear another linear model to investigate this relationship. Provide the summary output below.\n\nIn 2-3 sentences, explain how R fit the least squares regression line to model these data.\nInterpret the intercept in the context of the problem. Is this considered extrapolation? Why or why not?\nInterpret the slope coefficient in the context of the problem."
+  },
+  {
+    "objectID": "hw/hw-4.html#exercise-5---americas-neighborhood-pollster",
+    "href": "hw/hw-4.html#exercise-5---americas-neighborhood-pollster",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Exercise 5 - America’s Neighborhood Pollster",
+    "text": "Exercise 5 - America’s Neighborhood Pollster\nSurveyUSA interviewed 886 North Carolina adults 09/28/2022 through 10/02/2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question: Are you optimistic or pessimistic about the economic outlook for your family over the next year?\nResponses were broken down into the following categories:\n\n\nVariable\nLevels\n\n\n\nAge\n18-49; 50+\n\n\nMood\nOptimistic; Pessimistic\n\n\n\n\nOf the 886 responses, 481 were between the ages of 18-49. Of the individuals that are between 18-49, 237 individuals responded that they were pessimistic. Of the individuals that are 50+, 164 claimed to be optimistic.\n\nFill in the code below to create a hypothetical two-way table to represent this situation.\n\ndata <- tibble( \n  Type = c(),\n  Sale = c(),\n  values = ()\n  )\n\ndata |>\n  pivot_wider( \n    names_from = ...,\n    values_from = ....)\n\n\nUsing your table from part a, calculate the probability that a randomly selected individual is 50+ and is pessimistic.\nUsing your table from part a, calculate the probability that a randomly selected individual is optimistic.\nUsing your table from part a, calculate the probability that a randomly selected 18-49 aged individual is optimistic.\nCreate an appropriate visualization to compare the the relationship between Age and Mood. Your plot should include appropriate labels. Hint: You may have to re manipulate the data into a more usable form.\n\n\n# insert-code - here"
+  },
+  {
+    "objectID": "hw/hw-4.html#exercise-6---write-a-function",
+    "href": "hw/hw-4.html#exercise-6---write-a-function",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Exercise 6 - Write a function",
+    "text": "Exercise 6 - Write a function\nSuppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 and display the table results.\nHint: The sample function may be helpful. See the following: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sample\n\n#insert-code-here"
+  },
+  {
+    "objectID": "hw/hw-4.html#submission",
+    "href": "hw/hw-4.html#submission",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Submission",
+    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials Duke Net ID and log in using your Net ID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”). If you do not do this, you will be subject to lose points on the assignment.\nSelect the first page of your PDF submission to be associated with the “Workflow & formatting” question."
+  },
+  {
+    "objectID": "hw/hw-4.html#grading",
+    "href": "hw/hw-4.html#grading",
+    "title": "HW 4 - Scraping + recap",
+    "section": "Grading",
+    "text": "Grading\n\nExercise 1: points\nExercise 2: points\nExercise 3: points\nExercise 4: points\nExercise 5: points\nExercise 6: points\nWorkflow + formatting: 4 points\nTotal: 50 points"
+  },
+  {
     "objectID": "hw/hw3-suggested-answers.html",
     "href": "hw/hw3-suggested-answers.html",
     "title": "HW 3 - Ethics + recap- Suggested Answers",
@@ -2877,13 +2954,6 @@
     "text": "Step 3\n\n\n\n\nLate to class\nNot late to class\nTotals\n\n\n\n\nLot 6\n10\n190\n200\n\n\nLot 18\n120\n680\n800\n\n\n\n130\n870\n1,000\n\n\n\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/16-single-pred.html#checklist",
     "href": "slides/16-single-pred.html#checklist",
     "title": "Models",
@@ -2905,11 +2975,11 @@
     "text": "Goals\n– Modeling with single predictors\n– How to write equations\n– Interpret Slopes\n– Interpret Intercepts"
   },
   {
-    "objectID": "slides/16-single-pred.html#warm-up---correlation",
-    "href": "slides/16-single-pred.html#warm-up---correlation",
+    "objectID": "slides/16-single-pred.html#warm-up---correlation-vs-causation",
+    "href": "slides/16-single-pred.html#warm-up---correlation-vs-causation",
     "title": "Models",
-    "section": "Warm Up - Correlation",
-    "text": "Warm Up - Correlation"
+    "section": "Warm Up - Correlation vs Causation",
+    "text": "Warm Up - Correlation vs Causation"
   },
   {
     "objectID": "slides/16-single-pred.html#review---why-we-model",
@@ -2951,13 +3021,20 @@
     "href": "slides/16-single-pred.html#how-we-model---linear-case",
     "title": "Models",
     "section": "How we model - linear case",
-    "text": "How we model - linear case\nlinear_reg() |>\nset_engine(“lm”) |>\nfit(y ~ x , data = data-set ) |>\n\ntidy()\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "How we model - linear case\nlinear_reg() |>\nset_engine(“lm”) |>\nfit(y ~ x , data = data-set ) |>\n\ntidy()"
   },
   {
-    "objectID": "slides/16-single-pred.html#warm-up---correlation-vs-causation",
-    "href": "slides/16-single-pred.html#warm-up---correlation-vs-causation",
+    "objectID": "slides/16-single-pred.html#in-summary",
+    "href": "slides/16-single-pred.html#in-summary",
     "title": "Models",
-    "section": "Warm Up - Correlation vs Causation",
-    "text": "Warm Up - Correlation vs Causation"
+    "section": "In Summary",
+    "text": "In Summary\n– “For a 1 unit increase in x….”\n– On Average: Property of least squares regression- Line goes through the mean of x and y\n– Practice writing out equations: Population and Sample level\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
