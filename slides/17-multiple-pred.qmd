@@ -1,0 +1,18 @@
+---
+title: "Multiple Predictors"
+subtitle: "Lecture 17"
+date: "October 26, 2022"
+format: revealjs
+---
+
+## Checklist
+
+-- Clone `ae-16`
+
+-- Review context of `ae-15` for warm up question
+
+## Warm Up 
+
+Using the following output, write the estimated model below:
+
+![](images/SLRCat.png)
