@@ -2952,5 +2952,12 @@
     "title": "Models",
     "section": "How we model - linear case",
     "text": "How we model - linear case\nlinear_reg() |>\nset_engine(“lm”) |>\nfit(y ~ x , data = data-set ) |>\n\ntidy()\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/16-single-pred.html#warm-up---correlation-vs-causation",
+    "href": "slides/16-single-pred.html#warm-up---correlation-vs-causation",
+    "title": "Models",
+    "section": "Warm Up - Correlation vs Causation",
+    "text": "Warm Up - Correlation vs Causation"
   }
 ]

@@ -62,4 +62,11 @@ linear_reg() |>
   
   tidy()
 
+## In Summary 
+
+-- "For a 1 unit increase in x...." 
+
+-- **On Average**: Property of least squares regression- Line goes through the mean of x and y
+
+-- Practice writing out equations: Population and Sample level
 
