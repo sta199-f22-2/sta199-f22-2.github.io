@@ -42,6 +42,7 @@ We'll use the **tidyverse** package for much of the data wrangling and visualiza
 library(tidyverse)
 library(rvest)
 library(robotstxt)
+library(openintro)
 ```
 
 ## Exercise 1 - Data Scraping
@@ -69,32 +70,13 @@ Rotten Tomatoes is an American review-aggregation website for film. They give pe
 
 (a) We are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween
 
-Next, run the following code:
-
-```{r}
-
-
-page <- read_html("https://www.rottentomatoes.com/franchise/halloween")
-
-titles <- page |>
-  html_nodes("#franchise-media a") |>
-  html_text2()
-
-titles_clean <- titles[c(FALSE, TRUE)]
-
-titles
-
-titles_clean
-```
-
-In 2-3 sentences, describe what the above code is doing. Specifically, how is titles different from titles_clean?
-
-**Add Response**
-
-(c) Using `Selector Gadget`, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.
+(a) Using `Selector Gadget`, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.
 
 ```{r}
 #| eval: false
+
+page <- read_html("https://www.rottentomatoes.com/franchise/halloween")
+
 tomato_score <- page |>
   html_nodes("...") |>
   html_text2()
@@ -108,7 +90,28 @@ tomato_score
 audience_score
 ```
 
-(d) Create a tibble using the three variables you scraped. Name this tibble `halloween`
+
+(b) Next, run the following code:
+
+```{r}
+titles <- page |>
+  html_nodes(".franchise-media-list__h3") |>
+  html_text2()
+
+  
+titles_clean <- titles |>
+  as.data.frame() |>
+  separate(col=titles, into=c('Name', 'Year'), sep= '\\(' ) |>
+  str_remove(Year, '[\\)]')
+
+```
+
+In 2-3 sentences, describe what the above code is doing. Specifically, how is titles different from titles_clean?
+
+**Add Response**
+
+
+(c) Create a tibble using the three variables you scraped. Name this tibble `halloween`
 
 ```{r}
 
@@ -116,48 +119,39 @@ audience_score
 
 ```
 
-(e) Create an appropriate plot the assess the relationship between a movie's audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.
+(d) Create an appropriate plot the assess the relationship between a movie's audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.
 
 ```{r}
 #insert-code-here
 
 ```
 
+## Exercise 3 - Smoking during pregnancy
 
-## Exercise 3 - Smoking during pregnacy
+We are interested in smoking's impact during pregnancy. To investigate this, we will use adata set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children. This is a random sample of 1,000 cases from the data set released in 2014. The data set is called `births14`, and is pre-loaded in the `openintro` package you called to use at the beginning of the assignment. 
 
-In 2004, the state of North Carolina released a large data set containing information on births recorded in this state. This data set is useful to researchers studying the relation between habits and practices of expectant mothers and the birth of their children. We will work with a random sample of observations from this data set. We are interested in a babies weight, and will use the tools we've learned in class to investigate it.
 
-```{r}
-#| message: false
-ncbirths <- read_csv("data/ncbirths.csv")
-
-```
-
-(a) Create a version of the `ncbirths` data set omitting observations where there are NAs for `habit`. You can call this version `ncbirths_habitgiven`.
+(a) Create a version of the `births14` data set omitting observations where there are NAs for `habit`. You can call this version `births14_habitgiven`.
 
 (b) Plotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship between`habit` and `weight`.
 
 In 2-3 sentences, discuss the relationships observed.
 
-(c) Now, fit a linear model that investigates the relationship between `weight` and `ncbirths_habigtgiven`. Provide the summary output below.
+(c) Now, fit a linear model that investigates the relationship between `weight` and `births14_habigtgiven`. Provide the summary output below.
 
 (d) Write the estimated least squares regression line below using proper notation.
 
-Hint: If you need to type an equation using proper notation, type your answers in-between $$    $$. You may use \hat{example} to put a hat on a character.
+Hint: If you need to type an equation using proper notation, type your answers in-between $$        $$. You may use \hat{example} to put a hat on a character.
 
-## Exercise 4 - Smoking during pregnacy - part 2
+## Exercise 4 - Smoking during pregnacy - part 2 
 
-(a) Another researcher is interested in assessing the relationship between a babies weight, and the mother's age.
-
-Now, fit a linear another linear model to investigate this relationship. Provide the summary output below.
+(a) Another researcher is interested in assessing the relationship between a babies weight and the mother's age. Fit another linear model to investigate this relationship. Provide the summary output below.
 
 (b) In 2-3 sentences, explain how R fit the least squares regression line to model these data.
 
 (c) Interpret the intercept in the context of the problem. Is this considered extrapolation? Why or why not?
 
 (d) Interpret the slope coefficient in the context of the problem.
-
 
 ## Exercise 5 - America's Neighborhood Pollster
 
@@ -177,8 +171,8 @@ Fill in the code below to create a hypothetical two-way table to represent this 
 ```{r}
 #| eval: false
 data <- tibble( 
-  Type = c(),
-  Sale = c(),
+  age = c(),
+  mood = c(),
   values = ()
   )
 
@@ -204,13 +198,26 @@ data |>
 
 ## Exercise 6 - Write a function
 
-Suppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 and display the table results.
+Suppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Your function should be able to display a table of counts for chocolate or Starbursts for any amount of people you expect to see on Halloween. 
 
-Hint: The `sample` function may be helpful. See the following: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sample
+To create your function, please fill in the ... below.  
+
+
+Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 to display the table results. Run your function with a sample of 200 as well. 
+
+Hint: Think about what varies in your function as you define your input. 
 
 ```{r}
 
-#insert-code-here
+trick_or_treat <- function(...){ #the input to the function 
+  candy <- c('...', '...') #Types of Candy
+  results <- sample(candy, size = ..., replace = TRUE) 
+  return(table(results))
+}
+
+trick_or_treat(...)
+
+trick_or_treat(...)
 
 ```
 
