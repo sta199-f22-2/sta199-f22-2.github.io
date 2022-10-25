@@ -11,18 +11,17 @@ format: revealjs
 
 ## Announcements
 
--- Lab Feedback 
+-- Lab Feedback
 
-## Goals 
+## Goals
 
--- Modeling with single predictors 
+-- Modeling with single predictors
 
--- How to write equations 
+-- How to write equations
 
--- Interpret Slopes 
+-- Interpret Slopes
 
--- Interpret Intercepts 
-
+-- Interpret Intercepts
 
 ## Warm Up - Correlation vs Causation
 
@@ -30,43 +29,38 @@ format: revealjs
 
 ## Review - Why we Model?
 
-
 ## Review - Why we Model?
 
--- Prediction 
+-- Prediction
 
 -- Mathematical Model of Relationships
 
-## Review - How are Models Fit? 
+## Review - How are Models Fit?
 
-
-## Review - How are Models Fit? 
+## Review - How are Models Fit?
 
 ![](images/RSS.png)
 
-
-## Review - How are Models Fit? 
+## Review - How are Models Fit?
 
 ![](images/residexample.png)
 
-- What about in the categorical case? 
+-   What about in the categorical case?
 
+## How we model - linear case
 
-## How we model - linear case 
+linear_reg() \|\>
 
-linear_reg() |> 
+set_engine("lm") \|\>
 
-  set_engine("lm") |> 
-  
-  fit(y ~ x , data = data-set ) |> \
-  
-  tidy()
+fit(y \~ x , data = data-set ) \|\>\
 
-## In Summary 
+tidy()
 
--- "For a 1 unit increase in x...." 
+## In Summary
+
+-- "For a 1 unit increase in x...."
 
 -- **On Average**: Property of least squares regression- Line goes through the mean of x and y
 
 -- Practice writing out equations: Population and Sample level
-

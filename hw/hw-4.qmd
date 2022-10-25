@@ -68,7 +68,7 @@ Rotten Tomatoes is an American review-aggregation website for film. They give pe
 
 ![](images/tomatologos.png) - The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film
 
-(a) We are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween
+We are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween
 
 (a) Using `Selector Gadget`, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.
 
@@ -90,7 +90,6 @@ tomato_score
 audience_score
 ```
 
-
 (b) Next, run the following code:
 
 ```{r}
@@ -110,7 +109,6 @@ In 2-3 sentences, describe what the above code is doing. Specifically, how is ti
 
 **Add Response**
 
-
 (c) Create a tibble using the three variables you scraped. Name this tibble `halloween`
 
 ```{r}
@@ -128,8 +126,7 @@ In 2-3 sentences, describe what the above code is doing. Specifically, how is ti
 
 ## Exercise 3 - Smoking during pregnancy
 
-We are interested in smoking's impact during pregnancy. To investigate this, we will use adata set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children. This is a random sample of 1,000 cases from the data set released in 2014. The data set is called `births14`, and is pre-loaded in the `openintro` package you called to use at the beginning of the assignment. 
-
+We are interested in smoking's impact during pregnancy. To investigate this, we will use adata set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children. This is a random sample of 1,000 cases from the data set released in 2014. The data set is called `births14`, and is pre-loaded in the `openintro` package you called to use at the beginning of the assignment.
 
 (a) Create a version of the `births14` data set omitting observations where there are NAs for `habit`. You can call this version `births14_habitgiven`.
 
@@ -141,9 +138,9 @@ In 2-3 sentences, discuss the relationships observed.
 
 (d) Write the estimated least squares regression line below using proper notation.
 
-Hint: If you need to type an equation using proper notation, type your answers in-between $$        $$. You may use \hat{example} to put a hat on a character.
+Hint: If you need to type an equation using proper notation, type your answers in-between $$                $$. You may use \hat{example} to put a hat on a character.
 
-## Exercise 4 - Smoking during pregnacy - part 2 
+## Exercise 4 - Smoking during pregnacy - part 2
 
 (a) Another researcher is interested in assessing the relationship between a babies weight and the mother's age. Fit another linear model to investigate this relationship. Provide the summary output below.
 
@@ -198,14 +195,13 @@ data |>
 
 ## Exercise 6 - Write a function
 
-Suppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Your function should be able to display a table of counts for chocolate or Starbursts for any amount of people you expect to see on Halloween. 
+Suppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Your function should be able to display a table of counts for chocolate or Starbursts for any amount of people you expect to see on Halloween.
 
-To create your function, please fill in the ... below.  
+To create your function, please fill in the ... below.
 
+Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 to display the table results. Run your function with a sample of 200 as well.
 
-Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 to display the table results. Run your function with a sample of 200 as well. 
-
-Hint: Think about what varies in your function as you define your input. 
+Hint: Think about what varies in your function as you define your input.
 
 ```{r}
 #| eval: false
