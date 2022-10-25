@@ -102,7 +102,7 @@ titles <- page |>
 titles_clean <- titles |>
   as.data.frame() |>
   separate(col=titles, into=c('Name', 'Year'), sep= '\\(' ) |>
-  str_remove(Year, '[\\)]')
+  select(Name)
 
 ```
 
@@ -208,6 +208,7 @@ Have your function output a table of the number of chocolate bars and number of 
 Hint: Think about what varies in your function as you define your input. 
 
 ```{r}
+#| eval: false
 
 trick_or_treat <- function(...){ #the input to the function 
   candy <- c('...', '...') #Types of Candy
