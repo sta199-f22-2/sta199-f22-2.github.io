@@ -35,4 +35,25 @@ Using the following output, write the estimated model below:
 -- Would a different model be "better" / explain more variation in the response body mass? 
 
 
+
+## Modeling More Than one Variable 
+
+
+-- **Multiple linear regression** is used to estimate the relationship between **two or more** explanatory variables and one response variable.
+
+-- we want to predict the value of a variable based on the value of two or more other variables
+
+-- "account for X1 and assess the relationship between X2 and Y" - main effects 
+
+-- "does X1's relationship with Y change based on X2" 
+
+
+
+
+
+
+
+
+
+
 ## In Summary
