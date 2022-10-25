@@ -138,7 +138,7 @@ In 2-3 sentences, discuss the relationships observed.
 
 (d) Write the estimated least squares regression line below using proper notation.
 
-Hint: If you need to type an equation using proper notation, type your answers in-between $$                $$. You may use \hat{example} to put a hat on a character.
+Hint: If you need to type an equation using proper notation, type your answers in-between $$                                $$. You may use \hat{example} to put a hat on a character.
 
 ## Exercise 4 - Smoking during pregnacy - part 2
 

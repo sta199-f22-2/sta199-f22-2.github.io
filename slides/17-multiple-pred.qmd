@@ -11,8 +11,28 @@ format: revealjs
 
 -- Review context of `ae-15` for warm up question
 
+## Goals 
+
+-- Finish categorical single predictor 
+
+-- Model with multiple predictors 
+
+-- Adjusted R-squared 
+
 ## Warm Up 
 
+Recall that we ended last class by modeling the relationship between a penguin's body mass and the insland they were recorded on. 
 Using the following output, write the estimated model below:
 
 ![](images/SLRCat.png)
+
+
+## Further 
+
+-- What if we want to account for both their flipper length and island? 
+
+
+-- Would a different model be "better" / explain more variation in the response body mass? 
+
+
+## In Summary
