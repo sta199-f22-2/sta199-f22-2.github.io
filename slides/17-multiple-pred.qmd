@@ -11,6 +11,12 @@ format: revealjs
 
 -- Review context of `ae-15` for warm up question
 
+## Announcements
+
+-- Lab Feedback
+
+-- Project Repos Coming 
+
 ## Goals 
 
 -- Finish categorical single predictor 
@@ -32,7 +38,7 @@ Using the following output, write the estimated model below:
 -- What if we want to account for both their flipper length and island? 
 
 
--- Would a different model be "better" / explain more variation in the response body mass? 
+-- Would a different model explain more variation in the response body mass? 
 
 
 
