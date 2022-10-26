@@ -123,7 +123,8 @@ All others should **not** touch the document.
 
 -- precdiff and transformed_parsim
 
-To answer this question, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?
+
+Report the slops for each of these models. To answer our question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?
 
 ::: callout-important
 After the team member working on Exercise 4 renders, commits, and pushes, another team member should pull their changes and render the document.
