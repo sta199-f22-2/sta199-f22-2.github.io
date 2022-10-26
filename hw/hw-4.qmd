@@ -75,6 +75,8 @@ We are going to investigate the relationship between the audience score and toma
 (b) Next, run the following code:
 
 ```{r}
+#| eval: false
+
 
 titles_years <- page |>
   html_nodes(".franchise-media-list__h3") |>

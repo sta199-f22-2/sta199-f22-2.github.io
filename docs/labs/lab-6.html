@@ -249,15 +249,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li>
-<a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a>
-  <ul class="collapse">
-<li><a href="#intro" id="toc-intro" class="nav-link" data-scroll-target="#intro">Intro</a></li>
+<li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a></li>
+  <li><a href="#intro" id="toc-intro" class="nav-link" data-scroll-target="#intro">Intro</a></li>
   <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The Data</a></li>
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
-  </ul>
-</li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/labs/lab-6.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
@@ -293,10 +291,10 @@ Important
 <section id="learning-goals" class="level1"><h1>Learning Goals</h1>
 <p>– Use tidymodels framework to build a linear model and estimate regression parameters</p>
 <p>– Visualize your linear model</p>
-<section id="intro" class="level2"><h2 class="anchored" data-anchor-id="intro">Intro</h2>
+</section><section id="intro" class="level1"><h1>Intro</h1>
 <p>Parasites can cause infectious disease – but not all animals are affected by the same parasites. Some parasites are present in a multitude of species and others are confined to a single host. It is hypothesized that closely related hosts are more likely to share the same parasites. More specifically, it is thought that closely related hosts will live in similar environments and have similar genetic makeup that coincides with optimal conditions for the same parasite to flourish.</p>
 <p>In this lab we will see how much evolutionary history predicts parasite similarity.</p>
-</section><section id="the-data" class="level2"><h2 class="anchored" data-anchor-id="the-data">The Data</h2>
+</section><section id="the-data" class="level1"><h1>The Data</h1>
 <p>Today’s dataset comes from an Ecology Letters paper by Cooper at al.&nbsp;(2012) entitled “Phylogenetic host specificity and understanding parasite sharing in primates” located <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1461-0248.2012.01858.x">here</a>. The goal of the paper was to identify the ability of evolutionary history and ecological traits to characterize parasite host specificity.</p>
 <p>Each row of the data contains two species, species1 and species2.</p>
 <p>Subsequent columns describe metrics that compare the species:</p>
@@ -306,50 +304,216 @@ Important
 <p>– precdiff: difference in mean annual precipitation across the two species geographic ranges (mm)</p>
 <p>– parsim: a measure of parasite similarity (proportion of parasites shared between species, ranges from 0 to 1.)</p>
 <p>The data are available in <code>parasites.csv</code> in the data folder.</p>
-</section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
+</section><section id="packages" class="level1"><h1>Packages</h1>
 <p>We’ll use the <strong>tidyverse</strong> package for much of the data wrangling and visualization.</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidymodels.tidymodels.org">tidymodels</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="exercises" class="level2"><h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+</section><section id="exercises" class="level1"><h1>Exercises</h1>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pick another member of the team write the answer to Exercise 1. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
+</div>
+</div>
 <p>To get started, load the data and save the data frame as <code>parasites</code>.</p>
 <p>Let’s start by examining the relationship between divergence_time and parsim.</p>
 <p>1.(a) Based on the goals of the analysis, what is the response variable?</p>
 <ol start="2" type="a">
-<li><p>Visualize the relationship between the two variables.</p></li>
+<li><p>Visualize the relationship between the two variables. Be sure to put informative axes labels and a title.</p></li>
 <li><p>Use the visualization to describe the relationship between the two variables.</p></li>
 </ol>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After the team member working on Exercise 1 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
+</div>
+</div>
 <p>2.(a) Write the regression equation using proper notation.</p>
 <ol start="2" type="a">
 <li><p>Interpret the slope and the intercept in the context of the data.</p></li>
 <li><p>Recreate the visualization from Exercise 1, this time adding a regression line to the visualization.</p></li>
 <li><p>What do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?</p></li>
 </ol>
-<p>3.(a) Since parsim takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After the team member working on Exercise 2 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 3. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
+</div>
+</div>
+<p>3.(a) Using mutate, crate a new variable that transforms the variable <code>parsim</code> from being between 0 and 1, so that it can range between (−∞,+∞). i.e.&nbsp;Create a new variable transformed_parsim that is calculated as log(parsim/(1-parsim)). Add this variable to your data frame. This will be better suited for fitting a regression model (and interpreting predicted values!).</p>
+<p>Note: <strong>log</strong> in R represents taking the <strong>nautral log</strong></p>
 <ol start="2" type="a">
-<li><p>Create a new variable transformed_parsim that is calculated as log(parsim/(1-parsim)). Add this variable to your data frame.</p></li>
-<li><p>Then, visualize the relationship between divergence_time and transformed_parsim. Add a regression line to your visualization.</p></li>
+<li><p>Then, visualize the relationship between divergence_time and transformed_parsim. Be sure to put informative axes labels and a title. Add a regression line to your visualization.</p></li>
 <li><p>Write a 1-2 sentence description of what you observe in the visualization.</p></li>
 </ol>
-<p>4.(a) <em>Which variable is the strongest individual predictor of parasite similarity between species?</em> To answer this question, begin by fitting a linear regression model to each pair of variables. Do not report the model outputs in a tidy format but save each one as dt_model, dist_model, BM_model and prec_model, respectively.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After the team member working on Exercise 3 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 4. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li>
+<em>Which variable is the strongest individual predictor of parasite similarity between species?</em> To answer this question, begin by fitting a linear regression model to each pair of variables. Do not report the model outputs in a tidy format but save each one as dt_model, dist_model, BM_model and prec_model, respectively.</li>
+</ol>
 <p>– divergence_time and transformed_parsim</p>
 <p>– distance and transformed_parsim</p>
 <p>– BMdiff and transformed_parsim</p>
 <p>– precdiff and transformed_parsim</p>
-<p>Would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?</p>
-<ol start="5" type="1">
-<li>To compare the explanatory power of each individual predictor, we will look at <span class="math display">\[R^2\]</span> between the models. <span class="math display">\[R^2\]</span> is a measure of how much of the variability in the response variable is explained by the model.</li>
-</ol>
-<p>As you may have guessed from the name <span class="math display">\[R^2\]</span> can be calculated by squaring the correlation. The correlation r takes values -1 to 1, therefore, <span class="math display">\[R^2\]</span> takes values 0 to 1. Intuitively, if r=1 or −1, then <span class="math display">\[R^2\]</span>=1, indicating the model is a perfect fit for the data. If r≈0 then <span class="math display">\[R^2\]</span>≈0, indicating the model is a very bad fit for the data.</p>
-<p>You can calculate <span class="math display">\[R^2\]</span> using the glance function. For example, you can calculate <span class="math display">\[R^2\]</span> for dt_model using the code <code>glance(dt_model)$r.squared</code>.</p>
 <ol type="a">
-<li><p>Calculate <span class="math display">\[R^2\]</span> for each model fit in the previous exercise.</p></li>
-<li><p>Which variable is the strongest predictor of parasite similarity? Briefly explain your choice.</p></li>
+<li><p>Report the slops for each of these models. Use proper notation.</p></li>
+<li><p>To answer our question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?</p></li>
 </ol>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After the team member working on Exercise 4 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 5. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
+</div>
+</div>
+<ol start="5" type="1">
+<li>Now, what if calculated <span class="math inline">\(R^2\)</span> to help answer our question? To compare the explanatory power of each individual predictor, we will look at <span class="math inline">\(R^2\)</span> between the models. <span class="math inline">\(R^2\)</span> is a measure of how much of the variability in the response variable is explained by the model.</li>
+</ol>
+<p>As you may have guessed from the name <span class="math inline">\(R^2\)</span> can be calculated by squaring the correlation when we have a simple linear regression model. The correlation r takes values -1 to 1, therefore, <span class="math inline">\(R^2\)</span> takes values 0 to 1. Intuitively, if r=1 or −1, then <span class="math inline">\(R^2\)</span>=1, indicating the model is a perfect fit for the data. If r≈0 then <span class="math inline">\(R^2\)</span>≈0, indicating the model is a very bad fit for the data.</p>
+<p>You can calculate <span class="math inline">\(R^2\)</span> using the glance function. For example, you can calculate <span class="math inline">\(R^2\)</span> for dt_model using the code <code>glance(dt_model)$r.squared</code>.</p>
+<ol type="a">
+<li><p>Calculate and report <span class="math inline">\(R^2\)</span> for each model fit in the previous exercise.</p></li>
+<li><p>To answer our question of interest, would it be useful to compare the <span class="math inline">\(R^2\)</span> in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?</p></li>
+</ol>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After the team member working on Exercise 5 renders, commits, and pushes, <strong>all other team members</strong> should pull the changes and render the document. Finally, a team member different than the one responsible for typing up responses to Exercise 5 should do the last task outlined below.</p>
+</div>
+</div>
+</section><section id="submission" class="level1"><h1>Submission</h1>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you wrap up the assignment, make sure all documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to render and push changes.</p>
+<p>You must turn in a PDF file to the Gradescope page by the submission deadline to be considered “on time”.</p>
+<p>Make sure your data are tidy! That is, your code should not be running off the pages and spaced properly. See: <a href="https://style.tidyverse.org/ggplot2.html" class="uri">https://style.tidyverse.org/ggplot2.html</a>.</p>
+</div>
+</div>
+<p>To submit your assignment:</p>
+<ul>
+<li>Go to <a href="http://www.gradescope.com" class="uri">http://www.gradescope.com</a> and click <em>Log in</em> in the top right corner.</li>
+<li>Click <em>School Credentials</em> <span class="math inline">\(\rightarrow\)</span> <em>Duke NetID</em> and log in using your NetID credentials.</li>
+<li>Click on your <em>STA 199</em> course.</li>
+<li>Click on the assignment, and you’ll be prompted to submit it.</li>
+<li>Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be “checked”). <em>If you do not do this, you will be subject to lose points on the assignment.</em>
+</li>
+<li>Select the first page of your .pdf submission to be associated with the <em>“Workflow &amp; formatting”</em> question.</li>
+</ul></section><section id="grading" class="level1"><h1>Grading</h1>
+<table class="table">
+<thead><tr class="header">
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Points</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Ex 1</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ex 2</td>
+<td style="text-align: left;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ex 3</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ex 4</td>
+<td style="text-align: left;">8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ex 4</td>
+<td style="text-align: left;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Workflow &amp; formatting</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: left;"><strong>50</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The “Workflow &amp; formatting” component assesses the reproducible workflow. This includes:</p>
+<ul>
+<li>having at least 3 informative commit messages</li>
+<li>labeling the code chunks</li>
+<li>having readable code that does not exceed 80 characters, i.e., we can read all your code in the rendered PDF</li>
+<li>each team member contributing to the repo with commits at least once</li>
+<li>the issue being closed with a commit message</li>
+</ul>
+</div>
+</div>
 
 
-</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");

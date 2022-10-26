@@ -256,8 +256,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
   <li><a href="#exercise-1---data-scraping" id="toc-exercise-1---data-scraping" class="nav-link" data-scroll-target="#exercise-1---data-scraping">Exercise 1 - Data Scraping</a></li>
   <li><a href="#exercise-2---rotten-tomatoes" id="toc-exercise-2---rotten-tomatoes" class="nav-link" data-scroll-target="#exercise-2---rotten-tomatoes">Exercise 2 - Rotten Tomatoes</a></li>
-  <li><a href="#exercise-3---smoking-during-pregnancy" id="toc-exercise-3---smoking-during-pregnancy" class="nav-link" data-scroll-target="#exercise-3---smoking-during-pregnancy">Exercise 3 - Smoking during pregnancy</a></li>
-  <li><a href="#exercise-4---smoking-during-pregnacy---part-2" id="toc-exercise-4---smoking-during-pregnacy---part-2" class="nav-link" data-scroll-target="#exercise-4---smoking-during-pregnacy---part-2">Exercise 4 - Smoking during pregnacy - part 2</a></li>
+  <li><a href="#exercise-3---smoking-during-pregnancy---part-1" id="toc-exercise-3---smoking-during-pregnancy---part-1" class="nav-link" data-scroll-target="#exercise-3---smoking-during-pregnancy---part-1">Exercise 3 - Smoking during pregnancy - Part 1</a></li>
+  <li><a href="#exercise-4---smoking-during-pregnacy---part-2" id="toc-exercise-4---smoking-during-pregnacy---part-2" class="nav-link" data-scroll-target="#exercise-4---smoking-during-pregnacy---part-2">Exercise 4 - Smoking during pregnacy - Part 2</a></li>
   <li><a href="#exercise-5---americas-neighborhood-pollster" id="toc-exercise-5---americas-neighborhood-pollster" class="nav-link" data-scroll-target="#exercise-5---americas-neighborhood-pollster">Exercise 5 - America’s Neighborhood Pollster</a></li>
   <li><a href="#exercise-6---write-a-function" id="toc-exercise-6---write-a-function" class="nav-link" data-scroll-target="#exercise-6---write-a-function">Exercise 6 - Write a function</a></li>
   </ul>
@@ -349,76 +349,55 @@ Important
 </div>
 </section><section id="exercise-2---rotten-tomatoes" class="level2"><h2 class="anchored" data-anchor-id="exercise-2---rotten-tomatoes">Exercise 2 - Rotten Tomatoes</h2>
 <p>Rotten Tomatoes is an American review-aggregation website for film. They give percentage scores for movies based on how “good” the movies are. They provide 2 scores:</p>
-<p><img src="images/popcornlogos.png" class="img-fluid"> - The Audience Score, denoted by a popcorn bucket</p>
+<p><img src="images/popcornlogos.png" class="img-fluid"> - The audience score, denoted by a popcorn bucket</p>
 <p><img src="images/tomatologos.png" class="img-fluid"> - The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film</p>
 <p>We are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween</p>
 <ol type="a">
-<li>Using <code>Selector Gadget</code>, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.</li>
+<li><p>Using <code>Selector Gadget</code>, scrape the <code>tomato_score</code> and <code>audience_score</code> and report the lengths of these vectors (using the <code><a href="https://rdrr.io/r/base/length.html">length()</a></code>) function. <em>Hint:</em> Their lengths should be equal.</p></li>
+<li><p>Next, run the following code:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">page</span> <span class="op">&lt;-</span> <span class="fu"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_html</a></span><span class="op">(</span><span class="st">"https://www.rottentomatoes.com/franchise/halloween"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">tomato_score</span> <span class="op">&lt;-</span> <span class="va">page</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/rename.html">html_nodes</a></span><span class="op">(</span><span class="st">"..."</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/html_text.html">html_text2</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">audience_score</span> <span class="op">&lt;-</span> <span class="va">page</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/rename.html">html_nodes</a></span><span class="op">(</span><span class="st">"..."</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/html_text.html">html_text2</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">tomato_score</span> </span>
-<span></span>
-<span><span class="va">audience_score</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<ol start="2" type="a">
-<li>Next, run the following code:</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">titles</span> <span class="op">&lt;-</span> <span class="va">page</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">titles_years</span> <span class="op">&lt;-</span> <span class="va">page</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/rename.html">html_nodes</a></span><span class="op">(</span><span class="st">".franchise-media-list__h3"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/html_text.html">html_text2</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
 <span>  </span>
-<span><span class="va">titles_clean</span> <span class="op">&lt;-</span> <span class="va">titles</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/separate.html">separate</a></span><span class="op">(</span>col<span class="op">=</span><span class="va">titles</span>, into<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'Name'</span>, <span class="st">'Year'</span><span class="op">)</span>, sep<span class="op">=</span> <span class="st">'\\('</span> <span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">Name</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">halloween</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>title_year <span class="op">=</span> <span class="va">titles_years</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/separate.html">separate</a></span><span class="op">(</span><span class="va">titles</span>, into <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"title"</span>, <span class="st">"year"</span><span class="op">)</span>, sep<span class="op">=</span> <span class="st">"\\("</span> <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>In 2-3 sentences, describe what the above code is doing. Specifically, how is titles different from titles_clean?</p>
+<p>In 2-3 sentences, describe what the above code is doing. Make sure to articulate each step of both of the pipelines. <em>Hint:</em> Print out <code>titles_years</code> and <code>halloween</code> to see what these objects look like. This will help figure out what the code is doing. You should also try running each line of the pipeline individually to see their outputs.</p>
 <p><strong>Add Response</strong></p>
 <ol start="3" type="a">
-<li>Create a tibble using the three variables you scraped. Name this tibble <code>halloween</code>
-</li>
+<li>Add the columns <code>tomato_score</code> and <code>audience_score</code> from part (a) to your data frame called <code>halloween</code> that you created in part (b).</li>
+</ol>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#insert-code-here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="a">
+<li>Create an appropriate plot the assess the relationship between a movie’s audience score and their tomatometer score. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#insert-code-here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ol start="4" type="a">
-<li>Create an appropriate plot the assess the relationship between a movie’s audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.</li>
-</ol>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#insert-code-here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="exercise-3---smoking-during-pregnancy" class="level2"><h2 class="anchored" data-anchor-id="exercise-3---smoking-during-pregnancy">Exercise 3 - Smoking during pregnancy</h2>
-<p>We are interested in smoking’s impact during pregnancy. To investigate this, we will use adata set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children. This is a random sample of 1,000 cases from the data set released in 2014. The data set is called <code>births14</code>, and is pre-loaded in the <code>openintro</code> package you called to use at the beginning of the assignment.</p>
+</section><section id="exercise-3---smoking-during-pregnancy---part-1" class="level2"><h2 class="anchored" data-anchor-id="exercise-3---smoking-during-pregnancy---part-1">Exercise 3 - Smoking during pregnancy - Part 1</h2>
+<p>We are interested in the impact of smoking during pregnancy. Since it is not possible to run a randomized controlled experiment to investigate this impact, we will instead use a data set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children. This is a random sample of 1,000 cases from a data set released in 2014 by the state of North Carolina. The data set is called <code>births14</code>, and it is included in the <strong>openintro</strong> package you loaded at the beginning of the assignment.</p>
 <ol type="a">
-<li><p>Create a version of the <code>births14</code> data set omitting observations where there are NAs for <code>habit</code>. You can call this version <code>births14_habitgiven</code>.</p></li>
-<li><p>Plotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship between<code>habit</code> and <code>weight</code>.</p></li>
-</ol>
-<p>In 2-3 sentences, discuss the relationships observed.</p>
-<ol start="3" type="a">
-<li><p>Now, fit a linear model that investigates the relationship between <code>weight</code> and <code>births14_habigtgiven</code>. Provide the summary output below.</p></li>
+<li><p>Create a version of the <code>births14</code> data set dropping observations where there are <code>NA</code>s for <code>habit</code>. You can call this version <code>births14_habitgiven</code>.</p></li>
+<li><p>Plotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship between<code>habit</code> and <code>weight</code>. In 2-3 sentences, discuss the relationships observed.</p></li>
+<li><p>Now, fit a linear model that investigates the relationship between <code>weight</code> and <code>births14_habigtgiven</code>. Provide the tidy summary output below.</p></li>
 <li><p>Write the estimated least squares regression line below using proper notation.</p></li>
 </ol>
-<p>Hint: If you need to type an equation using proper notation, type your answers in-between <span class="math display">\[                                \]</span>. You may use to put a hat on a character.</p>
-</section><section id="exercise-4---smoking-during-pregnacy---part-2" class="level2"><h2 class="anchored" data-anchor-id="exercise-4---smoking-during-pregnacy---part-2">Exercise 4 - Smoking during pregnacy - part 2</h2>
+<p>Hint: If you need to type an equation using proper notation, type your answers in-between <span class="math display">\[                                \]</span>. You may use <code>\hat{example}</code> to put a hat on a character.</p>
+</section><section id="exercise-4---smoking-during-pregnacy---part-2" class="level2"><h2 class="anchored" data-anchor-id="exercise-4---smoking-during-pregnacy---part-2">Exercise 4 - Smoking during pregnacy - Part 2</h2>
 <ol type="a">
-<li><p>Another researcher is interested in assessing the relationship between a babies weight and the mother’s age. Fit another linear model to investigate this relationship. Provide the summary output below.</p></li>
+<li><p>Another researcher is interested in assessing the relationship between babies’ weights and mothers’ ages. Fit another linear model to investigate this relationship. Provide the summary output below.</p></li>
 <li><p>In 2-3 sentences, explain how R fit the least squares regression line to model these data.</p></li>
-<li><p>Interpret the intercept in the context of the problem. Is this considered extrapolation? Why or why not?</p></li>
-<li><p>Interpret the slope coefficient in the context of the problem.</p></li>
+<li><p>Interpret the intercept in the context of the data and the research question. Is the intercept meaningful in this context? Why or why not?</p></li>
+<li><p>Interpret the slope in the context of the data and the research question.</p></li>
 </ol></section><section id="exercise-5---americas-neighborhood-pollster" class="level2"><h2 class="anchored" data-anchor-id="exercise-5---americas-neighborhood-pollster">Exercise 5 - America’s Neighborhood Pollster</h2>
-<p>SurveyUSA interviewed 886 North Carolina adults 09/28/2022 through 10/02/2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question: <em>Are you optimistic or pessimistic about the economic outlook for your family over the next year?</em></p>
+<p>SurveyUSA interviewed 886 North Carolina adults between Septermber 28, 2022 and October 2, 2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question:</p>
+<blockquote class="blockquote">
+<p>Are you optimistic or pessimistic about the economic outlook for your family over the next year?</p>
+</blockquote>
 <p>Responses were broken down into the following categories:</p>
 <table class="table">
 <thead><tr class="header">
@@ -441,41 +420,53 @@ Important
 </ol>
 <p>Fill in the code below to create a hypothetical two-way table to represent this situation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>( </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(),</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">mood =</span> <span class="fu">c</span>(),</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">values =</span> ()</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>( </span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> ...,</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> ....)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>( </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">c</span>(),</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">mood =</span> <span class="fu">c</span>(),</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">values =</span> ()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>( </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_from =</span> ...,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_from =</span> ...</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="2" type="a">
-<li><p>Using your table from part a, calculate the probability that a randomly selected individual is 50+ and is pessimistic.</p></li>
-<li><p>Using your table from part a, calculate the probability that a randomly selected individual is optimistic.</p></li>
-<li><p>Using your table from part a, calculate the probability that a randomly selected 18-49 aged individual is optimistic.</p></li>
-<li><p>Create an appropriate visualization to compare the the relationship between <code>Age</code> and <code>Mood</code>. Your plot should include appropriate labels. Hint: You may have to re manipulate the data into a more usable form.</p></li>
-</ol>
+<li><p>Using your table from part (a), calculate the probability that a randomly selected individual is 50+ and is pessimistic.</p></li>
+<li><p>Using your table from part (a), calculate the probability that a randomly selected individual is optimistic.</p></li>
+<li><p>Using your table from part (a), calculate the probability that a randomly selected 18-49 aged individual is optimistic.</p></li>
+<li><p>Create an appropriate visualization to compare the the relationship between <code>age</code> and <code>mood</code>. Your plot should include appropriate labels. <em>Hint:</em> You may have to re manipulate the data into a more usable form.</p></li>
+</ol></section><section id="exercise-6---write-a-function" class="level2"><h2 class="anchored" data-anchor-id="exercise-6---write-a-function">Exercise 6 - Write a function</h2>
+<p>Suppose you have two types of candy to give out on Halloween; Hershey’s bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a Hershey’s bar is 0.5. With this information, create a function that chooses for you which type of candy you will give a trick-or-treater that knocks on your door. Your function should take a numerical value as an input and should give the numbers of Hershey’s bars and Starbursts in a 2x2 tibble with columns <code>candy</code> and <code>n</code> as an output.</p>
+<p>For example, if you want to select candies for 3 trick or treaters, it might look something like this:</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># insert-code - here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">trick_or_treat</span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="exercise-6---write-a-function" class="level2"><h2 class="anchored" data-anchor-id="exercise-6---write-a-function">Exercise 6 - Write a function</h2>
-<p>Suppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Your function should be able to display a table of counts for chocolate or Starbursts for any amount of people you expect to see on Halloween.</p>
-<p>To create your function, please fill in the … below.</p>
-<p>Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 to display the table results. Run your function with a sample of 200 as well.</p>
-<p>Hint: Think about what varies in your function as you define your input.</p>
+<p>And the result might look something like this:</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">trick_or_treat</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">...</span><span class="op">)</span><span class="op">{</span> <span class="co">#the input to the function </span></span>
-<span>  <span class="va">candy</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'...'</span>, <span class="st">'...'</span><span class="op">)</span> <span class="co">#Types of Candy</span></span>
-<span>  <span class="va">results</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">candy</span>, size <span class="op">=</span> <span class="va">...</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> </span>
-<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="va">results</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="op">}</span></span>
-<span></span>
-<span><span class="fu">trick_or_treat</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">trick_or_treat</span><span class="op">(</span><span class="va">...</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A tibble: 2 × 2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  candy             n</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="sc">&lt;</span>chr<span class="sc">&gt;</span>         <span class="er">&lt;</span>int<span class="sc">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> Hershey<span class="st">'s bar     2</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="st">2 Starburst         1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Your function should be able to display a table of counts for Hershey’s bars or Starbursts for any amount of people you expect to see on Halloween.</p>
+<p>Write this function and test it with 15, 100, and 200 as inputs. You will note that every time you render your document the results will change. This is expected as you’re randomly sampling. (And later on in the course we’ll talk about how to make these numbers not change every time you render, for reproducibility!)</p>
+<p>To create your function, please fill in the <code>___</code> below.</p>
+<p><em>Hint:</em> Think about what varies in your function as you define your input.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>trick_or_treat <span class="ot">&lt;-</span> <span class="cf">function</span>(___){ <span class="co"># input</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  candy_types <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"___"</span>, <span class="st">"___"</span>) <span class="co"># types of candy</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">candy =</span> <span class="fu">sample</span>(___, <span class="at">size =</span> ___, <span class="at">replace =</span> ___)) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">___</span>(___)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">trick_or_treat</span>(___)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">trick_or_treat</span>(___)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="fu">trick_or_treat</span>(___)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section><section id="wrap-up" class="level1"><h1>Wrap up</h1>
 <section id="submission" class="level2"><h2 class="anchored" data-anchor-id="submission">Submission</h2>
@@ -487,16 +478,23 @@ Important
 <li>Mark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”). If you do not do this, you will be subject to lose points on the assignment.</li>
 <li>Select the first page of your PDF submission to be associated with the “Workflow &amp; formatting” question.</li>
 </ul></section><section id="grading" class="level2"><h2 class="anchored" data-anchor-id="grading">Grading</h2>
-<ul>
-<li>Exercise 1: points</li>
-<li>Exercise 2: points</li>
-<li>Exercise 3: points</li>
-<li>Exercise 4: points</li>
-<li>Exercise 5: points</li>
-<li>Exercise 6: points</li>
-<li>Workflow + formatting: 4 points</li>
-<li>Total: 50 points</li>
-</ul>
+<pre><code>TOTAL: 50 pts
+----------------------
+Ex 1: 6 pts
+Ex 2: 9 pts
+Ex 3: 8 pts
+Ex 4: 8 pts
+Ex 5: 9 pts
+Ex 6: 5 pts
+Workflow + formatting: 5 pts
+  - 1 pt: full points if at least three commits
+  - 1 pt: full point for linking HW pages on gradescope
+  - 2 pts: code style. Code should follow tidyverse style guidelines, and 
+  narrative and text should not exceed the 80 character limit. Figures
+  should be resized properly with informative legends and labels. For minor 
+  violations, provide a reminder (and no points off). For repeated
+  violations, take off 1 pt with note it will be more in the future. 
+  Include a link to the tidyverse code style here: https://style.tidyverse.org/.</code></pre>
 
 
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
