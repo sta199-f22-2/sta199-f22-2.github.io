@@ -75,6 +75,7 @@ We are going to investigate the relationship between the audience score and toma
 (b) Next, run the following code:
 
 ```{r}
+
 titles_years <- page |>
   html_nodes(".franchise-media-list__h3") |>
   html_text2()
@@ -228,11 +229,20 @@ trick_or_treat(___)
 
 ## Grading
 
--   Exercise 1: ___ points
--   Exercise 2: ___ points
--   Exercise 3: ___ points
--   Exercise 4: ___ points
--   Exercise 5: ___ points
--   Exercise 6: ___ points
--   Workflow + formatting: 4 points
--   Total: 50 points
+    TOTAL: 50 pts
+    ----------------------
+    Ex 1: 6 pts
+    Ex 2: 9 pts
+    Ex 3: 8 pts
+    Ex 4: 8 pts
+    Ex 5: 9 pts
+    Ex 6: 5 pts
+    Workflow + formatting: 5 pts
+      - 1 pt: full points if at least three commits
+      - 1 pt: full point for linking HW pages on gradescope
+      - 2 pts: code style. Code should follow tidyverse style guidelines, and 
+      narrative and text should not exceed the 80 character limit. Figures
+      should be resized properly with informative legends and labels. For minor 
+      violations, provide a reminder (and no points off). For repeated
+      violations, take off 1 pt with note it will be more in the future. 
+      Include a link to the tidyverse code style here: https://style.tidyverse.org/.

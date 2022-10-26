@@ -928,7 +928,7 @@
     "href": "hw/hw-4.html#packages",
     "title": "HW 4 - Scraping + recap",
     "section": "Packages",
-    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualization, though you’re welcomed to also load other packages as needed.\n\nlibrary(tidyverse)\nlibrary(rvest)\nlibrary(robotstxt)"
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualization, though you’re welcomed to also load other packages as needed.\n\nlibrary(tidyverse)\nlibrary(rvest)\nlibrary(robotstxt)\nlibrary(openintro)"
   },
   {
     "objectID": "hw/hw-4.html#exercise-1---data-scraping",
@@ -942,35 +942,35 @@
     "href": "hw/hw-4.html#exercise-2---rotten-tomatoes",
     "title": "HW 4 - Scraping + recap",
     "section": "Exercise 2 - Rotten Tomatoes",
-    "text": "Exercise 2 - Rotten Tomatoes\nRotten Tomatoes is an American review-aggregation website for film. They give percentage scores for movies based on how “good” the movies are. They provide 2 scores:\n - The Audience Score, denoted by a popcorn bucket\n - The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film\n\nWe are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween\n\nNext, run the following code:\n\npage <- read_html(\"https://www.rottentomatoes.com/franchise/halloween\")\n\ntitles <- page |>\n  html_nodes(\"#franchise-media a\") |>\n  html_text2()\n\ntitles_clean <- titles[c(FALSE, TRUE)]\n\ntitles\n\n [1] \"\"                                         \n [2] \"Halloween Ends\"                           \n [3] \"\"                                         \n [4] \"Halloween Kills\"                          \n [5] \"\"                                         \n [6] \"Halloween\"                                \n [7] \"\"                                         \n [8] \"Halloween II\"                             \n [9] \"\"                                         \n[10] \"Halloween\"                                \n[11] \"\"                                         \n[12] \"Halloween: Resurrection\"                  \n[13] \"\"                                         \n[14] \"Halloween H20: 20 Years Later\"            \n[15] \"\"                                         \n[16] \"Halloween: The Curse of Michael Myers\"    \n[17] \"\"                                         \n[18] \"Halloween 5: The Revenge of Michael Myers\"\n[19] \"\"                                         \n[20] \"Halloween 4: The Return of Michael Myers\" \n[21] \"\"                                         \n[22] \"Halloween III: Season of the Witch\"       \n[23] \"\"                                         \n[24] \"Halloween II\"                             \n[25] \"\"                                         \n[26] \"Halloween\"                                \n\ntitles_clean\n\n [1] \"Halloween Ends\"                           \n [2] \"Halloween Kills\"                          \n [3] \"Halloween\"                                \n [4] \"Halloween II\"                             \n [5] \"Halloween\"                                \n [6] \"Halloween: Resurrection\"                  \n [7] \"Halloween H20: 20 Years Later\"            \n [8] \"Halloween: The Curse of Michael Myers\"    \n [9] \"Halloween 5: The Revenge of Michael Myers\"\n[10] \"Halloween 4: The Return of Michael Myers\" \n[11] \"Halloween III: Season of the Witch\"       \n[12] \"Halloween II\"                             \n[13] \"Halloween\"                                \n\n\nIn 2-3 sentences, describe what the above code is doing. Specifically, how is titles different from titles_clean?\nAdd Response\n\nUsing Selector Gadget, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.\n\n\ntomato_score <- page |>\n  html_nodes(\"...\") |>\n  html_text2()\n\naudience_score <- page |>\n  html_nodes(\"...\") |>\n  html_text2()\n\ntomato_score \n\naudience_score\n\n\nCreate a tibble using the three variables you scraped. Name this tibble halloween\n\n\n\n#insert-code-here\n\n\nCreate an appropriate plot the assess the relationship between a movie’s audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.\n\n\n#insert-code-here"
+    "text": "Exercise 2 - Rotten Tomatoes\nRotten Tomatoes is an American review-aggregation website for film. They give percentage scores for movies based on how “good” the movies are. They provide 2 scores:\n - The Audience Score, denoted by a popcorn bucket\n - The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film\nWe are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween\n\nUsing Selector Gadget, input the appropriate nodes to scrape the audience score and tomatometerscore from the website.\n\n\npage <- read_html(\"https://www.rottentomatoes.com/franchise/halloween\")\n\ntomato_score <- page |>\n  html_nodes(\"...\") |>\n  html_text2()\n\naudience_score <- page |>\n  html_nodes(\"...\") |>\n  html_text2()\n\ntomato_score \n\naudience_score\n\n\nNext, run the following code:\n\n\ntitles <- page |>\n  html_nodes(\".franchise-media-list__h3\") |>\n  html_text2()\n\n  \ntitles_clean <- titles |>\n  as.data.frame() |>\n  separate(col=titles, into=c('Name', 'Year'), sep= '\\\\(' ) |>\n  select(Name)\n\nIn 2-3 sentences, describe what the above code is doing. Specifically, how is titles different from titles_clean?\nAdd Response\n\nCreate a tibble using the three variables you scraped. Name this tibble halloween\n\n\n\n#insert-code-here\n\n\nCreate an appropriate plot the assess the relationship between a movie’s audience score and their tomatometerscore. In 2-3 sentences, comment on the relationship. Your plot should include appropriate labels.\n\n\n#insert-code-here"
   },
   {
-    "objectID": "hw/hw-4.html#exercise-3---smoking-during-pregnacy",
-    "href": "hw/hw-4.html#exercise-3---smoking-during-pregnacy",
+    "objectID": "hw/hw-4.html#exercise-3---smoking-during-pregnancy",
+    "href": "hw/hw-4.html#exercise-3---smoking-during-pregnancy",
     "title": "HW 4 - Scraping + recap",
-    "section": "Exercise 3 - Smoking during pregnacy",
-    "text": "Exercise 3 - Smoking during pregnacy\nIn 2004, the state of North Carolina released a large data set containing information on births recorded in this state. This data set is useful to researchers studying the relation between habits and practices of expectant mothers and the birth of their children. We will work with a random sample of observations from this data set. We are interested in a babies weight, and will use the tools we’ve learned in class to investigate it.\n\nncbirths <- read_csv(\"data/ncbirths.csv\")\n\n\nCreate a version of the ncbirths data set omitting observations where there are NAs for habit. You can call this version ncbirths_habitgiven.\nPlotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship betweenhabit and weight.\n\nIn 2-3 sentences, discuss the relationships observed.\n\nNow, fit a linear model that investigates the relationship between weight and ncbirths_habigtgiven. Provide the summary output below.\nWrite the estimated least squares regression line below using proper notation.\n\nHint: If you need to type an equation using proper notation, type your answers in-between \\[    \\]. You may use to put a hat on a character."
+    "section": "Exercise 3 - Smoking during pregnancy",
+    "text": "Exercise 3 - Smoking during pregnancy\nWe are interested in smoking’s impact during pregnancy. To investigate this, we will use adata set has been of interest to medical researchers who are studying the relation between habits and practices of expectant mothers and the birth of their children. This is a random sample of 1,000 cases from the data set released in 2014. The data set is called births14, and is pre-loaded in the openintro package you called to use at the beginning of the assignment.\n\nCreate a version of the births14 data set omitting observations where there are NAs for habit. You can call this version births14_habitgiven.\nPlotting the data is a useful first step because it helps us quickly visualize trends, identify strong associations, and develop research questions. Create an appropriate plot displaying the relationship betweenhabit and weight.\n\nIn 2-3 sentences, discuss the relationships observed.\n\nNow, fit a linear model that investigates the relationship between weight and births14_habigtgiven. Provide the summary output below.\nWrite the estimated least squares regression line below using proper notation.\n\nHint: If you need to type an equation using proper notation, type your answers in-between \\[                                \\]. You may use to put a hat on a character."
   },
   {
     "objectID": "hw/hw-4.html#exercise-4---smoking-during-pregnacy---part-2",
     "href": "hw/hw-4.html#exercise-4---smoking-during-pregnacy---part-2",
     "title": "HW 4 - Scraping + recap",
     "section": "Exercise 4 - Smoking during pregnacy - part 2",
-    "text": "Exercise 4 - Smoking during pregnacy - part 2\n\nAnother researcher is interested in assessing the relationship between a babies weight, and the mother’s age.\n\nNow, fit a linear another linear model to investigate this relationship. Provide the summary output below.\n\nIn 2-3 sentences, explain how R fit the least squares regression line to model these data.\nInterpret the intercept in the context of the problem. Is this considered extrapolation? Why or why not?\nInterpret the slope coefficient in the context of the problem."
+    "text": "Exercise 4 - Smoking during pregnacy - part 2\n\nAnother researcher is interested in assessing the relationship between a babies weight and the mother’s age. Fit another linear model to investigate this relationship. Provide the summary output below.\nIn 2-3 sentences, explain how R fit the least squares regression line to model these data.\nInterpret the intercept in the context of the problem. Is this considered extrapolation? Why or why not?\nInterpret the slope coefficient in the context of the problem."
   },
   {
     "objectID": "hw/hw-4.html#exercise-5---americas-neighborhood-pollster",
     "href": "hw/hw-4.html#exercise-5---americas-neighborhood-pollster",
     "title": "HW 4 - Scraping + recap",
     "section": "Exercise 5 - America’s Neighborhood Pollster",
-    "text": "Exercise 5 - America’s Neighborhood Pollster\nSurveyUSA interviewed 886 North Carolina adults 09/28/2022 through 10/02/2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question: Are you optimistic or pessimistic about the economic outlook for your family over the next year?\nResponses were broken down into the following categories:\n\n\nVariable\nLevels\n\n\n\nAge\n18-49; 50+\n\n\nMood\nOptimistic; Pessimistic\n\n\n\n\nOf the 886 responses, 481 were between the ages of 18-49. Of the individuals that are between 18-49, 237 individuals responded that they were pessimistic. Of the individuals that are 50+, 164 claimed to be optimistic.\n\nFill in the code below to create a hypothetical two-way table to represent this situation.\n\ndata <- tibble( \n  Type = c(),\n  Sale = c(),\n  values = ()\n  )\n\ndata |>\n  pivot_wider( \n    names_from = ...,\n    values_from = ....)\n\n\nUsing your table from part a, calculate the probability that a randomly selected individual is 50+ and is pessimistic.\nUsing your table from part a, calculate the probability that a randomly selected individual is optimistic.\nUsing your table from part a, calculate the probability that a randomly selected 18-49 aged individual is optimistic.\nCreate an appropriate visualization to compare the the relationship between Age and Mood. Your plot should include appropriate labels. Hint: You may have to re manipulate the data into a more usable form.\n\n\n# insert-code - here"
+    "text": "Exercise 5 - America’s Neighborhood Pollster\nSurveyUSA interviewed 886 North Carolina adults 09/28/2022 through 10/02/2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question: Are you optimistic or pessimistic about the economic outlook for your family over the next year?\nResponses were broken down into the following categories:\n\n\nVariable\nLevels\n\n\n\nAge\n18-49; 50+\n\n\nMood\nOptimistic; Pessimistic\n\n\n\n\nOf the 886 responses, 481 were between the ages of 18-49. Of the individuals that are between 18-49, 237 individuals responded that they were pessimistic. Of the individuals that are 50+, 164 claimed to be optimistic.\n\nFill in the code below to create a hypothetical two-way table to represent this situation.\n\ndata <- tibble( \n  age = c(),\n  mood = c(),\n  values = ()\n  )\n\ndata |>\n  pivot_wider( \n    names_from = ...,\n    values_from = ....)\n\n\nUsing your table from part a, calculate the probability that a randomly selected individual is 50+ and is pessimistic.\nUsing your table from part a, calculate the probability that a randomly selected individual is optimistic.\nUsing your table from part a, calculate the probability that a randomly selected 18-49 aged individual is optimistic.\nCreate an appropriate visualization to compare the the relationship between Age and Mood. Your plot should include appropriate labels. Hint: You may have to re manipulate the data into a more usable form.\n\n\n# insert-code - here"
   },
   {
     "objectID": "hw/hw-4.html#exercise-6---write-a-function",
     "href": "hw/hw-4.html#exercise-6---write-a-function",
     "title": "HW 4 - Scraping + recap",
     "section": "Exercise 6 - Write a function",
-    "text": "Exercise 6 - Write a function\nSuppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Have your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 and display the table results.\nHint: The sample function may be helpful. See the following: https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sample\n\n#insert-code-here"
+    "text": "Exercise 6 - Write a function\nSuppose you have two types of candy to give out on Halloween; chocolate bars and Starbursts. The probability that you give a random trick-or-treater who knocks on your door a chocolate bar is %50. With this information, create a function that chooses for you which type of candy bar you will give a trick-or-treater that knocks on your door. Your function should be able to display a table of counts for chocolate or Starbursts for any amount of people you expect to see on Halloween.\nTo create your function, please fill in the … below.\nHave your function output a table of the number of chocolate bars and number of Starbursts given out to 100 trick-or-treaters. i.e., Run your function with a sample of 100 to display the table results. Run your function with a sample of 200 as well.\nHint: Think about what varies in your function as you define your input.\n\ntrick_or_treat <- function(...){ #the input to the function \n  candy <- c('...', '...') #Types of Candy\n  results <- sample(candy, size = ..., replace = TRUE) \n  return(table(results))\n}\n\ntrick_or_treat(...)\n\ntrick_or_treat(...)"
   },
   {
     "objectID": "hw/hw-4.html#submission",
@@ -1306,7 +1306,7 @@
     "href": "labs/lab-4.html#packages",
     "title": "Lab 4 - Merge Conflicts - Ethics",
     "section": "Packages",
-    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualisation.\n\nlibrary(tidyverse)\n\nSince the exercises for this week are short it’s possible not every team member will get to commit and push during the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline.\nNote: Everyone should intellectually contribute to every question. However, no two teammates should work on the same question at the same time below."
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualization.\n\nlibrary(tidyverse)\n\nSince the exercises for this week are short it’s possible not every team member will get to commit and push during the workshop. However each team member should review what was created, fix typos, make edits for better presentation, etc. either during or after the workshop, and before the deadline.\nNote: Everyone should intellectually contribute to every question. However, no two teammates should work on the same question at the same time below."
   },
   {
     "objectID": "labs/lab-4.html#data",
@@ -1349,6 +1349,41 @@
     "title": "Lab 5 - Probability and Simpson’s Paradox",
     "section": "Exercise 4 - Bike rentals",
     "text": "Exercise 4 - Bike rentals\nBike sharing systems are new generation of traditional bike rentals where whole process from membership, rental and return back has become automatic. You are tasked to investigate the relationship between the temperature outside and the number of bikes rented in the Washington DC area between the years 2011 and 2022. You will be investigating data for the months June, July, September, and November.\nBelow is a list of variables and their definitions:\n\n\n\n\n\n\nVariable\nDefinition\n\n\n\nseason\nnumerical representation of Summer, Fall, Winter, and Spring\n\n\nyear\nnumerical representation of 2011 (0) or 2012 (1)\n\n\nmnth\nmonth in which data were collected\n\n\nholiday\nindicator variable if data were collected on a holiday\n\n\nweekday\nnumerical representation of day of week\n\n\ntemp\ntemperature in Celsius\n\n\ncnt\ncount of bike rentals\n\n\n\n\nRead in the data. Then, create a scatter plot that investigates the relationship between the number of bikes rented and the temperature outside. Include a straight line of best fit to help discuss the discovered relationship. Summarize your findings in 2-3 sentences.\n\n\nbike <- read_csv(\"data/bike.csv\")\n\n\n\n\n\nAnother researcher suggests to look at the relationship between bikes rented and temperature by each of the four months of interest. Recreate your plot in part a, and color the points by month. Include a straight line for each of the four months to help discuss each month’s relationship between bikes rented and temperature. In 3-4 sentences, summarize your findings.\n\n\n\n\nPlease watch the following video on Simpson’s Paradox here. After you do, please answer the following questions.\n\nIn your own words, summarize Simpson’s Paradox in 2-3 sentences.\nCompare and contrast your findings from part (a) and part (b). What’s different?\nThink critically about your answer to part d. What other context from this study could be creating this paradox? That is, identify a potential confounding variable in this study. Be sure to justify how your example could be a potential confounding variable by relating it back to both bike rentals and temperature.\n\n\n\nData subset from Progress in Artificial Intelligence, 2013."
+  },
+  {
+    "objectID": "labs/lab-6.html",
+    "href": "labs/lab-6.html",
+    "title": "Lab 6 - Single Predictor",
+    "section": "",
+    "text": "Important\n\n\n\nThis lab is due Monday 31st at 11:59pm."
+  },
+  {
+    "objectID": "labs/lab-6.html#intro",
+    "href": "labs/lab-6.html#intro",
+    "title": "Lab 6 - Single Predictor",
+    "section": "Intro",
+    "text": "Intro\nParasites can cause infectious disease – but not all animals are affected by the same parasites. Some parasites are present in a multitude of species and others are confined to a single host. It is hypothesized that closely related hosts are more likely to share the same parasites. More specifically, it is thought that closely related hosts will live in similar environments and have similar genetic makeup that coincides with optimal conditions for the same parasite to flourish.\nIn this lab we will see how much evolutionary history predicts parasite similarity."
+  },
+  {
+    "objectID": "labs/lab-6.html#the-data",
+    "href": "labs/lab-6.html#the-data",
+    "title": "Lab 6 - Single Predictor",
+    "section": "The Data",
+    "text": "The Data\nToday’s dataset comes from an Ecology Letters paper by Cooper at al. (2012) entitled “Phylogenetic host specificity and understanding parasite sharing in primates” located here. The goal of the paper was to identify the ability of evolutionary history and ecological traits to characterize parasite host specificity.\nEach row of the data contains two species, species1 and species2.\nSubsequent columns describe metrics that compare the species:\n– divergence_time: how many (millions) of years ago the two species diverged. i.e. how many million years ago they were the same species.\n– distance: geodesic distance between species geographic range centroids (in kilometers)\n– BMdiff: difference in body mass between the two species (in grams)\n– precdiff: difference in mean annual precipitation across the two species geographic ranges (mm)\n– parsim: a measure of parasite similarity (proportion of parasites shared between species, ranges from 0 to 1.)\nThe data are available in parasites.csv in the data folder."
+  },
+  {
+    "objectID": "labs/lab-6.html#packages",
+    "href": "labs/lab-6.html#packages",
+    "title": "Lab 6 - Single Predictor",
+    "section": "Packages",
+    "text": "Packages\nWe’ll use the tidyverse package for much of the data wrangling and visualization.\n\nlibrary(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "labs/lab-6.html#exercises",
+    "href": "labs/lab-6.html#exercises",
+    "title": "Lab 6 - Single Predictor",
+    "section": "Exercises",
+    "text": "Exercises\nTo get started, load the data and save the data frame as parasites.\nLet’s start by examining the relationship between divergence_time and parsim.\n1.(a) Based on the goals of the analysis, what is the response variable?\n\nVisualize the relationship between the two variables.\nUse the visualization to describe the relationship between the two variables.\n\n2.(a) Write the regression equation using proper notation.\n\nInterpret the slope and the intercept in the context of the data.\nRecreate the visualization from Exercise 1, this time adding a regression line to the visualization.\nWhat do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?\n\n3.(a) Since parsim takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)\n\nCreate a new variable transformed_parsim that is calculated as log(parsim/(1-parsim)). Add this variable to your data frame.\nThen, visualize the relationship between divergence_time and transformed_parsim. Add a regression line to your visualization.\nWrite a 1-2 sentence description of what you observe in the visualization.\n\n4.(a) Which variable is the strongest individual predictor of parasite similarity between species? To answer this question, begin by fitting a linear regression model to each pair of variables. Do not report the model outputs in a tidy format but save each one as dt_model, dist_model, BM_model and prec_model, respectively.\n– divergence_time and transformed_parsim\n– distance and transformed_parsim\n– BMdiff and transformed_parsim\n– precdiff and transformed_parsim\nWould it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?\n\nTo compare the explanatory power of each individual predictor, we will look at \\[R^2\\] between the models. \\[R^2\\] is a measure of how much of the variability in the response variable is explained by the model.\n\nAs you may have guessed from the name \\[R^2\\] can be calculated by squaring the correlation. The correlation r takes values -1 to 1, therefore, \\[R^2\\] takes values 0 to 1. Intuitively, if r=1 or −1, then \\[R^2\\]=1, indicating the model is a perfect fit for the data. If r≈0 then \\[R^2\\]≈0, indicating the model is a very bad fit for the data.\nYou can calculate \\[R^2\\] using the glance function. For example, you can calculate \\[R^2\\] for dt_model using the code glance(dt_model)$r.squared.\n\nCalculate \\[R^2\\] for each model fit in the previous exercise.\nWhich variable is the strongest predictor of parasite similarity? Briefly explain your choice."
   },
   {
     "objectID": "labs/lab-project-proposal.html",
@@ -3029,6 +3064,55 @@
     "title": "Models",
     "section": "In Summary",
     "text": "In Summary\n– “For a 1 unit increase in x….”\n– On Average: Property of least squares regression- Line goes through the mean of x and y\n– Practice writing out equations: Population and Sample level\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/17-multiple-pred.html#checklist",
+    "href": "slides/17-multiple-pred.html#checklist",
+    "title": "Multiple Predictors",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-16\n– Review context of ae-15 for warm up question"
+  },
+  {
+    "objectID": "slides/17-multiple-pred.html#announcements",
+    "href": "slides/17-multiple-pred.html#announcements",
+    "title": "Multiple Predictors",
+    "section": "Announcements",
+    "text": "Announcements\n– Lab Feedback\n– Project Repos Coming"
+  },
+  {
+    "objectID": "slides/17-multiple-pred.html#goals",
+    "href": "slides/17-multiple-pred.html#goals",
+    "title": "Multiple Predictors",
+    "section": "Goals",
+    "text": "Goals\n– Finish categorical single predictor\n– Model with multiple predictors\n– Adjusted R-squared"
+  },
+  {
+    "objectID": "slides/17-multiple-pred.html#warm-up",
+    "href": "slides/17-multiple-pred.html#warm-up",
+    "title": "Multiple Predictors",
+    "section": "Warm Up",
+    "text": "Warm Up\nRecall that we ended last class by modeling the relationship between a penguin’s body mass and the insland they were recorded on. Using the following output, write the estimated model below:"
+  },
+  {
+    "objectID": "slides/17-multiple-pred.html#further",
+    "href": "slides/17-multiple-pred.html#further",
+    "title": "Multiple Predictors",
+    "section": "Further",
+    "text": "Further\n– What if we want to account for both their flipper length and island?\n– Would a different model explain more variation in the response body mass?"
+  },
+  {
+    "objectID": "slides/17-multiple-pred.html#modeling-more-than-one-variable",
+    "href": "slides/17-multiple-pred.html#modeling-more-than-one-variable",
+    "title": "Multiple Predictors",
+    "section": "Modeling More Than one Variable",
+    "text": "Modeling More Than one Variable\n– Multiple linear regression is used to estimate the relationship between two or more explanatory variables and one response variable.\n– we want to predict the value of a variable based on the value of two or more other variables\n– “account for X1 and assess the relationship between X2 and Y” - main effects\n– “does X1’s relationship with Y change based on X2”"
+  },
+  {
+    "objectID": "slides/17-multiple-pred.html#in-summary",
+    "href": "slides/17-multiple-pred.html#in-summary",
+    "title": "Multiple Predictors",
+    "section": "In Summary",
+    "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
     "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
