@@ -5,7 +5,7 @@ editor: visual
 ---
 
 ::: callout-important
-This homework is due Friday, Nov 2nd at 11:59pm ET.
+This homework is due Wednesday, Nov 2nd at 11:59pm ET.
 :::
 
 ::: callout-important
@@ -117,7 +117,7 @@ We are interested in the impact of smoking during pregnancy. Since it is not pos
 
 (d) Write the estimated least squares regression line below using proper notation.
 
-Hint: If you need to type an equation using proper notation, type your answers in-between $$                                $$. You may use `\hat{example}` to put a hat on a character.
+Hint: If you need to type an equation using proper notation, type your answers in-between $$                                                                $$. You may use `\hat{example}` to put a hat on a character.
 
 ## Exercise 4 - Smoking during pregnacy - Part 2
 
@@ -131,7 +131,7 @@ Hint: If you need to type an equation using proper notation, type your answers i
 
 ## Exercise 5 - America's Neighborhood Pollster
 
-SurveyUSA interviewed 886 North Carolina adults between Septermber 28, 2022 and October 2, 2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question: 
+SurveyUSA interviewed 886 North Carolina adults between Septermber 28, 2022 and October 2, 2022. This research was conducted online among a representative cross section of North Carolina adults, selected at random by Lucid Holdings LLC of New Orleans. We will look at the results from the following question:
 
 > Are you optimistic or pessimistic about the economic outlook for your family over the next year?
 
