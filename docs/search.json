@@ -3183,5 +3183,54 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#checklist",
+    "href": "slides/18-mlr.2.html#checklist",
+    "title": "Multiple Predictors",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-17"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#announcements",
+    "href": "slides/18-mlr.2.html#announcements",
+    "title": "Multiple Predictors",
+    "section": "Announcements",
+    "text": "Announcements\n– Lab Feedback (Check it regardless of your grade)\n– HW4 Question 2"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#goals",
+    "href": "slides/18-mlr.2.html#goals",
+    "title": "Multiple Predictors",
+    "section": "Goals",
+    "text": "Goals\n– Overfitting\n– Model with multiple predictors"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#warm-up",
+    "href": "slides/18-mlr.2.html#warm-up",
+    "title": "Multiple Predictors",
+    "section": "Warm Up",
+    "text": "Warm Up\nDiscuss the difference between the two models below. Which model would you prefer to fit to model these data? Why?"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#overfitting",
+    "href": "slides/18-mlr.2.html#overfitting",
+    "title": "Multiple Predictors",
+    "section": "Overfitting",
+    "text": "Overfitting\n– Overfitting is a concept in data science, which occurs when a statistical model fits exactly against its data.\n– This doesn’t make sense if are goal is to predict!"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#modeling-more-than-one-variable",
+    "href": "slides/18-mlr.2.html#modeling-more-than-one-variable",
+    "title": "Multiple Predictors",
+    "section": "Modeling More Than one Variable",
+    "text": "Modeling More Than one Variable\n– Multiple linear regression is used to estimate the relationship between two or more explanatory variables and one response variable.\n– we want to predict the value of a variable based on the value of two or more other variables\n– “account for X1 and assess the relationship between X2 and Y” - main effects\n– “does X1’s relationship with Y change based on X2”"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#logistic-regression",
+    "href": "slides/18-mlr.2.html#logistic-regression",
+    "title": "Multiple Predictors",
+    "section": "Logistic Regression",
+    "text": "Logistic Regression\n– What if the response variable is categorical?\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

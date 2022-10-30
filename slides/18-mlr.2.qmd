@@ -11,12 +11,12 @@ format: revealjs
 
 #
 
-![](images/paranormal.jpg)
+![](images/paranormal.jpg){fig-align="center"}
 
 
 # 
 
-![](images/pumpkin.jpg)
+![](images/pumpkin.jpg){fig-align="center"}
 
 
 #
