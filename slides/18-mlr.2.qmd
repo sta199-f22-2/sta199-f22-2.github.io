@@ -9,6 +9,8 @@ format: revealjs
 
 -- Clone `ae-17` 
 
+-- If you do not have `ae-17` go here: https://github.com/sta199-f22-2/ae-17
+
 #
 
 ![](images/paranormal.jpg){fig-align="center"}
