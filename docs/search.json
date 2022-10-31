@@ -3178,13 +3178,6 @@
     "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/18-mlr.2.html#checklist",
     "href": "slides/18-mlr.2.html#checklist",
     "title": "Multiple Predictors",
@@ -3203,7 +3196,7 @@
     "href": "slides/18-mlr.2.html#goals",
     "title": "Multiple Predictors",
     "section": "Goals",
-    "text": "Goals\n– Overfitting\n– Summary on Regression"
+    "text": "Goals\n– Overfitting\n– “New” function in R\nSummary on Regression\n– Why we model data?\n– Can I write out models?\n– Can I interpret model output?\n– Do I understand the difference between models?"
   },
   {
     "objectID": "slides/18-mlr.2.html#warm-up",
@@ -3220,39 +3213,18 @@
     "text": "Overfitting\n– Overfitting is a concept in data science, which occurs when a statistical model fits exactly against its data.\n– This doesn’t make sense if are goal is to predict!"
   },
   {
-    "objectID": "slides/18-mlr.2.html#modeling-more-than-one-variable",
-    "href": "slides/18-mlr.2.html#modeling-more-than-one-variable",
+    "objectID": "slides/18-mlr.2.html#why-we-use-regression",
+    "href": "slides/18-mlr.2.html#why-we-use-regression",
     "title": "Multiple Predictors",
-    "section": "Modeling More Than one Variable",
-    "text": "Modeling More Than one Variable\n– Multiple linear regression is used to estimate the relationship between two or more explanatory variables and one response variable.\n– we want to predict the value of a variable based on the value of two or more other variables\n– “account for X1 and assess the relationship between X2 and Y” - main effects\n– “does X1’s relationship with Y change based on X2”"
-  },
-  {
-    "objectID": "slides/18-mlr.2.html#logistic-regression",
-    "href": "slides/18-mlr.2.html#logistic-regression",
-    "title": "Multiple Predictors",
-    "section": "Logistic Regression",
-    "text": "Logistic Regression\n– What if the response variable is categorical?\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
-    "objectID": "slides/18-mlr.2.html#things-to-consider",
-    "href": "slides/18-mlr.2.html#things-to-consider",
-    "title": "Multiple Predictors",
-    "section": "Things to consider",
-    "text": "Things to consider\n– Why we model data?\n– Can I write out models?\n– Can I interpret model output?\n– Do I understand the difference between models?"
+    "section": "Why we use regression",
+    "text": "Why we use regression\n\nPredict the value of our response\nEstimate the effect of some explanatory variable on the response (examine the relationship)\nMake inference about some larger population (coming later)"
   },
   {
     "objectID": "slides/18-mlr.2.html#when-and-why-we-use-regression",
     "href": "slides/18-mlr.2.html#when-and-why-we-use-regression",
     "title": "Multiple Predictors",
     "section": "When and why we use regression",
-    "text": "When and why we use regression\n– Predict the value of our response\n– Estimate the effect of some explanatory variable on the response (examine the relationship)"
-  },
-  {
-    "objectID": "slides/18-mlr.2.html#when-and-why-we-use-regression-1",
-    "href": "slides/18-mlr.2.html#when-and-why-we-use-regression-1",
-    "title": "Multiple Predictors",
-    "section": "When and why we use regression",
-    "text": "When and why we use regression\n– Quantitative Response\n– Does it make sense"
+    "text": "When and why we use regression\n\nQuantitative Response\nDoes it make sense"
   },
   {
     "objectID": "slides/18-mlr.2.html#extension-coming-later",
@@ -3267,5 +3239,26 @@
     "title": "Multiple Predictors",
     "section": "Adjusted R-squared",
     "text": "Adjusted R-squared"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#modeling-more-than-one-variable",
+    "href": "slides/18-mlr.2.html#modeling-more-than-one-variable",
+    "title": "Multiple Predictors",
+    "section": "Modeling More Than One Variable",
+    "text": "Modeling More Than One Variable\n– Multiple linear regression is used to estimate the relationship between two or more explanatory variables and one response variable.\n– we want to predict the value of a variable based on the value of two or more other variables\n– “account for X1 and assess the relationship between X2 and Y” - main effects\n– “does X1’s relationship with Y change based on X2”"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#logistic-regression",
+    "href": "slides/18-mlr.2.html#logistic-regression",
+    "title": "Multiple Predictors",
+    "section": "Logistic Regression",
+    "text": "Logistic Regression\n– What if the response variable is categorical?\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

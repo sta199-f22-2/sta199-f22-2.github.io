@@ -33,9 +33,19 @@ format: revealjs
 
 ## Goals 
 
--- Overfitting
+-- Overfitting 
 
--- Summary on Regression 
+-- "New" function in R
+
+Summary on Regression 
+
+-- Why we model data? 
+
+-- Can I write out models? 
+
+-- Can I interpret model output? 
+
+-- Do I understand the difference between models? 
 
 
 ## Warm Up 
@@ -51,16 +61,6 @@ Discuss the difference between the two models below. Which model would you prefe
 
 -- This doesn't make sense if are goal is to predict!
 
-
-## Things to consider 
-
--- Why we model data? 
-
--- Can I write out models? 
-
--- Can I interpret model output? 
-
--- Do I understand the difference between models? 
 
 
 ## Why we use regression
