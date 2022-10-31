@@ -35,7 +35,7 @@ format: revealjs
 
 -- Overfitting
 
--- Model with multiple predictors 
+-- Summary on Regression 
 
 
 ## Warm Up 
@@ -52,8 +52,52 @@ Discuss the difference between the two models below. Which model would you prefe
 -- This doesn't make sense if are goal is to predict!
 
 
+## Things to consider 
 
-## Modeling More Than one Variable 
+-- Why we model data? 
+
+-- Can I write out models? 
+
+-- Can I interpret model output? 
+
+-- Do I understand the difference between models? 
+
+
+## Why we use regression
+
+- Predict the value of our response
+
+- Estimate the effect of some explanatory variable on the response (examine the relationship)
+
+- Make inference about some larger population (coming later)
+
+## When and why we use regression
+
+- Quantitative Response 
+
+- Does it make sense 
+
+![](images/non-linear.png){fig-align="center"}
+
+## Extension (Coming Later)
+
+To test hypotheses and make conclusions, certain assumptions need to be met.... 
+
+-- Normality of Residuals 
+
+-- Linearity 
+
+-- Independence 
+
+-- Constant Variance 
+
+# Jump into ae-17 
+
+## Adjusted R-squared
+
+![](images/adjRsquared.png){fig-align="center"}
+
+## Modeling More Than One Variable 
 
 
 -- **Multiple linear regression** is used to estimate the relationship between **two or more** explanatory variables and one response variable.

@@ -3203,7 +3203,7 @@
     "href": "slides/18-mlr.2.html#goals",
     "title": "Multiple Predictors",
     "section": "Goals",
-    "text": "Goals\n– Overfitting\n– Model with multiple predictors"
+    "text": "Goals\n– Overfitting\n– Summary on Regression"
   },
   {
     "objectID": "slides/18-mlr.2.html#warm-up",
@@ -3232,5 +3232,40 @@
     "title": "Multiple Predictors",
     "section": "Logistic Regression",
     "text": "Logistic Regression\n– What if the response variable is categorical?\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#things-to-consider",
+    "href": "slides/18-mlr.2.html#things-to-consider",
+    "title": "Multiple Predictors",
+    "section": "Things to consider",
+    "text": "Things to consider\n– Why we model data?\n– Can I write out models?\n– Can I interpret model output?\n– Do I understand the difference between models?"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#when-and-why-we-use-regression",
+    "href": "slides/18-mlr.2.html#when-and-why-we-use-regression",
+    "title": "Multiple Predictors",
+    "section": "When and why we use regression",
+    "text": "When and why we use regression\n– Predict the value of our response\n– Estimate the effect of some explanatory variable on the response (examine the relationship)"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#when-and-why-we-use-regression-1",
+    "href": "slides/18-mlr.2.html#when-and-why-we-use-regression-1",
+    "title": "Multiple Predictors",
+    "section": "When and why we use regression",
+    "text": "When and why we use regression\n– Quantitative Response\n– Does it make sense"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#extension-coming-later",
+    "href": "slides/18-mlr.2.html#extension-coming-later",
+    "title": "Multiple Predictors",
+    "section": "Extension (Coming Later)",
+    "text": "Extension (Coming Later)\nTo test hypotheses and make conclusions, certain assumptions need to be met….\n– Normality of Residuals\n– Linearity\n– Independence\n– Constant Variance"
+  },
+  {
+    "objectID": "slides/18-mlr.2.html#adjusted-r-squared",
+    "href": "slides/18-mlr.2.html#adjusted-r-squared",
+    "title": "Multiple Predictors",
+    "section": "Adjusted R-squared",
+    "text": "Adjusted R-squared"
   }
 ]
