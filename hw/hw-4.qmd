@@ -40,6 +40,7 @@ We'll use the **tidyverse** package for much of the data wrangling and visualiza
 
 
 library(tidyverse)
+library(tidymodels)
 library(rvest)
 library(robotstxt)
 library(openintro)
@@ -64,12 +65,10 @@ https://www.rottentomatoes.com
 
 Rotten Tomatoes is an American review-aggregation website for film. They give percentage scores for movies based on how "good" the movies are. They provide 2 scores:
 
-|                              |                                          |
-|--------------------|----------------------------------------------------|
+|                              |                                                                                                                   |
+|---------------------|---------------------------------------------------|
 | ![](images/popcornlogos.png) | The audience score, denoted by a popcorn bucket                                                                   |
 | ![](images/tomatologos.png)  | The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film |
-
-
 
 We are going to investigate the relationship between the audience score and tomatometer score between the Halloween movies. Please visit the following website to view the data we plan to scrape: https://www.rottentomatoes.com/franchise/halloween
 
@@ -120,7 +119,7 @@ We are interested in the impact of smoking during pregnancy. Since it is not pos
 
 (d) Write the estimated least squares regression line below using proper notation.
 
-Hint: If you need to type an equation using proper notation, type your answers in-between $$                                                                $$. You may use `\hat{example}` to put a hat on a character.
+Hint: If you need to type an equation using proper notation, type your answers in-between $$                                                                                                                                $$. You may use `\hat{example}` to put a hat on a character.
 
 ## Exercise 4 - Smoking during pregnacy - Part 2
 
