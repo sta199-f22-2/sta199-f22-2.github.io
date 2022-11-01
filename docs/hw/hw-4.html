@@ -372,12 +372,14 @@ Important
 <li><p>Next, run the following code:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">titles_years</span> <span class="op">&lt;-</span> <span class="va">page</span> <span class="op">|&gt;</span></span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">page</span> <span class="op">&lt;-</span> <span class="fu"><a href="http://xml2.r-lib.org/reference/read_xml.html">read_html</a></span><span class="op">(</span><span class="st">"https://www.rottentomatoes.com/franchise/halloween"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">titles_years</span> <span class="op">&lt;-</span> <span class="va">page</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/rename.html">html_nodes</a></span><span class="op">(</span><span class="st">".franchise-media-list__h3"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rvest.tidyverse.org/reference/html_text.html">html_text2</a></span><span class="op">(</span><span class="op">)</span></span>
 <span>  </span>
 <span><span class="va">halloween</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>title_year <span class="op">=</span> <span class="va">titles_years</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/separate.html">separate</a></span><span class="op">(</span><span class="va">titles</span>, into <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"title"</span>, <span class="st">"year"</span><span class="op">)</span>, sep<span class="op">=</span> <span class="st">"\\("</span> <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/separate.html">separate</a></span><span class="op">(</span><span class="va">title_year</span>, into <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"title"</span>, <span class="st">"year"</span><span class="op">)</span>, sep <span class="op">=</span> <span class="st">"\\("</span> <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In 2-3 sentences, describe what the above code is doing. Make sure to articulate each step of both of the pipelines. <em>Hint:</em> Print out <code>titles_years</code> and <code>halloween</code> to see what these objects look like. This will help figure out what the code is doing. You should also try running each line of the pipeline individually to see their outputs.</p>
 <p><strong>Add Response</strong></p>

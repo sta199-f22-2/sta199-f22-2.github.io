@@ -90,7 +90,7 @@ halloween <- tibble(title_year = titles_years) |>
 
 
 ```
-```
+
 
 In 2-3 sentences, describe what the above code is doing. Make sure to articulate each step of both of the pipelines. *Hint:* Print out `titles_years` and `halloween` to see what these objects look like. This will help figure out what the code is doing. You should also try running each line of the pipeline individually to see their outputs.
 
