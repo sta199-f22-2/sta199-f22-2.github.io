@@ -174,7 +174,7 @@ data |>
 
 (d) Using your table from part (a), calculate the probability that a randomly selected 18-49 aged individual is optimistic.
 
-(e) Create an appropriate visualization to compare the the relationship between `age` and `mood`. Your plot should include appropriate labels. *Hint:* You may have to re manipulate the data into a more usable form.
+(e) Create an appropriate visualization to compare the the relationship between `age` and `mood`. Your plot should include appropriate labels. 
 
 ## Exercise 6 - Write a function
 
