@@ -3288,5 +3288,103 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/19-logistic.html#checklist",
+    "href": "slides/19-logistic.html#checklist",
+    "title": "Logistic Regression",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-18"
+  },
+  {
+    "objectID": "slides/19-logistic.html#announcements",
+    "href": "slides/19-logistic.html#announcements",
+    "title": "Logistic Regression",
+    "section": "Announcements",
+    "text": "Announcements\n– You have a final-project repo. Clone it before lab tomorrow.\n– HW4 extended to Thursday - Check Sakai"
+  },
+  {
+    "objectID": "slides/19-logistic.html#goals",
+    "href": "slides/19-logistic.html#goals",
+    "title": "Logistic Regression",
+    "section": "Goals",
+    "text": "Goals\n– The What, Why, and How of Logistic Regression"
+  },
+  {
+    "objectID": "slides/19-logistic.html#what-is-logistic-regreesion",
+    "href": "slides/19-logistic.html#what-is-logistic-regreesion",
+    "title": "Logistic Regression",
+    "section": "What is Logistic Regreesion",
+    "text": "What is Logistic Regreesion\n\nModeling tool when our response is categorical"
+  },
+  {
+    "objectID": "slides/19-logistic.html#terms",
+    "href": "slides/19-logistic.html#terms",
+    "title": "Logistic Regression",
+    "section": "Terms",
+    "text": "Terms\n– Bernoulli Distribution\n\n2 outcomes: Success (p) or Failure (1-p)\n\\(y_i\\) ~ Bern(p)\nWhat we can do is we can use our explanatory variable(s) to model p"
+  },
+  {
+    "objectID": "slides/19-logistic.html#steps",
+    "href": "slides/19-logistic.html#steps",
+    "title": "Logistic Regression",
+    "section": "2 Steps",
+    "text": "2 Steps\n– 1: Define a linear model\n– 2: Define a link function"
+  },
+  {
+    "objectID": "slides/19-logistic.html#a-linear-model",
+    "href": "slides/19-logistic.html#a-linear-model",
+    "title": "Logistic Regression",
+    "section": "A linear model",
+    "text": "A linear model\n\n\nBut we can’t stop here\nNext, we need a link function that relates the linear model to the parameter of the outcome distribution i.e. transform the linear model to have an appropriate range"
+  },
+  {
+    "objectID": "slides/19-logistic.html#goal",
+    "href": "slides/19-logistic.html#goal",
+    "title": "Logistic Regression",
+    "section": "Goal",
+    "text": "Goal\n– Or…. takes values between $ -and $ and map them to probabilities"
+  },
+  {
+    "objectID": "slides/19-logistic.html#logit-link-function",
+    "href": "slides/19-logistic.html#logit-link-function",
+    "title": "Logistic Regression",
+    "section": "Logit Link function",
+    "text": "Logit Link function\n– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded\nlogit(p) = $log() $\n\\(logit(p_i)\\) = $_o +_1X1_i + …. $"
+  },
+  {
+    "objectID": "slides/19-logistic.html#whats-this-look-like",
+    "href": "slides/19-logistic.html#whats-this-look-like",
+    "title": "Logistic Regression",
+    "section": "What’s this look like",
+    "text": "What’s this look like\n{fig-align = center}"
+  },
+  {
+    "objectID": "slides/19-logistic.html#this-isnt-exactly-what-we-need-though..",
+    "href": "slides/19-logistic.html#this-isnt-exactly-what-we-need-though..",
+    "title": "Logistic Regression",
+    "section": "This isn’t exactly what we need though…..",
+    "text": "This isn’t exactly what we need though…..\n– Recall, the goal is to take values between $ -and $ and map them to probabilities. We need the opposite of the link function… or the inverse\n– How do we take the inverse of a natural log?"
+  },
+  {
+    "objectID": "slides/19-logistic.html#so",
+    "href": "slides/19-logistic.html#so",
+    "title": "Logistic Regression",
+    "section": "So",
+    "text": "So\n– $ _i = _o +_1X1_i + …. $\n– logit(p) = $ _o +_1X1_i + …. $\n\n$pi = {1 + exp(_o + _1X_1 + …) } $"
+  },
+  {
+    "objectID": "slides/19-logistic.html#section",
+    "href": "slides/19-logistic.html#section",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "Example Figure:\n\nsigmoid = function(x) 1 / (1 + exp(-x + 10))\nplot.function(sigmoid, from = 0, to = 20, n = 101, ylab=\"P(y = 1)\", \n              xlab = \"Explanatory variable\", \n              main=\"Example predicted probabilities based on explanatory variable\", \n              lwd = 3)\nbox()"
+  },
+  {
+    "objectID": "slides/19-logistic.html#takeaways",
+    "href": "slides/19-logistic.html#takeaways",
+    "title": "Logistic Regression",
+    "section": "Takeaways",
+    "text": "Takeaways\n– We can not model these data using the tools we currently have\n– We can overcome some of the shortcoming of regression by fitting a generalized linear regression model\n– We can model binary data using an inverse logit function to model probabilities of success\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
