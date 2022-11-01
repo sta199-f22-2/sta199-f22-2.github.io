@@ -19,6 +19,24 @@ format: revealjs
 
 -- The What, Why, and How of Logistic Regression 
 
+## Warm Up 
+
+-- What is a testing data set?
+
+-- What is a training data set?
+
+## Warm Up 
+
+-- What is a testing data set?
+
+"Sandbox" for model building. Build the model on these data.
+
+-- What is a training data set?
+
+Held in reserve to test one or two chosen models. 
+
+Evaluate the performance
+
 
 ## What is Logistic Regreesion 
 
@@ -43,14 +61,13 @@ format: revealjs
 
 ## A linear model 
 
-$\eta = \beta_oX_1 + ...$
+$\eta = \beta_o + \beta_1*X_1 + ...$
 
 
 - But we can't stop here
 
 
 - Next, we need a link function that relates the linear model to the parameter of the outcome distribution i.e. transform the linear model to have an appropriate range 
-
 
 
 ## Goal 
@@ -68,7 +85,7 @@ $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$
 
 ## What's this look like
 
-![](images/logit.png){fig-align = center}
+![](images/logit.png){fig-align="center"}
 
 
 ## This isn't exactly what we need though.....
@@ -82,15 +99,16 @@ $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$
 
 -- $\eta_i = \beta_o +\beta_1X1_i + ....$
 
--- logit(p) = $\beta_o +\beta_1X1_i + ....$ 
+-- $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$ 
 
-- $pi = \frac{exp(\beta_o + \beta_1X_1 + ...)} {1 + exp(\beta_o + \beta_1X_1 + ...) }$
+- $pi = \frac{exp(\beta_o + \beta_1X_1_i + ...)} {1 + exp(\beta_o + \beta_1X_1_i + ...) }$
 
 ##
 
 Example Figure: 
 
 ```{r}
+#| echo: false
 sigmoid = function(x) 1 / (1 + exp(-x + 10))
 plot.function(sigmoid, from = 0, to = 20, n = 101, ylab="P(y = 1)", 
               xlab = "Explanatory variable", 
