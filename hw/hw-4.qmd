@@ -79,13 +79,17 @@ We are going to investigate the relationship between the audience score and toma
 ```{r}
 #| eval: false
 
+page <- read_html("https://www.rottentomatoes.com/franchise/halloween")
 
 titles_years <- page |>
   html_nodes(".franchise-media-list__h3") |>
   html_text2()
   
 halloween <- tibble(title_year = titles_years) |>
-  separate(titles, into = c("title", "year"), sep= "\\(" )
+  separate(title_year, into = c("title", "year"), sep = "\\(" )
+
+
+```
 ```
 
 In 2-3 sentences, describe what the above code is doing. Make sure to articulate each step of both of the pipelines. *Hint:* Print out `titles_years` and `halloween` to see what these objects look like. This will help figure out what the code is doing. You should also try running each line of the pipeline individually to see their outputs.
