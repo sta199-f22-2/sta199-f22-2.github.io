@@ -23,70 +23,6 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -401,13 +337,37 @@
 </section>
 <section id="goals" class="slide level2">
 <h2>Goals</h2>
+<p>– Testing and Training data</p>
 <p>– The What, Why, and How of Logistic Regression</p>
+</section>
+<section id="warm-up" class="slide level2">
+<h2>Warm Up</h2>
+<p>– What is a testing data set?</p>
+<p>– What is a training data set?</p>
+</section>
+<section id="warm-up-1" class="slide level2">
+<h2>Warm Up</h2>
+<p>– What is a testing data set?</p>
+<p>“Sandbox” for model building. Build the model on these data.</p>
+<p>– What is a training data set?</p>
+<p>Held in reserve to test one or two chosen models.</p>
+<p>Evaluate the performance</p>
 </section>
 <section id="what-is-logistic-regreesion" class="slide level2">
 <h2>What is Logistic Regreesion</h2>
 <ul>
-<li class="fragment">Modeling tool when our response is categorical</li>
+<li class="fragment"><p>Similar to linear regression…. but</p></li>
+<li class="fragment"><p>Modeling tool when our response is categorical</p></li>
 </ul>
+</section>
+<section id="what-we-will-do-today" class="slide level2">
+<h2>What we will do today</h2>
+
+<img data-src="images/logistic.png" class="r-stretch quarto-figure-center"></section>
+<section>
+<section id="start-from-the-beginning" class="title-slide slide level1 center">
+<h1>Start from the beginning</h1>
+
 </section>
 <section id="terms" class="slide level2">
 <h2>Terms</h2>
@@ -425,7 +385,7 @@
 </section>
 <section id="a-linear-model" class="slide level2">
 <h2>A linear model</h2>
-<p><span class="math inline">\(\eta = \beta_oX_1 + ...\)</span></p>
+<p><span class="math inline">\(\eta = \beta_o + \beta_1*X_1 + ...\)</span></p>
 <ul>
 <li class="fragment"><p>But we can’t stop here</p></li>
 <li class="fragment"><p>Next, we need a link function that relates the linear model to the parameter of the outcome distribution i.e.&nbsp;transform the linear model to have an appropriate range</p></li>
@@ -438,38 +398,38 @@
 <section id="logit-link-function" class="slide level2">
 <h2>Logit Link function</h2>
 <p>– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded</p>
-<p>logit(p) = <span class="math inline">\(log(\frac{p}{1-p})\)</span></p>
-<p><span class="math inline">\(logit(p_i)\)</span> = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p>
+</section>
+<section id="generalized-linear-model" class="slide level2">
+<h2>Generalized linear model</h2>
+<ul>
+<li class="fragment"><p><span class="math inline">\(\eta = \beta_o + \beta_1*X_1 + ...\)</span></p></li>
+<li class="fragment"><p>logit(p) is also known as the log-odds</p></li>
+<li class="fragment"><p>logit(p) = <span class="math inline">\(log(\frac{p}{1-p})\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(logit(p_i)\)</span> = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p></li>
+</ul>
 </section>
 <section id="whats-this-look-like" class="slide level2">
 <h2>What’s this look like</h2>
-<p><img data-src="images/logit.png">{fig-align = center}</p>
-</section>
+<p>Takes a [0,1] probability and maps it to log odds (-<span class="math inline">\(\infty\)</span> to <span class="math inline">\(\infty\)</span>.)</p>
+
+<img data-src="images/logit.png" class="r-stretch quarto-figure-center"></section>
 <section id="this-isnt-exactly-what-we-need-though.." class="slide level2">
 <h2>This isn’t exactly what we need though…..</h2>
-<p>– Recall, the goal is to take values between <span class="math inline">\(-\infty and \infty\)</span> and map them to probabilities. We need the opposite of the link function… or the <em>inverse</em></p>
+<p>– Recall, the goal is to take values between -<span class="math inline">\(\infty\)</span> and <span class="math inline">\(\infty\)</span> and map them to probabilities. We need the opposite of the link function… or the <em>inverse</em></p>
 <p>– How do we take the inverse of a natural log?</p>
 </section>
 <section id="so" class="slide level2">
 <h2>So</h2>
 <p>– <span class="math inline">\(\eta_i = \beta_o +\beta_1X1_i + ....\)</span></p>
-<p>– logit(p) = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p>
+<p>– <span class="math inline">\(logit(p_i)\)</span> = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p>
 <ul>
-<li class="fragment"><span class="math inline">\(pi = \frac{exp(\beta_o + \beta_1X_1 + ...)} {1 + exp(\beta_o + \beta_1X_1 + ...) }\)</span></li>
+<li class="fragment"><span class="math inline">\(pi = \frac{exp(\beta_o + \beta_1X_1_i + ...)} {1 + exp(\beta_o + \beta_1X_1_i + ...) }\)</span></li>
 </ul>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 <p>Example Figure:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>sigmoid <span class="ot">=</span> <span class="cf">function</span>(x) <span class="dv">1</span> <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x <span class="sc">+</span> <span class="dv">10</span>))</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">plot.function</span>(sigmoid, <span class="at">from =</span> <span class="dv">0</span>, <span class="at">to =</span> <span class="dv">20</span>, <span class="at">n =</span> <span class="dv">101</span>, <span class="at">ylab=</span><span class="st">"P(y = 1)"</span>, </span>
-<span id="cb1-3"><a href="#cb1-3"></a>              <span class="at">xlab =</span> <span class="st">"Explanatory variable"</span>, </span>
-<span id="cb1-4"><a href="#cb1-4"></a>              <span class="at">main=</span><span class="st">"Example predicted probabilities based on explanatory variable"</span>, </span>
-<span id="cb1-5"><a href="#cb1-5"></a>              <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">box</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-</div>
 <img data-src="19-logistic_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
 <section id="takeaways" class="slide level2">
 <h2>Takeaways</h2>
@@ -481,7 +441,7 @@
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://sta199-f22-2.github.io/">🔗 sta199-f22-2.github.io</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

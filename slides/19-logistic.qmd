@@ -17,6 +17,8 @@ format: revealjs
 
 ## Goals
 
+-- Testing and Training data
+
 -- The What, Why, and How of Logistic Regression 
 
 ## Warm Up 
@@ -40,7 +42,15 @@ Evaluate the performance
 
 ## What is Logistic Regreesion 
 
+- Similar to linear regression.... but
+
 - Modeling tool when our response is categorical 
+
+## What we will do today 
+
+![](images/logistic.png){fig-align="center"}
+
+# Start from the beginning
 
 ## Terms 
 
@@ -79,18 +89,26 @@ $\eta = \beta_o + \beta_1*X_1 + ...$
 
 -- A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded
 
-logit(p) = $log(\frac{p}{1-p})$ 
+## Generalized linear model 
 
-$logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$
+- $\eta = \beta_o + \beta_1*X_1 + ...$
+
+- logit(p) is also known as the log-odds 
+
+- logit(p) = $log(\frac{p}{1-p})$ 
+
+- $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$
 
 ## What's this look like
+
+Takes a [0,1] probability and maps it to log odds (-$\infty$ to $\infty$.)
 
 ![](images/logit.png){fig-align="center"}
 
 
 ## This isn't exactly what we need though.....
 
--- Recall, the goal is to take values between $-\infty and \infty$ and map them to probabilities. We need the opposite of the link function... or the *inverse*
+-- Recall, the goal is to take values between -$\infty$ and $\infty$ and map them to probabilities. We need the opposite of the link function... or the *inverse*
 
 -- How do we take the inverse of a natural log? 
 
