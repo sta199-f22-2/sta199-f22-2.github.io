@@ -43,7 +43,7 @@ format: revealjs
 
 ## A linear model 
 
-![](images/bernmodel.png)
+$\eta = \beta_oX_1 + ...$
 
 
 - But we can't stop here
@@ -62,9 +62,9 @@ format: revealjs
 
 -- A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded
 
-logit(p) = $log(\frac{p}{1-p})  $ 
+logit(p) = $log(\frac{p}{1-p})$ 
 
-$logit(p_i)$ = $\beta_o +\beta_1X1_i + .... $
+$logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$
 
 ## What's this look like
 
@@ -73,18 +73,18 @@ $logit(p_i)$ = $\beta_o +\beta_1X1_i + .... $
 
 ## This isn't exactly what we need though.....
 
--- Recall, the goal is to take values between $ -\infty and \infty $ and map them to probabilities. We need the opposite of the link function... or the *inverse*
+-- Recall, the goal is to take values between $-\infty and \infty$ and map them to probabilities. We need the opposite of the link function... or the *inverse*
 
 -- How do we take the inverse of a natural log? 
 
 
 ## So 
 
--- $ \eta_i = \beta_o +\beta_1X1_i + .... $
+-- $\eta_i = \beta_o +\beta_1X1_i + ....$
 
--- logit(p) = $  \beta_o +\beta_1X1_i + .... $ 
+-- logit(p) = $\beta_o +\beta_1X1_i + ....$ 
 
-- $pi = \frac{exp(\beta_o + \beta_1X_1 + ...)} {1 + exp(\beta_o + \beta_1X_1 + ...) }        $
+- $pi = \frac{exp(\beta_o + \beta_1X_1 + ...)} {1 + exp(\beta_o + \beta_1X_1 + ...) }$
 
 ##
 

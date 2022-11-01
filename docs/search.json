@@ -3336,21 +3336,21 @@
     "href": "slides/19-logistic.html#a-linear-model",
     "title": "Logistic Regression",
     "section": "A linear model",
-    "text": "A linear model\n\n\nBut we can’t stop here\nNext, we need a link function that relates the linear model to the parameter of the outcome distribution i.e. transform the linear model to have an appropriate range"
+    "text": "A linear model\n\\(\\eta = \\beta_oX_1 + ...\\)\n\nBut we can’t stop here\nNext, we need a link function that relates the linear model to the parameter of the outcome distribution i.e. transform the linear model to have an appropriate range"
   },
   {
     "objectID": "slides/19-logistic.html#goal",
     "href": "slides/19-logistic.html#goal",
     "title": "Logistic Regression",
     "section": "Goal",
-    "text": "Goal\n– Or…. takes values between $ -and $ and map them to probabilities"
+    "text": "Goal\n– Or…. takes values between negative and positive infinity and map them to probabilities"
   },
   {
     "objectID": "slides/19-logistic.html#logit-link-function",
     "href": "slides/19-logistic.html#logit-link-function",
     "title": "Logistic Regression",
     "section": "Logit Link function",
-    "text": "Logit Link function\n– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded\nlogit(p) = $log() $\n\\(logit(p_i)\\) = $_o +_1X1_i + …. $"
+    "text": "Logit Link function\n– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded\nlogit(p) = \\(log(\\frac{p}{1-p})\\)\n\\(logit(p_i)\\) = \\(\\beta_o +\\beta_1X1_i + ....\\)"
   },
   {
     "objectID": "slides/19-logistic.html#whats-this-look-like",
@@ -3364,14 +3364,14 @@
     "href": "slides/19-logistic.html#this-isnt-exactly-what-we-need-though..",
     "title": "Logistic Regression",
     "section": "This isn’t exactly what we need though…..",
-    "text": "This isn’t exactly what we need though…..\n– Recall, the goal is to take values between $ -and $ and map them to probabilities. We need the opposite of the link function… or the inverse\n– How do we take the inverse of a natural log?"
+    "text": "This isn’t exactly what we need though…..\n– Recall, the goal is to take values between \\(-\\infty and \\infty\\) and map them to probabilities. We need the opposite of the link function… or the inverse\n– How do we take the inverse of a natural log?"
   },
   {
     "objectID": "slides/19-logistic.html#so",
     "href": "slides/19-logistic.html#so",
     "title": "Logistic Regression",
     "section": "So",
-    "text": "So\n– $ _i = _o +_1X1_i + …. $\n– logit(p) = $ _o +_1X1_i + …. $\n\n$pi = {1 + exp(_o + _1X_1 + …) } $"
+    "text": "So\n– \\(\\eta_i = \\beta_o +\\beta_1X1_i + ....\\)\n– logit(p) = \\(\\beta_o +\\beta_1X1_i + ....\\)\n\n\\(pi = \\frac{exp(\\beta_o + \\beta_1X_1 + ...)} {1 + exp(\\beta_o + \\beta_1X_1 + ...) }\\)"
   },
   {
     "objectID": "slides/19-logistic.html#section",
