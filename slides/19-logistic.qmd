@@ -71,13 +71,15 @@ Evaluate the performance
 
 ## A linear model 
 
-$\eta = \beta_o + \beta_1*X_1 + ...$
+$p_i = \beta_o + \beta_1*X_1 + ...$
 
 
 - But we can't stop here
 
 
 - Next, we need a link function that relates the linear model to the parameter of the outcome distribution i.e. transform the linear model to have an appropriate range 
+
+# Generalized linear model
 
 
 ## Goal 
@@ -91,15 +93,6 @@ $\eta = \beta_o + \beta_1*X_1 + ...$
 
 -- Note: log is in reference to natural log
 
-## Generalized linear model 
-
-- $\eta = \beta_o + \beta_1*X_1 + ...$
-
-- logit(p) is also known as the log-odds 
-
-- logit(p) = $log(\frac{p}{1-p})$ 
-
-- $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$
 
 ## What's this look like
 
@@ -114,14 +107,26 @@ Takes a [0,1] probability and maps it to log odds (-$\infty$ to $\infty$.)
 
 -- How do we take the inverse of a natural log? 
 
+- Taking the inverse of the logit function will map arbitrary real values back to the range [0, 1]
+
+## Generalized linear model 
+
+- logit(p) is also known as the log-odds 
+
+- logit(p) = $log(\frac{p}{1-p})$ 
+
+- $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$
+
 
 ## So 
 
--- $\eta_i = \beta_o +\beta_1X1_i + ....$
-
 -- $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$ 
 
-- $pi = \frac{exp(\beta_o + \beta_1X_1_i + ...)} {1 + exp(\beta_o + \beta_1X_1_i + ...) }$
+-- $log(\frac{p}{1-p})$  = $\beta_o +\beta_1X1_i + ....$ 
+
+- Lets take the inverse of the logit function
+
+# $p_i$ = $\frac{e^{\beta_o + \beta_1X1 + ...}}{1 + e^{\beta_o + \beta_1X1 + ...}}$
 
 ##
 

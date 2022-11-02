@@ -3350,7 +3350,7 @@
     "href": "slides/19-logistic.html#a-linear-model",
     "title": "Logistic Regression",
     "section": "A linear model",
-    "text": "A linear model\n\\(\\eta = \\beta_o + \\beta_1*X_1 + ...\\)\n\nBut we can’t stop here\nNext, we need a link function that relates the linear model to the parameter of the outcome distribution i.e. transform the linear model to have an appropriate range"
+    "text": "A linear model\n\\(p_i = \\beta_o + \\beta_1*X_1 + ...\\)\n\nBut we can’t stop here\nNext, we need a link function that relates the linear model to the parameter of the outcome distribution i.e. transform the linear model to have an appropriate range"
   },
   {
     "objectID": "slides/19-logistic.html#goal",
@@ -3364,7 +3364,7 @@
     "href": "slides/19-logistic.html#logit-link-function",
     "title": "Logistic Regression",
     "section": "Logit Link function",
-    "text": "Logit Link function\n– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded"
+    "text": "Logit Link function\n– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded\n– Note: log is in reference to natural log"
   },
   {
     "objectID": "slides/19-logistic.html#generalized-linear-model",
@@ -3385,14 +3385,14 @@
     "href": "slides/19-logistic.html#this-isnt-exactly-what-we-need-though..",
     "title": "Logistic Regression",
     "section": "This isn’t exactly what we need though…..",
-    "text": "This isn’t exactly what we need though…..\n– Recall, the goal is to take values between -\\(\\infty\\) and \\(\\infty\\) and map them to probabilities. We need the opposite of the link function… or the inverse\n– How do we take the inverse of a natural log?"
+    "text": "This isn’t exactly what we need though…..\n– Recall, the goal is to take values between -\\(\\infty\\) and \\(\\infty\\) and map them to probabilities. We need the opposite of the link function… or the inverse\n– How do we take the inverse of a natural log?\n\nTaking the inverse of the logit function will map arbitrary real values back to the range [0, 1]"
   },
   {
     "objectID": "slides/19-logistic.html#so",
     "href": "slides/19-logistic.html#so",
     "title": "Logistic Regression",
     "section": "So",
-    "text": "So\n– \\(\\eta_i = \\beta_o +\\beta_1X1_i + ....\\)\n– \\(logit(p_i)\\) = \\(\\beta_o +\\beta_1X1_i + ....\\)\n\n\\(pi = \\frac{exp(\\beta_o + \\beta_1X_1_i + ...)} {1 + exp(\\beta_o + \\beta_1X_1_i + ...) }\\)"
+    "text": "So\n– \\(\\eta_i = \\beta_o +\\beta_1X1_i + ....\\)\n– \\(logit(p_i)\\) = \\(\\beta_o +\\beta_1X1_i + ....\\)\n– \\(log(\\frac{p}{1-p})\\) = \\(\\beta_o +\\beta_1X1_i + ....\\)\n\nLets take the inverse of the logit function"
   },
   {
     "objectID": "slides/19-logistic.html#section",
@@ -3414,5 +3414,19 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/19-logistic.html#section-1",
+    "href": "slides/19-logistic.html#section-1",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "Example Figure:"
+  },
+  {
+    "objectID": "slides/19-logistic.html#generalized-linear-model-1",
+    "href": "slides/19-logistic.html#generalized-linear-model-1",
+    "title": "Logistic Regression",
+    "section": "Generalized linear model",
+    "text": "Generalized linear model\n\nlogit(p) is also known as the log-odds\nlogit(p) = \\(log(\\frac{p}{1-p})\\)\n\\(logit(p_i)\\) = \\(\\beta_o +\\beta_1X1_i + ....\\)"
   }
 ]

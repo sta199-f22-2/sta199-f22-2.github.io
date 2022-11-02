@@ -385,11 +385,16 @@
 </section>
 <section id="a-linear-model" class="slide level2">
 <h2>A linear model</h2>
-<p><span class="math inline">\(\eta = \beta_o + \beta_1*X_1 + ...\)</span></p>
+<p><span class="math inline">\(p_i = \beta_o + \beta_1*X_1 + ...\)</span></p>
 <ul>
 <li class="fragment"><p>But we can’t stop here</p></li>
 <li class="fragment"><p>Next, we need a link function that relates the linear model to the parameter of the outcome distribution i.e.&nbsp;transform the linear model to have an appropriate range</p></li>
 </ul>
+</section></section>
+<section>
+<section id="generalized-linear-model" class="title-slide slide level1 center">
+<h1>Generalized linear model</h1>
+
 </section>
 <section id="goal" class="slide level2">
 <h2>Goal</h2>
@@ -398,15 +403,7 @@
 <section id="logit-link-function" class="slide level2">
 <h2>Logit Link function</h2>
 <p>– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded</p>
-</section>
-<section id="generalized-linear-model" class="slide level2">
-<h2>Generalized linear model</h2>
-<ul>
-<li class="fragment"><p><span class="math inline">\(\eta = \beta_o + \beta_1*X_1 + ...\)</span></p></li>
-<li class="fragment"><p>logit(p) is also known as the log-odds</p></li>
-<li class="fragment"><p>logit(p) = <span class="math inline">\(log(\frac{p}{1-p})\)</span></p></li>
-<li class="fragment"><p><span class="math inline">\(logit(p_i)\)</span> = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p></li>
-</ul>
+<p>– Note: log is in reference to natural log</p>
 </section>
 <section id="whats-this-look-like" class="slide level2">
 <h2>What’s this look like</h2>
@@ -417,14 +414,31 @@
 <h2>This isn’t exactly what we need though…..</h2>
 <p>– Recall, the goal is to take values between -<span class="math inline">\(\infty\)</span> and <span class="math inline">\(\infty\)</span> and map them to probabilities. We need the opposite of the link function… or the <em>inverse</em></p>
 <p>– How do we take the inverse of a natural log?</p>
+<ul>
+<li class="fragment">Taking the inverse of the logit function will map arbitrary real values back to the range [0, 1]</li>
+</ul>
+</section>
+<section id="generalized-linear-model-1" class="slide level2">
+<h2>Generalized linear model</h2>
+<ul>
+<li class="fragment"><p>logit(p) is also known as the log-odds</p></li>
+<li class="fragment"><p>logit(p) = <span class="math inline">\(log(\frac{p}{1-p})\)</span></p></li>
+<li class="fragment"><p><span class="math inline">\(logit(p_i)\)</span> = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p></li>
+</ul>
 </section>
 <section id="so" class="slide level2">
 <h2>So</h2>
 <p>– <span class="math inline">\(\eta_i = \beta_o +\beta_1X1_i + ....\)</span></p>
 <p>– <span class="math inline">\(logit(p_i)\)</span> = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p>
+<p>– <span class="math inline">\(log(\frac{p}{1-p})\)</span> = <span class="math inline">\(\beta_o +\beta_1X1_i + ....\)</span></p>
 <ul>
-<li class="fragment"><span class="math inline">\(pi = \frac{exp(\beta_o + \beta_1X_1_i + ...)} {1 + exp(\beta_o + \beta_1X_1_i + ...) }\)</span></li>
+<li class="fragment">Lets take the inverse of the logit function</li>
 </ul>
+</section></section>
+<section>
+<section id="p_i-fracebeta_o-beta_1x1-...1-ebeta_o-beta_1x1-..." class="title-slide slide level1 center">
+<h1><span class="math inline">\(p_i\)</span> = <span class="math inline">\(\frac{e^{\beta_o + \beta_1X1 + ...}}{1 + e^{\beta_o + \beta_1X1 + ...}}\)</span></h1>
+
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
