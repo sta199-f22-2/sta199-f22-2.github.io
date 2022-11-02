@@ -1145,7 +1145,7 @@
     "href": "index.html",
     "title": "STA 199: Introduction to Data Science",
     "section": "",
-    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      hw_sa\n      lab\n      lab_sa\n      exam\n      project\n      notes\n    \n\n\n1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n\nRelease Lab 0\n\n\n\nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\n\n\n\n\n\n2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\n\n\nRelease: Lab 1 / Release: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\n\n\nDue: Lab 1\n\n\n\nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\n\n\nRelease: Lab 2 / Due: HW 1 / Release: HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\n\n\nDue: Lab 2\n\n\n\nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\n\n\nRelease: Lab 3 / Due HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\n\n\nDue: Lab 3\n\n\n\nW\n28 September\nLec 10\nExam 1 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\nM\n3 October\nLec 11\nData science ethics 1\n\n\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n\n\n\nW\n5 October\nLec 12\nData science ethics 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n6 October\nLab\nMerge Conflicts + Ethics\n\n\n\n\n\n\n\n\n\nRelease: Lab 4 / Release: HW 3\n\n\n7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n12 October\nLec 13\nWeb scraping\n\n\n\n\n\n\n\n\n\nDue: Lab 4\n\n\n\nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n\n\n\nF\n14 October\n\n\n\n\n\n\n\n\n\n\n\nDue: HW 3\n\n\n8\nM\n17 October\nLec 14\nFunctions + iteration\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n20 October\nLab 5\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\n\n\nDue: Lab 5\n\n\n\nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\n\n\nRelease: HW 4\n\n\n\nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\n\n\nRelease: Lab 6\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\nM\n31 October\nLec 18\nModels with multiple predictors + Overfitting\n\n\n\n\n\n\n\n\n\nDue: Lab 6\n\n\n\nW\n2 November\nLec 19\nLogistic regression\n\n\n\n\n\n\n\n\n\nDue: HW 4 / Release: HW 5\n\n\n\nTh\n3 November\nLab\nWork on project draft\n\n\n\n\n\n\n\n\n\nRelease: Lab\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\n\n\nDue: Lab - project draft 1\n\n\n\nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\n\n\nDue: HW 5\n\n\n\nTh\n10 November\nLab 7\nPrediction and Bootstrapping\n\n\n\n\n\n\n\n\n\nRelease: Lab 7\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\n\n\nDue: Lab 7\n\n\n\nW\n16 November\nLec 23\nExam 2 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n17 November\nLab\nNo lab - Work on Exam 2\n\n\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n\n\n\nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\n\n14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\nT\n29 November\n\n\n\n\n\n\n\n\n\n\n\nDue: Project draft due (optional)\n\n\n\nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n\n\n\n\n15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\n\n\nDue: Project everything\n\n\n\nF\n9 December\n\n\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
+    "text": "week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      hw\n      hw_sa\n      lab\n      lab_sa\n      exam\n      project\n      notes\n    \n\n\n1\nM\n29 August\nLec 1\nWelcome to STA 199\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n31 August\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n\nRelease Lab 0\n\n\n\nTh\n1 September\nLab 1\nHello R!\n\n\n\n\n\n\n\n\n\n\n\n\n2\nM\n5 September\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 September\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 September\nLab 2\nData visualization\n\n\n\n\n\n\n\n\n\nRelease: Lab 1 / Release: HW 1\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\nM\n12 September\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\n\n\nDue: Lab 1\n\n\n\nW\n14 September\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n15 September\nLab 3\nData wrangling\n\n\n\n\n\n\n\n\n\nRelease: Lab 2 / Due: HW 1 / Release: HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\nM\n19 September\nLec 7\nTidying data\n\n\n\n\n\n\n\n\n\nDue: Lab 2\n\n\n\nW\n21 September\nLec 8\nData types and classes\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n22 September\nLab 4\nData tidying\n\n\n\n\n\n\n\n\n\nRelease: Lab 3 / Due HW 2\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\nM\n26 September\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\n\n\nDue: Lab 3\n\n\n\nW\n28 September\nLec 10\nExam 1 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n29 September\nLab\nNo lab - Work on Exam 1\n\n\n\n\n\n\n\n\n\nRelease Exam 1 at 12 p.m.\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\nM\n3 October\nLec 11\nData science ethics 1\n\n\n\n\n\n\n\n\n\nDue Exam 1 at 2 p.m.\n\n\n\nW\n5 October\nLec 12\nData science ethics 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n6 October\nLab\nMerge Conflicts + Ethics\n\n\n\n\n\n\n\n\n\nRelease: Lab 4 / Release: HW 3\n\n\n7\nM\n10 October\nLec\nFall break\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n12 October\nLec 13\nWeb scraping\n\n\n\n\n\n\n\n\n\nDue: Lab 4\n\n\n\nTh\n13 October\nLab\nWork on project proposal\n\n\n\n\n\n\n\n\n\n\n\n\n\nF\n14 October\n\n\n\n\n\n\n\n\n\n\n\nDue: HW 3\n\n\n8\nM\n17 October\nLec 14\nFunctions + iteration\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n19 October\nLec 15\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n20 October\nLab 5\nProbability + Simpson's Paradox\n\n\n\n\n\n\n\n\n\nRelease: Lab 5 / Due: Project proposal\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\nM\n24 October\nLec 16\nModels with a single predictor\n\n\n\n\n\n\n\n\n\nDue: Lab 5\n\n\n\nW\n26 October\nLec 17\nModels with multiple predictors\n\n\n\n\n\n\n\n\n\nRelease: HW 4\n\n\n\nTh\n27 October\nLab 6\nPredicting a numerical outcome\n\n\n\n\n\n\n\n\n\nRelease: Lab 6\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\nM\n31 October\nLec 18\nModels with multiple predictors + Overfitting\n\n\n\n\n\n\n\n\n\nDue: Lab 6\n\n\n\nW\n2 November\nLec 19\nLogistic regression\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n3 November\nLab\nWork on project draft\n\n\n\n\n\n\n\n\n\nRelease: Lab / HW 5;\nDue: HW 4\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\nM\n7 November\nLec 20\nQuantifying uncertainty\n\n\n\n\n\n\n\n\n\nDue: Lab - project draft 1\n\n\n\nW\n9 November\nLec 21\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\n\n\nDue: HW 5\n\n\n\nTh\n10 November\nLab 7\nPrediction and Bootstrapping\n\n\n\n\n\n\n\n\n\nRelease: Lab 7\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\nM\n14 November\nLec 22\nHypothesis testing via simulation\n\n\n\n\n\n\n\n\n\nDue: Lab 7\n\n\n\nW\n16 November\nLec 23\nExam 2 Review\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n17 November\nLab\nNo lab - Work on Exam 2\n\n\n\n\n\n\n\n\n\nRelease Exam 2 at 12pm\n\n\n\nF\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\nM\n21 November\nLec 24\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\n\n\nDue: Exam 2 at 2pm\n\n\n\nW\n23 November\nLecture\nNo Lec - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n24 November\nLab\nNo lab - Thanksgiving\n\n\n\n\n\n\n\n\n\n\n\n\n14\nM\n28 November\nLec 25\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\nT\n29 November\n\n\n\n\n\n\n\n\n\n\n\nDue: Project draft due (optional)\n\n\n\nW\n30 November\nLec 26\nCommunicating data science results effectively\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n1 December\nLab\nProject peer review\n\n\n\n\n\n\n\n\n\n\n\n\n15\nM\n5 December\nLec 25\nLooking further topic 1\n\n\n\n\n\n\n\n\n\n\n\n\n\nW\n7 December\nLec 26\nLooking further topic 2\n\n\n\n\n\n\n\n\n\n\n\n\n\nTh\n8 December\nLab\nProject presentations\n\n\n\n\n\n\n\n\n\nDue: Project everything\n\n\n\nF\n9 December\n\n\n\n\n\n\n\n\n\n\n\nDue: HW 6 / Statistics experience"
   },
   {
     "objectID": "labs/lab-0.html",
@@ -3283,13 +3283,6 @@
     "text": "Logistic Regression\n– What if the response variable is categorical?\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/19-logistic.html#checklist",
     "href": "slides/19-logistic.html#checklist",
     "title": "Logistic Regression",
@@ -3311,11 +3304,32 @@
     "text": "Goals\n– Testing and Training data\n– The What, Why, and How of Logistic Regression"
   },
   {
+    "objectID": "slides/19-logistic.html#warm-up",
+    "href": "slides/19-logistic.html#warm-up",
+    "title": "Logistic Regression",
+    "section": "Warm Up",
+    "text": "Warm Up\n– What is a testing data set?\n– What is a training data set?"
+  },
+  {
+    "objectID": "slides/19-logistic.html#warm-up-1",
+    "href": "slides/19-logistic.html#warm-up-1",
+    "title": "Logistic Regression",
+    "section": "Warm Up",
+    "text": "Warm Up\n– What is a testing data set?\n“Sandbox” for model building. Build the model on these data.\n– What is a training data set?\nHeld in reserve to test one or two chosen models.\nEvaluate the performance"
+  },
+  {
     "objectID": "slides/19-logistic.html#what-is-logistic-regreesion",
     "href": "slides/19-logistic.html#what-is-logistic-regreesion",
     "title": "Logistic Regression",
     "section": "What is Logistic Regreesion",
     "text": "What is Logistic Regreesion\n\nSimilar to linear regression…. but\nModeling tool when our response is categorical"
+  },
+  {
+    "objectID": "slides/19-logistic.html#what-we-will-do-today",
+    "href": "slides/19-logistic.html#what-we-will-do-today",
+    "title": "Logistic Regression",
+    "section": "What we will do today",
+    "text": "What we will do today"
   },
   {
     "objectID": "slides/19-logistic.html#terms",
@@ -3353,6 +3367,13 @@
     "text": "Logit Link function\n– A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded"
   },
   {
+    "objectID": "slides/19-logistic.html#generalized-linear-model",
+    "href": "slides/19-logistic.html#generalized-linear-model",
+    "title": "Logistic Regression",
+    "section": "Generalized linear model",
+    "text": "Generalized linear model\n\n\\(\\eta = \\beta_o + \\beta_1*X_1 + ...\\)\nlogit(p) is also known as the log-odds\nlogit(p) = \\(log(\\frac{p}{1-p})\\)\n\\(logit(p_i)\\) = \\(\\beta_o +\\beta_1X1_i + ....\\)"
+  },
+  {
     "objectID": "slides/19-logistic.html#whats-this-look-like",
     "href": "slides/19-logistic.html#whats-this-look-like",
     "title": "Logistic Regression",
@@ -3388,31 +3409,10 @@
     "text": "Takeaways\n– We can not model these data using the tools we currently have\n– We can overcome some of the shortcoming of regression by fitting a generalized linear regression model\n– We can model binary data using an inverse logit function to model probabilities of success\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/19-logistic.html#warm-up",
-    "href": "slides/19-logistic.html#warm-up",
-    "title": "Logistic Regression",
-    "section": "Warm Up",
-    "text": "Warm Up\n– What is a testing data set?\n– What is a training data set?"
-  },
-  {
-    "objectID": "slides/19-logistic.html#warm-up-1",
-    "href": "slides/19-logistic.html#warm-up-1",
-    "title": "Logistic Regression",
-    "section": "Warm Up",
-    "text": "Warm Up\n– What is a testing data set?\n“Sandbox” for model building. Build the model on these data.\n– What is a training data set?\nHeld in reserve to test one or two chosen models.\nEvaluate the performance"
-  },
-  {
-    "objectID": "slides/19-logistic.html#what-we-will-do-today",
-    "href": "slides/19-logistic.html#what-we-will-do-today",
-    "title": "Logistic Regression",
-    "section": "What we will do today",
-    "text": "What we will do today"
-  },
-  {
-    "objectID": "slides/19-logistic.html#generalized-linear-model",
-    "href": "slides/19-logistic.html#generalized-linear-model",
-    "title": "Logistic Regression",
-    "section": "Generalized linear model",
-    "text": "Generalized linear model\n\n\\(\\eta = \\beta_o + \\beta_1*X_1 + ...\\)\nlogit(p) is also known as the log-odds\nlogit(p) = \\(log(\\frac{p}{1-p})\\)\n\\(logit(p_i)\\) = \\(\\beta_o +\\beta_1X1_i + ....\\)"
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

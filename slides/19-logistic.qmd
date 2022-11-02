@@ -89,6 +89,8 @@ $\eta = \beta_o + \beta_1*X_1 + ...$
 
 -- A logit link function transforms the probabilities of the levels of a categorical response variable to a continuous scale that is unbounded
 
+-- Note: log is in reference to natural log
+
 ## Generalized linear model 
 
 - $\eta = \beta_o + \beta_1*X_1 + ...$
