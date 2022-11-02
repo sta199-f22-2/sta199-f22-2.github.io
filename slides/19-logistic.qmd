@@ -120,9 +120,9 @@ Takes a [0,1] probability and maps it to log odds (-$\infty$ to $\infty$.)
 
 ## So 
 
--- $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$ 
+- $logit(p_i)$ = $\beta_o +\beta_1X1_i + ....$ 
 
--- $log(\frac{p}{1-p})$  = $\beta_o +\beta_1X1_i + ....$ 
+- $log(\frac{p}{1-p})$  = $\beta_o +\beta_1X1_i + ....$ 
 
 - Lets take the inverse of the logit function
 
