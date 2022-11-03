@@ -170,24 +170,23 @@ tidy(rate_util_home_fit)
 -   **Demo:** Fit a model to predict interest rate from credit utilization and homeownership, **without** an interaction effect between the two predictors. Display the summary output and write out the estimated regression equation.
 
 ```{r}
-#| label: rate-util-home-fit
 rate_util_home_fit <- linear_reg() |>
   fit(interest_rate ~ credit_util + homeownership, data = loans)
 tidy(rate_util_home_fit)
 ```
 
-\$\$
+$$
 
 \widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.696*Mortgage + 0.128*Own \\
 
 Mortage = 1 if Mortage; 0 else \\ Own = 1 if Own; 0 else
 
-\$\$
+$$
 
 -   **Demo:** Write the estimated regression equation for loan applications from each of the homeownership groups separately.
-    -   Rent: \$ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util \\ \$
-    -   Mortgage: \$ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.696\*(1) \\ \$
-    -   Own: \$ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.128\*(1) \\ \$
+    -   Rent: $ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util \\ $
+    -   Mortgage: $ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.696\*(1) \\ $
+    -   Own: $ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.128\*(1) \\ $
 -   **Question:** How does the model predict the interest rate to vary as credit utilization varies for loan applicants with different homeownership status. Are the rates the same or different?
 
 **The Same**
@@ -299,11 +298,11 @@ linear_reg() |>
   tidy()
 ```
 
-\$\$
+$$
 
 \widehat{body-mass} = -5737 + 6.05*bill + 48.1*flipper
 
-\$\$
+$$
 
 Holding bill length constant, for a one mm increase in flipper length, we expect on average a 48.1 increase in body mass grams.
 
