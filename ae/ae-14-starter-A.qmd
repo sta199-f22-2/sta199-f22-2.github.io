@@ -113,18 +113,15 @@ summary(fit)
 
 -   *(2-min)* Using the line, predict what you think the width of a fish would be with a height of 10 cm. 15cm. 20cm.
 
-$\hat{weight}$ = 1.96 + 0.23*10
-$\hat{weight}$ = 1.96 + 0.23*15
-$\hat{weight}$ = 1.96 + 0.23*20
+$\hat{weight}$ = 1.96 + 0.23*10* $\hat{weight}$ = 1.96 + 0.2315 $\hat{weight}$ = 1.96 + 0.23\*20
 
 -   What is the notation of our line?
 
-$$
+\$\$
 
-\hat{weight} = 1.96 +0.23*height
+\hat{weight} = 1.96 +0.23\*height
 
-$$
-
+\$\$
 
 ## Correlation
 
@@ -143,7 +140,6 @@ fish |>
   select(Height, Weight) |>
   cor()
 ```
-
 
 Are you good at guessing? Give it a try!
 
