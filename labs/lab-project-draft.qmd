@@ -44,7 +44,7 @@ In this lab, you will...
 ## Project draft
 
 ::: callout-important
-Your next project related deadline is Fri, Nov 7 at 11:59pm.
+Your next project related deadline is Mon, Nov 7 at 11:59pm.
 Your project draft, written in `report.qmd`, must be pushed to GitHub by that time.
 You will lose push access to your repo at that time until your draft has been reviewed.
 Once again, you will receive feedback as issues on your GitHub repository.
