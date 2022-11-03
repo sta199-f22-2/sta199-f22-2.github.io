@@ -1,0 +1,313 @@
+---
+title: "Modelling loan interest rates"
+format: html
+editor: visual
+---
+
+In this application exercise we will be studying loan interest rates. The dataset is one you've come across before in your reading -- the dataset about loans from the peer-to-peer lender, Lending Club, from the **openintro** packahe. We will use **tidyverse** and **tidymodels** for data exploration and modeling, respectively.
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+```
+
+Before we use the data set, we'll make a few transformations to it.
+
+Warm up: What is this code doing?
+
+```{r}
+loans <- loans_full_schema %>% # Old data set
+  mutate(
+    credit_util = total_credit_utilized / total_credit_limit, #New var
+    bankruptcy  = as.factor(if_else(public_record_bankrupt == 0, 0, 1)),
+    verified_income = droplevels(verified_income),
+    homeownership = str_to_title(homeownership),
+    homeownership = fct_relevel(homeownership, "Rent", "Mortgage", "Own")
+    ) %>%
+  rename(credit_checks = inquiries_last_12m) %>%
+  select(interest_rate, verified_income, debt_to_income, credit_util, bankruptcy, term, credit_checks, issue_month, homeownership) 
+```
+
+Take a glimpse of the data below:
+
+```{r}
+#| label: glimpse-loans
+
+glimpse(loans)
+
+```
+
+# Interest rate vs. credit utilization ratio
+
+Write a model that models interest rate by credit utilization ratio. Name it `rate_util_fit`.
+
+```{r}
+#| label: fit-rate-util
+
+rate_util_fit <- linear_reg() |>
+  set_engine("lm") |>
+  fit(interest_rate ~ credit_util, data = loans) 
+  
+tidy(rate_util_fit)
+```
+
+And here is the model visualized:
+
+```{r}
+ggplot(loans, aes(x = credit_util, y = interest_rate)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm")
+```
+
+-   **Your turn:** What is the estimated interest rate for a loan applicant with credit utilization of 0.8, i.e. someone whose total credit balance is 80% of their total available credit?
+
+```{r}
+#| label: predict-80
+
+# Make new data 
+
+credit_util_80 <- tibble(credit_util = 0.8)
+
+# Predict with it
+
+predict(rate_util_fit, new_data = credit_util_80)
+
+
+```
+
+# Leverage vs Influence
+
+What is leverage? What is influence?
+
+Leverage - How far away an observation is from the line (High, Low) "Potential for influence"
+
+Influence - Does the observation change the line?
+
+Now, let's add data points to drive this idea home!
+
+```{r}
+
+new_point_1 <- data.frame(100, NA, NA, 0.8, NA,  NA, NA, NA, NA)
+names(new_point_1) <- names(loans)
+
+new_point_2 <- data.frame(100, NA, NA, 4, NA,  NA, NA, NA, NA)
+names(new_point_2) <- names(loans)
+
+
+new_loans1 <- rbind(loans, new_point_1)
+
+new_loans2 <- rbind(loans, new_point_2)
+```
+
+Below, compare the model outputs.
+
+```{r}
+
+linear_reg() |>
+  set_engine("lm") |>
+  fit(interest_rate ~ credit_util, data = loans) |> #Change data to loans
+  tidy()
+
+linear_reg() |>
+  set_engine("lm") |>
+  fit(interest_rate ~ credit_util, data = new_loans1) |>
+  tidy()
+
+linear_reg() |>
+  set_engine("lm") |>
+  fit(interest_rate ~ credit_util, data = new_loans2) |>
+  tidy()
+
+
+```
+
+```{r}
+ggplot(new_loans2, aes(x = credit_util, y = interest_rate)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm")
+```
+
+**Model 3 had its slope change dramatically because of the high leverage point with a large x-value and large y-value. The slope did not change in model 2 very much compared to model 1**
+
+# Interest rate vs. homeownership
+
+Next lets predict interest rates from homeownership, which is a categorical predictor with three levels:
+
+```{r}
+levels(loans$homeownership)
+```
+
+-   **Demo:** Fit the linear regression model to predict interest rate from homeownership and display a tidy summary of the model. Write the estimated model output below.
+
+```{r}
+#| label: fit-rate-home
+
+rate_util_home_fit <- linear_reg() |>
+  set_engine("lm") |>
+  fit(interest_rate ~ homeownership, data = loans)
+
+tidy(rate_util_home_fit)
+  
+```
+
+-   **Your turn:** Interpret each coefficient in context of the problem.
+
+    -   Intercept: On average, the estimated interest rate for a house being rented is 12.9 percent.
+
+    -   Slopes:
+
+        -   On average, the estimated interest rate for a mortgage is 12.9 - 0.866 percent.
+
+        -   On average, the estimated interest rate for a owned home is 12.9 - 0.611 percent.
+
+# Interest rate vs. credit utilization and homeownership
+
+## Main effects model
+
+-   **Demo:** Fit a model to predict interest rate from credit utilization and homeownership, **without** an interaction effect between the two predictors. Display the summary output and write out the estimated regression equation.
+
+```{r}
+#| label: rate-util-home-fit
+rate_util_home_fit <- linear_reg() |>
+  fit(interest_rate ~ credit_util + homeownership, data = loans)
+tidy(rate_util_home_fit)
+```
+
+$$
+
+\widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.696*Mortgage + 0.128*Own \\
+
+Mortage = 1 if Mortage; 0 else \\
+Own = 1 if Own; 0 else
+
+$$
+
+-   **Demo:** Write the estimated regression equation for loan applications from each of the homeownership groups separately.
+    -   Rent: $ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util  \\ $
+    -   Mortgage: $ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.696*(1) \\ $
+    -   Own: $ \widehat{interest-rate} = 9.93 + 5.34 \times credit-util + 0.128*(1) \\ $
+-   **Question:** How does the model predict the interest rate to vary as credit utilization varies for loan applicants with different homeownership status. Are the rates the same or different?
+
+**The Same** 
+
+## Interaction effects model
+
+-   **Demo:** Fit a model to predict interest rate from credit utilization and homeownership, **with** an interaction effect between the two predictors. Display the summary output and write out the estimated regression equation.
+
+```{r}
+#| label: rate-util-home-fit
+rate_util_home_int_fit <- linear_reg() |>
+  set_engine("lm") |> 
+  fit(interest_rate ~ homeownership*credit_util, data = loans)
+  
+  tidy(rate_util_home_int_fit)
+```
+
+$$
+\widehat{interest~rat
+e} = 9.44 + 6.20 \times credit\_util + 1.39 \times Mortgage + 0.697 \times Own - 1.64 \times credit\_util:Mortgage - 1.06 \times credit\_util:Own
+$$
+
+-   **Demo:** Write the estimated regression equation for loan applications from each of the homeownership groups separately.
+    -   Rent: $\widehat{interest~rate} = 9.44 + 6.20 \times credit~util$
+    -   Mortgage: $\widehat{interest~rate} = 10.83 + 4.56 \times credit~util$
+    -   Own: $\widehat{interest~rate} = 10.137 + 5.14 \times credit~util$
+-   **Question:** How does the model predict the interest rate to vary as credit utilization varies for loan applicants with different homeownership status. Are the rates the same or different?
+
+**They are different**
+
+## Choosing a model
+
+Rule of thumb: **Occam's Razor** - Don't overcomplicate the situation! We prefer the *simplest* best model.
+
+```{r}
+#| label: glance
+glance(rate_util_home_fit)
+glance(rate_util_home_int_fit)
+```
+
+-   **Review:** What is R-squared? What is adjusted R-squared?
+
+R-squared is the amount of variability in our response that is explained by our model
+
+Adjusted R-squared is similar, but has an additional penalty for the number of variables in the model. 
+
+-   **Question:** Based on the $R^2s$ of these two models, which one do we prefer? Is this appropriate?
+
+-   **Question:** Based on the adjusted $R^2$s of these two models, which one do we prefer?
+
+Note: We can use the principles of adjusted R-squared to select models using forwards or backwards selection (Read 8.4.1)
+
+# Another model to consider
+
+-   **Your turn:** Let's add one more model to the variable -- issue month. Should we add this variable to the interaction effects model from earlier?
+
+```{r}
+linear_reg() |>
+  fit(interest_rate ~ credit_util * homeownership + issue_month, data = loans) |>
+  glance()
+```
+
+**No, the adjusted R-squared went slightly down**
+
+# Optional
+
+## 2 Quantitative Explanatory Variables
+
+Remember the penguins? Let's finish the activity.
+
+Now, let's explore body mass, and it's relationship to bill length and flipper length.
+
+```{r}
+#| message: false
+#| warning: false
+
+library(palmerpenguins)
+library(plotly)
+library(widgetframe)
+```
+
+Note: This code is beyond the scope of this course!
+
+```{r}
+
+quanplot <- plot_ly(penguins, 
+                    x = ~ flipper_length_mm, y = ~ bill_length_mm, z = ~body_mass_g,
+                    marker = list(size = 3, color = "lightgray" , alpha = 0.5, 
+                                  line = list(color = "gray" , width = 2))) |>
+                      add_markers() |>
+                      plotly::layout(scene = list(
+                        xaxis = list(title = "Flipper (mm)"),
+                        yaxis = list(title = "Bill (mm)"), 
+                        zaxis = list(title = "Body Mass (g)")
+                      )) |>
+                    config(displayModeBar = FALSE)
+                  frameWidget(quanplot)
+                      
+
+```
+
+-- Fit the additive model below. Interpret the coefficient for flipper in context of the problem.
+
+```{r}
+
+linear_reg() |>
+  set_engine("lm") |>
+  fit(body_mass_g ~ bill_length_mm * flipper_length_mm , data = penguins) |>
+  tidy()
+```
+
+$$
+
+\widehat{body-mass} = -5737 + 6.05*bill + 48.1*flipper
+
+$$
+
+Holding bill length constant, for a one mm increase in flipper length, we expect on average a 48.1 increase in body mass grams.
+
+What if I want to fit an interaction model with these two quantitative variables?
+
+It looks really similar to what we've done before! Try it out!
