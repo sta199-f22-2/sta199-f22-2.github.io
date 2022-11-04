@@ -5,7 +5,7 @@ editor: visual
 ---
 
 ::: callout-important
-This homework is due Thursday, Nov 9 at 11:59pm ET.
+This homework is due Thursday, Nov 10 at 11:59pm ET.
 
 Homework assignments are individual, not team based.
 :::
