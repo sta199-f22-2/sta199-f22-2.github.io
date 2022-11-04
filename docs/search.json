@@ -1162,6 +1162,41 @@
     "text": "Exercise 6 - Communicating statistics\nCommunication is a critical yet often overlooked part of data science. When we engage with our audience and capture their interest, we can ultimately better communicate what we are trying to share.\nPlease watch the following video: Hans Rosling: 200 years in 4 minutes.\nThen, write a paragraph (4-5 sentences) addressing the following:\n\nWhat did you enjoy about the presentation of data? What did you find interesting\nWere there any aspets of the presentation that were hard to follow? If so, what?\nWhat are your general take-aways from this presentation?\nWhat are your general take-aways from how this presentation was given?"
   },
   {
+    "objectID": "hw/hw-6.html",
+    "href": "hw/hw-6.html",
+    "title": "HW 6 - Statistics experience",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due Friday, Dec 9 at 11:59pm ET.\nHomework assignments are individual, not team based.\nThere is no GitHub repo for this assignment, see below for slide format.\nThe world of statistics and data science is vast and continually growing! The goal of the statistics experience assignments is to help you engage with the statistics and data science communities outside of the classroom.\nYou may submit the statistics experience assignment anytime between now and the deadline.\nEach experience has two parts:\n1️⃣ Have a statistics experience\n2️⃣ Make a slide summarizing on your experience\nYou must complete both parts to receive credit."
+  },
+  {
+    "objectID": "hw/hw-6.html#part-1-experience-statistics-outside-of-the-classroom",
+    "href": "hw/hw-6.html#part-1-experience-statistics-outside-of-the-classroom",
+    "title": "HW 6 - Statistics experience",
+    "section": "Part 1: Experience statistics outside of the classroom",
+    "text": "Part 1: Experience statistics outside of the classroom\nComplete an activity in one of the categories below. Under each category are suggested activities. You do not have to do one these suggested activities. You are welcome to find other activities as long as they are related to statistics/data science and they fit in one of the six categories. If there is an activity you’d like to do but you’re not sure if it qualifies for the statistics experience, just ask!\n\nCategory 1: Attend a talk or conference\nAttend an talk, panel, or conference related to statistics or data science. If you are attending a single talk or panel, it must be at least 30 minutes to count towards the statistics experience. The event can be in-person or online.\n\n\nCategory 2: Talk with a statistician/ data scientist\nTalk with someone who uses statistics in their daily work. This could include a professor, professional in industry, graduate student, etc.\n\n\nCategory 3: Listen to a podcast / watch video\nListen to a podcast or watch a video about statistics and data science. The podcast or video must be at least 30 minutes to count towards the statistics experience. A few suggestions are below:\n\nrstudio::conf 2022 talks\nrstudio::global 2021 talks\nrstudio::conf 2020 talks\nStats + Stories Podcast\nCausal Inference Podcast\nFiveThirtyEight Model Talk\n\nThis list is not exhaustive. You may listen to other podcasts or watch other statistics/data science videos not included on this list. Ask your professor if you are unsure whether a particular podcast or video will count towards the statistics experience.\n\n\nCategory 4: Participate in a data science competition or challenge\nParticipate in a statistics or data science competition. You can participate individually or with a team.\n\n\nCategory 5: Read a book on statistics/data science\nThere are a lot of books about statistics, data science, and related topics. A few suggestions are below. If you decide to read a book that isn’t on this list, ask your professor to make sure it counts toward the experience. Many of these books are available through Duke library.\n\nWeapons of Math Destruction by Cathy O’Neil\nHow Charts Lie: Getting Smarter about Visual Information by Alberto Cairo\nThe Theory that Would Not Die by Sharon Bertsch McGrayne\nThe Art of Statistics: How to learn from data by David Spiegelhalter\nThe Signal and the Noise: Why so many predictions fail - but some don’t by Nate Silver\nHow Charts Lie by Alberto Cairo\nList of books about data science ethics\n\n\n\nCategory 6: TidyTuesday\nYou may also participate in a TidyTuesday challenge. New data sets are announced on Monday afternoons.You can find more information about TidyTuesday and see the data in the TidyTuesday GitHub repo.\nA few guidelines:\n✅ Create a GitHub repo for your TidyTuesday submission. Your repo should include\n\nThe R Markdown file with all the code needed to reproduce your visualization.\nA README that includes an image of your final visualization and a short summary (~ 1 paragraph) about your visualization.\n\n✅ The visualization should include features or customization that are beyond what we’ve done in class .\n✅ Include the link to your GitHub repo in the slide summarizing your experience.\n\n\nCategory 7: Coding out loud\nWatch an episode of Coding out loud (either live or pre-recorded) and work through the project.\nA few guidelines:\n✅ Create a GitHub repo for your Coding out loud submission. Your repo should include\n\nThe Quarto file with all the code needed to reproduce your visualization.\nA README that includes an image of your final visualization and a short summary (~ 1 paragraph) about your visualization.\n\n✅ The final product (visualization, table, etc.) should include features or customization that are beyond what was achieved in the Coding out loud episode.\n✅ Include the link to your GitHub repo in the slide summarizing your experience."
+  },
+  {
+    "objectID": "hw/hw-6.html#part-2-summarize-your-experience",
+    "href": "hw/hw-6.html#part-2-summarize-your-experience",
+    "title": "HW 6 - Statistics experience",
+    "section": "Part 2: Summarize your experience",
+    "text": "Part 2: Summarize your experience\nMake one slide summarizing your experience. Submit the slide as a PDF on Gradescope.\nInclude the following on your slide:\n\nName and brief description of the event/podcast/competition/etc.\nSomething you found new, interesting, or unexpected\nHow the event/podcast/competition/etc. connects to something we’ve done in class.\nCitation or link to web page for event/competition/etc.\n\nClick here to see a template to help you get started on your slide. Your slide does not have to follow this exact format; it just needs to include the information mentioned above and be easily readable (i.e. use a reasonable font size!). Creativity is encouraged!"
+  },
+  {
+    "objectID": "hw/hw-6.html#submission",
+    "href": "hw/hw-6.html#submission",
+    "title": "HW 6 - Statistics experience",
+    "section": "Submission",
+    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials Duke Net ID and log in using your Net ID credentials.\nClick on your STA 199 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”). If you do not do this, you will be subject to lose points on the assignment.\nSelect the first page of your PDF submission to be associated with the “Workflow & formatting” question."
+  },
+  {
+    "objectID": "hw/hw-6.html#grading",
+    "href": "hw/hw-6.html#grading",
+    "title": "HW 6 - Statistics experience",
+    "section": "Grading",
+    "text": "Grading\nThis assignment will be graded out of 50 points, based on the quality and depth of your writing."
+  },
+  {
     "objectID": "hw/hw3-suggested-answers.html",
     "href": "hw/hw3-suggested-answers.html",
     "title": "HW 3 - Ethics + recap- Suggested Answers",
