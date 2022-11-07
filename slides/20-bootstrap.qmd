@@ -70,5 +70,9 @@ Your next project related deadline is Mon, Nov 7 at 11:59pm. Your project draft,
 
 -- Linear Regression or Generalized Linear Regression? 
 
+##
+
+![](images/plots.png){width="1100" height="500"}
+
 # ae-19 - Bootstrap
 

@@ -3581,7 +3581,7 @@
     "href": "slides/20-bootstrap.html#project-proposal",
     "title": "Bootstrap",
     "section": "Project Proposal",
-    "text": "Project Proposal\n\nIntroduction and data: motivation and context for your research.\nMethodology: include visualizations and summary statistics relevant to your research question. You should also justify the choice of statistical method(s) used to answer your research question.\nResults: Provide only the main results from your analysis.\nAbstract: An abstract is a concise summary of a research paper / project. An abstract lets readers get the gist or essence of your paper or article quickly, in order to decide whether to read the full paper. Search for a research paper to get the gist of it (https://scholar.google.com/)"
+    "text": "Project Proposal\n\nIntroduction and data: motivation and context for your research.\nMethodology: include visualizations and summary statistics relevant to your research question. You should also justify the choice of statistical method(s) used to answer your research question.\nResults: Provide only the main results from your analysis.\nAbstract: An abstract is a concise summary of a research paper / project. An abstract lets readers get the gist or essence of your paper or article quickly. Search for a research paper to get the gist of it (https://scholar.google.com/)."
   },
   {
     "objectID": "slides/20-bootstrap.html#project-proposal-1",
@@ -3609,6 +3609,6 @@
     "href": "slides/20-bootstrap.html#hints",
     "title": "Bootstrap",
     "section": "Hints",
-    "text": "Hints\n– Reference the AEs and Videos for example research questions\n– Write yourself a project outline\n\nWhat is the topic?\nWhy is it significant?\nWhat background material is relevant?\nWhat are we interested in?\n\n– Introduction\n\npresent relevant background or contextual material\ndefine terms or concepts when necessary\nexplain the focus of the paper and your specific purpose\nreveal your plan of organization"
+    "text": "Hints\n– Reference the AEs and Videos for example research questions\n– Write yourself a project outline\n\nWhat is the topic?\nWhy do we care?\nWhat are we interested in?\n\n– Introduction\n\npresent relevant background or contextual material\ndefine terms or concepts when necessary\nexplain the focus of the paper\nreveal your plan"
   }
 ]
