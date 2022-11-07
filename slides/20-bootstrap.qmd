@@ -15,6 +15,11 @@ format: revealjs
 
 -- Peer Review due tonight
 
+## Peer Review Purpose 
+
+-- Open Communication 
+
+-- If there is a serious issue that you would not like to share with your team, please reach out. 
 
 ## Project Proposal {.smaller}
 
