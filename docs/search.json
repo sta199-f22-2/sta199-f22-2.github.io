@@ -1575,39 +1575,46 @@
     "text": "Important\n\n\n\nThis lab is due Monday 12th at 11:59pm.\nhttps://datasciencebox.org/course-materials/hw-instructions/hw-09/hw-09-modeling-gss.html"
   },
   {
+    "objectID": "labs/lab-7.html#data",
+    "href": "labs/lab-7.html#data",
+    "title": "Lab 7 - Prediction and Bootstrapping",
+    "section": "Data",
+    "text": "Data\nThe data can be found in the dsbox package, and it’s called gss16. Since the dataset is distributed with the package, we don’t need to load it separately; it becomes available to us when we load the package.\nYou can find out more about the dataset by inspecting its documentation, which you can access by running ?gss16 in the Console or using the Help menu in RStudio to search for gss16. You can also find this information here."
+  },
+  {
     "objectID": "labs/lab-7.html#harassment-at-work-exercise-1",
     "href": "labs/lab-7.html#harassment-at-work-exercise-1",
     "title": "Lab 7 - Prediction and Bootstrapping",
     "section": "Harassment at work: Exercise 1",
-    "text": "Harassment at work: Exercise 1\na Re-level the advfront variable such that it has two levels: Strongly agree and “Agree\" combined into a new level called agree and the remaining levels (except NAs) combined into”Not agree\". Then, re-order the levels in the following order: \"Agree\" and \"Not agree\". Finally, count() how many times each new level appears in the advfront variable.\n\nYou can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use \"[Al]gree\". However, solve the problem however you like, this is just one option!\n\nb Combine the levels of the polviews variable such that levels that have the word “liberal” in them are lumped into a level called \"Liberal\" and those that have the word conservative in them are lumped into a level called \"Conservative\". Then, re-order the levels in the following order: \"Conservative\" , \"Moderate\", and \"Liberal\". Finally, count() how many times each new level appears in the polviews variable.\nc Create a new data frame called gss16_advfront that includes the variables advfront, educ, polviews, and wrkstat. Then, use the drop_na() function to remove rows that contain NAs from this new data frame. Sample code is provided below.\n\ngss16_advfront <- gss16 %>%\n  select(___, ___, ___, ___) %>%\n  drop_na()"
+    "text": "Harassment at work: Exercise 1\n\n\n\n\n\n\nImportant\n\n\n\nPick a member of the team write the answer to Exercise 1. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document.\n\n\na Re-level the advfront variable such that it has two levels: Strongly agree and “Agree\" combined into a new level called agree and the remaining levels (except NAs) combined into”Not agree\". Then, re-order the levels in the following order: \"Agree\" and \"Not agree\". Finally, count() how many times each new level appears in the advfront variable.\n\nYou can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use \"[Al]gree\". However, solve the problem however you like, this is just one option!\n\nb Combine the levels of the polviews variable such that levels that have the word “liberal” in them are lumped into a level called \"Liberal\" and those that have the word conservative in them are lumped into a level called \"Conservative\". Then, re-order the levels in the following order: \"Conservative\" , \"Moderate\", and \"Liberal\". Finally, count() how many times each new level appears in the polviews variable.\nc Create a new data frame called gss16_advfront that includes the variables advfront, educ, polviews, and wrkstat. Then, use the drop_na() function to remove rows that contain NAs from this new data frame. Sample code is provided below.\n\ngss16_advfront <- gss16 %>%\n  select(___, ___, ___, ___) %>%\n  drop_na()\n\n\n\n\n\n\n\nImportant\n\n\n\nAfter the team member working on Exercise 1 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document."
   },
   {
     "objectID": "labs/lab-7.html#exercise-2",
     "href": "labs/lab-7.html#exercise-2",
     "title": "Lab 7 - Prediction and Bootstrapping",
     "section": "Exercise 2",
-    "text": "Exercise 2\na Create a logistic regression model\nb Write out the estimated model\nc Prediction question"
+    "text": "Exercise 2\n\n\n\n\n\n\nImportant\n\n\n\nPick another member of the team write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document.\n\n\na Specify a logistic regression model using “glm” as the engine, that predicts advfront by edu. Name this specification gss16_spec. Report the tidy output below.\nb Write out the estimated model in proper notation.\nc Using your estimated model, predict the probability of agreeing with the following statement: Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal governmen (Agree in advfront) if you have an education of 7 years.\n\n\n\n\n\n\nImportant\n\n\n\nAfter the team member working on Exercise 2 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document."
   },
   {
     "objectID": "labs/lab-7.html#exercise-3",
     "href": "labs/lab-7.html#exercise-3",
     "title": "Lab 7 - Prediction and Bootstrapping",
     "section": "Exercise 3",
-    "text": "Exercise 3\na Fit a new model that adds an additional explanatory variable to the model fit in exercise 2 part a.\nb Make an argument for the “better” model between the one fit in exercise 2, and exercise 3."
+    "text": "Exercise 3\n\n\n\n\n\n\nImportant\n\n\n\nPick another member of the team write the answer to Exercise 3. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document.\n\n\na Fit a new model that adds the additional explanatory variable of polviews.\nb Using sound statistical reasoning, make an argument for the “better” model between the one fit in exercise 2, and exercise 3.\n\n\n\n\n\n\nImportant\n\n\n\nAfter the team member working on Exercise 3 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document."
   },
   {
     "objectID": "labs/lab-7.html#confidence-intervals--exercise-4",
     "href": "labs/lab-7.html#confidence-intervals--exercise-4",
     "title": "Lab 7 - Prediction and Bootstrapping",
     "section": "Confidence Intervals- Exercise 4",
-    "text": "Confidence Intervals- Exercise 4\nIn 2016, the GSS added a new question on harassment at work. The question is phrased as the following.\nOver the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?\nAnswers to this question are stored in the harass5 variable in our dataset.\na Create a subset of the data that only contains Yes and No answers for the harassment question. How many responses chose each of these answers?\nb Describe how bootstrapping can be used to estimate the proportion of Americans who have been harassed by their superiors or co-workers at their job.\nc Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Interpret this interval in context of the data."
+    "text": "Confidence Intervals- Exercise 4\n\n\n\n\n\n\nImportant\n\n\n\nPick another member of the team write the answer to Exercise 3=4. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document.\n\n\nIn 2016, the GSS added a new question on harassment at work. The question is phrased as the following.\nOver the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?\nAnswers to this question are stored in the harass5 variable in our dataset.\na Create a subset of the data that only contains Yes and No answers for the harassment question. How many responses chose each of these answers?\nb Describe how bootstrapping can be used to estimate the proportion of Americans who have been harassed by their superiors or co-workers at their job.\nc Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Interpret this interval in context of the data.\n\n\n\n\n\n\nImportant\n\n\n\nAfter the team member working on Exercise 4 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document."
   },
   {
     "objectID": "labs/lab-7.html#exercise-5",
     "href": "labs/lab-7.html#exercise-5",
     "title": "Lab 7 - Prediction and Bootstrapping",
     "section": "Exercise 5",
-    "text": "Exercise 5\na Where was your 95% confidence interval centered? Why does this make sense?\nb Now, calculate 90% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Report the interval below. Is it wider or more narrow than the 95% confidence interval?\nc Now, suppose you created a bootstrap distribution with 50,000 simulations instead of 10,000. What would you expect to change (if anything)?\n\nCenter of the CI\nWidth of the CI\n\nd Now, suppose that that your sample size of____ increased from ____ to _____. What would you expect to change (if anything?)\n\nCenter of the CI\nWidth of the CI"
+    "text": "Exercise 5\n\n\n\n\n\n\nImportant\n\n\n\nPick another member of the team write the answer to Exercise 5. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document.\n\n\na Where was your 95% confidence interval centered? Why does this make sense?\nb Now, calculate 90% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Report the interval below. Is it wider or more narrow than the 95% confidence interval?\nc Now, suppose you created a bootstrap distribution with 50,000 simulations instead of 10,000. What would you expect to change (if anything)?\n\nCenter of the CI\nWidth of the CI\n\nd Now, suppose that that your sample size of____ increased from ____ to _____. What would you expect to change (if anything?)\n\nCenter of the CI\nWidth of the CI\n\n\n\n\n\n\n\nImportant\n\n\n\nAfter the team member working on Exercise 5 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document."
   },
   {
     "objectID": "labs/lab-project-draft.html",
@@ -3637,7 +3644,14 @@
     "href": "slides/20-bootstrap.html#project-proposal-1",
     "title": "Bootstrap",
     "section": "Project Proposal",
-    "text": "Project Proposal\nYour next project related deadline is Mon, Nov 7 at 11:59pm. Your project draft, written in report.qmd, must be pushed to GitHub by that time. You will lose push access to your repo at that time until your draft has been reviewed. Once again, you will receive feedback as issues on your GitHub repository."
+    "text": "Project Proposal\nYour next project related deadline is Mon, Nov 7 at 11:59pm. Your project draft, written in report.qmd, must be pushed to GitHub by that time. You will lose push access to your repo at that time until your draft has been reviewed.\nYou will receive feedback as issues on your GitHub repository."
+  },
+  {
+    "objectID": "slides/20-bootstrap.html#issues",
+    "href": "slides/20-bootstrap.html#issues",
+    "title": "Bootstrap",
+    "section": "Issues",
+    "text": "Issues"
   },
   {
     "objectID": "slides/20-bootstrap.html#goals",
@@ -3652,6 +3666,20 @@
     "title": "Bootstrap",
     "section": "Types of Regression (SLR, MLR, Logistic)",
     "text": "Types of Regression (SLR, MLR, Logistic)\n– What types of variable is the response?\n– What types of variable(s) are the explanatory?\n– Number of explanatory variables?\n– Linear Regression or Generalized Linear Regression?"
+  },
+  {
+    "objectID": "slides/20-bootstrap.html#this-week",
+    "href": "slides/20-bootstrap.html#this-week",
+    "title": "Bootstrap",
+    "section": "This week",
+    "text": "This week\n– Is all about concepts\n– Main goal is to develop a fundamental understanding about bootstrapping, confidence intervals, and hypothesis testing. We will put our understanding into more practice starting next week."
+  },
+  {
+    "objectID": "slides/20-bootstrap.html#in-summary",
+    "href": "slides/20-bootstrap.html#in-summary",
+    "title": "Bootstrap",
+    "section": "In Summary",
+    "text": "In Summary\n\nBootstrap methods are simulation methods\nVariability - Uncertainty: How spread out your data are\nWe can use this to guess plausible values around our parameter of interest\nThis is called a confidence interval, and it’s different than probability\n\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
     "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
