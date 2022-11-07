@@ -22,7 +22,7 @@ format: revealjs
 
 - Results: Provide only the main results from your analysis.
 
-- Abstract: An abstract is a concise summary of a research paper / project. An abstract lets readers get the gist or essence of your paper or article quickly, in order to decide whether to read the full paper. Search for a research paper to get the gist of it (https://scholar.google.com/)
+- Abstract: An abstract is a concise summary of a research paper / project. An abstract lets readers get the gist or essence of your paper or article quickly. Search for a research paper to get the gist of it (https://scholar.google.com/).
 
 ## Hints {.smaller}
 
