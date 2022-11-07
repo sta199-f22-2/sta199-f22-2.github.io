@@ -13,6 +13,8 @@ format: revealjs
 
 -- Project Proposal (Due tonight: 11:59)
 
+-- Peer Review due tonight
+
 
 ## Project Proposal {.smaller}
 

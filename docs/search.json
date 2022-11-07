@@ -3556,13 +3556,6 @@
     "text": "Takeaways\n– We can not model these data using the tools we currently have\n– We can overcome some of the shortcoming of regression by fitting a generalized linear regression model\n– We can model binary data using an inverse logit function to model probabilities of success\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/20-bootstrap.html#checklist",
     "href": "slides/20-bootstrap.html#checklist",
     "title": "Bootstrap",
@@ -3574,7 +3567,7 @@
     "href": "slides/20-bootstrap.html#announcements",
     "title": "Bootstrap",
     "section": "Announcements",
-    "text": "Announcements\n– Project Proposal (Due tonight: 11:59)"
+    "text": "Announcements\n– Project Proposal (Due tonight: 11:59)\n– Peer Review due tonight"
   },
   {
     "objectID": "slides/20-bootstrap.html#project-proposal",
@@ -3582,6 +3575,13 @@
     "title": "Bootstrap",
     "section": "Project Proposal",
     "text": "Project Proposal\n\nIntroduction and data: motivation and context for your research.\nMethodology: include visualizations and summary statistics relevant to your research question. You should also justify the choice of statistical method(s) used to answer your research question.\nResults: Provide only the main results from your analysis.\nAbstract: An abstract is a concise summary of a research paper / project. An abstract lets readers get the gist or essence of your paper or article quickly. Search for a research paper to get the gist of it (https://scholar.google.com/)."
+  },
+  {
+    "objectID": "slides/20-bootstrap.html#hints",
+    "href": "slides/20-bootstrap.html#hints",
+    "title": "Bootstrap",
+    "section": "Hints",
+    "text": "Hints\n– Reference the AEs and Videos for example research questions\n– Write yourself a project outline\n\nWhat is the topic?\nWhy do we care?\nWhat are we interested in?\n\n– Introduction\n\npresent relevant background or contextual material\ndefine terms or concepts when necessary\nexplain the focus of the paper\nreveal your plan"
   },
   {
     "objectID": "slides/20-bootstrap.html#project-proposal-1",
@@ -3605,10 +3605,10 @@
     "text": "Types of Regression (SLR, MLR, Logistic)\n– What types of variable is the response?\n– What types of variable(s) are the explanatory?\n– Number of explanatory variables?\n– Linear Regression or Generalized Linear Regression?"
   },
   {
-    "objectID": "slides/20-bootstrap.html#hints",
-    "href": "slides/20-bootstrap.html#hints",
-    "title": "Bootstrap",
-    "section": "Hints",
-    "text": "Hints\n– Reference the AEs and Videos for example research questions\n– Write yourself a project outline\n\nWhat is the topic?\nWhy do we care?\nWhat are we interested in?\n\n– Introduction\n\npresent relevant background or contextual material\ndefine terms or concepts when necessary\nexplain the focus of the paper\nreveal your plan"
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
