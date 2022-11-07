@@ -47,7 +47,7 @@ b Combine the levels of the `polviews` variable such that levels that have the w
 c  Create a new data frame called `gss16_advfront` that includes the variables `advfront`, `educ`, `polviews`, and `wrkstat`. Then, use the `drop_na()` function to remove rows that contain `NA`s from this new data frame. Sample code is provided below.
 
 ```{r}
-#|eval: false 
+#| eval: false
 gss16_advfront <- gss16 %>%
   select(___, ___, ___, ___) %>%
   drop_na()
