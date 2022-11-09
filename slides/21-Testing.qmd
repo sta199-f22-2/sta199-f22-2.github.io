@@ -1,0 +1,49 @@
+---
+title: "Testing"
+subtitle: "Lecture 21"
+date: "November 9th, 2022"
+format: revealjs
+---
+
+## Checklist
+
+-- Clone `ae-20
+
+
+## Announcements
+
+-- HW 5 (Due Thursday)
+
+-- Small typo on HW 5 (see Slack)
+
+-- You may see some hints posted as well....
+
+
+## Goals
+
+-- Review Bootstrapping and Confidence Intervals 
+
+-- Hypothesis Testing 
+
+-- P-values
+
+-- Writing Conclusions 
+
+
+## 
+
+-- Why do we make confidence intervals? 
+
+-- What are bootstrap techniques? 
+
+-- How is one dot on this plot created? 
+
+![](images/bootstrap.png){fig-align = "center" width = "500"}
+
+
+
+# ae-20 Testing 
+
+
+## In Summary
+
