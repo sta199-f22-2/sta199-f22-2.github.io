@@ -40,6 +40,63 @@ format: revealjs
 
 ![](images/bootstrap.png){fig-align = "center" width = "500"}
 
+## Why do we make confidence intervals? 
+
+To estimate plausiable values of our parameter of interest
+
+-- $\beta_1$
+
+-- $\mu$
+
+-- $\pi$ or *p*
+
+.
+.
+.
+
+## What are bootstrap techniques?
+
+- Bootstrapping is a statistical procedure that re samples a single data set to create many simulated samples.
+
+
+## How is one dot on this plot created? 
+
+- Resample with replacement from the origional data
+
+- Do this `n` number of times 
+
+- Calculate a new summary statistic 
+
+## Hypothesis Testing - What is it?
+
+-- A hypothesis test is a statistical technique used to evaluate competing claims using data.
+
+## Hypotheses 
+
+$H_o$: Null hypothesis: "There is nothing going on." Assumption about the **population**.
+
+
+$H_a$: Alternative hypothesis: "There is something going on". What we are interested in.
+
+Note: This is always at the population level!
+
+## Try it - write it out 
+
+As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink more than two. 
+
+## Try it - write it out 
+
+As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink **more than** two. 
+
+$H_o$: $\mu$ = 2
+
+$H_a$: $\mu$ > 2
+
+## Mission 
+
+Under this assumption.......$H_o$: $\mu$ = 2
+
+How unlikely are we to observe our sample statistic? 
 
 
 # ae-20 Testing 
@@ -47,3 +104,10 @@ format: revealjs
 
 ## In Summary
 
+-- A hypothesis test is a statistical technique used to evaluate competing claims using data.
+
+-- We can simulate a null distribution using our original data. 
+
+-- We use our sample statistic and direction of the alternative hypothesis to create a p-value 
+
+-- We use a p-value to write conclusions 
