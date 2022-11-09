@@ -16,11 +16,17 @@ library(tidymodels)
 library(dsbox)
 ```
 
-https://datasciencebox.org/course-materials/hw-instructions/hw-09/hw-09-modeling-gss.html
+# Closing an Issue 
 
-# Instructions for project webpage compilation 
+Go to your GitHub repository, you will see an issue with the title “Learn to close an issue with a commit”. Your goal is to close this issue with a commit to practice this workflow, which is the workflow you will use when you are addressing feedback on your projects.
 
-Close-issue question (insert here)
+- Go to the relevant section in your lab .qmd file.
+- Delete the sentence that says “Delete me”.
+- Render the document.
+- Commit your changes from the git tab with the commit message “Delete sentence, closes #1.”
+- Push your changes to your repo and observe that the issue is now closed and the commit associated with this move is linked from the issue.
+
+GitHub allows you to close an issue directly with commits if the commit uses one of the following keywords followed bu the issue number (which you can find next to the issue title): close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved.
 
 
 # Lab
