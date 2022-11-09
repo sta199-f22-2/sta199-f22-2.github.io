@@ -350,6 +350,53 @@
 <p>– How is one dot on this plot created?</p>
 <p><img data-src="images/bootstrap.png">{fig-align = “center” width = “500”}</p>
 </section>
+<section id="why-do-we-make-confidence-intervals" class="slide level2">
+<h2>Why do we make confidence intervals?</h2>
+<p>To estimate plausiable values of our parameter of interest</p>
+<p>– <span class="math inline">\(\beta_1\)</span></p>
+<p>– <span class="math inline">\(\mu\)</span></p>
+<p>– <span class="math inline">\(\pi\)</span> or <em>p</em></p>
+<p>. . .</p>
+</section>
+<section id="what-are-bootstrap-techniques" class="slide level2">
+<h2>What are bootstrap techniques?</h2>
+<ul>
+<li class="fragment">Bootstrapping is a statistical procedure that re samples a single data set to create many simulated samples.</li>
+</ul>
+</section>
+<section id="how-is-one-dot-on-this-plot-created" class="slide level2">
+<h2>How is one dot on this plot created?</h2>
+<ul>
+<li class="fragment"><p>Resample with replacement from the origional data</p></li>
+<li class="fragment"><p>Do this <code>n</code> number of times</p></li>
+<li class="fragment"><p>Calculate a new summary statistic</p></li>
+</ul>
+</section>
+<section id="hypothesis-testing---what-is-it" class="slide level2">
+<h2>Hypothesis Testing - What is it?</h2>
+<p>– A hypothesis test is a statistical technique used to evaluate competing claims using data.</p>
+</section>
+<section id="hypotheses" class="slide level2">
+<h2>Hypotheses</h2>
+<p><span class="math inline">\(H_o\)</span>: Null hypothesis: “There is nothing going on.” Assumption about the <strong>population</strong>.</p>
+<p><span class="math inline">\(H_a\)</span>: Alternative hypothesis: “There is something going on”. What we are interested in.</p>
+<p>Note: This is always at the population level!</p>
+</section>
+<section id="try-it---write-it-out" class="slide level2">
+<h2>Try it - write it out</h2>
+<p>As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink more than two.</p>
+</section>
+<section id="try-it---write-it-out-1" class="slide level2">
+<h2>Try it - write it out</h2>
+<p>As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink <strong>more than</strong> two.</p>
+<p><span class="math inline">\(H_o\)</span>: <span class="math inline">\(\mu\)</span> = 2</p>
+<p><span class="math inline">\(H_a\)</span>: <span class="math inline">\(\mu\)</span> &gt; 2</p>
+</section>
+<section id="mission" class="slide level2">
+<h2>Mission</h2>
+<p>Under this assumption…….<span class="math inline">\(H_o\)</span>: <span class="math inline">\(\mu\)</span> = 2</p>
+<p>How unlikely are we to observe our sample statistic?</p>
+</section>
 <section>
 <section id="ae-20-testing" class="title-slide slide level1 center">
 <h1>ae-20 Testing</h1>
@@ -357,6 +404,10 @@
 </section>
 <section id="in-summary" class="slide level2">
 <h2>In Summary</h2>
+<p>– A hypothesis test is a statistical technique used to evaluate competing claims using data.</p>
+<p>– We can simulate a null distribution using our original data.</p>
+<p>– We use our sample statistic and direction of the alternative hypothesis to create a p-value</p>
+<p>– We use a p-value to write conclusions</p>
 
 
 <img src="images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">

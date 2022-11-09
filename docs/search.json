@@ -3721,7 +3721,7 @@
     "href": "slides/21-Testing.html#in-summary",
     "title": "Testing",
     "section": "In Summary",
-    "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "In Summary\n– A hypothesis test is a statistical technique used to evaluate competing claims using data.\n– We can simulate a null distribution using our original data.\n– We use our sample statistic and direction of the alternative hypothesis to create a p-value\n– We use a p-value to write conclusions\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
     "objectID": "slides/21-Testing.html#section",
@@ -3729,5 +3729,61 @@
     "title": "Testing",
     "section": "",
     "text": "– Why do we make confidence intervals?\n– What are bootstrap techniques?\n– How is one dot on this plot created?\n{fig-align = “center” width = “500”}"
+  },
+  {
+    "objectID": "slides/21-Testing.html#why-do-we-make-confidence-intervals",
+    "href": "slides/21-Testing.html#why-do-we-make-confidence-intervals",
+    "title": "Testing",
+    "section": "Why do we make confidence intervals?",
+    "text": "Why do we make confidence intervals?\nTo estimate plausiable values of our parameter of interest\n– \\(\\beta_1\\)\n– \\(\\mu\\)\n– \\(\\pi\\) or p\n. . ."
+  },
+  {
+    "objectID": "slides/21-Testing.html#what-are-bootstrap-techniques",
+    "href": "slides/21-Testing.html#what-are-bootstrap-techniques",
+    "title": "Testing",
+    "section": "What are bootstrap techniques?",
+    "text": "What are bootstrap techniques?\n\nBootstrapping is a statistical procedure that re samples a single data set to create many simulated samples."
+  },
+  {
+    "objectID": "slides/21-Testing.html#how-is-one-dot-on-this-plot-created",
+    "href": "slides/21-Testing.html#how-is-one-dot-on-this-plot-created",
+    "title": "Testing",
+    "section": "How is one dot on this plot created?",
+    "text": "How is one dot on this plot created?\n\nResample with replacement from the origional data\nDo this n number of times\nCalculate a new summary statistic"
+  },
+  {
+    "objectID": "slides/21-Testing.html#hypothesis-testing---what-is-it",
+    "href": "slides/21-Testing.html#hypothesis-testing---what-is-it",
+    "title": "Testing",
+    "section": "Hypothesis Testing - What is it?",
+    "text": "Hypothesis Testing - What is it?\n– A hypothesis test is a statistical technique used to evaluate competing claims using data."
+  },
+  {
+    "objectID": "slides/21-Testing.html#hypotheses",
+    "href": "slides/21-Testing.html#hypotheses",
+    "title": "Testing",
+    "section": "Hypotheses",
+    "text": "Hypotheses\n\\(H_o\\): Null hypothesis: “There is nothing going on.” Assumption about the population.\n\\(H_a\\): Alternative hypothesis: “There is something going on”. What we are interested in.\nNote: This is always at the population level!"
+  },
+  {
+    "objectID": "slides/21-Testing.html#try-it---write-it-out",
+    "href": "slides/21-Testing.html#try-it---write-it-out",
+    "title": "Testing",
+    "section": "Try it - write it out",
+    "text": "Try it - write it out\nAs a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink more than two."
+  },
+  {
+    "objectID": "slides/21-Testing.html#try-it---write-it-out-1",
+    "href": "slides/21-Testing.html#try-it---write-it-out-1",
+    "title": "Testing",
+    "section": "Try it - write it out",
+    "text": "Try it - write it out\nAs a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink more than two.\n\\(H_o\\): \\(\\mu\\) = 2\n\\(H_a\\): \\(\\mu\\) > 2"
+  },
+  {
+    "objectID": "slides/21-Testing.html#mission",
+    "href": "slides/21-Testing.html#mission",
+    "title": "Testing",
+    "section": "Mission",
+    "text": "Mission\nUnder this assumption…….\\(H_o\\): \\(\\mu\\) = 2\nHow unlikely are we to observe our sample statistic?"
   }
 ]

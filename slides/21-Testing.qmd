@@ -7,7 +7,7 @@ format: revealjs
 
 ## Checklist
 
--- Clone `ae-20
+-- Clone `ae-20`
 
 
 ## Announcements
@@ -67,9 +67,15 @@ To estimate plausiable values of our parameter of interest
 
 - Calculate a new summary statistic 
 
+# Hypothesis Testing 
+
 ## Hypothesis Testing - What is it?
 
--- A hypothesis test is a statistical technique used to evaluate competing claims using data.
+-- A hypothesis test is a statistical technique used to evaluate *competing claims* using data.
+
+- An assumption about the population 
+
+- A research question about the population 
 
 ## Hypotheses 
 
