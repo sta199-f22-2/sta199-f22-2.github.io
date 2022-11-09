@@ -50,9 +50,9 @@ Pick a member of the team write the answer to Exercise 1. All others should cont
 
 a  Re-level the `advfront` variable such that it has two levels: `Strongly agree` and "`Agree"` combined into a new level called `agree` and the remaining levels (except `NA`s) combined into "`Not agree"`. Then, re-order the levels in the following order: `"Agree"` and `"Not agree"`. Finally, `count()` how many times each new level appears in the `advfront` variable.
 
-```{marginfigure}
-You can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use "[Al]gree". However, solve the problem however you like, this is just one option!
-```
+
+Hint: You can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use "[Al]gree". However, solve the problem however you like, this is just one option!
+
 
 b Combine the levels of the `polviews` variable such that levels that have the word "liberal" in them are lumped into a level called `"Liberal"` and those that have the word conservative in them are lumped into a level called `"Conservative"`. Then, re-order the levels in the following order: `"Conservative"` , `"Moderate"`, and `"Liberal"`. Finally, `count()` how many times each new level appears in the `polviews` variable.
 
@@ -70,7 +70,7 @@ After the team member working on Exercise 1 renders, commits, and pushes, anothe
 :::
 
 
-## Exercise 2
+## Exercise 2 - Logistic Regression
 
 ::: callout-important
 Pick another member of the team write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
@@ -87,15 +87,15 @@ c Using your estimated model, predict the probability of agreeing with the follo
 After the team member working on Exercise 2 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
 :::
 
-## Exercise 3
+## Exercise 3 - Another Model
 
 ::: callout-important
 Pick another member of the team write the answer to Exercise 3. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
 :::
 
-a Fit a new model that adds the additional explanatory variable of `polviews`. 
+a Fit a new model that adds the additional explanatory variable of `polviews`. Report the tidy output below.
 
-b Using sound statistical reasoning, make an argument for the "better" model between the one fit in exercise 2, and exercise 3. 
+b Using sound statistical reasoning, make an argument for the "better" model between the one fit in Exercise 2, and Exercise 3. 
 
 ::: callout-important
 After the team member working on Exercise 3 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
@@ -105,18 +105,18 @@ After the team member working on Exercise 3 renders, commits, and pushes, anothe
 ## Confidence Intervals- Exercise 4
 
 ::: callout-important
-Pick another member of the team write the answer to Exercise 3=4. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
+Pick another member of the team write the answer to Exercise 4. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
 :::
 
 In 2016, the GSS added a new question on harassment at work. The question is phrased as the following.
 
 Over the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?
 
-Answers to this question are stored in the `harass5` variable in our dataset.
+Answers to this question are stored in the `harass5` variable in our data set.
 
 a Create a subset of the data that only contains `Yes` and `No` answers for the harassment question. How many responses chose each of these answers?
 
-b Describe how bootstrapping can be used to estimate the proportion of Americans who have been harassed by their superiors or co-workers at their job.
+b Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.
 
 c Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Interpret this interval in context of the data.
 
@@ -135,12 +135,6 @@ a Where was your 95% confidence interval centered? Why does this make sense?
 b Now, calculate 90% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Report the interval below. Is it wider or more narrow than the 95% confidence interval? 
 
 c Now, suppose you created a bootstrap distribution with 50,000 simulations instead of 10,000. What would you expect to change (if anything)?
-
-- Center of the CI 
-- Width of the CI 
-
-
-d Now, suppose that that your sample size of____ increased from ____ to _____. What would you expect to change (if anything?)
 
 - Center of the CI 
 - Width of the CI 
@@ -172,14 +166,13 @@ To submit your assignment:
 
 | Component             | Points |
 |:----------------------|:-------|
-| Ex 1                  |       |
-| Ex 2                  |      |
-| Ex 3                  |       |
-| Ex 4                  |       |
-| Ex 4                  |       |
-| Ex 5                  |       |
-| Workflow & formatting |       |
-| **Total**             | **** |
+| Ex 1                  |    11   |
+| Ex 2                  |   11   |
+| Ex 3                  |    5   |
+| Ex 4                  |    4   |
+| Ex 5                  |    6   |
+| Workflow & formatting |     5  |
+| **Total**             | 50 |
 
 ::: callout-note
 The "Workflow & formatting" component assesses the reproducible workflow. This includes:
