@@ -3682,18 +3682,11 @@
     "text": "In Summary\n\nBootstrap methods are simulation methods\nVariability - Uncertainty: How spread out your data are\nWe can use this to guess plausible values around our parameter of interest\nThis is called a confidence interval, and it’s different than probability\n\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/21-Testing.html#checklist",
     "href": "slides/21-Testing.html#checklist",
     "title": "Testing",
     "section": "Checklist",
-    "text": "Checklist\n– Clone `ae-20"
+    "text": "Checklist\n– Clone ae-20"
   },
   {
     "objectID": "slides/21-Testing.html#announcements",
@@ -3708,20 +3701,6 @@
     "title": "Testing",
     "section": "Goals",
     "text": "Goals\n– Review Bootstrapping and Confidence Intervals\n– Hypothesis Testing\n– P-values\n– Writing Conclusions"
-  },
-  {
-    "objectID": "slides/21-Testing.html#warm-up---bootstrap-confidence-intervals",
-    "href": "slides/21-Testing.html#warm-up---bootstrap-confidence-intervals",
-    "title": "Testing",
-    "section": "Warm Up - Bootstrap Confidence Intervals",
-    "text": "Warm Up - Bootstrap Confidence Intervals\n– Why do we make confidence intervals?\n– What are bootstrap techniques?\n– How is one dot on this plot created?\n{fig-align = “center” width = “500”}"
-  },
-  {
-    "objectID": "slides/21-Testing.html#in-summary",
-    "href": "slides/21-Testing.html#in-summary",
-    "title": "Testing",
-    "section": "In Summary",
-    "text": "In Summary\n– A hypothesis test is a statistical technique used to evaluate competing claims using data.\n– We can simulate a null distribution using our original data.\n– We use our sample statistic and direction of the alternative hypothesis to create a p-value\n– We use a p-value to write conclusions\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
     "objectID": "slides/21-Testing.html#section",
@@ -3756,7 +3735,7 @@
     "href": "slides/21-Testing.html#hypothesis-testing---what-is-it",
     "title": "Testing",
     "section": "Hypothesis Testing - What is it?",
-    "text": "Hypothesis Testing - What is it?\n– A hypothesis test is a statistical technique used to evaluate competing claims using data."
+    "text": "Hypothesis Testing - What is it?\n– A hypothesis test is a statistical technique used to evaluate competing claims using data.\n\nAn assumption about the population\nA research question about the population"
   },
   {
     "objectID": "slides/21-Testing.html#hypotheses",
@@ -3785,5 +3764,19 @@
     "title": "Testing",
     "section": "Mission",
     "text": "Mission\nUnder this assumption…….\\(H_o\\): \\(\\mu\\) = 2\nHow unlikely are we to observe our sample statistic?"
+  },
+  {
+    "objectID": "slides/21-Testing.html#in-summary",
+    "href": "slides/21-Testing.html#in-summary",
+    "title": "Testing",
+    "section": "In Summary",
+    "text": "In Summary\n– A hypothesis test is a statistical technique used to evaluate competing claims using data.\n– We can simulate a null distribution using our original data.\n– We use our sample statistic and direction of the alternative hypothesis to create a p-value\n– We use a p-value to write conclusions\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
