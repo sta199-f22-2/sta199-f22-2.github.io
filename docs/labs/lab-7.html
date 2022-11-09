@@ -249,7 +249,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         <nav id="TOC" role="doc-toc"><h2 id="toc-title">On this page</h2>
    
   <ul>
-<li><a href="#instructions-for-project-webpage-compilation" id="toc-instructions-for-project-webpage-compilation" class="nav-link active" data-scroll-target="#instructions-for-project-webpage-compilation">Instructions for project webpage compilation</a></li>
+<li><a href="#closing-an-issue" id="toc-closing-an-issue" class="nav-link active" data-scroll-target="#closing-an-issue">Closing an Issue</a></li>
   <li>
 <a href="#lab" id="toc-lab" class="nav-link" data-scroll-target="#lab">Lab</a>
   <ul class="collapse">
@@ -260,8 +260,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a>
   <ul class="collapse">
 <li><a href="#harassment-at-work-exercise-1" id="toc-harassment-at-work-exercise-1" class="nav-link" data-scroll-target="#harassment-at-work-exercise-1">Harassment at work: Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-2---logistic-regression" id="toc-exercise-2---logistic-regression" class="nav-link" data-scroll-target="#exercise-2---logistic-regression">Exercise 2 - Logistic Regression</a></li>
+  <li><a href="#exercise-3---another-model" id="toc-exercise-3---another-model" class="nav-link" data-scroll-target="#exercise-3---another-model">Exercise 3 - Another Model</a></li>
   <li><a href="#confidence-intervals--exercise-4" id="toc-confidence-intervals--exercise-4" class="nav-link" data-scroll-target="#confidence-intervals--exercise-4">Confidence Intervals- Exercise 4</a></li>
   <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
   </ul>
@@ -328,7 +328,7 @@ Important
 ✖ dplyr::lag()      masks stats::lag()
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()
-• Learn how to get started at https://www.tidymodels.org/start/</code></pre>
+• Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
 </div>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio-education.github.io/dsbox">dsbox</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -340,9 +340,16 @@ The following object is masked from 'package:infer':
     gss</code></pre>
 </div>
 </div>
-<p>https://datasciencebox.org/course-materials/hw-instructions/hw-09/hw-09-modeling-gss.html</p>
-<section id="instructions-for-project-webpage-compilation" class="level1"><h1>Instructions for project webpage compilation</h1>
-<p>Close-issue question (insert here)</p>
+<section id="closing-an-issue" class="level1"><h1>Closing an Issue</h1>
+<p>Go to your GitHub repository, you will see an issue with the title “Learn to close an issue with a commit”. Your goal is to close this issue with a commit to practice this workflow, which is the workflow you will use when you are addressing feedback on your projects.</p>
+<ul>
+<li>Go to the relevant section in your lab .qmd file.</li>
+<li>Delete the sentence that says “Delete me”.</li>
+<li>Render the document.</li>
+<li>Commit your changes from the git tab with the commit message “Delete sentence, closes #1.”</li>
+<li>Push your changes to your repo and observe that the issue is now closed and the commit associated with this move is linked from the issue.</li>
+</ul>
+<p>GitHub allows you to close an issue directly with commits if the commit uses one of the following keywords followed bu the issue number (which you can find next to the issue title): close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved.</p>
 </section><section id="lab" class="level1"><h1>Lab</h1>
 <section id="data" class="level2"><h2 class="anchored" data-anchor-id="data">Data</h2>
 <p>The data can be found in the <strong>dsbox</strong> package, and it’s called <code>gss16</code>. Since the dataset is distributed with the package, we don’t need to load it separately; it becomes available to us when we load the package.</p>
@@ -363,15 +370,13 @@ Important
 </div>
 </div>
 <p>a Re-level the <code>advfront</code> variable such that it has two levels: <code>Strongly agree</code> and “<code>Agree"</code> combined into a new level called <code>agree</code> and the remaining levels (except <code>NA</code>s) combined into”<code>Not agree"</code>. Then, re-order the levels in the following order: <code>"Agree"</code> and <code>"Not agree"</code>. Finally, <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> how many times each new level appears in the <code>advfront</code> variable.</p>
-<div class="cell">
-<pre class="marginfigure cell-code"><code>You can do this in various ways. One option is to use the `str_detect()` function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the `str_detect()` function, you can use "[Al]gree". However, solve the problem however you like, this is just one option!</code></pre>
-</div>
+<p>Hint: You can do this in various ways. One option is to use the <code><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect()</a></code> function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the <code><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect()</a></code> function, you can use “[Al]gree”. However, solve the problem however you like, this is just one option!</p>
 <p>b Combine the levels of the <code>polviews</code> variable such that levels that have the word “liberal” in them are lumped into a level called <code>"Liberal"</code> and those that have the word conservative in them are lumped into a level called <code>"Conservative"</code>. Then, re-order the levels in the following order: <code>"Conservative"</code> , <code>"Moderate"</code>, and <code>"Liberal"</code>. Finally, <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> how many times each new level appears in the <code>polviews</code> variable.</p>
 <p>c Create a new data frame called <code>gss16_advfront</code> that includes the variables <code>advfront</code>, <code>educ</code>, <code>polviews</code>, and <code>wrkstat</code>. Then, use the <code><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na()</a></code> function to remove rows that contain <code>NA</code>s from this new data frame. Sample code is provided below.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gss16_advfront <span class="ot">&lt;-</span> gss16 <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(___, ___, ___, ___) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>gss16_advfront <span class="ot">&lt;-</span> gss16 <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(___, ___, ___, ___) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -386,7 +391,7 @@ Important
 <p>After the team member working on Exercise 1 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
 </div>
 </div>
-</section><section id="exercise-2" class="level2"><h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
+</section><section id="exercise-2---logistic-regression" class="level2"><h2 class="anchored" data-anchor-id="exercise-2---logistic-regression">Exercise 2 - Logistic Regression</h2>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -416,7 +421,7 @@ Important
 <p>After the team member working on Exercise 2 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
 </div>
 </div>
-</section><section id="exercise-3" class="level2"><h2 class="anchored" data-anchor-id="exercise-3">Exercise 3</h2>
+</section><section id="exercise-3---another-model" class="level2"><h2 class="anchored" data-anchor-id="exercise-3---another-model">Exercise 3 - Another Model</h2>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -430,8 +435,8 @@ Important
 <p>Pick another member of the team write the answer to Exercise 3. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
 </div>
 </div>
-<p>a Fit a new model that adds the additional explanatory variable of <code>polviews</code>.</p>
-<p>b Using sound statistical reasoning, make an argument for the “better” model between the one fit in exercise 2, and exercise 3.</p>
+<p>a Fit a new model that adds the additional explanatory variable of <code>polviews</code>. Report the tidy output below.</p>
+<p>b Using sound statistical reasoning, make an argument for the “better” model between the one fit in Exercise 2, and Exercise 3.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -456,14 +461,14 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Pick another member of the team write the answer to Exercise 3=4. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
+<p>Pick another member of the team write the answer to Exercise 4. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
 </div>
 </div>
 <p>In 2016, the GSS added a new question on harassment at work. The question is phrased as the following.</p>
 <p>Over the past five years, have you been harassed by your superiors or co-workers at your job, for example, have you experienced any bullying, physical or psychological abuse?</p>
-<p>Answers to this question are stored in the <code>harass5</code> variable in our dataset.</p>
+<p>Answers to this question are stored in the <code>harass5</code> variable in our data set.</p>
 <p>a Create a subset of the data that only contains <code>Yes</code> and <code>No</code> answers for the harassment question. How many responses chose each of these answers?</p>
-<p>b Describe how bootstrapping can be used to estimate the proportion of Americans who have been harassed by their superiors or co-workers at their job.</p>
+<p>b Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.</p>
 <p>c Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Interpret this interval in context of the data.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -495,11 +500,6 @@ Important
 <p>a Where was your 95% confidence interval centered? Why does this make sense?</p>
 <p>b Now, calculate 90% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Report the interval below. Is it wider or more narrow than the 95% confidence interval?</p>
 <p>c Now, suppose you created a bootstrap distribution with 50,000 simulations instead of 10,000. What would you expect to change (if anything)?</p>
-<ul>
-<li>Center of the CI</li>
-<li>Width of the CI</li>
-</ul>
-<p>d Now, suppose that that your sample size of____ increased from ____ to _____. What would you expect to change (if anything?)</p>
 <ul>
 <li>Center of the CI</li>
 <li>Width of the CI</li>
@@ -551,35 +551,31 @@ Warning
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Ex 1</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">11</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 2</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">11</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ex 3</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">5</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ex 4</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">4</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Ex 4</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Ex 5</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Workflow &amp; formatting</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">6</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">Workflow &amp; formatting</td>
+<td style="text-align: left;">5</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><strong>Total</strong></td>
-<td style="text-align: left;">****</td>
+<td style="text-align: left;">50</td>
 </tr>
 </tbody>
 </table>

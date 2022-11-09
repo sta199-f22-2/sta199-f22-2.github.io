@@ -90,11 +90,11 @@ Note: This is always at the population level!
 
 ## Try it - write it out 
 
-As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink more than two. 
+As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffee Duke students drink a day is 2. You are interested in if they drink more than two. 
 
 ## Try it - write it out 
 
-As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffees Duke students drink a day is 2. You are interested in if they drink **more than** two. 
+As a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffee Duke students drink a day is 2. You are interested in if they drink **more than** two. 
 
 $H_o$: $\mu$ = 2
 
