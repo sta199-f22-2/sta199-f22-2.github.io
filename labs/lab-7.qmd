@@ -11,6 +11,8 @@ This lab is due Monday 12th at 11:59pm.
 
 
 ```{r}
+#| warning: false
+#| message: false
 library(tidyverse)
 library(tidymodels)
 library(dsbox)
