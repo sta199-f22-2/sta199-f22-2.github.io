@@ -76,7 +76,7 @@ After the team member working on Exercise 1 renders, commits, and pushes, anothe
 Pick another member of the team write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
 :::
 
-a Specify a logistic regression model using "glm" as the engine, that predicts `advfront` by `edu`. Name this specification gss16_spec. Report the tidy output below.
+a Specify a logistic regression model using "glm" as the engine, that predicts `advfront` by `educ`. Name this specification gss16_spec. Report the tidy output below.
 
 
 b Write out the estimated model in proper notation. 
@@ -95,7 +95,8 @@ Pick another member of the team write the answer to Exercise 3. All others shoul
 
 a Fit a new model that adds the additional explanatory variable of `polviews`. Report the tidy output below.
 
-b Now, compare the coefficient associated with `edu` between your new model, and the model fit in Exercise 2. Why are these coefficients different? Justify your answer.
+b Now, compare the coefficient associated with `educ` from your new model and the model fitted in Exercise 2. Why is this different? Justify your answer.
+
 
 
 ::: callout-important
