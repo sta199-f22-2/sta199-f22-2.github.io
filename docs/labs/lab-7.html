@@ -328,7 +328,7 @@ Important
 ✖ dplyr::lag()      masks stats::lag()
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()
-• Learn how to get started at https://www.tidymodels.org/start/</code></pre>
+• Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
 </div>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio-education.github.io/dsbox">dsbox</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -375,8 +375,8 @@ Important
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(___, ___, ___, ___) <span class="sc">%&gt;%</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>b Re-level the <code>advfront</code> variable such that it has two levels: <code>Strongly agree</code> and “<code>Agree"</code> combined into a new level called <code>agree</code> and the remaining levels (except <code>NA</code>s) combined into”<code>Not agree"</code>. Then, re-order the levels in the following order: <code>"Agree"</code> and <code>"Not agree"</code>. Finally, <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> how many times each new level appears in the <code>advfront</code> variable.</p>
-<p>Hint: You can do this in various ways. One option is to use the <code><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect()</a></code> function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the <code><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect()</a></code> function, you can use “[Al]gree”. However, solve the problem however you like, this is just one option!</p>
+<p>b Re-level the <code>advfront</code> variable such that it has two levels: <code>Strongly agree</code> and “<code>Agree"</code> combined into a new level called <code>Agree</code> and the remaining levels combined into”<code>Not agree"</code>. Then, re-order the levels in the following order: <code>"Agree"</code> and <code>"Not agree"</code>. Finally, <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> how many times each new level appears in the <code>advfront</code> variable.</p>
+<p>Hint: You can do this in various ways. One option is to use the <code><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect()</a></code> function to detect the existence of words. Note that these sometimes show up with lowercase first letters and sometimes with upper case first letters. To detect either in the <code><a href="https://stringr.tidyverse.org/reference/str_detect.html">str_detect()</a></code> function, you can use [Aa]gree. However, solve the problem however you like, this is just one option!</p>
 <p>c Combine the levels of the <code>polviews</code> variable such that levels that have the word “liberal” in them are lumped into a level called <code>"Liberal"</code> and those that have the word conservative in them are lumped into a level called <code>"Conservative"</code>. Then, re-order the levels in the following order: <code>"Conservative"</code> , <code>"Moderate"</code>, and <code>"Liberal"</code>. Finally, <code><a href="https://dplyr.tidyverse.org/reference/count.html">count()</a></code> how many times each new level appears in the <code>polviews</code> variable.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -405,9 +405,9 @@ Important
 <p>Pick another member of the team write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should <strong>not</strong> touch the document.</p>
 </div>
 </div>
-<p>a Specify a logistic regression model using “glm” as the engine, that predicts <code>advfront</code> by <code>edu</code>. Name this specification gss16_spec. Report the tidy output below.</p>
+<p>a Specify a logistic regression model using “glm” as the engine, that predicts <code>advfront</code> by <code>educ</code>. Name this specification gss16_spec. Report the tidy output below.</p>
 <p>b Write out the estimated model in proper notation.</p>
-<p>c Using your estimated model, predict the probability of agreeing with the following statement: Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal governmen (Agree in advfront) if you have an education of 7 years.</p>
+<p>c Using your estimated model, predict the probability of agreeing with the following statement: Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government (<code>Agree</code> in advfront) if you have an education of 7 years.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -436,7 +436,7 @@ Important
 </div>
 </div>
 <p>a Fit a new model that adds the additional explanatory variable of <code>polviews</code>. Report the tidy output below.</p>
-<p>b Now, compare the coefficient associated with <code>edu</code> between your new model, and the model fit in Exercise 2. Why are these coefficients different? Justify your answer.</p>
+<p>b Now, predict the probability of agreeing with the following statement: Even if it brings no immediate benefits, scientific research that advances the frontiers of knowledge is necessary and should be supported by the federal government (<code>Agree</code> in advfront) if you have an education of 7 years and are Conservative.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -469,7 +469,7 @@ Important
 <p>Answers to this question are stored in the <code>harass5</code> variable in our data set.</p>
 <p>a Create a subset of the data that only contains <code>Yes</code> and <code>No</code> answers for the harassment question. How many responses chose each of these answers?</p>
 <p>b Describe how bootstrapping can be used to estimate the proportion of all Americans who have been harassed by their superiors or co-workers at their job.</p>
-<p>c Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Interpret this interval in context of the data.</p>
+<p>c Calculate a 95% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Use 1000 iterations when creating your bootstrap distribution. Interpret this interval in context of the data.</p>
 <div class="callout-important callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
