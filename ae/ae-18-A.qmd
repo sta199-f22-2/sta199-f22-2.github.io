@@ -62,7 +62,7 @@ email |>
 Suppose we try using a linear model to describe the relationship between the number of exclamation points and whether an email is spam. Write up a linear model that models spam by exclamation marks.
 
 ```{r}
-
+#| eval: false
 spam_model_l <- linear_reg() |>
   set_engine("lm") |>
   fit(spam ~ exclaim_mess, data = email)
@@ -72,6 +72,8 @@ spam_model_l <- linear_reg() |>
   tidy(spam_model_l)
 
 ```
+
+This doesn't work! The response variable should be numeric and not a factor if we are trying to fit a line.
 
 A visualization of a linear model is below.
 

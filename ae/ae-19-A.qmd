@@ -26,8 +26,7 @@ By the end of today, you will...
 
 ### Motivation
 
-We have data on the price per guest (ppg) for a random sample of 50 Airbnb listings in 2020 for Asheville, NC. We are going to use these data to investigate what we would of expected to pay for an Airbnb in in Asheville, NC in June 2020.
-Read in the data and answer the following questions.
+We have data on the price per guest (ppg) for a random sample of 50 Airbnb listings in 2020 for Asheville, NC. We are going to use these data to investigate what we would of expected to pay for an Airbnb in in Asheville, NC in June 2020. Read in the data and answer the following questions.
 
 ```{r}
 #| label: data
@@ -41,11 +40,9 @@ glimpse(abb)
 
 ## Terminology
 
--   Population parameter - What we are interested in.
-    Statistical measure that describes an entire population.
+-   Population parameter - What we are interested in. Statistical measure that describes an entire population.
 
--   Sample statistic (point estimate) - describes a sample.
-    A piece of information you get from a fraction of the population.
+-   Sample statistic (point estimate) - describes a sample. A piece of information you get from a fraction of the population.
 
 Use these data and the tools we've learned in this class to come up with your best guess for what you would expect to pay (i.e. true price) for an Airbnb in Asheville, NC (June 2020).
 
@@ -67,9 +64,7 @@ Do you think your guess is correct?
 
 -   Variability - How spread out your data are. Uncertainty.
 
-Suppose we split the class in half and ask each student their height.
-Then, we calculate the mean height of students on each side of the classroom.
-Would you expect these two means to be exactly equal, close but not equal, or wildly different?
+Suppose we split the class in half and ask each student their height. Then, we calculate the mean height of students on each side of the classroom. Would you expect these two means to be exactly equal, close but not equal, or wildly different?
 
 *Close, but not equal*
 
@@ -89,8 +84,7 @@ Note: This notion of saying something about a population parameter using only in
 
 ## How do we do this?
 
-Goal: create a distribution of sample statistics under "the same" conditions.
-How do we do this?
+Goal: create a distribution of sample statistics under "the same" conditions. How do we do this?
 
 *Demo*
 
@@ -115,23 +109,20 @@ Fill in the \*\*\* from the bootstrap sample code below.
 
 ```{r boot-sample}
 #| label: bootstrap
-#| eval: false
+
 set.seed(12345) 
 boot_df <- abb |>
   specify(response = ppg) |>
   generate(reps = 10000, type = "bootstrap") |>
   calculate(stat = "mean")
 
+glimpse(boot_df)
+
 ```
 
 -   Take a glimpse at `boot_df`. What do you see?
 
-```{r}
-#| label: glimse-data
-
-glimpse(boot_df)
-
-```
+We see 10,000 re-sampled means from our original data. 
 
 -   Plot a histogram of `boot_df`. Where is it centered? Why does this make sense?
 
@@ -156,8 +147,7 @@ boot_df |>
             upper = quantile(stat, 0.975))
 ```
 
-Let's visualize our confidence interval by adding a vertical line at each of these values.
-Use the code you wrote above and add two lines using `geom_vline`.
+Let's visualize our confidence interval by adding a vertical line at each of these values. Use the code you wrote above and add two lines using `geom_vline`.
 
 ```{r}
 #| label: CI-Viz
@@ -191,9 +181,7 @@ D We are 95% confident the price per night for an Airbnb in Asheville is between
 
 ## Optional
 
-Now, create a 90% confidence interval.
-Report it below.
-Is it wider or more narrow than the 95% confidence interval?
+Now, create a 90% confidence interval. Report it below. Is it wider or more narrow than the 95% confidence interval?
 
 ```{r}
 

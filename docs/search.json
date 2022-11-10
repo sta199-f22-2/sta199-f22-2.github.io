@@ -525,6 +525,104 @@
     "text": "2 Quantitative Explanatory Variables\nRemember the penguins? Let’s finish the activity.\nNow, let’s explore body mass, and it’s relationship to bill length and flipper length.\n\nlibrary(palmerpenguins)\nlibrary(plotly)\nlibrary(widgetframe)\n\nNote: This code is beyond the scope of this course!\n\nquanplot <- plot_ly(penguins, \n                    x = ~ flipper_length_mm, y = ~ bill_length_mm, z = ~body_mass_g,\n                    marker = list(size = 3, color = \"lightgray\" , alpha = 0.5, \n                                  line = list(color = \"gray\" , width = 2))) |>\n                      add_markers() |>\n                      plotly::layout(scene = list(\n                        xaxis = list(title = \"Flipper (mm)\"),\n                        yaxis = list(title = \"Bill (mm)\"), \n                        zaxis = list(title = \"Body Mass (g)\")\n                      )) |>\n                    config(displayModeBar = FALSE)\n                  frameWidget(quanplot)\n\nWarning: Ignoring 2 observations\n\n\n\n\n\n\n– Fit the additive model below. Interpret the coefficient for flipper in context of the problem.\n\nlinear_reg() |>\n  set_engine(\"lm\") |>\n  fit(body_mass_g ~ bill_length_mm * flipper_length_mm , data = penguins) |>\n  tidy()\n\n# A tibble: 4 × 5\n  term                             estimate std.error statistic  p.value\n  <chr>                               <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)                       5091.    2925.        1.74  0.0827  \n2 bill_length_mm                    -229.      63.4      -3.61  0.000347\n3 flipper_length_mm                   -7.31    15.0      -0.486 0.627   \n4 bill_length_mm:flipper_length_mm     1.20     0.322     3.72  0.000232\n\n\n$$\n = -5737 + 6.05bill + 48.1flipper\n$$\nHolding bill length constant, for a one mm increase in flipper length, we expect on average a 48.1 increase in body mass grams.\nWhat if I want to fit an interaction model with these two quantitative variables?\nIt looks really similar to what we’ve done before! Try it out!"
   },
   {
+    "objectID": "ae/ae-18-A.html",
+    "href": "ae/ae-18-A.html",
+    "title": "Logistic Regression",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ggridges)\nlibrary(patchwork)"
+  },
+  {
+    "objectID": "ae/ae-18-A.html#exploratory-data-analysis",
+    "href": "ae/ae-18-A.html#exploratory-data-analysis",
+    "title": "Logistic Regression",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\nLet’s start by taking a look at our data. Create an density plot to investigate the relationship between spam and exclaim_mess. Additionally, calculate the mean number of exclamation points for both spam and non-spam emails.\n\nemail |>\n  ggplot(\n    aes(x = exclaim_mess, fill = spam)\n  ) + \n  geom_density()\n\n\n\nemail |>\n  group_by(spam) |>\n  summarize(exmean = mean(exclaim_mess))\n\n# A tibble: 2 × 2\n  spam  exmean\n  <fct>  <dbl>\n1 0       4.04\n2 1       1.27"
+  },
+  {
+    "objectID": "ae/ae-18-A.html#lets-try-a-linear-model",
+    "href": "ae/ae-18-A.html#lets-try-a-linear-model",
+    "title": "Logistic Regression",
+    "section": "Let’s try a linear model",
+    "text": "Let’s try a linear model\nSuppose we try using a linear model to describe the relationship between the number of exclamation points and whether an email is spam. Write up a linear model that models spam by exclamation marks.\n\nspam_model_l <- linear_reg() |>\n  set_engine(\"lm\") |>\n  fit(spam ~ exclaim_mess, data = email)\n  \n  \n  \n  tidy(spam_model_l)\n\nThis doesn’t work! The response variable should be numeric and not a factor if we are trying to fit a line.\nA visualization of a linear model is below.\n\nggplot(data = email) + \n  geom_jitter(aes(x = exclaim_mess, y = spam, color = spam), alpha = 0.5) + \n  geom_smooth(aes(x = exclaim_mess, y = as.numeric(spam)), method = \"lm\", se = FALSE, color = \"black\")\n\n`geom_smooth()` using formula 'y ~ x'\n\n\n\n\n\n\nDiscuss your visualization with your neighbor. Is the linear model a good fit for the data? Why or why not?\n\nHow do you build a model to fit a binary response variable (a categorical response variable with 2 outcomes)?"
+  },
+  {
+    "objectID": "ae/ae-18-A.html#exercise-1",
+    "href": "ae/ae-18-A.html#exercise-1",
+    "title": "Logistic Regression",
+    "section": "Exercise 1",
+    "text": "Exercise 1\n\nLet’s fit the logistic regression model using the number of exclamation points to predict the probability an email is spam.\n\n\nspam_model <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(spam ~ exclaim_mess , data = email, family = \"binomial\")\n  \n  \n  tidy(spam_model)\n\n# A tibble: 2 × 5\n  term         estimate std.error statistic   p.value\n  <chr>           <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)    -1.91     0.0640    -29.8  9.82e-196\n2 exclaim_mess   -0.168    0.0240     -7.02 2.21e- 12\n\n\n\nHow does the code above differ from previous code we’ve used to fit regression models?\nNow, compare your summary output to the estimated model below.\n\n\\[\\log\\Big(\\frac{p}{1-p}\\Big) = -1.9114 - 0.1684 \\times exclaim\\_mess\\]"
+  },
+  {
+    "objectID": "ae/ae-18-A.html#exercise-2",
+    "href": "ae/ae-18-A.html#exercise-2",
+    "title": "Logistic Regression",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nWhat is the probability the email is spam if it contains 10 exclamation points?\nUse R as a calculator to calculate the predicted probability\n\n-1.91 - 0.168*10\n\n[1] -3.59\n\n\n\nexp(-3.59) / (1+ exp(-3.59))\n\n[1] 0.02685712\n\n\nWe can use the predict function in R to produce the probability as well.\n\nnew_email <- tibble(exclaim_mess = 10)\npredict(spam_model$fit, new_email) # log-odds\n\n        1 \n-3.594985 \n\npredict(spam_model$fit, new_email, type = \"response\") # probability\n\n         1 \n0.02672713"
+  },
+  {
+    "objectID": "ae/ae-18-A.html#exercise-3",
+    "href": "ae/ae-18-A.html#exercise-3",
+    "title": "Logistic Regression",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nWe have the probability an email is spam, but ultimately we want to use the probability to classify an email as spam or not spam. Therefore, we need to set a decision-making threshold, such that an email is classified as spam if the predicted probability is greater than the threshold and not spam otherwise.\nSuppose you are a data scientist working on a spam filter. You must determine how high the predicted probability must be before you think it would be reasonable to call it spam and put it in the junk folder (which the user is unlikely to check).\nWhat are some tradeoffs you would consider as you set the decision-making threshold? Discuss with your neighbor.\nClass: I would consider the impact of recieving a spam email vs missing a potential important email.\n\nemail <- email |>\n  mutate(pred_prob = predict(spam_model$fit, type = \"response\"))\nggplot(data = email) + \n  geom_point(aes(x = exclaim_mess, y = as.numeric(spam) -1, \n                        color = spam)) + \n  geom_line(aes(x = exclaim_mess, y = pred_prob)) + \n  labs(x = \"Number of exclamation points\", \n       y = \"Predicted probability an email is spam\", \n       color = \"Is email spam?\"\n       )\n\n\n\nspecie <- c(rep(\"sorgho\" , 3) , rep(\"poacee\" , 3) , rep(\"banana\" , 3) , rep(\"triticum\" , 3) )\ncondition <- rep(c(\"normal\" , \"stress\" , \"Nitrogen\") , 4)\nvalue <- abs(rnorm(12 , 0 , 15))\ndata <- data.frame(specie,condition,value)"
+  },
+  {
+    "objectID": "ae/ae-19-A.html",
+    "href": "ae/ae-19-A.html",
+    "title": "Quantifying uncertainty",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "ae/ae-19-A.html#population-vs-sample",
+    "href": "ae/ae-19-A.html#population-vs-sample",
+    "title": "Quantifying uncertainty",
+    "section": "Population vs Sample",
+    "text": "Population vs Sample\nMotivation\nWe have data on the price per guest (ppg) for a random sample of 50 Airbnb listings in 2020 for Asheville, NC. We are going to use these data to investigate what we would of expected to pay for an Airbnb in in Asheville, NC in June 2020. Read in the data and answer the following questions.\n\nabb <- read_csv(\"data/asheville.csv\")\n\nglimpse(abb)\n\nRows: 50\nColumns: 1\n$ ppg <dbl> 48.00000, 40.00000, 99.00000, 13.00000, 55.00000, 75.00000, 74.000…"
+  },
+  {
+    "objectID": "ae/ae-19-A.html#terminology",
+    "href": "ae/ae-19-A.html#terminology",
+    "title": "Quantifying uncertainty",
+    "section": "Terminology",
+    "text": "Terminology\n\nPopulation parameter - What we are interested in. Statistical measure that describes an entire population.\nSample statistic (point estimate) - describes a sample. A piece of information you get from a fraction of the population.\n\nUse these data and the tools we’ve learned in this class to come up with your best guess for what you would expect to pay (i.e. true price) for an Airbnb in Asheville, NC (June 2020).\n\nabb |> \n  summarize(ppg.mean = mean(ppg))\n\n# A tibble: 1 × 1\n  ppg.mean\n     <dbl>\n1     76.6\n\n\nDo you think your guess is correct?\nNot really\n\nIf you want to estimate a population parameter, do you prefer to report a range of values the parameter might be in, or a single value?\n\nRange of values\n\nVariability - How spread out your data are. Uncertainty.\n\nSuppose we split the class in half and ask each student their height. Then, we calculate the mean height of students on each side of the classroom. Would you expect these two means to be exactly equal, close but not equal, or wildly different?\nClose, but not equal"
+  },
+  {
+    "objectID": "ae/ae-19-A.html#why-do-we-care",
+    "href": "ae/ae-19-A.html#why-do-we-care",
+    "title": "Quantifying uncertainty",
+    "section": "Why do we care?",
+    "text": "Why do we care?\nWe can quantify the variability of the sample statistics to help calculate a range of plausible values for the population parameter of interest\nBootstrapping is a statistical procedure that re samples a single data set to create many simulated samples."
+  },
+  {
+    "objectID": "ae/ae-19-A.html#how-do-we-do-this",
+    "href": "ae/ae-19-A.html#how-do-we-do-this",
+    "title": "Quantifying uncertainty",
+    "section": "How do we do this?",
+    "text": "How do we do this?\nGoal: create a distribution of sample statistics under “the same” conditions. How do we do this?\nDemo\n- Resample with replacement from our data n (50) times - Calculate the new resampled mean - Plot it - Do this entire process many many times"
+  },
+  {
+    "objectID": "ae/ae-19-A.html#confidence-interval",
+    "href": "ae/ae-19-A.html#confidence-interval",
+    "title": "Quantifying uncertainty",
+    "section": "Confidence Interval",
+    "text": "Confidence Interval\n\nWhat is it?\n\nRange of plausiable values for our population parameter… just like we wanted!\nExercise 1 - Airbnb\nLet’s bootstrap!\nIt’s good practice to ask yourself the following questions:\n\nWhat is my sample statistic? 76.6\n\nHow many draws do we need for our bootstrap sample? n number of times (50)\n\n\nFill in the *** from the bootstrap sample code below.\n\nset.seed(12345) \nboot_df <- abb |>\n  specify(response = ppg) |>\n  generate(reps = 10000, type = \"bootstrap\") |>\n  calculate(stat = \"mean\")\n\nglimpse(boot_df)\n\nRows: 10,000\nColumns: 2\n$ replicate <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…\n$ stat      <dbl> 81.03667, 63.22333, 81.23333, 76.11333, 81.31833, 84.60500, …\n\n\n\nTake a glimpse at boot_df. What do you see?\n\nWe see 10,000 re-sampled means from our original data.\n\nPlot a histogram of boot_df. Where is it centered? Why does this make sense?\n\n\nboot_df |> \n  ggplot(\n    aes( x = stat)\n  ) + \n  geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\nNow, let’s use boot_dfto create our 95% confidence interval.\n\nset.seed(12345)\nboot_df |>\n  summarize(lower = quantile(stat, 0.025),\n            upper = quantile(stat, 0.975))\n\n# A tibble: 1 × 2\n  lower upper\n  <dbl> <dbl>\n1  63.3  91.0\n\n\nLet’s visualize our confidence interval by adding a vertical line at each of these values. Use the code you wrote above and add two lines using geom_vline.\n\nboot_df |>\n  ggplot(\n    aes(x = stat)\n  ) + \n  geom_histogram() + \n  geom_vline(xintercept = c(63.3, 91.0)) \n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`."
+  },
+  {
+    "objectID": "ae/ae-19-A.html#interpretation",
+    "href": "ae/ae-19-A.html#interpretation",
+    "title": "Quantifying uncertainty",
+    "section": "Interpretation",
+    "text": "Interpretation\nConfidence intervals - range of plausible values for our parameter of interest\nConfidence intervals are often misinterpreted as probability….\nLets explore: http://www.rossmanchance.com/ISIapplets.html\n\nHow do we interpret this?\n\nA There is a 95% probability the true mean price per night for an Airbnb in Asheville is between 63.3 and 91.0.\nB There is a 95% probability the price per night for an Airbnb in Asheville is between 63.3 and 91.0.\nC We are 95% confident the true mean price per night for Airbnbs in Asheville is between 63.3 and 91.0 $.\nD We are 95% confident the price per night for an Airbnb in Asheville is between 63.3 and 91.0."
+  },
+  {
+    "objectID": "ae/ae-19-A.html#optional",
+    "href": "ae/ae-19-A.html#optional",
+    "title": "Quantifying uncertainty",
+    "section": "Optional",
+    "text": "Optional\nNow, create a 90% confidence interval. Report it below. Is it wider or more narrow than the 95% confidence interval?\n\n#insert-code-here"
+  },
+  {
     "objectID": "ae/exam-review.html",
     "href": "ae/exam-review.html",
     "title": "Exam Review",
