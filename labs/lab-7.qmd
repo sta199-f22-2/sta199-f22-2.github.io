@@ -28,7 +28,7 @@ Go to your GitHub repository, you will see an issue with the title “Learn to c
 - Commit your changes from the git tab with the commit message “Delete sentence, closes #1.”
 - Push your changes to your repo and observe that the issue is now closed and the commit associated with this move is linked from the issue.
 
-GitHub allows you to close an issue directly with commits if the commit uses one of the following keywords followed bu the issue number (which you can find next to the issue title): close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved.
+GitHub allows you to close an issue directly with commits if the commit uses one of the following keywords followed by the issue number (which you can find next to the issue title): close, closes, closed, fix, fixes, fixed, resolve, resolves, and resolved.
 
 
 # Lab
@@ -171,8 +171,8 @@ To submit your assignment:
 |:----------------------|:-------|
 | Ex 1                  |    11   |
 | Ex 2                  |   11   |
-| Ex 3                  |    5   |
-| Ex 4                  |    4   |
+| Ex 3                  |    6   |
+| Ex 4                  |    11   |
 | Ex 5                  |    6   |
 | Workflow & formatting |     5  |
 | **Total**             | 50 |
