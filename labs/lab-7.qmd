@@ -44,7 +44,7 @@ You can also find this information [here](https://rstudio-education.github.io/ds
 
 # Exercises
 
-## Harassment at work: Exercise 1
+## Exercise 1 - Harassment at work
 
 ::: callout-important
 Pick a member of the team write the answer to Exercise 1. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
@@ -105,7 +105,7 @@ After the team member working on Exercise 3 renders, commits, and pushes, anothe
 :::
 
 
-## Confidence Intervals- Exercise 4
+## Exercise 4 - Confidence Intervals
 
 ::: callout-important
 Pick another member of the team write the answer to Exercise 4. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should **not** touch the document.
