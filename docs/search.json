@@ -1712,7 +1712,7 @@
     "href": "labs/lab-7.html#exercise-5",
     "title": "Lab 7 - Prediction and Bootstrapping",
     "section": "Exercise 5",
-    "text": "Exercise 5\n\n\n\n\n\n\nImportant\n\n\n\nPick another member of the team write the answer to Exercise 5. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document.\n\n\na Where was your 95% confidence interval centered? Why does this make sense?\nb Now, calculate 90% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Report the interval below. Is it wider or more narrow than the 95% confidence interval?\nc Now, suppose you created a bootstrap distribution with 50,000 simulations instead of 10,000. What would you expect to change (if anything)?\n\nCenter of the CI\nWidth of the CI\n\n\n\n\n\n\n\nImportant\n\n\n\nAfter the team member working on Exercise 5 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document."
+    "text": "Exercise 5\n\n\n\n\n\n\nImportant\n\n\n\nPick another member of the team write the answer to Exercise 5. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document.\n\n\na Where was your 95% confidence interval centered? Why does this make sense?\nb Now, calculate 90% bootstrap confidence interval for the proportion of Americans who have been harassed by their superiors or co-workers at their job. Report the interval below. Is it wider or more narrow than the 95% confidence interval?\nc Now, suppose you created a bootstrap distribution with 50,000 simulations instead of 1,000. What would you expect to change (if anything)?\n\nCenter of the CI\nWidth of the CI\n\n\n\n\n\n\n\nImportant\n\n\n\nAfter the team member working on Exercise 5 renders, commits, and pushes, another team member should pull their changes and render the document. Then, they should write the answer to Exercise 2. All others should contribute to the discussion but only one person should type up the answer, render the document, commit, and push to GitHub. All others should not touch the document."
   },
   {
     "objectID": "labs/lab-project-draft.html",
@@ -3798,77 +3798,56 @@
     "href": "slides/21-Testing.html#goals",
     "title": "Testing",
     "section": "Goals",
-    "text": "Goals\n– Review Bootstrapping and Confidence Intervals\n– Hypothesis Testing\n– P-values\n– Writing Conclusions"
+    "text": "Goals\n– Compare two proportions, and do a hypothesis test\n– Compare two means, and do a bootstrap interval\n– Prediction and bootstrap interval for the slope"
   },
   {
-    "objectID": "slides/21-Testing.html#section",
-    "href": "slides/21-Testing.html#section",
+    "objectID": "slides/21-Testing.html#warm-up-can-we-always-make-inference",
+    "href": "slides/21-Testing.html#warm-up-can-we-always-make-inference",
     "title": "Testing",
-    "section": "",
-    "text": "– Why do we make confidence intervals?\n– What are bootstrap techniques?\n– How is one dot on this plot created?\n{fig-align = “center” width = “500”}"
+    "section": "Warm Up: Can we always make inference?",
+    "text": "Warm Up: Can we always make inference?\n– What assumption do we need to make about our data in order to trust results from our bootstrap methods?"
   },
   {
-    "objectID": "slides/21-Testing.html#why-do-we-make-confidence-intervals",
-    "href": "slides/21-Testing.html#why-do-we-make-confidence-intervals",
+    "objectID": "slides/21-Testing.html#assumption---independence",
+    "href": "slides/21-Testing.html#assumption---independence",
     "title": "Testing",
-    "section": "Why do we make confidence intervals?",
-    "text": "Why do we make confidence intervals?\nTo estimate plausiable values of our parameter of interest\n– \\(\\beta_1\\)\n– \\(\\mu\\)\n– \\(\\pi\\) or p\n. . ."
+    "section": "Assumption - Independence",
+    "text": "Assumption - Independence\n– What is independence?\n\nOne observation does not effect or influence another"
   },
   {
-    "objectID": "slides/21-Testing.html#what-are-bootstrap-techniques",
-    "href": "slides/21-Testing.html#what-are-bootstrap-techniques",
+    "objectID": "slides/21-Testing.html#independence-example",
+    "href": "slides/21-Testing.html#independence-example",
     "title": "Testing",
-    "section": "What are bootstrap techniques?",
-    "text": "What are bootstrap techniques?\n\nBootstrapping is a statistical procedure that re samples a single data set to create many simulated samples."
+    "section": "Independence Example",
+    "text": "Independence Example\n– 50 Airbnb listings in 2020 for Asheville, NC."
   },
   {
-    "objectID": "slides/21-Testing.html#how-is-one-dot-on-this-plot-created",
-    "href": "slides/21-Testing.html#how-is-one-dot-on-this-plot-created",
+    "objectID": "slides/21-Testing.html#how-do-we-ensure-independnece",
+    "href": "slides/21-Testing.html#how-do-we-ensure-independnece",
     "title": "Testing",
-    "section": "How is one dot on this plot created?",
-    "text": "How is one dot on this plot created?\n\nResample with replacement from the origional data\nDo this n number of times\nCalculate a new summary statistic"
+    "section": "How do we ensure Independnece",
+    "text": "How do we ensure Independnece\n– Random Sample - Every observation has an equal probability of being selected\n– A random sample ensures that our sample is representative of the entire population"
   },
   {
-    "objectID": "slides/21-Testing.html#hypothesis-testing---what-is-it",
-    "href": "slides/21-Testing.html#hypothesis-testing---what-is-it",
+    "objectID": "slides/21-Testing.html#if-we-dont-have-a-random-sample",
+    "href": "slides/21-Testing.html#if-we-dont-have-a-random-sample",
     "title": "Testing",
-    "section": "Hypothesis Testing - What is it?",
-    "text": "Hypothesis Testing - What is it?\n– A hypothesis test is a statistical technique used to evaluate competing claims using data.\n\nAn assumption about the population\nA research question about the population"
+    "section": "If we don’t have a random sample …",
+    "text": "If we don’t have a random sample …\n– Our results are hard to trust\n– Good models and procedures can not fix bad data"
   },
   {
-    "objectID": "slides/21-Testing.html#hypotheses",
-    "href": "slides/21-Testing.html#hypotheses",
+    "objectID": "slides/21-Testing.html#for-your-project",
+    "href": "slides/21-Testing.html#for-your-project",
     "title": "Testing",
-    "section": "Hypotheses",
-    "text": "Hypotheses\n\\(H_o\\): Null hypothesis: “There is nothing going on.” Assumption about the population.\n\\(H_a\\): Alternative hypothesis: “There is something going on”. What we are interested in.\nNote: This is always at the population level!"
-  },
-  {
-    "objectID": "slides/21-Testing.html#try-it---write-it-out",
-    "href": "slides/21-Testing.html#try-it---write-it-out",
-    "title": "Testing",
-    "section": "Try it - write it out",
-    "text": "Try it - write it out\nAs a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffee Duke students drink a day is 2. You are interested in if they drink more than two."
-  },
-  {
-    "objectID": "slides/21-Testing.html#try-it---write-it-out-1",
-    "href": "slides/21-Testing.html#try-it---write-it-out-1",
-    "title": "Testing",
-    "section": "Try it - write it out",
-    "text": "Try it - write it out\nAs a researcher, you are interested in the number of cups of coffee Duke students drink in a day. It is reported that the the true mean number of cups of coffee Duke students drink a day is 2. You are interested in if they drink more than two.\n\\(H_o\\): \\(\\mu\\) = 2\n\\(H_a\\): \\(\\mu\\) > 2"
-  },
-  {
-    "objectID": "slides/21-Testing.html#mission",
-    "href": "slides/21-Testing.html#mission",
-    "title": "Testing",
-    "section": "Mission",
-    "text": "Mission\nUnder this assumption…….\\(H_o\\): \\(\\mu\\) = 2\nHow unlikely are we to observe our sample statistic?"
+    "section": "For your project",
+    "text": "For your project\n– Today, we go through how to bootstrap for a slope coefficient\n– Can use other bootstrap methods for other questions you may be interested in\n– Do not use if data are not representitative"
   },
   {
     "objectID": "slides/21-Testing.html#in-summary",
     "href": "slides/21-Testing.html#in-summary",
     "title": "Testing",
     "section": "In Summary",
-    "text": "In Summary\n– A hypothesis test is a statistical technique used to evaluate competing claims using data.\n– We can simulate a null distribution using our original data.\n– We use our sample statistic and direction of the alternative hypothesis to create a p-value\n– We use a p-value to write conclusions\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
     "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
