@@ -3855,5 +3855,82 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#checklist",
+    "href": "slides/22-MoreTesting.html#checklist",
+    "title": "Testing",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-21"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#announcements",
+    "href": "slides/22-MoreTesting.html#announcements",
+    "title": "Testing",
+    "section": "Announcements",
+    "text": "Announcements\n– Lab 7 Due Tonight (Monday)\n– Exam Week! Please vote on review survey"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#project",
+    "href": "slides/22-MoreTesting.html#project",
+    "title": "Testing",
+    "section": "Project",
+    "text": "Project\n– Communicate\n\nGood Practice\nGrade"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#goals",
+    "href": "slides/22-MoreTesting.html#goals",
+    "title": "Testing",
+    "section": "Goals",
+    "text": "Goals\n– Compare two proportions, and do a hypothesis test\n– Compare two means, and do a bootstrap interval\n– Prediction and bootstrap interval for the slope"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#can-we-always-make-inference",
+    "href": "slides/22-MoreTesting.html#can-we-always-make-inference",
+    "title": "Testing",
+    "section": "Can we always make inference?",
+    "text": "Can we always make inference?\n– Short answer no\n– An assumption that we need to make is called independence in order to trust our simulation results."
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#warm-up-independence",
+    "href": "slides/22-MoreTesting.html#warm-up-independence",
+    "title": "Testing",
+    "section": "Warm up: Independence",
+    "text": "Warm up: Independence\n– What is independence?\n\nOne observation does not effect or influence another"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#independence-example",
+    "href": "slides/22-MoreTesting.html#independence-example",
+    "title": "Testing",
+    "section": "Independence Example",
+    "text": "Independence Example\n– 50 Airbnb listings in 2020 for Asheville, NC."
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#how-do-we-ensure-independnece",
+    "href": "slides/22-MoreTesting.html#how-do-we-ensure-independnece",
+    "title": "Testing",
+    "section": "How do we ensure independnece",
+    "text": "How do we ensure independnece\n– Random Sample - Every observation has an equal probability of being selected\n– A random sample ensures that our sample is representative of the entire population"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#if-we-dont-have-a-random-sample",
+    "href": "slides/22-MoreTesting.html#if-we-dont-have-a-random-sample",
+    "title": "Testing",
+    "section": "If we don’t have a random sample …",
+    "text": "If we don’t have a random sample …\n– Our results are hard to trust\n– Good models and procedures can not fix bad data"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#for-your-project",
+    "href": "slides/22-MoreTesting.html#for-your-project",
+    "title": "Testing",
+    "section": "For your project",
+    "text": "For your project\n– Today, we go through how to bootstrap for a slope coefficient\n– Can use other bootstrap methods for other questions you may be interested in\n– Do not use if data are not representitative"
+  },
+  {
+    "objectID": "slides/22-MoreTesting.html#in-summary",
+    "href": "slides/22-MoreTesting.html#in-summary",
+    "title": "Testing",
+    "section": "In Summary",
+    "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
