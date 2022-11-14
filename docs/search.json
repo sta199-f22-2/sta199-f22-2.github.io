@@ -623,6 +623,20 @@
     "text": "Optional\nNow, create a 90% confidence interval. Report it below. Is it wider or more narrow than the 95% confidence interval?\n\n#insert-code-here"
   },
   {
+    "objectID": "ae/ae-21-A.html",
+    "href": "ae/ae-21-A.html",
+    "title": "Inference overview",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nIn this application exercise, we will be looking at a roller coaster and amusement park database by Duane Marden.1 This database records multiple features of roller coasters. For the purpose of this activity, we will work with a random sample of 157 roller coasters."
+  },
+  {
+    "objectID": "ae/ae-21-A.html#practice-with-data-manipulation",
+    "href": "ae/ae-21-A.html#practice-with-data-manipulation",
+    "title": "Inference overview",
+    "section": "Practice with data manipulation",
+    "text": "Practice with data manipulation\n\n\nDemo: Create a new variable called time that has a response of yes if the roller coaster was built after 1970, and no if the roller coaster was built during or before 1970. Save this new factor variable in the rc data set. Additionally, make type a factor variable.\n\n\nrc <- rc |>\n  mutate(\n    opened_recently = if_else(year_opened > 1970, \"yes\" , \"no\"), \n    opened_recently = as.factor(opened_recently),\n    type = as.factor(type)\n  ) \n\n\n\nYour turn: Based on the research question, which of the following is the appropriate null hypothesis?\n\n\\(H_0\\): \\(\\mu = 0.5\\)\n\\(H_0\\): \\(p > 0.5\\)\n\\(H_0\\): \\(\\mu_1 - \\mu_2 = 0\\)\n\\(H_0\\): \\(p_1 - p_2 = 0\\)\n\n\n\nThe answer is (d).\n\n\nDemo: Write out the appropriate alternative hypothesis in both words and notation.\n\n\\(H_A\\): \\(p_1 - p_2 \\ne 0\\)\n\nCalculate the observed statistic.\n\n\npoint_estimate <- rc |>\n  specify(type ~ opened_recently, success = \"Steel\") |>\n  calculate(stat = \"diff in props\", order = c(\"yes\", \"no\"))\n\n\n\nDemo: How do we create a null distribution for this hypothesis test? Write out the steps below.\n\nShuffle responses into one pile.\nRedistribute data into two new piles of size n1 and n2.\nCalculate new difference in proportions.\nRepeat steps 1-3 many times to create the null distribution.\n\n\nDemo: Create the null distribution with 1,000 repeated samples.\n\n\nset.seed(101821)\n\nnull_dist <- rc %>%\n  specify(type ~ opened_recently, success = \"Steel\") %>%\n  hypothesize(null = \"independence\") %>%\n  generate(1000, type = \"permute\") %>%\n  calculate(stat = \"diff in props\", order = c(\"yes\", \"no\"))\n\n\n\nDemo: Visualize the null distribution and shade in the area used to calculate the p-value.\n\n\nvisualize(null_dist) +\n shade_p_value(obs_stat = point_estimate, direction = \"two sided\")\n\n\n\n\n\n\nYour turn: Calculate p-value. Then use the p-value to make your conclusion using a significance level of 0.1 and write out an appropriate conclusion below. Recall that the conclusion has 3 components.\n\nHow the p-value compares to the significance level.\nThe decision you make with respect to the hypotheses (reject \\(H_0\\) /fail to reject \\(H_0\\))\nThe conclusion in the context of the alternative hypothesis.\n\n\n\nSince the p-value is smaller than 10%, we reject the null hypothesis in favor of the alternative hypothesis. The data provide convincing evidence that the proportion of steel roller coasters built before 1970 is different than those built after 1970.\n\nnull_dist |>\n  get_p_value(obs_stat = point_estimate, direction = \"two sided\")\n\nWarning: Please be cautious in reporting a p-value of 0. This result is an\napproximation based on the number of `reps` chosen in the `generate()` step. See\n`?get_p_value()` for more information.\n\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1       0"
+  },
+  {
     "objectID": "ae/exam-review.html",
     "href": "ae/exam-review.html",
     "title": "Exam Review",
@@ -3850,13 +3864,6 @@
     "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/22-MoreTesting.html#checklist",
     "href": "slides/22-MoreTesting.html#checklist",
     "title": "Testing",
@@ -3932,5 +3939,12 @@
     "title": "Testing",
     "section": "In Summary",
     "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
