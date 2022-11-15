@@ -76,7 +76,6 @@ set.seed(101321)
 ```
 
 ```{r}
-#| eval: false
 
 null_dist <- abb |>
   specify(response = ppg) |>

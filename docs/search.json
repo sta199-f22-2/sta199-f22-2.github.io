@@ -623,6 +623,90 @@
     "text": "Optional\nNow, create a 90% confidence interval. Report it below. Is it wider or more narrow than the 95% confidence interval?\n\n#insert-code-here"
   },
   {
+    "objectID": "ae/ae-20-A.html",
+    "href": "ae/ae-20-A.html",
+    "title": "Hypothesis Testing",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#setting-up-the-hypotheses",
+    "href": "ae/ae-20-A.html#setting-up-the-hypotheses",
+    "title": "Hypothesis Testing",
+    "section": "Setting up the hypotheses",
+    "text": "Setting up the hypotheses\nBased on the context of the problem, write out the correct null and alternative hypothesis. Do this in both words and in proper notation.\n\\(\\mu\\) = The true / population mean price per guest for Airbnbs in in Asheville, NC in June 2020\n\\(H_o\\): \\(\\mu\\) = 60\n\\(H_a\\): \\(\\mu\\) > 60"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#motivation",
+    "href": "ae/ae-20-A.html#motivation",
+    "title": "Hypothesis Testing",
+    "section": "Motivation",
+    "text": "Motivation\nWe want to know how unlikely it would be to observe our statistic under the assumption of the null hypothesis. Calculate and report the sample statistic below using proper notation.\n\n#insert-code-here\n\nabb |> \n  summarize(mean_ppg = mean(ppg))\n\n# A tibble: 1 × 1\n  mean_ppg\n     <dbl>\n1     76.6\n\n\n\\(\\bar{x}\\) = 76.6"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#building-a-distribution",
+    "href": "ae/ae-20-A.html#building-a-distribution",
+    "title": "Hypothesis Testing",
+    "section": "Building a distribution",
+    "text": "Building a distribution\nLet’s use simulation-based methods to conduct the hypothesis test specified above. We’ll start by generating the null distribution.\n\nHow do we generate the null distribution? Detail the steps below.\n\nNew idea: Shift! Shift each observation by the difference between our actual mean and our assumed population mean\nNow, we resample with replacement 50 times, and take the mean of the new resampled data. <- Do this a bunch.\n\nset.seed(101321)\n\n\nnull_dist <- abb |>\n  specify(response = ppg) |>\n  hypothesize(null = \"point\", mu = 60) |>\n  generate(reps = 1000, type = \"bootstrap\") |>\n  calculate(stat = \"mean\")\n\nTake a glimpse at null_dist. What does this represent?\n\nglimpse(null_dist)\n\nRows: 1,000\nColumns: 2\n$ replicate <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…\n$ stat      <dbl> 54.94833, 60.20833, 48.79833, 55.28833, 64.59000, 42.30500, …\n\n\nThese are a bunch of resampled means under the assumption that the true mean ppg is equal to 60."
+  },
+  {
+    "objectID": "ae/ae-20-A.html#visualize",
+    "href": "ae/ae-20-A.html#visualize",
+    "title": "Hypothesis Testing",
+    "section": "Visualize",
+    "text": "Visualize\nNow, create an appropriate visualization fo your null distribution. Where is this distribution centered? Why does this make sense?\n\nnull_dist |> \n  ggplot(\n    aes(x = stat)\n  ) + \n  geom_histogram()\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\nThe distribution is cenetered at the null value. This makes sense because we are resampling with replacement from data who’s mean is the null value.\nNow, add a vertical line on your null distribution that represents your sample statistic. Based on the position of this line, do you your sample mean is an unusual observation under the assumption of the null hypothesis?\n\nnull_dist |> \n  ggplot(\n    aes(x = stat)\n  ) + \n  geom_histogram() + \n  geom_vline(xintercept = 76.6)\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\nI would say so. Our observation is out on the tail of our distribution.\nLet’s quantify your answer above…."
+  },
+  {
+    "objectID": "ae/ae-20-A.html#p-value",
+    "href": "ae/ae-20-A.html#p-value",
+    "title": "Hypothesis Testing",
+    "section": "p-value",
+    "text": "p-value\nWhat is a p-value?\nProbability\nThe probability that we observe are sample statistic as extreme or more extreme given that the null hypothesis is true\nHow can we calculate it? Things to consider….\nAdd response\nLet’s put this in motion!\nWe are going to calculate the p-value in two different ways. The first one is “by-hand”\nLet’s think about what’s happening when we run get_p_value. Fill in the code below to calculate the p-value “manually” using some of the dplyr functions we’ve learned.\n\nCalculate your p-value\n\n\nnull_dist |>\n  filter(stat >= 76.6) |>\n  summarise(p_value = n() / nrow(null_dist))\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1   0.012\n\n\n0.012\n\nCalculate your p-value below\n\n\nnull_dist |>\n  get_p_value(obs_stat = 76.6, direction = \"greater\")\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1   0.012\n\n\nLet’s visualize it!\n\nvisualize(null_dist) +\n shade_p_value(obs_stat = 76.6, direction = \"greater\")\n\n\n\n\n\nInterpret your p-value in the context of the problem\n\nThe probability that we observe are sample statistic as extreme or more extreme given that the null hypothesis is true\nThe probability that we observe a sample mean price of 76.6, or something greater, given that the true mean Airbnb price is equal to 60, is 0.012"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#conclusion",
+    "href": "ae/ae-20-A.html#conclusion",
+    "title": "Hypothesis Testing",
+    "section": "Conclusion",
+    "text": "Conclusion\nUse the p-value to make your conclusion using a significance level of 0.05. Remember, the conclusion has 3 components\n\nHow the p-value compares to the significance level\nThe decision you make with respect to the hypotheses (reject \\(H_0\\) /fail to reject \\(H_0\\))\nThe conclusion in the context of the alternative hypothesis"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#significance-level",
+    "href": "ae/ae-20-A.html#significance-level",
+    "title": "Hypothesis Testing",
+    "section": "Significance level",
+    "text": "Significance level\nWhat is it?\n\\(\\alpha\\) = a measure of the strength of the evidence that must be present in your sample before rejecting the null and concluding your alternative hypothesis\n\\(\\alpha\\) = 0.05 > p-value 0.012 Reject the null hypothesis Strong evidence to conclude the alternative hypothesis\nSo, because our p-value is less than our significance level, we have strong evidence to reject the null hypothesis, and conclude that the true mean price per guess for airbnbs in Ashville, NC in June 2020 is larger than 60$.\nExample:\n\\(\\alpha\\) = 0.05 < p-value 0.120 Failing to reject our null hypothesis Weak evidence to conclude the alternative hypothesis"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#two-sided",
+    "href": "ae/ae-20-A.html#two-sided",
+    "title": "Hypothesis Testing",
+    "section": "Two-sided",
+    "text": "Two-sided\nSuppose instead you wanted to test the claim that the mean price of an Airbnb is not equal to $60. Which of the following would change? Select all that apply.\n\nNull hypothesis\nAlternative hypothesis\nNull distribution\np-value"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#conclusion-1",
+    "href": "ae/ae-20-A.html#conclusion-1",
+    "title": "Hypothesis Testing",
+    "section": "Conclusion",
+    "text": "Conclusion\nLet’s test the claim in last exercise. Conduct the hypothesis test, then state your conclusion in the context of the data.\n\nnull_dist |>\n  get_p_value(obs_stat = 76.6, direction = \"two sided\")\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1   0.024"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#optional",
+    "href": "ae/ae-20-A.html#optional",
+    "title": "Hypothesis Testing",
+    "section": "Optional",
+    "text": "Optional\nWe can never conclude the null hypothesis…. but why?\nLet’s assume your null hypothesis for the Airbnb question is: \\(\\mu\\) = 70, and you are interested in \\(\\mu\\) > 70\n\nnull_dist2 <- abb |>\n  specify(response = ppg) |>\n  hypothesize(null = \"point\", mu = 70) |>\n  generate(reps = 1000, type = \"bootstrap\") |>\n  calculate(stat = \"mean\")\n\nvisualize(null_dist2) +\n shade_p_value(obs_stat = 76.6, direction = \"greater\")\n\n\n\nnull_dist2 |>\n  get_p_value(obs_stat = 76.6, direction = \"greater\")\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1   0.176\n\n\nSo now…. I incorrectly conclude that \\(\\mu\\) = 70.\nAnother research assumes that \\(\\mu\\) = 72….\n\nnull_dist3 <- abb |>\n  specify(response = ppg) |>\n  hypothesize(null = \"point\", mu = 72) |>\n  generate(reps = 1000, type = \"bootstrap\") |>\n  calculate(stat = \"mean\")\n\nvisualize(null_dist3) +\n shade_p_value(obs_stat = 76.6, direction = \"greater\")\n\n\n\nnull_dist3 |>\n  get_p_value(obs_stat = 76.6, direction = \"greater\")\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1   0.266\n\n\nSo now…. I incorrectly conclude that \\(\\mu\\) = 72….??????"
+  },
+  {
+    "objectID": "ae/ae-20-A.html#extra-practice",
+    "href": "ae/ae-20-A.html#extra-practice",
+    "title": "Hypothesis Testing",
+    "section": "Extra Practice",
+    "text": "Extra Practice\nCreate a new variable over50 that indicates whether or not an Airbnb price is greater than $50.\n\n# add code\n\nSuppose you are interested in testing whether a majority of Airbnbs in Ashville, NC in June 2020 have a price lower than $50.\n\nState the null and alternative hypotheses.\nFill in the code to generate the null distribution.\n\n\nnull_dist <- ____ |>\n  specify(response = ____, success = \"_____\") |>\n  hypothesize(null = \"point\", p = ____) |>\n  generate(reps = 1000, type = \"draw\") |>\n  calculate(stat = \"prop\")\n\n\nVisualize the null distribution and shade in the area used to calculate the p-value.\n\n\n# add code \n\n\nCalculate p-value. Then use the p-value to make your conclusion using a significance level of 0.05.\n\n\n# add code"
+  },
+  {
     "objectID": "ae/ae-21-A.html",
     "href": "ae/ae-21-A.html",
     "title": "Inference overview",
