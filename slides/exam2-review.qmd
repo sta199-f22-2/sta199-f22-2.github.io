@@ -19,7 +19,7 @@ format: revealjs
 
 - Don't cheat 
 
-- due Monday at 2
+- Due Monday at 2
 
 -- All keys are posted 
 
@@ -75,5 +75,65 @@ Reference *Examples* at bottom of help page, AEs, HWs, and Labs.
 
 -- Prediction and bootstrap interval for the slope
 
+## Simpson's Paradox 
+
+Describe the relationships observed in the scatter plot. Comment on: 
+
+- Form 
+
+- Strength 
+
+- Direction 
+
+![](images/simp1.png)
+
+## Simpson's Paradox - Same Data... Ungrouped
+
+What about now? 
+
+![](images/simp2.png)
+
+... a trend appears in groups of data but disappears or reverses when the groups are combined.
 
 
+## p-values 
+
+-- What is it? 
+
+-- How do we interpret it? 
+
+
+## p-values 
+
+-- **Probability**
+
+-- of observing **what we did** or something **more extreme** 
+
+-- given $H_O$ = T
+
+
+![](images/pvalue.png)
+
+
+
+## Example 
+
+Airbnb Example 
+
+-- Response variable: price per guest 
+
+-- Assume Ho: $\mu$ = 60
+
+-- p-value ~ 0.14
+
+
+![](images/pvalueexample.png)
+
+
+## Example 
+
+![](images/pvalueexample.png)
+
+The **probability** of observing a mean price per guest of **76.6 dollars**, or **something larger**, assuming that the **true mean price per guest of Ashville, NC Airbnbs in June 2020 was 60 dollars** is equal to ~ 0.14.
+
+# exam2-review
