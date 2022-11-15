@@ -1,0 +1,18 @@
+{
+  "hash": "0081d5d15abf4511484b29e180fad541",
+  "result": {
+    "markdown": "---\ntitle: \"Inference + Review\"\nsubtitle: \"Lecture 22\"\ndate: \"November 14th, 2022\"\nformat: revealjs\n---\n\n\n## Checklist\n\n-- Clone `exam2-review` - This is the part of ae-21 that we didn't finish with end review questions \n\n## Announcements\n\n-- Exam 2 on Thursday \n\n- Released at noon \n\n- No slack or TA office hours \n\n- Don't cheat \n\n- due Monday at 2\n\n-- All keys are posted \n\n\n## Grading Questions \n\n-- EC for Exam 1 is not in \n\n-- Lowest HW is dropped \n\n-- Lowest Lab is dropped \n\n\n## Study Tips - Variables \n\n-- Identify variables\n\n- Categorical vs Quantitative \n\n- Explanatory vs Response \n\n## Models by Variable Type{.smaller} \n\n-- Simple Linear Regression: 1 Quantitative Response; 1 Categorical or Quantitative Explanatory Variable \n\n-- Mulitple Linear Regression: 1 Quantitative Response; 2 or more Categorical or Quantitative Explanatory Variables\n\n-- Logistic Regression: 1 Categorical Response (Binary); 1 or more Categorical or Quantitative Explanatory Variables\n\n## Study Tips - Make your own guide\n\n\n::: {.cell}\n\n```{.r .cell-code}\nabb |>    \n  summarize(ppg.mean = mean(ppg)) #Summarize is used to calculate a summary statistic \n                                  #arguments: new name = calculated statistic\n\n?summarize \n```\n:::\n\n\nReference *Examples* at bottom of help page, AEs, HWs, and Labs.\n\n## Goals\n\n-- Review \n\n- Simpson's Paradox \n\n- P-value interpretation  \n\n-- Compare two means, and do a bootstrap interval\n\n-- Prediction and bootstrap interval for the slope\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\r\n<script>\r\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\r\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\r\n  // slide changes (different for each slide format).\r\n  (function () {\r\n    function fireSlideChanged(previousSlide, currentSlide) {\r\n\r\n      // dispatch for htmlwidgets\r\n      const event = window.document.createEvent(\"Event\");\r\n      event.initEvent(\"slideenter\", true, true);\r\n      window.document.dispatchEvent(event);\r\n\r\n      // dispatch for shiny\r\n      if (window.jQuery) {\r\n        if (previousSlide) {\r\n          window.jQuery(previousSlide).trigger(\"hidden\");\r\n        }\r\n        if (currentSlide) {\r\n          window.jQuery(currentSlide).trigger(\"shown\");\r\n        }\r\n      }\r\n    }\r\n\r\n    // hookup for reveal\r\n    if (window.Reveal) {\r\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\r\n        fireSlideChanged(event.previousSlide, event.currentSlide);\r\n      });\r\n    }\r\n\r\n    // hookup for slidy\r\n    if (window.w3c_slidy) {\r\n      window.w3c_slidy.add_observer(function (slide_num) {\r\n        // slide_num starts at position 1\r\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\r\n      });\r\n    }\r\n\r\n  })();\r\n</script>\r\n\r\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

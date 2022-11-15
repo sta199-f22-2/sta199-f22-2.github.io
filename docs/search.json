@@ -4030,5 +4030,54 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/exam2-review.html#checklist",
+    "href": "slides/exam2-review.html#checklist",
+    "title": "Inference + Review",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone exam2-review - This is the part of ae-21 that we didn’t finish with end review questions"
+  },
+  {
+    "objectID": "slides/exam2-review.html#announcements",
+    "href": "slides/exam2-review.html#announcements",
+    "title": "Inference + Review",
+    "section": "Announcements",
+    "text": "Announcements\n– Exam 2 on Thursday\n\nReleased at noon\nNo slack or TA office hours\nDon’t cheat\ndue Monday at 2\n\n– All keys are posted"
+  },
+  {
+    "objectID": "slides/exam2-review.html#grading-questions",
+    "href": "slides/exam2-review.html#grading-questions",
+    "title": "Inference + Review",
+    "section": "Grading Questions",
+    "text": "Grading Questions\n– EC for Exam 1 is not in\n– Lowest HW is dropped\n– Lowest Lab is dropped"
+  },
+  {
+    "objectID": "slides/exam2-review.html#study-tips---variables",
+    "href": "slides/exam2-review.html#study-tips---variables",
+    "title": "Inference + Review",
+    "section": "Study Tips - Variables",
+    "text": "Study Tips - Variables\n– Identify variables\n\nCategorical vs Quantitative\nExplanatory vs Response"
+  },
+  {
+    "objectID": "slides/exam2-review.html#models-by-variable-type",
+    "href": "slides/exam2-review.html#models-by-variable-type",
+    "title": "Inference + Review",
+    "section": "Models by Variable Type",
+    "text": "Models by Variable Type\n– Simple Linear Regression: 1 Quantitative Response; 1 Categorical or Quantitative Explanatory Variable\n– Mulitple Linear Regression: 1 Quantitative Response; 2 or more Categorical or Quantitative Explanatory Variables\n– Logistic Regression: 1 Categorical Response (Binary); 1 or more Categorical or Quantitative Explanatory Variables"
+  },
+  {
+    "objectID": "slides/exam2-review.html#study-tips---make-your-own-guide",
+    "href": "slides/exam2-review.html#study-tips---make-your-own-guide",
+    "title": "Inference + Review",
+    "section": "Study Tips - Make your own guide",
+    "text": "Study Tips - Make your own guide\n\nabb |>    \n  summarize(ppg.mean = mean(ppg)) #Summarize is used to calculate a summary statistic \n                                  #arguments: new name = calculated statistic\n\n?summarize \n\nReference Examples at bottom of help page, AEs, HWs, and Labs."
+  },
+  {
+    "objectID": "slides/exam2-review.html#goals",
+    "href": "slides/exam2-review.html#goals",
+    "title": "Inference + Review",
+    "section": "Goals",
+    "text": "Goals\n– Review\n\nSimpson’s Paradox\nP-value interpretation\n\n– Compare two means, and do a bootstrap interval\n– Prediction and bootstrap interval for the slope\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]

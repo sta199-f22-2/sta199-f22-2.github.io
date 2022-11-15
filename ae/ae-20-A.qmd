@@ -54,7 +54,8 @@ We want to know how unlikely it would be to observe our statistic under the assu
 #insert-code-here
 
 abb |> 
-  summarize(mean_ppg = mean(ppg))
+  summarize(mean_ppg = mean(ppg)) #we use summarize when we want to calculate statistics
+                                  #we do this by first giving it the name of the new stat and then calculating the statistic after
 
 
 ```
@@ -81,7 +82,7 @@ null_dist <- abb |>
   specify(response = ppg) |>
   hypothesize(null = "point", mu = 60) |>
   generate(reps = 1000, type = "bootstrap") |>
-  calculate(stat = "mean")
+  calculate(stat = "mean") #this takes the name of the stat we are using. 
 ```
 
 Take a `glimpse` at null_dist. What does this represent?
