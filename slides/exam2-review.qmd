@@ -21,7 +21,7 @@ format: revealjs
 
 - Due Monday at 2
 
--- All keys are posted 
+-- All keys are posted (or will be posted before noon tomorrow)
 
 
 ## Grading Questions 
@@ -63,6 +63,14 @@ abb |>
 
 Reference *Examples* at bottom of help page, AEs, HWs, and Labs.
 
+## Exam Format 
+
+-- Short response questions 
+
+-- Application questions 
+
+-- Extension questions 
+
 ## Goals
 
 -- Review 
@@ -75,23 +83,18 @@ Reference *Examples* at bottom of help page, AEs, HWs, and Labs.
 
 -- Prediction and bootstrap interval for the slope
 
-## Simpson's Paradox 
+## Simpson's Paradox{.smaller} 
 
-Describe the relationships observed in the scatter plot. Comment on: 
+Describe the relationships observed in the scatter plot. Comment on: Form; Strength; Direction. 
 
-- Form 
+![](images/simp1.png){width="250" height="400" fig-align="center"}
 
-- Strength 
 
-- Direction 
-
-![](images/simp1.png)
-
-## Simpson's Paradox - Same Data... Ungrouped
+## Simpson's Paradox - Same Data... Ungrouped{.smaller}
 
 What about now? 
 
-![](images/simp2.png)
+![](images/simp2.png){width="350" height="400" fig-align="center"}
 
 ... a trend appears in groups of data but disappears or reverses when the groups are combined.
 
@@ -112,7 +115,7 @@ What about now?
 -- given $H_O$ = T
 
 
-![](images/pvalue.png)
+![](images/pvalue.png){fig-align="center"}
 
 
 
@@ -127,10 +130,10 @@ Airbnb Example
 -- p-value ~ 0.14
 
 
-![](images/pvalueexample.png)
+![](images/pvalueexample.png){fig-align="center"}
 
 
-## Example 
+## Example{.smaller}
 
 ![](images/pvalueexample.png)
 

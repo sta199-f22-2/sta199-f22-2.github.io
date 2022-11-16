@@ -4043,7 +4043,7 @@
     "href": "slides/exam2-review.html#announcements",
     "title": "Inference + Review",
     "section": "Announcements",
-    "text": "Announcements\n– Exam 2 on Thursday\n\nReleased at noon\nNo slack or TA office hours\nDon’t cheat\ndue Monday at 2\n\n– All keys are posted"
+    "text": "Announcements\n– Exam 2 on Thursday\n\nReleased at noon\nNo slack or TA office hours\nDon’t cheat\nDue Monday at 2\n\n– All keys are posted (or will be posted before noon tomorrow)"
   },
   {
     "objectID": "slides/exam2-review.html#grading-questions",
@@ -4078,6 +4078,55 @@
     "href": "slides/exam2-review.html#goals",
     "title": "Inference + Review",
     "section": "Goals",
-    "text": "Goals\n– Review\n\nSimpson’s Paradox\nP-value interpretation\n\n– Compare two means, and do a bootstrap interval\n– Prediction and bootstrap interval for the slope\n\n\n\n🔗 sta199-f22-2.github.io"
+    "text": "Goals\n– Review\n\nSimpson’s Paradox\nP-value interpretation\n\n– Compare two means, and do a bootstrap interval\n– Prediction and bootstrap interval for the slope"
+  },
+  {
+    "objectID": "slides/exam2-review.html#exam-format",
+    "href": "slides/exam2-review.html#exam-format",
+    "title": "Inference + Review",
+    "section": "Exam Format",
+    "text": "Exam Format\n– Short response questions\n– Application questions\n– Extension questions"
+  },
+  {
+    "objectID": "slides/exam2-review.html#simpsons-paradox",
+    "href": "slides/exam2-review.html#simpsons-paradox",
+    "title": "Inference + Review",
+    "section": "Simpson’s Paradox",
+    "text": "Simpson’s Paradox\nDescribe the relationships observed in the scatter plot. Comment on: Form; Strength; Direction."
+  },
+  {
+    "objectID": "slides/exam2-review.html#simpsons-paradox---same-data-ungrouped",
+    "href": "slides/exam2-review.html#simpsons-paradox---same-data-ungrouped",
+    "title": "Inference + Review",
+    "section": "Simpson’s Paradox - Same Data… Ungrouped",
+    "text": "Simpson’s Paradox - Same Data… Ungrouped\nWhat about now?\n\n\n\n\n\n… a trend appears in groups of data but disappears or reverses when the groups are combined."
+  },
+  {
+    "objectID": "slides/exam2-review.html#p-values",
+    "href": "slides/exam2-review.html#p-values",
+    "title": "Inference + Review",
+    "section": "p-values",
+    "text": "p-values\n– What is it?\n– How do we interpret it?"
+  },
+  {
+    "objectID": "slides/exam2-review.html#p-values-1",
+    "href": "slides/exam2-review.html#p-values-1",
+    "title": "Inference + Review",
+    "section": "p-values",
+    "text": "p-values\n– Probability\n– of observing what we did or something more extreme\n– given \\(H_O\\) = T"
+  },
+  {
+    "objectID": "slides/exam2-review.html#example",
+    "href": "slides/exam2-review.html#example",
+    "title": "Inference + Review",
+    "section": "Example",
+    "text": "Example\nAirbnb Example\n– Response variable: price per guest\n– Assume Ho: \\(\\mu\\) = 60\n– p-value ~ 0.14"
+  },
+  {
+    "objectID": "slides/exam2-review.html#example-1",
+    "href": "slides/exam2-review.html#example-1",
+    "title": "Inference + Review",
+    "section": "Example",
+    "text": "Example\n\nThe probability of observing a mean price per guest of 76.6 dollars, or something larger, assuming that the true mean price per guest of Ashville, NC Airbnbs in June 2020 was 60 dollars is equal to ~ 0.14."
   }
 ]
