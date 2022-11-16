@@ -641,14 +641,14 @@
     "href": "ae/ae-20-A.html#motivation",
     "title": "Hypothesis Testing",
     "section": "Motivation",
-    "text": "Motivation\nWe want to know how unlikely it would be to observe our statistic under the assumption of the null hypothesis. Calculate and report the sample statistic below using proper notation.\n\n#insert-code-here\n\nabb |> \n  summarize(mean_ppg = mean(ppg))\n\n# A tibble: 1 × 1\n  mean_ppg\n     <dbl>\n1     76.6\n\n\n\\(\\bar{x}\\) = 76.6"
+    "text": "Motivation\nWe want to know how unlikely it would be to observe our statistic under the assumption of the null hypothesis. Calculate and report the sample statistic below using proper notation.\n\n#insert-code-here\n\nabb |> \n  summarize(mean_ppg = mean(ppg)) #we use summarize when we want to calculate statistics\n\n# A tibble: 1 × 1\n  mean_ppg\n     <dbl>\n1     76.6\n\n                                  #we do this by first giving it the name of the new stat and then calculating the statistic after\n\n\\(\\bar{x}\\) = 76.6"
   },
   {
     "objectID": "ae/ae-20-A.html#building-a-distribution",
     "href": "ae/ae-20-A.html#building-a-distribution",
     "title": "Hypothesis Testing",
     "section": "Building a distribution",
-    "text": "Building a distribution\nLet’s use simulation-based methods to conduct the hypothesis test specified above. We’ll start by generating the null distribution.\n\nHow do we generate the null distribution? Detail the steps below.\n\nNew idea: Shift! Shift each observation by the difference between our actual mean and our assumed population mean\nNow, we resample with replacement 50 times, and take the mean of the new resampled data. <- Do this a bunch.\n\nset.seed(101321)\n\n\nnull_dist <- abb |>\n  specify(response = ppg) |>\n  hypothesize(null = \"point\", mu = 60) |>\n  generate(reps = 1000, type = \"bootstrap\") |>\n  calculate(stat = \"mean\")\n\nTake a glimpse at null_dist. What does this represent?\n\nglimpse(null_dist)\n\nRows: 1,000\nColumns: 2\n$ replicate <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…\n$ stat      <dbl> 54.94833, 60.20833, 48.79833, 55.28833, 64.59000, 42.30500, …\n\n\nThese are a bunch of resampled means under the assumption that the true mean ppg is equal to 60."
+    "text": "Building a distribution\nLet’s use simulation-based methods to conduct the hypothesis test specified above. We’ll start by generating the null distribution.\n\nHow do we generate the null distribution? Detail the steps below.\n\nNew idea: Shift! Shift each observation by the difference between our actual mean and our assumed population mean\nNow, we resample with replacement 50 times, and take the mean of the new resampled data. <- Do this a bunch.\n\nset.seed(101321)\n\n\nnull_dist <- abb |>\n  specify(response = ppg) |>\n  hypothesize(null = \"point\", mu = 60) |>\n  generate(reps = 1000, type = \"bootstrap\") |>\n  calculate(stat = \"mean\") #this takes the name of the stat we are using. \n\nTake a glimpse at null_dist. What does this represent?\n\nglimpse(null_dist)\n\nRows: 1,000\nColumns: 2\n$ replicate <int> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 1…\n$ stat      <dbl> 54.94833, 60.20833, 48.79833, 55.28833, 64.59000, 42.30500, …\n\n\nThese are a bunch of resampled means under the assumption that the true mean ppg is equal to 60."
   },
   {
     "objectID": "ae/ae-20-A.html#visualize",
@@ -4025,13 +4025,6 @@
     "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
-    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
-    "title": "Lab Extra Credit Survey",
-    "section": "While you wait for class to begin…",
-    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
     "objectID": "slides/exam2-review.html#checklist",
     "href": "slides/exam2-review.html#checklist",
     "title": "Inference + Review",
@@ -4074,18 +4067,18 @@
     "text": "Study Tips - Make your own guide\n\nabb |>    \n  summarize(ppg.mean = mean(ppg)) #Summarize is used to calculate a summary statistic \n                                  #arguments: new name = calculated statistic\n\n?summarize \n\nReference Examples at bottom of help page, AEs, HWs, and Labs."
   },
   {
-    "objectID": "slides/exam2-review.html#goals",
-    "href": "slides/exam2-review.html#goals",
-    "title": "Inference + Review",
-    "section": "Goals",
-    "text": "Goals\n– Review\n\nSimpson’s Paradox\nP-value interpretation\n\n– Compare two means, and do a bootstrap interval\n– Prediction and bootstrap interval for the slope"
-  },
-  {
     "objectID": "slides/exam2-review.html#exam-format",
     "href": "slides/exam2-review.html#exam-format",
     "title": "Inference + Review",
     "section": "Exam Format",
     "text": "Exam Format\n– Short response questions\n– Application questions\n– Extension questions"
+  },
+  {
+    "objectID": "slides/exam2-review.html#goals",
+    "href": "slides/exam2-review.html#goals",
+    "title": "Inference + Review",
+    "section": "Goals",
+    "text": "Goals\n– Review\n\nSimpson’s Paradox\nP-value interpretation\n\n– Compare two means, and do a bootstrap interval\n– Prediction and bootstrap interval for the slope"
   },
   {
     "objectID": "slides/exam2-review.html#simpsons-paradox",
@@ -4128,5 +4121,12 @@
     "title": "Inference + Review",
     "section": "Example",
     "text": "Example\n\nThe probability of observing a mean price per guest of 76.6 dollars, or something larger, assuming that the true mean price per guest of Ashville, NC Airbnbs in June 2020 was 60 dollars is equal to ~ 0.14."
+  },
+  {
+    "objectID": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "href": "slides/LabSurveySlide.html#while-you-wait-for-class-to-begin",
+    "title": "Lab Extra Credit Survey",
+    "section": "While you wait for class to begin…",
+    "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
