@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.0.36">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>STA 199 - Regression with a Single Predictor</title>
+<title>STA 199 - Regression with Multiple Predictors</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,13 +111,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit"
   }
-}</script>
+}</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 </head>
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Regression with a Single Predictor</h1>
+      <h1 class="quarto-secondary-nav-title">Regression with Multiple Predictors</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -256,7 +256,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title d-none d-lg-block">Regression with a Single Predictor</h1>
+<h1 class="title d-none d-lg-block">Regression with Multiple Predictors</h1>
 </div>
 
 
@@ -308,8 +308,8 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 4 islandTorgersen     -185.      70.3      -2.63 8.84e- 3</code></pre>
 </div>
 </div>
-<p>$$ \</p>
-<p>Dream = 1 if Dream; 0 else \ Torgersen = 1 if Torgersen; 0 else $$</p>
+<p><span class="math display">\[\hat{body.mass = -4625 + 44.5*flipper  - 262*Dream - 185* Torgersen}\]</span> \</p>
+<p>Dream = 1 if Dream; 0 else \ Torgersen = 1 if Torgersen; 0 else</p>
 <p>Is this an additive model or an interaction model? <strong>Additive model</strong></p>
 <p>Let’s visualize what these estimates represent.</p>
 <div class="cell">
@@ -348,12 +348,11 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>– Interpret the slope coefficient for flipper length in the context of the problem</p>
 <p>For every 1 mm increase in flipper length, we estimate on average a 44.5 g increase in body mass, after holding all other variables constant</p>
 <p>– Predict the body mass of a penguin with a flipper length of 200 on the Dream island</p>
-<p>$$</p>
-<p>$$</p>
+<p><span class="math display">\[\hat{body.mass = -4625 + 44.5*200  - 262*1 - 185* 0}\]</span></p>
 <p>Review: Look at the plot you created. What assumption does the additive model make about the slopes between flipper length and body mass for each of the three islands?</p>
 <p>The additive model assumes the same slope between body mass and flipper length for all three islands.</p>
 <section id="interaciton-model" class="level2"><h2 class="anchored" data-anchor-id="interaciton-model">Interaciton Model</h2>
-<p>What changes in the R code when fitting an interaction model instead of an additive model in R? <strong>We change the + to a *</strong></p>
+<p>What changes in the R code when fitting an interaction model instead of an additive model in R? We change the + to a *</p>
 <p>– Now fit the interaction model. Display the summary output and write out the estimate regression equation below.</p>
 <div class="cell">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="fu">linear_reg</span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
@@ -372,9 +371,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 6 flipper_length_mm:islandTorgersen    -17.4      8.73     -1.99 4.69e- 2</code></pre>
 </div>
 </div>
-<p>$$</p>
-<p> = -5464 + 48.5<em>flipper + 3551</em>Dream + 3218<em>Torgersen - 19.4</em>Dream<em>flipper - 17.4</em>Torgersen*flipper</p>
-<p>$$</p>
+<p><span class="math display">\[\hat{body.mass} = -5464 + 48.5*flipper + 3551*Dream + 3218*Torgersen - 19.4*Dream*flipper - 17.4*Torgersen\*flipper\]</span></p>
 <p>Let’s visualize what these estimates represent.</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#Code to get predicted values </span></span>
@@ -412,9 +409,7 @@ $ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 
 <p>– Interpret the interaction term for flipper length and Dream island in the context of the problem.</p>
 <p>The rate of change between estimated body mass and flipper length, on average is different between dream island and biscoe island.</p>
 <p>– Predict the body mass of a penguin with a flipper length of 200 on the Dream island</p>
-<p>$$</p>
-<p> = -5464 + 48.5<em>200 + 3551</em>1 + 3218<em>0 - 19.4</em>1<em>flipper - 17.4</em>0*200</p>
-<p>$$</p>
+<p><span class="math display">\[\hat{body.mass} = -5464 + 48.5*200 + 3551*1 + 3218*0 - 19.4*1*flipper - 17.4*0*200\]</span></p>
 </section><section id="how-can-we-choose" class="level2"><h2 class="anchored" data-anchor-id="how-can-we-choose">How can we choose?</h2>
 <p>Occam’s Razor - Don’t overcomplicate the situation. We prefer the <em>simplest</em> best model.</p>
 <div class="cell">
