@@ -1,5 +1,5 @@
 ---
-  title: "Inference overview + Review"
+title: "Inference overview + Review"
 categories:
   - Application exercise
 - Answers
@@ -78,7 +78,6 @@ rc <- rc |>
   ) 
 ```
 
-
 > **We want to investigate the relationship between how fast a roller coaster goes, and how long a roller coaster lasts. Specifically, we are interested in how well the duration of a roller coaster explains how fast it is.**
 
 -   **Your turn:** Based on this research question, which two variables should we use from our data set? Which is our response?
@@ -116,10 +115,9 @@ boot_df_slope |>
 
 -   **Demo:** Interpret the confidence interval in the context of the problem.
 
-We are 90% confident that for a 1 min increase in duration, the true/population mean speed (y) is expected to be 0.0195 lower to 0.132 mph higher.  
+We are 90% confident that for a 1 min increase in duration, the true/population mean speed (y) is expected to be 0.0195 lower to 0.132 mph higher.
 
 -   **Demo:** Prediction: How is this different than what we've done before?
-
 
 Now let's practice predicting!
 
@@ -149,11 +147,11 @@ duration_155 <- tibble(duration = 155)
 predict(speed_fit, new_data = duration_155)
 ```
 
-## Interpret 
+## Interpret
 
 -   Now, interpret the slope coefficient.
 
-For a 1 unit minute increase in duration, we estimate on average a 0.0560 increase in mph. 
+For a 1 unit minute increase in duration, we estimate on average a 0.0560 increase in mph.
 
 -   What if our response was logged? How does the interpretation change?
 
@@ -212,11 +210,11 @@ We are 99% confident that the true mean speed for roller coasters opened after 1
 
 -   Brainstorm the different between bootstrap and permute. Write down the key differences below. *Hint:* Think back to the different sampling techniques between question 1 and question 2 / 3.
 
-The main difference between permutation and bootstrapping is that bootstrapping resamples, with replacement from our data. Permutation can be thought of as shuffling / distributing our data / resampling without replacement. 
+The main difference between permutation and bootstrapping is that bootstrapping resamples, with replacement from our data. Permutation can be thought of as shuffling / distributing our data / resampling without replacement.
 
-## Interpretation - Return of the Penguins 
+## Interpretation - Return of the Penguins
 
-We will fit a SRL, MLR, and logistic regression model and compare how we interpret the slope coefficient. 
+We will fit a SRL, MLR, and logistic regression model and compare how we interpret the slope coefficient.
 
 ```{r}
 library(palmerpenguins)
@@ -226,8 +224,7 @@ library(palmerpenguins)
 glimpse(penguins)
 ```
 
-
-### Simple Linear Regression 
+### Simple Linear Regression
 
 ```{r}
 modelSLR <- linear_reg() |>
@@ -237,13 +234,13 @@ modelSLR <- linear_reg() |>
 tidy(modelSLR)
 ```
 
-- Interpret the slope coefficient assocciated with bill_length_mm in the context of the problem 
+-   Interpret the slope coefficient assocciated with bill_length_mm in the context of the problem
 
-For a 1 mm increase in bill length, we estimate on average, flipper length to increase by 1.69 mm. 
+For a 1 mm increase in bill length, we estimate on average, flipper length to increase by 1.69 mm.
 
 *Add response*
 
-### Multiple Linear Regression 
+### Multiple Linear Regression
 
 ```{r}
 modelMLR <- linear_reg() |>
@@ -253,13 +250,11 @@ modelMLR <- linear_reg() |>
 tidy(modelMLR)
 ```
 
-- Interpret the slope coefficient associated with bill_length_mm in the context of the problem 
+-   Interpret the slope coefficient associated with bill_length_mm in the context of the problem
 
-For a 1 mm increase in bill length, we estimate on average, flipper length to increase by 1.51 mm, holding island constant. 
+For a 1 mm increase in bill length, we estimate on average, flipper length to increase by 1.51 mm, holding island constant.
 
-
-
-### Logistic Regression 
+### Logistic Regression
 
 ```{r}
 
@@ -270,8 +265,6 @@ modellog <- logistic_reg() |>
 tidy(modellog)
 ```
 
-- Interpret the slope coefficient associated with bill_length_mm in the context of the problem and on the original scale 
+-   Interpret the slope coefficient associated with bill_length_mm in the context of the problem and on the original scale
 
-For a 1 unit increase in bill length, we expect the odds of being female to increase by a factor of .14, or by about 14\%. 
-
-
+For a 1 unit increase in bill length, we expect the odds of being female to increase by a factor of .14, or by about 14%.
