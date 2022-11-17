@@ -23,9 +23,7 @@ library(tidymodels)
 rc <- read_csv("data/roller_coasters.csv")
 ```
 
-In this application exercise, we will be looking at a roller coaster and amusement park database by Duane Marden.[^1]
-This database records multiple features of roller coasters.
-For the purpose of this activity, we will work with a random sample of 157 roller coasters.
+In this application exercise, we will be looking at a roller coaster and amusement park database by Duane Marden.[^1] This database records multiple features of roller coasters. For the purpose of this activity, we will work with a random sample of 157 roller coasters.
 
 [^1]: [Roller Coaster DataBase](https://rcdb.com/), [UltimateRollerCoaster.com](https://www.ultimaterollercoaster.com/), [ESTEEM: Enhancing Statistics Teachers Education with E-Modules](https://www.fi.ncsu.edu/teams/hirise/).
 
@@ -85,7 +83,7 @@ For the purpose of this activity, we will work with a random sample of 157 rolle
 
 # Research question 1
 
-> **Is the true proportion of steel roller coasters built before 1970 different than those built after 1970?**
+> **Is the true proportion of steel roller coasters opened before 1970 different than those opened after 1970?**
 
 ## Practice with data manipulation
 
@@ -127,8 +125,7 @@ point_estimate <- rc |>
   calculate(stat = "diff in props", order = c("yes", "no"))
 ```
 
--   **Demo:** How do we create a null distribution for this hypothesis test?
-    Write out the steps below.
+-   **Demo:** How do we create a null distribution for this hypothesis test? Write out the steps below.
 
     1.  Shuffle responses into one pile.
     2.  Redistribute data into two new piles of size n1 and n2.
@@ -165,8 +162,7 @@ visualize(null_dist) +
 
     -   The conclusion in the context of the **alternative hypothesis**.
 
-Since the p-value is smaller than 10%, we reject the null hypothesis in favor of the alternative hypothesis.
-The data provide convincing evidence that the proportion of steel roller coasters built before 1970 is different than those built after 1970.
+Since the p-value is smaller than 10%, we reject the null hypothesis in favor of the alternative hypothesis. The data provide convincing evidence that the proportion of steel roller coasters built before 1970 is different than those built after 1970.
 
 ```{r}
 #| label: p-value
@@ -185,7 +181,7 @@ null_dist |>
 
 -   **Your turn:** Describe how we can construct a bootstrap distribution for the slope of the model predicting `top_speed` from `duration`.
 
-...
+We treat the values of x and the values of y as pairs. Next, we resample with replacement n number of times, and calculate the new resampled slope coefficient. We can do this process 1000 times to create a bootstrap resample distribution.
 
 -   **Demo:** Now, construct this bootstrap distribution.
 
@@ -272,8 +268,7 @@ This implies that our explanatory variable has a multiplicative relationship wit
 
 -   How is this different from question one? Should we make a confidence interval or hypothesis test?
 
-We are interested in estimating the difference.
-This suggests we should make a confidence interval.
+We are interested in estimating the difference. This suggests we should make a confidence interval.
 
 -   **Demo:** Now, use bootstrapping to estimate the difference between the true speeds of roller coasters before and after 1970.
 

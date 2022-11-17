@@ -1,5 +1,5 @@
 ---
-title: "Regression with a Single Predictor"
+title: "Regression with Multiple Predictors"
 format: html
 editor: visual
 ---
@@ -35,9 +35,9 @@ Now, fit a model to assess the relationship between our response variable body m
 
 ```
 
-\$\$ \hat{body.mass = -4625 + 44.5*flipper  - 262*Dream - 185* Torgersen} \\
+$$\hat{body.mass = -4625 + 44.5*flipper  - 262*Dream - 185* Torgersen}$$ \\
 
-Dream = 1 if Dream; 0 else \\ Torgersen = 1 if Torgersen; 0 else \$\$
+Dream = 1 if Dream; 0 else \\ Torgersen = 1 if Torgersen; 0 else 
 
 Is this an additive model or an interaction model? **Additive model**
 
@@ -83,11 +83,10 @@ For every 1 mm increase in flipper length, we estimate on average a 44.5 g incre
 
 -- Predict the body mass of a penguin with a flipper length of 200 on the Dream island
 
-\$\$
 
-\hat{body.mass = -4625 + 44.5*200  - 262*1 - 185* 0}
 
-\$\$
+$$\hat{body.mass = -4625 + 44.5*200  - 262*1 - 185* 0}$$
+
 
 Review: Look at the plot you created. What assumption does the additive model make about the slopes between flipper length and body mass for each of the three islands?
 
@@ -95,7 +94,7 @@ The additive model assumes the same slope between body mass and flipper length f
 
 ## Interaciton Model
 
-What changes in the R code when fitting an interaction model instead of an additive model in R? **We change the + to a \***
+What changes in the R code when fitting an interaction model instead of an additive model in R? We change the + to a \*
 
 -- Now fit the interaction model. Display the summary output and write out the estimate regression equation below.
 
@@ -108,11 +107,9 @@ What changes in the R code when fitting an interaction model instead of an addit
 
 ```
 
-\$\$
 
-\hat{body.mass} = -5464 + 48.5*flipper + 3551*Dream + 3218*Torgersen - 19.4*Dream*flipper - 17.4*Torgersen\*flipper
+$$\hat{body.mass} = -5464 + 48.5*flipper + 3551*Dream + 3218*Torgersen - 19.4*Dream*flipper - 17.4*Torgersen\*flipper$$
 
-\$\$
 
 Let's visualize what these estimates represent.
 
@@ -155,11 +152,11 @@ The rate of change between estimated body mass and flipper length, on average is
 
 -- Predict the body mass of a penguin with a flipper length of 200 on the Dream island
 
-\$\$
 
-\hat{body.mass} = -5464 + 48.5*200 + 3551*1 + 3218*0 - 19.4*1*flipper - 17.4*0\*200
 
-\$\$
+$$\hat{body.mass} = -5464 + 48.5*200 + 3551*1 + 3218*0 - 19.4*1*flipper - 17.4*0*200$$
+
+
 
 ## How can we choose?
 
