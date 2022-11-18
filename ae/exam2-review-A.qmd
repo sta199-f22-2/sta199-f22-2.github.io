@@ -16,7 +16,7 @@ library(tidymodels)
 #| label: data
 #| message: false
 
-rc <- read_csv("data/roller_coasters.csv")
+rc <- read_csv("ae/data/roller_coasters.csv")
 ```
 
 In this application exercise, we will be looking at a roller coaster and amusement park database by Duane Marden.[^1] This database records multiple features of roller coasters. For the purpose of this activity, we will work with a random sample of 157 roller coasters.
