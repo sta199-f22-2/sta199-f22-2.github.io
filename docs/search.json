@@ -4074,6 +4074,83 @@
     "text": "In Summary\n\n\n\n🔗 sta199-f22-2.github.io"
   },
   {
+    "objectID": "slides/23-communication.html#checklist",
+    "href": "slides/23-communication.html#checklist",
+    "title": "Communicating data science results effectively",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone ae-23"
+  },
+  {
+    "objectID": "slides/23-communication.html#announcements",
+    "href": "slides/23-communication.html#announcements",
+    "title": "Communicating data science results effectively",
+    "section": "Announcements",
+    "text": "Announcements\n– Project Feedback\n– Optional Project Draft\n– HW6\n– Exam Retake\n– Sakai Survey\n– Peer Evaluations\n– Course Evals"
+  },
+  {
+    "objectID": "slides/23-communication.html#exam-retake",
+    "href": "slides/23-communication.html#exam-retake",
+    "title": "Communicating data science results effectively",
+    "section": "Exam Retake",
+    "text": "Exam Retake\n– Look for a Repo soon\n– Due December 15th\n– Weigted average between your lowest exam score and what you earn on the retake\n– If you earned a 0% on Exam 2 and earn 100% on Exam Retake, you will earn an 85%."
+  },
+  {
+    "objectID": "slides/23-communication.html#exam-retake-1",
+    "href": "slides/23-communication.html#exam-retake-1",
+    "title": "Communicating data science results effectively",
+    "section": "Exam Retake",
+    "text": "Exam Retake\n– You are tasked to create a rubric for six questions that you come up with\n– Coming up with questions, solving those questions, and creating a rubric will demonstrate complete understanding of the topic"
+  },
+  {
+    "objectID": "slides/23-communication.html#sakai-survey",
+    "href": "slides/23-communication.html#sakai-survey",
+    "title": "Communicating data science results effectively",
+    "section": "Sakai Survey",
+    "text": "Sakai Survey\n– What would you like to cover the last week of class?"
+  },
+  {
+    "objectID": "slides/23-communication.html#what-not-to-do",
+    "href": "slides/23-communication.html#what-not-to-do",
+    "title": "Communicating data science results effectively",
+    "section": "What not to do",
+    "text": "What not to do"
+  },
+  {
+    "objectID": "slides/23-communication.html#not-much-better.",
+    "href": "slides/23-communication.html#not-much-better.",
+    "title": "Communicating data science results effectively",
+    "section": "Not much better….",
+    "text": "Not much better…."
+  },
+  {
+    "objectID": "slides/23-communication.html#warm-up",
+    "href": "slides/23-communication.html#warm-up",
+    "title": "Communicating data science results effectively",
+    "section": "Warm Up",
+    "text": "Warm Up\nHow do we effectively communicate data?"
+  },
+  {
+    "objectID": "slides/23-communication.html#warm-up-1",
+    "href": "slides/23-communication.html#warm-up-1",
+    "title": "Communicating data science results effectively",
+    "section": "Warm Up",
+    "text": "Warm Up\nHow do we effectively communicate data?"
+  },
+  {
+    "objectID": "slides/23-communication.html#red-green-color-blindness---deuteranopia",
+    "href": "slides/23-communication.html#red-green-color-blindness---deuteranopia",
+    "title": "Communicating data science results effectively",
+    "section": "Red-green color blindness - Deuteranopia",
+    "text": "Red-green color blindness - Deuteranopia"
+  },
+  {
+    "objectID": "slides/23-communication.html#red-green-color-blindness---protanopia",
+    "href": "slides/23-communication.html#red-green-color-blindness---protanopia",
+    "title": "Communicating data science results effectively",
+    "section": "Red-green color blindness - Protanopia",
+    "text": "Red-green color blindness - Protanopia\n\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
     "objectID": "slides/exam2-review.html#checklist",
     "href": "slides/exam2-review.html#checklist",
     "title": "Inference + Review",
@@ -4177,54 +4254,5 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
-  },
-  {
-    "objectID": "slides/23-communication.html#checklist",
-    "href": "slides/23-communication.html#checklist",
-    "title": "Communicating data science results effectively",
-    "section": "Checklist",
-    "text": "Checklist\n– Clone ae-23"
-  },
-  {
-    "objectID": "slides/23-communication.html#announcements",
-    "href": "slides/23-communication.html#announcements",
-    "title": "Communicating data science results effectively",
-    "section": "Announcements",
-    "text": "Announcements\n– Project Feedback\n– Optional Project Draft\n– HW6\n– Exam Retake\n– Sakai Survey\n– Peer Evaluations\n– Course Evals"
-  },
-  {
-    "objectID": "slides/23-communication.html#exam-retake",
-    "href": "slides/23-communication.html#exam-retake",
-    "title": "Communicating data science results effectively",
-    "section": "Exam Retake",
-    "text": "Exam Retake\n– Look for a Repo soon\n– Due December 15th\n– Weigted average between your lowest exam score and what you earn on the retake\n– If you earned a 0% on Exam 2 and earn 100% on Exam Retake, you will earn an 85%."
-  },
-  {
-    "objectID": "slides/23-communication.html#exam-retake-1",
-    "href": "slides/23-communication.html#exam-retake-1",
-    "title": "Communicating data science results effectively",
-    "section": "Exam Retake",
-    "text": "Exam Retake\n– You are tasked to create a rubric for six questions that you come up with\n– Coming up with questions, solving those questions, and creating a rubric will demonstrate complete understanding of the topic"
-  },
-  {
-    "objectID": "slides/23-communication.html#sakai-survey",
-    "href": "slides/23-communication.html#sakai-survey",
-    "title": "Communicating data science results effectively",
-    "section": "Sakai Survey",
-    "text": "Sakai Survey\n– What would you like to cover the last week of class?"
-  },
-  {
-    "objectID": "slides/23-communication.html#warm-up",
-    "href": "slides/23-communication.html#warm-up",
-    "title": "Communicating data science results effectively",
-    "section": "Warm Up",
-    "text": "Warm Up\nHow do we effectively communicate data?\nStrategies?\nThings to be mindful of?"
-  },
-  {
-    "objectID": "slides/23-communication.html#what-not-to-do",
-    "href": "slides/23-communication.html#what-not-to-do",
-    "title": "Communicating data science results effectively",
-    "section": "What not to do",
-    "text": "What not to do\n\n\n\n\n\n\n\n\n🔗 sta199-f22-2.github.io"
   }
 ]
