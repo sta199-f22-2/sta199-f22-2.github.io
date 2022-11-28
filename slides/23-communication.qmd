@@ -71,6 +71,9 @@ How do we effectively communicate data?
 
 # ae-23
 
+## Trends 
+
+![](images/staff-employment.png)
 
 ## Red-green color blindness - Deuteranopia
 
