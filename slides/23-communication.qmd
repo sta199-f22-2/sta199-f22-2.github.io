@@ -7,7 +7,7 @@ format: revealjs
 
 ## Checklist
 
--- Clone `ae-23`
+-- Clone `ae-24`
 
 ## Announcements
 
@@ -69,7 +69,7 @@ How do we effectively communicate data?
 ![](images/bad2.png){fig-align="center"}
 
 
-# ae-23
+# ae-24
 
 ## Trends 
 
