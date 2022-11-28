@@ -48,14 +48,34 @@ format: revealjs
 
 # Communicating data science results effectively 
 
+## What not to do 
+
+![](images/bigdata.jpg){fig-align="center"}
+
+## Not much better....
+
+![](images/summarytables.jpg)
+
 ## Warm Up 
 
 How do we effectively communicate data? 
 
-Strategies? 
+![](images/bad.png){fig-align="center"}
 
-Things to be mindful of? 
+## Warm Up 
 
-## What not to do 
+How do we effectively communicate data? 
 
-![](images/bigdata.jpg){fig-align="center"}
+![](images/bad2.png){fig-align="center"}
+
+
+# ae-23
+
+
+## Red-green color blindness - Deuteranopia
+
+![](images/red-green.png)
+
+## Red-green color blindness - Protanopia
+
+![](images/red-green2.png)
