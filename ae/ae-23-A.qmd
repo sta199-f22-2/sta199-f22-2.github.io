@@ -248,7 +248,6 @@ staff_long |>
   scale_color_colorblind()
 ```
 
-
 ## Summary
 
 -   Represent percentages as parts of a whole

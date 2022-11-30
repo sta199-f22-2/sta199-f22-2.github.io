@@ -12,9 +12,7 @@ title: "Project description"
 
 [Peer review](#peer-review) due Wed, Nov 30
 
-[Presentation + slides](#video-presentation--slides) and [final GitHub repo](#reproducibility---organization) due Mon, Dec 5
-
-[Presentation comments](#presentation-comments) due Thu, Dec 8
+[Presentation + slides](#video-presentation--slides) and [final GitHub repo](#reproducibility---organization) due Mon, Dec 8
 
 [Final report](#written-report) due Thu, Dec 8
 
@@ -173,7 +171,7 @@ It is critical to check feedback on your project proposal. Even if you earn full
 
 # Draft
 
-The purpose of the draft and peer review is to give you an opportunity to get early feedback on your analysis. Therefore, the draft and peer review will focus primarily on the exploratory data analysis, modeling, and initial interpretations.
+The purpose of the draft and peer review is to give you an opportunity to get early feedback on your analysis. Therefore, the draft and peer review will focus primarily on the exploratory data analysis and initial interpretations.
 
 Write the draft in the `report.qmd` file in your project repo.
 
@@ -273,17 +271,15 @@ This section includes a brief description of your modeling process. Explain the 
 
 #### Grading criteria
 
-The analysis steps are appropriate for the data and research question. The group used a thorough and careful approach to select the final model; the approach is clearly described in the report. The model selection process took into account potential interaction effects and addressed any violations in model conditions. The model conditions and diagnostics are thoroughly and accurately assessed for their model. If violations of model conditions are still present, there was a reasonable attempt to address the violations based on the course content.
+The analysis steps are appropriate for the data and research question. The group used a thorough and careful approach to determine analyses types and addressed any concerns over appropriateness of analyses chosen.
 
 ### Results
 
-This is where you will output the final model with any relevant model fit statistics.
-
-Describe the key results from the model. The goal is not to interpret every single variable in the model but rather to show that you are proficient in using the model output to address the research questions, using the interpretations to support your conclusions. Focus on the variables that help you answer the research question and that provide relevant context for the reader.
+This is where you will discuss your overall finding and describe the key results from your analysis. The goal is not to interpret every single element of an output shown, but instead to address the research questions, using the interpretations to support your conclusions. Focus on the variables that help you answer the research question and that provide relevant context for the reader.
 
 #### Grading criteria
 
-The model fit is clearly assessed, and interesting findings from the model are clearly described. Interpretations of model coefficients are used to support the key findings and conclusions, rather than merely listing the interpretation of every model coefficient. If the primary modeling objective is prediction, the model's predictive power is thoroughly assessed.
+The analysis results are clearly assessed and interesting findings from the analysis are described. Interpretations are used to to support the key findings and conclusions, rather than merely listing, e.g., the interpretation of every model coefficient.
 
 ### Discussion
 
@@ -291,7 +287,7 @@ In this section you'll include a summary of what you have learned about your res
 
 #### Grading criteria
 
-Overall conclusions from analysis are clearly described, and the model results are put into the larger context of the subject matter and original research question. There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.
+Overall conclusions from analysis are clearly described, and the analysis results are put into the larger context of the subject matter and original research question. There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.
 
 ### Organization + formatting
 
