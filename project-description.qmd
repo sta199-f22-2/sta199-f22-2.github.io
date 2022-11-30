@@ -12,7 +12,7 @@ title: "Project description"
 
 [Peer review](#peer-review) due Wed, Nov 30
 
-[Presentation + slides](#video-presentation--slides) and [final GitHub repo](#reproducibility---organization) due Mon, Dec 8
+[Presentation + slides](#video-presentation--slides) and [final GitHub repo](#reproducibility---organization) due Thu, Dec 8
 
 [Final report](#written-report) due Thu, Dec 8
 
