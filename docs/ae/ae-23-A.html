@@ -257,10 +257,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#pay-attention-to-variable-types" id="toc-pay-attention-to-variable-types" class="nav-link" data-scroll-target="#pay-attention-to-variable-types">Pay attention to variable types</a></li>
   <li><a href="#use-an-accessible-color-scale" id="toc-use-an-accessible-color-scale" class="nav-link" data-scroll-target="#use-an-accessible-color-scale">Use an accessible color scale</a></li>
   <li><a href="#use-direct-labeling" id="toc-use-direct-labeling" class="nav-link" data-scroll-target="#use-direct-labeling">Use direct labeling</a></li>
-  <li><a href="#use-color-to-draw-attention" id="toc-use-color-to-draw-attention" class="nav-link" data-scroll-target="#use-color-to-draw-attention">Use color to draw attention</a></li>
-  <li><a href="#pick-a-purpose" id="toc-pick-a-purpose" class="nav-link" data-scroll-target="#pick-a-purpose">Pick a purpose</a></li>
-  <li><a href="#use-labels-to-communicate-the-message" id="toc-use-labels-to-communicate-the-message" class="nav-link" data-scroll-target="#use-labels-to-communicate-the-message">Use labels to communicate the message</a></li>
-  <li><a href="#simplify" id="toc-simplify" class="nav-link" data-scroll-target="#simplify">Simplify</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   </ul><div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/edit/main/ae/ae-23-A.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/sta199-f22-2/sta199-f22-2.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -539,113 +535,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/ggthemes/man/colorblind.html">scale_color_colorblind</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="ae-23-A_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section><section id="use-color-to-draw-attention" class="level2"><h2 class="anchored" data-anchor-id="use-color-to-draw-attention">Use color to draw attention</h2>
-<ul>
-<li>
-<strong>Demo:</strong> Redo the line plot where Part-time Faculty is red and the rest are gray.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">staff_long</span> <span class="op">&lt;-</span> <span class="va">staff_long</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>faculty_type_color <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">faculty_type</span> <span class="op">==</span> <span class="st">"Part-Time Faculty"</span>, <span class="st">"firebrick3"</span>, <span class="st">"gray40"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-fig.asp="0.5" data-fig.with="12">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">staff_long</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, </span>
-<span>             y <span class="op">=</span> <span class="va">percentage</span>, </span>
-<span>             color <span class="op">=</span> <span class="va">faculty_type_color</span>, group <span class="op">=</span> <span class="va">faculty_type</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">1</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span></span>
-<span>    data <span class="op">=</span> <span class="va">staff_long</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span> <span class="op">+</span> <span class="fl">1</span>, y <span class="op">=</span> <span class="va">percentage</span>, label <span class="op">=</span> <span class="va">faculty_type</span><span class="op">)</span>,</span>
-<span>    hjust <span class="op">=</span> <span class="st">"left"</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span>, size <span class="op">=</span> <span class="fl">4</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="cn">NULL</span>, </span>
-<span>       y <span class="op">=</span> <span class="st">"Percent of Total Instructional Staff"</span>, </span>
-<span>       color <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>       title <span class="op">=</span> <span class="st">"Trends in Instructional Staff Employment Status, 1975-2011"</span>,</span>
-<span>       subtitle <span class="op">=</span> <span class="st">"All Institutions, National Totals"</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Source: US Department of Education, IPEDS Fall Staff Survey"</span></span>
-<span>       <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu"><a href="https://scales.r-lib.org/reference/label_percent.html">label_percent</a></span><span class="op">(</span>accuracy <span class="op">=</span> <span class="fl">1</span>, scale <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_identity.html">scale_color_identity</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
-<span>    plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">8</span>, hjust <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>,</span>
-<span>    plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">2.5</span>, <span class="fl">0.1</span>, <span class="fl">0.1</span>, unit <span class="op">=</span> <span class="st">"in"</span><span class="op">)</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>clip <span class="op">=</span> <span class="st">"off"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="ae-23-A_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section><section id="pick-a-purpose" class="level2"><h2 class="anchored" data-anchor-id="pick-a-purpose">Pick a purpose</h2>
-<div class="cell" data-fig.asp="0.5" data-fig.with="12">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">staff_long</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">year</span>, </span>
-<span>             y <span class="op">=</span> <span class="va">percentage</span>, </span>
-<span>             color <span class="op">=</span> <span class="va">faculty_type_color</span>, group <span class="op">=</span> <span class="va">faculty_type</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">1</span>, show.legend <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="cn">NULL</span>, </span>
-<span>       y <span class="op">=</span> <span class="st">"Percent of Total Instructional Staff"</span>, </span>
-<span>       color <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>       title <span class="op">=</span> <span class="st">"Trends in Instructional Staff Employment Status, 1975-2011"</span>,</span>
-<span>       subtitle <span class="op">=</span> <span class="st">"All Institutions, National Totals"</span>,</span>
-<span>       caption <span class="op">=</span> <span class="st">"Source: US Department of Education, IPEDS Fall Staff Survey"</span></span>
-<span>       <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_continuous</a></span><span class="op">(</span>labels <span class="op">=</span> <span class="fu"><a href="https://scales.r-lib.org/reference/label_percent.html">label_percent</a></span><span class="op">(</span>accuracy <span class="op">=</span> <span class="fl">1</span>, scale <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_identity.html">scale_color_identity</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
-<span>    plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">8</span>, hjust <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>,</span>
-<span>    plot.margin <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span><span class="op">(</span><span class="fl">0.1</span>, <span class="fl">0.6</span>, <span class="fl">0.1</span>, <span class="fl">0.1</span>, unit <span class="op">=</span> <span class="st">"in"</span><span class="op">)</span></span>
-<span>    <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>clip <span class="op">=</span> <span class="st">"off"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span></span>
-<span>    geom <span class="op">=</span> <span class="st">"text"</span>,</span>
-<span>    x <span class="op">=</span> <span class="fl">2012</span>, y <span class="op">=</span> <span class="fl">41</span>, label <span class="op">=</span> <span class="st">"Part-Time\nFaculty"</span>, </span>
-<span>    color <span class="op">=</span> <span class="st">"firebrick3"</span>, hjust <span class="op">=</span> <span class="st">"left"</span>, size <span class="op">=</span> <span class="fl">5</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span></span>
-<span>    geom <span class="op">=</span> <span class="st">"text"</span>,</span>
-<span>    x <span class="op">=</span> <span class="fl">2012</span>, y <span class="op">=</span> <span class="fl">13.5</span>, label <span class="op">=</span> <span class="st">"Other\nFaculty"</span>, </span>
-<span>    color <span class="op">=</span> <span class="st">"gray40"</span>, hjust <span class="op">=</span> <span class="st">"left"</span>, size <span class="op">=</span> <span class="fl">5</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span></span>
-<span>    geom <span class="op">=</span> <span class="st">"segment"</span>,</span>
-<span>    x <span class="op">=</span> <span class="fl">2011.5</span>, xend <span class="op">=</span> <span class="fl">2011.5</span>,</span>
-<span>    y <span class="op">=</span> <span class="fl">7</span>, yend <span class="op">=</span> <span class="fl">20</span>,</span>
-<span>    color <span class="op">=</span> <span class="st">"gray40"</span>, linetype <span class="op">=</span> <span class="st">"dotted"</span></span>
-<span>  <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="use-labels-to-communicate-the-message" class="level2"><h2 class="anchored" data-anchor-id="use-labels-to-communicate-the-message">Use labels to communicate the message</h2>
-<div class="cell" data-fig.asp="0.5" data-fig.with="12">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Instruction by part-time faculty on a steady increase"</span>,</span>
-<span>    subtitle <span class="op">=</span> <span class="st">"Trends in Instructional Staff Employment Status, 1975-2011\nAll Institutions, National Totals"</span>,</span>
-<span>    caption <span class="op">=</span> <span class="st">"Source: US Department of Education, IPEDS Fall Staff Survey"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Percent of Total Instructional Staff"</span>, </span>
-<span>    x <span class="op">=</span> <span class="cn">NULL</span></span>
-<span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="ae-23-A_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section><section id="simplify" class="level2"><h2 class="anchored" data-anchor-id="simplify">Simplify</h2>
-<div class="cell" data-fig.asp="0.5" data-fig.with="12">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p</span> <span class="op">+</span> </span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Instruction by part-time faculty on a steady increase"</span>,</span>
-<span>    subtitle <span class="op">=</span> <span class="st">"Trends in Instructional Staff Employment Status, 1975-2011\nAll Institutions, National Totals"</span>,</span>
-<span>    caption <span class="op">=</span> <span class="st">"Source: US Department of Education, IPEDS Fall Staff Survey"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Percent of Total Instructional Staff"</span>, </span>
-<span>    x <span class="op">=</span> <span class="cn">NULL</span></span>
-<span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
-<span>    panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span></span>
-<span>    <span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="ae-23-A_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </section><section id="summary" class="level2"><h2 class="anchored" data-anchor-id="summary">Summary</h2>
