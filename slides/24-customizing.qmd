@@ -9,7 +9,7 @@ format: revealjs
 
 -- Clone `ae-25
 
-## Announcements
+## Announcements {.smaller}
 
 -- HW6
 
@@ -23,7 +23,12 @@ format: revealjs
 
 -- Peer Evaluations - Due Today 
 
+-- Close issues
+
+-- Local R and R-studio
+
 -- Course Evals 
+
 
 
 ## Course Evaluations - 10 Minutes 
