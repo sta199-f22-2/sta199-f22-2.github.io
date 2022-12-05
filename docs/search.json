@@ -4380,5 +4380,68 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#checklist",
+    "href": "slides/26-lookingforward.html#checklist",
+    "title": "Spatial Data",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone LookingForward1"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#goals",
+    "href": "slides/26-lookingforward.html#goals",
+    "title": "Spatial Data",
+    "section": "Goals",
+    "text": "Goals\n– What does statistics / data science look like outside of university?\n– Overview of Spatial Statistics"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#section",
+    "href": "slides/26-lookingforward.html#section",
+    "title": "Spatial Data",
+    "section": "",
+    "text": "The best thing about being a statistician is that you get to play in everyone’s backyard  - Tukey"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#atrium",
+    "href": "slides/26-lookingforward.html#atrium",
+    "title": "Spatial Data",
+    "section": "Atrium",
+    "text": "Atrium\n– Perform EDA and data analysis using Python and R (in a reproducible format)\n– Build and productionize models\n– Manage cross functional teams with business SMEs that validate model insights, data experts who assist in managing/integrating data, and communicate progress/insights to executive stakeholders\n– Communicate results to a broad set of non-technical people (typically in tools like Powerpoint/Slides as well as in reproducible docs like RMarkdown/Jupyter Notebooks)\n– Build analytics dashboards in tools like Tableau or PowerBI to display data\n— https://atrium.ai/about/"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#usgs",
+    "href": "slides/26-lookingforward.html#usgs",
+    "title": "Spatial Data",
+    "section": "USGS",
+    "text": "USGS\n– development of new statistical techniques to analyze various data types\n– development of products to communicate those techniques to wildlife managers and facilitate their implementation (this is a pretty big one that occupies a lot of my time\n– development of software for analysis and data visualization\n– use of version control software\n– use of probabilistic programming languages like stan, nimble, and jags\n– writing up samplers in C++ and Julia (data science kids might get a kick out of this, happy to share some julia code if that is the case)\n– a big part of the job is also communicating results to government folks that don’t know anything about statistics"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#usgs-1",
+    "href": "slides/26-lookingforward.html#usgs-1",
+    "title": "Spatial Data",
+    "section": "USGS",
+    "text": "USGS\nhttps://christianstratton.shinyapps.io/batapp/?_ga=2.176377317.1341335816.1666368887-1922592585.1666368887"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#spatial-modeling-overview",
+    "href": "slides/26-lookingforward.html#spatial-modeling-overview",
+    "title": "Spatial Data",
+    "section": "Spatial Modeling Overview",
+    "text": "Spatial Modeling Overview\nResearchers in many fields are faced with analyzing data with a spatial component. These analyses typically include:\n\nmodeling trends and correlation structures\nestimation of underlying model parameters\nhypothesis testing or model comparision\nprediction of observations at unobserved times or locations"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#spatial-data-viz-tools",
+    "href": "slides/26-lookingforward.html#spatial-data-viz-tools",
+    "title": "Spatial Data",
+    "section": "Spatial Data Viz Tools",
+    "text": "Spatial Data Viz Tools\nThere are many tools for creating spatial figures (GIS software, Tableau, etc…), but we will exclusively use R and the wide range of packages within it.\nIn particular, we will use:\n\nggplot2\nggmap\nleaflet\nRgoogleMaps"
+  },
+  {
+    "objectID": "slides/26-lookingforward.html#closing-thoughts",
+    "href": "slides/26-lookingforward.html#closing-thoughts",
+    "title": "Spatial Data",
+    "section": "Closing Thoughts",
+    "text": "Closing Thoughts\n– We live in a world of big data\n– These are necessary skills that will follow you into your career, even if you are not specifically a data scientist or statistician"
   }
 ]
