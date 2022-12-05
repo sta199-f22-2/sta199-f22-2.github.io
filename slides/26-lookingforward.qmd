@@ -29,6 +29,8 @@ format: revealjs
 
 -- Exam 2 grades are published 
 
+-- If you missed points for only stating hypotheses in Q4 or Q5, submit a regrade request
+
 -- Exam retake repos are published 
 
 ## Goals 
