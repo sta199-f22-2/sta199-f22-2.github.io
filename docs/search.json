@@ -4386,7 +4386,7 @@
     "href": "slides/26-lookingforward.html#checklist",
     "title": "Spatial Data",
     "section": "Checklist",
-    "text": "Checklist\n– Clone LookingForward1"
+    "text": "Checklist\n– Clone LookingForward1\n– If a tab comes up to install packages, do so.\n– Click install in the tab or use install.packages(“package.name”)"
   },
   {
     "objectID": "slides/26-lookingforward.html#goals",

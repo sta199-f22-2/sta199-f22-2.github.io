@@ -9,13 +9,19 @@ format: revealjs
 
 -- Clone `LookingForward1`
 
+-- If a tab comes up to install packages, do so. 
+
+-- Click `install` in the tab or use install.packages("package.name")
+
 ## Goals 
 
 -- What does statistics / data science look like outside of university?
 
 -- Overview of Spatial Statistics
 
-# The best thing about being a statistician is that you get to play in everyone's backyard \newline - Tukey 
+# The best thing about being a statistician is that you get to play in everyone's backyard  
+
+-- Tukey 
 
 ##
 
@@ -97,10 +103,9 @@ In particular, we will use:
 
 - `ggplot2`
 
-- `ggmap`
-
 - `leaflet`
 
-- `RgoogleMaps`
+- and more...
 
-# `LookingForward1` 
+
+#  `LookingForward1` 
