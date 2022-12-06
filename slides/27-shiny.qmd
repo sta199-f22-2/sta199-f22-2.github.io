@@ -1,0 +1,84 @@
+---
+title: "Shiny"
+subtitle: "Looking Forward"
+date: "December 7th, 2022"
+format: revealjs
+---
+
+## Checklist 
+
+-- Clone `shiny`
+
+
+## Announcements 
+
+-- Project presentations due Thursday 
+
+-- One more peer review 
+
+-- Fill out presentation info (link on Sakai)
+
+-- ^ This is also where you will find the link to review presentations
+
+-- Please include team(#) information on title slide
+
+
+## Exam-retake 
+
+-- You don't have to use just one data set.... 
+
+-- You can combine topics to make your questions unique (but you still need one question for each topic)
+
+-- Think about the learning objective
+
+## Evaluations 
+
+-- 5-7 minutes for TA evaluations 
+
+## Goals 
+
+-- Intro to Shiny 
+
+## What and Why Shiny?
+
+-- Shiny is an R package that makes it easy to build interactive web apps straight from R
+
+-- Shiny combines the computational power of R with the interactivity of the modern web
+
+-- https://shiny.rstudio.com/gallery/
+
+# shiny 
+
+## moives 
+
+![](images/shiny/slide1.png){fig-align="center"}
+
+##
+
+![](images/shiny/slide2.png){fig-align="center"}
+
+##
+
+![](images/shiny/slide3.png){fig-align="center"}
+
+##
+
+![](images/shiny/slide4.png){fig-align="center"}
+
+## 
+
+![](images/shiny/slide5.png){fig-align="center"}
+
+##
+
+![](images/shiny/slide6.png){fig-align="center"}
+
+## 
+
+![](images/shiny/slide7.png){fig-align="center"}
+
+##
+
+![](images/shiny/slide8.png){fig-align="center"}
+
+# Thank you!

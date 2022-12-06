@@ -4450,5 +4450,54 @@
     "title": "Lab Extra Credit Survey",
     "section": "While you wait for class to begin…",
     "text": "While you wait for class to begin…\nStudy Participation + exam extra credit opportunity:\n– Options: But the researchers would appreciate your participation!\n– Go here or at bit.ly/sta199-learning-study-1 to fill out the survey.\n– I will not see your responses.\n–I will get a list of who filled out the survey from Duke Learning Innovations and use that to award +4 points of extra credit for Exam 1.\n\n\n\n🔗 sta199-f22-2.github.io"
+  },
+  {
+    "objectID": "slides/27-shiny.html#checklist",
+    "href": "slides/27-shiny.html#checklist",
+    "title": "Shiny",
+    "section": "Checklist",
+    "text": "Checklist\n– Clone shiny"
+  },
+  {
+    "objectID": "slides/27-shiny.html#announcements",
+    "href": "slides/27-shiny.html#announcements",
+    "title": "Shiny",
+    "section": "Announcements",
+    "text": "Announcements\n– Project presentations due Thursday\n– One more peer review\n– Fill out presentation info (link on Sakai)\n– ^ This is also where you will find the link to review presentations\n– Please include team(#) information on title slide"
+  },
+  {
+    "objectID": "slides/27-shiny.html#exam-retake",
+    "href": "slides/27-shiny.html#exam-retake",
+    "title": "Shiny",
+    "section": "Exam-retake",
+    "text": "Exam-retake\n– You don’t have to use just one data set….\n– You can combine topics to make your questions unique (but you still need one question for each topic)\n– Think about the learning objective"
+  },
+  {
+    "objectID": "slides/27-shiny.html#evaluations",
+    "href": "slides/27-shiny.html#evaluations",
+    "title": "Shiny",
+    "section": "Evaluations",
+    "text": "Evaluations\n– 5-7 minutes for TA evaluations"
+  },
+  {
+    "objectID": "slides/27-shiny.html#goals",
+    "href": "slides/27-shiny.html#goals",
+    "title": "Shiny",
+    "section": "Goals",
+    "text": "Goals\n– Intro to Shiny"
+  },
+  {
+    "objectID": "slides/27-shiny.html#what-and-why-shiny",
+    "href": "slides/27-shiny.html#what-and-why-shiny",
+    "title": "Shiny",
+    "section": "What and Why Shiny?",
+    "text": "What and Why Shiny?\n– Shiny is an R package that makes it easy to build interactive web apps straight from R\n– Shiny combines the computational power of R with the interactivity of the modern web\n– https://shiny.rstudio.com/gallery/"
+  },
+  {
+    "objectID": "slides/27-shiny.html#moives",
+    "href": "slides/27-shiny.html#moives",
+    "title": "Shiny",
+    "section": "moives",
+    "text": "moives\n ##"
   }
 ]
