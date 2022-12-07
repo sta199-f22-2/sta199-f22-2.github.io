@@ -9,18 +9,23 @@ format: revealjs
 
 -- Clone `shiny`
 
+-- https://docs.google.com/spreadsheets/d/1JFBLckMjnNDOS8-cHsbpZM8STfYNQVNVLhi1wwmy2Zk/edit#gid=0
+
+-- Evaluations 
 
 ## Announcements 
 
 -- Project presentations due Thursday 
 
--- One more peer review 
+-- One more peer review (released Friday)
+
+-- Survey link (released Friday)
 
 -- Fill out presentation info (link on Sakai)
 
--- ^ This is also where you will find the link to review presentations
-
 -- Please include team(#) information on title slide
+
+-- HW6 
 
 
 ## Exam-retake 
@@ -31,9 +36,24 @@ format: revealjs
 
 -- Think about the learning objective
 
-## Evaluations 
+## Project Presentations 
 
--- 5-7 minutes for TA evaluations 
+-- I can not help you on Thursday. Plan accordingly 
+
+-- "I solemnly swear..." to triple check that the links on google doc contain my final presentation
+
+-- Slide count 
+
+-- Time
+
+## To-Dos (5-7 minutes) 
+
+-- For Evaluations 
+
+-- Update Google docs 
+
+-- https://shiny.rstudio.com/gallery/
+
 
 ## Goals 
 
